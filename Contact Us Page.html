@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link href="/static/CSS/CSS.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1><center>Contact Us</h1>
+    <h3><center>Welcome! We're happy to help.</h3>
+    <img src="https://ibb.co/DQn5sHd" width = 500 height = "500" alt="ATB Model Skateboarding" align="right" >
+
+    <form>
+        <label for = "FName">First Name:</label><br>
+            <input type = "text" name="FName" required><br>
+        <label for = "LName">Last Name:</label><br>
+            <input type = "text" name = "LName" required><br>
+        <label for = "Email">Email:</label> <br>
+            <input type = "email" name="Email" required><br>
+        <label for = "PhoneNum">Phone Number:</label><br>
+            <input type = "tel" id = "PhoneNum" name="PhoneNum" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{3}" required><br>
+        <label for = "Message">Message:</label><br>
+            <input type = "textarea" id="Message" name="Message" required><br>
+        <label for = "SubmitButton">Submit Message:</label><br>
+            <input type = "submit" name="SubmitButton" required><br>
+    <form>
+
+    <h2>Leave a Review</h2>
+    <form>
+        <label for = "FName">First Name:</label><br>
+            <input type = "text" id="FName" name="FName" required><br>
+        <label for = "LName">Last Name:</label><br>
+            <input type = "text" id="LName" name = "LName" required><br>
+        <label for = "Email">Email:</label> <br>
+            <input type = "email" id = "Email" name="Email" required><br>
+        <label for = "CustomerType">Type of Customer:</label>
+            <select name="CustomerType" id="CustomerType">
+                <option value="Student">Student</option>
+                <option value="Parent">Parent</option>
+                <option value="Organization">Organization</option>
+                <option value="Other">Other</option>
+        <label for = "Review">Review:</label><br>
+            <input type = "textarea" id = "Review" name="Review" required><br>
+        <label for = "SubmitButton">Submit Review:</label><br>
+            <input type = "submit" id = "SubmitButton" name="SubmitButton" required><br>
+    <form>
+
+</body>
+</html>
