@@ -2,6 +2,12 @@
 /* Grey Buttons/Hovers = #d9d9d9 */
 /* Super light grey, almost white background paneling = #f6f6f6 */
 
+/* Font Styling for entire website */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+html{
+    font-family: 'Open Sans';
+}
 
 h1 {
     color: black;
@@ -21,6 +27,19 @@ input{
     margin: 5px;
 }
 
+.checkoutButtons{
+    background-color: #69a695
+}
+
 p {
     color: black;
+}
+
+div.Checkout {
+    display: block;
+}
+
+div.Shipping {
+    display: block;
+    display: inline-block;
 }
