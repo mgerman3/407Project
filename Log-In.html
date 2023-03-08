@@ -4,24 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-    <link href="/static/CSS/style.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
 </head>
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+</style>
 
 <h1>Welcome to Around the Block!</h1>
 
-<body>
-<p>Click here to log-in</p>
+<body style="background-color: #69a695">
+<p><b>Log-in here:</b></p>
 <!--button for log in-->
-    <form action="Log-In.html" method="post">
-        <input type="submit" value="Log In">
-    </form>
+    <div class="text-center">
+        <form action="Log-In-Screen.html" method="post">
+            <input type="submit" value="Log In">
+        </form>
+    </div>
 
-<p>Click here to sign up</p>
+<p><b>Sign-up to create an account:</b></p>
 <!--button for sign up. NOTE: MUST change "Log-In.html" to a new page "Sign-Up.html"-->
-    <form action="Log-In.html" method="post">
+    <div class="text-center">
+        <form action="sign-up-page.html" method="post">
         <input type="submit" value="Sign Up">
     </form>
-
+    </div>
 
 </body>
 
