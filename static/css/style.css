@@ -7,6 +7,7 @@ h1 {
     color: black;
 }
 
+/*use this to create a division that has centered text*/
 .text-center{
     text-align: center;
 }

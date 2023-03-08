@@ -5,22 +5,28 @@
     <title>Sign-Up</title>
     <link href="/static/CSS/style.css" rel="stylesheet">
 </head>
-<body>
+<style>
+    h1 {
+        text-align: center;
+    }
+
+</style>
+<body style="background-color: #69a695">
 <h1>Sign-Up Below</h1>
-
-<form action="Log-In-Screen.html" method="post">
-    <label for ="username">Create Username:</label><br>
-        <input type="text" id = "username" name="username" placeholder="Username"><br>
-    <label for ="password">Create Password:</label><br>
-        <input type="password" id = "password" name="password" placeholder="Password"><br>
-    <label for ="FName">First Name:</label><br>
-        <input type="First Name" id = "FName" name="First Name" placeholder="First Name"><br>
-    <label for ="LName">Last Name:</label><br>
-        <input type="Last Name" id = "LName" name="Last Name" placeholder="Last Name"><br>
-    <label for ="email">Email:</label><br>
-        <input type="email" id = "email" name="Last Name" placeholder="Email"><br>
-    <input type="submit" value="Register"><br>
-
+<div class="text-center">
+    <form action="Log-In-Screen.html" method="post">
+        <label for ="username">Create Username:</label><br>
+            <input type="text" id = "username" name="username" placeholder="Username"><br>
+        <label for ="password">Create Password:</label><br>
+            <input type="password" id = "password" name="password" placeholder="Password"><br>
+        <label for ="FName">First Name:</label><br>
+            <input type="First Name" id = "FName" name="First Name" placeholder="First Name"><br>
+        <label for ="LName">Last Name:</label><br>
+            <input type="Last Name" id = "LName" name="Last Name" placeholder="Last Name"><br>
+        <label for ="email">Email:</label><br>
+            <input type="email" id = "email" name="Last Name" placeholder="Email"><br>
+        <input type="submit" value="Register"><br>
+</div>
 </form>
 
 <!--#verify if username and password are correct using html
