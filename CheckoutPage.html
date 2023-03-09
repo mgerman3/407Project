@@ -2,56 +2,82 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Check Out</title>
-    <link href="/static/CSS/style.css" rel="stylesheet">
-</head>
-<body>
-    <div class="checkoutItemCoupon">
-        <h1 class="checkoutHeader">Checkout</h1>
-        <div class="checkoutPlaceholder"></div><br>
-        <!-- Coupon Code Box & Information -->
-        <div class="coupon">
-            <input type="text">
+    <head>
+        <meta charset="UTF-8">
+        <title>Check Out</title>
+        <link href="/static/CSS/style.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="Home Page.html"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
+                    <a class="nav-link" href="About%20Page.html">About</a>
+                    <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+        <!-- Coupon Code Box & Cart Information -->
+        <div class="checkoutItemCoupon">
+            <h1 class="checkoutHeader">Checkout</h1>
+            <div class="checkoutPlaceholder"></div><br>
+            <div class="coupon">
+                <input type="text">
+            </div>
+            <div class="coupon">
+                <form action="CheckoutPage.html" method="post">
+                    <input type="submit" value="Apply Coupon" class="checkoutButtons">
+                </form>
+            </div>
         </div>
-        <div class="coupon">
-            <form action="CheckoutPage.html" method="post">
-                <input type="submit" value="Apply Coupon" class="checkoutButtons">
-            </form>
+
+       <!-- Shipping Information Fields -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="border-box col">
+                    <h2 class="checkoutHeader">Shipping Address</h2><br><br>
+                    <form class="shipInfo">
+                        First Name:
+                        <input type="text">
+                        Last Name:
+                        <input type="text"><br><br>
+                        Address:
+                        <input type="text"><br><br>
+                        Address:
+                        <input type="text"><br><br>
+                        City:
+                        <input type="text"><br><br>
+                        State:
+                        <input type="text"><br><br>
+                        Zip Code:
+                        <input type="text"><br><br>
+                    </form>
+                </div>
+
+                <!-- Cart Pricing Information -->
+                <div class="border-box col">
+                    <h2 class="checkoutHeader">Cart Totals</h2><br><br>
+                    <p>Subtotal -</p>
+                    <p>Shipping -</p>
+                    <p>Taxes -</p>
+                    <p>Total -</p>
+                </div>
+            </div>
         </div>
-    </div>
-   <!-- Shipping Information Fields -->
-    <div class="shipCheckout">
-        <h2 class="checkoutHeader">Shipping Address</h2><br><br><br><br><br>
-        <form class="shipInfo">
-            First Name:
-            <input type="text">
-            Last Name:
-            <input type="text"><br><br>
-            Address:
-            <input type="text"><br><br>
-            Address:
-            <input type="text"><br><br>
-            City:
-            <input type="text"><br><br>
-            State:
-            <input type="text"><br><br>
-            Zip Code:
-            <input type="text"><br><br>
+
+        <!-- Button for Place Order -->
+        <form action="CheckoutPage.html" method="post">
+            <input type="submit" value="Place Order" class="checkoutButtons">
         </form>
-    </div>
-        <!-- Cart Pricing Information -->
-    <div class="shipCheckout">
-        <h2 class="checkoutHeader">Cart Totals</h2>
-        <p>Subtotal -</p>
-        <p>Shipping -</p>
-        <p>Taxes -</p>
-        <p>Total -</p>
-    </div>
-    <!-- Button for Place Order -->
-    <form action="CheckoutPage.html" method="post">
-        <input type="submit" value="Place Order" class="checkoutButtons">
-    </form>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </body>
 </html>
