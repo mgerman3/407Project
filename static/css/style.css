@@ -21,25 +21,46 @@ h1 {
 /* button styling */
 input{
     background-color: #d9d9d9;
-    border: 1px solid #d9d9d9;
+    border-width: 1px;
+    border-color: #545454;
     border-radius: 5px;
     padding: 7px;
     margin: 5px;
 }
 
 .checkoutButtons{
-    background-color: #69a695
+    background-color: #69a695;
 }
 
 p {
     color: black;
 }
 
-div.Checkout {
+/* Checkout Page Styling */
+
+.checkoutPlaceholder {
+    height: 210px;
+    width: 626px;
+    background-color: #f6f6f6;
+}
+
+div.checkoutItemCoupon{
     display: block;
 }
 
-div.Shipping {
+div.coupon{
+    display: inline-block;
+}
+
+div.shipCheckout {
     display: block;
     display: inline-block;
+}
+
+.shipInfo {
+    background-color: #f6f6f6;
+}
+h2.checkoutHeader {
+    font-size: 33px;
+    float: left;
 }

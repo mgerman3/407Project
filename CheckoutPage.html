@@ -8,17 +8,23 @@
     <link href="/static/CSS/style.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Checkout</h1>
-
-    <!-- Coupon Code Box & Information -->
-    <input type="text">
-    <form action="CheckoutPage.html" method="post">
-        <input type="submit" value="Apply Coupon" class="checkoutButtons">
-    </form>
+    <div class="checkoutItemCoupon">
+        <h1 class="checkoutHeader">Checkout</h1>
+        <div class="checkoutPlaceholder"></div><br>
+        <!-- Coupon Code Box & Information -->
+        <div class="coupon">
+            <input type="text">
+        </div>
+        <div class="coupon">
+            <form action="CheckoutPage.html" method="post">
+                <input type="submit" value="Apply Coupon" class="checkoutButtons">
+            </form>
+        </div>
+    </div>
    <!-- Shipping Information Fields -->
-    <div class="Shipping">
-        <h2>Shipping Address</h2>
-        <form>
+    <div class="shipCheckout">
+        <h2 class="checkoutHeader">Shipping Address</h2><br><br><br><br><br>
+        <form class="shipInfo">
             First Name:
             <input type="text">
             Last Name:
@@ -36,8 +42,8 @@
         </form>
     </div>
         <!-- Cart Pricing Information -->
-    <div class="Shipping">
-        <h2>Cart Totals</h2>
+    <div class="shipCheckout">
+        <h2 class="checkoutHeader">Cart Totals</h2>
         <p>Subtotal -</p>
         <p>Shipping -</p>
         <p>Taxes -</p>
