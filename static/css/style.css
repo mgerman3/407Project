@@ -30,6 +30,8 @@ input{
 
 .checkoutButtons{
     background-color: #69a695;
+    font-family: 'Open Sans';
+    color: white;
 }
 
 p {
@@ -40,29 +42,56 @@ p {
 
 .checkoutPlaceholder {
     height: 210px;
-    width: 626px;
+    width: 1200px;
     background-color: #f6f6f6;
 }
 
 div.checkoutItemCoupon{
     display: block;
+    padding: 20px;
 }
 
 div.coupon{
     display: inline-block;
 }
 
-div.shipCheckout {
-    display: block;
-    display: inline-block;
-}
-
 .shipInfo {
     background-color: #f6f6f6;
+    padding: 30px 25px 30px 25px;
 }
 h2.checkoutHeader {
     font-size: 33px;
     float: left;
+}
+
+.navbar {
+    background-color: deepskyblue;
+}
+
+.shippingTotal {
+    padding: 20px;
+}
+
+.billingTotals {
+    padding: 30px 25px 30px 25px;
+}
+
+.shipFields {
+    height: 30px;
+    background-color: #f6f6f6;
+    width: auto;
+}
+
+p.shipFieldLabels {
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+
+p.cartTotalsLabels {
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px;
 }
 
 /*Styling order confirmation page*/
