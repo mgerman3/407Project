@@ -88,10 +88,40 @@
                 <div class="border-box col">
                     <h2 class="checkoutHeader"><strong>Cart Totals</strong></h2><br><br>
                     <div class="billingTotals">
-                        <p class="cartTotalsLabels">Subtotal -</p><hr>
-                        <p class="cartTotalsLabels">Shipping -</p><hr>
-                        <p class="cartTotalsLabels">Taxes -</p><hr>
-                        <p class="cartTotalsLabels"><strong>Total -</strong></p>
+                        <div class="row">
+                            <p class="cartTotalsLabels">Subtotal -</p><hr>
+                        </div>
+                        <div class="row">
+                            <div class="border-box col" style="padding: 0px">
+                                <p class="cartTotalsLabels">Shipping -</p>
+                            </div>
+                            <div class="border-box col" style="padding: 0px">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Local Pick Up:
+                                     </label>
+                                </div>
+                                <div class="form-check">
+                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                     <label class="form-check-label" for="flexRadioDefault2">
+                                        Home Delivery
+                                     </label>
+                                </div>
+                                <div class="form-check">
+                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                     <label class="form-check-label" for="flexRadioDefault2">
+                                        Rapid Delivery
+                                     </label>
+                                </div>
+                            </div>
+                        </div><hr>
+                        <div class="row">
+                            <p class="cartTotalsLabels">Taxes -</p><hr>
+                        </div>
+                        <div class="row">
+                            <p class="cartTotalsLabels"><strong>Total -</strong></p>
+                        <div class="row">
                     </div>
                 </div>
             </div>
