@@ -1,3 +1,75 @@
 /* ATB Blue = #69a695 */
 /* Grey Buttons/Hovers = #d9d9d9 */
 /* Super light grey, almost white background paneling = #f6f6f6 */
+
+/* Font Styling for entire website */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+html{
+    font-family: 'Open Sans';
+}
+
+h1 {
+    color: black;
+}
+
+/*use this to create a division that has centered text*/
+.text-center{
+    text-align: center;
+}
+
+/* button styling */
+input{
+    background-color: #d9d9d9;
+    border-width: 1px;
+    border-color: #545454;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 5px;
+}
+
+.checkoutButtons{
+    background-color: #69a695;
+}
+
+p {
+    color: black;
+}
+
+/* Checkout Page Styling */
+
+.checkoutPlaceholder {
+    height: 210px;
+    width: 626px;
+    background-color: #f6f6f6;
+}
+
+div.checkoutItemCoupon{
+    display: block;
+}
+
+div.coupon{
+    display: inline-block;
+}
+
+div.shipCheckout {
+    display: block;
+    display: inline-block;
+}
+
+.shipInfo {
+    background-color: #f6f6f6;
+}
+h2.checkoutHeader {
+    font-size: 33px;
+    float: left;
+}
+
+/*Styling order confirmation page*/
+/*Centering text*/
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid black;
+  padding: 10px;
+}
