@@ -5,6 +5,15 @@
 /* Font Styling for entire website */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
+/*navbar*/
+navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #69a695;
+    color: #fff;
+}
+
 html{
     font-family: 'Open Sans';
 }
