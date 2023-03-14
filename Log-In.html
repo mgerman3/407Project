@@ -23,13 +23,18 @@
         background-size: cover;
         position: relative;
     }
+
+    text-center{
+
+    }
+
 </style>
 
 <body>
 
 
 <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
               <div class="container-fluid">
                 <a class="navbar-brand" href="Home Page.html"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,10 +43,10 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
-                    <a class="nav-link" aria-current="page" href="shop.html">Shop</a>
+                    <a class="nav-link" aria-current="page" href="Shop.html">Shop</a>
                     <a class="nav-link" href="About%20Page.html">About</a>
                     <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
-                    <a class="nav-link" href="Log-In.html">Log In</a>
+                    <a class="nav-link" href="Log-In-Screen.html">Log In</a>
                   </div>
                 </div>
               </div>
@@ -51,19 +56,19 @@
     <img src="static/images/WelcomePage_BackgroundPhoto.jpeg" alt="Background Image">
     </div> -->
 
-<h1>Welcome to Around the Block!</h1>
+<h1><b>Welcome to Around the Block!</b></h1>
 
 <p><b>Log-in:</b></p>
 <!--button for log in-->
-    <div class="text-center">
+    <div class="login-buttons">
         <form action="Log-In-Screen.html" method="post">
             <input type="submit" value="Log In">
         </form>
     </div>
-
+<br>
 <p><b>Create an account:</b></p>
 <!--button for sign up. NOTE: MUST change "Log-In.html" to a new page "Sign-Up.html"-->
-    <div class="text-center">
+    <div class="login-buttons">
         <form action="sign-up-page.html" method="post">
         <input type="submit" value="Sign Up">
     </form>
