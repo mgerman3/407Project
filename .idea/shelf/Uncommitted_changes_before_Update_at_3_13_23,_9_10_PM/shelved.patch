@@ -1,0 +1,180 @@
+Index: static/css/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/* ATB Blue = #69a695 */\n/* Grey Buttons/Hovers = #d9d9d9 */\n/* Super light grey, almost white background paneling = #f6f6f6 */\n\n/* Font Styling for entire website */\n@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');\n\n/*navbar*/\nnavbar {\n    display: flex;\n    justify-content: space-between;\n    padding: 20px;\n    background-color: #69a695;\n    color: #fff;\n}\n\nbackground-image {\n    opacity: 0.5;\n}\n\nurl(\"static/images/WelcomePage_BackgroundPhoto.jpeg\") {\nopacity: 0.5;\n}\n\nbody{\n    font-family: 'Open Sans';\n}\n\nh1 {\n    color: black;\n}\n\n/*use this to create a division that has centered text*/\n.text-center{\n    text-align: center;\n}\n\n/* button styling */\ninput{\n    background-color: #69a695;\n    border-width: 1px;\n    border-color: #545454;\n    border-radius: 5px;\n    padding: 7px;\n    margin: 5px;\n}\n\n.checkoutButtons{\n    background-color: #69a695;\n    font-family: 'Open Sans';\n    color: white;\n}\n\np {\n    color: black;\n}\n\n/* Checkout Page Styling */\n\n.checkoutPlaceholder {\n    height: 210px;\n    width: 1200px;\n    background-color: #f6f6f6;\n}\n\ndiv.checkoutItemCoupon{\n    display: block;\n    padding: 20px;\n}\n\ndiv.coupon{\n    display: inline-block;\n}\n\n.formInputFields {\n    background-color: #f6f6f6;\n    padding: 30px 25px 30px 25px;\n}\nh2.checkoutHeader {\n    font-size: 33px;\n    float: left;\n}\n\n.inputBoxTotal {\n    padding: 20px;\n}\n\n.billingTotals {\n    padding: 30px 25px 30px 25px;\n}\n\n.inputFields {\n    height: 30px;\n    background-color: #f6f6f6;\n    width: auto;\n}\n\np.formFieldLabels {\n    font-size: 20px;\n    margin: 0px;\n    padding: 0px;\n}\n\np.cartTotalsLabels {\n    font-size: 25px;\n    margin: 0px;\n    padding: 0px;\n}\n\n/*Styling order confirmation page*/\n/*Centering text*/\n.center {\n  margin: auto;\n  width: 50%;\n  border: 3px solid black;\n  padding: 10px;\n}\n/*center image*/\n.centeri {\n            display:block;\n            margin-left: auto;\n            margin-right: auto;\n\n        }
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/static/css/style.css b/static/css/style.css
+--- a/static/css/style.css	(revision dd030dcb89f0f901ce5c32d542b38718217c980f)
++++ b/static/css/style.css	(date 1678755657547)
+@@ -115,10 +115,48 @@
+   border: 3px solid black;
+   padding: 10px;
+ }
++
++
++/*Styling for home page*/
++.body {
++  background-image: url('/static/images/transparent-background.png');
++  background-size: cover;
++  background-repeat: no-repeat;
++  background-position: center center;
++  opacity: 0.8;
++}
++
++.title {
++		font-size: 48px;
++		font-weight: bold;
++		color: black;
++	}
++.subtitle {
++		font-weight: bold;
++		font-size: 24px;
++	}
++	.intro {
++		font-size: 18px;
++		font-weight: normal;
++	}
++	.intro button {
++		border-radius: 0;
++		font-size: 12px;
++		padding: 8px 16px;
++		background-color: #69a695;
++	}
+ /*center image*/
+ .centeri {
+             display:block;
+             margin-left: auto;
+             margin-right: auto;
+ 
+-        }
+\ No newline at end of file
++        }
++.backgroundImage {
++    background-repeat: no-repeat;
++    background-size: cover;
++    background-position: center;
++    height: 100%;
++    width: 100%;
++    opacity: 0.5;
++}
+\ No newline at end of file
+Index: Home Page.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<title>My Website</title>\n\t<style>\n\n        body {\n        background-image: url(\"static/images/transparent-background.png\");\n        height: 100%;\n        background-position: center;\n        background-repeat: no-repeat;\n        background-size: cover;\n        position: relative;\n    }\n\t\t.intro h1 {\n\t\t\tfont-size: 48px;\n\t\t\tfont-weight: bold;\n\t\t\tcolor: black;\n\t\t}\n\t\t.intro p {\n\t\t\tfont-weight: bold;\n\t\t\tfont-size: 24px;\n\t\t}\n\t\t.intro p + p {\n\t\t\tfont-size: 18px;\n\t\t\tfont-weight: normal;\n\t\t}\n\t\t.intro button {\n\t\t\tborder-radius: 0;\n\t\t\tfont-size: 12px;\n\t\t\tpadding: 8px 16px;\n\t\t\tbackground-color: #69a695;\n\t\t}\n\t</style>\n\t<link href=\"/static/CSS/style.css\" rel=\"stylesheet\">\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">\n</head>\n<body>\n <!-- Navbar -->\n            <nav class=\"navbar navbar-expand-lg bg-body-tertiary\">\n              <div class=\"container-fluid\">\n                <a class=\"navbar-brand\" href=\"Home Page.html\"><img src=\"static/images/Clear Background Logo.png\" alt=\"Bootstrap\" width=\"30\" height=\"24\"></a>\n                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                  <span class=\"navbar-toggler-icon\"></span>\n                </button>\n                <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n                  <div class=\"navbar-nav\">\n                    <a class=\"nav-link active\" aria-current=\"page\" href=\"Home Page.html\">Home</a>\n                    <a class=\"nav-link\" aria-current=\"page\" href=\"shop.html\">Shop</a>\n                    <a class=\"nav-link\" href=\"About%20Page.html\">About</a>\n                    <a class=\"nav-link\" href=\"Contact%20Us%20Page.html\">Contact Us</a>\n                    <a class=\"nav-link\" href=\"Log-In.html\">Log In</a>\n                  </div>\n                </div>\n              </div>\n            </nav>\n\n\t<main>\n\t\t<div class=\"text-center\">\n\t\t\t<h1>AROUND THE BLOCK.CO</h1>\n\t\t\t<p>Join the<br>Block Party</p>\n\t\t\t<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>\n            <form action=\"shop.html\" method=\"post\">\n            <input type=\"submit\" value=\"Start Shopping\">\n\t\t</div>\n\t</main>\n\n<!-- proper spacing for the background photo-->\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n</body>\n</html>\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Home Page.html b/Home Page.html
+--- a/Home Page.html	(revision dd030dcb89f0f901ce5c32d542b38718217c980f)
++++ b/Home Page.html	(date 1678755734121)
+@@ -1,43 +1,14 @@
+ <!DOCTYPE html>
+ <html lang="en">
+-<head>
+-	<title>My Website</title>
+-	<style>
+-
+-        body {
+-        background-image: url("static/images/transparent-background.png");
+-        height: 100%;
+-        background-position: center;
+-        background-repeat: no-repeat;
+-        background-size: cover;
+-        position: relative;
+-    }
+-		.intro h1 {
+-			font-size: 48px;
+-			font-weight: bold;
+-			color: black;
+-		}
+-		.intro p {
+-			font-weight: bold;
+-			font-size: 24px;
+-		}
+-		.intro p + p {
+-			font-size: 18px;
+-			font-weight: normal;
+-		}
+-		.intro button {
+-			border-radius: 0;
+-			font-size: 12px;
+-			padding: 8px 16px;
+-			background-color: #69a695;
+-		}
+-	</style>
+-	<link href="/static/CSS/style.css" rel="stylesheet">
+-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+-</head>
+-<body>
+- <!-- Navbar -->
+-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
++    <head>
++        <meta charset="UTF-8">
++        <title>Check Out</title>
++        <link href="/static/CSS/style.css" rel="stylesheet">
++        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
++    </head>
++    <body>
++<!-- Navbar -->
++            <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
+               <div class="container-fluid">
+                 <a class="navbar-brand" href="Home Page.html"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+@@ -46,43 +17,31 @@
+                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                   <div class="navbar-nav">
+                     <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
+-                    <a class="nav-link" aria-current="page" href="shop.html">Shop</a>
++                    <a class="nav-link" aria-current="page" href="Shop.html">Shop</a>
+                     <a class="nav-link" href="About%20Page.html">About</a>
+                     <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
+-                    <a class="nav-link" href="Log-In.html">Log In</a>
++                    <a class="nav-link" href="Log-In-Screen.html">Log In</a>
+                   </div>
+                 </div>
+               </div>
+             </nav>
+ 
+ 	<main>
+-		<div class="text-center">
++        <div class="backgroundImage";>
++      <img src="static/images/transparent-background.png" height="auto" width="auto"/>
++        </div>
++		<div class="title">
+ 			<h1>AROUND THE BLOCK.CO</h1>
++        </div>
++        <div class="subtitle">
+ 			<p>Join the<br>Block Party</p>
+-			<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>
++        </div>
++        <div class="intro">
++			<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park Maryland</p>
+             <form action="shop.html" method="post">
+             <input type="submit" value="Start Shopping">
+-		</div>
+ 	</main>
+ 
+-<!-- proper spacing for the background photo-->
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-
+ </body>
+ </html>
+ 
