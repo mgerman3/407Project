@@ -11,11 +11,86 @@
     <meta charset="UTF-8">
     <title>Inventory Management</title>
 </head>
-<body>
+
+
+<!-- Inventory Input -->
+<form class="row g-3 needs-validation" novalidate>
+  <div class="col-md-4">
+    <label for="validationItemID" class="form-label">Item ID</label>
+    <input type="text" class="form-control" id="validationItemID" aria-describedby="inputGroupPrepend" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCollectionID" class="form-label">Collection ID</label>
+    <input type="text" class="form-control" id="validationCollectionID" aria-describedby="inputGroupPrepend" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationItemName" class="form-label">Item Name</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend"></span>
+      <input type="text" class="form-control" id="validationItemName" aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">
+        Please enter a valid Item Name.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationItemSize" class="form-label">Item Size</label>
+        <select class="form-select" id="validationItemSize" required>
+      <option selected disabled value="">Choose...</option>
+        <option>XS</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+        <option>XXL</option>
+        </select>
+    <div class="invalid-feedback">
+      Please select a valid size.
+    </div>
+  </div>
+
+
+  <div class="col-md-3">
+    <label for="validationItemColor" class="form-label">Item Color</label>
+    <input type="text" class="form-control" id="validationItemColor" required>
+    <div class="invalid-feedback">
+      Please provide a valid color.
+    </div>
+
+   <div class="col-md-3">
+    <label for="validationPrice" class="form-label">Price</label>
+    <input type="text" class="form-control" id="validationPrice" required>
+    <div class="invalid-feedback">
+      Please provide a valid price.
+    </div>
+
+     <div class="col-md-3">
+    <label for="validationItemColor" class="form-label">Item Color</label>
+    <input type="text" class="form-control" id="validationItemColor" required>
+    <div class="invalid-feedback">
+      Please provide a valid color.
+    </div>
+
+
+  </div>
+  <div class="col-12">
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
+<!-- Inventory Management Table -->
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Inventory ID</th>
+        <th scope="col">Item ID</th>
+        <th scope="col">Collection ID</th>
       <th scope="col">Item Name</th>
       <th scope="col">Item Size</th>
         <th scope="col">Item Color</th>
