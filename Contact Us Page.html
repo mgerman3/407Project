@@ -12,7 +12,7 @@
 
 <body>
 <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
               <div class="container-fluid">
                 <a class="navbar-brand" href="Home Page.html"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,54 +21,99 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
-                    <a class="nav-link" aria-current="page" href="shop.html">Shop</a>
+                    <a class="nav-link" aria-current="page" href="Shop.html">Shop</a>
                     <a class="nav-link" href="About%20Page.html">About</a>
                     <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
-                    <a class="nav-link" href="Log-In.html">Log In</a>
+                    <a class="nav-link" href="Log-In-Screen.html">Log In</a>
                   </div>
                 </div>
               </div>
             </nav>
 
-
+<!-- Heading Information -->
     <h1><center>Contact Us</h1>
     <h3><center>Welcome! We're happy to help.</h3>
     <img src=/static/images/Contact%20Us%20Page%20Piic.png width = 500 height = "500" alt="ATB Model Skateboarding" align="right" >
 
-    <form>
-        <label for = "FName">First Name:</label><br>
-            <input type = "text" name="FName" required><br>
-        <label for = "LName">Last Name:</label><br>
-            <input type = "text" name = "LName" required><br>
-        <label for = "Email">Email:</label> <br>
-            <input type = "email" name="Email" required><br>
-        <label for = "PhoneNum">Phone Number:</label><br>
-            <input type = "tel" id = "PhoneNum" name="PhoneNum" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{3}" required><br>
-        <label for = "Message">Message:</label><br>
-            <input type = "textarea" id="Message" name="Message" required><br>
-        <label for = "SubmitButton">Submit Message:</label><br>
-            <input type = "submit" name="SubmitButton" required><br>
-    <form>
+<!-- Random Message Fields -->
+    <div class="inputBoxTotal">
+        <div class="row">
+            <div class="border-box col">
+                <form class="formInputFields">
+                    <div class = "row">
+                        <div class="border-box col">
+                            <div class="row" style="padding-right: 15px">
+                                <p class="formFieldsLabels"> First Name <br></p>
+                                 <input type = "text" class="inputFields" required><br><br>
+                            </div>
+                        </div>
+                        <div class="border-box col">
+                            <div class="row" style="padding-left: 15px">
+                                <p class="formFieldsLabels">Last Name <br></p>
+                                <input type = "text" class="inputFields" required><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <p class="formFieldsLabels">Email</p>
+                        <input type = "email" class="inputFields" required><br><br>
+                    </div>
+                    <div class = "row">
+                        <p class="formFieldsLabels">Phone Number</p>
+                        <input type = "tel" class="inputFields" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{3}" required><br><br>
+                    </div>
+                    <div class = "row">
+                        <p class="formFieldsLabels">Message</p>
+                        <input type = "textarea" class="inputFields" required><br><br>
+                    </div>
+                    <div class = "row">
+                        <p class="formFieldsLabels">Submit Message:</p>
+                        <input type = "submit" class="input" required><br><br>
+                    </div>
+                </form>
+            </div>
 
-    <h2>Leave a Review</h2>
-    <form>
-        <label for = "FName">First Name:</label><br>
-            <input type = "text" id="FName" name="FName" required><br>
-        <label for = "LName">Last Name:</label><br>
-            <input type = "text" id="LName" name = "LName" required><br>
-        <label for = "Email">Email:</label> <br>
-            <input type = "email" id = "Email" name="Email" required><br>
-        <label for = "CustomerType">Type of Customer:</label>
-            <select name="CustomerType" id="CustomerType">
-                <option value="Student">Student</option>
-                <option value="Parent">Parent</option>
-                <option value="Organization">Organization</option>
-                <option value="Other">Other</option>
-        <label for = "Review">Review:</label><br>
-            <input type = "textarea" id = "Review" name="Review" required><br>
-        <label for = "SubmitButton">Submit Review:</label><br>
-            <input type = "submit" id = "SubmitButton" name="SubmitButton" required><br>
-    <form>
-
+<!-- Review Message Fields -->
+    <div class="inputBoxTotal">
+        <div class="row">
+            <div class="border-box col">
+                 <h2 class="checkoutHeader"><strong>Leave a Review</strong></h2><br><br>
+                <form class="formInputFields">
+                    <div class = "row">
+                        <div class="border-box col">
+                            <div class="row" style="padding-right: 15px">
+                                <p class="formFieldsLabels">First Name <br></p>
+                                 <input type = "text" class="inputFields" required><br><br>
+                            </div>
+                        </div>
+                        <div class="border-box col">
+                            <div class="row" style="padding-left: 15px">
+                                <p class="formFieldsLabels">Last Name <br></p>
+                                <input type = "text" class="inputFields" required><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <p class="formFieldsLabels">Email</p>
+                        <input type = "email" class="inputFields" required><br><br>
+                    </div>
+                    <div class = "row">
+                        <p class="formFieldsLabels">Type of Customer</p>
+                        <select class="inputFields">
+                            <option value="Student">Student</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Organization">Organization</option>
+                            <option value="Other">Other</option><br><br>
+                    </div>
+                    <div class = "row">
+                        <p class="formFieldsLabels">Review</p>
+                        <input type = "textarea" class="inputFields" required><br><br>
+                    </div>
+                    <div class = "row">
+                        <p class="formFieldsLabels">Submit Review:</p>
+                        <input type = "submit" class="input" required><br><br>
+                    </div>
+                </form>
+            </div>
 </body>
 </html>

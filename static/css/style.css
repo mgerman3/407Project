@@ -4,7 +4,6 @@
 
 /* Font Styling for entire website */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
-
 /*navbar*/
 navbar {
     display: flex;
@@ -12,6 +11,9 @@ navbar {
     padding: 20px;
     background-color: #69a695;
     color: #fff;
+}
+.navbar-nav a {
+    float: right;
 }
 
 background-image {
@@ -23,26 +25,39 @@ opacity: 0.5;
 }
 
 body{
-    font-family: 'Open Sans';
+    font-family: 'Open Sauce SemiBold';
 }
 
 h1 {
     color: black;
+    font-family: 'Open Sauce SemiBold';
+    font-size: 80px;
 }
 
 /*use this to create a division that has centered text*/
+.login-buttons{
+    text-align: center;
+}
+
+
 .text-center{
     text-align: center;
+
 }
 
 /* button styling */
 input{
     background-color: #69a695;
+<<<<<<< HEAD
+=======
+    text-color: white;
+>>>>>>> a0cf96c (This push includes numerous changes:)
     border-width: 1px;
     border-color: #545454;
     border-radius: 5px;
     padding: 7px;
-    margin: 5px;
+    margin: 2px;
+    color: white;
 }
 
 .checkoutButtons{
@@ -53,6 +68,9 @@ input{
 
 p {
     color: black;
+    font-family: 'Open Sauce SemiBold';
+    font-size: 20px;
+
 }
 
 /* Checkout Page Styling */
@@ -81,6 +99,13 @@ h2.checkoutHeader {
     float: left;
 }
 
+<<<<<<< HEAD
+=======
+.navbar {
+    background-color: deepskyblue;
+}
+
+>>>>>>> a0cf96c (This push includes numerous changes:)
 .inputBoxTotal {
     padding: 20px;
 }
@@ -95,10 +120,14 @@ h2.checkoutHeader {
     width: auto;
 }
 
+<<<<<<< HEAD
 p.formFieldLabels {
+=======
+.formFieldLabels {
+>>>>>>> a0cf96c (This push includes numerous changes:)
     font-size: 20px;
-    margin: 0px;
-    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 p.cartTotalsLabels {
