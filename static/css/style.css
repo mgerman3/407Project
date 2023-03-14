@@ -4,7 +4,6 @@
 
 /* Font Styling for entire website */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
-
 /*navbar*/
 navbar {
     display: flex;
@@ -49,6 +48,10 @@ h1 {
 /* button styling */
 input{
     background-color: #69a695;
+<<<<<<< HEAD
+=======
+    text-color: white;
+>>>>>>> a0cf96c (This push includes numerous changes:)
     border-width: 1px;
     border-color: #545454;
     border-radius: 5px;
@@ -96,6 +99,13 @@ h2.checkoutHeader {
     float: left;
 }
 
+<<<<<<< HEAD
+=======
+.navbar {
+    background-color: deepskyblue;
+}
+
+>>>>>>> a0cf96c (This push includes numerous changes:)
 .inputBoxTotal {
     padding: 20px;
 }
@@ -110,10 +120,14 @@ h2.checkoutHeader {
     width: auto;
 }
 
+<<<<<<< HEAD
 p.formFieldLabels {
+=======
+.formFieldLabels {
+>>>>>>> a0cf96c (This push includes numerous changes:)
     font-size: 20px;
-    margin: 0px;
-    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 p.cartTotalsLabels {
