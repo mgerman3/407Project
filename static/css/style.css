@@ -14,7 +14,15 @@ navbar {
     color: #fff;
 }
 
-html{
+background-image {
+    opacity: 0.5;
+}
+
+url("static/images/WelcomePage_BackgroundPhoto.jpeg") {
+opacity: 0.5;
+}
+
+body{
     font-family: 'Open Sans';
 }
 
@@ -29,7 +37,7 @@ h1 {
 
 /* button styling */
 input{
-    background-color: #d9d9d9;
+    background-color: #69a695;
     border-width: 1px;
     border-color: #545454;
     border-radius: 5px;
@@ -107,3 +115,10 @@ p.cartTotalsLabels {
   border: 3px solid black;
   padding: 10px;
 }
+/*center image*/
+.centeri {
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
