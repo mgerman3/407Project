@@ -11,7 +11,7 @@
     <body>
 
         <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg bg-body-tertiary" style="height: 75px">
+            <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
               <div class="container-fluid">
                 <a class="navbar-brand" href="Home Page.html"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,9 +20,9 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
-                    <a class="nav-link" aria-current="page" href="#.html">Shop</a>
-                    <a class="nav-link" href="About%20Page.html">About</a>
-                    <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
+                    <a class="nav-link dropdown-toggle" aria-current="page" href="Shop.html">Shop</a>
+                    <a class="nav-link dropdown-toggle" href="About%20Page.html">About</a>
+                    <a class="nav-link dropdown-toggle" href="Contact%20Us%20Page.html">Contact Us</a>
                     <a class="nav-link" href="Log-In-Screen.html">Log In</a>
                   </div>
                 </div>
@@ -32,55 +32,55 @@
         <div class="checkoutItemCoupon">
             <h1 class="checkoutHeader"><strong>Checkout</strong></h1>
             <div class="checkoutPlaceholder"></div><br>
-            <div class="coupon">
+<!--            <div class="coupon">
                 <input type="text" style="background-color: white;">
             </div>
             <div class="coupon">
                 <form action="CheckoutPage.html" method="post">
                     <input type="submit" value="Apply Coupon" class="checkoutButtons">
-                </form>
+                </form> -->
             </div>
         </div>
 
        <!-- Shipping Information Fields -->
-        <div class="shippingTotal">
+        <div class="inputBoxTotal">
             <div class="row">
                 <div class="border-box col">
                     <h2 class="checkoutHeader"><strong>Shipping Address</strong></h2><br><br>
-                    <form class="shipInfo">
+                    <form class="formInputFields">
                         <div class = "row">
                             <div class="border-box col">
                                 <div class="row" style="padding-right: 15px">
-                                    <p class="shipFieldLabels">First Name <br></p>
-                                    <input type="text" class="shipFields">
+                                    <p class="formFieldLabels">First Name <br></p>
+                                    <input type="text" class="inputFields">
                                 </div>
                             </div>
                             <div class="border-box col">
                                 <div class="row" style="padding-left: 15px">
-                                    <p class="shipFieldLabels">Last Name <br></p>
-                                    <input type="text" class="shipFields"><br><br>
+                                    <p class="formFieldLabels">Last Name <br></p>
+                                    <input type="text" class="inputFields"><br><br>
                                 </div>
                             </div>
                         </div>
                         <div class = "row">
-                            <p class="shipFieldLabels">Address</p>
-                            <input type="text" class="shipFields"><br><br>
+                            <p class="formFieldLabels">Address</p>
+                            <input type="text" class="inputFields"><br><br>
                         </div>
                         <div class = "row">
-                            <p class="shipFieldLabels">Address</p>
-                            <input type="text" class="shipFields"><br><br>
+                            <p class="formFieldLabels">Address</p>
+                            <input type="text" class="inputFields"><br><br>
                         </div>
                         <div class = "row">
-                            <p class="shipFieldLabels">City</p>
-                            <input type="text" class="shipFields"><br><br>
+                            <p class="formFieldLabels">City</p>
+                            <input type="text" class="inputFields"><br><br>
                         </div>
                         <div class = "row">
-                            <p class="shipFieldLabels">State</p>
-                            <input type="text" class="shipFields"><br><br>
+                            <p class="formFieldLabels">State</p>
+                            <input type="text" class="inputFields"><br><br>
                         </div>
                         <div class = "row">
-                            <p class="shipFieldLabels">Zip Code</p>
-                            <input type="text" class="shipFields"><br><br>
+                            <p class="formFieldLabels">Zip Code</p>
+                            <input type="text" class="inputFields"><br><br>
                         </div>
                     </form>
                 </div>

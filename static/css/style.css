@@ -13,6 +13,9 @@ navbar {
     background-color: #69a695;
     color: #fff;
 }
+.navbar-nav a {
+    float: right;
+}
 
 background-image {
     opacity: 0.5;
@@ -23,26 +26,35 @@ opacity: 0.5;
 }
 
 body{
-    font-family: 'Open Sans';
+    font-family: 'Open Sauce SemiBold';
 }
 
 h1 {
     color: black;
+    font-family: 'Open Sauce SemiBold';
+    font-size: 80px;
 }
 
 /*use this to create a division that has centered text*/
+.login-buttons{
+    text-align: center;
+}
+
+
 .text-center{
     text-align: center;
+
 }
 
 /* button styling */
 input{
-    background-color: #d9d9d9;
+    background-color: #69a695;
     border-width: 1px;
     border-color: #545454;
     border-radius: 5px;
     padding: 7px;
-    margin: 5px;
+    margin: 2px;
+    color: white;
 }
 
 .checkoutButtons{
@@ -53,6 +65,9 @@ input{
 
 p {
     color: black;
+    font-family: 'Open Sauce SemiBold';
+    font-size: 20px;
+
 }
 
 /* Checkout Page Styling */
@@ -72,7 +87,7 @@ div.coupon{
     display: inline-block;
 }
 
-.shipInfo {
+.formInputFields {
     background-color: #f6f6f6;
     padding: 30px 25px 30px 25px;
 }
@@ -81,11 +96,7 @@ h2.checkoutHeader {
     float: left;
 }
 
-.navbar {
-    background-color: deepskyblue;
-}
-
-.shippingTotal {
+.inputBoxTotal {
     padding: 20px;
 }
 
@@ -93,13 +104,13 @@ h2.checkoutHeader {
     padding: 30px 25px 30px 25px;
 }
 
-.shipFields {
+.inputFields {
     height: 30px;
     background-color: #f6f6f6;
     width: auto;
 }
 
-p.shipFieldLabels {
+p.formFieldLabels {
     font-size: 20px;
     margin: 0px;
     padding: 0px;
