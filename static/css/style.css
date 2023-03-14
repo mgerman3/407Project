@@ -13,6 +13,9 @@ navbar {
     background-color: #69a695;
     color: #fff;
 }
+.navbar-nav a {
+    float: right;
+}
 
 background-image {
     opacity: 0.5;
