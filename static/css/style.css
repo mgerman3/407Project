@@ -23,16 +23,24 @@ opacity: 0.5;
 }
 
 body{
-    font-family: 'Open Sans';
+    font-family: 'Open Sauce SemiBold';
 }
 
 h1 {
     color: black;
+    font-family: 'Open Sauce SemiBold';
+    font-size: 80px;
 }
 
 /*use this to create a division that has centered text*/
+.login-buttons{
+    text-align: center;
+}
+
+
 .text-center{
     text-align: center;
+
 }
 
 /* button styling */
@@ -42,7 +50,8 @@ input{
     border-color: #545454;
     border-radius: 5px;
     padding: 7px;
-    margin: 5px;
+    margin: 2px;
+    color: white;
 }
 
 .checkoutButtons{
@@ -53,6 +62,9 @@ input{
 
 p {
     color: black;
+    font-family: 'Open Sauce SemiBold';
+    font-size: 20px;
+
 }
 
 /* Checkout Page Styling */
