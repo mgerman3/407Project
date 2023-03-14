@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2ad45817-a36e-4812-873d-f2bc9e1a2370" name="Changes" comment="Shop page image updates">
+      <change beforePath="$PROJECT_DIR$/Order Confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/Order Confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d223fade-3dd7-4858-8348-d47881e22121" />
+        <option name="url" value="https://github.com/jbonoUMD/team08spring2023bmgt407.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MTu5gYCMrPAF4hGJJCcdEu0Ksr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2ad45817-a36e-4812-873d-f2bc9e1a2370" name="Changes" comment="" />
+      <created>1677803718855</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677803718855</updated>
+      <workItem from="1677803721756" duration="2617000" />
+      <workItem from="1677953221459" duration="4076000" />
+      <workItem from="1678148338708" duration="969000" />
+      <workItem from="1678151340555" duration="957000" />
+      <workItem from="1678152345957" duration="2526000" />
+      <workItem from="1678313167668" duration="7485000" />
+      <workItem from="1678471291807" duration="6253000" />
+      <workItem from="1678719623314" duration="30000" />
+      <workItem from="1678748527881" duration="3832000" />
+    </task>
+    <task id="LOCAL-00001" summary="Order Confirmation Page">
+      <created>1677805412953</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677805412953</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Order Confirmation Page">
+      <created>1677805527976</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677805527976</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Order Confirmation skeleton">
+      <created>1677955603349</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677955603349</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Banner headers for pages">
+      <created>1677958876859</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677958876859</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updating Order Confirmation">
+      <created>1678408801889</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678408801890</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updating nav bar, creating shop page">
+      <created>1678471482152</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678471482152</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updating order confirmation page and shop page">
+      <created>1678647988288</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678647988288</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Shop page image updates">
+      <created>1678750777176</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678750777176</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Order Confirmation Page" />
+    <MESSAGE value="Order Confirmation skeleton" />
+    <MESSAGE value="Banner headers for pages" />
+    <MESSAGE value="Updating Order Confirmation" />
+    <MESSAGE value="Updating nav bar, creating shop page" />
+    <MESSAGE value="Updating order confirmation page and shop page" />
+    <MESSAGE value="Shop page image updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shop page image updates" />
+  </component>
+</project>
