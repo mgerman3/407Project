@@ -14,14 +14,22 @@
             text-align: center;
         }
 
+        .centerimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         p {
             text-align: center;
         }
 
+        text-center {padding: 9000px 9000px;}
+
     </style>
 
         <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
               <div class="container-fluid">
                 <a class="navbar-brand" href="Home Page.html"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,8 +38,10 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
+                    <a class="nav-link" aria-current="page" href="Shop.html">Shop</a>
                     <a class="nav-link" href="About%20Page.html">About</a>
                     <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
+                    <a class="nav-link" href="Log-In-Screen.html">Log In</a>
                   </div>
                 </div>
               </div>
@@ -39,19 +49,24 @@
 
 <!--Order Confirmation-->
     <div class="container-fluid">
+        <br>
         <!--placeholder for generated order #-->
         <h1 class="Order #"><strong>Order #</strong></h1>
         <div class="row">
-            <div class="input">
                 <p>Your order has been placed!</p>
-                    <img src="https://cdn-icons-png.flaticon.com/512/3139/3139155.png" class="centeri" width="130" height="130">
+                <div class=".text-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3139/3139155.png" width="130" height="130" class="centerimage">
+                    <div class="centerimage">
+                        <br>
+                    </div>
                 </div>
-            </div>
         </div>
+    </div>
 
     <!--button for submitting another order-->
     <p>Welcome to the ATB family - we are getting your order ready!</p>
-    <div class=".text-center">
+    <div class="text-center">
+        <br>
         <div class="input">
          <form action="Shop.html" method="post">
              <input type="submit" value="Submit Another Order">
@@ -59,18 +74,3 @@
         </div>
     </div>
 
-
-<div class = "row">
-                            <div class="border-box col">
-                                <div class="row" style="padding-right: 15px">
-                                    <p class="shipFieldLabels">First Name <br></p>
-                                    <input type="text" class="shipFields">
-                                </div>
-                            </div>
-                            <div class="border-box col">
-                                <div class="row" style="padding-left: 15px">
-                                    <p class="shipFieldLabels">Last Name <br></p>
-                                    <input type="text" class="shipFields"><br><br>
-                                </div>
-                            </div>
-                        </div>
