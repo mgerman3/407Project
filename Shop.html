@@ -12,6 +12,48 @@
     .margin-left {
         margin-left: 1%;
     }
+    /* Dropdown Button */
+.dropbtn {
+  background-color: #d9d9d9;
+  color: black;
+  padding: 12px;
+  font-size: 16px;
+  border-color: #545454;
+  border-radius: 50%;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #69a695;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #545454;}
 </style>
 
 
@@ -39,8 +81,50 @@
         <!--Image for top of shop page-->
         <img src="/static/images/ShopPage_TopBanner.jpeg" width="1280" height="200">
     </div>
-<!--filter buttons here-->
+<!--filter buttons style, price, color, review-->
     <br>
+<div class="dropdown">
+    <button class="dropbtn">Style</button>
+    <div class="dropdown-content">
+        <a href="#">T-Shirt</a>
+        <a href="#">Long-Sleeve</a>
+        <a href="#">Quarter Zip</a>
+        <a href="#">Crewneck</a>
+        <a href="#">Hoodie</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Price</button>
+    <div class="dropdown-content">
+        <a href="#">under $30</a>
+        <a href="#">under $50</a>
+        <a href="#">under $100</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Color</button>
+    <div class="dropdown-content">
+        <a href="#">White</a>
+        <a href="#">Red</a>
+        <a href="#">Yellow</a>
+        <a href="#">Green</a>
+        <a href="#">Blue</a>
+        <a href="#">Black</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Review</button>
+    <div class="dropdown-content">
+        <a href="#">5 stars</a>
+        <a href="#">4 stars</a>
+        <a href="#"><4 stars</a>
+    </div>
+</div>
+
+<!--Old filter buttons
     <label for ="Style">Style:</label>
             <select name="Style" id="Style">
                 <option value="T-Shirt">T-Shirt</option>
@@ -69,7 +153,7 @@
                     <option value="<3 stars"><3 stars</option>
                 </select>
 </div>
-
+-->
 <br>
 <br>
 
