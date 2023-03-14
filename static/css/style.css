@@ -14,7 +14,15 @@ navbar {
     color: #fff;
 }
 
-html{
+background-image {
+    opacity: 0.5;
+}
+
+url("static/images/WelcomePage_BackgroundPhoto.jpeg") {
+opacity: 0.5;
+}
+
+body{
     font-family: 'Open Sans';
 }
 
