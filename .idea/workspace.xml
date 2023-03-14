@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ad45817-a36e-4812-873d-f2bc9e1a2370" name="Changes" comment="Shop page image updates">
+    <list default="true" id="2ad45817-a36e-4812-873d-f2bc9e1a2370" name="Changes" comment="Style sheet image center">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Order Confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/Order Confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/Shop.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +75,7 @@
       <workItem from="1678313167668" duration="7485000" />
       <workItem from="1678471291807" duration="6253000" />
       <workItem from="1678719623314" duration="30000" />
-      <workItem from="1678748527881" duration="3832000" />
+      <workItem from="1678748527881" duration="6690000" />
     </task>
     <task id="LOCAL-00001" summary="Order Confirmation Page">
       <created>1677805412953</created>
@@ -131,7 +133,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678750777176</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Order confirmation page">
+      <created>1678752855097</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678752855097</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Style sheet image center">
+      <created>1678752894468</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678752894468</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +172,8 @@
     <MESSAGE value="Updating nav bar, creating shop page" />
     <MESSAGE value="Updating order confirmation page and shop page" />
     <MESSAGE value="Shop page image updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shop page image updates" />
+    <MESSAGE value="Order confirmation page" />
+    <MESSAGE value="Style sheet image center" />
+    <option name="LAST_COMMIT_MESSAGE" value="Style sheet image center" />
   </component>
 </project>

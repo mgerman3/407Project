@@ -28,17 +28,51 @@
             </nav>
 
 <!--Shop page-->
-<nav class="">
     <div class="container-fluid">
         <!--Image for top of shop page-->
         <img src="/static/images/ShopPage_TopBanner.jpeg" width="1275" height="200"
-        <!--filter buttons here-->
-        <!--Products-->
+    </div>
+<!--filter buttons here-->
+<div class="row">
+    <label for ="Style">Style:</label>
+            <select name="Style" id="Style">
+                <option value="Crewneck">Short Sleeve</option>
+                <option value="Long Sleeve">Long Sleeve</option>
+                <option value="Short Sleeve">Crewneck</option>
+            </select>
+
+    <label for ="Price">Price:</label>
+                <select name="Price" id="Price">
+                    <option value="under $30">under $30</option>
+                    <option value="under $50">under $50</option>
+                    <option value="under $100">under $100</option>
+                </select>
+    <label for ="Color">Color:</label>
+                <select name="Color" id="Color">
+                    <option value="white">White</option>
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                </select>
+    <label for ="Review">Review:</label>
+                <select name="Review" id="Review">
+                    <option value="5 stars">5 stars</option>
+                    <option value="<5 starts"><5 stars></option>
+                </select>
+</div>
+<!--Products-->
         <h1 class="Clothes for you!"><strong>Clothes for you!</strong></h1>
         <img src="/static/images/Shop_ClothingItem1.png" width="260" height="260">
         <p><strong>Springtime Vintage Crew $29.99</strong></p>
         <p>Product description placeholder</p>
-            <!--Add to cart button-->
-            <button type="button">Add to Cart</button>
+
+<!--Add to cart button-->
+<div class="input"
+    <div class=".text-center">
+         <form action="CheckoutPage.html" method="post">
+             <input type="submit" value="Add to Cart">
+         </form>
     </div>
-</nav>
+</div>
+</html>
+
+
