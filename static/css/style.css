@@ -42,6 +42,10 @@ h1 {
     text-align: center;
 
 }
+/*adjust nav bar for log-in page*/
+.topnav-right {
+  float: right;
+}
 
 /* button styling */
 input{
