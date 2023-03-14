@@ -64,7 +64,7 @@ div.coupon{
     display: inline-block;
 }
 
-.shipInfo {
+.formInputFields {
     background-color: #f6f6f6;
     padding: 30px 25px 30px 25px;
 }
@@ -73,11 +73,7 @@ h2.checkoutHeader {
     float: left;
 }
 
-.navbar {
-    background-color: deepskyblue;
-}
-
-.shippingTotal {
+.inputBoxTotal {
     padding: 20px;
 }
 
@@ -85,13 +81,13 @@ h2.checkoutHeader {
     padding: 30px 25px 30px 25px;
 }
 
-.shipFields {
+.inputFields {
     height: 30px;
     background-color: #f6f6f6;
     width: auto;
 }
 
-p.shipFieldLabels {
+p.formFieldLabels {
     font-size: 20px;
     margin: 0px;
     padding: 0px;
