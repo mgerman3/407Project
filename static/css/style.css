@@ -5,6 +5,13 @@
 /* Font Styling for entire website */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
+html body p {
+    font-family: "Open Sans";
+}
+
+h1 {
+    font-: 100px;
+}
 /*navbar*/
 navbar {
     display: flex;
@@ -13,6 +20,9 @@ navbar {
     background-color: #69a695;
     color: #fff;
 }
+.navbar-nav a {
+    float: right;
+}
 
 background-image {
     opacity: 0.5;
@@ -20,16 +30,6 @@ background-image {
 
 url("static/images/WelcomePage_BackgroundPhoto.jpeg") {
 opacity: 0.5;
-}
-
-body{
-    font-family: 'Open Sauce SemiBold';
-}
-
-h1 {
-    color: black;
-    font-family: 'Open Sauce SemiBold';
-    font-size: 80px;
 }
 
 /*use this to create a division that has centered text*/
@@ -50,6 +50,10 @@ h1 {
 /* button styling */
 input{
     background-color: #69a695;
+<<<<<<< HEAD
+=======
+    text-color: white;
+>>>>>>> a0cf96c (This push includes numerous changes:)
     border-width: 1px;
     border-color: #545454;
     border-radius: 5px;
@@ -77,6 +81,7 @@ p {
     height: 210px;
     width: 1200px;
     background-color: #f6f6f6;
+    padding: 0px 0px 0px 0px;
 }
 
 div.checkoutItemCoupon{
@@ -92,11 +97,18 @@ div.coupon{
     background-color: #f6f6f6;
     padding: 30px 25px 30px 25px;
 }
-h2.checkoutHeader {
+.checkoutHeader {
     font-size: 33px;
     float: left;
 }
 
+<<<<<<< HEAD
+=======
+.navbar {
+    background-color: deepskyblue;
+}
+
+>>>>>>> a0cf96c (This push includes numerous changes:)
 .inputBoxTotal {
     padding: 20px;
 }
@@ -108,10 +120,11 @@ h2.checkoutHeader {
 .inputFields {
     height: 30px;
     background-color: #f6f6f6;
+    border-color: gray;
     width: auto;
 }
 
-p.formFieldLabels {
+.formFieldsLabels {
     font-size: 20px;
     margin: 0px;
     padding: 0px;
@@ -120,7 +133,11 @@ p.formFieldLabels {
 p.cartTotalsLabels {
     font-size: 25px;
     margin: 0px;
-    padding: 0px;
+    padding: 0px 0px 20px 0px;
+}
+
+hr {
+    margin: 0px;
 }
 
 /*Styling order confirmation page*/
@@ -132,9 +149,12 @@ p.cartTotalsLabels {
   padding: 10px;
 }
 /*center image*/
-.centeri {
+.center-image {
             display:block;
             margin-left: auto;
             margin-right: auto;
-
         }
+
+title {
+    font-size: 30px;
+}

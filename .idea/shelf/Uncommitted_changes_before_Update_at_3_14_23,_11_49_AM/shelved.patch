@@ -1,0 +1,68 @@
+Index: Home Page.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<title>My Website</title>\n\t<style>\n\n        body {\n        background-image: url(\"static/images/transparent-background.png\");\n        height: 100%;\n        background-position: center;\n        background-repeat: no-repeat;\n        background-size: cover;\n        position: relative;\n    }\n\t\t.intro h1 {\n\t\t\tfont-size: 48px;\n\t\t\tfont-weight: bold;\n\t\t\tcolor: black;\n\t\t}\n\t\t.intro p {\n\t\t\tfont-weight: bold;\n\t\t\tfont-size: 24px;\n\t\t}\n\t\t.intro p + p {\n\t\t\tfont-size: 18px;\n\t\t\tfont-weight: normal;\n\t\t}\n\t\t.intro button {\n\t\t\tborder-radius: 0;\n\t\t\tfont-size: 12px;\n\t\t\tpadding: 8px 16px;\n\t\t\tbackground-color: #69a695;\n\t\t}\n\t</style>\n\t<link href=\"/static/CSS/style.css\" rel=\"stylesheet\">\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">\n</head>\n<body>\n <!-- Navbar -->\n            <nav class=\"navbar navbar-expand-lg bg-body-tertiary\">\n              <div class=\"container-fluid\">\n                <a class=\"navbar-brand\" href=\"Home Page.html\"><img src=\"static/images/Clear Background Logo.png\" alt=\"Bootstrap\" width=\"30\" height=\"24\"></a>\n                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                  <span class=\"navbar-toggler-icon\"></span>\n                </button>\n                <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n                  <div class=\"navbar-nav\">\n                    <a class=\"nav-link active\" aria-current=\"page\" href=\"Home Page.html\">Home</a>\n                    <a class=\"nav-link\" aria-current=\"page\" href=\"shop.html\">Shop</a>\n                    <a class=\"nav-link\" href=\"About%20Page.html\">About</a>\n                    <a class=\"nav-link\" href=\"Contact%20Us%20Page.html\">Contact Us</a>\n                    <a class=\"nav-link\" href=\"Log-In.html\">Log In</a>\n                  </div>\n                </div>\n              </div>\n            </nav>\n\n\t<main>\n\t\t<div class=\"text-center\">\n\t\t\t<h1>AROUND THE BLOCK.CO</h1>\n\t\t\t<p>Join the<br>Block Party</p>\n\t\t\t<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>\n            <form action=\"shop.html\" method=\"post\">\n            <input type=\"submit\" value=\"Start Shopping\">\n\t\t</div>\n\t</main>\n\n<!-- proper spacing for the background photo-->\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n</body>\n</html>\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Home Page.html b/Home Page.html
+--- a/Home Page.html	(revision dd030dcb89f0f901ce5c32d542b38718217c980f)
++++ b/Home Page.html	(date 1678808962816)
+@@ -1,41 +1,12 @@
+ <!DOCTYPE html>
+ <html lang="en">
+-<head>
+-	<title>My Website</title>
+-	<style>
+-
+-        body {
+-        background-image: url("static/images/transparent-background.png");
+-        height: 100%;
+-        background-position: center;
+-        background-repeat: no-repeat;
+-        background-size: cover;
+-        position: relative;
+-    }
+-		.intro h1 {
+-			font-size: 48px;
+-			font-weight: bold;
+-			color: black;
+-		}
+-		.intro p {
+-			font-weight: bold;
+-			font-size: 24px;
+-		}
+-		.intro p + p {
+-			font-size: 18px;
+-			font-weight: normal;
+-		}
+-		.intro button {
+-			border-radius: 0;
+-			font-size: 12px;
+-			padding: 8px 16px;
+-			background-color: #69a695;
+-		}
+-	</style>
+-	<link href="/static/CSS/style.css" rel="stylesheet">
+-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+-</head>
+-<body>
++    <head>
++        <meta charset="UTF-8">
++        <title>Check Out</title>
++        <link href="/static/CSS/style.css" rel="stylesheet">
++        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
++    </head>
++    <body>
+  <!-- Navbar -->
+             <nav class="navbar navbar-expand-lg bg-body-tertiary">
+               <div class="container-fluid">
+@@ -56,7 +27,7 @@
+             </nav>
+ 
+ 	<main>
+-		<div class="text-center">
++		<div class="title">
+ 			<h1>AROUND THE BLOCK.CO</h1>
+ 			<p>Join the<br>Block Party</p>
+ 			<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>

@@ -1,0 +1,39 @@
+Index: static/css/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/* ATB Blue = #69a695 */\n/* Grey Buttons/Hovers = #d9d9d9 */\n/* Super light grey, almost white background paneling = #f6f6f6 */\n\n/* Font Styling for entire website */\n@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');\n\n/*navbar*/\nnavbar {\n    display: flex;\n    justify-content: space-between;\n    padding: 20px;\n    background-color: #69a695;\n    color: #fff;\n}\n\nhtml{\n    font-family: 'Open Sans';\n}\n\nh1 {\n    color: black;\n}\n\n/*use this to create a division that has centered text*/\n.text-center{\n    text-align: center;\n}\n\n/* button styling */\ninput{\n    background-color: #d9d9d9;\n    border-width: 1px;\n    border-color: #545454;\n    border-radius: 5px;\n    padding: 7px;\n    margin: 5px;\n}\n\n.checkoutButtons{\n    background-color: #69a695;\n    font-family: 'Open Sans';\n    color: white;\n}\n\np {\n    color: black;\n}\n\n/* Checkout Page Styling */\n\n.checkoutPlaceholder {\n    height: 210px;\n    width: 1200px;\n    background-color: #f6f6f6;\n}\n\ndiv.checkoutItemCoupon{\n    display: block;\n    padding: 20px;\n}\n\ndiv.coupon{\n    display: inline-block;\n}\n\n.shipInfo {\n    background-color: #f6f6f6;\n    padding: 30px 25px 30px 25px;\n}\nh2.checkoutHeader {\n    font-size: 33px;\n    float: left;\n}\n\n.navbar {\n    background-color: deepskyblue;\n}\n\n.shippingTotal {\n    padding: 20px;\n}\n\n.billingTotals {\n    padding: 30px 25px 30px 25px;\n}\n\n.shipFields {\n    height: 30px;\n    background-color: #f6f6f6;\n    width: auto;\n}\n\np.shipFieldLabels {\n    font-size: 20px;\n    margin: 0px;\n    padding: 0px;\n}\n\np.cartTotalsLabels {\n    font-size: 25px;\n    margin: 0px;\n    padding: 0px;\n}\n\n/*Styling order confirmation page*/\n/*Centering text*/\n.center {\n  margin: auto;\n  width: 50%;\n  border: 3px solid black;\n  padding: 10px;\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/static/css/style.css b/static/css/style.css
+--- a/static/css/style.css	(revision 2ddaa3f502181d6f205e8435044aca00949e607a)
++++ b/static/css/style.css	(date 1678753702090)
+@@ -110,4 +110,26 @@
+   width: 50%;
+   border: 3px solid black;
+   padding: 10px;
+-}
+\ No newline at end of file
++}
++
++
++/*Styling for home page*/
++div.title h1 {
++		font-size: 48px;
++		font-weight: bold;
++		color: black;
++	}
++	.intro p {
++		font-weight: bold;
++		font-size: 24px;
++	}
++	.intro p + p {
++		font-size: 18px;
++		font-weight: normal;
++	}
++	.intro button {
++		border-radius: 0;
++		font-size: 12px;
++		padding: 8px 16px;
++		background-color: #69a695;
++	}

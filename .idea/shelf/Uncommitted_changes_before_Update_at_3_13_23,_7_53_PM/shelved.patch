@@ -1,0 +1,78 @@
+Index: Home Page.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<title>My Website</title>\n\t<style>\n\t\t\tbody {\n\t\t\tbackground-image: url('your-image-url.jpg');\n\t\t\tbackground-size: cover;\n\t\t\tbackground-position: center;\n\t\t}\n\t\t.intro h1 {\n\t\t\tfont-size: 48px;\n\t\t\tfont-weight: bold;\n\t\t\tcolor: black;\n\t\t}\n\t\t.intro p {\n\t\t\tfont-weight: bold;\n\t\t\tfont-size: 24px;\n\t\t}\n\t\t.intro p + p {\n\t\t\tfont-size: 18px;\n\t\t\tfont-weight: normal;\n\t\t}\n\t\t.intro button {\n\t\t\tborder-radius: 0;\n\t\t\tfont-size: 12px;\n\t\t\tpadding: 8px 16px;\n\t\t\tbackground-color: #69a695;\n\t\t}\n\t</style>\n\t<link href=\"/static/CSS/style.css\" rel=\"stylesheet\">\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">\n</head>\n<body>\n <!-- Navbar -->\n            <nav class=\"navbar navbar-expand-lg bg-body-tertiary\" style=\"height: 75px\">\n              <div class=\"container-fluid\">\n                <a class=\"navbar-brand\" href=\"Home Page.html\"><img src=\"static/images/Clear Background Logo.png\" alt=\"Bootstrap\" width=\"30\" height=\"24\"></a>\n                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                  <span class=\"navbar-toggler-icon\"></span>\n                </button>\n                <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n                  <div class=\"navbar-nav\">\n                    <a class=\"nav-link active\" aria-current=\"page\" href=\"Home Page.html\">Home</a>\n                    <a class=\"nav-link\" aria-current=\"page\" href=\"shop.html\">Shop</a>\n                    <a class=\"nav-link\" href=\"About%20Page.html\">About</a>\n                    <a class=\"nav-link\" href=\"Contact%20Us%20Page.html\">Contact Us</a>\n                    <a class=\"nav-link\" href=\"Log-In-Screen.html\">Log In</a>\n                  </div>\n                </div>\n              </div>\n            </nav>\n\n\t<main>\n\t\t<div class=\"intro\">\n\t\t\t<h1>AROUND THE BLOCK.CO</h1>\n\t\t\t<p>Join the<br>Block Party</p>\n\t\t\t<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>\n\t\t\t<button>Start Shopping</button>\n\t\t</div>\n\t</main>\n</body>\n</html>\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Home Page.html b/Home Page.html
+--- a/Home Page.html	(revision d45efc939df0c051f7063fdbca16cf6ed58177b9)
++++ b/Home Page.html	(date 1678751611679)
+@@ -1,10 +1,11 @@
+ <!DOCTYPE html>
+ <html lang="en">
++<link href="/static/CSS/style.css" rel="stylesheet">
+ <head>
+-	<title>My Website</title>
++	<title>Home Page</title>
+ 	<style>
+-			body {
+-			background-image: url('your-image-url.jpg');
++		.intro {
++			background-image: url("static/images/WelcomePage_BackgroundPhoto.jpeg");
+ 			background-size: cover;
+ 			background-position: center;
+ 		}
+@@ -27,37 +28,28 @@
+ 			padding: 8px 16px;
+ 			background-color: #69a695;
+ 		}
++		img {
++			opacity: 0.5; /* set the opacity to make only the image transparent */
++		}
+ 	</style>
+-	<link href="/static/CSS/style.css" rel="stylesheet">
+-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+ </head>
+ <body>
+- <!-- Navbar -->
+-            <nav class="navbar navbar-expand-lg bg-body-tertiary" style="height: 75px">
+-              <div class="container-fluid">
+-                <a class="navbar-brand" href="Home Page.html"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
+-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+-                  <span class="navbar-toggler-icon"></span>
+-                </button>
+-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+-                  <div class="navbar-nav">
+-                    <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
+-                    <a class="nav-link" aria-current="page" href="shop.html">Shop</a>
+-                    <a class="nav-link" href="About%20Page.html">About</a>
+-                    <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
+-                    <a class="nav-link" href="Log-In-Screen.html">Log In</a>
+-                  </div>
+-                </div>
+-              </div>
+-            </nav>
++	<header class="header">
++		<a href="#" class="logo">Developer</a>
++		<nav class="nav-items">
++			<a href="#">Home</a>
++			<a href="#">Shop</a>
++			<a href="#">About</a>
++			<a href="#">Contact Us</a>
++		</nav>
++	</header>
+ 
+ 	<main>
+-		<div class="intro">
++		<div class="h1"></div>
+ 			<h1>AROUND THE BLOCK.CO</h1>
+-			<p>Join the<br>Block Party</p>
+-			<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>
++		<p>Join the<br>Block Party</p>
++			<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park Maryland</p>
+ 			<button>Start Shopping</button>
+-		</div>
+ 	</main>
+ </body>
+ </html>

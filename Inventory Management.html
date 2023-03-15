@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Inventory Management</title>
+        <link href="/static/CSS/style.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    </head>
+    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Management</title>
+</head>
+
+
+<!-- Inventory Input -->
+<form class="row g-3 needs-validation" novalidate>
+  <div class="col-md-4">
+    <label for="validationItemID" class="form-label">Item ID</label>
+    <input type="text" class="form-control" id="validationItemID" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCollectionID" class="form-label">Collection ID</label>
+    <input type="text" class="form-control" id="validationCollectionID" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationItemName" class="form-label">Item Name</label>
+    <input type="text" class="form-control" id="validationItemName" required>
+    <div class="invalid-feedback">
+      Please enter a valid Item Name.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationItemSize" class="form-label">Item Size</label>
+    <select class="form-select" id="validationItemSize" required>
+      <option selected disabled value="">Choose...</option>
+      <option>XS</option>
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+      <option>XXL</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid size.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationItemColor" class="form-label">Item Color</label>
+    <input type="text" class="form-control" id="validationItemColor" required>
+    <div class="invalid-feedback">
+      Please provide a valid color.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationPrice" class="form-label">Item Price</label>
+    <input type="text" class="form-control" id="validationPrice" required>
+    <div class="invalid-feedback">
+      Please provide a valid price.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationQuantityAvail" class="form-label">Quantity Available</label>
+    <input type="text" class="form-control" id="validationQuantityAvail" required>
+    <div class="invalid-feedback">
+      Please provide a valid quantity.
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationImage" class="form-label">Insert Image</label>
+    <input type="file" class="form-control" id="validationImage" required>
+    <div class="invalid-feedback">
+      Please provide a valid image file.
+    </div>
+  </div>
+  <div class="col-md-8">
+    <label for="validationDescription" class="form-label">Item Description</label>
+    <input type="text" class="form-control" id="validationDescription" required>
+    <div class="invalid-feedback">
+      Please provide a valid description.
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</
+
+
+<!-- Inventory Management Table -->
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <th scope="col">Item ID</th>
+        <th scope="col">Collection ID</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">Item Size</th>
+        <th scope="col">Item Color</th>
+        <th scope="col">Item Price</th>
+        <th scope="col">Item Description</th>
+        <th scope="col">Item Image</th>
+        <th scope="col">Quantity Available</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

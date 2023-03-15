@@ -9,41 +9,71 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     </head>
     <body>
-
         <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="Home Page.html"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
-                    <a class="nav-link" aria-current="page" href="Shop.html">Shop</a>
-                    <a class="nav-link" href="About%20Page.html">About</a>
-                    <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
-                    <a class="nav-link" href="Log-In-Screen.html">Log In</a>
-                  </div>
-                </div>
-              </div>
-            </nav>
+        <nav class="navbar navbar-expand-lg" style="background-color: #69a695">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="Home%20Page.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Shop
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Game Day Collection</a></li>
+                    <li><a class="dropdown-item" href="#">Dark Blue Collection</a></li>
+                    <li><a class="dropdown-item" href="#">Springtime Collection</a></li>
+                    <li><a class="dropdown-item" href="#">Logo Collection</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    About
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Around the Block</a></li>
+                    <li><a class="dropdown-item" href="#">Our Mission</a></li>
+                    <li><a class="dropdown-item" href="#">Meet our Team</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Contact Us
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Request Form</a></li>
+                    <li><a class="dropdown-item" href="#">Reviews</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
         <!-- Coupon Code Box & Cart Information -->
-        <div class="checkoutItemCoupon">
-            <h1 class="checkoutHeader"><strong>Checkout</strong></h1>
-            <div class="checkoutPlaceholder"></div><br>
+        <div class="checkoutItemCoupon" style="padding-left: 24px">
+            <div class="row" style="padding-top: 25px;">
+                <h1 class="checkoutHeader"><strong>Checkout</strong></h1>
+            </div>
+            <div class="checkoutPlaceholder"></div>
 <!--            <div class="coupon">
                 <input type="text" style="background-color: white;">
             </div>
             <div class="coupon">
                 <form action="CheckoutPage.html" method="post">
                     <input type="submit" value="Apply Coupon" class="checkoutButtons">
-                </form> -->
-            </div>
+                </form>
+            </div> -->
         </div>
 
        <!-- Shipping Information Fields -->
-        <div class="inputBoxTotal">
+        <div class="inputBoxTotal" style="padding-left: 24px">
             <div class="row">
                 <div class="border-box col">
                     <h2 class="checkoutHeader"><strong>Shipping Address</strong></h2><br><br>
@@ -51,35 +81,35 @@
                         <div class = "row">
                             <div class="border-box col">
                                 <div class="row" style="padding-right: 15px">
-                                    <p class="formFieldLabels">First Name <br></p>
+                                    <p class="formFieldsLabels">First Name <br></p>
                                     <input type="text" class="inputFields">
                                 </div>
                             </div>
                             <div class="border-box col">
                                 <div class="row" style="padding-left: 15px">
-                                    <p class="shipFieldLabels">Last Name <br></p>
+                                    <p class="formFieldsLabels">Last Name <br></p>
                                     <input type="text" class="inputFields"><br><br>
                                 </div>
                             </div>
                         </div>
                         <div class = "row">
-                            <p class="formFieldLabels">Address</p>
+                            <p class="formFieldsLabels">Address</p>
                             <input type="text" class="inputFields"><br><br>
                         </div>
                         <div class = "row">
-                            <p class="formFieldLabels">Address</p>
+                            <p class="formFieldsLabels">Address</p>
                             <input type="text" class="inputFields"><br><br>
                         </div>
                         <div class = "row">
-                            <p class="formFieldLabels">City</p>
+                            <p class="formFieldsLabels">City</p>
                             <input type="text" class="inputFields"><br><br>
                         </div>
                         <div class = "row">
-                            <p class="formFieldLabels">State</p>
+                            <p class="formFieldsLabels">State</p>
                             <input type="text" class="inputFields"><br><br>
                         </div>
                         <div class = "row">
-                            <p class="formFieldLabels">Zip Code</p>
+                            <p class="formFieldsLabels">Zip Code</p>
                             <input type="text" class="inputFields"><br><br>
                         </div>
                     </form>
@@ -96,7 +126,7 @@
                             <div class="border-box col" style="padding: 0px">
                                 <p class="cartTotalsLabels">Shipping -</p>
                             </div>
-                            <div class="border-box col" style="padding: 0px">
+                            <div class="border-box col" style="padding: 0px 0px 10px 0px">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                     <label class="form-check-label" for="flexRadioDefault1">
@@ -115,8 +145,8 @@
                                         Rapid Delivery
                                      </label>
                                 </div>
-                            </div>
-                        </div><hr>
+                            </div><hr>
+                        </div>
                         <div class="row">
                             <p class="cartTotalsLabels">Taxes -</p><hr>
                         </div>
