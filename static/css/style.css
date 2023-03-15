@@ -158,3 +158,57 @@ hr {
 title {
     font-size: 30px;
 }
+
+
+#menuBar {
+    list-style: none;
+    background: #69a695;
+    width: 100%;
+    margin: 0;
+    padding: 13px;
+    float:left;
+    clear:both;
+}
+
+#menuBar li {
+    float:left;
+    position:relative;
+}
+
+#menuBar li a, #menuBar li a:visited {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    background: #69a695;
+    padding: 3px 7px 3px 7px;
+}
+
+#menuBar li a:hover {
+    background: #d9d9d9;
+}
+
+#menuBar li ul {
+    position: absolute;
+    width:100px;
+    background: #d9d9d9;
+    top:30px;
+    margin:0 0 0 -999em;
+    padding:0;
+    list-style:none;
+}
+#menuBar li:hover ul {
+    margin:0;
+    width: 100px;
+    left:0;
+}
+#menuBar li li {
+    width:100px;
+    float:none;
+}
+#menuBar li:hover li a {
+    display:block;
+    position:relative;
+}
+#menuBar li li a:hover {
+    background: #d9d9d9;
+}
