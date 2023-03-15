@@ -1,87 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>My Website</title>
-	<style>
+    <head>
+        <meta charset="UTF-8">
+        <title>Home Page</title>
+        <link href="/static/CSS/style.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <style>
+            /* Style for the background photo */
+           body {
+               background-image: url('static/images/transparent-background.png');
+               background-repeat: no-repeat;
+               background-position: center;
+               background-size: cover;
+               min-height: 100vh;
+                    }
 
-        body {
-        background-image: url("static/images/transparent-background.png");
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-    }
-		.intro h1 {
-			font-size: 48px;
-			font-weight: bold;
-			color: black;
-		}
-		.intro p {
-			font-weight: bold;
-			font-size: 24px;
-		}
-		.intro p + p {
-			font-size: 18px;
-			font-weight: normal;
-		}
-		.intro button {
-			border-radius: 0;
-			font-size: 12px;
-			padding: 8px 16px;
-			background-color: #69a695;
-		}
-	</style>
-	<link href="/static/CSS/style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
-<body>
- <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="Home Page.html"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
-                    <a class="nav-link" aria-current="page" href="Shop.html">Shop</a>
-                    <a class="nav-link" href="About%20Page.html">About</a>
-                    <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
-                    <a class="nav-link" href="Log-In-Screen.html">Log In</a>
-                  </div>
-                </div>
-              </div>
-            </nav>
+    </style>
+    </head>
+    <body>
+<!-- Navbar -->
+        <nav class="navbar navbar-expand-lg" style="background-color: #69a695">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="Home%20Page.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Shop
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Game Day Collection</a></li>
+                    <li><a class="dropdown-item" href="#">Dark Blue Collection</a></li>
+                    <li><a class="dropdown-item" href="#">Springtime Collection</a></li>
+                    <li><a class="dropdown-item" href="#">Logo Collection</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    About
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Around the Block</a></li>
+                    <li><a class="dropdown-item" href="#">Our Mission</a></li>
+                    <li><a class="dropdown-item" href="#">Meet our Team</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Contact Us
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Request Form</a></li>
+                    <li><a class="dropdown-item" href="#">Reviews</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
 
-	<main>
-		<div class="text-center">
-			<h1>AROUND THE BLOCK.CO</h1>
-			<p>Join the<br>Block Party</p>
-			<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>
-            <form action="shop.html" method="post">
-            <input type="submit" value="Start Shopping">
-		</div>
-	</main>
+        <main>
+            <div class="text-center intro">
+                <h1>AROUND THE BLOCK.CO</h1>
+                <p>Join the<br>Block Party</p>
+                <p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park, Maryland</p>
+                <form action="Shop.html" method="post">
+                    <input type="submit" value="Start Shopping">
+                </form>
+            </div>
+        </main>
 
-<!-- proper spacing for the background photo-->
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-KRlJGIfW+IS8cWTtI5m5r5/hpvAB+Nyo+8IvSSm
 </html>
-
