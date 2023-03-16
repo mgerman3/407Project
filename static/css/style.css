@@ -166,49 +166,55 @@ title {
     width: 100%;
     margin: 0;
     padding: 13px;
-    float:left;
-    clear:both;
 }
 
+/*aligns nav bar items to the left and horizontal*/
 #menuBar li {
     float:left;
     position:relative;
 }
 
+/* adjusts items seen directly on the nav bar */
 #menuBar li a, #menuBar li a:visited {
     color: black;
-    text-decoration: none;
+    text-decoration: solid;
     display: inline-block;
     background: #69a695;
-    padding: 3px 7px 3px 7px;
+    padding: 5px 10px 5px 10px;
 }
 
+/* allows for hovering over items directly on the nav bar */
 #menuBar li a:hover {
     background: #d9d9d9;
 }
 
+/* drop down menus*/
 #menuBar li ul {
     position: absolute;
     width:100px;
     background: #d9d9d9;
-    top:30px;
-    margin:0 0 0 -999em;
+    top:35px;
+    /* hides the dropdown menu */
+    margin:0 0 0 -25em;
     padding:0;
-    list-style:none;
+    list-style: unset;
 }
+
+/* allows for hovering over drop down menus */
 #menuBar li:hover ul {
     margin:0;
+    background: #d9d9d9;
     width: 100px;
-    left:0;
 }
+
+/* ensures drop down menu is always the correct color*/
 #menuBar li li {
-    width:100px;
-    float:none;
+    width: 100px;
+    display: block;
 }
+
+
 #menuBar li:hover li a {
     display:block;
     position:relative;
-}
-#menuBar li li a:hover {
-    background: #d9d9d9;
 }
