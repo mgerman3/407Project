@@ -42,10 +42,6 @@ opacity: 0.5;
     text-align: center;
 
 }
-/*adjust nav bar for log-in page*/
-.topnav-right {
-  float: right;
-}
 
 /* button styling */
 input{
@@ -97,10 +93,36 @@ div.coupon{
     background-color: #f6f6f6;
     padding: 30px 25px 30px 25px;
 }
+
+.formInputFieldsNoBackground {
+    padding-left: 20px;
+}
+
 .checkoutHeader {
     font-size: 33px;
     float: left;
 }
+
+.sectionBreaker {
+    padding-top: 40px;
+}
+
+.customerReviewSection {
+        background-color: #f6f6f6;
+    width: 100%;
+}
+
+img {
+margin: 0px;
+padding: 0px;
+border: 0px;
+}
+
+.reviewHeader {
+    font-size: 33px;
+    padding-left: 20px;
+}
+
 
 <<<<<<< HEAD
 =======
@@ -159,62 +181,7 @@ title {
     font-size: 30px;
 }
 
-/*nav bar */
-#menuBar {
-    list-style: none;
-    background: #69a695;
-    width: 100%;
-    margin: 0;
-    padding: 13px;
+.paddingbetweenelements {
+     padding-bottom: 20px;
 }
 
-/*aligns nav bar items to the left and horizontal*/
-#menuBar li {
-    float:left;
-    position:relative;
-}
-
-/* adjusts items seen directly on the nav bar */
-#menuBar li a, #menuBar li a:visited {
-    color: black;
-    text-decoration: solid;
-    display: inline-block;
-    background: #69a695;
-    padding: 5px 10px 5px 10px;
-}
-
-/* allows for hovering over items directly on the nav bar */
-#menuBar li a:hover {
-    background: #d9d9d9;
-}
-
-/* drop down menus*/
-#menuBar li ul {
-    position: absolute;
-    width:100px;
-    background: #d9d9d9;
-    top:35px;
-    /* hides the dropdown menu */
-    margin:0 0 0 -25em;
-    padding:0;
-    list-style: unset;
-}
-
-/* allows for hovering over drop down menus */
-#menuBar li:hover ul {
-    margin:0;
-    background: #d9d9d9;
-    width: 100px;
-}
-
-/* ensures drop down menu is always the correct color*/
-#menuBar li li {
-    width: 100px;
-    display: block;
-}
-
-
-#menuBar li:hover li a {
-    display:block;
-    position:relative;
-}

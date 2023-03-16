@@ -32,8 +32,10 @@
 
 <!-- Heading Information -->
     <h1><center>Contact Us</h1>
-    <h3><center>Welcome! We're happy to help.</h3>
-    <img src=/static/images/Contact%20Us%20Page%20Piic.png width = 500 height = "500" alt="ATB Model Skateboarding" align="right" >
+    <div class="paddingbetweenelements">
+        <h3><center>Welcome! We're happy to help.</h3>
+    </div>
+            <img src=/static/images/Contact%20Us%20Page%20Piic.png width = "400" height = "420" alt="ATB Model Skateboarding" align="right" style="padding-right: 20px" >
 
 <!-- Random Message Fields -->
     <div class="inputBoxTotal">
@@ -64,21 +66,43 @@
                     </div>
                     <div class = "row">
                         <p class="formFieldsLabels">Message</p>
-                        <input type = "textarea" class="inputFields" required><br><br>
+                         <textarea class="inputFields" id="message" rows="5" cols="50" required></textarea><br><br>
                     </div>
                     <div class = "row">
-                        <p class="formFieldsLabels">Submit Message:</p>
+                        <p class="formFieldsLabels"></p>
                         <input type = "submit" class="input" required><br><br>
                     </div>
                 </form>
             </div>
 
+            <div class="sectionBreaker"></div>
+
+
+  <!--Customer Review Section-->
+            <div class="customerReviewSection" style = "padding-top: 20px">
+   <h2 class="reviewHeader" style="padding-top: 50px; padding-left: 30px;"><strong>Customer Reviews</strong></h2><br><br>
+        <div class = "row">
+                    <div class="border-box col">
+                        <div class="row" style="padding-right: 15px">
+                            <p class="formFieldsLabels">First Name <br></p>
+                             <input type = "text" class="inputFields" required><br><br>
+                        </div>
+                    </div>
+                    <div class="border-box col">
+                        <div class="row" style="padding-left: 15px">
+                            <p class="formFieldsLabels">Last Name <br></p>
+                            <input type = "text" class="inputFields" required><br><br>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
 <!-- Review Message Fields -->
     <div class="inputBoxTotal">
         <div class="row">
             <div class="border-box col">
-                 <h2 class="checkoutHeader"><strong>Leave a Review</strong></h2><br><br>
-                <form class="formInputFields">
+                 <h2 class="reviewHeader" style="padding-top:50px"><strong>Leave a Review</strong></h2>
+                <form class="formInputFieldsNoBackground">
                     <div class = "row">
                         <div class="border-box col">
                             <div class="row" style="padding-right: 15px">
@@ -99,18 +123,14 @@
                     </div>
                     <div class = "row">
                         <p class="formFieldsLabels">Type of Customer</p>
-                        <select class="inputFields">
-                            <option value="Student">Student</option>
-                            <option value="Parent">Parent</option>
-                            <option value="Organization">Organization</option>
-                            <option value="Other">Other</option><br><br>
+                        <input type = "customerType" class="inputFields" required><br><br>
                     </div>
                     <div class = "row">
                         <p class="formFieldsLabels">Review</p>
-                        <input type = "textarea" class="inputFields" required><br><br>
+                        <textarea class="inputFields" id="reviewText" rows="5" cols="50" required></textarea><br><br>
                     </div>
                     <div class = "row">
-                        <p class="formFieldsLabels">Submit Review:</p>
+                        <p class="formFieldsLabels"></p>
                         <input type = "submit" class="input" required><br><br>
                     </div>
                 </form>
