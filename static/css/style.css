@@ -93,10 +93,36 @@ div.coupon{
     background-color: #f6f6f6;
     padding: 30px 25px 30px 25px;
 }
+
+.formInputFieldsNoBackground {
+    padding-left: 20px;
+}
+
 .checkoutHeader {
     font-size: 33px;
     float: left;
 }
+
+.sectionBreaker {
+    padding-top: 40px;
+}
+
+.customerReviewSection {
+        background-color: #f6f6f6;
+    width: 100%;
+}
+
+img {
+margin: 0px;
+padding: 0px;
+border: 0px;
+}
+
+.reviewHeader {
+    font-size: 33px;
+    padding-left: 20px;
+}
+
 
 <<<<<<< HEAD
 =======
@@ -154,3 +180,8 @@ hr {
 title {
     font-size: 30px;
 }
+
+.paddingbetweenelements {
+     padding-bottom: 20px;
+}
+
