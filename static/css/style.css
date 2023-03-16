@@ -108,7 +108,7 @@ div.coupon{
 }
 
 .customerReviewSection {
-        background-color: #f6f6f6;
+    background-color: #f6f6f6;
     width: 100%;
 }
 
@@ -183,5 +183,13 @@ title {
 
 .paddingbetweenelements {
      padding-bottom: 20px;
+}
+
+/*Used to create and style rectangle images on Contact us page for each individual review*/
+rectangle {
+  height: 170px;
+  width: 350px;
+  background-color: blue;
+  /*outline-color: blue;*/
 }
 
