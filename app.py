@@ -12,7 +12,7 @@ def Shop():
 
 @app.route('/About')
 def About():
-    return render_template('About.html')
+    return render_template('About Page.html')
 
 @app.route('/ContactUs')
 def ContactUsPage():
