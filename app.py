@@ -47,6 +47,10 @@ def OrderDetails():
 def SalesTracker():
     return render_template('Sales Tracker.html')
 
+@app.route('/SignUp')
+def SignUp():
+    return render_template('sign-up-page.html')
+
 
 if __name__ == '__main__':
     app.run()
