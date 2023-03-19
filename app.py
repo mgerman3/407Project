@@ -12,7 +12,7 @@ def Shop():
 
 @app.route('/About')
 def About():
-    return render_template('About.html')
+    return render_template('About Page.html')
 
 @app.route('/ContactUs')
 def ContactUsPage():
@@ -21,6 +21,36 @@ def ContactUsPage():
 @app.route('/LogIn')
 def LogInScreen():
     return render_template('Log-In-Screen.html')
+
+@app.route('/CheckOut')
+def CheckOut():
+    return render_template('CheckoutPage.html')
+
+@app.route('/GenericProduct')
+def GenProduct():
+    return render_template('GenericProductPage.html')
+
+@app.route('/Inventory')
+def Inventory():
+    return render_template('Inventory Management.html')
+
+@app.route('/OrderConfim')
+def OrderConfirm():
+    return render_template('Order Confirmation.html')
+
+@app.route('/OrderDetails')
+def OrderDetails():
+    return render_template('OrderDetails.html')
+
+
+@app.route('/SalesTracker')
+def SalesTracker():
+    return render_template('Sales Tracker.html')
+
+@app.route('/SignUp')
+def SignUp():
+    return render_template('sign-up-page.html')
+
 
 if __name__ == '__main__':
     app.run()

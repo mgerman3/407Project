@@ -24,6 +24,12 @@ navbar {
     float: right;
 }
 
+/* allows for hovering over the navbar*/
+.navbar-nav li a:hover {
+     background: #d9d9d9;
+ }
+
+
 background-image {
     opacity: 0.5;
 }
