@@ -66,7 +66,7 @@
       <workItem from="1678896822647" duration="4435000" />
       <workItem from="1678914086423" duration="6235000" />
       <workItem from="1678995726298" duration="5579000" />
-      <workItem from="1679017763874" duration="4136000" />
+      <workItem from="1679017763874" duration="4939000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling">
       <created>1678819151825</created>
@@ -138,11 +138,29 @@
       <option name="project" value="LOCAL" />
       <updated>1679020804790</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="When we updated our flask the image formatting got messed up. Fixed routes to images.">
+      <created>1679255727033</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679255727033</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling" />
@@ -154,6 +172,7 @@
     <MESSAGE value="added carousel templated" />
     <MESSAGE value="continued working on formatting" />
     <MESSAGE value="updated on formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated on formatting" />
+    <MESSAGE value="When we updated our flask the image formatting got messed up. Fixed routes to images." />
+    <option name="LAST_COMMIT_MESSAGE" value="When we updated our flask the image formatting got messed up. Fixed routes to images." />
   </component>
 </project>
