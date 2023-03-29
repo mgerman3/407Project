@@ -192,10 +192,13 @@ title {
 }
 
 /*Used to create and style rectangle images on Contact us page for each individual review*/
-rectangle {
-  height: 170px;
-  width: 350px;
-  background-color: blue;
-  /*outline-color: blue;*/
+.rectangle {
+    height: 170px;
+    width: 350px;
+    outline-style: solid;
+    outline-color: #d9d9d9;
+    padding-top: 10px;
 }
+
+
 
