@@ -51,6 +51,5 @@ def SalesTracker():
 def SignUp():
     return render_template('sign-up-page.html')
 
-
 if __name__ == '__main__':
     app.run()
