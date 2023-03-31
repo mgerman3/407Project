@@ -56,7 +56,57 @@
           </div>
         </nav>
 
+        {% if form_submitted %}
+
+        <div class="col-12">
+            <h2>Thank you for your order!</h2>
+        </div>
+        <div class="col-md-6">
+            <p>Products Ordered:</p>
+        </div>
+        <div class="col-md-6">
+            <p>{{ request.form.get(products)}}</p>
+        </div>
+        <div class="col-md-6">
+            <p>First Name:</p>
+        </div>
+        <div class="col-md-6">
+            <p>{{ request.form.get(first_name)}}</p>
+        </div>
+        <div class="col-md-6">
+            <p>Last Name:</p>
+        </div>
+        <div class="col-md-6">
+            <p>{{ request.form.get(last_name)}}</p>
+        </div>
+       <div class="col-md-6">
+            <p>Address:</p>
+        </div>
+        <div class="col-md-6">
+            <p>{{ request.form.get(address)}}</p>
+        </div>
+        <div class="col-md-6">
+            <p>City:</p>
+        </div>
+        <div class="col-md-6">
+            <p>{{ request.form.get(city)}}</p>
+        </div>
+        <div class="col-md-6">
+            <p>State:</p>
+        </div>
+        <div class="col-md-6">
+            <p>{{ request.form.get(state)}}</p>
+        </div>
+        <div class="col-md-6">
+            <p>Zip code:</p>
+        </div>
+        <div class="col-md-6">
+            <p>{{ request.form.get(zipcode)}}</p>
+        </div>
+
+        {% else %}
         <!-- Coupon Code Box & Cart Information -->
+        <form action="{{ url_for('CheckOut') }}" method="post">
         <div class="checkoutItemCoupon" style="padding-left: 24px">
             <div class="row" style="padding-top: 25px;">
                 <h1 class="checkoutHeader"><strong>Checkout</strong></h1>
@@ -82,35 +132,35 @@
                             <div class="border-box col">
                                 <div class="row" style="padding-right: 15px">
                                     <p class="formFieldsLabels">First Name <br></p>
-                                    <input type="text" class="inputFields">
+                                    <input type="text" class="inputFields" name="first_name">
                                 </div>
                             </div>
                             <div class="border-box col">
                                 <div class="row" style="padding-left: 15px">
                                     <p class="formFieldsLabels">Last Name <br></p>
-                                    <input type="text" class="inputFields"><br><br>
+                                    <input type="text" class="inputFields" name="last_name"><br><br>
                                 </div>
                             </div>
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">Address</p>
-                            <input type="text" class="inputFields"><br><br>
+                            <input type="text" class="inputFields" name="address1"><br><br>
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">Address</p>
-                            <input type="text" class="inputFields"><br><br>
+                            <input type="text" class="inputFields" name="address2"><br><br>
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">City</p>
-                            <input type="text" class="inputFields"><br><br>
+                            <input type="text" class="inputFields" name="city"><br><br>
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">State</p>
-                            <input type="text" class="inputFields"><br><br>
+                            <input type="text" class="inputFields" name="state"><br><br>
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">Zip Code</p>
-                            <input type="text" class="inputFields"><br><br>
+                            <input type="text" class="inputFields" name="zipcode"><br><br>
                         </div>
                     </form>
                 </div>
@@ -159,9 +209,9 @@
         </div>
 
         <!-- Button for Place Order -->
-        <form action="CheckoutPage.html" method="post">
             <input type="submit" value="Place Order" class="checkoutButtons" style="float: right; margin: 20px; padding: 7px 75px 7px 75px;">
         </form>
+        {% endif %}
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -22,9 +22,12 @@ def ContactUsPage():
 def LogInScreen():
     return render_template('Log-In-Screen.html')
 
-@app.route('/CheckOut')
+@app.route('/CheckOut', methods=['GET', 'POST'])
 def CheckOut():
-    return render_template('CheckoutPage.html')
+    if request.method == 'POST':
+        return render_template('CheckoutPage.html', form_submitted=True)
+    else:
+        return render_template('CheckoutPage.html')
 
 @app.route('/GenericProduct')
 def GenProduct():

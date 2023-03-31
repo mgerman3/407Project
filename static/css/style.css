@@ -156,12 +156,14 @@ border: 0px;
     font-size: 20px;
     margin: 0px;
     padding: 0px;
+    text-align: left;
 }
 
 p.cartTotalsLabels {
     font-size: 25px;
     margin: 0px;
     padding: 0px 0px 20px 0px;
+    text-align: left;
 }
 
 hr {
