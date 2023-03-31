@@ -1,0 +1,104 @@
+<!--Shop-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <link href="/static/CSS/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<!--Navbar-->
+  <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="/Home"><img src="../static/images/Clear%20Background%20Logo.png" alt="Bootstrap" width="30" height="24"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" aria-current="page" href="/Shop">Shop</a>
+                    <a class="nav-link" href="../About">About</a>
+                    <a class="nav-link" href="../ContactUs">Contact Us</a>
+                    <a class="nav-link" href="/LogIn">Log In</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+
+<!--Shop page-->
+    <div class="container-fluid">
+        <!--Image for top of shop page-->
+        <img src="../static/images/ShopPage_TopBanner.jpeg" width="1280" height="200" alt="Around the Block Group Pic">
+
+    </div>
+<!--filter buttons style, price, color, review-->
+    <br>
+<div class="dropdown">
+    <button class="dropbtn">Style</button>
+    <div class="dropdown-content">
+        <a href="#">T-Shirt</a>
+        <a href="#">Long-Sleeve</a>
+        <a href="#">Quarter Zip</a>
+        <a href="#">Crewneck</a>
+        <a href="#">Hoodie</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Price</button>
+    <div class="dropdown-content">
+        <a href="#">under $30</a>
+        <a href="#">under $50</a>
+        <a href="#">under $100</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Color</button>
+    <div class="dropdown-content">
+        <a href="#">White</a>
+        <a href="#">Red</a>
+        <a href="#">Yellow</a>
+        <a href="#">Green</a>
+        <a href="#">Blue</a>
+        <a href="#">Black</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Review</button>
+    <div class="dropdown-content">
+        <a href="#">5 stars</a>
+        <a href="#">4 stars</a>
+        <a href="#">3 stars</a>
+    </div>
+</div>
+
+<!--Spacing-->
+
+<br>
+<br>
+
+<!--Products-->
+<div class="h2.left">
+    <h1 class="Clothes for you!"><strong>Clothes for you!</strong></h1>
+    <img src="/static/images/Shop_ClothingItem1.png" width="270" height="260" class="margin-left" alt="Around the Block Shirt Pic ">
+</div>
+<div style="text-align: left">
+    <p><strong>Springtime Vintage Crew $29.99</strong></p>
+    <p>Product description placeholder</p>
+</div>
+
+<!--Add to cart button-->
+<div class="input">
+    <div class=".text-center">
+         <form action="CheckoutPage.html" method="post">
+             <input type="submit" value="Add to Cart">
+         </form>
+    </div>
+</div>
+</html>
+
+
