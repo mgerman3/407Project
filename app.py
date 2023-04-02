@@ -57,6 +57,9 @@ def SignUp():
     else:
         return render_template('sign-up-page.html')
 
+@app.route('/banner')
+def Banner():
+    return render_template('Banner.html')
 
 
 if __name__ == '__main__':
