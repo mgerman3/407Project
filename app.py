@@ -18,9 +18,12 @@ def About():
 def ContactUsPage():
     return render_template('Contact Us Page.html')
 
-@app.route('/login')
+@app.route('/login', methods = ['GET', 'POST'])
 def LogInScreen():
-    return render_template('Log-In-Screen.html')
+    if request.method == 'POST':
+        return render_template('Log-In-Screen.html', form_submitted=True)
+    else:
+        return render_template('Log-In-Screen.html')
 
 @app.route('/CheckOut')
 def CheckOut():
