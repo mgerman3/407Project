@@ -59,54 +59,53 @@
         </nav>
 
 <!-- Inventory Input -->
-<div class="container">
-  <div class="max-width-form">
-    <form class="row g-3 needs-validation" novalidate>
-      <div class="col-md-4">
-        <label for="validationItemID" class="form-label">Item ID</label>
-       <input type="text" class="form-control" id="validationItemID" required>
-        <div class="valid-feedback">
-        Looks good!
-    </div>
-  </div>
   <div class="col-md-4">
-    <label for="validationCollectionID" class="form-label">Collection ID</label>
-    <input type="text" class="form-control" id="validationCollectionID" required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationItemName" class="form-label">Item Name</label>
-    <input type="text" class="form-control" id="validationItemName" required>
+    <label for="validationImage" class="form-label">Insert Image</label>
+    <input type="file" class="form-control" id="validationImage" required>
     <div class="invalid-feedback">
-      Please enter a valid Item Name.
+      Please provide a valid image file.
     </div>
   </div>
-  <div class="col-md-3">
+<form class="row g-3 needs-validation" novalidate>
+  <div class="col-md-4">
+    <label for="validationItemID" class="form-label">Item ID</label>
+    <input type="text" class="form-control" id="validationItemID" required>
+    <div class="invalid-feedback">
+      Please provide a valid item ID.
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Collection ID</label>
+    <input type="text" class="form-control" id="validationCollectionID" required>
+    <div class="invalid-feedback">
+      Please provide a valid collection ID.
+    </div>
+  </div>
+  <div class="col-md-6">
     <label for="validationItemSize" class="form-label">Item Size</label>
     <select class="form-select" id="validationItemSize" required>
       <option selected disabled value="">Choose...</option>
-      <option>XS</option>
-      <option>S</option>
-      <option>M</option>
-      <option>L</option>
-      <option>XL</option>
-      <option>XXL</option>
+        <option>XS</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+        <option>XXL</option>
     </select>
     <div class="invalid-feedback">
       Please select a valid size.
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationItemColor" class="form-label">Item Color</label>
-    <input type="text" class="form-control" id="validationItemColor" required>
+    <label for="validationCustom04" class="form-label">Color</label>
+    <select type="text" class="form-control" id="validationItemColor" required>
+    </select>
     <div class="invalid-feedback">
-      Please provide a valid color.
+      Please input a valid color.
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationPrice" class="form-label">Item Price</label>
+    <label for="validationPrice" class="form-label">Price</label>
     <input type="text" class="form-control" id="validationPrice" required>
     <div class="invalid-feedback">
       Please provide a valid price.
@@ -119,26 +118,33 @@
       Please provide a valid quantity.
     </div>
   </div>
-  <div class="col-md-4">
-    <label for="validationImage" class="form-label">Insert Image</label>
-    <input type="file" class="form-control" id="validationImage" required>
-    <div class="invalid-feedback">
-      Please provide a valid image file.
-    </div>
-  </div>
-  <div class="col-md-8">
-    <label for="validationDescription" class="form-label">Item Description</label>
-    <input type="text" class="form-control" id="validationDescription" required>
+  <div class="col-md-3">
+    <label for="validationItemDesc" class="form-label">Item Description</label>
+    <input type="text" class="form-control" id="validationItemDesc" required>
     <div class="invalid-feedback">
       Please provide a valid description.
     </div>
   </div>
   <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
     <button class="btn btn-primary" type="submit">Submit form</button>
   </div>
-  </div>
-</div>
-</
+</form>
+
+
+
+
+
 <!-- Inventory Management Search Bar -->
 <div class="container">
   <div class="row justify-content-center">
