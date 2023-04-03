@@ -1,0 +1,420 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_10_23__9_34_AM1.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_10_23__9_34_AM1.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_3_10_23__9_34_AM1.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_3_10_23__9_34_AM1.xml	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
++++ /dev/null	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_3_10_23,_9_34_AM1" date="1678458872548" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_10_23,_9_34_AM1/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 3/10/23, 9:34 AM" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_13_23__8_36_PM1.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23__8_36_PM1.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23__8_36_PM1.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23__8_36_PM1.xml	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
++++ /dev/null	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_3_13_23,_8_36_PM1" date="1678754205453" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23,_8_36_PM1/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 3/13/23, 8:36 PM" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_10_23,_9_34_AM1/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_10_23,_9_34_AM1/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_3_10_23,_9_34_AM1/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_3_10_23,_9_34_AM1/shelved.patch	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
++++ /dev/null	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
+@@ -1,33 +0,0 @@
+-Index: Home Page.html
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/Home Page.html b/Home Page.html
+---- a/Home Page.html	
+-+++ b/Home Page.html	
+-@@ -1,0 +1,23 @@
+-+<!DOCTYPE html>
+-+
+-+<html lang="en">
+-+<header>
+-+    class="header">
+-+  <a href="#" class="logo">Developer</a>
+-+  <nav class="nav-items">
+-+    <a href="#">Home</a>
+-+    <a href="#">Shop</a>
+-+    <a href="#">About</a>
+-+      <a href="#">Contact Us</a>
+-+  </nav>
+-+</header>
+-+
+-+<main>
+-+  <div class="intro">
+-+    <h1>AROUND THE BLOCK.CO</h1>
+-+    <p>Join the Block Party</p>
+-+    <button>Start Shopping</button>
+-+  </div>
+-+<main>
+-+
+-+</html>
+-\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_13_23,_7_53_PM/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23,_7_53_PM/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23,_7_53_PM/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23,_7_53_PM/shelved.patch	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
++++ /dev/null	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
+@@ -1,78 +0,0 @@
+-Index: Home Page.html
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<title>My Website</title>\n\t<style>\n\t\t\tbody {\n\t\t\tbackground-image: url('your-image-url.jpg');\n\t\t\tbackground-size: cover;\n\t\t\tbackground-position: center;\n\t\t}\n\t\t.intro h1 {\n\t\t\tfont-size: 48px;\n\t\t\tfont-weight: bold;\n\t\t\tcolor: black;\n\t\t}\n\t\t.intro p {\n\t\t\tfont-weight: bold;\n\t\t\tfont-size: 24px;\n\t\t}\n\t\t.intro p + p {\n\t\t\tfont-size: 18px;\n\t\t\tfont-weight: normal;\n\t\t}\n\t\t.intro button {\n\t\t\tborder-radius: 0;\n\t\t\tfont-size: 12px;\n\t\t\tpadding: 8px 16px;\n\t\t\tbackground-color: #69a695;\n\t\t}\n\t</style>\n\t<link href=\"/static/CSS/style.css\" rel=\"stylesheet\">\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">\n</head>\n<body>\n <!-- Navbar -->\n            <nav class=\"navbar navbar-expand-lg bg-body-tertiary\" style=\"height: 75px\">\n              <div class=\"container-fluid\">\n                <a class=\"navbar-brand\" href=\"Home Page.html\"><img src=\"static/images/Clear Background Logo.png\" alt=\"Bootstrap\" width=\"30\" height=\"24\"></a>\n                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                  <span class=\"navbar-toggler-icon\"></span>\n                </button>\n                <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n                  <div class=\"navbar-nav\">\n                    <a class=\"nav-link active\" aria-current=\"page\" href=\"Home Page.html\">Home</a>\n                    <a class=\"nav-link\" aria-current=\"page\" href=\"shop.html\">Shop</a>\n                    <a class=\"nav-link\" href=\"About%20Page.html\">About</a>\n                    <a class=\"nav-link\" href=\"Contact%20Us%20Page.html\">Contact Us</a>\n                    <a class=\"nav-link\" href=\"Log-In-Screen.html\">Log In</a>\n                  </div>\n                </div>\n              </div>\n            </nav>\n\n\t<main>\n\t\t<div class=\"intro\">\n\t\t\t<h1>AROUND THE BLOCK.CO</h1>\n\t\t\t<p>Join the<br>Block Party</p>\n\t\t\t<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>\n\t\t\t<button>Start Shopping</button>\n\t\t</div>\n\t</main>\n</body>\n</html>\n\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/Home Page.html b/Home Page.html
+---- a/Home Page.html	(revision d45efc939df0c051f7063fdbca16cf6ed58177b9)
+-+++ b/Home Page.html	(date 1678751611679)
+-@@ -1,10 +1,11 @@
+- <!DOCTYPE html>
+- <html lang="en">
+-+<link href="/static/CSS/style.css" rel="stylesheet">
+- <head>
+--	<title>My Website</title>
+-+	<title>Home Page</title>
+- 	<style>
+--			body {
+--			background-image: url('your-image-url.jpg');
+-+		.intro {
+-+			background-image: url("static/images/WelcomePage_BackgroundPhoto.jpeg");
+- 			background-size: cover;
+- 			background-position: center;
+- 		}
+-@@ -27,37 +28,28 @@
+- 			padding: 8px 16px;
+- 			background-color: #69a695;
+- 		}
+-+		img {
+-+			opacity: 0.5; /* set the opacity to make only the image transparent */
+-+		}
+- 	</style>
+--	<link href="/static/CSS/style.css" rel="stylesheet">
+--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+- </head>
+- <body>
+-- <!-- Navbar -->
+--            <nav class="navbar navbar-expand-lg bg-body-tertiary" style="height: 75px">
+--              <div class="container-fluid">
+--                <a class="navbar-brand" href="Home Page.html"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
+--                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+--                  <span class="navbar-toggler-icon"></span>
+--                </button>
+--                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+--                  <div class="navbar-nav">
+--                    <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
+--                    <a class="nav-link" aria-current="page" href="shop.html">Shop</a>
+--                    <a class="nav-link" href="About%20Page.html">About</a>
+--                    <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
+--                    <a class="nav-link" href="Log-In-Screen.html">Log In</a>
+--                  </div>
+--                </div>
+--              </div>
+--            </nav>
+-+	<header class="header">
+-+		<a href="#" class="logo">Developer</a>
+-+		<nav class="nav-items">
+-+			<a href="#">Home</a>
+-+			<a href="#">Shop</a>
+-+			<a href="#">About</a>
+-+			<a href="#">Contact Us</a>
+-+		</nav>
+-+	</header>
+- 
+- 	<main>
+--		<div class="intro">
+-+		<div class="h1"></div>
+- 			<h1>AROUND THE BLOCK.CO</h1>
+--			<p>Join the<br>Block Party</p>
+--			<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>
+-+		<p>Join the<br>Block Party</p>
+-+			<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park Maryland</p>
+- 			<button>Start Shopping</button>
+--		</div>
+- 	</main>
+- </body>
+- </html>
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_13_23__7_26_PM.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23__7_26_PM.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23__7_26_PM.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23__7_26_PM.xml	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
++++ /dev/null	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_3_13_23,_7_26_PM" date="1678749976497" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23,_7_26_PM/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 3/13/23, 7:26 PM" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_13_23,_8_36_PM1/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23,_8_36_PM1/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23,_8_36_PM1/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23,_8_36_PM1/shelved.patch	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
++++ /dev/null	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
+@@ -1,39 +0,0 @@
+-Index: static/css/style.css
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>/* ATB Blue = #69a695 */\n/* Grey Buttons/Hovers = #d9d9d9 */\n/* Super light grey, almost white background paneling = #f6f6f6 */\n\n/* Font Styling for entire website */\n@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');\n\n/*navbar*/\nnavbar {\n    display: flex;\n    justify-content: space-between;\n    padding: 20px;\n    background-color: #69a695;\n    color: #fff;\n}\n\nhtml{\n    font-family: 'Open Sans';\n}\n\nh1 {\n    color: black;\n}\n\n/*use this to create a division that has centered text*/\n.text-center{\n    text-align: center;\n}\n\n/* button styling */\ninput{\n    background-color: #d9d9d9;\n    border-width: 1px;\n    border-color: #545454;\n    border-radius: 5px;\n    padding: 7px;\n    margin: 5px;\n}\n\n.checkoutButtons{\n    background-color: #69a695;\n    font-family: 'Open Sans';\n    color: white;\n}\n\np {\n    color: black;\n}\n\n/* Checkout Page Styling */\n\n.checkoutPlaceholder {\n    height: 210px;\n    width: 1200px;\n    background-color: #f6f6f6;\n}\n\ndiv.checkoutItemCoupon{\n    display: block;\n    padding: 20px;\n}\n\ndiv.coupon{\n    display: inline-block;\n}\n\n.shipInfo {\n    background-color: #f6f6f6;\n    padding: 30px 25px 30px 25px;\n}\nh2.checkoutHeader {\n    font-size: 33px;\n    float: left;\n}\n\n.navbar {\n    background-color: deepskyblue;\n}\n\n.shippingTotal {\n    padding: 20px;\n}\n\n.billingTotals {\n    padding: 30px 25px 30px 25px;\n}\n\n.shipFields {\n    height: 30px;\n    background-color: #f6f6f6;\n    width: auto;\n}\n\np.shipFieldLabels {\n    font-size: 20px;\n    margin: 0px;\n    padding: 0px;\n}\n\np.cartTotalsLabels {\n    font-size: 25px;\n    margin: 0px;\n    padding: 0px;\n}\n\n/*Styling order confirmation page*/\n/*Centering text*/\n.center {\n  margin: auto;\n  width: 50%;\n  border: 3px solid black;\n  padding: 10px;\n}
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/static/css/style.css b/static/css/style.css
+---- a/static/css/style.css	(revision 2ddaa3f502181d6f205e8435044aca00949e607a)
+-+++ b/static/css/style.css	(date 1678753702090)
+-@@ -110,4 +110,26 @@
+-   width: 50%;
+-   border: 3px solid black;
+-   padding: 10px;
+--}
+-\ No newline at end of file
+-+}
+-+
+-+
+-+/*Styling for home page*/
+-+div.title h1 {
+-+		font-size: 48px;
+-+		font-weight: bold;
+-+		color: black;
+-+	}
+-+	.intro p {
+-+		font-weight: bold;
+-+		font-size: 24px;
+-+	}
+-+	.intro p + p {
+-+		font-size: 18px;
+-+		font-weight: normal;
+-+	}
+-+	.intro button {
+-+		border-radius: 0;
+-+		font-size: 12px;
+-+		padding: 8px 16px;
+-+		background-color: #69a695;
+-+	}
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_13_23__7_53_PM.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23__7_53_PM.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23__7_53_PM.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23__7_53_PM.xml	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
++++ /dev/null	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_3_13_23,_7_53_PM" date="1678751617391" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23,_7_53_PM/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 3/13/23, 7:53 PM" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_13_23,_7_26_PM/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23,_7_26_PM/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23,_7_26_PM/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_23,_7_26_PM/shelved.patch	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
++++ /dev/null	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
+@@ -1,39 +0,0 @@
+-Index: Home Page.html
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<title>My Website</title>\n\t<style>\n\t\t\tbody {\n\t\t\tbackground-image: url('your-image-url.jpg');\n\t\t\tbackground-size: cover;\n\t\t\tbackground-position: center;\n\t\t}\n\t\t.intro h1 {\n\t\t\tfont-size: 48px;\n\t\t\tfont-weight: bold;\n\t\t\tcolor: black;\n\t\t}\n\t\t.intro p {\n\t\t\tfont-weight: bold;\n\t\t\tfont-size: 24px;\n\t\t}\n\t\t.intro p + p {\n\t\t\tfont-size: 18px;\n\t\t\tfont-weight: normal;\n\t\t}\n\t\t.intro button {\n\t\t\tborder-radius: 0;\n\t\t\tfont-size: 12px;\n\t\t\tpadding: 8px 16px;\n\t\t\tbackground-color: #69a695;\n\t\t}\n\t</style>\n</head>\n<body>\n\t<header class=\"header\">\n\t\t<a href=\"#\" class=\"logo\">Developer</a>\n\t\t<nav class=\"nav-items\">\n\t\t\t<a href=\"#\">Home</a>\n\t\t\t<a href=\"#\">Shop</a>\n\t\t\t<a href=\"#\">About</a>\n\t\t\t<a href=\"#\">Contact Us</a>\n\t\t</nav>\n\t</header>\n\n\t<main>\n\t\t<div class=\"intro\">\n\t\t\t<h1>AROUND THE BLOCK.CO</h1>\n\t\t\t<p>Join the<br>Block Party</p>\n\t\t\t<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>\n\t\t\t<button>Start Shopping</button>\n\t\t</div>\n\t</main>\n</body>\n</html>\n\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/Home Page.html b/Home Page.html
+---- a/Home Page.html	(revision 75747810a6064e942b747811af794259a1bc4398)
+-+++ b/Home Page.html	(date 1678749951404)
+-@@ -3,11 +3,6 @@
+- <head>
+- 	<title>My Website</title>
+- 	<style>
+--			body {
+--			background-image: url('your-image-url.jpg');
+--			background-size: cover;
+--			background-position: center;
+--		}
+- 		.intro h1 {
+- 			font-size: 48px;
+- 			font-weight: bold;
+-@@ -27,7 +22,6 @@
+- 			padding: 8px 16px;
+- 			background-color: #69a695;
+- 		}
+--	</style>
+- </head>
+- <body>
+- 	<header class="header">
+-@@ -44,7 +38,7 @@
+- 		<div class="intro">
+- 			<h1>AROUND THE BLOCK.CO</h1>
+- 			<p>Join the<br>Block Party</p>
+--			<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>
+-+			<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park Maryland</p>
+- 			<button>Start Shopping</button>
+- 		</div>
+- 	</main>
+Index: static/css/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/* ATB Blue = #69a695 */\r\n/* Grey Buttons/Hovers = #d9d9d9 */\r\n/* Super light grey, almost white background paneling = #f6f6f6 */\r\n\r\n/* Font Styling for entire website */\r\n@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');\r\n\r\nhtml body p {\r\n    font-family: \"Open Sans\";\r\n}\r\n\r\nh1 {\r\n    font-: 100px;\r\n}\r\n/*navbar*/\r\nnavbar {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    padding: 20px;\r\n    background-color: #69a695;\r\n    color: #fff;\r\n}\r\n.navbar-nav a {\r\n    float: right;\r\n}\r\n\r\nbackground-image {\r\n    opacity: 0.5;\r\n}\r\n\r\nurl(\"static/images/WelcomePage_BackgroundPhoto.jpeg\") {\r\nopacity: 0.5;\r\n}\r\n\r\n/*use this to create a division that has centered text*/\r\n.login-buttons{\r\n    text-align: center;\r\n}\r\n\r\n\r\n.text-center{\r\n    text-align: center;\r\n\r\n}\r\n\r\n/* button styling */\r\ninput{\r\n    background-color: #69a695;\r\n<<<<<<< HEAD\r\n=======\r\n    text-color: white;\r\n>>>>>>> a0cf96c (This push includes numerous changes:)\r\n    border-width: 1px;\r\n    border-color: #545454;\r\n    border-radius: 5px;\r\n    padding: 7px;\r\n    margin: 2px;\r\n    color: white;\r\n}\r\n\r\n.checkoutButtons{\r\n    background-color: #69a695;\r\n    font-family: 'Open Sans';\r\n    color: white;\r\n}\r\n\r\np {\r\n    color: black;\r\n    font-family: 'Open Sauce SemiBold';\r\n    font-size: 20px;\r\n\r\n}\r\n\r\n/* Checkout Page Styling */\r\n\r\n.checkoutPlaceholder {\r\n    height: 210px;\r\n    width: 1200px;\r\n    background-color: #f6f6f6;\r\n    padding: 0px 0px 0px 0px;\r\n}\r\n\r\ndiv.checkoutItemCoupon{\r\n    display: block;\r\n    padding: 20px;\r\n}\r\n\r\ndiv.coupon{\r\n    display: inline-block;\r\n}\r\n\r\n.formInputFields {\r\n    background-color: #f6f6f6;\r\n    padding: 30px 25px 30px 25px;\r\n}\r\n\r\n.formInputFieldsNoBackground {\r\n    padding-left: 20px;\r\n}\r\n\r\n.checkoutHeader {\r\n    font-size: 33px;\r\n    float: left;\r\n}\r\n\r\n.sectionBreaker {\r\n    padding-top: 40px;\r\n}\r\n\r\n.customerReviewSection {\r\n    background-color: #f6f6f6;\r\n    width: 100%;\r\n}\r\n\r\nimg {\r\nmargin: 0px;\r\npadding: 0px;\r\nborder: 0px;\r\n}\r\n\r\n.reviewHeader {\r\n    font-size: 33px;\r\n    padding-left: 20px;\r\n}\r\n\r\n\r\n<<<<<<< HEAD\r\n=======\r\n.navbar {\r\n    background-color: deepskyblue;\r\n}\r\n\r\n>>>>>>> a0cf96c (This push includes numerous changes:)\r\n.inputBoxTotal {\r\n    padding: 20px;\r\n}\r\n\r\n.billingTotals {\r\n    padding: 30px 25px 30px 25px;\r\n}\r\n\r\n.inputFields {\r\n    height: 30px;\r\n    background-color: #f6f6f6;\r\n    border-color: gray;\r\n    width: auto;\r\n}\r\n\r\n.formFieldsLabels {\r\n    font-size: 20px;\r\n    margin: 0px;\r\n    padding: 0px;\r\n}\r\n\r\np.cartTotalsLabels {\r\n    font-size: 25px;\r\n    margin: 0px;\r\n    padding: 0px 0px 20px 0px;\r\n}\r\n\r\nhr {\r\n    margin: 0px;\r\n}\r\n\r\n/*Styling order confirmation page*/\r\n/*Centering text*/\r\n.center {\r\n  margin: auto;\r\n  width: 50%;\r\n  border: 3px solid black;\r\n  padding: 10px;\r\n}\r\n/*center image*/\r\n.center-image {\r\n            display:block;\r\n            margin-left: auto;\r\n            margin-right: auto;\r\n        }\r\n\r\ntitle {\r\n    font-size: 30px;\r\n}\r\n\r\n.paddingbetweenelements {\r\n     padding-bottom: 20px;\r\n}\r\n\r\n/*Used to create and style rectangle images on Contact us page for each individual review*/\r\nrectangle {\r\n  height: 170px;\r\n  width: 350px;\r\n  background-color: blue;\r\n  /*outline-color: blue;*/\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/static/css/style.css b/static/css/style.css
+--- a/static/css/style.css	(revision 148e17da4cafe695480c8a0020204b7a67d42f14)
++++ b/static/css/style.css	(date 1679007620407)
+@@ -9,9 +9,6 @@
+     font-family: "Open Sans";
+ }
+ 
+-h1 {
+-    font-: 100px;
+-}
+ /*navbar*/
+ navbar {
+     display: flex;
+@@ -32,6 +29,16 @@
+ opacity: 0.5;
+ }
+ 
++body{
++    font-family: 'Open Sans';
++}
++
++h1 {
++    color: black;
++    font-family: 'Open Sans';
++    font-size: 80px;
++}
++
+ /*use this to create a division that has centered text*/
+ .login-buttons{
+     text-align: center;
+@@ -66,7 +73,7 @@
+ 
+ p {
+     color: black;
+-    font-family: 'Open Sauce SemiBold';
++    font-family: 'Open Sans';
+     font-size: 20px;
+ 
+ }
+@@ -77,7 +84,6 @@
+     height: 210px;
+     width: 1200px;
+     background-color: #f6f6f6;
+-    padding: 0px 0px 0px 0px;
+ }
+ 
+ div.checkoutItemCoupon{
+@@ -93,37 +99,11 @@
+     background-color: #f6f6f6;
+     padding: 30px 25px 30px 25px;
+ }
+-
+-.formInputFieldsNoBackground {
+-    padding-left: 20px;
+-}
+-
+-.checkoutHeader {
++h2.checkoutHeader {
+     font-size: 33px;
+     float: left;
+ }
+ 
+-.sectionBreaker {
+-    padding-top: 40px;
+-}
+-
+-.customerReviewSection {
+-    background-color: #f6f6f6;
+-    width: 100%;
+-}
+-
+-img {
+-margin: 0px;
+-padding: 0px;
+-border: 0px;
+-}
+-
+-.reviewHeader {
+-    font-size: 33px;
+-    padding-left: 20px;
+-}
+-
+-
+ <<<<<<< HEAD
+ =======
+ .navbar {
+@@ -142,24 +122,23 @@
+ .inputFields {
+     height: 30px;
+     background-color: #f6f6f6;
+-    border-color: gray;
+     width: auto;
+ }
+ 
+-.formFieldsLabels {
++<<<<<<< HEAD
++p.formFieldLabels {
++=======
++.formFieldLabels {
++>>>>>>> a0cf96c (This push includes numerous changes:)
+     font-size: 20px;
+-    margin: 0px;
+-    padding: 0px;
++    margin: 0px 0px 0px 0px;
++    padding: 0px 0px 0px 0px;
+ }
+ 
+ p.cartTotalsLabels {
+     font-size: 25px;
+     margin: 0px;
+-    padding: 0px 0px 20px 0px;
+-}
+-
+-hr {
+-    margin: 0px;
++    padding: 0px;
+ }
+ 
+ /*Styling order confirmation page*/
+@@ -171,25 +150,9 @@
+   padding: 10px;
+ }
+ /*center image*/
+-.center-image {
++.centeri {
+             display:block;
+             margin-left: auto;
+             margin-right: auto;
+-        }
+-
+-title {
+-    font-size: 30px;
+-}
+-
+-.paddingbetweenelements {
+-     padding-bottom: 20px;
+-}
+-
+-/*Used to create and style rectangle images on Contact us page for each individual review*/
+-rectangle {
+-  height: 170px;
+-  width: 350px;
+-  background-color: blue;
+-  /*outline-color: blue;*/
+-}
+ 
++        }
+\ No newline at end of file

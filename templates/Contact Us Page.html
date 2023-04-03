@@ -12,33 +12,34 @@
 
 <body>
 <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
+     <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
               <div class="container-fluid">
-                <a class="navbar-brand" href="Home Page.html"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
+                <a class="navbar-brand" href="/Home"><img src="../static/images/Clear%20Background%20Logo.png" alt="Bootstrap" width="30" height="24"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
-                    <a class="nav-link" aria-current="page" href="Shop.html">Shop</a>
-                    <a class="nav-link" href="About%20Page.html">About</a>
-                    <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
-                    <a class="nav-link" href="Log-In-Screen.html">Log In</a>
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" aria-current="page" href="/Shop">Shop</a>
+                    <a class="nav-link" href="../About">About</a>
+                    <a class="nav-link" href="../ContactUs">Contact Us</a>
+                    <a class="nav-link" href="/LogIn">Log In</a>
                   </div>
                 </div>
               </div>
             </nav>
 
-<!-- Heading Information -->
-    <h1><center>Contact Us</h1>
-    <h3><center>Welcome! We're happy to help.</h3>
-    <img src=/static/images/Contact%20Us%20Page%20Piic.png width = 500 height = "500" alt="ATB Model Skateboarding" align="right" >
-
-<!-- Random Message Fields -->
+<!-- Generic Message Form Fields -->
     <div class="inputBoxTotal">
         <div class="row">
             <div class="border-box col">
+                <! -- Heading for entire page & supporting image -->
+                <h1><center>Contact Us</h1>
+                    <div class="paddingbetweenelements">
+                    <h3><center>Welcome! We're happy to help.</h3>
+            </div>
+            <img src="../static/images/Contact%20Us%20Page%20Piic.png" width = "400" height = "420" alt="ATB Model Skateboarding" align="right" style = "padding-left: 20px" style="padding-right: 20px">
                 <form class="formInputFields">
                     <div class = "row">
                         <div class="border-box col">
@@ -64,21 +65,46 @@
                     </div>
                     <div class = "row">
                         <p class="formFieldsLabels">Message</p>
-                        <input type = "textarea" class="inputFields" required><br><br>
+                         <textarea class="inputFields" id="message" rows="5" cols="50" required></textarea><br><br>
                     </div>
                     <div class = "row">
-                        <p class="formFieldsLabels">Submit Message:</p>
+                        <p class="formFieldsLabels"></p>
                         <input type = "submit" class="input" required><br><br>
                     </div>
                 </form>
             </div>
 
+            <div class="sectionBreaker"></div>
+
+  <!--Customer Review Section-->
+   <div class="customerReviewSection" style = "padding-top: 20px">
+   <h2 class="reviewHeader" style="padding-top: 50px; padding-left: 30px;"><strong>Customer Reviews</strong></h2><br><br>
+   <div class="container text-center">
+       <div class="row row-cols-2">
+            <div class="rectangle">
+                 <img src= "../static/images/ContactUsPage_CustomerProfilePic.png" length = "80" height = "80" alt="ProfilePhoto" align="left" style="padding-right: 20px">
+                 <h3 align="left">Esha Raman</h3><br><br>
+                 <h4 align="left">Student</h4><br><br>
+                 <p align="left" style="font-size: medium" color="black">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."</p>
+                 <h4 align="left">8:35 PM-Jan 6, 2022</h4><br><br>
+            </div>
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+       </div>
+   </div>
+   </div>
+   </div>
+
 <!-- Review Message Fields -->
     <div class="inputBoxTotal">
         <div class="row">
             <div class="border-box col">
-                 <h2 class="checkoutHeader"><strong>Leave a Review</strong></h2><br><br>
-                <form class="formInputFields">
+                 <h2 class="reviewHeader" style="padding-top:50px"><strong>Leave a Review</strong></h2>
+                <form class="formInputFieldsNoBackground">
                     <div class = "row">
                         <div class="border-box col">
                             <div class="row" style="padding-right: 15px">
@@ -99,18 +125,14 @@
                     </div>
                     <div class = "row">
                         <p class="formFieldsLabels">Type of Customer</p>
-                        <select class="inputFields">
-                            <option value="Student">Student</option>
-                            <option value="Parent">Parent</option>
-                            <option value="Organization">Organization</option>
-                            <option value="Other">Other</option><br><br>
+                        <input type = "customerType" class="inputFields" required><br><br>
                     </div>
                     <div class = "row">
                         <p class="formFieldsLabels">Review</p>
-                        <input type = "textarea" class="inputFields" required><br><br>
+                        <textarea class="inputFields" id="reviewText" rows="5" cols="50" required></textarea><br><br>
                     </div>
                     <div class = "row">
-                        <p class="formFieldsLabels">Submit Review:</p>
+                        <p class="formFieldsLabels"></p>
                         <input type = "submit" class="input" required><br><br>
                     </div>
                 </form>
