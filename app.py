@@ -18,9 +18,12 @@ def About():
 def ContactUsPage():
     return render_template('Contact Us Page.html')
 
-@app.route('/LogIn')
+@app.route('/login', methods = ['GET', 'POST'])
 def LogInScreen():
-    return render_template('Log-In-Screen.html')
+    if request.method == 'POST':
+        return render_template('Log-In-Screen.html', form_submitted=True)
+    else:
+        return render_template('Log-In-Screen.html')
 
 @app.route('/CheckOut', methods=['GET', 'POST'])
 def CheckOut():
@@ -50,9 +53,17 @@ def OrderDetails():
 def SalesTracker():
     return render_template('Sales Tracker.html')
 
-@app.route('/SignUp')
+@app.route('/signup', methods = ['GET', 'POST'])
 def SignUp():
-    return render_template('sign-up-page.html')
+    if request.method == 'POST':
+        return render_template('sign-up-page.html', form_submitted=True)
+    else:
+        return render_template('sign-up-page.html')
+
+@app.route('/banner')
+def Banner():
+    return render_template('Banner.html')
+
 
 if __name__ == '__main__':
     app.run()
