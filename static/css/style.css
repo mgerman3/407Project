@@ -30,6 +30,7 @@ navbar {
  }
 
 
+
 background-image {
     opacity: 0.5;
 }
@@ -227,7 +228,7 @@ title {
     }
     /* Dropdown Button */
 .dropbtn {
-  background-color: #d9d9d9;
+  background-color: #69a695;
   color: black;
   padding: 12px;
   font-size: 16px;
@@ -266,5 +267,8 @@ title {
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #545454;}
+.dropdown:hover .dropbtn {background-color: #69a695;}
 
+.dropdown-right {
+
+}
