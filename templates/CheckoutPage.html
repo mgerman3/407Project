@@ -57,53 +57,75 @@
         </nav>
 
         {% if form_submitted %}
-
-        <div class="col-12">
-            <h2>Thank you for your order!</h2>
+        <div class="row">
+            <div class="checkoutHeader" style="padding: 20px">
+                <h2>Thank you for your order!</h2><br>
+            </div>
         </div>
-        <div class="col-md-6">
-            <p>Products Ordered:</p>
+        <div class="row">
+            <div class="postFormLabels">
+                <p>Products Ordered:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get(products)}}</p>
+            </div>
         </div>
-        <div class="col-md-6">
-            <p>{{ request.form.get(products)}}</p>
+        <div class="row">
+            <div class="postFormLabels">
+                <p>First Name:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get('first_name')}}</p>
+            </div>
         </div>
-        <div class="col-md-6">
-            <p>First Name:</p>
+        <div class="row">
+            <div class="postFormLabels">
+                <p>Last Name:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get('last_name')}}</p>
+            </div>
         </div>
-        <div class="col-md-6">
-            <p>{{ request.form.get(first_name)}}</p>
+        <div class="row">
+           <div class="postFormLabels">
+                <p>Address 1:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get('address1')}}</p>
+            </div>
         </div>
-        <div class="col-md-6">
-            <p>Last Name:</p>
+        <div class="row">
+            <div class="postFormLabels">
+                <p>Address 2:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get('address2')}}</p>
+            </div>
         </div>
-        <div class="col-md-6">
-            <p>{{ request.form.get(last_name)}}</p>
+        <div class="row">
+            <div class="postFormLabels">
+                <p>City:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get('city')}}</p>
+            </div>
         </div>
-       <div class="col-md-6">
-            <p>Address:</p>
+        <div class="row">
+            <div class="postFormLabels">
+                <p>State:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get('state')}}</p>
+            </div>
         </div>
-        <div class="col-md-6">
-            <p>{{ request.form.get(address)}}</p>
+        <div class="row">
+            <div class="postFormLabels">
+                <p>Zip code:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get('zipcode')}}</p>
+            </div>
         </div>
-        <div class="col-md-6">
-            <p>City:</p>
-        </div>
-        <div class="col-md-6">
-            <p>{{ request.form.get(city)}}</p>
-        </div>
-        <div class="col-md-6">
-            <p>State:</p>
-        </div>
-        <div class="col-md-6">
-            <p>{{ request.form.get(state)}}</p>
-        </div>
-        <div class="col-md-6">
-            <p>Zip code:</p>
-        </div>
-        <div class="col-md-6">
-            <p>{{ request.form.get(zipcode)}}</p>
-        </div>
-
         {% else %}
         <!-- Coupon Code Box & Cart Information -->
         <form action="{{ url_for('CheckOut') }}" method="post">
@@ -132,19 +154,19 @@
                             <div class="border-box col">
                                 <div class="row" style="padding-right: 15px">
                                     <p class="formFieldsLabels">First Name <br></p>
-                                    <input type="text" class="inputFields" name="first_name">
+                                    <input type="text" class="inputFields" name="first_name" required>
                                 </div>
                             </div>
                             <div class="border-box col">
                                 <div class="row" style="padding-left: 15px">
                                     <p class="formFieldsLabels">Last Name <br></p>
-                                    <input type="text" class="inputFields" name="last_name"><br><br>
+                                    <input type="text" class="inputFields" name="last_name" required><br><br>
                                 </div>
                             </div>
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">Address</p>
-                            <input type="text" class="inputFields" name="address1"><br><br>
+                            <input type="text" class="inputFields" name="address1" required><br><br>
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">Address</p>
@@ -152,15 +174,15 @@
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">City</p>
-                            <input type="text" class="inputFields" name="city"><br><br>
+                            <input type="text" class="inputFields" name="city" required><br><br>
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">State</p>
-                            <input type="text" class="inputFields" name="state"><br><br>
+                            <input type="text" class="inputFields" name="state" required><br><br>
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">Zip Code</p>
-                            <input type="text" class="inputFields" name="zipcode"><br><br>
+                            <input type="text" class="inputFields" name="zipcode" required><br><br>
                         </div>
                     </form>
                 </div>

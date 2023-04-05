@@ -79,6 +79,11 @@ p {
 
 /* Checkout Page Styling */
 
+postFormLabels {
+    display: inline-block;
+    text-align: left;
+}
+
 .checkoutPlaceholder {
     height: 210px;
     width: 1200px;
