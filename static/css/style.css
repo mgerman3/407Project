@@ -79,6 +79,11 @@ p {
 
 /* Checkout Page Styling */
 
+postFormLabels {
+    display: inline-block;
+    text-align: left;
+}
+
 .checkoutPlaceholder {
     height: 210px;
     width: 1200px;
@@ -156,12 +161,14 @@ border: 0px;
     font-size: 20px;
     margin: 0px;
     padding: 0px;
+    text-align: left;
 }
 
 p.cartTotalsLabels {
     font-size: 25px;
     margin: 0px;
     padding: 0px 0px 20px 0px;
+    text-align: left;
 }
 
 hr {
