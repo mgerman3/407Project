@@ -25,9 +25,12 @@ def LogInScreen():
     else:
         return render_template('Log-In-Screen.html')
 
-@app.route('/CheckOut')
+@app.route('/CheckOut', methods=['GET', 'POST'])
 def CheckOut():
-    return render_template('CheckoutPage.html')
+    if request.method == 'POST':
+        return render_template('CheckoutPage.html', form_submitted=True)
+    else:
+        return render_template('CheckoutPage.html')
 
 @app.route('/GenericProduct')
 def GenProduct():
