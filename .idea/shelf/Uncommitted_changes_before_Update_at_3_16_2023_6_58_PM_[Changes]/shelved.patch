@@ -1,0 +1,253 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.10 (flaskProject)\" project-jdk-type=\"Python SDK\" />\r\n</project>
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,4 +1,4 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (flaskProject)" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"2ad45817-a36e-4812-873d-f2bc9e1a2370\" name=\"Changes\" comment=\"Style sheet image center\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Order Confirmation.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Order Confirmation.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Shop.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Shop.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/static/css/style.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/static/css/style.css\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"d223fade-3dd7-4858-8348-d47881e22121\" />\r\n        <option name=\"url\" value=\"https://github.com/jbonoUMD/team08spring2023bmgt407.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2MTu5gYCMrPAF4hGJJCcdEu0Ksr\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"2ad45817-a36e-4812-873d-f2bc9e1a2370\" name=\"Changes\" comment=\"\" />\r\n      <created>1677803718855</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1677803718855</updated>\r\n      <workItem from=\"1677803721756\" duration=\"2617000\" />\r\n      <workItem from=\"1677953221459\" duration=\"4076000\" />\r\n      <workItem from=\"1678148338708\" duration=\"969000\" />\r\n      <workItem from=\"1678151340555\" duration=\"957000\" />\r\n      <workItem from=\"1678152345957\" duration=\"2526000\" />\r\n      <workItem from=\"1678313167668\" duration=\"7485000\" />\r\n      <workItem from=\"1678471291807\" duration=\"6253000\" />\r\n      <workItem from=\"1678719623314\" duration=\"30000\" />\r\n      <workItem from=\"1678748527881\" duration=\"6690000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Order Confirmation Page\">\r\n      <created>1677805412953</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677805412953</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Order Confirmation Page\">\r\n      <created>1677805527976</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677805527976</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Order Confirmation skeleton\">\r\n      <created>1677955603349</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677955603349</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Banner headers for pages\">\r\n      <created>1677958876859</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677958876859</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Updating Order Confirmation\">\r\n      <created>1678408801889</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1678408801890</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Updating nav bar, creating shop page\">\r\n      <created>1678471482152</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1678471482152</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Updating order confirmation page and shop page\">\r\n      <created>1678647988288</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1678647988288</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Shop page image updates\">\r\n      <created>1678750777176</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1678750777176</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Order confirmation page\">\r\n      <created>1678752855097</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1678752855097</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Style sheet image center\">\r\n      <created>1678752894468</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1678752894468</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"11\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Order Confirmation Page\" />\r\n    <MESSAGE value=\"Order Confirmation skeleton\" />\r\n    <MESSAGE value=\"Banner headers for pages\" />\r\n    <MESSAGE value=\"Updating Order Confirmation\" />\r\n    <MESSAGE value=\"Updating nav bar, creating shop page\" />\r\n    <MESSAGE value=\"Updating order confirmation page and shop page\" />\r\n    <MESSAGE value=\"Shop page image updates\" />\r\n    <MESSAGE value=\"Order confirmation page\" />\r\n    <MESSAGE value=\"Style sheet image center\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Style sheet image center\" />\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,179 +1,92 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="AutoImportSettings">
+-    <option name="autoReloadType" value="SELECTIVE" />
+-  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="2ad45817-a36e-4812-873d-f2bc9e1a2370" name="Changes" comment="Style sheet image center">
++    <list default="true" id="16751e6b-c28b-4b65-b8ec-92557ac3a84d" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Order Confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/Order Confirmation.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/Shop.html" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="FileTemplateManagerImpl">
+-    <option name="RECENT_TEMPLATES">
+-      <list>
+-        <option value="HTML File" />
+-      </list>
+-    </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-  </component>
+-  <component name="GitHubPullRequestSearchHistory">{
+-  &quot;lastFilter&quot;: {
+-    &quot;state&quot;: &quot;OPEN&quot;
+-  }
+-}</component>
+-  <component name="GithubPullRequestsUISettings">
+-    <option name="selectedUrlAndAccountId">
+-      <UrlAndAccount>
+-        <option name="accountId" value="d223fade-3dd7-4858-8348-d47881e22121" />
+-        <option name="url" value="https://github.com/jbonoUMD/team08spring2023bmgt407.git" />
+-      </UrlAndAccount>
+-    </option>
++    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+-  <component name="ProjectId" id="2MTu5gYCMrPAF4hGJJCcdEu0Ksr" />
++  <component name="ProjectId" id="2MmQxgyEfSuAWgizBv8zAXLtaIp" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+   <component name="PropertiesComponent">{
+   &quot;keyToString&quot;: {
+-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/H20jo/PycharmProjects/team08spring2023bmgt407&quot;,
+     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+ }</component>
++  <component name="RunManager">
++    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
++      <module name="team08spring2023bmgt407" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <envs>
++        <env name="PYTHONUNBUFFERED" value="1" />
++      </envs>
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
++      <option name="IS_MODULE_SDK" value="true" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
++      <option name="PARAMETERS" value="" />
++      <option name="SHOW_COMMAND_LINE" value="false" />
++      <option name="EMULATE_TERMINAL" value="false" />
++      <option name="MODULE_MODE" value="false" />
++      <option name="REDIRECT_INPUT" value="false" />
++      <option name="INPUT_FILE" value="" />
++      <method v="2" />
++    </configuration>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="2ad45817-a36e-4812-873d-f2bc9e1a2370" name="Changes" comment="" />
+-      <created>1677803718855</created>
++      <changelist id="16751e6b-c28b-4b65-b8ec-92557ac3a84d" name="Changes" comment="" />
++      <created>1678370526180</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+-      <updated>1677803718855</updated>
+-      <workItem from="1677803721756" duration="2617000" />
+-      <workItem from="1677953221459" duration="4076000" />
+-      <workItem from="1678148338708" duration="969000" />
+-      <workItem from="1678151340555" duration="957000" />
+-      <workItem from="1678152345957" duration="2526000" />
+-      <workItem from="1678313167668" duration="7485000" />
+-      <workItem from="1678471291807" duration="6253000" />
+-      <workItem from="1678719623314" duration="30000" />
+-      <workItem from="1678748527881" duration="6690000" />
+-    </task>
+-    <task id="LOCAL-00001" summary="Order Confirmation Page">
+-      <created>1677805412953</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1677805412953</updated>
+-    </task>
+-    <task id="LOCAL-00002" summary="Order Confirmation Page">
+-      <created>1677805527976</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1677805527976</updated>
+-    </task>
+-    <task id="LOCAL-00003" summary="Order Confirmation skeleton">
+-      <created>1677955603349</created>
+-      <option name="number" value="00003" />
+-      <option name="presentableId" value="LOCAL-00003" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1677955603349</updated>
+-    </task>
+-    <task id="LOCAL-00004" summary="Banner headers for pages">
+-      <created>1677958876859</created>
+-      <option name="number" value="00004" />
+-      <option name="presentableId" value="LOCAL-00004" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1677958876859</updated>
+-    </task>
+-    <task id="LOCAL-00005" summary="Updating Order Confirmation">
+-      <created>1678408801889</created>
+-      <option name="number" value="00005" />
+-      <option name="presentableId" value="LOCAL-00005" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1678408801890</updated>
+-    </task>
+-    <task id="LOCAL-00006" summary="Updating nav bar, creating shop page">
+-      <created>1678471482152</created>
+-      <option name="number" value="00006" />
+-      <option name="presentableId" value="LOCAL-00006" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1678471482152</updated>
+-    </task>
+-    <task id="LOCAL-00007" summary="Updating order confirmation page and shop page">
+-      <created>1678647988288</created>
+-      <option name="number" value="00007" />
+-      <option name="presentableId" value="LOCAL-00007" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1678647988288</updated>
+-    </task>
+-    <task id="LOCAL-00008" summary="Shop page image updates">
+-      <created>1678750777176</created>
+-      <option name="number" value="00008" />
+-      <option name="presentableId" value="LOCAL-00008" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1678750777176</updated>
+-    </task>
+-    <task id="LOCAL-00009" summary="Order confirmation page">
+-      <created>1678752855097</created>
+-      <option name="number" value="00009" />
+-      <option name="presentableId" value="LOCAL-00009" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1678752855097</updated>
++      <updated>1678370526180</updated>
++      <workItem from="1678370527829" duration="10000" />
++      <workItem from="1678388280359" duration="125000" />
++      <workItem from="1678461659577" duration="61000" />
++      <workItem from="1678796616138" duration="95000" />
++      <workItem from="1678796713095" duration="185000" />
+     </task>
+-    <task id="LOCAL-00010" summary="Style sheet image center">
+-      <created>1678752894468</created>
+-      <option name="number" value="00010" />
+-      <option name="presentableId" value="LOCAL-00010" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1678752894468</updated>
+-    </task>
+-    <option name="localTasksCounter" value="11" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
+-  <component name="Vcs.Log.Tabs.Properties">
+-    <option name="TAB_STATES">
+-      <map>
+-        <entry key="MAIN">
+-          <value>
+-            <State />
+-          </value>
+-        </entry>
+-      </map>
+-    </option>
++  <component name="XDebuggerManager">
++    <breakpoint-manager>
++      <breakpoints>
++        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
++          <url>file://$PROJECT_DIR$/main.py</url>
++          <line>8</line>
++          <option name="timeStamp" value="1" />
++        </line-breakpoint>
++      </breakpoints>
++    </breakpoint-manager>
+   </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="Order Confirmation Page" />
+-    <MESSAGE value="Order Confirmation skeleton" />
+-    <MESSAGE value="Banner headers for pages" />
+-    <MESSAGE value="Updating Order Confirmation" />
+-    <MESSAGE value="Updating nav bar, creating shop page" />
+-    <MESSAGE value="Updating order confirmation page and shop page" />
+-    <MESSAGE value="Shop page image updates" />
+-    <MESSAGE value="Order confirmation page" />
+-    <MESSAGE value="Style sheet image center" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Style sheet image center" />
++  <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$main.coverage" NAME="main Coverage Results" MODIFIED="1678796735361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+   </component>
+ </project>
+\ No newline at end of file
