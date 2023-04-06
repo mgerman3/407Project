@@ -1,0 +1,1379 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_15_23__12_56_PM.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_23__12_56_PM.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_23__12_56_PM.xml
+new file mode 100644
+--- /dev/null	(date 1679017764625)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_23__12_56_PM.xml	(date 1679017764625)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_3_15_23,_12_56_PM" date="1678899417237" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_23,_12_56_PM/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 3/15/23, 12:56 PM" />
++</changelist>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1678896827421)
++++ b/.idea/vcs.xml	(date 1678896827421)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: static/css/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/* ATB Blue = #69a695 */\n/* Grey Buttons/Hovers = #d9d9d9 */\n/* Super light grey, almost white background paneling = #f6f6f6 */\n\n/* Font Styling for entire website */\n@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');\n\nhtml body p {\n    font-family: \"Open Sans\";\n}\n\nh1 {\n    font-: 100px;\n}\n/*navbar*/\nnavbar {\n    display: flex;\n    justify-content: space-between;\n    padding: 20px;\n    background-color: #69a695;\n    color: #fff;\n}\n.navbar-nav a {\n    float: right;\n}\n\nbackground-image {\n    opacity: 0.5;\n}\n\nurl(\"static/images/WelcomePage_BackgroundPhoto.jpeg\") {\nopacity: 0.5;\n}\n\n/*use this to create a division that has centered text*/\n.login-buttons{\n    text-align: center;\n}\n\n\n.text-center{\n    text-align: center;\n\n}\n\n/* button styling */\ninput{\n    background-color: #69a695;\n<<<<<<< HEAD\n=======\n    text-color: white;\n>>>>>>> a0cf96c (This push includes numerous changes:)\n    border-width: 1px;\n    border-color: #545454;\n    border-radius: 5px;\n    padding: 7px;\n    margin: 2px;\n    color: white;\n}\n\n.checkoutButtons{\n    background-color: #69a695;\n    font-family: 'Open Sans';\n    color: white;\n}\n\np {\n    color: black;\n    font-family: 'Open Sauce SemiBold';\n    font-size: 20px;\n\n}\n\n/* Checkout Page Styling */\n\n.checkoutPlaceholder {\n    height: 210px;\n    width: 1200px;\n    background-color: #f6f6f6;\n    padding: 0px 0px 0px 0px;\n}\n\ndiv.checkoutItemCoupon{\n    display: block;\n    padding: 20px;\n}\n\ndiv.coupon{\n    display: inline-block;\n}\n\n.formInputFields {\n    background-color: #f6f6f6;\n    padding: 30px 25px 30px 25px;\n}\n\n.formInputFieldsNoBackground {\n    padding-left: 20px;\n}\n\n.checkoutHeader {\n    font-size: 33px;\n    float: left;\n}\n\n.sectionBreaker {\n    padding-top: 40px;\n}\n\n.customerReviewSection {\n    background-color: #f6f6f6;\n    width: 100%;\n}\n\nimg {\nmargin: 0px;\npadding: 0px;\nborder: 0px;\n}\n\n.reviewHeader {\n    font-size: 33px;\n    padding-left: 20px;\n}\n\n\n<<<<<<< HEAD\n=======\n.navbar {\n    background-color: deepskyblue;\n}\n\n>>>>>>> a0cf96c (This push includes numerous changes:)\n.inputBoxTotal {\n    padding: 20px;\n}\n\n.billingTotals {\n    padding: 30px 25px 30px 25px;\n}\n\n.inputFields {\n    height: 30px;\n    background-color: #f6f6f6;\n    border-color: gray;\n    width: auto;\n}\n\n.formFieldsLabels {\n    font-size: 20px;\n    margin: 0px;\n    padding: 0px;\n}\n\np.cartTotalsLabels {\n    font-size: 25px;\n    margin: 0px;\n    padding: 0px 0px 20px 0px;\n}\n\nhr {\n    margin: 0px;\n}\n\n/*Styling order confirmation page*/\n/*Centering text*/\n.center {\n  margin: auto;\n  width: 50%;\n  border: 3px solid black;\n  padding: 10px;\n}\n/*center image*/\n.center-image {\n            display:block;\n            margin-left: auto;\n            margin-right: auto;\n        }\n\ntitle {\n    font-size: 30px;\n}\n\n.paddingbetweenelements {\n     padding-bottom: 20px;\n}\n\n/*Used to create and style rectangle images on Contact us page for each individual review*/\nrectangle {\n  height: 170px;\n  width: 350px;\n  background-color: blue;\n  /*outline-color: blue;*/\n}\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/static/css/style.css b/static/css/style.css
+--- a/static/css/style.css	(revision 5a5d84b3095e9c34ae64057f213129ad7ca05978)
++++ b/static/css/style.css	(date 1679019874929)
+@@ -175,16 +175,112 @@
+             display:block;
+             margin-left: auto;
+             margin-right: auto;
++
+         }
++
++/*Filter shop button styling*/
++/* Dropdown Button */
++.dropbtn {
++  background-color: #04AA6D;
++  color: white;
++  padding: 16px;
++  font-size: 16px;
++  border: none;
++}
++
++/* The container <div> - needed to position the dropdown content */
++.dropdown {
++  position: relative;
++  display: inline-block;
++}
++
++/* Dropdown Content (Hidden by Default) */
++.dropdown-content {
++  display: none;
++  position: absolute;
++  background-color: #d9d9d9;
++  min-width: 160px;
++  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
++  z-index: 1;
++}
++
++/* Links inside the dropdown */
++.dropdown-content a {
++  color: black;
++  padding: 12px 16px;
++  text-decoration: none;
++  display: block;
++}
++
++/* Change color of dropdown links on hover */
++.dropdown-content a:hover {background-color: #ddd;}
++
++/* Show the dropdown menu on hover */
++.dropdown:hover .dropdown-content {display: block;}
++
++/* Change the background color of the dropdown button when the dropdown content is shown */
++.dropdown:hover .dropbtn {background-color: #3e8e41;}
+ 
+ title {
+     font-size: 30px;
+ }
++/* Styling for inventory management page */
++  .max-width-form {
++    max-width: 800px;
++    margin: 0 auto;
++      padding-top: 40px; ;
++  }
++
++  /* styling for home page */
++.bg-image {
++    position: fixed;
++    top: 0;
++    left: 0;
++    width: 100%;
++    height: 100%;
++    z-index: -1;
++    opacity: 0.5;
++}
++.container {
++    font-weight: bold;
++    font-size: 80px;
++    font-family: 'Open Sans';
++    padding-top: 30px;
++    position:relative;
++    left: 40px;
++}
++.slogan {
++    float: left;
++    width: 40%;
++    font-size: 150px;
++    font-family: 'Open Sans';
++    padding-top: 75px;
++    position:relative;
++    left: 100px;
++}
++
++form input[type="submit"] {
++  background-color: #69a695;
++  color: black;
++  border-radius: 0px;
++  float: left;
++  font-size: 16px;
++}
++
++.map {
++   position: absolute;
++    width: 400px;
++    top: 100px;
++    right: 300px;
++    border: 10px solid black;
++}
+ 
+ .paddingbetweenelements {
+      padding-bottom: 20px;
+ }
+ 
++
++
+ /*Used to create and style rectangle images on Contact us page for each individual review*/
+ rectangle {
+   height: 170px;
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1678896827412)
++++ b/.idea/misc.xml	(date 1678896827412)
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (helloWorld.)" project-jdk-type="Python SDK" />
++</project>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_15_23,_12_56_PM/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_23,_12_56_PM/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_23,_12_56_PM/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1678899417099)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_23,_12_56_PM/shelved.patch	(date 1678899417099)
+@@ -0,0 +1,226 @@
++Index: static/css/style.css
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>/* ATB Blue = #69a695 */\n/* Grey Buttons/Hovers = #d9d9d9 */\n/* Super light grey, almost white background paneling = #f6f6f6 */\n\n/* Font Styling for entire website */\n@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');\n/*navbar*/\nnavbar {\n    display: flex;\n    justify-content: space-between;\n    padding: 20px;\n    background-color: #69a695;\n    color: #fff;\n}\n.navbar-nav a {\n    float: right;\n}\n\nbackground-image {\n    opacity: 0.5;\n}\n\nurl(\"static/images/WelcomePage_BackgroundPhoto.jpeg\") {\nopacity: 0.5;\n}\n\nbody{\n    font-family: 'Open Sauce SemiBold';\n}\n\nh1 {\n    color: black;\n    font-family: 'Open Sauce SemiBold';\n    font-size: 80px;\n}\n\n/*use this to create a division that has centered text*/\n.login-buttons{\n    text-align: center;\n}\n\n\n.text-center{\n    text-align: center;\n\n}\n\n/* button styling */\ninput{\n    background-color: #69a695;\n<<<<<<< HEAD\n=======\n    text-color: white;\n>>>>>>> a0cf96c (This push includes numerous changes:)\n    border-width: 1px;\n    border-color: #545454;\n    border-radius: 5px;\n    padding: 7px;\n    margin: 2px;\n    color: white;\n}\n\n.checkoutButtons{\n    background-color: #69a695;\n    font-family: 'Open Sans';\n    color: white;\n}\n\np {\n    color: black;\n    font-family: 'Open Sauce SemiBold';\n    font-size: 20px;\n\n}\n\n/* Checkout Page Styling */\n\n.checkoutPlaceholder {\n    height: 210px;\n    width: 1200px;\n    background-color: #f6f6f6;\n}\n\ndiv.checkoutItemCoupon{\n    display: block;\n    padding: 20px;\n}\n\ndiv.coupon{\n    display: inline-block;\n}\n\n.formInputFields {\n    background-color: #f6f6f6;\n    padding: 30px 25px 30px 25px;\n}\nh2.checkoutHeader {\n    font-size: 33px;\n    float: left;\n}\n\n<<<<<<< HEAD\n=======\n.navbar {\n    background-color: deepskyblue;\n}\n\n>>>>>>> a0cf96c (This push includes numerous changes:)\n.inputBoxTotal {\n    padding: 20px;\n}\n\n.billingTotals {\n    padding: 30px 25px 30px 25px;\n}\n\n.inputFields {\n    height: 30px;\n    background-color: #f6f6f6;\n    width: auto;\n}\n\n<<<<<<< HEAD\np.formFieldLabels {\n=======\n.formFieldLabels {\n>>>>>>> a0cf96c (This push includes numerous changes:)\n    font-size: 20px;\n    margin: 0px 0px 0px 0px;\n    padding: 0px 0px 0px 0px;\n}\n\np.cartTotalsLabels {\n    font-size: 25px;\n    margin: 0px;\n    padding: 0px;\n}\n\n/*Styling order confirmation page*/\n/*Centering text*/\n.center {\n  margin: auto;\n  width: 50%;\n  border: 3px solid black;\n  padding: 10px;\n}\n/*center image*/\n.center-image {\n            display:block;\n            margin-left: auto;\n            margin-right: auto;\n        }\n\ntitle {\n    font-size: 30px;\n}\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/static/css/style.css b/static/css/style.css
++--- a/static/css/style.css	(revision 4f1b6781a0ac1e7e0fd122602410af2af1bfa3e2)
+++++ b/static/css/style.css	(date 1678897669024)
++@@ -149,8 +149,56 @@
++             display:block;
++             margin-left: auto;
++             margin-right: auto;
+++
++         }
+++
+++/*Filter shop button styling*/
+++/* Dropdown Button */
+++.dropbtn {
+++  background-color: #04AA6D;
+++  color: white;
+++  padding: 16px;
+++  font-size: 16px;
+++  border: none;
+++}
+++
+++/* The container <div> - needed to position the dropdown content */
+++.dropdown {
+++  position: relative;
+++  display: inline-block;
+++}
+++
+++/* Dropdown Content (Hidden by Default) */
+++.dropdown-content {
+++  display: none;
+++  position: absolute;
+++  background-color: #d9d9d9;
+++  min-width: 160px;
+++  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+++  z-index: 1;
+++}
+++
+++/* Links inside the dropdown */
+++.dropdown-content a {
+++  color: black;
+++  padding: 12px 16px;
+++  text-decoration: none;
+++  display: block;
+++}
+++
+++/* Change color of dropdown links on hover */
+++.dropdown-content a:hover {background-color: #ddd;}
+++
+++/* Show the dropdown menu on hover */
+++.dropdown:hover .dropdown-content {display: block;}
+++
+++/* Change the background color of the dropdown button when the dropdown content is shown */
+++.dropdown:hover .dropbtn {background-color: #3e8e41;}
++ 
++ title {
++     font-size: 30px;
++ }
+++  .max-width-form {
+++    max-width: 800px;
+++    margin: 0 auto;
+++  }
++Index: Inventory Management.html
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Inventory Management</title>\n        <link href=\"/static/CSS/style.css\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">\n    </head>\n    <body>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Inventory Management</title>\n</head>\n<!-- Navbar -->\n            <nav class=\"navbar navbar-expand-lg\" style=\"height: 75px; background-color: #69a695\">\n              <div class=\"container-fluid\">\n                <a class=\"navbar-brand\" href=\"Home Page.html\"><img src=\"static/images/Clear Background Logo.png\" alt=\"Bootstrap\" width=\"30\" height=\"24\"></a>\n                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                  <span class=\"navbar-toggler-icon\"></span>\n                </button>\n                <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n                  <div class=\"navbar-nav\">\n                    <a class=\"nav-link active\" aria-current=\"page\" href=\"Home Page.html\">Home</a>\n                    <a class=\"nav-link\" aria-current=\"page\" href=\"Shop.html\">Shop</a>\n                    <a class=\"nav-link\" href=\"About%20Page.html\">About</a>\n                    <a class=\"nav-link\" href=\"Contact%20Us%20Page.html\">Contact Us</a>\n                    <a class=\"nav-link\" href=\"Log-In-Screen.html\">Log In</a>\n                  </div>\n                </div>\n              </div>\n            </nav>\n\n<!-- Inventory Input -->\n<div class=\"container\">\n  <div class=\"max-width-form\">\n    <form class=\"row g-3 needs-validation\" novalidate>\n      <div class=\"col-md-4\">\n        <label for=\"validationItemID\" class=\"form-label\">Item ID</label>\n       <input type=\"text\" class=\"form-control\" id=\"validationItemID\" required>\n        <div class=\"valid-feedback\">\n        Looks good!\n    </div>\n  </div>\n  <div class=\"col-md-4\">\n    <label for=\"validationCollectionID\" class=\"form-label\">Collection ID</label>\n    <input type=\"text\" class=\"form-control\" id=\"validationCollectionID\" required>\n    <div class=\"valid-feedback\">\n      Looks good!\n    </div>\n  </div>\n  <div class=\"col-md-4\">\n    <label for=\"validationItemName\" class=\"form-label\">Item Name</label>\n    <input type=\"text\" class=\"form-control\" id=\"validationItemName\" required>\n    <div class=\"invalid-feedback\">\n      Please enter a valid Item Name.\n    </div>\n  </div>\n  <div class=\"col-md-3\">\n    <label for=\"validationItemSize\" class=\"form-label\">Item Size</label>\n    <select class=\"form-select\" id=\"validationItemSize\" required>\n      <option selected disabled value=\"\">Choose...</option>\n      <option>XS</option>\n      <option>S</option>\n      <option>M</option>\n      <option>L</option>\n      <option>XL</option>\n      <option>XXL</option>\n    </select>\n    <div class=\"invalid-feedback\">\n      Please select a valid size.\n    </div>\n  </div>\n  <div class=\"col-md-3\">\n    <label for=\"validationItemColor\" class=\"form-label\">Item Color</label>\n    <input type=\"text\" class=\"form-control\" id=\"validationItemColor\" required>\n    <div class=\"invalid-feedback\">\n      Please provide a valid color.\n    </div>\n  </div>\n  <div class=\"col-md-3\">\n    <label for=\"validationPrice\" class=\"form-label\">Item Price</label>\n    <input type=\"text\" class=\"form-control\" id=\"validationPrice\" required>\n    <div class=\"invalid-feedback\">\n      Please provide a valid price.\n    </div>\n  </div>\n  <div class=\"col-md-3\">\n    <label for=\"validationQuantityAvail\" class=\"form-label\">Quantity Available</label>\n    <input type=\"text\" class=\"form-control\" id=\"validationQuantityAvail\" required>\n    <div class=\"invalid-feedback\">\n      Please provide a valid quantity.\n    </div>\n  </div>\n  <div class=\"col-md-4\">\n    <label for=\"validationImage\" class=\"form-label\">Insert Image</label>\n    <input type=\"file\" class=\"form-control\" id=\"validationImage\" required>\n    <div class=\"invalid-feedback\">\n      Please provide a valid image file.\n    </div>\n  </div>\n  <div class=\"col-md-8\">\n    <label for=\"validationDescription\" class=\"form-label\">Item Description</label>\n    <input type=\"text\" class=\"form-control\" id=\"validationDescription\" required>\n    <div class=\"invalid-feedback\">\n      Please provide a valid description.\n    </div>\n  </div>\n  <div class=\"col-12\">\n    <button class=\"btn btn-primary\" type=\"submit\">Submit form</button>\n  </div>\n  </div>\n</div>\n</\n<!-- Inventory Management Search Bar -->\n<div class=\"container\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-6\">\n      <form class=\"form-inline my-2 my-lg-0\">\n        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search Inventory...\" aria-label=\"Search\">\n        <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </div>\n<!-- Inventory Management Table -->\n<div class=\"container\">\n  <table class=\"table table-striped\">\n    <thead>\n      <tr>\n          <th scope=\"col\">Item ID</th>\n          <th scope=\"col\">Collection ID</th>\n        <th scope=\"col\">Item Name</th>\n        <th scope=\"col\">Item Size</th>\n          <th scope=\"col\">Item Color</th>\n          <th scope=\"col\">Item Price</th>\n          <th scope=\"col\">Item Description</th>\n          <th scope=\"col\">Item Image</th>\n          <th scope=\"col\">Quantity Available</th>\n      </tr>\n    </thead>\n    <tbody>\n      <!-- No data yet -->\n    </tbody>\n  </table>\n</div>\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN\" crossorigin=\"anonymous\"></script>\n</body>\n</html>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/Inventory Management.html b/Inventory Management.html
++--- a/Inventory Management.html	(revision 4f1b6781a0ac1e7e0fd122602410af2af1bfa3e2)
+++++ b/Inventory Management.html	(date 1678899161144)
++@@ -138,7 +138,7 @@
++       </tr>
++     </thead>
++     <tbody>
++-      <!-- No data yet -->
+++      <!-- Insert Data Here -->
++     </tbody>
++   </table>
++ </div>
++Index: Home Page.html
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<title>My Website</title>\n\t<style>\n\n        body {\n        background-image: url(\"static/images/transparent-background.png\");\n        height: 100%;\n        background-position: center;\n        background-repeat: no-repeat;\n        background-size: cover;\n        position: relative;\n    }\n\t\t.intro h1 {\n\t\t\tfont-size: 48px;\n\t\t\tfont-weight: bold;\n\t\t\tcolor: black;\n\t\t}\n\t\t.intro p {\n\t\t\tfont-weight: bold;\n\t\t\tfont-size: 24px;\n\t\t}\n\t\t.intro p + p {\n\t\t\tfont-size: 18px;\n\t\t\tfont-weight: normal;\n\t\t}\n\t\t.intro button {\n\t\t\tborder-radius: 0;\n\t\t\tfont-size: 12px;\n\t\t\tpadding: 8px 16px;\n\t\t\tbackground-color: #69a695;\n\t\t}\n\t</style>\n\t<link href=\"/static/CSS/style.css\" rel=\"stylesheet\">\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">\n</head>\n<body>\n <!-- Navbar -->\n            <nav class=\"navbar navbar-expand-lg\" style=\"height: 75px; background-color: #69a695\">\n              <div class=\"container-fluid\">\n                <a class=\"navbar-brand\" href=\"Home Page.html\"><img src=\"static/images/Clear Background Logo.png\" alt=\"Bootstrap\" width=\"30\" height=\"24\"></a>\n                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                  <span class=\"navbar-toggler-icon\"></span>\n                </button>\n                <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n                  <div class=\"navbar-nav\">\n                    <a class=\"nav-link active\" aria-current=\"page\" href=\"Home Page.html\">Home</a>\n                    <a class=\"nav-link\" aria-current=\"page\" href=\"Shop.html\">Shop</a>\n                    <a class=\"nav-link\" href=\"About%20Page.html\">About</a>\n                    <a class=\"nav-link\" href=\"Contact%20Us%20Page.html\">Contact Us</a>\n                    <a class=\"nav-link\" href=\"Log-In-Screen.html\">Log In</a>\n                  </div>\n                </div>\n              </div>\n            </nav>\n\n\t<main>\n\t\t<div class=\"text-center\">\n\t\t\t<h1>AROUND THE BLOCK.CO</h1>\n\t\t\t<p>Join the<br>Block Party</p>\n\t\t\t<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>\n            <form action=\"shop.html\" method=\"post\">\n            <input type=\"submit\" value=\"Start Shopping\">\n\t\t</div>\n\t</main>\n\n<!-- proper spacing for the background photo-->\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n</body>\n</html>\n\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/Home Page.html b/Home Page.html
++--- a/Home Page.html	(revision 4f1b6781a0ac1e7e0fd122602410af2af1bfa3e2)
+++++ b/Home Page.html	(date 1678896845650)
++@@ -1,87 +1,52 @@
++ <!DOCTYPE html>
++ <html lang="en">
++-<head>
++-	<title>My Website</title>
++-	<style>
++-
++-        body {
++-        background-image: url("static/images/transparent-background.png");
++-        height: 100%;
++-        background-position: center;
++-        background-repeat: no-repeat;
++-        background-size: cover;
++-        position: relative;
++-    }
++-		.intro h1 {
++-			font-size: 48px;
++-			font-weight: bold;
++-			color: black;
++-		}
++-		.intro p {
++-			font-weight: bold;
++-			font-size: 24px;
++-		}
++-		.intro p + p {
++-			font-size: 18px;
++-			font-weight: normal;
++-		}
++-		.intro button {
++-			border-radius: 0;
++-			font-size: 12px;
++-			padding: 8px 16px;
++-			background-color: #69a695;
++-		}
++-	</style>
++-	<link href="/static/CSS/style.css" rel="stylesheet">
++-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
++-</head>
++-<body>
++- <!-- Navbar -->
++-            <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
++-              <div class="container-fluid">
+++    <head>
+++        <meta charset="UTF-8">
+++        <title>Home Page</title>
+++        <link href="/static/CSS/style.css" rel="stylesheet">
+++        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+++        <style>
+++            /* Style for the background photo */
+++           body {
+++               background-image: url('static/images/transparent-background.png');
+++               background-repeat: no-repeat;
+++               background-position: center;
+++               background-size: cover;
+++               min-height: 100vh;
+++                    }
+++
+++    </style>
+++    </head>
+++    <body>
+++        <!-- Navbar -->
+++        <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
+++            <div class="container-fluid">
++                 <a class="navbar-brand" href="Home Page.html"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
++                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
++-                  <span class="navbar-toggler-icon"></span>
+++                    <span class="navbar-toggler-icon"></span>
++                 </button>
++                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
++-                  <div class="navbar-nav">
++-                    <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
++-                    <a class="nav-link" aria-current="page" href="Shop.html">Shop</a>
++-                    <a class="nav-link" href="About%20Page.html">About</a>
++-                    <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
++-                    <a class="nav-link" href="Log-In-Screen.html">Log In</a>
++-                  </div>
+++                    <div class="navbar-nav">
+++                        <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
+++                        <a class="nav-link" aria-current="page" href="Shop.html">Shop</a>
+++                        <a class="nav-link" href="About%20Page.html">About</a>
+++                        <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
+++                        <a class="nav-link" href="Log-In-Screen.html">Log In</a>
+++                    </div>
++                 </div>
++-              </div>
++-            </nav>
+++            </div>
+++        </nav>
++ 
++-	<main>
++-		<div class="text-center">
++-			<h1>AROUND THE BLOCK.CO</h1>
++-			<p>Join the<br>Block Party</p>
++-			<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>
++-            <form action="shop.html" method="post">
++-            <input type="submit" value="Start Shopping">
++-		</div>
++-	</main>
+++        <main>
+++            <div class="text-center intro">
+++                <h1>AROUND THE BLOCK.CO</h1>
+++                <p>Join the<br>Block Party</p>
+++                <p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park, Maryland</p>
+++                <form action="Shop.html" method="post">
+++                    <input type="submit" value="Start Shopping">
+++                </form>
+++            </div>
+++        </main>
++ 
++-<!-- proper spacing for the background photo-->
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-
++-</body>
+++        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-KRlJGIfW+IS8cWTtI5m5r5/hpvAB+Nyo+8IvSSm
++ </html>
++-
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1679254946620)
++++ b/.idea/workspace.xml	(date 1679254946620)
+@@ -0,0 +1,159 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="HTML File" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
++  <component name="ProjectId" id="2N3dhsCNzjT1uwD9MOMTkEk9dnu" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  },
++  &quot;keyToStringList&quot;: {
++    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
++      &quot;directory&quot;,
++      &quot;module&quot;,
++      &quot;repository&quot;
++    ]
++  }
++}</component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$" />
++    </key>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="" />
++      <created>1678811835939</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1678811835939</updated>
++      <workItem from="1678811839462" duration="8376000" />
++      <workItem from="1678896822647" duration="4435000" />
++      <workItem from="1678914086423" duration="6235000" />
++      <workItem from="1678995726298" duration="5579000" />
++      <workItem from="1679017763874" duration="4136000" />
++    </task>
++    <task id="LOCAL-00001" summary="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling">
++      <created>1678819151825</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1678819151825</updated>
++    </task>
++    <task id="LOCAL-00002" summary="Added an inventory input table &#10;need to fill in values and add styling for table&#10;need to fix formatting of the buttons">
++      <created>1678827389300</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1678827389300</updated>
++    </task>
++    <task id="LOCAL-00003" summary="Updated the form to input inventory.">
++      <created>1678897417944</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1678897417944</updated>
++    </task>
++    <task id="LOCAL-00004" summary="Added header, put input form and table into containers">
++      <created>1678898593881</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1678898593881</updated>
++    </task>
++    <task id="LOCAL-00005" summary="Updated navbar per Joe's changes.">
++      <created>1678899543333</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1678899543333</updated>
++    </task>
++    <task id="LOCAL-00006" summary="Updated navbar per Joe's changes.">
++      <created>1678899551737</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1678899551737</updated>
++    </task>
++    <task id="LOCAL-00007" summary="Changed the homepage to replicate a different screen. working on getting button to correct position, making fonts the ideal sizes, and will put in a slider of images below start shopping button">
++      <created>1678918957733</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1678918957733</updated>
++    </task>
++    <task id="LOCAL-00008" summary="added carousel templated">
++      <created>1678995356846</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1678995356846</updated>
++    </task>
++    <task id="LOCAL-00009" summary="continued working on formatting">
++      <created>1679003779224</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1679003779224</updated>
++    </task>
++    <task id="LOCAL-00010" summary="updated on formatting">
++      <created>1679020804790</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1679020804790</updated>
++    </task>
++    <option name="localTasksCounter" value="11" />
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling" />
++    <MESSAGE value="Added an inventory input table &#10;need to fill in values and add styling for table&#10;need to fix formatting of the buttons" />
++    <MESSAGE value="Updated the form to input inventory." />
++    <MESSAGE value="Added header, put input form and table into containers" />
++    <MESSAGE value="Updated navbar per Joe's changes." />
++    <MESSAGE value="Changed the homepage to replicate a different screen. working on getting button to correct position, making fonts the ideal sizes, and will put in a slider of images below start shopping button" />
++    <MESSAGE value="added carousel templated" />
++    <MESSAGE value="continued working on formatting" />
++    <MESSAGE value="updated on formatting" />
++    <option name="LAST_COMMIT_MESSAGE" value="updated on formatting" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_15_23,_12_13_PM/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_23,_12_13_PM/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_23,_12_13_PM/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1678896829258)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_23,_12_13_PM/shelved.patch	(date 1678896829258)
+@@ -0,0 +1,155 @@
++Index: static/css/style.css
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>/* ATB Blue = #69a695 */\n/* Grey Buttons/Hovers = #d9d9d9 */\n/* Super light grey, almost white background paneling = #f6f6f6 */\n\n/* Font Styling for entire website */\n@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');\n/*navbar*/\nnavbar {\n    display: flex;\n    justify-content: space-between;\n    padding: 20px;\n    background-color: #69a695;\n    color: #fff;\n}\n.navbar-nav a {\n    float: right;\n}\n\nbackground-image {\n    opacity: 0.5;\n}\n\nurl(\"static/images/WelcomePage_BackgroundPhoto.jpeg\") {\nopacity: 0.5;\n}\n\nbody{\n    font-family: 'Open Sauce SemiBold';\n}\n\nh1 {\n    color: black;\n    font-family: 'Open Sauce SemiBold';\n    font-size: 80px;\n}\n\n/*use this to create a division that has centered text*/\n.login-buttons{\n    text-align: center;\n}\n\n\n.text-center{\n    text-align: center;\n\n}\n\n/* button styling */\ninput{\n    background-color: #69a695;\n<<<<<<< HEAD\n=======\n    text-color: white;\n>>>>>>> a0cf96c (This push includes numerous changes:)\n    border-width: 1px;\n    border-color: #545454;\n    border-radius: 5px;\n    padding: 7px;\n    margin: 2px;\n    color: white;\n}\n\n.checkoutButtons{\n    background-color: #69a695;\n    font-family: 'Open Sans';\n    color: white;\n}\n\np {\n    color: black;\n    font-family: 'Open Sauce SemiBold';\n    font-size: 20px;\n\n}\n\n/* Checkout Page Styling */\n\n.checkoutPlaceholder {\n    height: 210px;\n    width: 1200px;\n    background-color: #f6f6f6;\n}\n\ndiv.checkoutItemCoupon{\n    display: block;\n    padding: 20px;\n}\n\ndiv.coupon{\n    display: inline-block;\n}\n\n.formInputFields {\n    background-color: #f6f6f6;\n    padding: 30px 25px 30px 25px;\n}\nh2.checkoutHeader {\n    font-size: 33px;\n    float: left;\n}\n\n<<<<<<< HEAD\n=======\n.navbar {\n    background-color: deepskyblue;\n}\n\n>>>>>>> a0cf96c (This push includes numerous changes:)\n.inputBoxTotal {\n    padding: 20px;\n}\n\n.billingTotals {\n    padding: 30px 25px 30px 25px;\n}\n\n.inputFields {\n    height: 30px;\n    background-color: #f6f6f6;\n    width: auto;\n}\n\n<<<<<<< HEAD\np.formFieldLabels {\n=======\n.formFieldLabels {\n>>>>>>> a0cf96c (This push includes numerous changes:)\n    font-size: 20px;\n    margin: 0px 0px 0px 0px;\n    padding: 0px 0px 0px 0px;\n}\n\np.cartTotalsLabels {\n    font-size: 25px;\n    margin: 0px;\n    padding: 0px;\n}\n\n/*Styling order confirmation page*/\n/*Centering text*/\n.center {\n  margin: auto;\n  width: 50%;\n  border: 3px solid black;\n  padding: 10px;\n}\n/*center image*/\n.center-image {\n            display:block;\n            margin-left: auto;\n            margin-right: auto;\n\n        }\n\n/*Filter shop button styling*/\n/* Dropdown Button */\n.dropbtn {\n  background-color: #04AA6D;\n  color: white;\n  padding: 16px;\n  font-size: 16px;\n  border: none;\n}\n\n/* The container <div> - needed to position the dropdown content */\n.dropdown {\n  position: relative;\n  display: inline-block;\n}\n\n/* Dropdown Content (Hidden by Default) */\n.dropdown-content {\n  display: none;\n  position: absolute;\n  background-color: #d9d9d9;\n  min-width: 160px;\n  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n  z-index: 1;\n}\n\n/* Links inside the dropdown */\n.dropdown-content a {\n  color: black;\n  padding: 12px 16px;\n  text-decoration: none;\n  display: block;\n}\n\n/* Change color of dropdown links on hover */\n.dropdown-content a:hover {background-color: #ddd;}\n\n/* Show the dropdown menu on hover */\n.dropdown:hover .dropdown-content {display: block;}\n\n/* Change the background color of the dropdown button when the dropdown content is shown */\n.dropdown:hover .dropbtn {background-color: #3e8e41;}\n\ntitle {\n    font-size: 30px;\n}\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/static/css/style.css b/static/css/style.css
++--- a/static/css/style.css	(revision 3706d518ed96dd9ac50810d9e857607344c8995a)
+++++ b/static/css/style.css	(date 1678827397942)
++@@ -198,3 +198,4 @@
++ title {
++     font-size: 30px;
++ }
+++
++Index: Home Page.html
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<title>My Website</title>\n\t<style>\n\n        body {\n        background-image: url(\"static/images/transparent-background.png\");\n        height: 100%;\n        background-position: center;\n        background-repeat: no-repeat;\n        background-size: cover;\n        position: relative;\n    }\n\t\t.intro h1 {\n\t\t\tfont-size: 48px;\n\t\t\tfont-weight: bold;\n\t\t\tcolor: black;\n\t\t}\n\t\t.intro p {\n\t\t\tfont-weight: bold;\n\t\t\tfont-size: 24px;\n\t\t}\n\t\t.intro p + p {\n\t\t\tfont-size: 18px;\n\t\t\tfont-weight: normal;\n\t\t}\n\t\t.intro button {\n\t\t\tborder-radius: 0;\n\t\t\tfont-size: 12px;\n\t\t\tpadding: 8px 16px;\n\t\t\tbackground-color: #69a695;\n\t\t}\n\t</style>\n\t<link href=\"/static/CSS/style.css\" rel=\"stylesheet\">\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">\n</head>\n<body>\n <!-- Navbar -->\n            <nav class=\"navbar navbar-expand-lg\" style=\"height: 75px; background-color: #69a695\">\n              <div class=\"container-fluid\">\n                <a class=\"navbar-brand\" href=\"Home Page.html\"><img src=\"static/images/Clear Background Logo.png\" alt=\"Bootstrap\" width=\"30\" height=\"24\"></a>\n                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                  <span class=\"navbar-toggler-icon\"></span>\n                </button>\n                <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n                  <div class=\"navbar-nav\">\n                    <a class=\"nav-link active\" aria-current=\"page\" href=\"Home Page.html\">Home</a>\n                    <a class=\"nav-link\" aria-current=\"page\" href=\"Shop.html\">Shop</a>\n                    <a class=\"nav-link\" href=\"About%20Page.html\">About</a>\n                    <a class=\"nav-link\" href=\"Contact%20Us%20Page.html\">Contact Us</a>\n                    <a class=\"nav-link\" href=\"Log-In-Screen.html\">Log In</a>\n                  </div>\n                </div>\n              </div>\n            </nav>\n\n\t<main>\n\t\t<div class=\"text-center\">\n\t\t\t<h1>AROUND THE BLOCK.CO</h1>\n\t\t\t<p>Join the<br>Block Party</p>\n\t\t\t<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>\n            <form action=\"shop.html\" method=\"post\">\n            <input type=\"submit\" value=\"Start Shopping\">\n\t\t</div>\n\t</main>\n\n<!-- proper spacing for the background photo-->\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n</body>\n</html>\n\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/Home Page.html b/Home Page.html
++--- a/Home Page.html	(revision 3706d518ed96dd9ac50810d9e857607344c8995a)
+++++ b/Home Page.html	(date 1678827397947)
++@@ -1,87 +1,52 @@
++ <!DOCTYPE html>
++ <html lang="en">
++-<head>
++-	<title>My Website</title>
++-	<style>
++-
++-        body {
++-        background-image: url("static/images/transparent-background.png");
++-        height: 100%;
++-        background-position: center;
++-        background-repeat: no-repeat;
++-        background-size: cover;
++-        position: relative;
++-    }
++-		.intro h1 {
++-			font-size: 48px;
++-			font-weight: bold;
++-			color: black;
++-		}
++-		.intro p {
++-			font-weight: bold;
++-			font-size: 24px;
++-		}
++-		.intro p + p {
++-			font-size: 18px;
++-			font-weight: normal;
++-		}
++-		.intro button {
++-			border-radius: 0;
++-			font-size: 12px;
++-			padding: 8px 16px;
++-			background-color: #69a695;
++-		}
++-	</style>
++-	<link href="/static/CSS/style.css" rel="stylesheet">
++-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
++-</head>
++-<body>
++- <!-- Navbar -->
++-            <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
++-              <div class="container-fluid">
+++    <head>
+++        <meta charset="UTF-8">
+++        <title>Home Page</title>
+++        <link href="/static/CSS/style.css" rel="stylesheet">
+++        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+++        <style>
+++            /* Style for the background photo */
+++           body {
+++               background-image: url('static/images/transparent-background.png');
+++               background-repeat: no-repeat;
+++               background-position: center;
+++               background-size: cover;
+++               min-height: 100vh;
+++                    }
+++
+++    </style>
+++    </head>
+++    <body>
+++        <!-- Navbar -->
+++        <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
+++            <div class="container-fluid">
++                 <a class="navbar-brand" href="Home Page.html"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
++                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
++-                  <span class="navbar-toggler-icon"></span>
+++                    <span class="navbar-toggler-icon"></span>
++                 </button>
++                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
++-                  <div class="navbar-nav">
++-                    <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
++-                    <a class="nav-link" aria-current="page" href="Shop.html">Shop</a>
++-                    <a class="nav-link" href="About%20Page.html">About</a>
++-                    <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
++-                    <a class="nav-link" href="Log-In-Screen.html">Log In</a>
++-                  </div>
+++                    <div class="navbar-nav">
+++                        <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
+++                        <a class="nav-link" aria-current="page" href="Shop.html">Shop</a>
+++                        <a class="nav-link" href="About%20Page.html">About</a>
+++                        <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
+++                        <a class="nav-link" href="Log-In-Screen.html">Log In</a>
+++                    </div>
++                 </div>
++-              </div>
++-            </nav>
+++            </div>
+++        </nav>
++ 
++-	<main>
++-		<div class="text-center">
++-			<h1>AROUND THE BLOCK.CO</h1>
++-			<p>Join the<br>Block Party</p>
++-			<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>
++-            <form action="shop.html" method="post">
++-            <input type="submit" value="Start Shopping">
++-		</div>
++-	</main>
+++        <main>
+++            <div class="text-center intro">
+++                <h1>AROUND THE BLOCK.CO</h1>
+++                <p>Join the<br>Block Party</p>
+++                <p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park, Maryland</p>
+++                <form action="Shop.html" method="post">
+++                    <input type="submit" value="Start Shopping">
+++                </form>
+++            </div>
+++        </main>
++ 
++-<!-- proper spacing for the background photo-->
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-
++-</body>
+++        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-KRlJGIfW+IS8cWTtI5m5r5/hpvAB+Nyo+8IvSSm
++ </html>
++-
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_14_23__4_56_PM.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_14_23__4_56_PM.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_3_14_23__4_56_PM.xml
+new file mode 100644
+--- /dev/null	(date 1679017764620)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_3_14_23__4_56_PM.xml	(date 1679017764620)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_3_14_23,_4_56_PM" date="1678827397972" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_14_23,_4_56_PM/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 3/14/23, 4:56 PM" />
++</changelist>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+new file mode 100644
+--- /dev/null	(date 1678896827418)
++++ b/.idea/inspectionProfiles/profiles_settings.xml	(date 1678896827418)
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_16_23,_3_03_PM/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_16_23,_3_03_PM/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_3_16_23,_3_03_PM/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1678993435380)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_3_16_23,_3_03_PM/shelved.patch	(date 1678993435380)
+@@ -0,0 +1,131 @@
++Index: static/css/style.css
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>/* ATB Blue = #69a695 */\n/* Grey Buttons/Hovers = #d9d9d9 */\n/* Super light grey, almost white background paneling = #f6f6f6 */\n\n/* Font Styling for entire website */\n@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');\n\nhtml body p {\n    font-family: \"Open Sans\";\n}\n\nh1 {\n    font-: 100px;\n}\n/*navbar*/\nnavbar {\n    display: flex;\n    justify-content: space-between;\n    padding: 20px;\n    background-color: #69a695;\n    color: #fff;\n}\n.navbar-nav a {\n    float: right;\n}\n\nbackground-image {\n    opacity: 0.5;\n}\n\nurl(\"static/images/WelcomePage_BackgroundPhoto.jpeg\") {\nopacity: 0.5;\n}\n\n/*use this to create a division that has centered text*/\n.login-buttons{\n    text-align: center;\n}\n\n\n.text-center{\n    text-align: center;\n\n}\n\n/* button styling */\ninput{\n    background-color: #69a695;\n<<<<<<< HEAD\n=======\n    text-color: white;\n>>>>>>> a0cf96c (This push includes numerous changes:)\n    border-width: 1px;\n    border-color: #545454;\n    border-radius: 5px;\n    padding: 7px;\n    margin: 2px;\n    color: white;\n}\n\n.checkoutButtons{\n    background-color: #69a695;\n    font-family: 'Open Sans';\n    color: white;\n}\n\np {\n    color: black;\n    font-family: 'Open Sauce SemiBold';\n    font-size: 20px;\n\n}\n\n/* Checkout Page Styling */\n\n.checkoutPlaceholder {\n    height: 210px;\n    width: 1200px;\n    background-color: #f6f6f6;\n    padding: 0px 0px 0px 0px;\n}\n\ndiv.checkoutItemCoupon{\n    display: block;\n    padding: 20px;\n}\n\ndiv.coupon{\n    display: inline-block;\n}\n\n.formInputFields {\n    background-color: #f6f6f6;\n    padding: 30px 25px 30px 25px;\n}\n.checkoutHeader {\n    font-size: 33px;\n    float: left;\n}\n\n<<<<<<< HEAD\n=======\n.navbar {\n    background-color: deepskyblue;\n}\n\n>>>>>>> a0cf96c (This push includes numerous changes:)\n.inputBoxTotal {\n    padding: 20px;\n}\n\n.billingTotals {\n    padding: 30px 25px 30px 25px;\n}\n\n.inputFields {\n    height: 30px;\n    background-color: #f6f6f6;\n    border-color: gray;\n    width: auto;\n}\n\n.formFieldsLabels {\n    font-size: 20px;\n    margin: 0px;\n    padding: 0px;\n}\n\np.cartTotalsLabels {\n    font-size: 25px;\n    margin: 0px;\n    padding: 0px 0px 20px 0px;\n}\n\nhr {\n    margin: 0px;\n}\n\n/*Styling order confirmation page*/\n/*Centering text*/\n.center {\n  margin: auto;\n  width: 50%;\n  border: 3px solid black;\n  padding: 10px;\n}\n/*center image*/\n.center-image {\n            display:block;\n            margin-left: auto;\n            margin-right: auto;\n        }\n\ntitle {\n    font-size: 30px;\n}\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/static/css/style.css b/static/css/style.css
++--- a/static/css/style.css	(revision d0d7b4a995921414d734b46edcf1b1ef6b63ca8e)
+++++ b/static/css/style.css	(date 1678918869625)
++@@ -149,8 +149,93 @@
++             display:block;
++             margin-left: auto;
++             margin-right: auto;
+++
++         }
+++
+++/*Filter shop button styling*/
+++/* Dropdown Button */
+++.dropbtn {
+++  background-color: #04AA6D;
+++  color: white;
+++  padding: 16px;
+++  font-size: 16px;
+++  border: none;
+++}
+++
+++/* The container <div> - needed to position the dropdown content */
+++.dropdown {
+++  position: relative;
+++  display: inline-block;
+++}
+++
+++/* Dropdown Content (Hidden by Default) */
+++.dropdown-content {
+++  display: none;
+++  position: absolute;
+++  background-color: #d9d9d9;
+++  min-width: 160px;
+++  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+++  z-index: 1;
+++}
+++
+++/* Links inside the dropdown */
+++.dropdown-content a {
+++  color: black;
+++  padding: 12px 16px;
+++  text-decoration: none;
+++  display: block;
+++}
+++
+++/* Change color of dropdown links on hover */
+++.dropdown-content a:hover {background-color: #ddd;}
+++
+++/* Show the dropdown menu on hover */
+++.dropdown:hover .dropdown-content {display: block;}
+++
+++/* Change the background color of the dropdown button when the dropdown content is shown */
+++.dropdown:hover .dropbtn {background-color: #3e8e41;}
++ 
++ title {
++     font-size: 30px;
++ }
+++/* Styling for inventory management page */
+++  .max-width-form {
+++    max-width: 800px;
+++    margin: 0 auto;
+++      padding-top: 40px; ;
+++  }
+++
+++  /* styling for home page */
+++.introduction {
+++    font-weight: bold;
+++    font-size: 60px;
+++    font-family: 'Open Sans';
+++    padding-top: 30px;
+++    position:relative;
+++    left: 40px;
+++}
+++.slogan {
+++    float: left;
+++    width: 40%;
+++    font-size: 150px;
+++    font-family: 'Open Sans';
+++    padding-top: 75px;
+++    position:relative;
+++    left: 100px;
+++}
+++
+++input[type="submit"]{
+++    background-color: #69a695;
+++    color: black;
+++    border-radius: 0px;
+++    padding: 7px;
+++    margin-top:15px;
+++}
+++
+++.map {
+++   float: right;
+++    width: 300px;
+++    height: auto;
+++    margin-top: 10px;
+++    margin-right: 125px;
+++}
++\ No newline at end of file
++Index: Inventory Management.html
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Inventory Management</title>\n        <link href=\"/static/CSS/style.css\" rel=\"stylesheet\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">\n    </head>\n    <body>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Inventory Management</title>\n</head>\n<!-- Navbar -->\n        <nav class=\"navbar navbar-expand-lg\" style=\"background-color: #69a695\">\n          <div class=\"container-fluid\">\n            <a class=\"navbar-brand\" href=\"#\"><img src=\"static/images/Clear Background Logo.png\" alt=\"Bootstrap\" width=\"30\" height=\"24\"></a>\n            <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n              <span class=\"navbar-toggler-icon\"></span>\n            </button>\n            <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">\n              <ul class=\"navbar-nav\">\n                <li class=\"nav-item\">\n                  <a class=\"nav-link active\" aria-current=\"page\" href=\"Home%20Page.html\">Home</a>\n                </li>\n                <li class=\"nav-item dropdown\">\n                  <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n                    Shop\n                  </a>\n                  <ul class=\"dropdown-menu\">\n                    <li><a class=\"dropdown-item\" href=\"#\">Game Day Collection</a></li>\n                    <li><a class=\"dropdown-item\" href=\"#\">Dark Blue Collection</a></li>\n                    <li><a class=\"dropdown-item\" href=\"#\">Springtime Collection</a></li>\n                    <li><a class=\"dropdown-item\" href=\"#\">Logo Collection</a></li>\n                  </ul>\n                </li>\n                <li class=\"nav-item dropdown\">\n                  <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n                    About\n                  </a>\n                  <ul class=\"dropdown-menu\">\n                    <li><a class=\"dropdown-item\" href=\"#\">Around the Block</a></li>\n                    <li><a class=\"dropdown-item\" href=\"#\">Our Mission</a></li>\n                    <li><a class=\"dropdown-item\" href=\"#\">Meet our Team</a></li>\n                  </ul>\n                </li>\n                <li class=\"nav-item dropdown\">\n                  <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n                    Contact Us\n                  </a>\n                  <ul class=\"dropdown-menu\">\n                    <li><a class=\"dropdown-item\" href=\"#\">Request Form</a></li>\n                    <li><a class=\"dropdown-item\" href=\"#\">Reviews</a></li>\n                  </ul>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </nav>\n<!-- Inventory Input -->\n<div class=\"container\">\n  <div class=\"max-width-form\">\n    <form class=\"row g-3 needs-validation\" novalidate>\n      <div class=\"col-md-4\">\n        <label for=\"validationItemID\" class=\"form-label\">Item ID</label>\n       <input type=\"text\" class=\"form-control\" id=\"validationItemID\" required>\n        <div class=\"valid-feedback\">\n        Looks good!\n    </div>\n  </div>\n  <div class=\"col-md-4\">\n    <label for=\"validationCollectionID\" class=\"form-label\">Collection ID</label>\n    <input type=\"text\" class=\"form-control\" id=\"validationCollectionID\" required>\n    <div class=\"valid-feedback\">\n      Looks good!\n    </div>\n  </div>\n  <div class=\"col-md-4\">\n    <label for=\"validationItemName\" class=\"form-label\">Item Name</label>\n    <input type=\"text\" class=\"form-control\" id=\"validationItemName\" required>\n    <div class=\"invalid-feedback\">\n      Please enter a valid Item Name.\n    </div>\n  </div>\n  <div class=\"col-md-3\">\n    <label for=\"validationItemSize\" class=\"form-label\">Item Size</label>\n    <select class=\"form-select\" id=\"validationItemSize\" required>\n      <option selected disabled value=\"\">Choose...</option>\n      <option>XS</option>\n      <option>S</option>\n      <option>M</option>\n      <option>L</option>\n      <option>XL</option>\n      <option>XXL</option>\n    </select>\n    <div class=\"invalid-feedback\">\n      Please select a valid size.\n    </div>\n  </div>\n  <div class=\"col-md-3\">\n    <label for=\"validationItemColor\" class=\"form-label\">Item Color</label>\n    <input type=\"text\" class=\"form-control\" id=\"validationItemColor\" required>\n    <div class=\"invalid-feedback\">\n      Please provide a valid color.\n    </div>\n  </div>\n  <div class=\"col-md-3\">\n    <label for=\"validationPrice\" class=\"form-label\">Item Price</label>\n    <input type=\"text\" class=\"form-control\" id=\"validationPrice\" required>\n    <div class=\"invalid-feedback\">\n      Please provide a valid price.\n    </div>\n  </div>\n  <div class=\"col-md-3\">\n    <label for=\"validationQuantityAvail\" class=\"form-label\">Quantity Available</label>\n    <input type=\"text\" class=\"form-control\" id=\"validationQuantityAvail\" required>\n    <div class=\"invalid-feedback\">\n      Please provide a valid quantity.\n    </div>\n  </div>\n  <div class=\"col-md-4\">\n    <label for=\"validationImage\" class=\"form-label\">Insert Image</label>\n    <input type=\"file\" class=\"form-control\" id=\"validationImage\" required>\n    <div class=\"invalid-feedback\">\n      Please provide a valid image file.\n    </div>\n  </div>\n  <div class=\"col-md-8\">\n    <label for=\"validationDescription\" class=\"form-label\">Item Description</label>\n    <input type=\"text\" class=\"form-control\" id=\"validationDescription\" required>\n    <div class=\"invalid-feedback\">\n      Please provide a valid description.\n    </div>\n  </div>\n  <div class=\"col-12\">\n    <button class=\"btn btn-primary\" type=\"submit\">Submit form</button>\n  </div>\n  </div>\n</div>\n</\n<!-- Inventory Management Search Bar -->\n<div class=\"container\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-6\">\n      <form class=\"form-inline my-2 my-lg-0\">\n        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search Inventory...\" aria-label=\"Search\">\n        <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </div>\n<!-- Inventory Management Table -->\n<div class=\"container\">\n  <table class=\"table table-striped\">\n    <thead>\n      <tr>\n          <th scope=\"col\">Item ID</th>\n          <th scope=\"col\">Collection ID</th>\n        <th scope=\"col\">Item Name</th>\n        <th scope=\"col\">Item Size</th>\n          <th scope=\"col\">Item Color</th>\n          <th scope=\"col\">Item Price</th>\n          <th scope=\"col\">Item Description</th>\n          <th scope=\"col\">Item Image</th>\n          <th scope=\"col\">Quantity Available</th>\n      </tr>\n    </thead>\n    <tbody>\n      <!-- Insert Data Here -->\n    </tbody>\n  </table>\n</div>\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN\" crossorigin=\"anonymous\"></script>\n</body>\n</html>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/Inventory Management.html b/Inventory Management.html
++--- a/Inventory Management.html	(revision d0d7b4a995921414d734b46edcf1b1ef6b63ca8e)
+++++ b/Inventory Management.html	(date 1678903535591)
++@@ -57,6 +57,7 @@
++             </div>
++           </div>
++         </nav>
+++
++ <!-- Inventory Input -->
++ <div class="container">
++   <div class="max-width-form">
++@@ -148,6 +149,7 @@
++       </form>
++     </div>
++   </div>
+++
++ <!-- Inventory Management Table -->
++ <div class="container">
++   <table class="table table-striped">
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_16_23,_8_49_PM/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_16_23,_8_49_PM/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_3_16_23,_8_49_PM/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1679017766510)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_3_16_23,_8_49_PM/shelved.patch	(date 1679017766510)
+@@ -0,0 +1,117 @@
++Index: static/css/style.css
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>/* ATB Blue = #69a695 */\n/* Grey Buttons/Hovers = #d9d9d9 */\n/* Super light grey, almost white background paneling = #f6f6f6 */\n\n/* Font Styling for entire website */\n@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');\n\nhtml body p {\n    font-family: \"Open Sans\";\n}\n\nh1 {\n    font-: 100px;\n}\n/*navbar*/\nnavbar {\n    display: flex;\n    justify-content: space-between;\n    padding: 20px;\n    background-color: #69a695;\n    color: #fff;\n}\n.navbar-nav a {\n    float: right;\n}\n\nbackground-image {\n    opacity: 0.5;\n}\n\nurl(\"static/images/WelcomePage_BackgroundPhoto.jpeg\") {\nopacity: 0.5;\n}\n\n/*use this to create a division that has centered text*/\n.login-buttons{\n    text-align: center;\n}\n\n\n.text-center{\n    text-align: center;\n\n}\n\n/* button styling */\ninput{\n    background-color: #69a695;\n<<<<<<< HEAD\n=======\n    text-color: white;\n>>>>>>> a0cf96c (This push includes numerous changes:)\n    border-width: 1px;\n    border-color: #545454;\n    border-radius: 5px;\n    padding: 7px;\n    margin: 2px;\n    color: white;\n}\n\n.checkoutButtons{\n    background-color: #69a695;\n    font-family: 'Open Sans';\n    color: white;\n}\n\np {\n    color: black;\n    font-family: 'Open Sauce SemiBold';\n    font-size: 20px;\n\n}\n\n/* Checkout Page Styling */\n\n.checkoutPlaceholder {\n    height: 210px;\n    width: 1200px;\n    background-color: #f6f6f6;\n    padding: 0px 0px 0px 0px;\n}\n\ndiv.checkoutItemCoupon{\n    display: block;\n    padding: 20px;\n}\n\ndiv.coupon{\n    display: inline-block;\n}\n\n.formInputFields {\n    background-color: #f6f6f6;\n    padding: 30px 25px 30px 25px;\n}\n\n.formInputFieldsNoBackground {\n    padding-left: 20px;\n}\n\n.checkoutHeader {\n    font-size: 33px;\n    float: left;\n}\n\n.sectionBreaker {\n    padding-top: 40px;\n}\n\n.customerReviewSection {\n        background-color: #f6f6f6;\n    width: 100%;\n}\n\nimg {\nmargin: 0px;\npadding: 0px;\nborder: 0px;\n}\n\n.reviewHeader {\n    font-size: 33px;\n    padding-left: 20px;\n}\n\n\n<<<<<<< HEAD\n=======\n.navbar {\n    background-color: deepskyblue;\n}\n\n>>>>>>> a0cf96c (This push includes numerous changes:)\n.inputBoxTotal {\n    padding: 20px;\n}\n\n.billingTotals {\n    padding: 30px 25px 30px 25px;\n}\n\n.inputFields {\n    height: 30px;\n    background-color: #f6f6f6;\n    border-color: gray;\n    width: auto;\n}\n\n.formFieldsLabels {\n    font-size: 20px;\n    margin: 0px;\n    padding: 0px;\n}\n\np.cartTotalsLabels {\n    font-size: 25px;\n    margin: 0px;\n    padding: 0px 0px 20px 0px;\n}\n\nhr {\n    margin: 0px;\n}\n\n/*Styling order confirmation page*/\n/*Centering text*/\n.center {\n  margin: auto;\n  width: 50%;\n  border: 3px solid black;\n  padding: 10px;\n}\n/*center image*/\n.center-image {\n            display:block;\n            margin-left: auto;\n            margin-right: auto;\n        }\n\ntitle {\n    font-size: 30px;\n}\n\n.paddingbetweenelements {\n     padding-bottom: 20px;\n}\n\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/static/css/style.css b/static/css/style.css
++--- a/static/css/style.css	(revision 08c5ca887db4c6744db87fa9be027d4ee97b74f6)
+++++ b/static/css/style.css	(date 1679002173838)
++@@ -175,13 +175,106 @@
++             display:block;
++             margin-left: auto;
++             margin-right: auto;
+++
++         }
+++
+++/*Filter shop button styling*/
+++/* Dropdown Button */
+++.dropbtn {
+++  background-color: #04AA6D;
+++  color: white;
+++  padding: 16px;
+++  font-size: 16px;
+++  border: none;
+++}
+++
+++/* The container <div> - needed to position the dropdown content */
+++.dropdown {
+++  position: relative;
+++  display: inline-block;
+++}
+++
+++/* Dropdown Content (Hidden by Default) */
+++.dropdown-content {
+++  display: none;
+++  position: absolute;
+++  background-color: #d9d9d9;
+++  min-width: 160px;
+++  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+++  z-index: 1;
+++}
+++
+++/* Links inside the dropdown */
+++.dropdown-content a {
+++  color: black;
+++  padding: 12px 16px;
+++  text-decoration: none;
+++  display: block;
+++}
+++
+++/* Change color of dropdown links on hover */
+++.dropdown-content a:hover {background-color: #ddd;}
+++
+++/* Show the dropdown menu on hover */
+++.dropdown:hover .dropdown-content {display: block;}
+++
+++/* Change the background color of the dropdown button when the dropdown content is shown */
+++.dropdown:hover .dropbtn {background-color: #3e8e41;}
++ 
++ title {
++     font-size: 30px;
++ }
+++/* Styling for inventory management page */
+++  .max-width-form {
+++    max-width: 800px;
+++    margin: 0 auto;
+++      padding-top: 40px; ;
+++  }
+++
+++  /* styling for home page */
+++.bg-image {
+++    background-image: "/Users/melanieturner/PycharmProjects/team08spring2023bmgt407/static/images/transparent-background.png"
+++    position: relative;
+++	background-repeat: no-repeat;
+++	background-size: cover;
+++	background-position: center center;
+++}
+++.container {
+++    font-weight: bold;
+++    font-size: 80px;
+++    font-family: 'Open Sans';
+++    padding-top: 30px;
+++    position:relative;
+++    left: 40px;
+++}
+++.slogan {
+++    float: left;
+++    width: 40%;
+++    font-size: 150px;
+++    font-family: 'Open Sans';
+++    padding-top: 75px;
+++    position:relative;
+++    left: 100px;
+++}
+++
+++form input[type="submit"] {
+++  background-color: #69a695;
+++  color: black;
+++  border-radius: 0px;
+++  float: left;
+++  font-size: 16px;
+++}
+++
+++.map {
+++   float: right;
+++    width: 300px;
+++    height: auto;
+++    margin-right: 75px;
+++}
++ 
++ .paddingbetweenelements {
++      padding-bottom: 20px;
++ }
++ 
+++
+++
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_15_23__12_13_PM.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_23__12_13_PM.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_23__12_13_PM.xml
+new file mode 100644
+--- /dev/null	(date 1679017764628)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_23__12_13_PM.xml	(date 1679017764628)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_3_15_23,_12_13_PM" date="1678896845676" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_23,_12_13_PM/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 3/15/23, 12:13 PM" />
++</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_14_23,_4_56_PM/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_14_23,_4_56_PM/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_3_14_23,_4_56_PM/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1678827397736)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_3_14_23,_4_56_PM/shelved.patch	(date 1678827397736)
+@@ -0,0 +1,298 @@
++Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_6_23__8_22_PM.xml
++===================================================================
++diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_6_23__8_22_PM.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_3_6_23__8_22_PM.xml
++deleted file mode 100644
++--- a/.idea/shelf/Uncommitted_changes_before_Update_at_3_6_23__8_22_PM.xml	(revision c460878e8fbe64a7d584a587d1eed87ebefa2c25)
+++++ /dev/null	(revision c460878e8fbe64a7d584a587d1eed87ebefa2c25)
++@@ -1,4 +0,0 @@
++-<changelist name="Uncommitted_changes_before_Update_at_3_6_23,_8_22_PM" date="1678152208029" recycled="true" deleted="true">
++-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_6_23,_8_22_PM/shelved.patch" />
++-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 3/6/23, 8:22 PM" />
++-</changelist>
++\ No newline at end of file
++Index: static/css/style.css
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>/* ATB Blue = #69a695 */\n/* Grey Buttons/Hovers = #d9d9d9 */\n/* Super light grey, almost white background paneling = #f6f6f6 */\n\n/* Font Styling for entire website */\n@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');\n/*navbar*/\nnavbar {\n    display: flex;\n    justify-content: space-between;\n    padding: 20px;\n    background-color: #69a695;\n    color: #fff;\n}\n.navbar-nav a {\n    float: right;\n}\n\nbackground-image {\n    opacity: 0.5;\n}\n\nurl(\"static/images/WelcomePage_BackgroundPhoto.jpeg\") {\nopacity: 0.5;\n}\n\nbody{\n    font-family: 'Open Sauce SemiBold';\n}\n\nh1 {\n    color: black;\n    font-family: 'Open Sauce SemiBold';\n    font-size: 80px;\n}\n\n/*use this to create a division that has centered text*/\n.login-buttons{\n    text-align: center;\n}\n\n\n.text-center{\n    text-align: center;\n\n}\n\n/* button styling */\ninput{\n    background-color: #69a695;\n<<<<<<< HEAD\n=======\n    text-color: white;\n>>>>>>> a0cf96c (This push includes numerous changes:)\n    border-width: 1px;\n    border-color: #545454;\n    border-radius: 5px;\n    padding: 7px;\n    margin: 2px;\n    color: white;\n}\n\n.checkoutButtons{\n    background-color: #69a695;\n    font-family: 'Open Sans';\n    color: white;\n}\n\np {\n    color: black;\n    font-family: 'Open Sauce SemiBold';\n    font-size: 20px;\n\n}\n\n/* Checkout Page Styling */\n\n.checkoutPlaceholder {\n    height: 210px;\n    width: 1200px;\n    background-color: #f6f6f6;\n}\n\ndiv.checkoutItemCoupon{\n    display: block;\n    padding: 20px;\n}\n\ndiv.coupon{\n    display: inline-block;\n}\n\n.formInputFields {\n    background-color: #f6f6f6;\n    padding: 30px 25px 30px 25px;\n}\nh2.checkoutHeader {\n    font-size: 33px;\n    float: left;\n}\n\n<<<<<<< HEAD\n=======\n.navbar {\n    background-color: deepskyblue;\n}\n\n>>>>>>> a0cf96c (This push includes numerous changes:)\n.inputBoxTotal {\n    padding: 20px;\n}\n\n.billingTotals {\n    padding: 30px 25px 30px 25px;\n}\n\n.inputFields {\n    height: 30px;\n    background-color: #f6f6f6;\n    width: auto;\n}\n\n<<<<<<< HEAD\np.formFieldLabels {\n=======\n.formFieldLabels {\n>>>>>>> a0cf96c (This push includes numerous changes:)\n    font-size: 20px;\n    margin: 0px 0px 0px 0px;\n    padding: 0px 0px 0px 0px;\n}\n\np.cartTotalsLabels {\n    font-size: 25px;\n    margin: 0px;\n    padding: 0px;\n}\n\n/*Styling order confirmation page*/\n/*Centering text*/\n.center {\n  margin: auto;\n  width: 50%;\n  border: 3px solid black;\n  padding: 10px;\n}\n/*center image*/\n.centeri {\n            display:block;\n            margin-left: auto;\n            margin-right: auto;\n\n        }\n\ntitle {\n    font-size: 30px;\n}
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/static/css/style.css b/static/css/style.css
++--- a/static/css/style.css	(revision c460878e8fbe64a7d584a587d1eed87ebefa2c25)
+++++ b/static/css/style.css	(date 1678813477019)
++@@ -154,4 +154,5 @@
++ 
++ title {
++     font-size: 30px;
++-}
++\ No newline at end of file
+++}
+++
++Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_6_23,_8_22_PM/shelved.patch
++===================================================================
++diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_6_23,_8_22_PM/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_3_6_23,_8_22_PM/shelved.patch
++deleted file mode 100644
++--- a/.idea/shelf/Uncommitted_changes_before_Update_at_3_6_23,_8_22_PM/shelved.patch	(revision c460878e8fbe64a7d584a587d1eed87ebefa2c25)
+++++ /dev/null	(revision c460878e8fbe64a7d584a587d1eed87ebefa2c25)
++@@ -1,121 +0,0 @@
++-Index: .idea/team08spring2023bmgt407.iml
++-IDEA additional info:
++-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"PYTHON_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\">\n    <content url=\"file://$MODULE_DIR$\" />\n    <orderEntry type=\"inheritedJdk\" />\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n  </component>\n</module>
++-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++-<+>UTF-8
++-===================================================================
++-diff --git a/.idea/team08spring2023bmgt407.iml b/.idea/team08spring2023bmgt407.iml
++---- a/.idea/team08spring2023bmgt407.iml	(revision ba99d5acda4e2ecd496643795113c761bccabbbf)
++-+++ b/.idea/team08spring2023bmgt407.iml	(date 1677805753395)
++-@@ -5,4 +5,12 @@
++-     <orderEntry type="inheritedJdk" />
++-     <orderEntry type="sourceFolder" forTests="false" />
++-   </component>
++-+</module>
++-+<?xml version="1.0" encoding="UTF-8"?>
++-+<module type="PYTHON_MODULE" version="4">
++-+  <component name="NewModuleRootManager">
++-+    <content url="file://$MODULE_DIR$" />
++-+    <orderEntry type="inheritedJdk" />
++-+    <orderEntry type="sourceFolder" forTests="false" />
++-+  </component>
++- </module>
++-\ No newline at end of file
++-Index: .idea/.gitignore
++-IDEA additional info:
++-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++-<+># Default ignored files\n/shelf/\n/workspace.xml\n# Editor-based HTTP Client requests\n/httpRequests/\n# Datasource local storage ignored files\n/dataSources/\n/dataSources.local.xml\n
++-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++-<+>UTF-8
++-===================================================================
++-diff --git a/.idea/.gitignore b/.idea/.gitignore
++---- a/.idea/.gitignore	(revision ba99d5acda4e2ecd496643795113c761bccabbbf)
++-+++ b/.idea/.gitignore	(date 1677805753405)
++-@@ -6,3 +6,11 @@
++- # Datasource local storage ignored files
++- /dataSources/
++- /dataSources.local.xml
++-+# Default ignored files
++-+/shelf/
++-+/workspace.xml
++-+# Editor-based HTTP Client requests
++-+/httpRequests/
++-+# Datasource local storage ignored files
++-+/dataSources/
++-+/dataSources.local.xml
++-Index: .idea/misc.xml
++-IDEA additional info:
++-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.10\" project-jdk-type=\"Python SDK\" />\n</project>
++-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++-<+>UTF-8
++-===================================================================
++-diff --git a/.idea/misc.xml b/.idea/misc.xml
++---- a/.idea/misc.xml	(revision ba99d5acda4e2ecd496643795113c761bccabbbf)
++-+++ b/.idea/misc.xml	(date 1677805753408)
++-@@ -1,3 +1,7 @@
++-+<?xml version="1.0" encoding="UTF-8"?>
++-+<project version="4">
++-+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (helloWorld.)" project-jdk-type="Python SDK" />
++-+</project>
++- <?xml version="1.0" encoding="UTF-8"?>
++- <project version="4">
++-   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10" project-jdk-type="Python SDK" />
++-Index: .idea/modules.xml
++-IDEA additional info:
++-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectModuleManager\">\n    <modules>\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/team08spring2023bmgt407.iml\" filepath=\"$PROJECT_DIR$/.idea/team08spring2023bmgt407.iml\" />\n    </modules>\n  </component>\n</project>
++-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++-<+>UTF-8
++-===================================================================
++-diff --git a/.idea/modules.xml b/.idea/modules.xml
++---- a/.idea/modules.xml	(revision ba99d5acda4e2ecd496643795113c761bccabbbf)
++-+++ b/.idea/modules.xml	(date 1677805753410)
++-@@ -5,4 +5,12 @@
++-       <module fileurl="file://$PROJECT_DIR$/.idea/team08spring2023bmgt407.iml" filepath="$PROJECT_DIR$/.idea/team08spring2023bmgt407.iml" />
++-     </modules>
++-   </component>
++-+</project>
++-+<?xml version="1.0" encoding="UTF-8"?>
++-+<project version="4">
++-+  <component name="ProjectModuleManager">
++-+    <modules>
++-+      <module fileurl="file://$PROJECT_DIR$/.idea/team08spring2023bmgt407.iml" filepath="$PROJECT_DIR$/.idea/team08spring2023bmgt407.iml" />
++-+    </modules>
++-+  </component>
++- </project>
++-\ No newline at end of file
++-Index: Home Page.html
++-IDEA additional info:
++-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++-<+>UTF-8
++-===================================================================
++-diff --git a/Home Page.html b/Home Page.html
++---- a/Home Page.html	(revision ba99d5acda4e2ecd496643795113c761bccabbbf)
++-+++ b/Home Page.html	(date 1677813702034)
++-@@ -1,0 +1,23 @@
++-+<!DOCTYPE html>
++-+
++-+<html lang="en">
++-+<header>
++-+    class="header">
++-+  <a href="#" class="logo">Developer</a>
++-+  <nav class="nav-items">
++-+    <a href="#">Home</a>
++-+    <a href="#">Shop</a>
++-+    <a href="#">About</a>
++-+      <a href="#">Contact Us</a>
++-+  </nav>
++-+</header>
++-+
++-+<main>
++-+  <div class="intro">
++-+    <h1>AROUND THE BLOCK.CO</h1>
++-+    <p>Join the Block Party</p>
++-+    <button>Start Shopping</button>
++-+  </div>
++-+<main>
++-+
++-+</html>
++-\ No newline at end of file
++Index: Home Page.html
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<title>My Website</title>\n\t<style>\n\n        body {\n        background-image: url(\"static/images/transparent-background.png\");\n        height: 100%;\n        background-position: center;\n        background-repeat: no-repeat;\n        background-size: cover;\n        position: relative;\n    }\n\t\t.intro h1 {\n\t\t\tfont-size: 48px;\n\t\t\tfont-weight: bold;\n\t\t\tcolor: black;\n\t\t}\n\t\t.intro p {\n\t\t\tfont-weight: bold;\n\t\t\tfont-size: 24px;\n\t\t}\n\t\t.intro p + p {\n\t\t\tfont-size: 18px;\n\t\t\tfont-weight: normal;\n\t\t}\n\t\t.intro button {\n\t\t\tborder-radius: 0;\n\t\t\tfont-size: 12px;\n\t\t\tpadding: 8px 16px;\n\t\t\tbackground-color: #69a695;\n\t\t}\n\t</style>\n\t<link href=\"/static/CSS/style.css\" rel=\"stylesheet\">\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">\n</head>\n<body>\n <!-- Navbar -->\n            <nav class=\"navbar navbar-expand-lg\" style=\"height: 75px; background-color: #69a695\">\n              <div class=\"container-fluid\">\n                <a class=\"navbar-brand\" href=\"Home Page.html\"><img src=\"static/images/Clear Background Logo.png\" alt=\"Bootstrap\" width=\"30\" height=\"24\"></a>\n                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                  <span class=\"navbar-toggler-icon\"></span>\n                </button>\n                <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n                  <div class=\"navbar-nav\">\n                    <a class=\"nav-link active\" aria-current=\"page\" href=\"Home Page.html\">Home</a>\n                    <a class=\"nav-link\" aria-current=\"page\" href=\"Shop.html\">Shop</a>\n                    <a class=\"nav-link\" href=\"About%20Page.html\">About</a>\n                    <a class=\"nav-link\" href=\"Contact%20Us%20Page.html\">Contact Us</a>\n                    <a class=\"nav-link\" href=\"Log-In-Screen.html\">Log In</a>\n                  </div>\n                </div>\n              </div>\n            </nav>\n\n\t<main>\n\t\t<div class=\"text-center\">\n\t\t\t<h1>AROUND THE BLOCK.CO</h1>\n\t\t\t<p>Join the<br>Block Party</p>\n\t\t\t<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>\n            <form action=\"shop.html\" method=\"post\">\n            <input type=\"submit\" value=\"Start Shopping\">\n\t\t</div>\n\t</main>\n\n<!-- proper spacing for the background photo-->\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n</body>\n</html>\n\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/Home Page.html b/Home Page.html
++--- a/Home Page.html	(revision c460878e8fbe64a7d584a587d1eed87ebefa2c25)
+++++ b/Home Page.html	(date 1678814556259)
++@@ -1,87 +1,52 @@
++ <!DOCTYPE html>
++ <html lang="en">
++-<head>
++-	<title>My Website</title>
++-	<style>
++-
++-        body {
++-        background-image: url("static/images/transparent-background.png");
++-        height: 100%;
++-        background-position: center;
++-        background-repeat: no-repeat;
++-        background-size: cover;
++-        position: relative;
++-    }
++-		.intro h1 {
++-			font-size: 48px;
++-			font-weight: bold;
++-			color: black;
++-		}
++-		.intro p {
++-			font-weight: bold;
++-			font-size: 24px;
++-		}
++-		.intro p + p {
++-			font-size: 18px;
++-			font-weight: normal;
++-		}
++-		.intro button {
++-			border-radius: 0;
++-			font-size: 12px;
++-			padding: 8px 16px;
++-			background-color: #69a695;
++-		}
++-	</style>
++-	<link href="/static/CSS/style.css" rel="stylesheet">
++-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
++-</head>
++-<body>
++- <!-- Navbar -->
++-            <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
++-              <div class="container-fluid">
+++    <head>
+++        <meta charset="UTF-8">
+++        <title>Home Page</title>
+++        <link href="/static/CSS/style.css" rel="stylesheet">
+++        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+++        <style>
+++            /* Style for the background photo */
+++           body {
+++               background-image: url('static/images/transparent-background.png');
+++               background-repeat: no-repeat;
+++               background-position: center;
+++               background-size: cover;
+++               min-height: 100vh;
+++                    }
+++
+++    </style>
+++    </head>
+++    <body>
+++        <!-- Navbar -->
+++        <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
+++            <div class="container-fluid">
++                 <a class="navbar-brand" href="Home Page.html"><img src="static/images/Clear Background Logo.png" alt="Bootstrap" width="30" height="24"></a>
++                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
++-                  <span class="navbar-toggler-icon"></span>
+++                    <span class="navbar-toggler-icon"></span>
++                 </button>
++                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
++-                  <div class="navbar-nav">
++-                    <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
++-                    <a class="nav-link" aria-current="page" href="Shop.html">Shop</a>
++-                    <a class="nav-link" href="About%20Page.html">About</a>
++-                    <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
++-                    <a class="nav-link" href="Log-In-Screen.html">Log In</a>
++-                  </div>
+++                    <div class="navbar-nav">
+++                        <a class="nav-link active" aria-current="page" href="Home Page.html">Home</a>
+++                        <a class="nav-link" aria-current="page" href="Shop.html">Shop</a>
+++                        <a class="nav-link" href="About%20Page.html">About</a>
+++                        <a class="nav-link" href="Contact%20Us%20Page.html">Contact Us</a>
+++                        <a class="nav-link" href="Log-In-Screen.html">Log In</a>
+++                    </div>
++                 </div>
++-              </div>
++-            </nav>
+++            </div>
+++        </nav>
++ 
++-	<main>
++-		<div class="text-center">
++-			<h1>AROUND THE BLOCK.CO</h1>
++-			<p>Join the<br>Block Party</p>
++-			<p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> </br>Maryland</p>
++-            <form action="shop.html" method="post">
++-            <input type="submit" value="Start Shopping">
++-		</div>
++-	</main>
+++        <main>
+++            <div class="text-center intro">
+++                <h1>AROUND THE BLOCK.CO</h1>
+++                <p>Join the<br>Block Party</p>
+++                <p>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park, Maryland</p>
+++                <form action="Shop.html" method="post">
+++                    <input type="submit" value="Start Shopping">
+++                </form>
+++            </div>
+++        </main>
++ 
++-<!-- proper spacing for the background photo-->
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-<br>
++-
++-</body>
+++        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-KRlJGIfW+IS8cWTtI5m5r5/hpvAB+Nyo+8IvSSm
++ </html>
++-
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_3_16_23__3_03_PM.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_3_16_23__3_03_PM.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_3_16_23__3_03_PM.xml
+new file mode 100644
+--- /dev/null	(date 1679017764633)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_3_16_23__3_03_PM.xml	(date 1679017764633)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_3_16_23,_3_03_PM" date="1678993435600" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_16_23,_3_03_PM/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 3/16/23, 3:03 PM" />
++</changelist>
+\ No newline at end of file
