@@ -29,7 +29,9 @@ navbar {
      background: #d9d9d9;
  }
 
-
+label {
+    font-size: 20px;
+}
 
 background-image {
     opacity: 0.5;
@@ -58,11 +60,12 @@ input{
     text-color: white;
 >>>>>>> a0cf96c (This push includes numerous changes:)
     border-width: 1px;
-    border-color: #545454;
+    border-color: black;
     border-radius: 5px;
     padding: 7px;
     margin: 2px;
     color: white;
+    text-color: white;
 }
 
 .checkoutButtons{

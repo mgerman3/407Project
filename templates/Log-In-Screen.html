@@ -27,13 +27,33 @@
 
 <div class="text-center">
     <br>
-        <h2>Welcome!</h2>
+        <h2>Welcome, {'first_name'}!</h2>
     <br>
     <br>
-        <p>View Cart</p>
-        <form action="/CheckOut" method="get">
-            <input type="submit" value="Cart">
-        </form>
+
+    <form action="/Shop" method="get">
+      <div>
+        <input type="submit" value="Start Shopping" />
+      </div>
+    </form>
+
+    <br>
+    <br>
+
+    <form action="/CheckOut" method="get">
+      <div>
+        <input type="submit" value="View Cart" />
+      </div>
+    </form>
+
+    <br>
+
+    <!-- need to change /CheckOut to a link to change info-->
+    <form action="/CheckOut" method="get">
+      <div>
+        <input type="submit" value="Update Profile" />
+      </div>
+    </form>
 
     </div>
 
