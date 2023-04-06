@@ -40,7 +40,7 @@ def GenProduct():
 def Inventory():
     return render_template('Inventory Management.html')
 
-@app.route('/OrderConfim')
+@app.route('/OrderConfirm')
 def OrderConfirm():
     return render_template('Order Confirmation.html')
 
