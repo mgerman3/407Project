@@ -64,6 +64,10 @@ def SignUp():
 def Banner():
     return render_template('Banner.html')
 
+@app.route('/cart')
+def Cart():
+    return render_template('cart.html')
+
 
 if __name__ == '__main__':
     app.run()
