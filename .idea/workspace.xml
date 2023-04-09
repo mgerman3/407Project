@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="updating order confirmation page, adding gray box around text">
-      <change afterPath="$PROJECT_DIR$/static/images/Shop_Crewneck.heic" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/Shop_Long_Sleeve.heic" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/Shop_Quarterzip.heic" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/Shop_Tshirt.heic" afterDir="false" />
+    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="updating shop page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Order Confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Order Confirmation.html" afterDir="false" />
@@ -143,7 +139,7 @@
       <workItem from="1680884410797" duration="650000" />
       <workItem from="1680891442123" duration="1194000" />
       <workItem from="1680893390201" duration="11734000" />
-      <workItem from="1681057028071" duration="6370000" />
+      <workItem from="1681057028071" duration="8043000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling">
       <created>1678819151825</created>
@@ -229,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681057281431</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="updating shop page">
+      <created>1681077398048</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681077398048</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +261,8 @@
     <MESSAGE value="updated on formatting" />
     <MESSAGE value="When we updated our flask the image formatting got messed up. Fixed routes to images." />
     <MESSAGE value="updating order confirmation page, adding gray box around text" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating order confirmation page, adding gray box around text" />
+    <MESSAGE value="updating shop page" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating shop page" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1680984680415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

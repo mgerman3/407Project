@@ -372,10 +372,6 @@ form input[type="submit"] {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #69a695;}
 
-.dropdown-right {
-
-}
-
 /*Box for confirmation page*/
 .box {
     display:block;
