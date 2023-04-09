@@ -219,7 +219,7 @@ text.left {
 /* Dropdown Button */
 .dropbtn {
   background-color: #04AA6D;
-  color: white;
+  color: black;
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -232,10 +232,10 @@ text.left {
 }
 
 /* Dropdown Content (Hidden by Default) */
-.dropdown-content {
+.dropdown-menu {
   display: none;
   position: absolute;
-  background-color: #d9d9d9;
+  background-color: #69a695;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -250,13 +250,20 @@ text.left {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-item:hover {background-color: #69a695;}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+/* allows for hovering over navbar to show the dropdown menu */
+.dropdown:hover .dropdown-menu {display: block;
+    position: absolute;
+    background-color: #69a695;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin: 50px 0px 0px 0px;
+    padding: 0px;
+}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+/* Change the background color of the navbar button when hovering */
+.dropbtn:hover .dropdown-item {color: #69a695;}
 
 title {
     font-size: 30px;
@@ -356,6 +363,7 @@ form input[class="loginInput"] {
   font-size: 16px;
   border-color: #545454;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -389,7 +397,7 @@ form input[class="loginInput"] {
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #69a695;}
+.dropdown-menu:hover .dropbtn {background-color: #69a695;}
 
 /*Box for confirmation page*/
 .box {
