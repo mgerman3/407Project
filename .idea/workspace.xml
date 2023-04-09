@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="When we updated our flask the image formatting got messed up. Fixed routes to images.">
-      <change afterPath="$PROJECT_DIR$/templates/cart.html" afterDir="false" />
+    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="(1) created cart page (2) added cart page to navbar (3) adjusted link on log-in screen to cart">
+      <change afterPath="$PROJECT_DIR$/static/images/cart.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Banner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Log-In-Screen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Log-In-Screen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +68,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.team08spring2023bmgt407">
     <configuration name="team08spring2023bmgt407" type="PythonConfigurationType" factoryName="Python">
@@ -126,7 +128,7 @@
       <workItem from="1680884410797" duration="650000" />
       <workItem from="1680891442123" duration="1194000" />
       <workItem from="1680893390201" duration="11734000" />
-      <workItem from="1681063722829" duration="1303000" />
+      <workItem from="1681063722829" duration="2589000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling">
       <created>1678819151825</created>
@@ -205,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679255727033</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="(1) created cart page (2) added cart page to navbar (3) adjusted link on log-in screen to cart">
+      <created>1681065229415</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681065229415</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,9 +242,10 @@
     <MESSAGE value="continued working on formatting" />
     <MESSAGE value="updated on formatting" />
     <MESSAGE value="When we updated our flask the image formatting got messed up. Fixed routes to images." />
-    <option name="LAST_COMMIT_MESSAGE" value="When we updated our flask the image formatting got messed up. Fixed routes to images." />
+    <MESSAGE value="(1) created cart page (2) added cart page to navbar (3) adjusted link on log-in screen to cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="(1) created cart page (2) added cart page to navbar (3) adjusted link on log-in screen to cart" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681065027059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681066228886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
