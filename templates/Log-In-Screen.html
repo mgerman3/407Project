@@ -19,6 +19,7 @@
  text-center {padding: 9000px 9000px;}
 {% endblock %}
 
+{% block user_navbar %}{% endblock %}
 
 {% block page_content %}
 <!-- Navbar -->
@@ -26,10 +27,7 @@
    {% if form_submitted %}
 
 <div class="text-center">
-    <br>
         <h2>Welcome, {'first_name'}!</h2>
-    <br>
-    <br>
 
     <form action="/Shop" method="get">
       <div>
@@ -37,8 +35,6 @@
       </div>
     </form>
 
-    <br>
-    <br>
 
     <form action="/CheckOut" method="get">
       <div>
@@ -46,12 +42,10 @@
       </div>
     </form>
 
-    <br>
-
     <!-- need to change /CheckOut to a link to change info-->
     <form action="/CheckOut" method="get">
       <div>
-        <input type="submit" value="Update Profile" />
+        <input type="submit" value="Past Orders" />
       </div>
     </form>
 
@@ -60,18 +54,20 @@
 
     {% else %}
 
-    <br>
 <h1>Log-in Below</h1>
 <div class="text-center">
     <form action="/LogIn" method="post">
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
+        <div class="border-box col">
+            <div class="row" style="padding-right: 1px">
+                <input type = "text" class="loginInput" placeholder="Username" required><br>
+                <input type="password" class="loginInput" placeholder="Password" required>
+            </div>
+        </div>
         <input type="submit" value="Log In">
     </form>
     <br>
     <br>
 </div>
-
 
 
 <!--#verify if username and password are correct using html
