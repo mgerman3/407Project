@@ -249,8 +249,6 @@ text.left {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-item:hover {background-color: #69a695;}
 
 /* allows for hovering over navbar to show the dropdown menu */
 .dropdown:hover .dropdown-menu {display: block;
@@ -261,9 +259,6 @@ text.left {
     margin: 50px 0px 0px 0px;
     padding: 0px;
 }
-
-/* Change the background color of the navbar button when hovering */
-.dropbtn:hover .dropdown-item {color: #69a695;}
 
 title {
     font-size: 30px;
