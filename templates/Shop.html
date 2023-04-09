@@ -30,7 +30,7 @@
 <!--Shop page-->
     <div class="container-fluid">
         <!--Image for top of shop page-->
-        <img src="../static/images/ShopPage_TopBanner.jpeg" width="1280" height="200" alt="Around the Block Group Pic">
+        <img src="../static/images/ShopPage_TopBanner.jpeg" width="100%" height="100%" alt="Around the Block Group Pic" class="responsive">
 
     </div>
 <!--filter buttons style, price, color, review-->
@@ -47,7 +47,7 @@
 </div>
 
 <div class="dropdown">
-    <button class="dropbtn">Price</button>
+    <button class="input">Price</button>
     <div class="dropdown-content">
         <a href="#">under $30</a>
         <a href="#">under $50</a>
@@ -56,23 +56,17 @@
 </div>
 
 <div class="dropdown">
-    <button class="dropbtn">Color</button>
+    <button class="dropbtn">Availability</button>
     <div class="dropdown-content">
-        <a href="#">White</a>
-        <a href="#">Red</a>
-        <a href="#">Yellow</a>
-        <a href="#">Green</a>
-        <a href="#">Blue</a>
-        <a href="#">Black</a>
+        <a href="#">In Stock</a>
+        <a href="#">Out of Stock</a>
     </div>
 </div>
 
 <div class="dropdown">
     <button class="dropbtn">Review</button>
     <div class="dropdown-content">
-        <a href="#">5 stars</a>
-        <a href="#">4 stars</a>
-        <a href="#">3 stars</a>
+        <a href="#">High to Low</a>
     </div>
 </div>
 
@@ -86,8 +80,9 @@
     <h1 class="Clothes for you!"><strong>Clothes for you!</strong></h1>
 </div>
 <div class="text-align: left">
-    <img style="margin-left: "
-    <img src="/static/images/Shop_ClothingItem1.png" width="225" height="225" class="margin-left" alt="Around the Block Shirt Pic ">
+    <img style="margin-left:"
+    <img src="/static/images/Shop_ClothingItem1.png" width="225" height="225" class="margin-left" alt="Around the Block Shirt Pic " class="responsive">
+
 </div>
 <div class="row">
     <h6 class="text-align: left">Springtime Vintage Crew $29.99</h6>
@@ -100,7 +95,7 @@
 <!--Add to cart button-->
 <div class="row">
     <div class="text-align:left">
-         <form action="CheckoutPage.html" method="post">
+         <form action="CheckoutPage.html" method="post" style="margin: 10px">
              <input type="submit" value="Add to Cart">
          </form>
     </div>
