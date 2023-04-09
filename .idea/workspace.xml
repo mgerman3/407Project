@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="updated nav bar to have images for login and cart buttons">
+    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="(1) created cart page (2) added cart page to navbar (3) adjusted link on log-in screen to cart">
+      <change afterPath="$PROJECT_DIR$/static/images/cart.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/About Page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/About Page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/CheckoutPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CheckoutPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Contact Us Page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Contact Us Page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/GenericProductPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/GenericProductPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Home Page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home Page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Banner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,26 +44,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -130,8 +128,7 @@
       <workItem from="1680884410797" duration="650000" />
       <workItem from="1680891442123" duration="1194000" />
       <workItem from="1680893390201" duration="11734000" />
-      <workItem from="1681063722829" duration="2902000" />
-      <workItem from="1681078593686" duration="1334000" />
+      <workItem from="1681063722829" duration="2589000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling">
       <created>1678819151825</created>
@@ -217,14 +214,7 @@
       <option name="project" value="LOCAL" />
       <updated>1681065229415</updated>
     </task>
-    <task id="LOCAL-00013" summary="updated nav bar to have images for login and cart buttons">
-      <created>1681066516202</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1681066516202</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,10 +243,9 @@
     <MESSAGE value="updated on formatting" />
     <MESSAGE value="When we updated our flask the image formatting got messed up. Fixed routes to images." />
     <MESSAGE value="(1) created cart page (2) added cart page to navbar (3) adjusted link on log-in screen to cart" />
-    <MESSAGE value="updated nav bar to have images for login and cart buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated nav bar to have images for login and cart buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="(1) created cart page (2) added cart page to navbar (3) adjusted link on log-in screen to cart" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681079875352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681066228886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
