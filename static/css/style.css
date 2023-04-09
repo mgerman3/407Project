@@ -101,6 +101,7 @@ div.coupon{
     display: inline-block;
 }
 
+
 .formInputFields {
     background-color: #f6f6f6;
     padding: 30px 25px 30px 25px;
@@ -154,8 +155,9 @@ border: 0px;
 .inputFields {
     height: 30px;
     background-color: #f6f6f6;
-    border-color: gray;
+    border-color: black;
     width: auto;
+    color: black;
 }
 
 .formFieldsLabels {
@@ -296,10 +298,27 @@ title {
 
 form input[type="submit"] {
   background-color: #69a695;
+  color: white;
+  border-radius: 0px;
+    padding: 10px 15px 10px 15px;
+  font-size: 24px;
+}
+
+br {
+   display: block;
+   margin: 4px;
+}
+
+/* styling for login input boxes */
+form input[class="loginInput"] {
+  background-color: white;
   color: black;
   border-radius: 0px;
-  float: left;
-  font-size: 16px;
+  font-size: 40px;
+    width: 800px;
+    height: 100px;
+    margin: auto;
+  display: block;
 }
 
 .map {
