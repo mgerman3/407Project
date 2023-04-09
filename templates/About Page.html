@@ -9,6 +9,10 @@
         text-align: left;
     }
 
+    img [class="left"] {
+        text-align: left;
+      }
+
 {% endblock %}
 
 {% block page_content %}
@@ -28,7 +32,7 @@
     </div>
 
         <!-- Contact Us Button -->
-        <form action="../Contact%20Us%20Page.html" method="post">
+        <form action="/ContactUs" method="get">
         <input type="submit" value="Contact Us">
 <br>
 <br>
@@ -60,7 +64,7 @@
         <br>
         <h1>Meet Our Team</h1>
         <div style="float: right;">
-        <IMG SRC=../static/images/AboutPage_GabiPersonalPic.png width = 300 height = "300" alt="Gabi Solo Pic" />
+        <img class="left" src="../static/images/AboutPage_GabiPersonalPic.png"  width = "300px" height = "400px" alt="Gabi Solo Pic" />
             </div>
         <h2>Gabi</h2>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -81,7 +85,7 @@
         <br>
         <h2>Joelle</h2>
         <div style="float: right;">
-        <IMG SRC=../static/images/AboutPage_JoellePersonalPic.png width = 300 height = "300" alt="Joelle Solo Pic" />
+        <img src=../static/images/AboutPage_JoellePersonalPic.png width = "400px" height = "300px" alt="Joelle Solo Pic" />
             </div>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua.<br>

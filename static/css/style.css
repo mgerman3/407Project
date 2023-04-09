@@ -365,7 +365,7 @@ form input[class="loginInput"] {
 }
 
 /* Dropdown Content (Hidden by Default) */
-.dropdown-content {
+.dropdown-menu {
   display: none;
   position: absolute;
   background-color: #69a695;
@@ -375,7 +375,7 @@ form input[class="loginInput"] {
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
+.dropdown-menu a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
