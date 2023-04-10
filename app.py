@@ -18,16 +18,19 @@ def About():
 def ContactUsPage():
     return render_template('Contact Us Page.html')
 
-@app.route('/login', methods = ['GET', 'POST'])
+@app.route('/LogIn', methods = ['GET', 'POST'])
 def LogInScreen():
     if request.method == 'POST':
         return render_template('Log-In-Screen.html', form_submitted=True)
     else:
         return render_template('Log-In-Screen.html')
 
-@app.route('/CheckOut')
+@app.route('/CheckOut', methods=['GET', 'POST'])
 def CheckOut():
-    return render_template('CheckoutPage.html')
+    if request.method == 'POST':
+        return render_template('CheckoutPage.html', form_submitted=True)
+    else:
+        return render_template('CheckoutPage.html')
 
 @app.route('/GenericProduct')
 def GenProduct():
@@ -37,7 +40,7 @@ def GenProduct():
 def Inventory():
     return render_template('Inventory Management.html')
 
-@app.route('/OrderConfim')
+@app.route('/OrderConfirm')
 def OrderConfirm():
     return render_template('Order Confirmation.html')
 
@@ -60,6 +63,10 @@ def SignUp():
 @app.route('/banner')
 def Banner():
     return render_template('Banner.html')
+
+@app.route('/cart')
+def Cart():
+    return render_template('cart.html')
 
 
 if __name__ == '__main__':

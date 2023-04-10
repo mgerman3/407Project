@@ -1,62 +1,84 @@
 <!-- Joe Scopelliti -->
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Check Out</title>
-        <link href="/static/CSS/style.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    </head>
-    <body>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg" style="background-color: #69a695">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="../static/images/Clear%20Background%20Logo.png" alt="Bootstrap" width="30" height="24"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="Home%20Page.html">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Shop
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Game Day Collection</a></li>
-                    <li><a class="dropdown-item" href="#">Dark Blue Collection</a></li>
-                    <li><a class="dropdown-item" href="#">Springtime Collection</a></li>
-                    <li><a class="dropdown-item" href="#">Logo Collection</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    About
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Around the Block</a></li>
-                    <li><a class="dropdown-item" href="#">Our Mission</a></li>
-                    <li><a class="dropdown-item" href="#">Meet our Team</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Contact Us
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Request Form</a></li>
-                    <li><a class="dropdown-item" href="#">Reviews</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+{% extends "base.html" %}
 
+{% block title %}Check Out{% endblock %}
+
+{% block page_content %}
+
+        {% if form_submitted %}
+        <div class="row">
+            <div class="checkoutHeader" style="padding: 20px">
+                <h2>Thank you for your order!</h2><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="postFormLabels">
+                <p>Products Ordered:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get(products)}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="postFormLabels">
+                <p>First Name:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get('first_name')}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="postFormLabels">
+                <p>Last Name:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get('last_name')}}</p>
+            </div>
+        </div>
+        <div class="row">
+           <div class="postFormLabels">
+                <p>Address 1:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get('address1')}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="postFormLabels">
+                <p>Address 2:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get('address2')}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="postFormLabels">
+                <p>City:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get('city')}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="postFormLabels">
+                <p>State:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get('state')}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="postFormLabels">
+                <p>Zip code:</p>
+            </div>
+            <div class="postFormLabels">
+                <p>{{ request.form.get('zipcode')}}</p>
+            </div>
+        </div>
+        {% else %}
         <!-- Coupon Code Box & Cart Information -->
+        <form action="{{ url_for('CheckOut') }}" method="post">
         <div class="checkoutItemCoupon" style="padding-left: 24px">
             <div class="row" style="padding-top: 25px;">
                 <h1 class="checkoutHeader"><strong>Checkout</strong></h1>
@@ -76,48 +98,48 @@
         <div class="inputBoxTotal" style="padding-left: 24px">
             <div class="row">
                 <div class="border-box col">
-                    <h2 class="checkoutHeader"><strong>Shipping Address</strong></h2><br><br>
+                    <h2 class="checkoutHeader"><strong>Shipping Address</strong></h2>
                     <form class="formInputFields">
                         <div class = "row">
                             <div class="border-box col">
                                 <div class="row" style="padding-right: 15px">
                                     <p class="formFieldsLabels">First Name <br></p>
-                                    <input type="text" class="inputFields">
+                                    <input type="text" class="inputFields" name="first_name" required>
                                 </div>
                             </div>
                             <div class="border-box col">
                                 <div class="row" style="padding-left: 15px">
                                     <p class="formFieldsLabels">Last Name <br></p>
-                                    <input type="text" class="inputFields"><br><br>
+                                    <input type="text" class="inputFields" name="last_name" required>
                                 </div>
                             </div>
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">Address</p>
-                            <input type="text" class="inputFields"><br><br>
+                            <input type="text" class="inputFields" name="address1" required>
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">Address</p>
-                            <input type="text" class="inputFields"><br><br>
+                            <input type="text" class="inputFields" name="address2">
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">City</p>
-                            <input type="text" class="inputFields"><br><br>
+                            <input type="text" class="inputFields" name="city" required>
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">State</p>
-                            <input type="text" class="inputFields"><br><br>
+                            <input type="text" class="inputFields" name="state" required>
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">Zip Code</p>
-                            <input type="text" class="inputFields"><br><br>
+                            <input type="text" class="inputFields" name="zipcode" required>
                         </div>
                     </form>
                 </div>
 
                 <!-- Cart Pricing Information -->
                 <div class="border-box col">
-                    <h2 class="checkoutHeader"><strong>Cart Totals</strong></h2><br><br>
+                    <h2 class="checkoutHeader"><strong>Cart Totals</strong></h2>
                     <div class="billingTotals">
                         <div class="row">
                             <p class="cartTotalsLabels">Subtotal -</p><hr>
@@ -159,9 +181,8 @@
         </div>
 
         <!-- Button for Place Order -->
-        <form action="CheckoutPage.html" method="post">
             <input type="submit" value="Place Order" class="checkoutButtons" style="float: right; margin: 20px; padding: 7px 75px 7px 75px;">
         </form>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    </body>
-</html>
+        {% endif %}
+
+{% endblock %}

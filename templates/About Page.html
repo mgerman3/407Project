@@ -1,37 +1,31 @@
 <!-- Luke Bennett -->
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>About</title>
-        <link href="/static/CSS/style.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    </head>
-    <body>
-<!-- Navbar -->
-  <nav class="navbar navbar-expand-lg" style="height: 75px; background-color: #69a695">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="/Home"><img src="../static/images/Clear%20Background%20Logo.png" alt="Bootstrap" width="30" height="24"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    <a class="nav-link" aria-current="page" href="/Shop">Shop</a>
-                    <a class="nav-link" href="../About">About</a>
-                    <a class="nav-link" href="../ContactUs">Contact Us</a>
-                    <a class="nav-link" href="/LogIn">Log In</a>
-                  </div>
-                </div>
-              </div>
-            </nav>
+{% extends "base.html" %}
 
-<main>
+{% block title %}About{% endblock %}
+
+{% block html_style %}
+    p {
+        text-align: left;
+    }
+
+    img [class="left"] {
+        text-align: left;
+      }
+
+{% endblock %}
+
+{% block page_content %}
+ <style>
+    body {
+      margin: 20px;
+    }
+  </style>
     <!-- About Section -->
-    <div>
-        <IMG SRC=../static/images/AboutPage_TopPhoto.png width = 300 height = "300" alt="Co Founders Hugging" align="right"/>
+    <main>
+
+    <div class="container">
+        <img src="../static/images/AboutPage_TopPhoto.png" width="300" height="300" alt="Co Founders Hugging" style="float: right">
         <h1> Around the Block </h1>
         <p>"Around the Block" is a unique apparel company co-founded
         by Gabi McLaughlin and Joelle Anselmo, two seniors at the University of Maryland.
@@ -40,40 +34,38 @@
         We saw an opportunity to showcase the character and charm of the area through fashion and decided to bring their vision to life in October of 2022.</p>
 
         <p>Have an idea? Want to see something new?</p>
+    </div>
 
         <!-- Contact Us Button -->
-        <form action="../Contact%20Us%20Page.html" method="post">
+        <form action="/ContactUs" method="get">
         <input type="submit" value="Contact Us">
-
-    </div>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
 <br>
     <!-- Mission Section -->
-    <div>
-        <h1>Our Mission</h1>
-        <IMG SRC=../static/images/AboutPage_OurMission_GroupPic.JPG width = 300 height = "300" alt="Around the Block Group Shot" align="right" />
-        <p>Instead of using new clothing items, we source our materials exclusively
-    from local thrift stores, making each piece of clothing sold truly one-of-a-kind.
-    Our commitment to sustainability and reducing waste is evident in the decision to use
-    repurposed garments, ensuring that each item carries its own story and character.</p>
+    <div class="container">
+        <img src="../static/images/AboutPage_OurMission_GroupPic.JPG" width="300" height="300" alt="Around the Block Group Shot" style="float: right">
+             <h1> Our Mission </h1>
+         <p>In addition to our environmentally conscious practices, we are dedicated to giving back to the community. Around the Block donates 10% of our profits to Sloan Kettering Cancer Research Foundation in New York City, making a positive impact in the fight against cancer.</p>
+          <p>With each purchase from "Around the Block", customers can not only show their love for College Park, but also support cancer research efforts and contribute to a noble cause.</p>
+</div>
 
-        <p>In addition to our environmentally conscious practices, we are dedicated to giving back to the community.
-    Around the Block donates 10% of our profits to Sloan Kettering Cancer Research Foundation in New York City,
-    making a positive impact in the fight against cancer</p>
-
-        <p>With each purchase from "Around the Block", customers can not only show their love for College Park,
-    but also support cancer research efforts and contribute to a noble cause.</p>
-    </div>
-
-    <br>
+<br>
+<br>
+<br>
+<br>
     <!-- Meet The Team Section -->
     <div>
         <br>
         <br>
         <h1>Meet Our Team</h1>
-        <IMG SRC=../static/images/AboutPage_GabiPersonalPic.png width = 300 height = "300" alt="Gabi Solo Pic" align="right" />
+        <div style="float: right;">
+        <img class="left" src="../static/images/AboutPage_GabiPersonalPic.png"  width = "300px" height = "300px" alt="Gabi Solo Pic" />
+            </div>
         <h2>Gabi</h2>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua.<br>
@@ -91,13 +83,17 @@
         <br>
         <br>
         <br>
+        <br>
+        <br>
         <h2>Joelle</h2>
-        <IMG SRC=../static/images/AboutPage_JoellePersonalPic.png width = 300 height = "300" alt="Joelle Solo Pic" align="right" />
+        <div style="float: right;">
+        <img src=../static/images/AboutPage_JoellePersonalPic.png width = "300px" height = "300px" alt="Joelle Solo Pic" />
+            </div>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua.<br>
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat.<br>
             Duis aute irure dolor in reprehenderit in voluptate velit a </p>
     </div>
-    </body>
-</html>
+</main>
+{% endblock %}
