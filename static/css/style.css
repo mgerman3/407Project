@@ -229,6 +229,7 @@ text.left {
 .dropdown {
   position: relative;
   display: inline-block;
+    font-size: 20px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -259,6 +260,18 @@ text.left {
     margin: 50px 0px 0px 0px;
     padding: 0px;
 }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #69a695;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    font-size: 20px;
+}
+
+
 
 title {
     font-size: 30px;
@@ -299,6 +312,14 @@ title {
 }
 
 form input[type="submit"] {
+  background-color: #69a695;
+  color: white;
+  border-radius: 0px;
+    padding: 10px 15px 10px 15px;
+  font-size: 24px;
+}
+
+dropdown button {
   background-color: #69a695;
   color: white;
   border-radius: 0px;
