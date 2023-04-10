@@ -28,7 +28,8 @@ def LogInScreen():
 @app.route('/CheckOut', methods=['GET', 'POST'])
 def CheckOut():
     if request.method == 'POST':
-        return render_template('CheckoutPage.html', form_submitted=True)
+        # return render_template('CheckoutPage.html', form_submitted=True)
+        return render_template('Order Confirmation.html')
     else:
         return render_template('CheckoutPage.html')
 

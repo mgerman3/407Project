@@ -10,12 +10,12 @@
 
 {% block page_content %}
 <!--Shop page-->
-    <div class="container">
-    <div class="centerimage">
+<div class="row">
+    <div class="center-image">
         <!--Image for top of shop page-->
         <img src="../static/images/ShopPage_TopBanner.jpeg" width="100%" height="100%" alt="Around the Block Group Pic" class="responsive">
     </div>
-    </div>
+</div>
 
 <!--header-->
 <div class="row" style="padding-left: 5px">
@@ -23,7 +23,7 @@
 </div>
 
 <!--filter buttons-->
-
+<div class="row">
 <div class="inline" style="10px">
 <div class="dropdown">
     <button class="input">Price</button>
@@ -48,8 +48,9 @@
         <a href="#">High to Low</a>
     </div>
 </div>
-</div>
 
+</div>
+</div>
 
 <br>
 
@@ -78,8 +79,8 @@
 <!--products-->
 <div class="row">
     <div class="col-5">
-            <img src="/static/images/Shop_ClothingItem1.png" width="225" height="225" style="padding-left: 25px" alt="ATB Crewneck" class="responsive">
-            <h4>Crewneck</h4>
+            <img src="/static/images/Shop_ClothingItem1.png" width="230" height="230" style="padding-left: 25px" alt="ATB Crewneck" class="responsive">
+            <h3>Crewneck</h3>
             <p>$42.00 USD</p>
             <form action="/cart" method="post" style="">
                 <input type="submit" value="Add to Cart">
@@ -88,7 +89,7 @@
 
     <div class="col-5">
     <img src="/static/images/Shop_ClothingItem1.png" width="230" height="230" style="padding-left: 25px" alt="ATB Crewneck" class="responsive">
-        <h4>Long Sleeve</h4>
+        <h3>Long Sleeve</h3>
         <p>$36.00 USD</p>
         <form action="/cart" method="post" style="">
             <input type="submit" value="Add to Cart">
@@ -97,7 +98,7 @@
 
         <div class="col-5">
             <img src="/static/images/Shop_ClothingItem1.png" width="230" height="230" style="padding-left: 25px" alt="ATB Crewneck" class="responsive">
-            <h4>Quarter Zip</h4>
+            <h3>Quarter Zip</h3>
             <p>$45.00 USD</p>
             <form action="/cart" method="post" style="">
                 <input type="submit" value="Add to Cart">
@@ -106,7 +107,7 @@
 
         <div class="col-5">
             <img src="/static/images/Shop_ClothingItem1.png" width="230" height="230" style="padding-left: 25px" alt="ATB Crewneck" class="responsive">
-            <h4>Original Tee</h4>
+            <h3>Original Tee</h3>
             <p>$28.00 USD</p>
             <form action="/cart" method="post" style="">
                 <input type="submit" value="Add to Cart">
@@ -115,7 +116,7 @@
 
         <div class="col-5">
             <img src="/static/images/Shop_ClothingItem1.png" width="230" height="230" style="padding-left: 25px" alt="ATB Crewneck" class="responsive">
-            <h4>T-Shirt</h4>
+            <h3>T-Shirt</h3>
             <p>$28.00 USD</p>
             <form action="/cart" method="post" style="">
                 <input type="submit" value="Add to Cart">
