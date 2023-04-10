@@ -490,6 +490,16 @@ select:focus{
     box-sizing: border-box;
 }
 
+h3.shopLabels {
+    padding: 0px 0px 0px 25px;
+
+}
+
+p.shopLabels {
+    padding: 0px 0px 0px 25px;
+
+}
+
 .containera{
     max-width: 1300px;
     margin: auto;
