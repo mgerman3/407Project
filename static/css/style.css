@@ -107,6 +107,10 @@ div.coupon{
     padding: 30px 25px 30px 25px;
 }
 
+shippingEntry {
+   background-color: #f6f6f6;
+}
+
 .formInputFieldsNoBackground {
     padding-left: 20px;
 }
