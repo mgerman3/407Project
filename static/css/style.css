@@ -294,26 +294,31 @@ title {
     font-weight: bold;
     font-size: 80px;
     font-family: 'Open Sans';
-    padding-top: 30px;
-    position:relative;
-    left: 40px;
+    position:absolute;
+    left: 50px;
+    top: 100px;
 }
 .slogan {
     float: left;
     width: 40%;
     font-size: 150px;
     font-family: 'Open Sans';
-    padding-top: 75px;
-    position:relative;
+    position:absolute;
     left: 100px;
+    top: 200px;
 }
 
 form input[type="submit"] {
   background-color: #69a695;
   color: white;
   border-radius: 0px;
-    padding: 10px 15px 10px 15px;
-  font-size: 24px;
+  font-size: 16px;
+}
+
+form input[type="submit"] {
+    position: absolute;
+    left: 100px;
+    top: 350px;
 }
 
 dropdown button {
@@ -342,10 +347,11 @@ form input[class="loginInput"] {
 }
 
 .map {
-   position: absolute;
+    position: absolute;
+    float: right;
     width: 400px;
-    top: 100px;
-    right: 300px;
+    top: 150px;
+    right: 50px;
     border: 10px solid #69a695;
 }
 
@@ -506,4 +512,21 @@ select:focus{
 .img fit {
     max-width:100%;
     padding:50px 0;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 450px;
+  left: 100px;
+}
+
+.image-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
