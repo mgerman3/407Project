@@ -40,7 +40,7 @@ def GenProduct():
 def Inventory():
     return render_template('Inventory Management.html')
 
-@app.route('/OrderConfim')
+@app.route('/OrderConfirm')
 def OrderConfirm():
     return render_template('Order Confirmation.html')
 
@@ -63,6 +63,10 @@ def SignUp():
 @app.route('/banner')
 def Banner():
     return render_template('Banner.html')
+
+@app.route('/cart')
+def Cart():
+    return render_template('cart.html')
 
 
 if __name__ == '__main__':
