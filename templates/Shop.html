@@ -10,13 +10,13 @@
 
 {% block page_content %}
 <!--Shop page-->
-    <div class="container-fluid">
+    <div class="containera">
         <!--Image for top of shop page-->
         <img src="../static/images/ShopPage_TopBanner.jpeg" width="100%" height="100%" alt="Around the Block Group Pic" class="responsive">
 
     </div>
 
-<!--filter buttons for shop page-->
+<!--old filter buttons
 <div class="inline" style="10px">
 <div class="dropdown">
     <button class="input">Price</button>
@@ -43,16 +43,102 @@
 </div>
 </div>
 
-<!--Spacing-->
-<br>
 
-<!--Heading - Clothes for you! -->
+<br>
+-->
+
+<!--Heading - Clothes for you!
 <div class="row" style="padding-left: 5px">
     <h1 class="Clothes for you!"><strong>Clothes for you!</strong></h1>
 </div>
+-->
+
+<!--New-->
+<div class="container">
+<div class="inline">
+    <div class="row">
+    <h1 class="title">All Products</h1>
+    <select>
+        <option>Sort by</option>
+        <option>Sort by Price</option>
+        <option>Sort by Availability</option>
+        <option>Sort by Review</option>
+    </select>
+    </div>
+    </div>
+</div>
+
+<!--products-->
+<div class="row">
+    <div class="col-5">
+            <img src="/static/images/Shop_ClothingItem1.png" width="225" height="225" style="padding-left: 25px" alt="ATB Crewneck" class="responsive">
+            <h4>Crewneck</h4>
+            <p>$42.00 USD</p>
+            <form action="/cart" method="post" style="">
+                <input type="submit" value="Add to Cart">
+            </form>
+    </div>
+
+    <div class="col-5">
+    <img src="/static/images/Shop_ClothingItem1.png" width="230" height="230" style="padding-left: 25px" alt="ATB Crewneck" class="responsive">
+        <h4>Long Sleeve</h4>
+        <p>$36.00 USD</p>
+        <form action="/cart" method="post" style="">
+            <input type="submit" value="Add to Cart">
+        </form>
+    </div>
+
+        <div class="col-5">
+            <img src="/static/images/Shop_ClothingItem1.png" width="230" height="230" style="padding-left: 25px" alt="ATB Crewneck" class="responsive">
+            <h4>Quarter Zip</h4>
+            <p>$45.00 USD</p>
+            <form action="/cart" method="post" style="">
+                <input type="submit" value="Add to Cart">
+            </form>
+        </div>
+
+        <div class="col-5">
+            <img src="/static/images/Shop_ClothingItem1.png" width="230" height="230" style="padding-left: 25px" alt="ATB Crewneck" class="responsive">
+            <h4>Original Tee</h4>
+            <p>$28.00 USD</p>
+            <form action="/cart" method="post" style="">
+                <input type="submit" value="Add to Cart">
+            </form>
+        </div>
+
+        <div class="col-5">
+            <img src="/static/images/Shop_ClothingItem1.png" width="230" height="230" style="padding-left: 25px" alt="ATB Crewneck" class="responsive">
+            <h4>T-Shirt</h4>
+            <p>$28.00 USD</p>
+            <form action="/cart" method="post" style="">
+                <input type="submit" value="Add to Cart">
+            </form>
+        </div>
+</div>
 
 
-<!--Product images-->
+
+<!--page numbers
+    <div class="page-btn">
+        <span>1</span>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <img src="/static/images/Shop_ClothingItem1.png" width="230" height="230" style="padding-left: 25px" alt="ATB Crewneck" class="responsive">
+            <h4>T-Shirt</h4>
+            <p>$28.00 USD</p>
+            <form action="/cart" method="post" style="">
+                <input type="submit" value="Add to Cart">
+            </form>
+        </div>
+    </div>
+</div>
+-->
+
+<!--
 <div class="inline">
     <div class="text-align: left">
         <img src="/static/images/Shop_ClothingItem1.png" width="225" height="225" style="padding-left: 25px" alt="ATB Crewneck" class="responsive">
@@ -63,8 +149,8 @@
 
     </div>
 </div>
-
-<!--Product names-->
+-->
+<!--Product names
 <div class="inline">
     <div class="spacingHeader">
         <h6 class="text-align: left">Crewneck $42.00 USD</h6>
@@ -73,11 +159,11 @@
         <h6 class="text-align: left">Original Tee $28.00 USD</h6>
         <h6 class="text-align: left">T-Shirt $28.00 USD</h6>
 </div>
-
+-->
 <!--Product prices-->
 
 
-<!--Add to cart button-->
+<!--Add to cart button
 <div class="inline">
     <div class="row">
         <div class="spacingHeader">
@@ -92,6 +178,7 @@
         </div>
     </div>
 </div>
+-->
 {% endblock %}
 
 
