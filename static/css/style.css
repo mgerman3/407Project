@@ -53,7 +53,7 @@ opacity: 0.5;
 }
 
 /* button styling */
-input{
+.input{
     background-color: #69a695;
     text-color: white;
     border-width: 1px;
@@ -191,15 +191,8 @@ h2.left {
     text-align:left;
 }
 
-.centerimage {
-     display: block;
-     margin-left: 25px;
-     margin-right: 25px;
-    width:100%;
-}
-
 p {
-    text-align: center;
+    text-align: left;
 }
 
 text.left {
@@ -217,7 +210,6 @@ text.left {
             display:block;
             margin-left: auto;
             margin-right: auto;
-
         }
 
 /*Filter shop button styling*/
