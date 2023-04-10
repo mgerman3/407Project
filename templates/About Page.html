@@ -16,11 +16,16 @@
 {% endblock %}
 
 {% block page_content %}
-
+ <style>
+    body {
+      margin: 20px;
+    }
+  </style>
     <!-- About Section -->
-    <div style="float: right;">
-  <img src="../static/images/AboutPage_TopPhoto.png" width="300" height="300" alt="Co Founders Hugging">
-    </div>
+    <main>
+
+    <div class="container">
+        <img src="../static/images/AboutPage_TopPhoto.png" width="300" height="300" alt="Co Founders Hugging" style="float: right">
         <h1> Around the Block </h1>
         <p>"Around the Block" is a unique apparel company co-founded
         by Gabi McLaughlin and Joelle Anselmo, two seniors at the University of Maryland.
@@ -38,33 +43,28 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
     <!-- Mission Section -->
-    <div>
-        <h1>Our Mission</h1>
-        <div style="float: right;">
-        <IMG SRC=../static/images/AboutPage_OurMission_GroupPic.JPG width = 300 height = "300" alt="Around the Block Group Shot">
-            </div>
-        <p>Instead of using new clothing items, we source our materials exclusively
-    from local thrift stores, making each piece of clothing sold truly one-of-a-kind.
-    Our commitment to sustainability and reducing waste is evident in the decision to use
-    repurposed garments, ensuring that each item carries its own story and character.</p>
+    <div class="container">
+        <img src="../static/images/AboutPage_OurMission_GroupPic.JPG" width="300" height="300" alt="Around the Block Group Shot" style="float: right">
+             <h1> Our Mission </h1>
+         <p>In addition to our environmentally conscious practices, we are dedicated to giving back to the community. Around the Block donates 10% of our profits to Sloan Kettering Cancer Research Foundation in New York City, making a positive impact in the fight against cancer.</p>
+          <p>With each purchase from "Around the Block", customers can not only show their love for College Park, but also support cancer research efforts and contribute to a noble cause.</p>
+</div>
 
-        <p>In addition to our environmentally conscious practices, we are dedicated to giving back to the community.
-    Around the Block donates 10% of our profits to Sloan Kettering Cancer Research Foundation in New York City,
-    making a positive impact in the fight against cancer</p>
-
-        <p>With each purchase from "Around the Block", customers can not only show their love for College Park,
-    but also support cancer research efforts and contribute to a noble cause.</p>
-    </div>
-
-    <br>
+<br>
+<br>
+<br>
+<br>
     <!-- Meet The Team Section -->
     <div>
         <br>
         <br>
         <h1>Meet Our Team</h1>
         <div style="float: right;">
-        <img class="left" src="../static/images/AboutPage_GabiPersonalPic.png"  width = "300px" height = "400px" alt="Gabi Solo Pic" />
+        <img class="left" src="../static/images/AboutPage_GabiPersonalPic.png"  width = "300px" height = "300px" alt="Gabi Solo Pic" />
             </div>
         <h2>Gabi</h2>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -83,9 +83,11 @@
         <br>
         <br>
         <br>
+        <br>
+        <br>
         <h2>Joelle</h2>
         <div style="float: right;">
-        <img src=../static/images/AboutPage_JoellePersonalPic.png width = "400px" height = "300px" alt="Joelle Solo Pic" />
+        <img src=../static/images/AboutPage_JoellePersonalPic.png width = "300px" height = "300px" alt="Joelle Solo Pic" />
             </div>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua.<br>
@@ -93,5 +95,5 @@
             nisi ut aliquip ex ea commodo consequat.<br>
             Duis aute irure dolor in reprehenderit in voluptate velit a </p>
     </div>
-
+</main>
 {% endblock %}
