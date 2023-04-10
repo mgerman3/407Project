@@ -1,0 +1,664 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b07f119a-e867-4f5e-9a38-dc4f2ee5ec30\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/static/css/style.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/static/css/style.css\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"HTML File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2N3dhsCNzjT1uwD9MOMTkEk9dnu\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  },\n  &quot;keyToStringList&quot;: {\n    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [\n      &quot;directory&quot;,\n      &quot;module&quot;,\n      &quot;repository&quot;\n    ]\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"b07f119a-e867-4f5e-9a38-dc4f2ee5ec30\" name=\"Changes\" comment=\"\" />\n      <created>1678811835939</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1678811835939</updated>\n      <workItem from=\"1678811839462\" duration=\"8376000\" />\n      <workItem from=\"1678896822647\" duration=\"4435000\" />\n      <workItem from=\"1678914086423\" duration=\"6235000\" />\n      <workItem from=\"1678995726298\" duration=\"5579000\" />\n      <workItem from=\"1679017763874\" duration=\"4939000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling\">\n      <created>1678819151825</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678819151825</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Added an inventory input table &#10;need to fill in values and add styling for table&#10;need to fix formatting of the buttons\">\n      <created>1678827389300</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678827389300</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Updated the form to input inventory.\">\n      <created>1678897417944</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678897417944</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Added header, put input form and table into containers\">\n      <created>1678898593881</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678898593881</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Updated navbar per Joe's changes.\">\n      <created>1678899543333</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678899543333</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Updated navbar per Joe's changes.\">\n      <created>1678899551737</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678899551737</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Changed the homepage to replicate a different screen. working on getting button to correct position, making fonts the ideal sizes, and will put in a slider of images below start shopping button\">\n      <created>1678918957733</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678918957733</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"added carousel templated\">\n      <created>1678995356846</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678995356846</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"continued working on formatting\">\n      <created>1679003779224</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1679003779224</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"updated on formatting\">\n      <created>1679020804790</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1679020804790</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"When we updated our flask the image formatting got messed up. Fixed routes to images.\">\n      <created>1679255727033</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1679255727033</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"12\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling\" />\n    <MESSAGE value=\"Added an inventory input table &#10;need to fill in values and add styling for table&#10;need to fix formatting of the buttons\" />\n    <MESSAGE value=\"Updated the form to input inventory.\" />\n    <MESSAGE value=\"Added header, put input form and table into containers\" />\n    <MESSAGE value=\"Updated navbar per Joe's changes.\" />\n    <MESSAGE value=\"Changed the homepage to replicate a different screen. working on getting button to correct position, making fonts the ideal sizes, and will put in a slider of images below start shopping button\" />\n    <MESSAGE value=\"added carousel templated\" />\n    <MESSAGE value=\"continued working on formatting\" />\n    <MESSAGE value=\"updated on formatting\" />\n    <MESSAGE value=\"When we updated our flask the image formatting got messed up. Fixed routes to images.\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"When we updated our flask the image formatting got messed up. Fixed routes to images.\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 83eb1f755495afab92b42a8537d6459ed10f64a7)
++++ b/.idea/workspace.xml	(date 1680807057131)
+@@ -54,6 +54,23 @@
+       <recent name="$PROJECT_DIR$" />
+     </key>
+   </component>
++  <component name="RunManager">
++    <configuration name="team08spring2023bmgt407" type="Python.FlaskServer">
++      <module name="team08spring2023bmgt407" />
++      <option name="target" value="$PROJECT_DIR$/app.py" />
++      <option name="targetType" value="PATH" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="" />
++      <option name="IS_MODULE_SDK" value="false" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
++      <option name="launchJavascriptDebuger" value="false" />
++      <method v="2" />
++    </configuration>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -67,6 +84,8 @@
+       <workItem from="1678914086423" duration="6235000" />
+       <workItem from="1678995726298" duration="5579000" />
+       <workItem from="1679017763874" duration="4939000" />
++      <workItem from="1680562370420" duration="93000" />
++      <workItem from="1680798455513" duration="687000" />
+     </task>
+     <task id="LOCAL-00001" summary="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling">
+       <created>1678819151825</created>
+@@ -175,4 +194,8 @@
+     <MESSAGE value="When we updated our flask the image formatting got messed up. Fixed routes to images." />
+     <option name="LAST_COMMIT_MESSAGE" value="When we updated our flask the image formatting got messed up. Fixed routes to images." />
+   </component>
++  <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$Flask.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1680559819406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
++    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1680798458149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: static/css/style.css
+===================================================================
+diff --git a/static/css/style.css b/static/css/style.css
+deleted file mode 100644
+--- a/static/css/style.css	(revision 83eb1f755495afab92b42a8537d6459ed10f64a7)
++++ /dev/null	(revision 83eb1f755495afab92b42a8537d6459ed10f64a7)
+@@ -1,297 +0,0 @@
+-/* ATB Blue = #69a695 */
+-/* Grey Buttons/Hovers = #d9d9d9 */
+-/* Super light grey, almost white background paneling = #f6f6f6 */
+-
+-/* Font Styling for entire website */
+-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+-
+-html body p {
+-    font-family: "Open Sans";
+-}
+-
+-h1 {
+-    font-: 100px;
+-}
+-/*navbar*/
+-navbar {
+-    display: flex;
+-    justify-content: space-between;
+-    padding: 20px;
+-    background-color: #69a695;
+-    color: #fff;
+-}
+-.navbar-nav a {
+-    float: right;
+-}
+-
+-/* allows for hovering over the navbar*/
+-.navbar-nav li a:hover {
+-     background: #d9d9d9;
+- }
+-
+-
+-background-image {
+-    opacity: 0.5;
+-}
+-
+-url("static/images/WelcomePage_BackgroundPhoto.jpeg") {
+-opacity: 0.5;
+-}
+-
+-/*use this to create a division that has centered text*/
+-.login-buttons{
+-    text-align: center;
+-}
+-
+-
+-.text-center{
+-    text-align: center;
+-
+-}
+-
+-/* button styling */
+-input{
+-    background-color: #69a695;
+-<<<<<<< HEAD
+-=======
+-    text-color: white;
+->>>>>>> a0cf96c (This push includes numerous changes:)
+-    border-width: 1px;
+-    border-color: #545454;
+-    border-radius: 5px;
+-    padding: 7px;
+-    margin: 2px;
+-    color: white;
+-}
+-
+-.checkoutButtons{
+-    background-color: #69a695;
+-    font-family: 'Open Sans';
+-    color: white;
+-}
+-
+-p {
+-    color: black;
+-    font-family: 'Open Sauce SemiBold';
+-    font-size: 20px;
+-
+-}
+-
+-/* Checkout Page Styling */
+-
+-.checkoutPlaceholder {
+-    height: 210px;
+-    width: 1200px;
+-    background-color: #f6f6f6;
+-    padding: 0px 0px 0px 0px;
+-}
+-
+-div.checkoutItemCoupon{
+-    display: block;
+-    padding: 20px;
+-}
+-
+-div.coupon{
+-    display: inline-block;
+-}
+-
+-.formInputFields {
+-    background-color: #f6f6f6;
+-    padding: 30px 25px 30px 25px;
+-}
+-
+-.formInputFieldsNoBackground {
+-    padding-left: 20px;
+-}
+-
+-.checkoutHeader {
+-    font-size: 33px;
+-    float: left;
+-}
+-
+-.sectionBreaker {
+-    padding-top: 40px;
+-}
+-
+-.customerReviewSection {
+-    background-color: #f6f6f6;
+-    width: 100%;
+-}
+-
+-img {
+-margin: 0px;
+-padding: 0px;
+-border: 0px;
+-}
+-
+-.reviewHeader {
+-    font-size: 33px;
+-    padding-left: 20px;
+-}
+-
+-
+-<<<<<<< HEAD
+-=======
+-.navbar {
+-    background-color: deepskyblue;
+-}
+-
+->>>>>>> a0cf96c (This push includes numerous changes:)
+-.inputBoxTotal {
+-    padding: 20px;
+-}
+-
+-.billingTotals {
+-    padding: 30px 25px 30px 25px;
+-}
+-
+-.inputFields {
+-    height: 30px;
+-    background-color: #f6f6f6;
+-    border-color: gray;
+-    width: auto;
+-}
+-
+-.formFieldsLabels {
+-    font-size: 20px;
+-    margin: 0px;
+-    padding: 0px;
+-}
+-
+-p.cartTotalsLabels {
+-    font-size: 25px;
+-    margin: 0px;
+-    padding: 0px 0px 20px 0px;
+-}
+-
+-hr {
+-    margin: 0px;
+-}
+-
+-/*Styling order confirmation page*/
+-/*Centering text*/
+-.center {
+-  margin: auto;
+-  width: 50%;
+-  border: 3px solid black;
+-  padding: 10px;
+-}
+-/*center image*/
+-.center-image {
+-            display:block;
+-            margin-left: auto;
+-            margin-right: auto;
+-
+-        }
+-
+-/*Filter shop button styling*/
+-/* Dropdown Button */
+-.dropbtn {
+-  background-color: #04AA6D;
+-  color: white;
+-  padding: 16px;
+-  font-size: 16px;
+-  border: none;
+-}
+-
+-/* The container <div> - needed to position the dropdown content */
+-.dropdown {
+-  position: relative;
+-  display: inline-block;
+-}
+-
+-/* Dropdown Content (Hidden by Default) */
+-.dropdown-content {
+-  display: none;
+-  position: absolute;
+-  background-color: #d9d9d9;
+-  min-width: 160px;
+-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+-  z-index: 1;
+-}
+-
+-/* Links inside the dropdown */
+-.dropdown-content a {
+-  color: black;
+-  padding: 12px 16px;
+-  text-decoration: none;
+-  display: block;
+-}
+-
+-/* Change color of dropdown links on hover */
+-.dropdown-content a:hover {background-color: #ddd;}
+-
+-/* Show the dropdown menu on hover */
+-.dropdown:hover .dropdown-content {display: block;}
+-
+-/* Change the background color of the dropdown button when the dropdown content is shown */
+-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+-
+-title {
+-    font-size: 30px;
+-}
+-/* Styling for inventory management page */
+-  .max-width-form {
+-    max-width: 800px;
+-    margin: 0 auto;
+-      padding-top: 40px; ;
+-  }
+-
+-  /* styling for home page */
+-.bg-image {
+-    position: fixed;
+-    top: 0;
+-    left: 0;
+-    width: 100%;
+-    height: 100%;
+-    z-index: -1;
+-    opacity: 0.5;
+-}
+-.container {
+-    font-weight: bold;
+-    font-size: 80px;
+-    font-family: 'Open Sans';
+-    padding-top: 30px;
+-    position:relative;
+-    left: 40px;
+-}
+-.slogan {
+-    float: left;
+-    width: 40%;
+-    font-size: 150px;
+-    font-family: 'Open Sans';
+-    padding-top: 75px;
+-    position:relative;
+-    left: 100px;
+-}
+-
+-form input[type="submit"] {
+-  background-color: #69a695;
+-  color: black;
+-  border-radius: 0px;
+-  float: left;
+-  font-size: 16px;
+-}
+-
+-.map {
+-   position: absolute;
+-    width: 400px;
+-    top: 100px;
+-    right: 300px;
+-    border: 10px solid #69a695;
+-}
+-
+-.paddingbetweenelements {
+-     padding-bottom: 20px;
+-}
+-
+-
+-
+-/*Used to create and style rectangle images on Contact us page for each individual review*/
+-rectangle {
+-  height: 170px;
+-  width: 350px;
+-  background-color: blue;
+-  /*outline-color: blue;*/
+-}
+-
+Index: static/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/static/style.css b/static/style.css
+new file mode 100644
+--- /dev/null	(date 1680558373755)
++++ b/static/style.css	(date 1680558373755)
+@@ -0,0 +1,297 @@
++/* ATB Blue = #69a695 */
++/* Grey Buttons/Hovers = #d9d9d9 */
++/* Super light grey, almost white background paneling = #f6f6f6 */
++
++/* Font Styling for entire website */
++@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
++
++html body p {
++    font-family: "Open Sans";
++}
++
++h1 {
++    font-: 100px;
++}
++/*navbar*/
++navbar {
++    display: flex;
++    justify-content: space-between;
++    padding: 20px;
++    background-color: #69a695;
++    color: #fff;
++}
++.navbar-nav a {
++    float: right;
++}
++
++/* allows for hovering over the navbar*/
++.navbar-nav li a:hover {
++     background: #d9d9d9;
++ }
++
++
++background-image {
++    opacity: 0.5;
++}
++
++url("static/images/WelcomePage_BackgroundPhoto.jpeg") {
++opacity: 0.5;
++}
++
++/*use this to create a division that has centered text*/
++.login-buttons{
++    text-align: center;
++}
++
++
++.text-center{
++    text-align: center;
++
++}
++
++/* button styling */
++input{
++    background-color: #69a695;
++<<<<<<< HEAD
++=======
++    text-color: white;
++>>>>>>> a0cf96c (This push includes numerous changes:)
++    border-width: 1px;
++    border-color: #545454;
++    border-radius: 5px;
++    padding: 7px;
++    margin: 2px;
++    color: white;
++}
++
++.checkoutButtons{
++    background-color: #69a695;
++    font-family: 'Open Sans';
++    color: white;
++}
++
++p {
++    color: black;
++    font-family: 'Open Sauce SemiBold';
++    font-size: 20px;
++
++}
++
++/* Checkout Page Styling */
++
++.checkoutPlaceholder {
++    height: 210px;
++    width: 1200px;
++    background-color: #f6f6f6;
++    padding: 0px 0px 0px 0px;
++}
++
++div.checkoutItemCoupon{
++    display: block;
++    padding: 20px;
++}
++
++div.coupon{
++    display: inline-block;
++}
++
++.formInputFields {
++    background-color: #f6f6f6;
++    padding: 30px 25px 30px 25px;
++}
++
++.formInputFieldsNoBackground {
++    padding-left: 20px;
++}
++
++.checkoutHeader {
++    font-size: 33px;
++    float: left;
++}
++
++.sectionBreaker {
++    padding-top: 40px;
++}
++
++.customerReviewSection {
++    background-color: #f6f6f6;
++    width: 100%;
++}
++
++img {
++margin: 0px;
++padding: 0px;
++border: 0px;
++}
++
++.reviewHeader {
++    font-size: 33px;
++    padding-left: 20px;
++}
++
++
++<<<<<<< HEAD
++=======
++.navbar {
++    background-color: deepskyblue;
++}
++
++>>>>>>> a0cf96c (This push includes numerous changes:)
++.inputBoxTotal {
++    padding: 20px;
++}
++
++.billingTotals {
++    padding: 30px 25px 30px 25px;
++}
++
++.inputFields {
++    height: 30px;
++    background-color: #f6f6f6;
++    border-color: gray;
++    width: auto;
++}
++
++.formFieldsLabels {
++    font-size: 20px;
++    margin: 0px;
++    padding: 0px;
++}
++
++p.cartTotalsLabels {
++    font-size: 25px;
++    margin: 0px;
++    padding: 0px 0px 20px 0px;
++}
++
++hr {
++    margin: 0px;
++}
++
++/*Styling order confirmation page*/
++/*Centering text*/
++.center {
++  margin: auto;
++  width: 50%;
++  border: 3px solid black;
++  padding: 10px;
++}
++/*center image*/
++.center-image {
++            display:block;
++            margin-left: auto;
++            margin-right: auto;
++
++        }
++
++/*Filter shop button styling*/
++/* Dropdown Button */
++.dropbtn {
++  background-color: #04AA6D;
++  color: white;
++  padding: 16px;
++  font-size: 16px;
++  border: none;
++}
++
++/* The container <div> - needed to position the dropdown content */
++.dropdown {
++  position: relative;
++  display: inline-block;
++}
++
++/* Dropdown Content (Hidden by Default) */
++.dropdown-content {
++  display: none;
++  position: absolute;
++  background-color: #d9d9d9;
++  min-width: 160px;
++  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
++  z-index: 1;
++}
++
++/* Links inside the dropdown */
++.dropdown-content a {
++  color: black;
++  padding: 12px 16px;
++  text-decoration: none;
++  display: block;
++}
++
++/* Change color of dropdown links on hover */
++.dropdown-content a:hover {background-color: #ddd;}
++
++/* Show the dropdown menu on hover */
++.dropdown:hover .dropdown-content {display: block;}
++
++/* Change the background color of the dropdown button when the dropdown content is shown */
++.dropdown:hover .dropbtn {background-color: #3e8e41;}
++
++title {
++    font-size: 30px;
++}
++/* Styling for inventory management page */
++  .max-width-form {
++    max-width: 800px;
++    margin: 0 auto;
++      padding-top: 40px; ;
++  }
++
++  /* styling for home page */
++.bg-image {
++    position: fixed;
++    top: 0;
++    left: 0;
++    width: 100%;
++    height: 100%;
++    z-index: -1;
++    opacity: 0.5;
++}
++.container {
++    font-weight: bold;
++    font-size: 80px;
++    font-family: 'Open Sans';
++    padding-top: 30px;
++    position:relative;
++    left: 40px;
++}
++.slogan {
++    float: left;
++    width: 40%;
++    font-size: 150px;
++    font-family: 'Open Sans';
++    padding-top: 75px;
++    position:relative;
++    left: 100px;
++}
++
++form input[type="submit"] {
++  background-color: #69a695;
++  color: black;
++  border-radius: 0px;
++  float: left;
++  font-size: 16px;
++}
++
++.map {
++   position: absolute;
++    width: 400px;
++    top: 100px;
++    right: 300px;
++    border: 10px solid #69a695;
++}
++
++.paddingbetweenelements {
++     padding-bottom: 20px;
++}
++
++
++
++/*Used to create and style rectangle images on Contact us page for each individual review*/
++rectangle {
++  height: 170px;
++  width: 350px;
++  background-color: blue;
++  /*outline-color: blue;*/
++}
++
