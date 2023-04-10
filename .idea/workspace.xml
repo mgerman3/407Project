@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="remove styling no longer relevant to navbar">
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Shop.html" afterDir="false" />
+    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="attempt to fix the changes that occured to the shop page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +127,8 @@
       <workItem from="1680891442123" duration="1194000" />
       <workItem from="1680893390201" duration="11734000" />
       <workItem from="1681063722829" duration="2589000" />
-      <workItem from="1681080067343" duration="4877000" />
+      <workItem from="1681080067343" duration="4900000" />
+      <workItem from="1681091483872" duration="440000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling">
       <created>1678819151825</created>
@@ -234,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681084223554</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="attempt to fix the changes that occured to the shop page">
+      <created>1681084971033</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681084971033</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,9 +274,10 @@
     <MESSAGE value="turn these pages into child templates and minor editing" />
     <MESSAGE value="update navbar formatting" />
     <MESSAGE value="remove styling no longer relevant to navbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove styling no longer relevant to navbar" />
+    <MESSAGE value="attempt to fix the changes that occured to the shop page" />
+    <option name="LAST_COMMIT_MESSAGE" value="attempt to fix the changes that occured to the shop page" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681084930274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681091770363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
