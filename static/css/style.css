@@ -312,14 +312,15 @@ form input[type="submit"] {
   background-color: #69a695;
   color: white;
   border-radius: 0px;
-  font-size: 16px;
+  font-size: 24px;
 }
 
-form input[type="submit"] {
+form input[class="home"] {
     position: absolute;
     left: 100px;
     top: 350px;
 }
+
 
 dropdown button {
   background-color: #69a695;
