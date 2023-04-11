@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="fix issues with buttons">
+    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="turn checkout page into child template">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/About Page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/About Page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Contact Us Page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Contact Us Page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Home Page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home Page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Log-In-Screen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Log-In-Screen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +141,8 @@
       <workItem from="1680893390201" duration="11734000" />
       <workItem from="1681136390140" duration="5724000" />
       <workItem from="1681164247203" duration="3219000" />
-      <workItem from="1681219738463" duration="2658000" />
+      <workItem from="1681219738463" duration="5393000" />
+      <workItem from="1681232354525" duration="6792000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling">
       <created>1678819151825</created>
@@ -251,7 +249,28 @@
       <option name="project" value="LOCAL" />
       <updated>1681167521126</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="minor styling fixes on various pages">
+      <created>1681224522297</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681224522298</updated>
+    </task>
+    <task id="LOCAL-00017" summary="put all inputs into rows and establish different input classes for log-in page and signup page">
+      <created>1681228063297</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681228063297</updated>
+    </task>
+    <task id="LOCAL-00018" summary="turn checkout page into child template">
+      <created>1681228151065</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681228151065</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,9 +302,12 @@
     <MESSAGE value="padding issues on shop page fixed" />
     <MESSAGE value="fix issues with formatting" />
     <MESSAGE value="fix issues with buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix issues with buttons" />
+    <MESSAGE value="minor styling fixes on various pages" />
+    <MESSAGE value="put all inputs into rows and establish different input classes for log-in page and signup page" />
+    <MESSAGE value="turn checkout page into child template" />
+    <option name="LAST_COMMIT_MESSAGE" value="turn checkout page into child template" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681224481698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681247085876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

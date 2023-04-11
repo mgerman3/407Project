@@ -83,15 +83,41 @@
             <div class="row" style="padding-top: 25px;">
                 <h1 class="checkoutHeader"><strong>Checkout</strong></h1>
             </div>
-            <div class="checkoutPlaceholder"></div>
-<!--            <div class="coupon">
-                <input type="text" style="background-color: white;">
+            <div class="cartPlaceholder">
+                <div class=”cartHeader”>
+                    <h3 class=”Head” style="padding: 5px 5px 0px 5px; margin: 0px;" >Items</h3>
+                    <div class="cart-item">
+                        <h5 class="item-info">   </h5>
+                        <h5 class="item-info">Type</h5>
+                        <h5 class="item-info">Quantity</h5>
+                        <h5 class="item-info">Size</h5>
+                        <h5 class="item-info">Price</h5>
+                    </div>
+                    <!--%% for item in cart %}--->
+                        <div class="cart-item">
+                            <div class="cart-item-image">
+                                <img src="static/images/Shop_ClothingItem1.png" alt="item" width="100" height="100">
+                            </div>
+                            <div class="cart-item-details">
+                                <div class="cart-item-title">
+                                    <h3 style="text-align: center">Crewneck</h3> <!--{ item.title }}-->
+                                </div>
+                            </div>
+                                <div class=”cart-counter”>
+                                    <input class="item-info" type=number min=1 max=5 value="1"> <!--{ item.quantity }}-->
+                                </div>
+                                <div class="cart-item-size">
+                                    <h3>M</h3> <!--{ item.size }}-->
+                                </div>
+                                <div class="cart-item-price">
+                                    <h3>$42.00 USD</h3> <!--{ item.price }}-->
+                                </div>
+                            </div>
+
+                    <!--% endfor %}--->
+                </div>
             </div>
-            <div class="coupon">
-                <form action="CheckoutPage.html" method="post">
-                    <input type="submit" value="Apply Coupon" class="checkoutButtons">
-                </form>
-            </div> -->
+        </div>
         </div>
 
        <!-- Shipping Information Fields -->
@@ -138,46 +164,46 @@
                 </div>
 
                 <!-- Cart Pricing Information -->
-                <div class="border-box col">
-                    <h2 class="checkoutHeader"><strong>Cart Totals</strong></h2><br><br>
-                    <div class="billingTotals">
-                        <div class="row">
-                            <p class="cartTotalsLabels">Subtotal -</p><hr>
+        <div class="border-box col">
+            <h2 class="checkoutHeader"><strong>Cart Totals</strong></h2><br><br>
+                <div class="billingTotals">
+                    <div class="row">
+                        <p class="cartTotalsLabels">Subtotal -</p><hr>
+                    </div>
+                    <div class="row">
+                        <div class="border-box col" style="padding: 0px">
+                            <p class="cartTotalsLabels">Shipping -</p>
                         </div>
-                        <div class="row">
-                            <div class="border-box col" style="padding: 0px">
-                                <p class="cartTotalsLabels">Shipping -</p>
+                        <div class="border-box col" style="padding: 0px 0px 10px 0px">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Local Pick Up:
+                                </label>
                             </div>
-                            <div class="border-box col" style="padding: 0px 0px 10px 0px">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        Local Pick Up:
-                                     </label>
-                                </div>
-                                <div class="form-check">
-                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                     <label class="form-check-label" for="flexRadioDefault2">
-                                        Home Delivery
-                                     </label>
-                                </div>
-                                <div class="form-check">
-                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                     <label class="form-check-label" for="flexRadioDefault2">
-                                        Rapid Delivery
-                                     </label>
-                                </div>
-                            </div><hr>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Home Delivery
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Rapid Delivery
+                                </label>
+                            </div>
+                        </div><hr>
+                    </div>
+                    <div class="row">
+                        <p class="cartTotalsLabels">Taxes -</p><hr>
+                    </div>
+                    <div class="row">
+                        <p class="cartTotalsLabels"><strong>Total -</strong></p>
+                        <div class="row">
                         </div>
-                        <div class="row">
-                            <p class="cartTotalsLabels">Taxes -</p><hr>
-                        </div>
-                        <div class="row">
-                            <p class="cartTotalsLabels"><strong>Total -</strong></p>
-                        <div class="row">
                     </div>
                 </div>
-            </div>
         </div>
 
         <!-- Button for Place Order -->
