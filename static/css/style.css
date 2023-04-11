@@ -487,11 +487,10 @@ input.signupInput {
 
 /*Box for confirmation page*/
 .box {
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    position: absolute;
+    margin-top: 60px;
+    margin-left: 140px;
+    margin-right: 140px;
+    position: center;
     background-color: #f6f6f6;
 }
 
@@ -573,13 +572,6 @@ p.shopLabels {
     margin: auto;
     padding-left:25px;
     padding-right:25px;
-}
-
-.rowa{
-    display:flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .col-5{
