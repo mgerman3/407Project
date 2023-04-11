@@ -12,13 +12,13 @@
 
 
     <form action="/CheckOut" method="get">
-        <div class="checkoutItemCoupon" style="padding-left: 24px">
+        <div class="checkoutItemCoupon" style="padding-left: 24px" >
             <div class="row" style="padding-top: 25px;">
                 <h1 class="checkoutHeader"><strong>Cart</strong></h1>
             </div>
             <div class="row" style="padding-top: 25px;">
             </div>
-            <div class="cartPlaceholder">
+            <div class="cartPlaceholder" style="position: relative; height: auto; min-height: 100%; padding-bottom: 7px;">
                 <div class=”cartHeader”>
                     <h3 class=”Head” style="padding: 5px 5px 0px 5px; margin: 0px;" >Items</h3>
                     <div class="cart-item">
@@ -31,7 +31,50 @@
                     <!--%% for item in cart %}--->
                         <div class="cart-item">
                             <div class="cart-item-image">
-                                <img src="static/images/Shop_ClothingItem1.png" alt="item" width="100" height="100">
+                                <img src="static/images/Shop_ClothingItem1.png" alt="item" width="100" height="100" style="margin-bottom: 7px" >
+                            </div>
+                            <div class="cart-item-details">
+                                <div class="cart-item-title">
+                                    <h3 style="text-align: center">Crewneck</h3> <!--{ item.title }}-->
+                                </div>
+                            </div>
+                                <div class=”cart-counter”>
+                                    <input class="item-info" type=number min=1 max=5 value="1"> <!--{ item.quantity }}-->
+                                </div>
+                                <div class="cart-item-size">
+                                    <h3>M</h3> <!--{ item.size }}-->
+                                </div>
+                                <div class="cart-item-price">
+                                    <h3 style="margin-bottom: 0px">$42.00 USD<h3> <!--{ item.price }}-->
+                                    <div class="remove">Remove</div>
+                                </div>
+                            </div>
+
+
+                    <div class="cart-item">
+                            <div class="cart-item-image">
+                                <img src="static/images/Shop_ClothingItem1.png" alt="item" width="100" height="100" style="margin-bottom: 7px" >
+                            </div>
+                            <div class="cart-item-details">
+                                <div class="cart-item-title">
+                                    <h3 style="text-align: center">Crewneck</h3> <!--{ item.title }}-->
+                                </div>
+                            </div>
+                                <div class=”cart-counter”>
+                                    <input class="item-info" type=number min=1 max=5 value="1"> <!--{ item.quantity }}-->
+                                </div>
+                                <div class="cart-item-size">
+                                    <h3>M</h3> <!--{ item.size }}-->
+                                </div>
+                                <div class="cart-item-price">
+                                    <h3 style="margin-bottom: 0px">$42.00 USD<h3> <!--{ item.price }}-->
+                                    <div class="remove">Remove</div>
+                                </div>
+                            </div>
+
+                    <div class="cart-item">
+                            <div class="cart-item-image">
+                                <img src="static/images/Shop_ClothingItem1.png" alt="item" width="100" height="100" style="margin-bottom: 7px" >
                             </div>
                             <div class="cart-item-details">
                                 <div class="cart-item-title">
