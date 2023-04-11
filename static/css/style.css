@@ -128,8 +128,12 @@ postFormLabels {
  font-weight: 800;
 }
 
-.cart-item-details{
-
+.remove{
+    font-size: 14px;
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+    text-align: right;
 }
 
 h5.item-info{
