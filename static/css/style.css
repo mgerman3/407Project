@@ -311,8 +311,10 @@ title {
 form input[type="submit"] {
   background-color: #69a695;
   color: white;
-  border-radius: 0px;
+  border-radius: 5px;
+  border-color: black;
   font-size: 24px;
+  padding: 5px 10px 5px 10px;
 }
 
 form input[class="home"] {
