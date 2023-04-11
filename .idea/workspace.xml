@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="fix issues with buttons">
+    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="shop page edits and alignment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/About Page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/About Page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Contact Us Page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Contact Us Page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Home Page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home Page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Log-In-Screen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Log-In-Screen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Order Confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Order Confirmation.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +31,9 @@
         <entry key="FLASK_APP" value="app" />
       </map>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Rebase.Settings">
     <option name="NEW_BASE" value="origin/main" />
@@ -143,8 +143,7 @@
       <workItem from="1680891442123" duration="1194000" />
       <workItem from="1680893390201" duration="11734000" />
       <workItem from="1681136390140" duration="5724000" />
-      <workItem from="1681164247203" duration="3219000" />
-      <workItem from="1681219738463" duration="2658000" />
+      <workItem from="1681164247203" duration="1036000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling">
       <created>1678819151825</created>
@@ -230,28 +229,7 @@
       <option name="project" value="LOCAL" />
       <updated>1681141671420</updated>
     </task>
-    <task id="LOCAL-00013" summary="padding issues on shop page fixed">
-      <created>1681165921871</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1681165921871</updated>
-    </task>
-    <task id="LOCAL-00014" summary="fix issues with formatting">
-      <created>1681167110383</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1681167110383</updated>
-    </task>
-    <task id="LOCAL-00015" summary="fix issues with buttons">
-      <created>1681167521126</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1681167521126</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,12 +258,9 @@
     <MESSAGE value="updated on formatting" />
     <MESSAGE value="When we updated our flask the image formatting got messed up. Fixed routes to images." />
     <MESSAGE value="shop page edits and alignment" />
-    <MESSAGE value="padding issues on shop page fixed" />
-    <MESSAGE value="fix issues with formatting" />
-    <MESSAGE value="fix issues with buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix issues with buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="shop page edits and alignment" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681224481698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681242072445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
