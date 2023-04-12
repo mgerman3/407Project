@@ -644,6 +644,7 @@ input.btneg {
   height: 0.8cm;
 }
 
+/* creates styling for quantity button on Generic Product Page*/
 input.btpos {
   border-radius: 5cm;
   width: 40px;
@@ -651,6 +652,13 @@ input.btpos {
   margin-left: -30px;
   height: 0.8cm;
 }
+
+/*creates spacing between both columsn of information on the generic product page*/
+.GenProduct_VerticalSpacer{
+  margin-left: 50px;
+}
+
+
 
 /* creates styling for Mission Statement on About Page*/
 
