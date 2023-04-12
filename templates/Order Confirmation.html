@@ -16,32 +16,29 @@
 {% endblock %}
 
 {% block page_content %}
-<!--Order Confirmation headers and image
-https://cdn-icons-png.flaticon.com/512/3139/3139155.png -->
+<!--Order Confirmation headers and image-->
 
 <div class="box" style="align-content: center">
         <div class="row">
             <h1 class="text-center">Order #</h1>
         </div>
         <div class="center-image">
-            <img src="../static/images/shopping-bag2.png" class= "center-image" width="120px" height="120px" alt="Shopping Bag Image">
+            <img src="../static/images/shopping-bag2.png" class= "center-image" width="120px" height="120px" alt="Shopping Bag Image" style="padding-bottom: 10px">
         </div>
         <div class="row">
             <h5 class="text-center">Your order has been placed!</h5>
-            <br>
         </div>
         <div class="row">
             <h5 class="text-center">Welcome to the ATB Family! We are getting your order ready.</h5>
+        <br>
         </div>
 <!-- submit another order button-->
-        <div class="input" style="align-content: center">
-            <form action="/Shop" method="get" style="text-align: center">
-            <input type="submit" value="Submit Another Order">
-        </div>
+        <form action="/Shop" method="get" style="text-align: center">
+        <input type="submit" value="Submit Another Order">
 
 <!--bottom image-->
     <div class="row" style="align-content: center">
-        <img src="../static/images/ShopPage_TopBanner.jpeg" width="100%" height="100%" alt="Around the Block Group Pic" class="responsive">
+        <img src="../static/images/ShopPage_TopBanner.jpeg" width="200" height="210" alt="Around the Block Group Pic" class="responsive" style="padding-top: 20px">
     </div>
 </div>
 
