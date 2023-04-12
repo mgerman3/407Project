@@ -613,20 +613,42 @@ p.shopLabels {
   height: 200px;
   object-fit: cover;
 }
-.inventoryButtons{
-    background-color: #69a695;
-    font-family: 'Open Sans';
-    color: white;
-    margin: 20px;
-    padding: 7px 75px 7px 75px;
-}
-.inventoryBoxTotal {
-    position: fixed;
-    padding: 20px;
+
+.ContactUs_MainHeading {
+    text-align: center;
+     color: blue;
 }
 
-.title{
-    text-align: center;
-    font-family: 'Open Sans';
-    top: 20px;
+/*creates two row layout for entire page*/
+.GenProduct_rowLayout {
+  display: flex;
+  margin-left: 10px;
 }
+
+/*creates two row layout for entire page*/
+.GenProduct_rowLayout {
+  display: flex;
+}
+
+/*creates spacing between each element on the right side of the generic product page*/
+.GenProduct_spacer{
+  margin-top: 50px;
+}
+
+/* creates styling for quantity button on Generic Product Page*/
+input.btneg {
+  border-radius: 5cm;
+  width: 40px;
+  position: relative;
+  margin-right: -30px;
+  height: 0.8cm;
+}
+
+input.btpos {
+  border-radius: 5cm;
+  width: 40px;
+  position: relative;
+  margin-left: -30px;
+  height: 0.8cm;
+}
+

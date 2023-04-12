@@ -2,46 +2,41 @@
 
 {% block title %}Generic Product{% endblock %}
 
-{% block html_style %}
-    h1 {
-        font-weight: 700;
-        color: #000000;
-        text-align: right;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-    h3 {
-    text-align: right;
-
-    }
-
-
-{% endblock %}
-
 {% block page_content %}
 
-<div class="row">
-            <div class="border-box col-4">
-                <!-- Heading for entire page & supporting image-->
-                <img src="/static/images/Shop_ClothingItem1.png" width = "600" height = "600" alt="ATB Model Skateboarding" style = "padding-left: 20px">
-            </div>
-            <div class="border-box col-8">
-                    <div class = "row">
-                        <div class="border-box col">
-                            <div class="row" style="padding-right: 50px">
-                                <h1> Long Sleeve CP Blues Shirt <br></h1>
-                                <h3>$36 USD</h3>
-                                <h3>Color</h3>
-                                <form action="/cart" method="post" style="text-align: right">
-                                <input type="submit" value="Add to Cart"/>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-
-
-
-
+ <div class="GenProduct_rowLayout">
+  <div class="GenProduct_columnLayout">
+      <img src= static/images/Shop_ClothingItem1.png width = "600" height = "600" alt="ATB Model Skateboarding">
+  </div>
+  <div class="GenProduct_columnLayout">
+      <h1>Crewneck</h1>
+      <h3>$43 USD</h3>
+      <div class="GenProduct_spacer">
+        <h4>Select a Size</h4>
+          <button class="input">X-Small</button>
+          <button class="input">Small</button>
+          <button class="input">Medium</button>
+          <button class="input">Large</button>
+          <button class="input">XL</button>
+          <button class="input">XXL</button>
+          <button class="input">XXXL</button>
+      </div>
+      <div class="GenProduct_spacer">
+        <h4>Select a Style</h4>
+          <button class="input">Game Day Map</button>
+          <button class="input">CP Blues Map</button>
+          <button class="input">Spring Pinks Map</button>
+      </div>
+      <div class="GenProduct_spacer">
+        <h4>Quantity</h4>
+          <input type="button" class="btneg " value="-">
+          <input type="text" name="noq1" id="noq1" min="1" max="15" value="1">
+          <input type="button" class="btpos " value="+">
+      </div>
+      <div class="GenProduct_spacer">
+        <button class="input">Add to Cart</button>
+      </div>
+</div>
 
 {% endblock %}
+
