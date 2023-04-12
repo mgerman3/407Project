@@ -37,7 +37,7 @@ def CheckOut():
 def GenProduct():
     return render_template('GenericProductPage.html')
 
-@app.route('/Inventory')
+@app.route('/InventoryInput')
 def Inventory():
     return render_template('Inventory Management.html')
 
@@ -69,6 +69,9 @@ def Banner():
 def Cart():
     return render_template('cart.html')
 
+@app.route('/InventoryLog')
+def InventoryLog():
+    return render_template('Inventory Log.html')
 
 if __name__ == '__main__':
     app.run()
