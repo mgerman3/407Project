@@ -652,3 +652,11 @@ input.btpos {
   height: 0.8cm;
 }
 
+/* creates styling for Mission Statement on About Page*/
+
+.g {
+  background-color: lightgrey;
+  max-width:100%;
+  padding: 50px;
+  margin: 20px;
+}
