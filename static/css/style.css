@@ -335,6 +335,15 @@ title {
       padding-top: 40px; ;
   }
 
+  .inventoryinputFields {
+    height: 30px;
+    background-color: #f6f6f6;
+    border-color: black;
+    width: auto;
+    color: black;
+    padding: 0px 10px 0px 10px;
+}
+
   /* styling for home page */
 .bg-image {
     position: fixed;
