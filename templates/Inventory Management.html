@@ -7,7 +7,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     </head>
     <body>
-<!-- Navbar -->
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg" style="background-color: #69a695">
           <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="../static/images/Clear%20Background%20Logo.png" alt="Bootstrap" width="30" height="24"></a>
@@ -53,127 +53,66 @@
             </div>
           </div>
         </nav>
-
-<!-- Inventory Input -->
-  <div class="col-md-4">
-    <label for="validationImage" class="form-label">Insert Image</label>
-    <input type="file" class="form-control" id="validationImage" required>
-    <div class="invalid-feedback">
-      Please provide a valid image file.
-    </div>
-  </div>
-<form class="row g-3 needs-validation" novalidate>
-  <div class="col-md-4">
-    <label for="validationItemID" class="form-label">Item ID</label>
-    <input type="text" class="form-control" id="validationItemID" required>
-    <div class="invalid-feedback">
-      Please provide a valid item ID.
-    </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationCollectionID" class="form-label">Collection ID</label>
-    <input type="text" class="form-control" id="validationCollectionID" required>
-    <div class="invalid-feedback">
-      Please provide a valid collection ID.
-    </div>
-  </div>
-  <div class="col-md-6">
-    <label for="validationItemSize" class="form-label">Item Size</label>
-    <select class="form-select" id="validationItemSize" required>
-      <option selected disabled value="">Choose...</option>
-        <option>XS</option>
-        <option>S</option>
-        <option>M</option>
-        <option>L</option>
-        <option>XL</option>
-        <option>XXL</option>
-    </select>
-    <div class="invalid-feedback">
-      Please select a valid size.
-    </div>
-  </div>
-  <div class="col-md-3">
-    <label for="validationItemColor" class="form-label">Color</label>
-    <input type="text" class="form-control" id="validationItemColor" required>
-    <div class="invalid-feedback">
-      Please input a valid color.
-    </div>
-  </div>
-  <div class="col-md-3">
-    <label for="validationPrice" class="form-label">Price</label>
-    <input type="text" class="form-control" id="validationPrice" required>
-    <div class="invalid-feedback">
-      Please provide a valid price.
-    </div>
-  </div>
-  <div class="col-md-3">
-    <label for="validationQuantityAvail" class="form-label">Quantity Available</label>
-    <input type="text" class="form-control" id="validationQuantityAvail" required>
-    <div class="invalid-feedback">
-      Please provide a valid quantity.
-    </div>
-  </div>
-  <div class="col-md-3">
-    <label for="validationItemDesc" class="form-label">Item Description</label>
-    <input type="text" class="form-control" id="validationItemDesc" required>
-    <div class="invalid-feedback">
-      Please provide a valid description.
-    </div>
-  </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-      <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
-      </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
-    </div>
-  </div>
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
-  </div>
-</form>
-
-
-
-
-
-
-<!-- Inventory Management Search Bar -->
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search Inventory..." aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- Inventory Management Table -->
-<div class="table">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-          <th scope="col">Item ID</th>
-          <th scope="col">Collection ID</th>
-          <th scope="col">Item Name</th>
-          <th scope="col">Item Size</th>
-          <th scope="col">Item Color</th>
-          <th scope="col">Item Price</th>
-          <th scope="col">Item Description</th>
-          <th scope="col">Item Image</th>
-          <th scope="col">Quantity Available</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Insert Data Here -->
-    </tbody>
-  </table>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
+        <!-- Inventory Input -->
+        <div class="inventoryBoxTotal">
+            <div class="row">
+                <div class = "border-box-col">
+                    <h2 class="checkoutHeader"><strong>Inventory Input</strong></h2><br><br>
+                    <form class="formInputFields">
+                        <div class = "row">
+                            <div class="border-box col">
+                                <div class="row">
+                                    <p class="formFieldsLabels">Item ID (*)<br></p>
+                                    <input type="text" class="inputFields" name="ItemID" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "border-box-col">
+                            <div class="row">
+                                <p class="formFieldsLabels">Item Name<br></p>
+                                <input type="text" class="inputFields" name="ItemName" required><br><br></div>
+                            <div class = "dropdown">
+                                <p class="formFieldsLabels">Size</p>
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                        Select...
+                                    </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">XS</a></li>
+                                            <li><a class="dropdown-item" href="#">S</a></li>
+                                            <li><a class="dropdown-item" href="#">M</a></li>
+                                            <li><a class="dropdown-item" href="#">L</a></li>
+                                            <li><a class="dropdown-item" href="#">XL</a></li>
+                                            <li><a class="dropdown-item" href="#">2X</a></li>
+                                        </ul>
+                                </div>
+                                <div class="row">
+                                    <p class="formFieldsLabels">Color</p>
+                                    <input type="text" class="inputFields" name="Color" required><br><br>
+                                </div>
+                                <div class="row">
+                                    <p class="formFieldsLabels">Item Price</p>
+                                    <input type="text" class="inputFields" name="Price" required><br><br>
+                                </div>
+                                <div class="row">
+                                    <p class="formFieldsLabels">Quantity</p>
+                                    <input type="text" class="inputFields" name="Quantity" required><br><br>
+                                </div>
+                                <div class="row">
+                                    <p class="formFieldsLabels">Description</p>
+                                    <input type="text" class="inputFields" name="Description" required><br><br>
+                                </div>
+                                <div class="row">
+                                    <p class="formFieldsLabels">Upload Image</p>
+                                    <input class="form-control" type="file" id="formImage">
+                                </div>
+                                <div class="row">
+                                  <input type="submit" value="Submit Inventory" class="inventoryButtons">
+                                </div>
+                            </form>
+                    </form>
+                </div>
+            </div>
+        </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </body>
 </html>
