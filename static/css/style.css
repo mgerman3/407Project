@@ -613,3 +613,20 @@ p.shopLabels {
   height: 200px;
   object-fit: cover;
 }
+.inventoryButtons{
+    background-color: #69a695;
+    font-family: 'Open Sans';
+    color: white;
+    margin: 20px;
+    padding: 7px 75px 7px 75px;
+}
+.inventoryBoxTotal {
+    position: fixed;
+    padding: 20px;
+}
+
+.title{
+    text-align: center;
+    font-family: 'Open Sans';
+    top: 20px;
+}
