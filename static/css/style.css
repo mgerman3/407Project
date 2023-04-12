@@ -668,3 +668,13 @@ input.btpos {
   padding: 50px;
   margin: 20px;
 }
+
+.websiteFooter{
+    text-align: center;
+    padding: 50px;
+    background-color: #f6f6f6;
+}
+
+.footerItems {
+    text-align: center;
+}
