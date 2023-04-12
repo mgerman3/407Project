@@ -363,6 +363,16 @@ title {
     top: 200px;
 }
 
+.btn.btn-primary{
+  background-color: #69a695;
+  color: white;
+  border-radius: 5px;
+  border-color: black;
+  font-size: 24px;
+  padding: 5px 10px 5px 10px;
+}
+.btn.btn-primary a:hover {background-colorcolor: #ddd;}
+
 form input[type="submit"] {
   background-color: #69a695;
   color: white;
