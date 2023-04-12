@@ -1,60 +1,10 @@
 <!-- Joe Scopelliti -->
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Check Out</title>
-        <link href="/static/CSS/style.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    </head>
-    <body>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg" style="background-color: #69a695">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="../static/images/Clear%20Background%20Logo.png" alt="Bootstrap" width="30" height="24"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="Home%20Page.html">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Shop
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Game Day Collection</a></li>
-                    <li><a class="dropdown-item" href="#">Dark Blue Collection</a></li>
-                    <li><a class="dropdown-item" href="#">Springtime Collection</a></li>
-                    <li><a class="dropdown-item" href="#">Logo Collection</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    About
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Around the Block</a></li>
-                    <li><a class="dropdown-item" href="#">Our Mission</a></li>
-                    <li><a class="dropdown-item" href="#">Meet our Team</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Contact Us
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Request Form</a></li>
-                    <li><a class="dropdown-item" href="#">Reviews</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+{% extends "base.html" %}
+
+{% block title %}Check Out{% endblock %}
+
+{% block page_content %}
 
         {% if form_submitted %}
         <div class="row">
@@ -133,15 +83,42 @@
             <div class="row" style="padding-top: 25px;">
                 <h1 class="checkoutHeader"><strong>Checkout</strong></h1>
             </div>
-            <div class="checkoutPlaceholder"></div>
-<!--            <div class="coupon">
-                <input type="text" style="background-color: white;">
+            <div class="cartPlaceholder" style="position: relative; height: auto; min-height: 100%; padding-bottom: 7px;">
+                <div class=”cartHeader”>
+                    <h3 class=”Head” style="padding: 5px 5px 0px 5px; margin: 0px;" >Items</h3>
+                    <div class="cart-item">
+                        <h5 class="item-info">   </h5>
+                        <h5 class="item-info">Type</h5>
+                        <h5 class="item-info">Quantity</h5>
+                        <h5 class="item-info">Size</h5>
+                        <h5 class="item-info">Price</h5>
+                    </div>
+                    <!--%% for item in cart %}--->
+                        <div class="cart-item">
+                            <div class="cart-item-image">
+                                <img src="static/images/Shop_ClothingItem1.png" alt="item" width="100" height="100" style="margin-bottom: 7px" >
+                            </div>
+                            <div class="cart-item-details">
+                                <div class="cart-item-title">
+                                    <h3 style="text-align: center">Crewneck</h3> <!--{ item.title }}-->
+                                </div>
+                            </div>
+                                <div class=”cart-counter”>
+                                    <input class="item-info" type=number min=1 max=5 value="1"> <!--{ item.quantity }}-->
+                                </div>
+                                <div class="cart-item-size">
+                                    <h3>M</h3> <!--{ item.size }}-->
+                                </div>
+                                <div class="cart-item-price">
+                                    <h3 style="margin-bottom: 0px">$42.00 USD<h3> <!--{ item.price }}-->
+                                    <div class="remove">Remove</div>
+                                </div>
+                            </div>
+
+                    <!--% endfor %}--->
+                </div>
             </div>
-            <div class="coupon">
-                <form action="CheckoutPage.html" method="post">
-                    <input type="submit" value="Apply Coupon" class="checkoutButtons">
-                </form>
-            </div> -->
+        </div>
         </div>
 
        <!-- Shipping Information Fields -->
@@ -188,52 +165,50 @@
                 </div>
 
                 <!-- Cart Pricing Information -->
-                <div class="border-box col">
-                    <h2 class="checkoutHeader"><strong>Cart Totals</strong></h2><br><br>
-                    <div class="billingTotals">
-                        <div class="row">
-                            <p class="cartTotalsLabels">Subtotal -</p><hr>
+        <div class="border-box col">
+            <h2 class="checkoutHeader"><strong>Cart Totals</strong></h2><br><br>
+                <div class="billingTotals">
+                    <div class="row">
+                        <p class="cartTotalsLabels">Subtotal -</p><hr>
+                    </div>
+                    <div class="row">
+                        <div class="border-box col" style="padding: 0px">
+                            <p class="cartTotalsLabels">Shipping -</p>
                         </div>
-                        <div class="row">
-                            <div class="border-box col" style="padding: 0px">
-                                <p class="cartTotalsLabels">Shipping -</p>
+                        <div class="border-box col" style="padding: 0px 0px 10px 0px">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Local Pick Up:
+                                </label>
                             </div>
-                            <div class="border-box col" style="padding: 0px 0px 10px 0px">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        Local Pick Up:
-                                     </label>
-                                </div>
-                                <div class="form-check">
-                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                     <label class="form-check-label" for="flexRadioDefault2">
-                                        Home Delivery
-                                     </label>
-                                </div>
-                                <div class="form-check">
-                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                     <label class="form-check-label" for="flexRadioDefault2">
-                                        Rapid Delivery
-                                     </label>
-                                </div>
-                            </div><hr>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Home Delivery
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Rapid Delivery
+                                </label>
+                            </div>
+                        </div><hr>
+                    </div>
+                    <div class="row">
+                        <p class="cartTotalsLabels">Taxes -</p><hr>
+                    </div>
+                    <div class="row">
+                        <p class="cartTotalsLabels"><strong>Total -</strong></p>
+                        <div class="row">
                         </div>
-                        <div class="row">
-                            <p class="cartTotalsLabels">Taxes -</p><hr>
-                        </div>
-                        <div class="row">
-                            <p class="cartTotalsLabels"><strong>Total -</strong></p>
-                        <div class="row">
                     </div>
                 </div>
-            </div>
         </div>
 
         <!-- Button for Place Order -->
             <input type="submit" value="Place Order" class="checkoutButtons" style="float: right; margin: 20px; padding: 7px 75px 7px 75px;">
         </form>
         {% endif %}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    </body>
-</html>
+{% endblock %}

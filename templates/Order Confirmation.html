@@ -17,36 +17,31 @@
 
 {% block page_content %}
 <!--Order Confirmation headers and image-->
-<div class="container">
-    <div class="box">
+
+<div class="box" style="align-content: center">
         <div class="row">
-            <br>
             <h1 class="text-center">Order #</h1>
         </div>
         <div class="row">
-            <img src="https://cdn-icons-png.flaticon.com/512/3139/3139155.png" width="15%" height="15%" class="centerimage" alt="Shopping Cart Image">
+            <img src="https://cdn-icons-png.flaticon.com/512/3139/3139155.png" width="2px" height="100px" alt="Shopping Bag Image" style="">
         </div>
         <div class="row">
             <h2 class="text-center">Your order has been placed!</h2>
             <br>
         </div>
         <div class="row">
-            <h3 class="text-center">Welcome to the ATB family - we are getting your order ready</h3>
+            <h3 class="text-center">Welcome to the ATB Family! We are getting your order ready.</h3>
         </div>
-<!--shop again button-->
-        <div class="row">
-            <div class="input">
-            <form action="/Shop" method="get" style="margin-left: 40%">
-                <input type="submit" value="Submit Another Order">
-            </form>
-            </div>
+<!-- submit another order button-->
+        <div class="input" style="align-content: center">
+            <form action="/Shop" method="get" style="text-align: center">
+            <input type="submit" value="Submit Another Order">
         </div>
-
 
 <!--bottom image-->
-    <div class="row">
+    <div class="row" style="align-content: center">
         <img src="../static/images/ShopPage_TopBanner.jpeg" width="100%" height="100%" alt="Around the Block Group Pic" class="responsive">
     </div>
-
 </div>
+
     {% endblock %}
