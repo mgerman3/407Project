@@ -12,9 +12,9 @@
 
 
     {% block html_head %}{% endblock %}
-</head>
 
-<style>{% block html_style %}{% endblock %}</style>
+    <style>{% block html_style %}{% endblock %}</style>
+</head>
 
 <body>
 <nav class="navbar navbar-expand-lg" style="background-color: #69a695;">
@@ -55,16 +55,54 @@
             <li><a class="dropdown-item" href="/signup">Create Account</a></li>
           </ul>
         </li>
-          <a class="dropbtn" href="/cart"><img src="../static/images/cart.png" alt="Bootstrap" width="30" height="24"></a>
+          <li><a class="dropbtn" href="/cart"><img src="../static/images/cart.png" alt="Bootstrap" width="30" height="24"></a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-    <!-- create page head format for all child templates-->
-        <h1>{% block page_head %}{% endblock %}</h1>
     <!-- create page content format for all child templates-->
         {% block page_content %}{% endblock %}
 
+
 </body>
+
+<footer>
+<div class="websiteFooter">
+    <div class="row">
+        <div class="col-4">
+            <p class="footerItems" style="color: black">Helpful Links</p>
+            <div class="row">
+                <a href="/" class="footerItems">Home Page</a>
+            </div>
+            <div class="row">
+                <a href="/Shop" class="footerItems">Shop</a>
+            </div>
+            <div class="row">
+                <a href="/About" class="footerItems">About</a>
+            </div>
+            <div class="row">
+                <a href="/ContactUs" class="footerItems">Contact us</a>
+            </div>
+        </div>
+        <div class="col-4">
+            <p class="footerItems">Contact Us</p>
+            <div class="row" style="display: inline-block">
+                <form>
+                    <input placeholder="Email" type="text" class="inputFields" style="width: 225px">
+                    <input type="submit" value="Submit" class="checkoutButtons" style="height: 30px; font-size: 13px; ">
+                </form>
+            </div>
+        </div>
+        <div class="col-4">
+            <p class="footerItems">Social Media</p>
+            <div class="row">
+                 <a class="footerItems" style="padding-left: 26px" aria-expanded="false" href="https://www.instagram.com/aroundtheblock.co/"><img src="../static/images/instagram.png" alt="Bootstrap" width="30" height="30"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</footer>
+
 </html>

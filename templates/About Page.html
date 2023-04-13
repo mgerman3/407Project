@@ -8,13 +8,14 @@
     p {
         text-align: left;
         padding: 0px 0px 0px 20px;
+        width: auto;
     }
 
     img [class="left"] {
         text-align: left;
       }
 
-    h1 {
+    h1, h2 {
         padding: 0px 0px 0px 20px;
     }
 
@@ -38,58 +39,69 @@
 
 
         <!-- Contact Us Button -->
-        <form action="/ContactUs"style="padding: 0px 0px 0px 20px" method="get">
-        <input type="submit" value="Contact Us">
-<br>
-<br>
-<br>
+        <form action="/ContactUs" style="padding: 0px 0px 0px 20px" method="get">
+            <input type="submit" value="Contact Us">
+        </form>
+
 <br>
 <br>
 <br>
 <br>
     <!-- Mission Section -->
-<div class="g">
-<img src="../static/images/AboutPage_OurMission_GroupPic.JPG" width="300" height="300" alt="Around the Block Group Shot" style="float: left">
-<h1> Our Mission </h1>
-<p> Instead of using new clothing items, we source our materials exclusively from local thrift stores, making each piece of clothing sold truly one-of-a-kind. Our commitment to sustainability and reducing waste is evident in the decision to use repurposed garments, ensuring that each item carries its own story and character.</p>
-<p>In addition to our environmentally conscious practices, we are dedicated to giving back to the community. Around the Block donates 10% of our profits to Sloan Kettering Cancer Research Foundation in New York City, making a positive impact in the fight against cancer.</p>
-<p>With each purchase from "Around the Block", customers can not only show their love for College Park, but also support cancer research efforts and contribute to a noble cause.</p>
-</div>
+        <div class="border-box col-4" style="width: auto">
+        <div class="g">
+            <img src="../static/images/AboutPage_OurMission_GroupPic.JPG" width="350" height="350" alt="Around the Block Group Shot" style="float: left">
+            <div class="border-box col-8">
+                        <div class="border-box col">
+                            <div class="row" style="padding-right: 20px; margin-right: 0px">
+                                <h1 style="padding-left: 5px; width: auto;"> Our Mission </h1>
+                                <p> Instead of using new clothing items, we source our materials exclusively from local thrift stores, making each piece of clothing sold truly one-of-a-kind. Our commitment to sustainability and reducing waste is evident in the decision to use repurposed garments, ensuring that each item carries its own story and character.</p>
+                                <p>In addition to our environmentally conscious practices, we are dedicated to giving back to the community. Around the Block donates 10% of our profits to Sloan Kettering Cancer Research Foundation in New York City, making a positive impact in the fight against cancer.</p>
+                                <p>With each purchase from "Around the Block", customers can not only show their love for College Park, but also support cancer research efforts and contribute to a noble cause.</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
 
-<br>
-<br>
+
+
     <!-- Meet The Team Section -->
-    <div>
-        <br>
+
         <br>
         <h1 style="text-align: center">Meet Our Team</h1>
-        <img class="left" src="../static/images/AboutPage_GabiPersonalPic.png" width = "300px" height = "300px" alt="Gabi Solo Pic" style="float: left">
-        <h2>Gabi</h2>
-        <p>
-            Gabi is a Senior at the University of Maryland double majoring in Finance and Business Management.
-            She's passionate about bringing teams together to innovate. She continues to explore finance,
-            entrepreneurship, and business management in and outside the classroom.
-        </p>
 
+        <div class="row">
+            <div class="border-box col-4" style="width: auto">
+                <!-- Heading for entire page & supporting image-->
+                <img class="left" src="../static/images/AboutPage_GabiPersonalPic.png" width = "300" height = "300" alt="Gabi Solo Pic" style="float: left; margin-left: 20px;">
+            </div>
 
-    </div>
+            <div class="border-box col-8">
+                    <div class = "row">
+                        <div class="border-box col">
+                            <div class="row" style="padding-right: 20px">
+                                <h2>Gabi</h2>
+                                <p> Gabi is a Senior at the University of Maryland double majoring in finance and business management.
+                                    She's passionate about bringing teams together to innovate. She continues to explore finance,
+                                    entrepreneurship, and business management in and outside the classroom. <br></p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
 
     <br>
 
     <div>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <h2>Joelle</h2>
         <div style="float: right;">
-        <img src=../static/images/AboutPage_JoellePersonalPic.png width = "300px" height = "300px" alt="Joelle Solo Pic" />
+        <img src=../static/images/AboutPage_JoellePersonalPic.png width = "300" height = "300" alt="Joelle Solo Pic">
             </div>
-        <p> Joelle is a Senior at the University of Maryland double majoring in Journalism and Business Management.
+        <p> Joelle is a Senior at the University of Maryland double majoring in journalism and business management.
             She's fascinated by human centered and big authority stories and is devoted to
-            learning about making sustainable choices, especially in retail
+            learning about making sustainable choices, especially in retail.
         </p>
         <p>
             When she's not writing articles in the middle of the night or conducting interview, she loves
@@ -97,5 +109,7 @@
             out with friends and family.
         </p>
     </div>
+        </div>
+
 </main>
 {% endblock %}

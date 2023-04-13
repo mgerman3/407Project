@@ -78,6 +78,25 @@ p {
 
 }
 
+.websiteFooter {
+    background-color: #69a695;
+    margin-top: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+a.footerItems{
+    color: black;
+    text-align: left;
+    padding-left: 50px;
+    text-decoration: none;
+}
+
+p.footerItems{
+    padding-left: 12px;
+    text-decoration: underline;
+}
+
 /* Checkout Page Styling */
 
 postFormLabels {
@@ -173,6 +192,10 @@ shippingEntry {
 .checkoutHeader {
     font-size: 33px;
     float: left;
+}
+
+.cartItemLabels {
+    text-align: center;
 }
 
 .sectionBreaker {
@@ -644,6 +667,7 @@ input.btneg {
   height: 0.8cm;
 }
 
+/* creates styling for quantity button on Generic Product Page*/
 input.btpos {
   border-radius: 5cm;
   width: 40px;
@@ -651,6 +675,13 @@ input.btpos {
   margin-left: -30px;
   height: 0.8cm;
 }
+
+/*creates spacing between both columsn of information on the generic product page*/
+.GenProduct_VerticalSpacer{
+  margin-left: 50px;
+}
+
+
 
 /* creates styling for Mission Statement on About Page*/
 
