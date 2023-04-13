@@ -85,6 +85,18 @@ p {
     padding-bottom: 7px;
 }
 
+a.footerItems{
+    color: black;
+    text-align: left;
+    padding-left: 50px;
+    text-decoration: none;
+}
+
+p.footerItems{
+    padding-left: 12px;
+    text-decoration: underline;
+}
+
 /* Checkout Page Styling */
 
 postFormLabels {
