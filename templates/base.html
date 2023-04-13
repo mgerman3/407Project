@@ -66,45 +66,44 @@
     <!-- create page content format for all child templates-->
         {% block page_content %}{% endblock %}
 
+
+</body>
+
+<footer>
 <div class="websiteFooter">
     <div class="row">
         <div class="col-4 text-center">
             <p class="footerItems">Helpful Links</p>
             <div class="row">
-                <a href="Home%20Page.html" class="footerItems">Home Page</a>
+                <a href="/" class="footerItems">Home Page</a>
             </div>
             <div class="row">
-                <a href="Shop.html" class="footerItems">Shop</a>
+                <a href="/Shop" class="footerItems">Shop</a>
             </div>
             <div class="row">
-                <a href="About%20Page.html.html" class="footerItems">About</a>
+                <a href="/About" class="footerItems">About</a>
             </div>
             <div class="row">
-                <a href="Contact%20Us%20Page.html" class="footerItems">Contact us</a>
+                <a href="/ContactUs" class="footerItems">Contact us</a>
             </div>
         </div>
         <div class="col-4">
             <p class="footerItems">Contact Us</p>
             <div class="row" style="display: inline-block">
                 <form>
-                    <input value="email" type="text" class="inputFields">
-                    <input type="submit" value="Submit" class="checkoutButtons" style="height: 30px">
+                    <input placeholder="Email" type="text" class="inputFields">
+                    <input type="submit" value="Submit" class="checkoutButtons" >
                 </form>
             </div>
         </div>
         <div class="col-4">
             <p class="footerItems">Social Media</p>
             <div class="row">
-                <a href="#" class="footerItems">Instagram</a>
+                 <a class="footerItems" aria-expanded="false" href="/LogIn"><img src="../static/images/instagram.png" alt="Bootstrap" width="30" height="30"></a>
             </div>
         </div>
     </div>
 </div>
-
-</body>
-
-<footer>
-
 
 </footer>
 

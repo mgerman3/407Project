@@ -78,6 +78,13 @@ p {
 
 }
 
+.websiteFooter {
+    background-color: #69a695;
+    margin-top: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
 /* Checkout Page Styling */
 
 postFormLabels {
