@@ -451,15 +451,6 @@ input.signupInput {
   display: block;
 }
 
-.map {
-    position: absolute;
-    float: right;
-    width: 400px;
-    top: 150px;
-    right: 50px;
-    border: 10px solid #69a695;
-}
-
 .paddingbetweenelements {
      padding-bottom: 20px;
 }
@@ -693,4 +684,31 @@ input.btpos {
   max-width:100%;
   padding: 50px;
   margin: 20px;
+}
+
+div.homeTitle{
+    display: block;
+    padding-left: 30px;
+    font-size: large;
+}
+
+.slogan {
+    float: left;
+    width: 40%;
+    font-size: 150px;
+    font-family: 'Open Sans';
+    position:absolute;
+    left: 100px;
+    top: 200px;
+}
+
+.columnRight {
+    float: right;
+    display: flex;
+}
+
+.map {
+    width: 50%;
+    height: auto;
+    border: 10px solid #69a695;
 }
