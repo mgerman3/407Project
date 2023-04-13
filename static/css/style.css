@@ -80,12 +80,9 @@ p {
 
 .websiteFooter {
     background-color: #69a695;
-    margin-top: 10px;
+    margin-top: 7px;
     padding-top: 7px;
     padding-bottom: 7px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
 a.footerItems{
@@ -683,6 +680,8 @@ input.btpos {
 .GenProduct_VerticalSpacer{
   margin-left: 50px;
 }
+
+
 
 /* creates styling for Mission Statement on About Page*/
 
