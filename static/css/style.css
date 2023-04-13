@@ -261,8 +261,9 @@ hr {
 }
 
 /*Styling order confirmation page*/
-h1.center {
+.h1-Center {
     text-align: center;
+    font-weight: bolder;
 }
 
 h2.left {
@@ -678,10 +679,12 @@ input.btpos {
 
 /*creates spacing between both columsn of information on the generic product page*/
 .GenProduct_VerticalSpacer{
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
-
+.GenProduct_HeadingSpacer{
+    margin-bottom: 20px;
+}
 
 /* creates styling for Mission Statement on About Page*/
 
