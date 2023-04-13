@@ -13,7 +13,31 @@
 
     {% block html_head %}{% endblock %}
 
-    <style>{% block html_style %}{% endblock %}</style>
+    <style>
+        {% block html_style %}{% endblock %}
+
+    * {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+a.footerItems, p.footerItems {
+   text-align: center;
+    padding-left: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    </style>
 </head>
 
 <body>
@@ -70,12 +94,13 @@
 </body>
 
 <footer>
+
 <div class="websiteFooter">
     <div class="row">
-        <div class="col-4">
+        <div class="column">
             <p class="footerItems" style="color: black">Helpful Links</p>
             <div class="row">
-                <a href="/" class="footerItems">Home Page</a>
+                <a href="/" class="footerItems">Home</a>
             </div>
             <div class="row">
                 <a href="/Shop" class="footerItems">Shop</a>
@@ -84,19 +109,15 @@
                 <a href="/About" class="footerItems">About</a>
             </div>
             <div class="row">
-                <a href="/ContactUs" class="footerItems">Contact us</a>
+                <a href="/ContactUs" class="footerItems">Contact Us</a>
             </div>
         </div>
-        <div class="col-4">
-            <p class="footerItems">Contact Us</p>
-            <div class="row" style="display: inline-block">
-                <form>
-                    <input placeholder="Email" type="text" class="inputFields" style="width: 225px">
-                    <input type="submit" value="Submit" class="checkoutButtons" style="height: 30px; font-size: 13px; ">
-                </form>
+        <div class="column">
+            <div class="row">
+                 <a class="centerImage" style="text-align: center" aria-expanded="false"><img src="../static/images/Clear%20Background%20Logo.png" alt="Bootstrap" width="150" height="150"></a>
             </div>
         </div>
-        <div class="col-4">
+        <div class="column">
             <p class="footerItems">Social Media</p>
             <div class="row">
                  <a class="footerItems" style="padding-left: 26px" aria-expanded="false" href="https://www.instagram.com/aroundtheblock.co/"><img src="../static/images/instagram.png" alt="Bootstrap" width="30" height="30"></a>
