@@ -175,6 +175,10 @@ shippingEntry {
     float: left;
 }
 
+.cartItemLabels {
+    text-align: center;
+}
+
 .sectionBreaker {
     padding-top: 40px;
 }
@@ -196,8 +200,6 @@ border: 0px;
 }
 
 
-<<<<<<< HEAD
-=======
 .navbar {
     background-color: deepskyblue;
 }
