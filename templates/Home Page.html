@@ -8,27 +8,35 @@
         <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
 
 <!-- Text on Screen -->
-    <body>
-        <div class = "row">
-            <div class="title">
-                <h1> AROUND THE BLOCK.CO</h1>
+    <div class="homePage">
+         <div class="homeTitle">
+            <div class="row" style="padding-top: 25px;">
+                <h1 class="checkoutHeader"><strong>AROUND THE BLOCK.CO</strong></h1>
+            </div>
+         </div>
+            <div class = slogan>
+                <div class="row">
+                    <h2>Join the<br>Block Party</h2>
+                    <h6>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> Maryland</h6>
+                </div>
+            </div>
+            <div>
+                <form action="Shop.html" method="post" >
+                    <input class="home" type="submit" value="START SHOPPING">
+                </form>
+            </div>
+           <div class="image-container">
+               <div class="row">
+                    <img src="../static/images/Contact Us Page Piic.png" alt="Skateboard" >
+                    <img src="../static/images/Misc_ModelPic.png" alt="Group">
+                    <img src="../static/images/AboutPage_JoellePersonalPic.png" alt="Joelle">
+               </div>
+           </div>
+        <div class = map>
+            <div class = "col">
+               <img src="../static/images/Misc_OldTownMap-Logo.png" alt="Old Town Map" class="map">
             </div>
         </div>
-            <div class="slogan">
-            <h2>Join the<br>Block Party</h2>
-            <h6>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> Maryland</h6>
-        </div>
-        <form action="/Shop" method="get" >
-            <input class="home" type="submit" value="START SHOPPING">
-        </form>
-    <!-- Static image on screen-->
-        <img src="../static/images/Misc_OldTownMap-Logo.png" alt="Old Town Map" class="map">
+    </div>
 
-        <!-- Image Set-->
-        <div class="image-container">
-            <img src="../static/images/Contact Us Page Piic.png" alt="Skateboard" >
-            <img src="../static/images/Misc_ModelPic.png" alt="Group">
-            <img src="../static/images/AboutPage_JoellePersonalPic.png" alt="Joelle">
-        </div>
-    </body>
 {% endblock %}
