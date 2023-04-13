@@ -18,6 +18,10 @@ def About():
 def RequestForm():
     return render_template('RequestForm.html')
 
+@app.route('/Reviews')
+def Reviews():
+    return render_template('Reviews.html')
+
 @app.route('/LogIn', methods = ['GET', 'POST'])
 def LogInScreen():
     if request.method == 'POST':

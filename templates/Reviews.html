@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Reviews{% endblock %}
+
+{% block page_content %}
+    <div class="GenProduct_HeadingSpacer"></div>
+    <div class = "h1-Center">
+            <h1>Leave a Review</h1>
+            <p>Are you enjoying our products? Let us know how we're doing!</p>
+    </div>
+    <div class = "GenProduct_rowLayout">
+        <div class="GenProduct_columnLayout">
+             <div class = "GenProduct_VerticalSpacer">
+            <form class="formInputFields">
+                    <div class = "row">
+                        <div class="border-box col">
+                            <div class="row" style="padding-right: 15px">
+                                <p class="formFieldsLabels">First Name(*)<br></p>
+                                 <input type = "text" class="inputFields" required>
+                            </div>
+                        </div>
+                        <div class="border-box col">
+                            <div class="row" style="padding-left: 15px">
+                                <p class="formFieldsLabels">Last Name(*)<br></p>
+                                <input type = "text" class="inputFields" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <p class="formFieldsLabels">Email(*)</p>
+                        <input type = "email" class="inputFields" required>
+                    </div>
+                    <div class = "row">
+                        <p class="formFieldsLabels">Type of Customer</p>
+                        <input type = "text" class="inputFields">
+                    </div>
+                    <div class = "row">
+                        <p class="formFieldsLabels">Message(*)</p>
+                         <textarea class="inputFields" id="message" rows="5" cols="50" required></textarea>
+                    </div>
+                    <div class = "row">
+                        <p class="formFieldsLabels"></p>
+                        <input type = "submit" class="input">
+                    </div>
+                </form>
+        </div>
+        </div>
+        <div class = "GenProduct_columnLayout">
+            <img src="../static/images/Reviews_FormPhoto.png" width = "400" height = "420" alt="ATB Model Skateboarding" style = "padding-left: 20px">
+        </div>
+    </div>
+
+{% endblock %}
