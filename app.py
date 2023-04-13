@@ -14,9 +14,9 @@ def Shop():
 def About():
     return render_template('About Page.html')
 
-@app.route('/ContactUs')
-def ContactUsPage():
-    return render_template('Contact Us Page.html')
+@app.route('/RequestForm')
+def RequestForm():
+    return render_template('RequestForm.html')
 
 @app.route('/LogIn', methods = ['GET', 'POST'])
 def LogInScreen():
