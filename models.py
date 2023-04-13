@@ -12,7 +12,7 @@ class Customer(db.Model):
    email = db.Column(db.String(60), nullable=False)
    address = db.Column(db.String(100), nullable=False)
    state = db.Column(db.String(2), nullable=False)
-   zipcode = db.Column(db.String(5), nullable=False)
+   zipcode = db.Column(db.Integer, nullable=False)
 
 
    def __init__(self, first_name, last_name, email, address, state, zipcode):
