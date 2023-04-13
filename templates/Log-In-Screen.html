@@ -5,6 +5,7 @@
 {% block html_style %}
     h1 {
         text-align: center;
+
     }
  body, html {
         background-image: url("../static/images/transparent-background.png");
@@ -45,14 +46,14 @@
         <input type="submit" value="Past Orders" />
       </div>
     </form>
-
-    </div>
+</div>
 
 
     {% else %}
 
-<h1>Log-in Below</h1>
+
 <div class="text-center">
+    <h1>Log-in Below</h1>
     <form action="/LogIn" method="post">
         <div class="border-box col">
             <div class="row" style="padding-right: 1px">
