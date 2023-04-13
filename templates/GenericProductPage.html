@@ -2,19 +2,25 @@
 
 {% block title %}Generic Product{% endblock %}
 
+{% block html_style %}
+.ButtonState{display:none}
+.Button{cursor:pointer;}
+{% endblock %}
+
+
 {% block page_content %}
 
  <div class="GenProduct_rowLayout">
   <div class="GenProduct_columnLayout">
       <img src= static/images/Shop_ClothingItem1.png width = "600" height = "600" alt="ATB Model Skateboarding">
   </div>
-  <div class="GenProduct_columnLayout">
-  <div class = "GenProduct_VerticalSpacer">
+  <div class="GenProduct_columnLayout" style="padding-left: 7px">
       <h1>Crewneck</h1>
       <h3>$43 USD</h3>
       <div class="GenProduct_spacer">
         <h4>Select a Size</h4>
-          <button class="input">X-Small</button>
+          <input type="radio" name="Button" class="ButtonState" checked id="XS" value="1"/>
+          <button class="input" for="XS">X-Small</button>
           <button class="input">Small</button>
           <button class="input">Medium</button>
           <button class="input">Large</button>
@@ -31,13 +37,12 @@
       <div class="GenProduct_spacer">
         <h4>Quantity</h4>
           <input type="button" class="btneg " value="-">
-          <input type="text" name="noq1" id="noq1" min="1" max="15" value="1">
+          <input type="text" name="noq1" id="noq1" min="1" max="15" value="1" style="text-align: center">
           <input type="button" class="btpos " value="+">
       </div>
       <div class="GenProduct_spacer">
         <button class="input">Add to Cart</button>
       </div>
-  </div>
 </div>
 
 {% endblock %}
