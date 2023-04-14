@@ -24,7 +24,7 @@
 <!-- Navbar -->
 
    {% if form_submitted %}
-
+<div class="row">
 <div class="text-center">
         <h2>Welcome, {'first_name'}!</h2>
 
@@ -47,11 +47,11 @@
       </div>
     </form>
 </div>
-
+</div>
 
     {% else %}
 
-
+<div class="row">
 <div class="text-center">
     <h1>Log-in Below</h1>
     <form action="/LogIn" method="post">
@@ -68,7 +68,7 @@
     <br>
     <br>
 </div>
-
+</div>
 
 <!--#verify if username and password are correct using html
 #redirect to home page-->
