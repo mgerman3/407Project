@@ -1,0 +1,33 @@
+Index: templates/Banner.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!-- ATB Blue = #69a695 -->\n<!-- Grey Buttons/Hovers = #d9d9d9 -->\n<!-- Super light grey, almost white background paneling = #f6f6f6 -->\n\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Log-In</title>\n    <link href=\"/static/CSS/style.css\" rel=\"stylesheet\">\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">\n    <script src=\"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js\" integrity=\"sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3\" crossorigin=\"anonymous\"></script>\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js\" integrity=\"sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V\" crossorigin=\"anonymous\"></script>\n</head>\n<style type=\"text/css\">\n\n</style>\n<body>\n\n<!-- Navbar -->\n        <nav class=\"navbar navbar-expand-lg\" style=\"background-color: #69a695\">\n          <div class=\"container-fluid\">\n            <a class=\"navbar-brand\" href=\"#\"><img src=\"../static/images/Clear%20Background%20Logo.png\" alt=\"Bootstrap\" width=\"30\" height=\"24\"></a>\n            <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n              <span class=\"navbar-toggler-icon\"></span>\n            </button>\n            <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">\n              <ul class=\"navbar-nav\">\n                <li class=\"nav-item\">\n                  <a class=\"nav-link active\" aria-current=\"page\" href=\"/\">Home</a>\n                </li>\n                <li class=\"nav-item dropdown\">\n                  <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n                    Shop\n                  </a>\n                  <ul class=\"dropdown-menu\">\n                    <li><a class=\"dropdown-item\" href=\"#\">Game Day Collection</a></li>\n                    <li><a class=\"dropdown-item\" href=\"#\">Dark Blue Collection</a></li>\n                    <li><a class=\"dropdown-item\" href=\"#\">Springtime Collection</a></li>\n                    <li><a class=\"dropdown-item\" href=\"#\">Logo Collection</a></li>\n                  </ul>\n                </li>\n                <li class=\"nav-item dropdown\">\n                  <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n                    About\n                  </a>\n                  <ul class=\"dropdown-menu\">\n                    <li><a class=\"dropdown-item\" href=\"#\">Around the Block</a></li>\n                    <li><a class=\"dropdown-item\" href=\"#\">Our Mission</a></li>\n                    <li><a class=\"dropdown-item\" href=\"#\">Meet our Team</a></li>\n                  </ul>\n                </li>\n                <li class=\"nav-item dropdown\">\n                  <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n                    Contact Us\n                  </a>\n                  <ul class=\"dropdown-menu\">\n                    <li><a class=\"dropdown-item\" href=\"#\">Request Form</a></li>\n                    <li><a class=\"dropdown-item\" href=\"#\">Reviews</a></li>\n                  </ul>\n                </li>\n\n                  <li class=\"nav-item dropdown\">\n                  <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n                    Log-In\n                  </a>\n                  <ul class=\"dropdown-menu\">\n                    <li><a class=\"dropdown-item\" href=\"login\">Sign-In</a></li>\n                    <li><a class=\"dropdown-item\" href=\"signup\">Create Account</a></li>\n                  </ul>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </nav>\n\n\n</body>\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/Banner.html b/templates/Banner.html
+--- a/templates/Banner.html	(revision e96deef8b2263735c4a8fadf59323039a70661c2)
++++ b/templates/Banner.html	(date 1680561673598)
+@@ -8,13 +8,11 @@
+     <meta charset="UTF-8">
+     <title>Log-In</title>
+     <link href="/static/CSS/style.css" rel="stylesheet">
+-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
++    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+ </head>
+-<style type="text/css">
+ 
+-</style>
+ <body>
+ 
+ <!-- Navbar -->
+@@ -74,6 +72,6 @@
+           </div>
+         </nav>
+ 
+-
++<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+ </body>
+ </html>
