@@ -626,6 +626,7 @@ p.shopLabels {
   width: 200px;
   height: 200px;
   object-fit: cover;
+  margin: 10px;
 }
 
 .ContactUs_MainHeading {
@@ -687,8 +688,14 @@ input.btpos {
 
 div.homeTitle{
     display: block;
+    text-align: center;
     padding-left: 30px;
-    font-size: large;
+    font-family: 'Open Sans';
+    font-size: xxx-large;
+}
+.h1{
+   /* font-size: xxx-large; */
+    margin: 0;
 }
 
 .slogan {
@@ -701,15 +708,38 @@ div.homeTitle{
     top: 200px;
 }
 
-.columnRight {
-    float: right;
+.left-column{
+    width: 70%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.right-column{
+    width: 30%;
+    padding-left: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .map {
-    width: 50%;
-    height: auto;
+    /* border: 10px solid #69a695; */
+    right: 50px;
+    padding: 20px;
+}
+
+.small-image {
+    width: auto;
+    height: 500px;
+    float: right;
     border: 10px solid #69a695;
+    margin-right: 100px;
+    margin-bottom: 100px;
 }
 
 /* About Us Page Containers*/
@@ -731,12 +761,4 @@ div.homeTitle{
 }
 
 
-.leftcolumn{
-    float: left;
-    width: 60%;
-}
-.rightcolumn{
-    float: left;
-    width: 40%;
-    padding-left: 20px;
-}
+
