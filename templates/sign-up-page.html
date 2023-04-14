@@ -1,66 +1,68 @@
 {% extends "base.html" %}
 
+<!-- create title block -->
 {% block title %}Sign-Up{% endblock %}
 
-
-{% block html_style %}    p {
-        text-align: center;
-    }
+<!-- create style block-->
+{% block html_style %}
+    <!-- center the text -->
     h1, p {
         text-align: center;
     }
-
 {% endblock %}
 
-
+<!-- create page content in body-->
 {% block page_content %}
 
     <!-- background image -->
-<img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
+    <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
 
+    <!-- Thank user for signing up once form completed -->
     {% if form_submitted %}
 
     <div class="text-center" style="height: 100vh">
         <br>
         <h2>{'first_name'}, thank you for signing up!</h2>
+        <!-- display home button for user to return to home page -->
         <p><br>Click to return home</p>
         <form action="/" method="get">
             <input type="submit" value="Home">
         </form>
     </div>
 
-
+    <!-- if the form is not completed, display the form below -->
     {% else %}
 
+ <!-- create form for user to sign up (all fields required) -->
 <h1>Sign-Up Here</h1>
-<div class="text-center">
+<div class="text-center" style="height: 100vh">
     <form action="signup" method="post">
+        <!-- allow user to enter username -->
         <div class="row" >
             <input type="text" class = "signupInput" name="username" placeholder="Username" required>
         </div> <br>
+        <!-- allow user to enter password -->
         <div class="row" >
             <input type="password" class = "signupInput" name="password" placeholder="Password" required>
         </div> <br>
+        <!-- allow user to enter first name -->
         <div class="row" >
             <input type="First Name" class = "signupInput" name="First Name" placeholder="First Name" required>
         </div> <br>
+        <!-- allow user to enter last name -->
         <div class="row" >
             <input type="Last Name" class = "signupInput" name="Last Name" placeholder="Last Name" required>
         </div> <br>
+        <!-- allow user to enter email -->
         <div class="row" >
             <input type="email" class = "signupInput" name="Last Name" placeholder="Email" required>
         </div> <br>
+        <!-- allow user to submit form -->
         <form action="/signup" method="post">
             <input type="submit" value="Register">
         </form>
     </form>
-    <br>
 </div>
-
-<!--#verify if username and password are correct using html
-#redirect to home page-->
-
-<!-- proper spacing for the background photo-->
 
  {% endif %}
 
