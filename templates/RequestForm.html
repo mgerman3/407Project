@@ -62,6 +62,7 @@
             </div>
             {% else %}
        <!-- Shipping Information Fields -->
+        <form action="{{ url_for('RequestForm') }}" method="post">
         <div class="inputBoxTotal" style="padding-left: 24px">
             <div class="row">
                 <div class="border-box col">
@@ -86,7 +87,7 @@
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">Phone Number</p>
-                            <input type="tel" class="inputFields" name="phoneNumber" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{3}" required><br><br>
+                            <input type="tel" class="inputFields" name="phoneNumber" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
                         </div>
                         <div class = "row">
                             <p class="formFieldsLabels">Message(*)</p>
