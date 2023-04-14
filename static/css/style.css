@@ -740,3 +740,32 @@ input.btpos {
   background-color: #DCDCDC; /* Set the background color of the container */
   border: 1px solid #ccc; /* Add a border around the container */
 }
+
+
+/* Styling for Inventory Management */
+.invHeader {
+    font-size: 33px;
+    text-align: center;
+}
+
+.postInvLabels {
+    display: inline-block;
+    text-align: center;
+}
+
+.inventoryBoxTotal {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formInvInputFields {
+    background-color: #f6f6f6;
+    padding: 30px 25px 30px 25px;
+}
+
+.formFieldsLabels {
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
