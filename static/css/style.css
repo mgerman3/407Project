@@ -688,10 +688,14 @@ input.btpos {
 
 div.homeTitle{
     display: block;
-    /*padding-left: 30px; */
     text-align: center;
-    font-size: large;
+    padding-left: 30px;
     font-family: 'Open Sans';
+    font-size: xxx-large;
+}
+.h1{
+   /* font-size: xxx-large; */
+    margin: 0;
 }
 
 .slogan {
