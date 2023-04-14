@@ -4,27 +4,23 @@
 
 
 {% block html_style %}
-    h1 {
+    h1, p {
         text-align: center;
     }
- body, html {
-        background-image: url("../static/images/transparent-background.png");
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-    }
+
 {% endblock %}
 
 
 {% block page_content %}
 
+    <!-- background image -->
+<img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
 
     {% if form_submitted %}
 
-    <div class="text-center">
-        <h2>Thank you for signing up!</h2>
+    <div class="text-center" style="height: 100vh">
+        <br>
+        <h2>{'first_name'}, thank you for signing up!</h2>
         <p><br>Click to return home</p>
         <form action="/" method="get">
             <input type="submit" value="Home">
@@ -56,6 +52,7 @@
             <input type="submit" value="Register">
         </form>
     </form>
+    <br>
 </div>
 
 <!--#verify if username and password are correct using html

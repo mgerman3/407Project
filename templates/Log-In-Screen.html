@@ -7,15 +7,6 @@
         text-align: center;
 
     }
- body, html {
-        background-image: url("../static/images/transparent-background.png");
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-
-    }
 
  text-center {padding: 9000px 9000px;}
 {% endblock %}
@@ -23,36 +14,38 @@
 {% block page_content %}
 <!-- Navbar -->
 
+    <!-- background image -->
+<img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
+
    {% if form_submitted %}
-<div class="row">
-<div class="text-center">
-        <h2>Welcome, {'first_name'}!</h2>
-
-    <form action="/Shop" method="get">
-      <div>
-        <input type="submit" value="Start Shopping" />
-      </div>
-    </form>
-
-    <form action="/cart" method="get">
-      <div>
-        <input type="submit" value="View Cart" />
-      </div>
-    </form>
-
+    <div class="text-center" style="height: 100vh">
+        <div class="row">
+            <h2>Welcome, {'first_name'}!</h2>
+        </div>
+        <br>
+        <div class="row">
+            <form action="/Shop" method="get">
+                <input type="submit" value="Start Shopping" />
+            </form>
+        </div>
+        <br>
+        <div class="row">
+            <form action="/cart" method="get">
+                <input type="submit" value="View Cart" />
+            </form>
+        </div>
+        <br>
     <!-- need to change /CheckOut to a link to change info-->
-    <form action="/CheckOut" method="get">
-      <div>
-        <input type="submit" value="Past Orders" />
-      </div>
-    </form>
-</div>
-</div>
+        <div class="row">
+            <form action="/CheckOut" method="get">
+                <input type="submit" value="Past Orders" />
+            </form>
+        </div>
+    </div>
 
     {% else %}
 
-<div class="row">
-<div class="text-center">
+<div class="text-center" style="height: 100vh">
     <h1>Log-in Below</h1>
     <form action="/LogIn" method="post">
         <div class="border-box col">
@@ -67,7 +60,6 @@
     </form>
     <br>
     <br>
-</div>
 </div>
 
 <!--#verify if username and password are correct using html
