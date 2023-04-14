@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block title %}Inventory Input{% endblock %}
+
+{% block page_content %}
+
+
+        {% if form_submitted %}
+            <div class="row">
+                <div class="checkoutHeader" style="padding: 20px">
+                    <h2>Inventory Updated!</h2><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="postFormLabels">
+                    <p>Item ID:</p>
+                </div>
+                <div class="postFormLabels">
+                    <p>{{ request.form.get('item_ID')}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="postFormLabels">
+                    <p>Item Name:</p>
+                </div>
+                <div class="postFormLabels">
+                    <p>{{ request.form.get('item_name')}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="postFormLabels">
+                    <p>Size:</p>
+                </div>
+                <div class="postFormLabels">
+                    <p>{{ request.form.get('size')}}</p>
+                </div>
+            </div>
+            <div class="row">
+               <div class="postFormLabels">
+                    <p>Color:</p>
+                </div>
+                <div class="postFormLabels">
+                    <p>{{ request.form.get('color')}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="postFormLabels">
+                    <p>Item Price:</p>
+                </div>
+                <div class="postFormLabels">
+                    <p>{{ request.form.get('price')}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="postFormLabels">
+                    <p>Quantity:</p>
+                </div>
+                <div class="postFormLabels">
+                    <p>{{ request.form.get('quantity')}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="postFormLabels">
+                    <p>Description:</p>
+                </div>
+                <div class="postFormLabels">
+                    <p>{{ request.form.get('desc')}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="postFormLabels">
+                    <p>Uploaded Image:</p>
+                </div>
+                <div class="postFormLabels">
+                    <p>{{ request.form.get('image')}}</p>
+                </div>
+            </div>
+            {% else %}
+        <form action="{{ url_for('EnterItems') }}" method="post">
+    <!-- Background Photo -->
+        <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
+        <!-- Inventory Input -->
+        <div class="inventoryBoxTotal">
+            <div class="row">
+                <div class = "d-flex justify-content-center">
+                    <div class = "border-box col">
+                        <div class = row>
+                            <h2 class="checkoutHeader"><strong>Inventory Input</strong></h2><br><br>
+                        </div>
+                        <div class = row>
+                            <div class="formInputFields">
+                                <div class = "row">
+                                    <div class="border-box col">
+                                        <div class="row">
+                                            <p class="formFieldsLabels">Item ID (*)<br></p>
+                                            <input type="text" class="inputFields" name="item_ID" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class = "border-box-col">
+                                    <div class="row">
+                                        <p class="formFieldsLabels">Item Name<br></p>
+                                        <input type="text" class="inputFields" name="item_name" required><br><br></div>
+                                    <div class = "dropdown">
+                                        <p class="formFieldsLabels">Size</p>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" name ="size">
+                                            Select...
+                                        </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">XS</a></li>
+                                                <li><a class="dropdown-item" href="#">S</a></li>
+                                                <li><a class="dropdown-item" href="#">M</a></li>
+                                                <li><a class="dropdown-item" href="#">L</a></li>
+                                                <li><a class="dropdown-item" href="#">XL</a></li>
+                                                <li><a class="dropdown-item" href="#">2X</a></li>
+                                            </ul>
+                                    </div>
+                                    <div class="row">
+                                        <p class="formFieldsLabels">Color</p>
+                                        <input type="text" class="inputFields" name="color" required><br><br>
+                                    </div>
+                                    <div class="row">
+                                        <p class="formFieldsLabels">Item Price</p>
+                                        <input type="text" class="inputFields" name="price" required><br><br>
+                                    </div>
+                                    <div class="row">
+                                        <p class="formFieldsLabels">Quantity</p>
+                                        <input type="text" class="inputFields" name="quantity" required><br><br>
+                                    </div>
+                                    <div class="row">
+                                        <p class="formFieldsLabels">Description</p>
+                                        <input type="text" class="inputFields" name="desc" required><br><br>
+                                    </div>
+                                    <div class="row">
+                                        <p class="formFieldsLabels">Upload Image</p>
+                                        <input class="form-control" type="file" id="image">
+                                    </div>
+                                    <div class="row">
+                                      <input type="submit" value="Submit Inventory" class="inventoryButtons">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+        {% endif %}
+{% endblock %}

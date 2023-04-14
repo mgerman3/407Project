@@ -34,6 +34,14 @@ def homePage():
 def Shop():
     return render_template('Shop.html')
 
+@app.route('/Inventory')
+def Inventory():
+    return render_template('Inventory.html')
+
+@app.route('/EnterItems')
+def EnterItems():
+    return render_template('Input_Inventory.html')
+
 @app.route('/About')
 def About():
     return render_template('About Page.html')
