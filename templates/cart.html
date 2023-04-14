@@ -7,7 +7,7 @@
 {% block html_style %}
     <!-- ensure title is centered -->
     h1 {
-        text-align: center;
+        text-align: center
     }
 {% endblock %}
 
@@ -26,16 +26,16 @@
             <!-- ensure card expands when multiple items are added to cart-->
             <div class="cartPlaceholder" style="position: relative; height: auto; min-height: 100%; padding-bottom: 7px;">
                 <div class=”cartHeader”>
-                    <h3 class=”Head” style="padding: 5px 5px 0px 5px; margin: 0px;" >Items</h3>
+{#                    <h3 class=”Head” style="padding: 5px 5px 0px 5px; margin: 0px;" >Items</h3>#}
                     <!-- titles for columns in cart-->
                     <div class="cart-item">
-                        <h5 class="item-info"> </h5>
+                        <h5 class="item-info">Item(s)</h5>
                         <h5 class="item-info">Type</h5>
                         <h5 class="item-info">Quantity</h5>
                         <h5 class="item-info">Size</h5>
                         <h5 class="item-info">Price</h5>
                     </div>
-                    <!--FUTURE FORMATTING: %% for item in cart %}--->
+                    <!--FUTURE FORMATTING: %% for item in cart %}-->
                         <div class="cart-item">
                             <!-- display image of item -->
                             <div class="cart-item-image">
@@ -57,11 +57,11 @@
                                 </div>
                                 <!-- display item price and remove button-->
                                 <div class="cart-item-price">
-                                    <h3 style="margin-bottom: 0px">$42.00 USD<h3> <!-- FUTURE FORMATTING: { item.price }}-->
+                                    <h3 style="margin-bottom: 0px">$42.00 USD</h3> <!-- FUTURE FORMATTING: { item.price }}-->
                                     <div class="remove">Remove</div>
                                 </div>
                             </div>
-                    <!--FUTURE FORMATTING:% endfor %}--->
+                    <!--FUTURE FORMATTING:% endfor %}-->
                 </div>
             </div>
         </div>
