@@ -13,31 +13,7 @@
 
     {% block html_head %}{% endblock %}
 
-    <style>
-        {% block html_style %}{% endblock %}
-
-    * {
-  box-sizing: border-box;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-}
-
-a.footerItems, p.footerItems {
-   text-align: center;
-    padding-left: 12px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-    </style>
+    <style>{% block html_style %}{% endblock %}</style>
 </head>
 
 <body>
@@ -56,23 +32,15 @@ a.footerItems, p.footerItems {
           <a class="dropbtn" href="/Shop" aria-expanded="false">
             Shop
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Game Day Collection</a></li>
-            <li><a class="dropdown-item" href="#">Dark Blue Collection</a></li>
-            <li><a class="dropdown-item" href="#">Springtime Collection</a></li>
-            <li><a class="dropdown-item" href="#">Logo Collection</a></li>
-          </ul>
         </li>
         <li class="nav-item">
             <a class="dropbtn" aria-current="page" href="/About">About</a>
-          </li>
+        </li>
         <li class="nav-item dropdown">
-          <a class="dropbtn" href="/ContactUs" aria-expanded="false">
-            Contact Us
-          </a>
+          <a class="dropbtn" aria-expanded="false">Contact Us</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Request Form</a></li>
-            <li><a class="dropdown-item" href="#">Reviews</a></li>
+            <li><a class="dropdown-item" href="/RequestForm">Request Form</a></li>
+            <li><a class="dropdown-item" href="/Reviews">Reviews</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -93,14 +61,12 @@ a.footerItems, p.footerItems {
 
 </body>
 
-<footer>
-
 <div class="websiteFooter">
     <div class="row">
-        <div class="column">
+        <div class="col-4">
             <p class="footerItems" style="color: black">Helpful Links</p>
             <div class="row">
-                <a href="/" class="footerItems">Home</a>
+                <a href="/" class="footerItems">Home Page</a>
             </div>
             <div class="row">
                 <a href="/Shop" class="footerItems">Shop</a>
@@ -109,15 +75,19 @@ a.footerItems, p.footerItems {
                 <a href="/About" class="footerItems">About</a>
             </div>
             <div class="row">
-                <a href="/ContactUs" class="footerItems">Contact Us</a>
+                <a href="/ContactUs" class="footerItems">Contact us</a>
             </div>
         </div>
-        <div class="column">
-            <div class="row">
-                 <a class="centerImage" style="text-align: center" aria-expanded="false"><img src="../static/images/Clear%20Background%20Logo.png" alt="Bootstrap" width="150" height="150"></a>
+        <div class="col-4">
+            <p class="footerItems">Contact Us</p>
+            <div class="row" style="display: inline-block">
+                <form>
+                    <input placeholder="Email" type="text" class="inputFields" style="width: 225px">
+                    <input type="submit" value="Submit" class="checkoutButtons" style="height: 30px; font-size: 13px; ">
+                </form>
             </div>
         </div>
-        <div class="column">
+        <div class="col-4">
             <p class="footerItems">Social Media</p>
             <div class="row">
                  <a class="footerItems" style="padding-left: 26px" aria-expanded="false" href="https://www.instagram.com/aroundtheblock.co/"><img src="../static/images/instagram.png" alt="Bootstrap" width="30" height="30"></a>
@@ -125,7 +95,5 @@ a.footerItems, p.footerItems {
         </div>
     </div>
 </div>
-
-</footer>
 
 </html>

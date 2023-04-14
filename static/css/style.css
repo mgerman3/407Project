@@ -711,3 +711,21 @@ div.homeTitle{
     height: auto;
     border: 10px solid #69a695;
 }
+
+/* About Us Page Containers*/
+
+.containerd {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 70px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+}
+
+.containere {
+  max-width: 100%; /* Set the maximum width of the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 70px; /* Add some padding to the container */
+  background-color: #DCDCDC; /* Set the background color of the container */
+  border: 1px solid #ccc; /* Add a border around the container */
+}

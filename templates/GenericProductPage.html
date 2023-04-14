@@ -43,11 +43,17 @@
           <input type="button" class="btpos " value="+">
       </div>
       <div class="GenProduct_spacer">
-        <button class="input">Add to Cart</button>
+        <form action="/cart" method="get">
+            <div>
+                <input type = "submit" value="Add to Cart"/>
+            </div>
+        </form>
+{#          <button class="input">Add to Cart</button>#}
       </div>
+    </div>
+    </div>
+  </div>
 </div>
-</div>
- </div>
+ <div class="GenProduct_HeadingSpacer"></div>
 
 {% endblock %}
-
