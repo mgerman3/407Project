@@ -636,11 +636,6 @@ p.shopLabels {
   margin-left: 10px;
 }
 
-/*creates two row layout for entire page*/
-.GenProduct_rowLayout {
-  display: flex;
-}
-
 /*creates spacing between each element on the right side of the generic product page*/
 .GenProduct_spacer{
   margin-top: 50px;
@@ -667,6 +662,10 @@ input.btpos {
 /*creates spacing between both columsn of information on the generic product page*/
 .GenProduct_VerticalSpacer{
   margin-left: 30px;
+}
+
+.GenProduct_VerticalRightSpacer{
+  margin-right: 30px;
 }
 
 .GenProduct_HeadingSpacer{
