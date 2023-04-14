@@ -7,34 +7,40 @@
 <!-- Background Photo -->
         <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
 
-<!-- Text on Screen -->
-    <div class="homePage">
-         <div class="homeTitle">
-            <div class="row" style="padding-top: 25px;">
-                <h1 class="checkoutHeader"><strong>AROUND THE BLOCK.CO</strong></h1>
-            </div>
-         </div>
+<!-- Title for Around the Block -->
+    <div class = homeTitle style="padding-top: 25px;">
+        <h1> AROUND THE BLOCK.CO </h1>
+    </div>
+    <!-- Text for Left Side of Screen -->
+    <div class = "row">
+        <div class = "left-column">
             <div class = slogan>
-                <div class="row">
+                <div class = "row">
                     <h2>Join the<br>Block Party</h2>
                     <h6>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> Maryland</h6>
                 </div>
+                <!-- Start shopping button directing user to shop page-->
+                <div class = "row">
+                    <form action="/Shop" method="get" >
+                        <input class="home" type="submit" value="START SHOPPING">
+                    </form>
+                </div>
             </div>
-            <div>
-            <form action="/Shop" method="get" >
-                <input class="home" type="submit" value="START SHOPPING">
-            </form>
-            </div>
+            <!-- 3 images below shop button -->
            <div class="image-container">
-               <div class="row">
-                    <img src="../static/images/Contact Us Page Piic.png" alt="Skateboard" >
-                    <img src="../static/images/Misc_ModelPic.png" alt="Group">
+                    <img src="../static/images/AboutPage_OurMission_GroupPic.JPG" alt="Group on Steps">
                     <img src="../static/images/AboutPage_JoellePersonalPic.png" alt="Joelle">
-               </div>
+                    <img src="../static/images/Misc_ModelPic.png" alt="Group">
+                   <!--<img src="../static/images/AboutPage_OurMission_GroupPic.JPG" alt="Group on Steps">-->
            </div>
-        <div class = "map">
-                   <img src="../static/images/Misc_OldTownMap-Logo.png" alt="Old Town Map" >
+        </div>
+        <!-- Old Town map on right side of screen -->
+        <div class = "right-column">
+            <div class = "map">
+                <img src="../static/images/Misc_OldTownMap-Logo.png" alt="Old Town Map" class="small-image" >
+            </div>
         </div>
     </div>
+
 
 {% endblock %}
