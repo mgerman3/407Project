@@ -45,7 +45,7 @@
         </li>
           <!-- create contact us page on navbar -->
         <li class="nav-item dropdown">
-          <a class="dropbtn" aria-expanded="false">Contact Us</a>
+          <a class="dropbtn" href="#" aria-expanded="false">Contact Us</a>
             <!-- create drop down menu on contact us page on navbar -->
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/RequestForm">Request Form</a></li>
@@ -62,6 +62,18 @@
         </li>
             <!-- create cart page on navbar using image-->
           <li><a class="dropbtn" href="/cart"><img src="../static/images/cart.png" alt="Bootstrap" width="30" height="24"></a></li>
+        {% if current_user.role in ['MANAGER', 'ADMIN'] %}
+               <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                   <ul class="navbar-nav ms-auto">
+                       <li class="nav-item navbar-text">
+                           Welcome, {{ current_user.username }}!
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                       </li>
+                   </ul>
+               </div>
+            {% endif %}
       </ul>
     </div>
   </div>
@@ -71,7 +83,7 @@
         {% block page_content %}{% endblock %}
 
 
-</body>
+
 
 <!-- create footer for all child templates-->
 <footer>
@@ -113,4 +125,6 @@
     </div>
 </div>
 </footer>
+
+</body>
 </html>
