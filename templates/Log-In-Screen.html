@@ -1,68 +1,71 @@
 {% extends "base.html" %}
 
+<!-- create title block -->
 {% block title %}Log-In{% endblock %}
 
+<!-- create style block -->
 {% block html_style %}
+    <!-- help align text in center -->
     h1 {
         text-align: center;
-
     }
-
- text-center {padding: 9000px 9000px;}
+    text-center {
+    padding: 9000px 9000px;
+    }
 {% endblock %}
 
 {% block page_content %}
-<!-- Navbar -->
 
     <!-- background image -->
-<img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
+    <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
 
+    <!-- if form is submitted, display welcome message and links to other pages -->
    {% if form_submitted %}
     <div class="text-center" style="height: 100vh">
+        <!-- welcome message with users first name -->
         <div class="row">
-            <h2>Welcome, {'first_name'}!</h2>
+            <h2>Welcome, {{ url_for('first_name')}}</h2>
         </div>
         <br>
+        <!-- link to shop page -->
         <div class="row">
             <form action="/Shop" method="get">
                 <input type="submit" value="Start Shopping" />
             </form>
         </div>
         <br>
+        <!-- link to cart page -->
         <div class="row">
             <form action="/cart" method="get">
                 <input type="submit" value="View Cart" />
             </form>
         </div>
         <br>
-    <!-- need to change /CheckOut to a link to change info-->
-        <div class="row">
-            <form action="/CheckOut" method="get">
-                <input type="submit" value="Past Orders" />
-            </form>
-        </div>
     </div>
 
+    <!-- if form is not submitted, display log-in form -->
     {% else %}
 
+ <!-- log-in form -->
 <div class="text-center" style="height: 100vh">
     <h1>Log-in Below</h1>
     <form action="/LogIn" method="post">
         <div class="border-box col">
+            <!-- create input for username -->
             <div class="row" style="padding-right: 1px">
                 <input type = "text" class="loginInput" placeholder="Username" required>
             </div> <br>
+            <!-- create input for password -->
             <div class="row" style="padding-right: 1px">
                 <input type="password" class="loginInput" placeholder="Password" required>
             </div>
         </div>
+        <!-- create button to log in -->
         <br><input type="submit" value="Log In">
     </form>
     <br>
     <br>
 </div>
 
-<!--#verify if username and password are correct using html
-#redirect to home page-->
 {% endif %}
 {% endblock %}

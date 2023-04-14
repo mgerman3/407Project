@@ -1,26 +1,33 @@
 {% extends "base.html" %}
 
+<!-- create title block -->
 {% block title %}Cart{% endblock %}
 
+<!-- create style block -->
 {% block html_style %}
+    <!-- ensure title is centered -->
     h1 {
         text-align: center;
     }
 {% endblock %}
 
+<!-- create page content in body -->
 {% block page_content %}
 
-
+    <!-- create a form that can be established a form to the checkout page-->
     <form action="/CheckOut" method="get">
+        <!-- create a card to display items added to the cart -->
         <div class="checkoutItemCoupon" style="padding-left: 24px" >
             <div class="row" style="padding-top: 25px;">
                 <h1 class="checkoutHeader"><strong>Cart</strong></h1>
             </div>
             <div class="row" style="padding-top: 25px;">
             </div>
+            <!-- ensure card expands when multiple items are added to cart-->
             <div class="cartPlaceholder" style="position: relative; height: auto; min-height: 100%; padding-bottom: 7px;">
                 <div class=”cartHeader”>
                     <h3 class=”Head” style="padding: 5px 5px 0px 5px; margin: 0px;" >Items</h3>
+                    <!-- titles for columns in cart-->
                     <div class="cart-item">
                         <h5 class="item-info"> </h5>
                         <h5 class="item-info">Type</h5>
@@ -28,123 +35,88 @@
                         <h5 class="item-info">Size</h5>
                         <h5 class="item-info">Price</h5>
                     </div>
-                    <!--%% for item in cart %}--->
+                    <!--FUTURE FORMATTING: %% for item in cart %}--->
                         <div class="cart-item">
+                            <!-- display image of item -->
                             <div class="cart-item-image">
                                 <img src="static/images/Shop_ClothingItem1.png" alt="item" width="100" height="100" style="margin-bottom: 7px" >
                             </div>
+                            <!-- display item name -->
                             <div class="cart-item-details">
                                 <div class="cart-item-title">
-                                    <h3 style="text-align: center">Crewneck</h3> <!--{ item.title }}-->
+                                    <h3 style="text-align: center">Crewneck</h3> <!-- FUTURE FORMATTING: { item.title }}-->
                                 </div>
                             </div>
+                            <!-- display item quantity -->
                                 <div class=”cart-counter”>
-                                    <input class="item-info" type=number min=1 max=5 value="1"> <!--{ item.quantity }}-->
+                                    <input class="item-info" type=number min=1 max=5 value="1"> <!-- FUTURE FORMATTING: { item.quantity }}-->
                                 </div>
+                                <!-- display item size -->
                                 <div class="cart-item-size">
-                                    <h3>M</h3> <!--{ item.size }}-->
+                                    <h3>M</h3> <!-- FUTURE FORMATTING: { item.size }}-->
                                 </div>
+                                <!-- display item price and remove button-->
                                 <div class="cart-item-price">
-                                    <h3 style="margin-bottom: 0px">$42.00 USD<h3> <!--{ item.price }}-->
+                                    <h3 style="margin-bottom: 0px">$42.00 USD<h3> <!-- FUTURE FORMATTING: { item.price }}-->
                                     <div class="remove">Remove</div>
                                 </div>
                             </div>
-
-
-                    <div class="cart-item">
-                            <div class="cart-item-image">
-                                <img src="static/images/Shop_ClothingItem1.png" alt="item" width="100" height="100" style="margin-bottom: 7px" >
-                            </div>
-                            <div class="cart-item-details">
-                                <div class="cart-item-title">
-                                    <h3 style="text-align: center">Crewneck</h3> <!--{ item.title }}-->
-                                </div>
-                            </div>
-                                <div class=”cart-counter”>
-                                    <input class="item-info" type=number min=1 max=5 value="1"> <!--{ item.quantity }}-->
-                                </div>
-                                <div class="cart-item-size">
-                                    <h3>M</h3> <!--{ item.size }}-->
-                                </div>
-                                <div class="cart-item-price">
-                                    <h3 style="margin-bottom: 0px">$42.00 USD<h3> <!--{ item.price }}-->
-                                    <div class="remove">Remove</div>
-                                </div>
-                            </div>
-
-                    <div class="cart-item">
-                            <div class="cart-item-image">
-                                <img src="static/images/Shop_ClothingItem1.png" alt="item" width="100" height="100" style="margin-bottom: 7px" >
-                            </div>
-                            <div class="cart-item-details">
-                                <div class="cart-item-title">
-                                    <h3 style="text-align: center">Crewneck</h3> <!--{ item.title }}-->
-                                </div>
-                            </div>
-                                <div class=”cart-counter”>
-                                    <input class="item-info" type=number min=1 max=5 value="1"> <!--{ item.quantity }}-->
-                                </div>
-                                <div class="cart-item-size">
-                                    <h3>M</h3> <!--{ item.size }}-->
-                                </div>
-                                <div class="cart-item-price">
-                                    <h3 style="margin-bottom: 0px">$42.00 USD<h3> <!--{ item.price }}-->
-                                    <div class="remove">Remove</div>
-                                </div>
-                            </div>
-
-                    <!--% endfor %}--->
+                    <!--FUTURE FORMATTING:% endfor %}--->
                 </div>
             </div>
         </div>
 
-
+    <!-- display cart totals and subtotals-->
         <div class="border-box col">
             <h2 class="checkoutHeader"><strong>Cart Totals</strong></h2><br><br>
-                <div class="billingTotals">
-                    <div class="row">
-                        <p class="cartTotalsLabels">Subtotal -</p><hr>
-                    </div>
-                    <div class="row">
-                        <div class="border-box col" style="padding: 0px">
-                            <p class="cartTotalsLabels">Shipping -</p>
-                        </div>
-                        <div class="border-box col" style="padding: 0px 0px 10px 0px">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Local Pick Up:
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Home Delivery
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Rapid Delivery
-                                </label>
-                            </div>
-                        </div><hr>
-                    </div>
-                    <div class="row">
-                        <p class="cartTotalsLabels">Taxes -</p><hr>
-                    </div>
-                    <div class="row">
-                        <p class="cartTotalsLabels"><strong>Total -</strong></p>
-                        <div class="row">
-                        </div>
-                    </div>
-                    <div class="row">
-                    <input type="submit" value="Checkout" class="checkoutButtons" style="float: right; margin: 20px; padding: 7px 75px 7px 75px;">
-                    </div>
+            <div class="billingTotals">
+                <!-- display subtotal -->
+                <div class="row">
+                    <p class="cartTotalsLabels">Subtotal -</p><hr>
                 </div>
+                <!-- display shipping -->
+                <div class="row">
+                    <div class="border-box col" style="padding: 0px">
+                        <p class="cartTotalsLabels">Shipping -</p>
+                    </div>
+                    <!-- create radio buttons for the three shipping options -->
+                    <div class="border-box col" style="padding: 0px 0px 10px 0px">
+                        <!-- local pickup shipping -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Local Pick Up:
+                            </label>
+                        </div>
+                        <!-- home delivery shipping -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Home Delivery
+                            </label>
+                        </div>
+                        <!-- rapid delivery shipping -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Rapid Delivery
+                            </label>
+                        </div>
+                    </div><hr>
+                </div>
+                <!-- display taxes -->
+                <div class="row">
+                    <p class="cartTotalsLabels">Taxes -</p><hr>
+                </div>
+                <!-- display total -->
+                <div class="row">
+                    <p class="cartTotalsLabels"><strong>Total -</strong></p>
+                </div>
+                <!-- create button to go to checkout page -->
+                <div class="row">
+                    <input type="submit" value="Checkout" class="checkoutButtons" style="float: right; margin: 20px; padding: 7px 75px 7px 75px;">
+                </div>
+            </div>
         </div>
-
-        <!-- Button for Place Order -->
-
-        </form>
+    </form>
 {% endblock %}
