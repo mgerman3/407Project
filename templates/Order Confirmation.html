@@ -4,21 +4,17 @@
 {% block title %}Check Out{% endblock %}
 
 {% block html_style %}
-     body, html {
-        background-image: url("../static/images/transparent-background.png");
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-    }
 
 {% endblock %}
 
 {% block page_content %}
 <!--Order Confirmation headers and image-->
+<!-- background image -->
+<img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
 
-<div class="box" style="align-content: center">
+
+
+<div class="box" style="align-content: center; height: 100vh;">
         <div class="row">
             <h1 class="text-center">Order #</h1>
         </div>
@@ -39,8 +35,9 @@
 
 <!--bottom image-->
     <div class="row" style="align-content: center">
-        <img src="../static/images/ShopPage_TopBanner.jpeg" width="190" height="210" alt="Around the Block Group Pic" class="responsive" style="padding-top: 20px">
+        <img src="../static/images/ShopPage_TopBanner.jpeg" width="180" height="210" alt="Around the Block Group Pic" class="responsive" style="padding-top: 20px">
     </div>
 </div>
+
 
     {% endblock %}
