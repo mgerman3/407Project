@@ -4,21 +4,17 @@
 {% block title %}Check Out{% endblock %}
 
 {% block html_style %}
-     body, html {
-        background-image: url("../static/images/transparent-background.png");
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-    }
 
 {% endblock %}
 
 {% block page_content %}
 <!--Order Confirmation headers and image-->
+<!-- background image -->
+<img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
 
-<div class="box" style="align-content: center">
+
+
+<div class="box" style="align-content: center; height: 100vh;">
         <div class="row">
             <h1 class="text-center">Order #</h1>
         </div>
