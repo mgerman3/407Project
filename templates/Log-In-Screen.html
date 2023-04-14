@@ -24,7 +24,7 @@
     <div class="text-center" style="height: 100vh">
         <!-- welcome message with users first name -->
         <div class="row">
-            <h2>Welcome, {{ url_for('first_name')}}</h2>
+            <h2>Welcome, {'first_name'}</h2>
         </div>
         <br>
         <!-- link to shop page -->
@@ -48,7 +48,7 @@
 
  <!-- log-in form -->
 <div class="text-center" style="height: 100vh">
-    <h1>Log-in Below</h1>
+    <h1><br>Log-in Below</h1>
     <form action="/LogIn" method="post">
         <div class="border-box col">
             <!-- create input for username -->
