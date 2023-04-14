@@ -263,7 +263,6 @@ hr {
 /*Styling order confirmation page*/
 .h1-Center {
     text-align: center;
-    font-weight: bolder;
 }
 
 h2.left {
@@ -449,15 +448,6 @@ input.signupInput {
     height: 80px;
     margin: auto;
   display: block;
-}
-
-.map {
-    position: absolute;
-    float: right;
-    width: 400px;
-    top: 150px;
-    right: 50px;
-    border: 10px solid #69a695;
 }
 
 .paddingbetweenelements {
@@ -693,4 +683,49 @@ input.btpos {
   max-width:100%;
   padding: 50px;
   margin: 20px;
+}
+
+div.homeTitle{
+    display: block;
+    padding-left: 30px;
+    font-size: large;
+}
+
+.slogan {
+    float: left;
+    width: 40%;
+    font-size: 150px;
+    font-family: 'Open Sans';
+    position:absolute;
+    left: 100px;
+    top: 200px;
+}
+
+.columnRight {
+    float: right;
+    display: flex;
+}
+
+.map {
+    width: 50%;
+    height: auto;
+    border: 10px solid #69a695;
+}
+
+/* About Us Page Containers*/
+
+.containerd {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 70px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+}
+
+.containere {
+  max-width: 100%; /* Set the maximum width of the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 70px; /* Add some padding to the container */
+  background-color: #DCDCDC; /* Set the background color of the container */
+  border: 1px solid #ccc; /* Add a border around the container */
 }

@@ -14,9 +14,16 @@ def Shop():
 def About():
     return render_template('About Page.html')
 
-@app.route('/RequestForm')
+@app.route('/RequestForm', methods=['GET', 'POST'])
 def RequestForm():
-    return render_template('RequestForm.html')
+    if request.method == 'POST':
+        return render_template('RequestForm.html', form_submitted=True)
+    else:
+        return render_template('RequestForm.html')
+
+@app.route('/Reviews')
+def Reviews():
+    return render_template('Reviews.html')
 
 @app.route('/LogIn', methods = ['GET', 'POST'])
 def LogInScreen():
