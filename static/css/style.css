@@ -83,7 +83,6 @@ p {
     margin-top: 7px;
     padding-top: 7px;
     padding-bottom: 7px;
-    display: block;
 }
 
 a.footerItems{
@@ -219,10 +218,14 @@ border: 0px;
     padding-left: 20px;
 }
 
+
+<<<<<<< HEAD
+=======
 .navbar {
     background-color: deepskyblue;
 }
 
+>>>>>>> a0cf96c (This push includes numerous changes:)
 .inputBoxTotal {
     padding: 20px;
 }
@@ -404,8 +407,8 @@ form input[type="submit"] {
 
 form input[class="home"] {
     position: absolute;
-    left: 100px;
-    top: 350px;
+  /*  left: 100px;
+    top: 350px; */
 }
 
 dropdown button {
@@ -708,7 +711,6 @@ div.homeTitle{
     height: auto;
     border: 10px solid #69a695;
 }
-
 
 /* About Us Page Containers*/
 

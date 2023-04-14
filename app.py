@@ -45,8 +45,11 @@ def GenProduct():
     return render_template('GenericProductPage.html')
 
 @app.route('/InventoryInput')
-def Inventory():
-    return render_template('Inventory Management.html')
+def InventoryInput():
+    if request.method == 'POST':
+        return render_template('Inventory Management.html', form_submitted=True)
+    else:
+        return render_template('Inventory Management.html')
 
 @app.route('/OrderConfirm')
 def OrderConfirm():

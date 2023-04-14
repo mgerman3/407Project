@@ -1,0 +1,313 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b07f119a-e867-4f5e-9a38-dc4f2ee5ec30\" name=\"Changes\" comment=\"fixing generic product page format so footer is at bottom\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"HTML File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"FlaskConsoleOptions\" custom-start-script=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\">\n    <envs>\n      <env key=\"FLASK_APP\" value=\"app\" />\n    </envs>\n    <option name=\"myCustomStartScript\" value=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\" />\n    <option name=\"myEnvs\">\n      <map>\n        <entry key=\"FLASK_APP\" value=\"app\" />\n      </map>\n    </option>\n  </component>\n  <component name=\"Git.Rebase.Settings\">\n    <option name=\"NEW_BASE\" value=\"origin/main\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">\n    <option name=\"selectedUrlAndAccountId\">\n      <UrlAndAccount>\n        <option name=\"accountId\" value=\"d223fade-3dd7-4858-8348-d47881e22121\" />\n        <option name=\"url\" value=\"https://github.com/jbonoUMD/team08spring2023bmgt407\" />\n      </UrlAndAccount>\n    </option>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2N3dhsCNzjT1uwD9MOMTkEk9dnu\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  },\n  &quot;keyToStringList&quot;: {\n    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [\n      &quot;directory&quot;,\n      &quot;module&quot;,\n      &quot;repository&quot;\n    ]\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/static/images\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Python.team08spring2023bmgt407\">\n    <configuration name=\"team08spring2023bmgt407\" type=\"PythonConfigurationType\" factoryName=\"Python\">\n      <module name=\"team08spring2023bmgt407\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/app.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"team08spring2023bmgt407\" type=\"Python.FlaskServer\">\n      <module name=\"team08spring2023bmgt407\" />\n      <option name=\"target\" value=\"$PROJECT_DIR$/app.py\" />\n      <option name=\"targetType\" value=\"PATH\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"launchJavascriptDebuger\" value=\"false\" />\n      <method v=\"2\" />\n    </configuration>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"b07f119a-e867-4f5e-9a38-dc4f2ee5ec30\" name=\"Changes\" comment=\"\" />\n      <created>1678811835939</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1678811835939</updated>\n      <workItem from=\"1678811839462\" duration=\"8376000\" />\n      <workItem from=\"1678896822647\" duration=\"4435000\" />\n      <workItem from=\"1678914086423\" duration=\"6235000\" />\n      <workItem from=\"1678995726298\" duration=\"5579000\" />\n      <workItem from=\"1679017763874\" duration=\"4939000\" />\n      <workItem from=\"1680884137222\" duration=\"25000\" />\n      <workItem from=\"1680884410797\" duration=\"650000\" />\n      <workItem from=\"1680891442123\" duration=\"1194000\" />\n      <workItem from=\"1680893390201\" duration=\"11734000\" />\n      <workItem from=\"1681136390140\" duration=\"5724000\" />\n      <workItem from=\"1681319491711\" duration=\"882000\" />\n      <workItem from=\"1681479362300\" duration=\"468000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling\">\n      <created>1678819151825</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678819151825</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Added an inventory input table &#10;need to fill in values and add styling for table&#10;need to fix formatting of the buttons\">\n      <created>1678827389300</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678827389300</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Updated the form to input inventory.\">\n      <created>1678897417944</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678897417944</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Added header, put input form and table into containers\">\n      <created>1678898593881</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678898593881</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Updated navbar per Joe's changes.\">\n      <created>1678899543333</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678899543333</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Updated navbar per Joe's changes.\">\n      <created>1678899551737</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678899551737</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Changed the homepage to replicate a different screen. working on getting button to correct position, making fonts the ideal sizes, and will put in a slider of images below start shopping button\">\n      <created>1678918957733</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678918957733</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"added carousel templated\">\n      <created>1678995356846</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678995356846</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"continued working on formatting\">\n      <created>1679003779224</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1679003779224</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"updated on formatting\">\n      <created>1679020804790</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1679020804790</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"When we updated our flask the image formatting got messed up. Fixed routes to images.\">\n      <created>1679255727033</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1679255727033</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"shop page edits and alignment\">\n      <created>1681141671420</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681141671420</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"Made the inventory form in the middle of the screen and added new child template features to Inventory Management.html.\">\n      <created>1681315863225</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681315863225</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"order confirmation page fixing image\">\n      <created>1681318152232</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681318152232</updated>\n    </task>\n    <task id=\"LOCAL-00015\" summary=\"order confirmation page edits to button and bottom image\">\n      <created>1681318828826</created>\n      <option name=\"number\" value=\"00015\" />\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681318828826</updated>\n    </task>\n    <task id=\"LOCAL-00016\" summary=\"adjusted formatting for footer\">\n      <created>1681401264957</created>\n      <option name=\"number\" value=\"00016\" />\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681401264957</updated>\n    </task>\n    <task id=\"LOCAL-00017\" summary=\"Fixing home page format\">\n      <created>1681479314582</created>\n      <option name=\"number\" value=\"00017\" />\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681479314582</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"18\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling\" />\n    <MESSAGE value=\"Added an inventory input table &#10;need to fill in values and add styling for table&#10;need to fix formatting of the buttons\" />\n    <MESSAGE value=\"Updated the form to input inventory.\" />\n    <MESSAGE value=\"Added header, put input form and table into containers\" />\n    <MESSAGE value=\"Updated navbar per Joe's changes.\" />\n    <MESSAGE value=\"Changed the homepage to replicate a different screen. working on getting button to correct position, making fonts the ideal sizes, and will put in a slider of images below start shopping button\" />\n    <MESSAGE value=\"added carousel templated\" />\n    <MESSAGE value=\"continued working on formatting\" />\n    <MESSAGE value=\"updated on formatting\" />\n    <MESSAGE value=\"When we updated our flask the image formatting got messed up. Fixed routes to images.\" />\n    <MESSAGE value=\"shop page edits and alignment\" />\n    <MESSAGE value=\"Made the inventory form in the middle of the screen and added new child template features to Inventory Management.html.\" />\n    <MESSAGE value=\"order confirmation page fixing image\" />\n    <MESSAGE value=\"order confirmation page edits to button and bottom image\" />\n    <MESSAGE value=\"adjusted formatting for footer\" />\n    <MESSAGE value=\"Fixing home page format\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Fixing home page format\" />\n  </component>\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\n    <SUITE FILE_PATH=\"coverage/11Pull$11Pull.coverage\" NAME=\"11Pull Coverage Results\" MODIFIED=\"1681322004954\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\n    <SUITE FILE_PATH=\"coverage/team08spring2023bmgt407$Flask__app_py_.coverage\" NAME=\"Flask (app.py) Coverage Results\" MODIFIED=\"1681146471589\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\n    <SUITE FILE_PATH=\"coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage\" NAME=\"team08spring2023bmgt407 Coverage Results\" MODIFIED=\"1681479828359\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 245201a2f90bffcd942edfc9ea19d3aec074dc04)
++++ b/.idea/workspace.xml	(date 1681483781503)
+@@ -142,7 +142,7 @@
+       <workItem from="1680893390201" duration="11734000" />
+       <workItem from="1681136390140" duration="5724000" />
+       <workItem from="1681319491711" duration="882000" />
+-      <workItem from="1681479362300" duration="468000" />
++      <workItem from="1681479362300" duration="3950000" />
+     </task>
+     <task id="LOCAL-00001" summary="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling">
+       <created>1678819151825</created>
+@@ -263,7 +263,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1681479314582</updated>
+     </task>
+-    <option name="localTasksCounter" value="18" />
++    <task id="LOCAL-00018" summary="reorganized css for home">
++      <created>1681480233413</created>
++      <option name="number" value="00018" />
++      <option name="presentableId" value="LOCAL-00018" />
++      <option name="project" value="LOCAL" />
++      <updated>1681480233413</updated>
++    </task>
++    <option name="localTasksCounter" value="19" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -297,11 +304,12 @@
+     <MESSAGE value="order confirmation page edits to button and bottom image" />
+     <MESSAGE value="adjusted formatting for footer" />
+     <MESSAGE value="Fixing home page format" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Fixing home page format" />
++    <MESSAGE value="reorganized css for home" />
++    <option name="LAST_COMMIT_MESSAGE" value="reorganized css for home" />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+     <SUITE FILE_PATH="coverage/11Pull$11Pull.coverage" NAME="11Pull Coverage Results" MODIFIED="1681322004954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+     <SUITE FILE_PATH="coverage/team08spring2023bmgt407$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1681146471589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681479828359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
++    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681483762630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: static/css/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/* ATB Blue = #69a695 */\n/* Grey Buttons/Hovers = #d9d9d9 */\n/* Super light grey, almost white background paneling = #f6f6f6 */\n\n/* Font Styling for entire website */\n@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');\n\nhtml body p {\n    font-family: \"Open Sans\";\n}\n\nh1 {\n    font-: 100px;\n}\n/*navbar*/\nnavbar {\n    display: flex;\n    justify-content: space-between;\n    padding: 20px;\n    background-color: #69a695;\n    color: #fff;\n}\n.navbar-nav a {\n    float: right;\n}\n\n/* allows for hovering over the navbar*/\n.navbar-nav li a:hover {\n     background: #d9d9d9;\n }\n\nlabel {\n    font-size: 20px;\n}\n\nbackground-image {\n    opacity: 0.5;\n}\n\nurl(\"static/images/WelcomePage_BackgroundPhoto.jpeg\") {\nopacity: 0.5;\n}\n\n/*use this to create a division that has centered text*/\n.login-buttons{\n    text-align: center;\n}\n\n\n.text-center{\n    text-align: center;\n\n}\n\n/* button styling */\n.input{\n    background-color: #69a695;\n    text-color: white;\n    border-width: 1px;\n    border-color: black;\n    border-radius: 5px;\n    padding: 7px;\n    margin: 2px;\n    color: white;\n    text-color: white;\n}\n\n.checkoutButtons{\n    background-color: #69a695;\n    font-family: 'Open Sans';\n    color: white;\n}\n\np {\n    color: black;\n    font-family: 'Open Sauce SemiBold';\n    font-size: 20px;\n\n}\n\n.websiteFooter {\n    background-color: #69a695;\n    margin-top: 7px;\n    padding-top: 7px;\n    padding-bottom: 7px;\n}\n\na.footerItems{\n    color: black;\n    text-align: left;\n    padding-left: 50px;\n    text-decoration: none;\n}\n\np.footerItems{\n    padding-left: 12px;\n    text-decoration: underline;\n}\n\n/* Checkout Page Styling */\n\npostFormLabels {\n    display: inline-block;\n    text-align: left;\n}\n\n.checkoutPlaceholder {\n    height: 210px;\n    width: 1200px;\n    background-color: #f6f6f6;\n    padding: 0px 0px 0px 0px;\n    margin: 0 auto;\n}\n\n.cartPlaceholder {\n    height: 210px;\n    width: 1200px;\n    background-color: #f6f6f6;\n    padding: 0px 0px 0px 0px;\n    margin: 0 auto;\n}\n\n.cartHeader{\n margin: auto;\n width: 90%;\n height: 30%;\n display: flex;\n justify-content: space-between;\n align-items: center;\n}\n\n\n\n.cart-item{\n margin: auto;\n width: 90%;\n height: 30%;\n display: flex;\n justify-content: space-between;\n align-items: center;\n}\n\n.cart-item-title{\n padding-top: 5px;\n line-height: 10px;\n font-size: 32px;\n font-weight: 800;\n}\n\n.remove{\n    font-size: 14px;\n    color: red;\n    cursor: pointer;\n    text-decoration: underline;\n    text-align: right;\n}\n\nh5.item-info{\n    font-size: 14px;\n    font-weight: 600;\n    color: black;\n    border-bottom: 1px solid black;\n    margin: auto;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\ndiv.checkoutItemCoupon{\n    display: block;\n    padding: 20px;\n}\n\ndiv.coupon{\n    display: inline-block;\n}\n\n\n.formInputFields {\n    background-color: #f6f6f6;\n    padding: 30px 25px 30px 25px;\n}\n\nshippingEntry {\n   background-color: #f6f6f6;\n}\n\n.formInputFieldsNoBackground {\n    padding-left: 20px;\n}\n\n.checkoutHeader {\n    font-size: 33px;\n    float: left;\n}\n\n.cartItemLabels {\n    text-align: center;\n}\n\n.sectionBreaker {\n    padding-top: 40px;\n}\n\n.customerReviewSection {\n    background-color: #f6f6f6;\n    width: 100%;\n}\n\nimg {\nmargin: 0px;\npadding: 0px;\nborder: 0px;\n}\n\n.reviewHeader {\n    font-size: 33px;\n    padding-left: 20px;\n}\n\n\n<<<<<<< HEAD\n=======\n.navbar {\n    background-color: deepskyblue;\n}\n\n>>>>>>> a0cf96c (This push includes numerous changes:)\n.inputBoxTotal {\n    padding: 20px;\n}\n\n.billingTotals {\n    padding: 30px 25px 30px 25px;\n}\n\n.inputFields {\n    height: 30px;\n    background-color: #f6f6f6;\n    border-color: black;\n    width: auto;\n    color: black;\n}\n\n.formFieldsLabels {\n    font-size: 20px;\n    margin: 0px;\n    padding: 0px;\n    text-align: left;\n}\n\np.cartTotalsLabels {\n    font-size: 25px;\n    margin: 0px;\n    padding: 0px 0px 20px 0px;\n    text-align: left;\n}\n\nhr {\n    margin: 0px;\n}\n\n/*Styling order confirmation page*/\n.h1-Center {\n    text-align: center;\n}\n\nh2.left {\n    text-align:left;\n}\n\np {\n    text-align: left;\n}\n\ntext.left {\n    text-align:left;\n}\n\n.center {\n  margin: auto;\n  width: 50%;\n  border: 3px solid black;\n  padding: 10px;\n}\n/*center image*/\n.center-image {\n            display:block;\n            margin-left: auto;\n            margin-right: auto;\n        }\n\n/*Filter shop button styling*/\n/* Dropdown Button */\n.dropbtn {\n  background-color: #04AA6D;\n  color: black;\n  padding: 16px;\n  font-size: 16px;\n  border: none;\n}\n\n/* The container <div> - needed to position the dropdown content */\n.dropdown {\n  position: relative;\n  display: inline-block;\n    font-size: 20px;\n}\n\n/* Dropdown Content (Hidden by Default) */\n.dropdown-menu {\n  display: none;\n  position: absolute;\n  background-color: #69a695;\n  min-width: 160px;\n  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n  z-index: 1;\n}\n\n/* Links inside the dropdown */\n.dropdown-content a {\n  color: black;\n  padding: 12px 16px;\n  text-decoration: none;\n  display: block;\n}\n\n\n/* allows for hovering over navbar to show the dropdown menu */\n.dropdown:hover .dropdown-menu {display: block;\n    position: absolute;\n    background-color: #69a695;\n    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n    z-index: 1;\n    margin: 50px 0px 0px 0px;\n    padding: 0px;\n}\n\n.dropdown-content {\n  display: none;\n  position: absolute;\n  background-color: #69a695;\n  min-width: 160px;\n  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n  z-index: 1;\n    font-size: 20px;\n}\n\n\n\ntitle {\n    font-size: 30px;\n}\n/* Styling for inventory management page */\n  .max-width-form {\n    max-width: 800px;\n    margin: 0 auto;\n      padding-top: 40px; ;\n  }\n\n  /* styling for home page */\n.bg-image {\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: -1;\n    opacity: 0.5;\n}\n.container {\n    font-weight: bold;\n    font-size: 80px;\n    font-family: 'Open Sans';\n    position:absolute;\n    left: 50px;\n    top: 100px;\n}\n.slogan {\n    float: left;\n    width: 40%;\n    font-size: 150px;\n    font-family: 'Open Sans';\n    position:absolute;\n    left: 100px;\n    top: 200px;\n}\n\n.btn.btn-primary{\n  background-color: #69a695;\n  color: white;\n  border-radius: 5px;\n  border-color: black;\n  font-size: 24px;\n  padding: 5px 10px 5px 10px;\n}\n.btn.btn-primary a:hover {background-colorcolor: #ddd;}\n\nform input[type=\"submit\"] {\n  background-color: #69a695;\n  color: white;\n  border-radius: 5px;\n  border-color: black;\n  font-size: 24px;\n  padding: 5px 10px 5px 10px;\n}\n\nform input[class=\"home\"] {\n    position: absolute;\n    left: 100px;\n    top: 350px;\n}\n\ndropdown button {\n  background-color: #69a695;\n  color: white;\n  border-radius: 0px;\n    padding: 10px 15px 10px 15px;\n  font-size: 24px;\n}\n\nbr {\n   display: block;\n   margin: 4px;\n}\n\n/* styling for login input boxes */\nform input[class=\"loginInput\"] {\n  background-color: white;\n  color: black;\n  border-radius: 0px;\n  border-color: black;\n  font-size: 40px;\n    width: 800px;\n    height: 100px;\n    margin: auto;\n  display: block;\n}\n\n/* styling for signup input boxes */\ninput.signupInput {\n  background-color: white;\n  color: black;\n  border-radius: 0px;\n  border-color: black;\n  font-size: 30px;\n    width: 800px;\n    height: 80px;\n    margin: auto;\n  display: block;\n}\n\n.paddingbetweenelements {\n     padding-bottom: 20px;\n}\n\n\n/*Used to create and style rectangle images on Contact us page for each individual review*/\n.rectangle {\n    height: 170px;\n    width: 350px;\n    outline-style: solid;\n    outline-color: #d9d9d9;\n    padding-top: 10px;\n}\n\n/*Shop page styling*/\n    .margin-left {\n        margin-left: 1%;\n    }\n    /* Dropdown Button */\n.dropbtn {\n  background-color: #69a695;\n  color: black;\n  padding: 12px;\n  font-size: 16px;\n  border-color: #545454;\n  border-radius: 5px;\n  text-decoration: none;\n}\n\n/* The container <div> - needed to position the dropdown content */\n.dropdown {\n  position: relative;\n  display: inline-block;\n}\n\n/* Dropdown Content (Hidden by Default) */\n.dropdown-menu {\n  display: none;\n  position: absolute;\n  background-color: #69a695;\n  min-width: 160px;\n  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n  z-index: 1;\n}\n\n/* Links inside the dropdown */\n.dropdown-menu a {\n  color: black;\n  padding: 12px 16px;\n  text-decoration: none;\n  display: block;\n}\n\n/* Change color of dropdown links on hover */\n.dropdown-content a:hover {background-color: #ddd;}\n\n/* Show the dropdown menu on hover */\n.dropdown:hover .dropdown-content {display: block;}\n\n/* Change the background color of the dropdown button when the dropdown content is shown */\n.dropdown-menu:hover .dropbtn {background-color: #69a695;}\n\n/*Box for confirmation page*/\n.box {\n    margin-top: 60px;\n    margin-left: 140px;\n    margin-right: 140px;\n    position: center;\n    background-color: #f6f6f6;\n}\n\n/*shop filter buttons alignment*/\n.inline {\n    display: inline;\n    padding-left: 5px;\n}\n\n.spacingHeader {\n    padding-left: 20px;\n}\n\n.row-2{\n    justify-content:space-between;\n    margin:100px auto 50px;\n}\n\nselect{\n    background-color: #69a695;\n    padding-right: 5px;\n    margin-right: 20px;\n    height: 20px;\n    width: 20px;\n    length: 20px;\n}\n\nselect:focus{\n    outline: none;\n}\n\n@media only screen and (max-width:600px){\n    .row{\n        text-align:center;\n    }\n    .col-2, .col-3,.col-4{\n        flex-basis:100%\n    }\n}\n\n.page-btn{\n    margin: 0 auto 80px;\n}\n\n.page-btn span{\n    display:inline-block;\n    border: 1px solid #ff523b;\n    margin-left: 10px;\n    width: 40px;\n    height: 40 px;\n    text-align: center;\n    line-height:40px;\n    cursor: pointer;\n}\n\n.page-btn span:hover {\n    background: #69a695;\n    color: white\n}\n\n*{\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nh3.shopLabels {\n    padding: 0px 0px 0px 25px;\n\n}\n\np.shopLabels {\n    padding: 0px 0px 0px 25px;\n\n}\n\n.containera{\n    max-width: 1300px;\n    margin: auto;\n    padding-left:25px;\n    padding-right:25px;\n}\n\n.col-5{\n    flex-basis: 20%;\n    min-width:300px;\n}\n\n.img fit {\n    max-width:100%;\n    padding:50px 0;\n}\n\n.image-container {\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  top: 450px;\n  left: 100px;\n}\n\n.image-container img {\n  width: 200px;\n  height: 200px;\n  object-fit: cover;\n}\n\n.ContactUs_MainHeading {\n    text-align: center;\n     color: blue;\n}\n\n/*creates two row layout for entire page*/\n.GenProduct_rowLayout {\n  display: flex;\n  margin-left: 10px;\n}\n\n/*creates two row layout for entire page*/\n.GenProduct_rowLayout {\n  display: flex;\n}\n\n/*creates spacing between each element on the right side of the generic product page*/\n.GenProduct_spacer{\n  margin-top: 50px;\n}\n\n/* creates styling for quantity button on Generic Product Page*/\ninput.btneg {\n  border-radius: 5cm;\n  width: 40px;\n  position: relative;\n  margin-right: -30px;\n  height: 0.8cm;\n}\n\n/* creates styling for quantity button on Generic Product Page*/\ninput.btpos {\n  border-radius: 5cm;\n  width: 40px;\n  position: relative;\n  margin-left: -30px;\n  height: 0.8cm;\n}\n\n/*creates spacing between both columsn of information on the generic product page*/\n.GenProduct_VerticalSpacer{\n  margin-left: 30px;\n}\n\n.GenProduct_HeadingSpacer{\n    margin-bottom: 20px;\n}\n\n/* creates styling for Mission Statement on About Page*/\n\n.g {\n  background-color: lightgrey;\n  max-width:100%;\n  padding: 50px;\n  margin: 20px;\n}\n\ndiv.homeTitle{\n    display: block;\n    padding-left: 30px;\n    font-size: large;\n}\n\n.slogan {\n    float: left;\n    width: 40%;\n    font-size: 150px;\n    font-family: 'Open Sans';\n    position:absolute;\n    left: 100px;\n    top: 200px;\n}\n\n.columnRight {\n    float: right;\n    display: flex;\n}\n\n.map {\n    width: 50%;\n    height: auto;\n    border: 10px solid #69a695;\n}\n\n/* About Us Page Containers*/\n\n.containerd {\n  max-width: 100%;\n  margin: 0 auto;\n  padding: 70px;\n  background-color: #f1f1f1;\n  border: 1px solid #ccc;\n}\n\n.containere {\n  max-width: 100%; /* Set the maximum width of the container */\n  margin: 0 auto; /* Center the container horizontally */\n  padding: 70px; /* Add some padding to the container */\n  background-color: #DCDCDC; /* Set the background color of the container */\n  border: 1px solid #ccc; /* Add a border around the container */\n}\n\n\n.leftcolumn{\n    float: left;\n    width: 60%;\n}\n.rightcolumn{\n    float: left;\n    width: 40%;\n    padding-left: 20px;\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/static/css/style.css b/static/css/style.css
+--- a/static/css/style.css	(revision 245201a2f90bffcd942edfc9ea19d3aec074dc04)
++++ b/static/css/style.css	(date 1681483534341)
+@@ -346,8 +346,6 @@
+     font-size: 20px;
+ }
+ 
+-
+-
+ title {
+     font-size: 30px;
+ }
+@@ -358,34 +356,6 @@
+       padding-top: 40px; ;
+   }
+ 
+-  /* styling for home page */
+-.bg-image {
+-    position: fixed;
+-    top: 0;
+-    left: 0;
+-    width: 100%;
+-    height: 100%;
+-    z-index: -1;
+-    opacity: 0.5;
+-}
+-.container {
+-    font-weight: bold;
+-    font-size: 80px;
+-    font-family: 'Open Sans';
+-    position:absolute;
+-    left: 50px;
+-    top: 100px;
+-}
+-.slogan {
+-    float: left;
+-    width: 40%;
+-    font-size: 150px;
+-    font-family: 'Open Sans';
+-    position:absolute;
+-    left: 100px;
+-    top: 200px;
+-}
+-
+ .btn.btn-primary{
+   background-color: #69a695;
+   color: white;
+@@ -405,11 +375,6 @@
+   padding: 5px 10px 5px 10px;
+ }
+ 
+-form input[class="home"] {
+-    position: absolute;
+-    left: 100px;
+-    top: 350px;
+-}
+ 
+ dropdown button {
+   background-color: #69a695;
+@@ -611,22 +576,6 @@
+     padding:50px 0;
+ }
+ 
+-.image-container {
+-  display: flex;
+-  flex-wrap: wrap;
+-  flex-direction: row;
+-  align-items: center;
+-  justify-content: center;
+-  position: absolute;
+-  top: 450px;
+-  left: 100px;
+-}
+-
+-.image-container img {
+-  width: 200px;
+-  height: 200px;
+-  object-fit: cover;
+-}
+ 
+ .ContactUs_MainHeading {
+     text-align: center;
+@@ -685,33 +634,6 @@
+   margin: 20px;
+ }
+ 
+-div.homeTitle{
+-    display: block;
+-    padding-left: 30px;
+-    font-size: large;
+-}
+-
+-.slogan {
+-    float: left;
+-    width: 40%;
+-    font-size: 150px;
+-    font-family: 'Open Sans';
+-    position:absolute;
+-    left: 100px;
+-    top: 200px;
+-}
+-
+-.columnRight {
+-    float: right;
+-    display: flex;
+-}
+-
+-.map {
+-    width: 50%;
+-    height: auto;
+-    border: 10px solid #69a695;
+-}
+-
+ /* About Us Page Containers*/
+ 
+ .containerd {
+@@ -730,13 +652,82 @@
+   border: 1px solid #ccc; /* Add a border around the container */
+ }
+ 
+-
++/* Home Page Style*/
++/* Left side of home page */
+ .leftcolumn{
+     float: left;
+-    width: 60%;
++    width: 75%;
+ }
++/* right side of home page */
+ .rightcolumn{
++    float: right;
++    width: 25%;
++    padding-left: 20px;
++}
++
++/* text under ATB name */
++.slogan {
+     float: left;
+     width: 40%;
+-    padding-left: 20px;
++    font-size: 150px;
++    font-family: 'Open Sans';
++    position: absolute;
++    left: 100px;
++    top: 200px;
++}
++
++/* map on right side of page */
++.map {
++    width: 50%;
++    height: auto;
++    border: 10px solid #69a695;
++}
++
++/* Main ATB */
++div.homeTitle{
++    display: block;
++    padding-left: 30px;
++    font-size: large;
++}
++/* 3 images in a row on home screen */
++.image-container {
++  display: flex;
++  flex-wrap: wrap;
++  flex-direction: row;
++  align-items: center;
++  justify-content: center;
++  position: absolute;
++  top: 10px;
++  left: 10px;
++}
++
++.image-container img {
++  width: 200px;
++  height: 200px;
++  object-fit: cover;
++}
++/* Home Start Shopping Button */
++form input[class="home"] {
++    position: static;
++    left: 100px;
++    top: 350px;
++}
++
++.container {
++    font-weight: bold;
++    font-size: 80px;
++    font-family: 'Open Sans';
++    position:absolute;
++    left: 50px;
++    top: 100px;
++}
++/* Adjusts transparency of background image */
++.bg-image {
++    position: fixed;
++    top: 0;
++    left: 0;
++    width: 100%;
++    height: 100%;
++    z-index: -1;
++    opacity: 0.5;
+ }
+Index: templates/Home Page.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends \"base.html\" %}\n\n{% block title %}Home Page{% endblock %}\n\n{% block page_content %}\n\n<!-- Background Photo -->\n        <img src = \"../static/images/transparent-background.png\" alt=\"Background Image\" class=\"bg-image\">\n\n<!-- Text on Screen -->\n    <div class = homeTitle style=\"padding-top: 25px;\">\n        <h1 class=\"checkoutHeader\"><strong>AROUND THE BLOCK.CO</strong></h1>\n    </div>\n    <div class = \"row\">\n        <div class = \"leftcolumn\">\n            <div class = slogan>\n                <div class = \"row\">\n                    <h2>Join the<br>Block Party</h2>\n                    <h6>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> Maryland</h6>\n                </div>\n                <div class = \"row\">\n                    <form action=\"/Shop\" method=\"get\" >\n                    <input class=\"home\" type=\"submit\" value=\"START SHOPPING\">\n                    </form>\n                </div>\n            </div>\n           <div class=\"image-container\">\n               <div class=\"row\">\n                    <img src=\"../static/images/Contact Us Page Piic.png\" alt=\"Skateboard\" >\n                    <img src=\"../static/images/Misc_ModelPic.png\" alt=\"Group\">\n                    <img src=\"../static/images/AboutPage_JoellePersonalPic.png\" alt=\"Joelle\">\n               </div>\n           </div>\n        </div>\n        <div class = \"rightcolumn\">\n                <div class = \"map\">\n                   <img src=\"../static/images/Misc_OldTownMap-Logo.png\" alt=\"Old Town Map\" >\n                </div>\n        </div>\n\n{% endblock %}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/Home Page.html b/templates/Home Page.html
+--- a/templates/Home Page.html	(revision 245201a2f90bffcd942edfc9ea19d3aec074dc04)
++++ b/templates/Home Page.html	(date 1681483762609)
+@@ -25,11 +25,9 @@
+                 </div>
+             </div>
+            <div class="image-container">
+-               <div class="row">
+                     <img src="../static/images/Contact Us Page Piic.png" alt="Skateboard" >
+                     <img src="../static/images/Misc_ModelPic.png" alt="Group">
+                     <img src="../static/images/AboutPage_JoellePersonalPic.png" alt="Joelle">
+-               </div>
+            </div>
+         </div>
+         <div class = "rightcolumn">
+@@ -37,5 +35,6 @@
+                    <img src="../static/images/Misc_OldTownMap-Logo.png" alt="Old Town Map" >
+                 </div>
+         </div>
++    </div>
+ 
+ {% endblock %}
+Index: app.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from flask import Flask, render_template, request\n\napp = Flask(__name__)\n\n@app.route('/')\ndef homePage():\n    return render_template('Home Page.html')\n\n@app.route('/Shop')\ndef Shop():\n    return render_template('Shop.html')\n\n@app.route('/About')\ndef About():\n    return render_template('About Page.html')\n\n@app.route('/RequestForm')\ndef RequestForm():\n    return render_template('RequestForm.html')\n\n@app.route('/Reviews')\ndef Reviews():\n    return render_template('Reviews.html')\n\n@app.route('/LogIn', methods = ['GET', 'POST'])\ndef LogInScreen():\n    if request.method == 'POST':\n        return render_template('Log-In-Screen.html', form_submitted=True)\n    else:\n        return render_template('Log-In-Screen.html')\n\n@app.route('/CheckOut', methods=['GET', 'POST'])\ndef CheckOut():\n    if request.method == 'POST':\n        # return render_template('CheckoutPage.html', form_submitted=True)\n        return render_template('Order Confirmation.html')\n    else:\n        return render_template('CheckoutPage.html')\n\n@app.route('/GenericProduct')\ndef GenProduct():\n    return render_template('GenericProductPage.html')\n\n@app.route('/InventoryInput')\ndef Inventory():\n    return render_template('Inventory Management.html')\n\n@app.route('/OrderConfirm')\ndef OrderConfirm():\n    return render_template('Order Confirmation.html')\n\n@app.route('/OrderDetails')\ndef OrderDetails():\n    return render_template('OrderDetails.html')\n\n\n@app.route('/SalesTracker')\ndef SalesTracker():\n    return render_template('Sales Tracker.html')\n\n@app.route('/signup', methods = ['GET', 'POST'])\ndef SignUp():\n    if request.method == 'POST':\n        return render_template('sign-up-page.html', form_submitted=True)\n    else:\n        return render_template('sign-up-page.html')\n\n@app.route('/banner')\ndef Banner():\n    return render_template('Banner.html')\n\n@app.route('/cart')\ndef Cart():\n    return render_template('cart.html')\n\n@app.route('/InventoryLog')\ndef InventoryLog():\n    return render_template('Inventory Log.html')\n\nif __name__ == '__main__':\n    app.run()\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app.py b/app.py
+--- a/app.py	(revision 245201a2f90bffcd942edfc9ea19d3aec074dc04)
++++ b/app.py	(date 1681481315910)
+@@ -42,8 +42,11 @@
+     return render_template('GenericProductPage.html')
+ 
+ @app.route('/InventoryInput')
+-def Inventory():
+-    return render_template('Inventory Management.html')
++def InventoryInput():
++    if request.method == 'POST':
++        return render_template('Inventory Management.html', form_submitted=True)
++    else:
++        return render_template('Inventory Management.html')
+ 
+ @app.route('/OrderConfirm')
+ def OrderConfirm():
