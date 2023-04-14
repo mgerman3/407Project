@@ -5,7 +5,7 @@
 {% block page_content %}
     <div class="GenProduct_HeadingSpacer"></div>
     <div class = "h1-Center">
-            <h1>Leave a Request</h1>
+        <h1><strong>Leave a Request</strong></h1>
             <p>If you have any questions, concerns or ideas for us please complete the form below and we will get back to you as soon as possible!</p>
     </div>
     <div class = "GenProduct_rowLayout">
@@ -14,41 +14,97 @@
         </div>
         <div class="GenProduct_columnLayout">
         <div class = "GenProduct_VerticalSpacer">
-            <form class="formInputFields">
-                    <div class = "row">
-                        <div class="border-box col">
-                            <div class="row" style="padding-right: 15px">
-                                <p class="formFieldsLabels">First Name(*)<br></p>
-                                 <input type = "text" class="inputFields" required>
+            {% if form_submitted %}
+                <div class="row">
+                    <div class="checkoutHeader" style="padding: 20px">
+                        <h2>Thank you for submitting a request, we will get back to you as soon as possible!</h2><br>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="postFormLabels">
+                    <p>First Name:</p>
+                </div>
+                <div class="postFormLabels">
+                    <p>{{ request.form.get('first_name')}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="postFormLabels">
+                    <p>Last Name:</p>
+                </div>
+                <div class="postFormLabels">
+                    <p>{{ request.form.get('last_name')}}</p>
+                </div>
+            </div>
+            <div class="row">
+               <div class="postFormLabels">
+                    <p>Email</p>
+                </div>
+                <div class="postFormLabels">
+                    <p>{{ request.form.get('email')}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="postFormLabels">
+                    <p>Phone Number</p>
+                </div>
+                <div class="postFormLabels">
+                    <p>{{ request.form.get('phoneNumber')}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="postFormLabels">
+                    <p>Message</p>
+                </div>
+                <div class="postFormLabels">
+                    <p>{{ request.form.get('message')}}</p>
+                </div>
+            </div>
+            {% else %}
+       <!-- Shipping Information Fields -->
+        <div class="inputBoxTotal" style="padding-left: 24px">
+            <div class="row">
+                <div class="border-box col">
+                    <div class="formInputFields">
+                        <div class = "row">
+                            <div class="border-box col">
+                                <div class="row" style="padding-right: 15px">
+                                    <p class="formFieldsLabels">First Name(*)<br></p>
+                                    <input type="text" class="inputFields" name="first_name" required>
+                                </div>
+                            </div>
+                            <div class="border-box col">
+                                <div class="row" style="padding-left: 15px">
+                                    <p class="formFieldsLabels">Last Name(*)<br></p>
+                                    <input type="text" class="inputFields" name="last_name" required><br><br>
+                                </div>
                             </div>
                         </div>
-                        <div class="border-box col">
-                            <div class="row" style="padding-left: 15px">
-                                <p class="formFieldsLabels">Last Name(*)<br></p>
-                                <input type = "text" class="inputFields" required>
-                            </div>
+                        <div class = "row">
+                            <p class="formFieldsLabels">Email(*)</p>
+                            <input type="email" class="inputFields" name="email" required><br><br>
+                        </div>
+                        <div class = "row">
+                            <p class="formFieldsLabels">Phone Number</p>
+                            <input type="tel" class="inputFields" name="phoneNumber" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{3}" required><br><br>
+                        </div>
+                        <div class = "row">
+                            <p class="formFieldsLabels">Message(*)</p>
+                            <input type="text" class="inputFields" name="message" required><br><br>
                         </div>
                     </div>
-                    <div class = "row">
-                        <p class="formFieldsLabels">Email(*)</p>
-                        <input type = "email" class="inputFields" required>
-                    </div>
-                    <div class = "row">
-                        <p class="formFieldsLabels">Phone Number</p>
-                        <input type = "tel" class="inputFields" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{3}">
-                    </div>
-                    <div class = "row">
-                        <p class="formFieldsLabels">Message(*)</p>
-                         <textarea class="inputFields" id="message" rows="5" cols="50" required></textarea>
-                    </div>
-                    <div class = "row">
-                        <p class="formFieldsLabels"></p>
-                        <input type = "submit" class="input">
-                    </div>
-                </form>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Submit Request" class="checkoutButtons" style="float: right; margin: 20px; padding: 7px 75px 7px 75px;">
+                </div>
+            </div>
         </div>
         </div>
     </div>
+        </form>
+                </div>
+        {% endif %}
+
     <div class="GenProduct_HeadingSpacer"></div>
 
 {% endblock %}
