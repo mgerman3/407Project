@@ -1,17 +1,18 @@
-<!-- Joe Scopelliti -->
-
+<!-- Extending base code to use Jinja principles -->
 {% extends "base.html" %}
 
 {% block title %}Check Out{% endblock %}
 
 {% block page_content %}
-
+        <!-- conditional formatting to show confirmation message to users after completing the form -->
         {% if form_submitted %}
             <div class="row">
                 <div class="checkoutHeader" style="padding: 20px">
+                    <!-- Message outputted to user after form completed -->
                     <h2>Thank you for your order!</h2><br>
                 </div>
             </div>
+            <!-- Outputting information regarding products ordered entered by the user -->
             <div class="row">
                 <div class="postFormLabels">
                     <p>Products Ordered:</p>
@@ -20,6 +21,7 @@
                     <p>{{ request.form.get(products)}}</p>
             </div>
             </div>
+             <!-- Outputting information regarding first name entered by the user -->
             <div class="row">
                 <div class="postFormLabels">
                     <p>First Name:</p>
@@ -28,6 +30,7 @@
                     <p>{{ request.form.get('first_name')}}</p>
                 </div>
             </div>
+            <!-- Outputting information regarding last name entered by the user -->
             <div class="row">
                 <div class="postFormLabels">
                     <p>Last Name:</p>
@@ -36,6 +39,7 @@
                     <p>{{ request.form.get('last_name')}}</p>
                 </div>
             </div>
+            <!-- Outputting information regarding address 1 entered by the user -->
             <div class="row">
                <div class="postFormLabels">
                     <p>Address 1:</p>
@@ -44,6 +48,7 @@
                     <p>{{ request.form.get('address1')}}</p>
                 </div>
             </div>
+            <!-- Outputting information regarding address 2 entered by the user -->
             <div class="row">
                 <div class="postFormLabels">
                     <p>Address 2:</p>
@@ -52,6 +57,7 @@
                     <p>{{ request.form.get('address2')}}</p>
                 </div>
             </div>
+            <!-- Outputting information regarding city entered by the user -->
             <div class="row">
                 <div class="postFormLabels">
                     <p>City:</p>
@@ -60,6 +66,7 @@
                     <p>{{ request.form.get('city')}}</p>
                 </div>
             </div>
+            <!-- Outputting information regarding state entered by the user -->
             <div class="row">
                 <div class="postFormLabels">
                     <p>State:</p>
@@ -68,6 +75,7 @@
                     <p>{{ request.form.get('state')}}</p>
                 </div>
             </div>
+            <!-- Outputting information regarding zip code entered by the user -->
             <div class="row">
                 <div class="postFormLabels">
                     <p>Zip code:</p>
@@ -76,40 +84,48 @@
                     <p>{{ request.form.get('zipcode')}}</p>
                 </div>
             </div>
+            <!--Creates form to collection customer's requests-->
             {% else %}
-        <!-- Coupon Code Box & Cart Information -->
+        <!--  Creates form to collection customer's cart information -->
         <form action="{{ url_for('CheckOut') }}" method="post">
         <div class="checkoutItemCoupon" style="padding-left: 24px">
             <div class="row" style="padding-top: 25px;">
+                 <!--  Creates heading for the entire form -->
                 <h1 class="checkoutHeader"><strong>Checkout</strong></h1>
             </div>
             <div class="cartPlaceholder" style="position: relative; height: auto; min-height: 100%; padding-bottom: 7px;">
                 <div class=”cartHeader”>
                     <h3 class=”Head” style="padding: 5px 5px 0px 5px; margin: 0px;" >Items</h3>
                     <div class="cart-item">
+                         <!--  Heading information in tabular format about products added to cart -->
                         <h5 class="item-info">Type</h5>
                         <h5 class="item-info">Quantity</h5>
                         <h5 class="item-info">Size</h5>
                         <h5 class="item-info">Price</h5>
                     </div>
-                    <!-- % for item in cart %} -->
                         <div class="cart-item">
                             <div class="cart-item-image">
+                                 <!--  Displays thumbnail of item placed in cart -->
                                 <img src="static/images/Shop_ClothingItem1.png" alt="item" width="100" height="100" style="margin-bottom: 7px" >
                             </div>
                             <div class="cart-item-details">
                                 <div class="cart-item-title">
+                                     <!--  Displays the type of item added to the cart -->
                                     <p class="cartItemLabels">Crewneck</p> <!--{ item.title }}-->
                                 </div>
                             </div>
+                                <!--  Displays the quantity an item added to the cart -->
                                 <div class=”cart-counter”>
                                     <input class="item-info" type=number min=1 max=5 value="1"> <!--{ item.quantity }}-->
                                 </div>
+                                <!--  Displays the size of item added to the cart -->
                                 <div class="cart-item-size">
                                     <p class="cartItemLabels">M</p> <!--{ item.size }}-->
                                 </div>
+                                <!--  Displays the price of item added to the cart -->
                                 <div class="cart-item-price">
                                     <p class="cartItemLabels">$42.00 USD</p>> <!--{ item.price }}-->
+                                    <!--  Ability to delete already added items to the cart -->
                                     <div class="remove">Remove</div>
                                 </div>
                             </div>
@@ -119,53 +135,63 @@
             </div>
         </div>
 
-       <!-- Shipping Information Fields -->
+       <!-- Creates Shipping Information form -->
         <div class="inputBoxTotal" style="padding-left: 24px">
             <div class="row">
                 <div class="border-box col">
+                    <!--  Heading for the entire form -->
                     <h2 class="checkoutHeader"><strong>Shipping Address</strong></h2><br><br>
                     <div class="formInputFields">
                         <div class = "row">
                             <div class="border-box col">
                                 <div class="row" style="padding-right: 15px">
+                                    <!--Field to collect users first name -->
                                     <p class="formFieldsLabels">First Name (*) <br></p>
                                     <input type="text" class="inputFields" name="first_name" required>
                                 </div>
                             </div>
                             <div class="border-box col">
                                 <div class="row" style="padding-left: 15px">
+                                    <!--Field to collect users last name -->
                                     <p class="formFieldsLabels">Last Name (*) <br></p>
                                     <input type="text" class="inputFields" name="last_name" required><br><br>
                                 </div>
                             </div>
                         </div>
                         <div class = "row">
+                            <!--Field to collect users address 1 -->
                             <p class="formFieldsLabels">Address 1 (*)</p>
                             <input type="text" class="inputFields" name="address1" required><br><br>
                         </div>
                         <div class = "row">
+                            <!--Field to collect users address 2 -->
                             <p class="formFieldsLabels">Address 2</p>
                             <input type="text" class="inputFields" name="address2"><br><br>
                         </div>
                         <div class = "row">
+                            <!--Field to collect users city -->
                             <p class="formFieldsLabels">City (*)</p>
                             <input type="text" class="inputFields" name="city" required><br><br>
                         </div>
                         <div class = "row">
+                            <!--Field to collect users state -->
                             <p class="formFieldsLabels">State (*)</p>
                             <input type="text" class="inputFields" name="state" required><br><br>
                         </div>
                         <div class = "row">
+                            <!--Field to collect users zip code -->
                             <p class="formFieldsLabels">Zip Code (*)</p>
                             <input type="text" class="inputFields" name="zipcode" required><br><br>
                         </div>
                     </div>
                 </div>
 
-                <!-- Cart Pricing Information -->
+                <!-- Creates cart pricing information form -->
                 <div class="border-box col">
+                    <!-- Heading for entire form -->
                     <h2 class="checkoutHeader"><strong>Cart Totals</strong></h2><br><br>
                         <div class="billingTotals">
+                            <!-- Creates fields within form to display total amount -->
                             <div class="row">
                                 <p class="cartTotalsLabels">Subtotal -</p><hr>
                             </div>
@@ -174,6 +200,7 @@
                                     <p class="cartTotalsLabels">Shipping -</p>
                                 </div>
                                 <div class="border-box col" style="padding: 0px 0px 10px 0px">
+                                    <!-- Creates three buttons for user to choose between different shipping method-->
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                         <label class="form-check-label" for="flexRadioDefault1">
@@ -194,6 +221,7 @@
                                     </div>
                                 </div><hr>
                             </div>
+                            <!-- Creates additional fields within form to display total amount -->
                             <div class="row">
                                 <p class="cartTotalsLabels">Taxes -</p><hr>
                             </div>
@@ -203,6 +231,7 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <!--Field to submit the users answers inputted into the form -->
                                 <input type="submit" value="Place Order" class="checkoutButtons" style="float: right; margin: 20px; padding: 7px 75px 7px 75px;">
                             </div>
                         </div>

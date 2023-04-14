@@ -83,6 +83,7 @@ p {
     margin-top: 7px;
     padding-top: 7px;
     padding-bottom: 7px;
+    display: block;
 }
 
 a.footerItems{
@@ -218,14 +219,10 @@ border: 0px;
     padding-left: 20px;
 }
 
-
-<<<<<<< HEAD
-=======
 .navbar {
     background-color: deepskyblue;
 }
 
->>>>>>> a0cf96c (This push includes numerous changes:)
 .inputBoxTotal {
     padding: 20px;
 }
@@ -347,7 +344,6 @@ text.left {
 }
 
 
-
 title {
     font-size: 30px;
 }
@@ -358,33 +354,6 @@ title {
       padding-top: 40px; ;
   }
 
-  /* styling for home page */
-.bg-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.5;
-}
-.container {
-    font-weight: bold;
-    font-size: 80px;
-    font-family: 'Open Sans';
-    position:absolute;
-    left: 50px;
-    top: 100px;
-}
-.slogan {
-    float: left;
-    width: 40%;
-    font-size: 150px;
-    font-family: 'Open Sans';
-    position:absolute;
-    left: 100px;
-    top: 200px;
-}
 
 .btn.btn-primary{
   background-color: #69a695;
@@ -405,11 +374,6 @@ form input[type="submit"] {
   padding: 5px 10px 5px 10px;
 }
 
-form input[class="home"] {
-    position: absolute;
-  /*  left: 100px;
-    top: 350px; */
-}
 
 dropdown button {
   background-color: #69a695;
@@ -611,22 +575,6 @@ p.shopLabels {
     padding:50px 0;
 }
 
-.image-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 450px;
-  left: 100px;
-}
-
-.image-container img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
 
 .ContactUs_MainHeading {
     text-align: center;
@@ -637,11 +585,6 @@ p.shopLabels {
 .GenProduct_rowLayout {
   display: flex;
   margin-left: 10px;
-}
-
-/*creates two row layout for entire page*/
-.GenProduct_rowLayout {
-  display: flex;
 }
 
 /*creates spacing between each element on the right side of the generic product page*/
@@ -672,6 +615,10 @@ input.btpos {
   margin-left: 30px;
 }
 
+.GenProduct_VerticalRightSpacer{
+  margin-right: 30px;
+}
+
 .GenProduct_HeadingSpacer{
     margin-bottom: 20px;
 }
@@ -685,10 +632,80 @@ input.btpos {
   margin: 20px;
 }
 
-div.homeTitle{
+/* Home Page Styling */
+.right-column {
+     width: 30%;
+}
+.left-column {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+  form input[class="home"] {
+    position: absolute;
+   /* left: 100px;
+    top: 350px;*/
+    }
+
+  div.homeTitle{
     display: block;
     padding-left: 30px;
     font-size: large;
+    }
+
+.slogan {
+    float: left;
+    width: 40%;
+    font-size: 150px;
+    font-family: 'Open Sans';
+    position:absolute;
+    left: 100px;
+    top: 200px;
+}
+
+.map {
+  text-align: center;
+  width: 50%;
+  padding: 20px;
+  height: auto;
+  float: right;
+  margin-bottom: 75px;
+}
+
+.small-image {
+    width: 50%;
+    border: 5px solid #69a695;
+}
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 450px;
+  left: 100px;
+}
+
+.image-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 10px;
+  border: 5px solid #69a695;
+}
+
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
 }
 
 .slogan {
@@ -701,16 +718,10 @@ div.homeTitle{
     top: 200px;
 }
 
-.columnRight {
-    float: right;
-    display: flex;
+.submit-button {
+  margin-top: 20px;
 }
 
-.map {
-    width: 50%;
-    height: auto;
-    border: 10px solid #69a695;
-}
 
 /* About Us Page Containers*/
 
@@ -728,15 +739,4 @@ div.homeTitle{
   padding: 70px; /* Add some padding to the container */
   background-color: #DCDCDC; /* Set the background color of the container */
   border: 1px solid #ccc; /* Add a border around the container */
-}
-
-
-.leftcolumn{
-    float: left;
-    width: 60%;
-}
-.rightcolumn{
-    float: left;
-    width: 40%;
-    padding-left: 20px;
 }

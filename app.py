@@ -45,9 +45,12 @@ def RequestForm():
     else:
         return render_template('RequestForm.html')
 
-@app.route('/Reviews')
+@app.route('/Reviews', methods=['GET', 'POST'])
 def Reviews():
-    return render_template('Reviews.html')
+    if request.method == 'POST':
+        return render_template('Reviews.html', form_submitted=True)
+    else:
+        return render_template('Reviews.html')
 
 @app.route('/LogIn', methods = ['GET', 'POST'])
 # def LogInScreen():
