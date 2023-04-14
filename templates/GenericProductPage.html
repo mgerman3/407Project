@@ -1,3 +1,4 @@
+<!-- Extending base code to use Jinja principles -->
 {% extends "base.html" %}
 
 {% block title %}Generic Product{% endblock %}
@@ -9,17 +10,25 @@
 
 
 {% block page_content %}
+
+<!-- Create two column layout to house form and photo side by side-->
 <div class="row">
+<!-- Add padding between top of the page and contents within the table -->
 <div class="GenProduct_HeadingSpacer"></div>
  <div class="GenProduct_rowLayout">
   <div class="GenProduct_columnLayout">
+      <!--Placing image on left hand column-->
       <img src= static/images/Shop_ClothingItem1.png width = "600" height = "600" alt="ATB Model Skateboarding">
   </div>
+  <!-- create new, right-handed side column-->
   <div class="GenProduct_columnLayout">
+  <!-- adds passing between both columns to evenly space information -->
   <div class = "GenProduct_VerticalSpacer">
       <h1>Crewneck</h1>
       <h3>$43 USD</h3>
+      <!-- adds horizontal spacing between different blocks of text -->
       <div class="GenProduct_spacer">
+        <!-- creates different buttons for customers to select sizing options -->
         <h4>Select a Size</h4>
           <input type="radio" name="Button" class="ButtonState" checked id="XS" value="1"/>
           <button class="input" for="XS">X-Small</button>
@@ -30,30 +39,36 @@
           <button class="input">XXL</button>
           <button class="input">XXXL</button>
       </div>
+      <!-- adds horizontal spacing between different blocks of text -->
       <div class="GenProduct_spacer">
+        <!-- creates different buttons for customers to select coloring options -->
         <h4>Select a Style</h4>
           <button class="input">Game Day Map</button>
           <button class="input">CP Blues Map</button>
           <button class="input">Spring Pinks Map</button>
       </div>
+      <!-- adds horizontal spacing between different blocks of text -->
       <div class="GenProduct_spacer">
+        <!-- creates buttons for customers to select quantity of items needed, can decrease and increase -->
         <h4>Quantity</h4>
           <input type="button" class="btneg " value="-">
           <input type="text" name="noq1" id="noq1" min="1" max="15" value="1" style="text-align: center">
           <input type="button" class="btpos " value="+">
       </div>
+      <!-- adds horizontal spacing between different blocks of text -->
       <div class="GenProduct_spacer">
-        <form action="/cart" method="get">
+          <!-- Links submit button to the cart page. When user clicks on the submit button it will take them to the cart and show them the new item added -->
+          <form action="/cart" method="get">
             <div>
                 <input type = "submit" value="Add to Cart"/>
             </div>
         </form>
-{#          <button class="input">Add to Cart</button>#}
       </div>
     </div>
     </div>
   </div>
 </div>
+ <!-- adds spacing between bottom of all text content and footer -->
  <div class="GenProduct_HeadingSpacer"></div>
 
 {% endblock %}
