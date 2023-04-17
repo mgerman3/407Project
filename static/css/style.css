@@ -479,9 +479,10 @@ input.signupInput {
 /*Box for confirmation page*/
 .box {
     margin-top: 60px;
-    margin-left: 140px;
-    margin-right: 140px;
+    margin-left: auto;
+    margin-right: auto;
     position: center;
+    text-align: center;
     background-color: #f6f6f6;
 }
 
@@ -768,4 +769,15 @@ input.btpos {
     margin: 0px;
     padding: 0px;
     text-align: left;
+}
+
+.image-container-shop {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 450px;
+  left: 100px;
 }
