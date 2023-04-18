@@ -46,6 +46,10 @@ def EnterItems():
 def About():
     return render_template('About Page.html')
 
+@app.route('/profile')
+def Profile():
+    return render_template('profile.html')
+
 @app.route('/RequestForm', methods=['GET', 'POST'])
 def RequestForm():
     if request.method == 'POST':
