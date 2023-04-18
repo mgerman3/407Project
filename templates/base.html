@@ -13,7 +13,29 @@
 
     {% block html_head %}{% endblock %}
 
-    <style>{% block html_style %}{% endblock %}</style>
+    <style>{% block html_style %}
+       * {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+a.footerItems, p.footerItems {
+   text-align: center;
+    padding-left: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    {% endblock %}</style>
 </head>
 
 <body>
@@ -53,16 +75,6 @@
         </li>
       {% endif %}
           <li><a class="dropbtn" href="/cart"><img src="../static/images/cart.png" alt="Bootstrap" width="30" height="24"></a></li>
-{#      {% if current_user.not_authenticated %}#}
-{#          <li class="nav-item dropdown">#}
-{#            <a class="dropbtn" aria-expanded="false" href="/LogIn"><img src="../static/images/profile.png" alt="Bootstrap" width="30" height="24"></a>#}
-{#            <ul class="dropdown-menu">#}
-{#                <li><a class="dropdown-item" href="/signup">Create Account</a></li>#}
-{#            </ul>#}
-{#          </li>#}
-{#      #}
-
-
       </ul>
             {% if current_user.is_authenticated %}
                <div class="navbar-collapse collapse w-50 order-3 dual-collapse2">
@@ -100,7 +112,7 @@
 
 <footer>
 <div class="websiteFooter">
-    <div class="row">
+    <div class="row" style="padding-top: 25px">
         <div class="col-4">
             <p class="footerItems" style="color: black">Helpful Links</p>
             <div class="row">
@@ -117,13 +129,7 @@
             </div>
         </div>
         <div class="col-4">
-            <p class="footerItems">Contact Us</p>
-            <div class="row" style="display: inline-block">
-                <form>
-                    <input placeholder="Email" type="text" class="inputFields" style="width: 225px">
-                    <input type="submit" value="Submit" class="checkoutButtons" style="height: 30px; font-size: 13px; ">
-                </form>
-            </div>
+            <p class="footerItems"><img src="../static/images/Clear%20Background%20Logo.png" alt="Bootstrap" width="150" height="150"></p>
         </div>
         <div class="col-4">
             <p class="footerItems">Social Media</p>
