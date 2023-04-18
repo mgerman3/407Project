@@ -467,7 +467,7 @@ input.signupInput {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
+/<a class="dropbtn" aria-expanded="false" href="/LogIn"><img src="../static/images/profile.png" alt="Bootstrap" width="30" height="24"></a>* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #ddd;}
 
 /* Show the dropdown menu on hover */

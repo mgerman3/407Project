@@ -52,25 +52,41 @@
           </ul>
         </li>
       {% endif %}
-        <li class="nav-item dropdown">
-          <a class="dropbtn" aria-expanded="false" href="/LogIn"><img src="../static/images/profile.png" alt="Bootstrap" width="30" height="24"></a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/signup">Create Account</a></li>
-          </ul>
-        </li>
           <li><a class="dropbtn" href="/cart"><img src="../static/images/cart.png" alt="Bootstrap" width="30" height="24"></a></li>
+{#      {% if current_user.not_authenticated %}#}
+{#          <li class="nav-item dropdown">#}
+{#            <a class="dropbtn" aria-expanded="false" href="/LogIn"><img src="../static/images/profile.png" alt="Bootstrap" width="30" height="24"></a>#}
+{#            <ul class="dropdown-menu">#}
+{#                <li><a class="dropdown-item" href="/signup">Create Account</a></li>#}
+{#            </ul>#}
+{#          </li>#}
+{#      #}
+
+
       </ul>
             {% if current_user.is_authenticated %}
                <div class="navbar-collapse collapse w-50 order-3 dual-collapse2">
                    <ul class="navbar-nav ms-auto">
                        <li class="nav-item navbar-text">
-                           Welcome, {{ current_user.username }}!
-                       </li>
-                       <li class="nav-item">
-                           <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                           <a class="dropbtn" href="{{ url_for('logout') }}">Log Out</a>
+                           <a class="dropbtn" aria-expanded="false" style="background-color: #69a695"> Welcome, {{ current_user.username }}!</a>
+                           <a class="dropbtn" aria-expanded="false" href="/LogIn"><img src="../static/images/profile.png" alt="Bootstrap" width="30" height="24"></a>
                        </li>
                    </ul>
                </div>
+
+                {% else %}
+                 <div class="navbar-collapse collapse w-50 order-3 dual-collapse2">
+                   <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                       <a class="dropbtn" aria-expanded="false" href="/LogIn">Log-In</a>
+                            </li>
+                        <ul class="dropdown-menu">
+
+                            <li><a class="dropdown-item" href="/signup">Create Account</a></li>
+                         </ul>
+                     </ul>
+                 </div>
             {% endif %}
     </div>
   </div>
