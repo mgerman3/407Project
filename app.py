@@ -23,8 +23,8 @@ login_manager.init_app(app)
 
 
 @login_manager.user_loader
-def load_user(username):
-   return Credentials.query.get(username)
+def load_user(account_id):
+   return Credentials.query.get(account_id)
 
 @app.route('/')
 def homePage():
@@ -82,20 +82,16 @@ def LogIn():
            redirect_route = request.args.get('next')
            return render_template('Log-In-Screen.html', redirect_route=redirect_route)
 
-
    elif request.method == 'POST':
        username = request.form.get('username')
        password = request.form.get('password')
        redirect_route = request.form.get('redirect_route')
 
-
        user = Credentials.query.filter_by(username=username).first()
-
 
        # Validate user credentials and redirect them to initial destination
        if user and check_password_hash(user.password, password):
-           login_user(user, force=True)
-
+           login_user(user)
 
            if current_user.role in ['MANAGER', 'ADMIN']:
                return redirect(redirect_route if redirect_route else url_for(default_route_function))
@@ -104,9 +100,7 @@ def LogIn():
        else:
            flash(f'Your login information was not correct. Please try again.', 'error')
 
-
        return redirect(url_for('LogIn'))
-
 
    return redirect(url_for('LogIn'))
 

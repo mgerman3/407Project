@@ -3,7 +3,7 @@ from flask_login import UserMixin
 db = SQLAlchemy()
 
 
-class User(UserMixin, db.Model):
+class User(db.Model):
    __tablename__ = "User"
 
    user_id = db.Column(db.Integer, primary_key=True)
@@ -121,10 +121,11 @@ class Collections(db.Model):
        return f"{self.collection_name}"
 
 
-class Credentials(db.Model):
+class Credentials(UserMixin, db.Model):
     __tablename__ = "Credentials"
 
-    username = db.Column(db.String(40), primary_key=True)
+    account_id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(40), unique=True)
     password = db.Column(db.String(40), nullable=False)
     role = db.Column(db.String(10), nullable=False)
 
@@ -134,7 +135,7 @@ class Credentials(db.Model):
         self.role = role
 
     def get_id(self):
-        return (self.username)
+        return (self.account_id)
 
     def __repr__(self):
        return f"({self.username}){self.password}{self.role}"

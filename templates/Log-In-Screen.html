@@ -47,13 +47,13 @@
 
 <div class="text-center" style="height: 100vh">
     <h1>Log-in Below</h1>
-    <form action="/LogIn" method="post">
+    <form action="/LogIn" method="POST">
         <div class="border-box col">
             <div class="row" style="padding-right: 1px">
-                <input type = "text" class="loginInput" placeholder="Username" required>
+                <input type = "text" class="loginInput" placeholder="Username" name="username" required>
             </div> <br>
             <div class="row" style="padding-right: 1px">
-                <input type="password" class="loginInput" placeholder="Password" required>
+                <input type="password" class="loginInput" placeholder="Password" name="password" required>
             </div>
         </div>
         <br><input type="submit" value="Log In">
