@@ -1,0 +1,19 @@
+Index: templates/Order Confirmation.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!--Order Confirmation-->\n{% extends \"base.html\" %}\n\n{% block title %}Check Out{% endblock %}\n\n{% block html_style %}\n\n{% endblock %}\n\n{% block page_content %}\n<!--Order Confirmation headers and image-->\n<!-- background image -->\n<img src = \"../static/images/transparent-background.png\" alt=\"Background Image\" class=\"bg-image\">\n\n<!-- putting everything into gray box for order confirmation -->\n<div class=\"box\" style=\"height: 69vh; width: 90vh\">\n<!-- order number for customer -->\n        <div class=\"row\">\n            <h1 class=\"text-center\">Order #</h1>\n        </div>\n        <div class=\"center-image\">\n<!-- shopping bag for order confirmed -->\n            <img src=\"../static/images/shopping-bag2.png\" class= \"center-image\" width=\"120\" height=\"150\" alt=\"Shopping Bag Image\" style=\"padding-bottom: 10px\">\n        </div>\n        <div class=\"row\">\n<!-- thank you message for ordering-->\n            <h5 class=\"text-center\">Your order has been placed!</h5>\n        </div>\n        <div class=\"row\">\n            <h5 class=\"text-center\">Welcome to the ATB Family! We are getting your order ready.</h5>\n        <br>\n        </div>\n<!-- submit another order button-->\n        <form action=\"/Shop\" method=\"get\" style=\"text-align: center\">\n            <input type=\"submit\" value=\"Submit Another Order\">\n        </form>\n\n<!--bottom image-->\n    <div class=\"row\" style=\"align-content: center\">\n        <img src=\"../static/images/ShopPage_TopBanner.jpeg\" width=\"180\" height=\"210\" alt=\"Around the Block Group Pic\" class=\"responsive\" style=\"padding-top: 20px\">\n    </div>\n</div>\n\n\n    {% endblock %}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/Order Confirmation.html b/templates/Order Confirmation.html
+--- a/templates/Order Confirmation.html	(revision aec223f2c5e7b6b2c425cc1f3306120c0273d353)
++++ b/templates/Order Confirmation.html	(date 1681941603142)
+@@ -20,7 +20,7 @@
+         </div>
+         <div class="center-image">
+ <!-- shopping bag for order confirmed -->
+-            <img src="../static/images/shopping-bag2.png" class= "center-image" width="120" height="150" alt="Shopping Bag Image" style="padding-bottom: 10px">
++            <img src="../static/images/shopping-bag2.png" class= "center-image" width="120" height="160" alt="Shopping Bag Image" style="padding-bottom: 10px">
+         </div>
+         <div class="row">
+ <!-- thank you message for ordering-->
