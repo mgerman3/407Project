@@ -65,10 +65,11 @@ opacity: 0.5;
     text-color: white;
 }
 
-.checkoutButtons{
+input.checkoutButtons{
     background-color: #69a695;
     font-family: 'Open Sans';
     color: white;
+    width: 90%;
 }
 
 p {
