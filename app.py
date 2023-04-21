@@ -138,30 +138,28 @@ def inventory_entry():
    if request.method == 'GET':
        return render_template('Input_Inventory.html', action='create')
    elif request.method == 'POST':
-           item_name = request.form['item_name']
-           xsmall = request.form['xsmall']
-           small = request.form['small']
-           medium = request.form['medium']
-           large = request.form['large']
-           xlarge = request.form['xlarge']
-           xxlarge = request.form['xxlarge']
-           color = request.form['color']
-           price = request.form['price']
-           quantity = request.form['each_size']
-           description = request.form['description']
+       item_name = request.form['item_name']
+       xsmall = request.form['xsmall']
+       small = request.form['small']
+       medium = request.form['medium']
+       large = request.form['large']
+       xlarge = request.form['xlarge']
+       xxlarge = request.form['xxlarge']
+       color = request.form['color']
+       price = request.form['price']
+       description = request.form['description']
 
-           items = Inventory(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge, xxlarge=xxlarge , color=color, price=price,
-                         quantity=quantity, description=description)
+       items = Inventory(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge, xxlarge=xxlarge , color=color, price=price, description=description)
 
-           db.session.add(items)
-           db.session.commit()
-           flash(f'{items} was successfully added!', 'success')
-           return redirect(url_for('InventoryLog'))
+       db.session.add(items)
+       db.session.commit()
+       flash(f'{items} was successfully added!', 'success')
+       return redirect(url_for('homePage'))
 
 
    # Address issue where unsupported HTTP request method is attempted
    flash(f'Invalid request. Please contact support if this problem persists.', 'error')
-   return redirect(url_for('InventoryLog'))
+   return redirect(url_for('homePage'))
 
 @app.route('/OrderConfirm')
 def OrderConfirm():
