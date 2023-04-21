@@ -151,12 +151,12 @@ def inventory_entry():
            description = request.form['description']
 
            items = Inventory(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge, xxlarge=xxlarge , color=color, price=price,
-                             quantity=quantity, description=description)
+                         quantity=quantity, description=description)
 
            db.session.add(items)
            db.session.commit()
-           flash(f'{size} was successfully added!', 'success')
-       return redirect(url_for('InventoryLog'))
+           flash(f'{items} was successfully added!', 'success')
+           return redirect(url_for('InventoryLog'))
 
 
    # Address issue where unsupported HTTP request method is attempted
@@ -176,12 +176,31 @@ def OrderDetails():
 def SalesTracker():
     return render_template('Sales Tracker.html')
 
-@app.route('/signup', methods = ['GET', 'POST'])
+@app.route('/signup')
 def SignUp():
-    if request.method == 'POST':
-        return render_template('sign-up-page.html', form_submitted=True)
-    else:
+    if request.method == 'GET':
         return render_template('sign-up-page.html')
+
+    elif request.method == 'POST':
+       username = request.form['username']
+       password = request.form['password']
+       first_name = request.form['first_name']
+       last_name = request.form['last_name']
+       email = request.form['email']
+
+       users = User(first_name=first_name, last_name=last_name, email=email)
+       user_credentials = Credentials(username=username, password=password)
+
+       db.session.add(users)
+       db.session.add(user_credentials)
+       db.session.commit()
+       flash(f'{username} was successfully added!', 'success')
+       return redirect(url_for('homePage'))
+
+
+   # Address issue where unsupported HTTP request method is attempted
+# flash(f'Invalid request. Please contact support if this problem persists.', 'error')
+# return redirect(url_for('SignUp'))
 
 @app.route('/banner')
 def Banner():

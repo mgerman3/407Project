@@ -1,5 +1,5 @@
 from app import app, db
-from models import Size, Credentials
+from models import Credentials
 from werkzeug.security import generate_password_hash
 
 with app.app_context():
@@ -7,12 +7,12 @@ with app.app_context():
     db.create_all()
 
     # Initial loading of sizes
-    sizes = ['XS', 'S', 'M', 'L', 'XL']
-    for each_size in sizes:
-        print(f'{each_size} inserted into size')
-        a_size = Size(size=each_size)
-        db.session.add(a_size)
-        db.session.commit()
+    # sizes = ['XS', 'S', 'M', 'L', 'XL']
+    # for each_size in sizes:
+    #     print(f'{each_size} inserted into size')
+    #     a_size = Size(size=each_size)
+    #     db.session.add(a_size)
+    #     db.session.commit()
 
     # Initial loading of users
     users = [
