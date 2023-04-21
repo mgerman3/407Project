@@ -730,16 +730,14 @@ input.btpos {
 
 .containerd {
   max-width: 100%;
-  margin: 0 auto;
-  padding: 70px;
+  padding: 45px;
   background-color: #f1f1f1;
   border: 1px solid #ccc;
 }
 
 .containere {
   max-width: 100%; /* Set the maximum width of the container */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 70px; /* Add some padding to the container */
+  padding: 45px; /* Add some padding to the container */
   background-color: #DCDCDC; /* Set the background color of the container */
   border: 1px solid #ccc; /* Add a border around the container */
 }
