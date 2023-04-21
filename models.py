@@ -61,28 +61,17 @@ class OrderInfo(db.Model):
    def __repr__(self):
        return f"{self.shipping_mode}"
 
-class Size(db.Model):
-   __tablename__ = "Size"
-
-
-   size_id = db.Column(db.Integer, primary_key=True)
-   size = db.Column(db.String(30), nullable=False)
-   items = db.relationship('Inventory', backref='items')
-
-
-   def __init__(self, size):
-       self.size = size
-
-
-   def __repr__(self):
-       return f"{self.size}"
-
 class Inventory(db.Model):
     __tablename__ = "Inventory"
 
     product_id = db.Column(db.Integer, primary_key=True)
     collection_id = db.Column(db.Integer, db.ForeignKey('Collections.collection_id'))
-    size = db.Column(db.String(6), db.ForeignKey('Size.size_id'), nullable=False)
+    xsmall = db.Column(db.Integer, nullable=False)
+    small = db.Column(db.Integer, nullable=False)
+    medium = db.Column(db.Integer, nullable=False)
+    large = db.Column(db.Integer, nullable=False)
+    xlarge = db.Column(db.Integer, nullable=False)
+    xxlarge = db.Column(db.Integer, nullable=False)
     color = db.Column(db.String(12), nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
 

@@ -38,9 +38,9 @@ def Shop():
 def Inventory():
     return render_template('Inventory.html')
 
-@app.route('/EnterItems')
-def EnterItems():
-    return render_template('Input_Inventory.html')
+# @app.route('/EnterItems')
+# def EnterItems():
+#     return render_template('Input_Inventory.html')
 
 @app.route('/About')
 def About():
@@ -136,23 +136,26 @@ def GenProduct():
 
 def inventory_entry():
    if request.method == 'GET':
-       sizes = Inventory.query.order_by(Inventory.size) \
-           .order_by(Inventory.size) \
-           .all()
-       return render_template('Inventory Management.html', sizes=sizes, action='create')
+       return render_template('Input_Inventory.html', action='create')
    elif request.method == 'POST':
-       item_name = request.form['item_name']
-       size = request.form['size']
-       color = request.form['color']
-       price = request.form['price']
-       quantity = request.form['quantity']
-       description = request.form['description']
+           item_name = request.form['item_name']
+           xsmall = request.form['xsmall']
+           small = request.form['small']
+           medium = request.form['medium']
+           large = request.form['large']
+           xlarge = request.form['xlarge']
+           xxlarge = request.form['xxlarge']
+           color = request.form['color']
+           price = request.form['price']
+           quantity = request.form['each_size']
+           description = request.form['description']
 
-       items = Inventory(item_name=item_name, size=size, color=color, price=price,
-                         quantity=quantity, description=description)
-       db.session.add(items)
-       db.session.commit()
-       flash(f'{item_name} was successfully added!', 'success')
+           items = Inventory(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge, xxlarge=xxlarge , color=color, price=price,
+                             quantity=quantity, description=description)
+
+           db.session.add(items)
+           db.session.commit()
+           flash(f'{size} was successfully added!', 'success')
        return redirect(url_for('InventoryLog'))
 
 

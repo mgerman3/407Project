@@ -76,7 +76,7 @@
                 </div>
             </div>
             {% else %}
-        <form action="{{ url_for('EnterItems') }}" method="post">
+        <form action="{{ url_for('inventory_entry') }}" method="post">
     <!-- Background Photo -->
         <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
         <!-- Inventory Input -->
@@ -94,14 +94,14 @@
                                         <p class="formFieldsLabels">Item Name<br></p>
                                         <input type="text" class="inputFields" name="item_name" required><br><br></div>
                                         <p class="formFieldsLabels">Size Quantity</p>
-                                    <div class=”cart-counter”>
-                                        X-Small <input class="item-info" type=number min=1 max=15 value="0">
-                                        Small <input class="item-info" type=number min=1 max=15 value="0">
-                                        Medium <input class="item-info" type=number min=1 max=15 value="0">
-                                        Large <input class="item-info" type=number min=1 max=15 value="0">
-                                        X-Large <input class="item-info" type=number min=1 max=15 value="0">
-                                        2X-Large <input class="item-info" type=number min=1 max=15 value="0">
-                                    </div>
+                                        <div class=”cart-counter”>
+                                            X-Small <input class="item-info" type=number name=xsmall min=1 max=15 value="0">
+                                            Small <input class="item-info" type=number name=small min=1 max=15 value="0">
+                                            Medium <input class="item-info" type=number name=medium min=1 max=15 value="0">
+                                            Large <input class="item-info" type=number name=large min=1 max=15 value="0">
+                                            X-Large <input class="item-info" type=number name=xlarge min=1 max=15 value="0">
+                                            2X-Large <input class="item-info" type=number name=xxlarge min=1 max=15 value="0">
+                                        </div>
                                     <div class="row">
                                         <p class="formFieldsLabels">Color</p>
                                         <input type="text" class="inputFields" name="color" required><br><br>
@@ -109,10 +109,6 @@
                                     <div class="row">
                                         <p class="formFieldsLabels">Item Price</p>
                                         <input type="text" class="inputFields" name="price" required><br><br>
-                                    </div>
-                                    <div class="row">
-                                        <p class="formFieldsLabels">Quantity</p>
-                                        <input type="text" class="inputFields" name="quantity" required><br><br>
                                     </div>
                                     <div class="row">
                                         <p class="formFieldsLabels">Description</p>

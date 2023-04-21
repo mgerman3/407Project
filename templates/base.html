@@ -69,7 +69,7 @@ a.footerItems, p.footerItems {
         <li class="nav-item dropdown">
           <a class="dropbtn" aria-expanded="false">Admin</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" {% if request.endpoint=='inventory_entry' %}active{% endif %}  href="/EnterItems">Inventory Input</a></li>
+            <li><a class="dropdown-item" {% if request.endpoint=='inventory_entry' %}active{% endif %}  href="/InventoryInput">Inventory Input</a></li>
             <li><a class="dropdown-item" {% if request.endpoint=='InventoryLog' %}active{% endif %} href="{{ url_for('InventoryLog') }}">Inventory Log</a></li>
           </ul>
         </li>
