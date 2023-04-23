@@ -143,10 +143,10 @@ def inventory_entry():
        xxlarge = request.form['xxlarge']
        color = request.form['color']
        price = request.form['price']
-       description = request.form['desc']
+       desc = request.form['desc']
 
        items = Inventory(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge,
-                         xxlarge=xxlarge, color=color, price=price, description=description)
+                         xxlarge=xxlarge, color=color, price=price, desc=desc)
 
        db.session.add(items)
        db.session.commit()
