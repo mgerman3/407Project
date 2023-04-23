@@ -75,8 +75,9 @@ class Inventory(db.Model):
     xxlarge = db.Column(db.Integer, nullable=False)
     color = db.Column(db.String(12), nullable=False)
 
-    def __init__(self, collection_id, xsmall, small, medium, large, xlarge, xxlarge, color):
+    def __init__(self, collection_id, item_name, xsmall, small, medium, large, xlarge, xxlarge, color):
         self.collection_id = collection_id
+        self.item_name = item_name
         self.xsmall = xsmall
         self.small = small
         self.medium = medium
@@ -86,7 +87,7 @@ class Inventory(db.Model):
         self.color = color
 
     def __repr__(self):
-        return f"{self.color}"
+        return f"{self.item_name} {self.color}"
 
 
 class Cart(db.Model):
