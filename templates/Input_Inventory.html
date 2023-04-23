@@ -76,7 +76,7 @@
                 </div>
             </div>
             {% else %}
-        <form action="{{ url_for('inventory_entry') }}" method="post">
+        <form action="{{ url_for('inventory_entry') }}" method="POST">
     <!-- Background Photo -->
         <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
         <!-- Inventory Input -->
@@ -119,7 +119,7 @@
                                         <input class="form-control" type="file" id="image">
                                     </div>
                                     <div class="row">
-                                      <input type="submit" value="Submit Inventory" class="inventoryButtons">
+                                      <input type="submit" value="Submit Inventory" class="inventoryButtons" method="POST">
                                     </div>
                                 </div>
                             </div>

@@ -66,6 +66,7 @@ class Inventory(db.Model):
 
     product_id = db.Column(db.Integer, primary_key=True)
     collection_id = db.Column(db.Integer, db.ForeignKey('Collections.collection_id'))
+    item_name = db.Column(db.String(20), nullable=False)
     xsmall = db.Column(db.Integer, nullable=False)
     small = db.Column(db.Integer, nullable=False)
     medium = db.Column(db.Integer, nullable=False)
@@ -83,7 +84,6 @@ class Inventory(db.Model):
         self.xlarge = xlarge
         self.xxlarge = xxlarge
         self.color = color
-
 
     def __repr__(self):
         return f"{self.color}"

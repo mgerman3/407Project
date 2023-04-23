@@ -4,7 +4,6 @@ from flask_login import LoginManager, login_user, login_required, logout_user, c
 from werkzeug.security import check_password_hash
 from authorize import role_required
 from models import *
-from datetime import date as dt
 
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -128,12 +127,9 @@ def CheckOut():
 def GenProduct():
     return render_template('GenericProductPage.html')
 
-@app.route('/InventoryInput')
+@app.route('/InventoryInput', methods=['GET', 'POST'])
 @login_required
 @role_required(['ADMIN', 'MANAGER'])
-# def Inventory():
-#     return render_template('Inventory Management.html')
-
 def inventory_entry():
    if request.method == 'GET':
        return render_template('Input_Inventory.html', action='create')
@@ -147,9 +143,10 @@ def inventory_entry():
        xxlarge = request.form['xxlarge']
        color = request.form['color']
        price = request.form['price']
-       description = request.form['description']
+       description = request.form['desc']
 
-       items = Inventory(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge, xxlarge=xxlarge , color=color, price=price, description=description)
+       items = Inventory(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge,
+                         xxlarge=xxlarge, color=color, price=price, description=description)
 
        db.session.add(items)
        db.session.commit()
