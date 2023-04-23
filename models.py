@@ -65,7 +65,7 @@ class Inventory(db.Model):
     __tablename__ = "Inventory"
 
     product_id = db.Column(db.Integer, primary_key=True)
-    collection_id = db.Column(db.Integer, db.ForeignKey('Collections.collection_id'))
+    # collection_id = db.Column(db.Integer, db.ForeignKey('Collections.collection_id'))
     item_name = db.Column(db.String(20), nullable=False)
     xsmall = db.Column(db.Integer, nullable=False)
     small = db.Column(db.Integer, nullable=False)
@@ -74,10 +74,11 @@ class Inventory(db.Model):
     xlarge = db.Column(db.Integer, nullable=False)
     xxlarge = db.Column(db.Integer, nullable=False)
     color = db.Column(db.String(12), nullable=False)
+    price = db.Column(db.Integer, nullable=False)
     desc = db.Column(db.String(50), nullable=False)
 
-    def __init__(self, collection_id, item_name, xsmall, small, medium, large, xlarge, xxlarge, color, desc):
-        self.collection_id = collection_id
+    def __init__(self, item_name, xsmall, small, medium, large, xlarge, xxlarge, color, price, desc):
+        # self.collection_id = collection_id
         self.item_name = item_name
         self.xsmall = xsmall
         self.small = small
@@ -86,6 +87,7 @@ class Inventory(db.Model):
         self.xlarge = xlarge
         self.xxlarge = xxlarge
         self.color = color
+        self.price = price
         self.desc = desc
 
     def __repr__(self):
