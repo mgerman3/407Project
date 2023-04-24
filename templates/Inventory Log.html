@@ -105,9 +105,9 @@
                 <td>{{ each_item['image'] }}</td>
            {% if current_user.role in ['ADMIN', 'MANAGER'] %}
            <td>
-               <a href="{{ url_for('item_edit', product_id=each_item['product_id']) }}" class="btn btn-secondary" role="button">Edit</a>
+               <a href="{{ url_for('item_edit', product_id=each_item['product_id']) }}" class="btn btn-secondary" type = "submit" role="button">Edit</a>
                {% if current_user.role in ['ADMIN'] %}
-               <a href="{{ url_for('item_delete', product_id=each_item['product_id']) }}" class="btn btn-secondary" role="button">Delete</a>
+               <a href="{{ url_for('item_delete', product_id=each_item['product_id']) }}" class="btn btn-secondary" type = "submit" role="button">Delete</a>
                {% endif %}
            </td>
            {% endif %}

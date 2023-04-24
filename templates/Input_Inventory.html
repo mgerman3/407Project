@@ -30,7 +30,7 @@
                 <div class = "d-flex justify-content-center">
                     <div class = "border-box col">
                         <div class = row>
-                            <div class="formInputFields" style="width: 650px">
+                            <div class="formInputFields" style="width: 700px">
                                 <div class = "border-box-col">
                                     <div class="row">
                                         <div class="row">
@@ -59,28 +59,28 @@
                                             <label for="color" class="form-label"><strong>Color</strong></label>
                                             <input type="text" class="inputFields" id="color" name="color" value="{{ item['color'] if item else '' }}" required>
                                             {% endif %}
-                                          </div>
+
 
                                 <!-- Inventory Price Input -->
                                         {% if action and action in ['create'] %}
                                             <label for="price" class="form-label"><strong>Price</strong></label>
                                             <input type="number" class="inputFields" id="price" name="price" value="{{ item['price'] if item else '' }}" required>
                                             {% endif %}
-                                          </div>
+
 
                             <!-- Inventory Description Input -->
                                         {% if action and action in ['create'] %}
                                             <label for="color" class="form-label"><strong>Description</strong></label>
                                             <input type="text" class="inputFields" id="desc" name="desc" value="{{ item['desc'] if item else '' }}" required>
                                             {% endif %}
-                                          </div>
+
 
                             <!-- Inventory Image Input -->
                                         {% if action and action in ['create'] %}
                                             <label for="image" class="form-label"><strong>Image</strong></label>
                                             <input type="file" class="form-control" id="image" name="image" value="{{ item['image'] if item else '' }}">
                                             {% endif %}
-                                          </div>
+
 
 
                                 <!-- Inventory Name Read/Update -->
@@ -95,7 +95,7 @@
                                             <br> {{ item['item_mame'] }}
                                         {% endif %}
                                         {% endif %}
-                                      </div>
+                                        </div>
 
                                 <!-- Inventory Size Read/Update -->
                                         {% if action and action in ['read', 'update'] %}
@@ -170,12 +170,13 @@
                                         {% if action and action == 'update' %}
                                         <label for="image" class="form-label"><strong>Image</strong></label>
                                         <input type="file" class="form-control" id="image" name="image"
-                                               value="{{ item['image'] if item else '' }}">
+                                               value="{{ item['image'] if item else '' }}"><br>
                                         {% else %}
                                             <strong>Upload Image</strong>
                                             <br> {{ item['image'] }}
                                         {% endif %}
                                         {% endif %}
+                                    </div>
                                     <div class="row">
                                       <input type="submit" value="Submit Inventory" class="inventoryButtons" method="POST">
                                     </div>
@@ -186,5 +187,6 @@
                 </div>
             </div>
         </div>
+    </div>
         </form>
 {% endblock %}
