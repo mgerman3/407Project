@@ -145,7 +145,7 @@ def inventory_entry():
        price = request.form['price']
        desc = request.form['desc']
 
-       items = Inventory(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge,
+       items = InventoryInfo(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge,
                          xxlarge=xxlarge, color=color, price=price, desc=desc)
 
        db.session.add(items)
