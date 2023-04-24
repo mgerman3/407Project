@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Log-In{% endblock %}
+
+{% block html_style %}
+    h1 {
+        text-align: center;
+
+    }
+
+ text-center {padding: 9000px 9000px;}
+{% endblock %}
+
+{% block page_content %}
+<!-- Navbar -->
+
+    <!-- background image -->
+<img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
+
+    <div class="text-center" style="height: 100vh">
+        <div class="row">
+            <h2><br>Hello, {{ current_user.username }}!</h2>
+        </div>
+        <br>
+        <div class="row">
+            <form action="/Shop" method="get">
+                <input type="submit" value="Start Shopping" />
+            </form>
+        </div>
+        <br>
+        <div class="row">
+            <form action="/cart" method="get">
+                <input type="submit" value="View Cart" />
+            </form>
+        </div>
+        <br>
+    <!-- need to change /CheckOut to a link to change info-->
+        <div class="row">
+            <form action="/CheckOut" method="get">
+                <input type="submit" value="Past Orders" />
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

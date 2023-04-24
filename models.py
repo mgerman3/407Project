@@ -3,7 +3,7 @@ from flask_login import UserMixin
 db = SQLAlchemy()
 
 
-class User(UserMixin, db.Model):
+class User(db.Model):
    __tablename__ = "User"
 
    user_id = db.Column(db.Integer, primary_key=True)
@@ -61,48 +61,43 @@ class OrderInfo(db.Model):
    def __repr__(self):
        return f"{self.shipping_mode}"
 
-class Size(db.Model):
-   __tablename__ = "Size"
-
-
-   size_id = db.Column(db.Integer, primary_key=True)
-   size = db.Column(db.String(30), nullable=False)
-   items = db.relationship('Inventory', backref='items')
-
-
-   def __init__(self, size):
-       self.size = size
-
-
-   def __repr__(self):
-       return f"{self.size}"
-
-class Inventory(db.Model):
-    __tablename__ = "Inventory"
+class InventoryInfo(db.Model):
+    __tablename__ = "InventoryInfo"
 
     product_id = db.Column(db.Integer, primary_key=True)
     collection_id = db.Column(db.Integer, db.ForeignKey('Collections.collection_id'))
-    size = db.Column(db.String(6), db.ForeignKey('Size.size_id'), nullable=False)
+    item_name = db.Column(db.String(20), nullable=False)
+    xsmall = db.Column(db.Integer, nullable=False)
+    small = db.Column(db.Integer, nullable=False)
+    medium = db.Column(db.Integer, nullable=False)
+    large = db.Column(db.Integer, nullable=False)
+    xlarge = db.Column(db.Integer, nullable=False)
+    xxlarge = db.Column(db.Integer, nullable=False)
     color = db.Column(db.String(12), nullable=False)
-    quantity = db.Column(db.Integer, nullable=False)
+    price = db.Column(db.Integer, nullable=False)
+    desc = db.Column(db.String(50), nullable=False)
 
-    def __init__(self, collection_id, size, color, quantity):
-        self.collection_id = collection_id
-        self.size = size
+    def __init__(self, item_name, xsmall, small, medium, large, xlarge, xxlarge, color, price, desc):
+        self.item_name = item_name
+        self.xsmall = xsmall
+        self.small = small
+        self.medium = medium
+        self.large = large
+        self.xlarge = xlarge
+        self.xxlarge = xxlarge
         self.color = color
-        self.quantity = quantity
-
+        self.price = price
+        self.desc = desc
 
     def __repr__(self):
-        return f"{self.size} {self.color} {self.quantity}"
-
+        return f"{self.item_name} {self.color} {self.desc}"
 
 
 class Cart(db.Model):
     __tablename__ = "Cart"
 
     order_id = db.Column(db.Integer, db.ForeignKey('OrderInfo.order_id'), primary_key=True)
-    product_id = db.Column(db.Integer, db.ForeignKey('Inventory.product_id'), primary_key=True)
+    product_id = db.Column(db.Integer, db.ForeignKey('InventoryInfo.product_id'), primary_key=True)
 
     def __init__(self, order_id, product_id) :
         self.order_id = order_id
@@ -121,10 +116,11 @@ class Collections(db.Model):
        return f"{self.collection_name}"
 
 
-class Credentials(db.Model):
+class Credentials(UserMixin, db.Model):
     __tablename__ = "Credentials"
 
-    username = db.Column(db.String(40), primary_key=True)
+    account_id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(40), unique=True)
     password = db.Column(db.String(40), nullable=False)
     role = db.Column(db.String(10), nullable=False)
 
@@ -134,7 +130,7 @@ class Credentials(db.Model):
         self.role = role
 
     def get_id(self):
-        return (self.username)
+        return (self.account_id)
 
     def __repr__(self):
        return f"({self.username}){self.password}{self.role}"

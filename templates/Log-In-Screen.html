@@ -17,43 +17,15 @@
     <!-- background image -->
 <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
 
-   {% if form_submitted %}
-    <div class="text-center" style="height: 100vh">
-        <div class="row">
-            <h2>Welcome, {'first_name'}!</h2>
-        </div>
-        <br>
-        <div class="row">
-            <form action="/Shop" method="get">
-                <input type="submit" value="Start Shopping" />
-            </form>
-        </div>
-        <br>
-        <div class="row">
-            <form action="/cart" method="get">
-                <input type="submit" value="View Cart" />
-            </form>
-        </div>
-        <br>
-    <!-- need to change /CheckOut to a link to change info-->
-        <div class="row">
-            <form action="/CheckOut" method="get">
-                <input type="submit" value="Past Orders" />
-            </form>
-        </div>
-    </div>
-
-    {% else %}
-
 <div class="text-center" style="height: 100vh">
     <h1>Log-in Below</h1>
-    <form action="/LogIn" method="post">
+    <form action="/LogIn" method="POST">
         <div class="border-box col">
             <div class="row" style="padding-right: 1px">
-                <input type = "text" class="loginInput" placeholder="Username" required>
+                <input type = "text" class="loginInput" placeholder="Username" name="username" required>
             </div> <br>
             <div class="row" style="padding-right: 1px">
-                <input type="password" class="loginInput" placeholder="Password" required>
+                <input type="password" class="loginInput" placeholder="Password" name="password" required>
             </div>
         </div>
         <br><input type="submit" value="Log In">
@@ -62,7 +34,4 @@
     <br>
 </div>
 
-<!--#verify if username and password are correct using html
-#redirect to home page-->
-{% endif %}
 {% endblock %}

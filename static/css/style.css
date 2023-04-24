@@ -65,10 +65,11 @@ opacity: 0.5;
     text-color: white;
 }
 
-.checkoutButtons{
+input.checkoutButtons{
     background-color: #69a695;
     font-family: 'Open Sans';
     color: white;
+    width: 90%;
 }
 
 p {
@@ -266,6 +267,11 @@ h2.left {
     text-align:left;
 }
 
+/* needed for inputing inventory pages while using jinja */
+h2 {
+    text-align: center;
+}
+
 p {
     text-align: left;
 }
@@ -286,6 +292,17 @@ text.left {
             margin-left: auto;
             margin-right: auto;
         }
+
+a.btn.btn-secondary {
+    background-color: #69a695;
+    color: white;
+    font-size: 17px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    text-decoration: none;
+}
+
 
 /*Filter shop button styling*/
 /* Dropdown Button */
@@ -467,7 +484,7 @@ input.signupInput {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
+/<a class="dropbtn" aria-expanded="false" href="/LogIn"><img src="../static/images/profile.png" alt="Bootstrap" width="30" height="24"></a>* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #ddd;}
 
 /* Show the dropdown menu on hover */
@@ -478,10 +495,12 @@ input.signupInput {
 
 /*Box for confirmation page*/
 .box {
-    margin-top: 60px;
-    margin-left: 140px;
-    margin-right: 140px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
     position: center;
+    text-align: center;
     background-color: #f6f6f6;
 }
 
@@ -727,16 +746,54 @@ input.btpos {
 
 .containerd {
   max-width: 100%;
-  margin: 0 auto;
-  padding: 70px;
+  padding: 50px;
   background-color: #f1f1f1;
   border: 1px solid #ccc;
 }
 
 .containere {
   max-width: 100%; /* Set the maximum width of the container */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 70px; /* Add some padding to the container */
+  padding: 50px; /* Add some padding to the container */
   background-color: #DCDCDC; /* Set the background color of the container */
   border: 1px solid #ccc; /* Add a border around the container */
+}
+
+
+/* Styling for Inventory Management */
+.invHeader {
+    font-size: 33px;
+    text-align: center;
+}
+
+.postInvLabels {
+    display: inline-block;
+    text-align: center;
+}
+
+.inventoryBoxTotal {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formInvInputFields {
+    background-color: #f6f6f6;
+    padding: 30px 25px 30px 25px;
+}
+
+.formFieldsLabels {
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+
+.image-container-shop {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 450px;
+  left: 100px;
 }

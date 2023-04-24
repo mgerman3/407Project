@@ -3,13 +3,13 @@
 <!-- create title block -->
 {% block title %}Cart{% endblock %}
 
-<!-- create style block -->
-{% block html_style %}
-    <!-- ensure title is centered -->
-    h1 {
-        text-align: center;
-    }
-{% endblock %}
+<!-- create style block not validated -->
+{#{% block html_style %}#}
+{#    <!-- ensure title is centered -->#}
+{#    h1 {#}
+{#        text-align: center#}
+{#    }#}
+{#{% endblock %}#}
 
 <!-- create page content in body -->
 {% block page_content %}
@@ -26,16 +26,16 @@
             <!-- ensure card expands when multiple items are added to cart-->
             <div class="cartPlaceholder" style="position: relative; height: auto; min-height: 100%; padding-bottom: 7px;">
                 <div class=”cartHeader”>
-                    <h3 class=”Head” style="padding: 5px 5px 0px 5px; margin: 0px;" >Items</h3>
+{#                    <h3 class=”Head” style="padding: 5px 5px 0px 5px; margin: 0px;" >Items</h3>#}
                     <!-- titles for columns in cart-->
                     <div class="cart-item">
-                        <h5 class="item-info"> </h5>
+                        <h5 class="item-info">Item(s)</h5>
                         <h5 class="item-info">Type</h5>
                         <h5 class="item-info">Quantity</h5>
                         <h5 class="item-info">Size</h5>
                         <h5 class="item-info">Price</h5>
                     </div>
-                    <!--FUTURE FORMATTING: %% for item in cart %}--->
+                    <!--FUTURE FORMATTING: %% for item in cart %}-->
                         <div class="cart-item">
                             <!-- display image of item -->
                             <div class="cart-item-image">
@@ -57,11 +57,11 @@
                                 </div>
                                 <!-- display item price and remove button-->
                                 <div class="cart-item-price">
-                                    <h3 style="margin-bottom: 0px">$42.00 USD<h3> <!-- FUTURE FORMATTING: { item.price }}-->
+                                    <h3 style="margin-bottom: 0px">$42.00 USD</h3> <!-- FUTURE FORMATTING: { item.price }}-->
                                     <div class="remove">Remove</div>
                                 </div>
                             </div>
-                    <!--FUTURE FORMATTING:% endfor %}--->
+                    <!--FUTURE FORMATTING:% endfor %}-->
                 </div>
             </div>
         </div>
@@ -77,46 +77,21 @@
                 <!-- display shipping -->
                 <div class="row">
                     <div class="border-box col" style="padding: 0px">
-                        <p class="cartTotalsLabels">Shipping -</p>
-                    </div>
-                    <!-- create radio buttons for the three shipping options -->
-                    <div class="border-box col" style="padding: 0px 0px 10px 0px">
-                        <!-- local pickup shipping -->
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Local Pick Up:
-                            </label>
-                        </div>
-                        <!-- home delivery shipping -->
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Home Delivery
-                            </label>
-                        </div>
-                        <!-- rapid delivery shipping -->
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Rapid Delivery
-                            </label>
-                        </div>
+                        <p class="cartTotalsLabels">Shipping -</p><p>Select Method at Checkout</p>
                     </div><hr>
                 </div>
                 <!-- display taxes -->
-                <div class="row">
-                    <p class="cartTotalsLabels">Taxes -</p><hr>
-                </div>
+
                 <!-- display total -->
                 <div class="row">
                     <p class="cartTotalsLabels"><strong>Total -</strong></p>
                 </div>
-                <!-- create button to go to checkout page -->
-                <div class="row">
-                    <input type="submit" value="Checkout" class="checkoutButtons" style="float: right; margin: 20px; padding: 7px 75px 7px 75px;">
-                </div>
+
             </div>
+            <!-- create button to go to checkout page -->
+                <div class="row" style="justify-content: center">
+                    <input type="submit" value="Checkout" class="checkoutButtons" style="margin: 20px; padding: 7px 75px 7px 75px;">
+                </div>
         </div>
     </form>
 {% endblock %}

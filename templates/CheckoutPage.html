@@ -124,7 +124,7 @@
                                 </div>
                                 <!--  Displays the price of item added to the cart -->
                                 <div class="cart-item-price">
-                                    <p class="cartItemLabels">$42.00 USD</p>> <!--{ item.price }}-->
+                                    <p class="cartItemLabels">$42.00 USD</p> <!--{ item.price }}-->
                                     <!--  Ability to delete already added items to the cart -->
                                     <div class="remove">Remove</div>
                                 </div>
@@ -197,7 +197,7 @@
                             </div>
                             <div class="row">
                                 <div class="border-box col" style="padding: 0px">
-                                    <p class="cartTotalsLabels">Shipping -</p>
+                                    <p class="cartTotalsLabels">Shipping - {{  }}</p>
                                 </div>
                                 <div class="border-box col" style="padding: 0px 0px 10px 0px">
                                     <!-- Creates three buttons for user to choose between different shipping method-->
@@ -218,19 +218,15 @@
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             Rapid Delivery
                                         </label>
-                                    </div>
                                 </div><hr>
                             </div>
                             <!-- Creates additional fields within form to display total amount -->
-                            <div class="row">
-                                <p class="cartTotalsLabels">Taxes -</p><hr>
-                            </div>
                             <div class="row">
                                 <p class="cartTotalsLabels"><strong>Total -</strong></p>
                                 <div class="row">
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row" style="justify-content: center">
                                 <!--Field to submit the users answers inputted into the form -->
                                 <input type="submit" value="Place Order" class="checkoutButtons" style="float: right; margin: 20px; padding: 7px 75px 7px 75px;">
                             </div>

@@ -3,15 +3,7 @@
 <!-- create title block -->
 {% block title %}Sign-Up{% endblock %}
 
-<!-- create style block-->
-{% block html_style %}
-    <!-- center the text -->
-    h1, p {
-        text-align: center;
-    }
-{% endblock %}
 
-<!-- create page content in body-->
 {% block page_content %}
 
     <!-- background image -->
@@ -47,20 +39,20 @@
         </div> <br>
         <!-- allow user to enter first name -->
         <div class="row" >
-            <input type="First Name" class = "signupInput" name="First Name" placeholder="First Name" required>
+            <input type="text" class = "signupInput" name="first_name" placeholder="First Name">
         </div> <br>
         <!-- allow user to enter last name -->
         <div class="row" >
-            <input type="Last Name" class = "signupInput" name="Last Name" placeholder="Last Name" required>
+            <input type="text" class = "signupInput" name="last_name" placeholder="Last Name">
         </div> <br>
         <!-- allow user to enter email -->
         <div class="row" >
-            <input type="email" class = "signupInput" name="Last Name" placeholder="Email" required>
+            <input type="email" class = "signupInput" name="email" placeholder="Email" required>
         </div> <br>
         <!-- allow user to submit form -->
-        <form action="/signup" method="post">
-            <input type="submit" value="Register">
-        </form>
+        <div class="row">
+            <input type="submit" value="Register" class="inventoryButtons">
+        </div>
     </form>
 </div>
 

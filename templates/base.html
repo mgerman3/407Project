@@ -1,71 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- establish bootstrap for all child templates-->
 <head>
     <meta charset="utf-8">
-    <!-- create title format for all child templates-->
+<!-- create title format for all child templates-->
     <title>{% block title %}{% endblock %}</title>
-    <!-- create connections to style sheet at bootstrap for child templates-->
-    <link href="/static/css/style.css" rel="stylesheet">
+      <link href="/static/css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 
-    <!-- allow child templates to add to the head section-->
-    {% block html_head %}{% endblock %}
+    <style>{% block html_style %}
+       * {
+  box-sizing: border-box;
+}
 
-    <!-- allow child templates to add to the style section-->
-    <style>{% block html_style %}{% endblock %}</style>
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+a.footerItems, p.footerItems {
+   text-align: center;
+    padding-left: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    {% endblock %}</style>
 </head>
 
 <body>
-<!-- create navbar for all child templates -->
 <nav class="navbar navbar-expand-lg" style="background-color: #69a695;">
   <div class="container-fluid">
-    <!-- creates logo on left side of navbar -->
     <a class="navbar-brand" href="#"><img src="../static/images/Clear%20Background%20Logo.png" alt="Bootstrap" width="30" height="24"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <!-- create home page on navbar -->
         <li class="nav-item">
           <a class="dropbtn" aria-current="page" href="/">Home</a>
         </li>
-          <!-- create shop page on navbar -->
         <li class="nav-item dropdown">
           <a class="dropbtn" href="/Shop" aria-expanded="false">
             Shop
           </a>
         </li>
-          <!-- create about page on navbar -->
         <li class="nav-item">
             <a class="dropbtn" aria-current="page" href="/About">About</a>
         </li>
-          <!-- create contact us page on navbar -->
         <li class="nav-item dropdown">
           <a class="dropbtn" aria-expanded="false">Contact Us</a>
-            <!-- create drop down menu on contact us page on navbar -->
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/RequestForm">Request Form</a></li>
             <li><a class="dropdown-item" href="/Reviews">Reviews</a></li>
           </ul>
         </li>
-            <!-- create login page on navbar using image-->
+      {% if current_user.role in ['ADMIN', 'MANAGER'] %}
         <li class="nav-item dropdown">
-          <a class="dropbtn" aria-expanded="false" href="/LogIn"><img src="../static/images/profile.png" alt="Bootstrap" width="30" height="24"></a>
-            <!-- create drop down menu on login page on navbar -->
-            <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/signup">Create Account</a></li>
+          <a class="dropbtn" aria-expanded="false">Admin</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" {% if request.endpoint=='inventory_entry' %}active{% endif %}  href="/InventoryInput">Inventory Input</a></li>
+            <li><a class="dropdown-item" {% if request.endpoint=='items_view_all' %}active{% endif %} href="{{ url_for('items_view_all') }}">Inventory Log</a></li>
           </ul>
         </li>
-            <!-- create cart page on navbar using image-->
+      {% endif %}
           <li><a class="dropbtn" href="/cart"><img src="../static/images/cart.png" alt="Bootstrap" width="30" height="24"></a></li>
       </ul>
+            {% if current_user.is_authenticated %}
+               <div class="navbar-collapse collapse w-50 order-3 dual-collapse2">
+                   <ul class="navbar-nav ms-auto">
+                       <li class="nav-item navbar-text">
+                           <a class="dropbtn" href="{{ url_for('logout') }}">Log Out</a>
+                           <a class="dropbtn" aria-expanded="false" style="background-color: #69a695"> Welcome, {{ current_user.username }}!</a>
+                           <a class="dropbtn" aria-expanded="false" href="/profile"><img src="../static/images/profile.png" alt="Bootstrap" width="30" height="24"></a>
+                       </li>
+                   </ul>
+               </div>
+
+                {% else %}
+                 <div class="navbar-collapse collapse w-50 order-3 dual-collapse2">
+                   <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="dropbtn" aria-expanded="false" href="/LogIn">Log-In</a>
+                        </li>
+                       <li class="nav-item">
+                            <a class="dropbtn" aria-expanded="false" href="/signup">Create Account</a>
+                       </li>
+                     </ul>
+                 </div>
+            {% endif %}
     </div>
   </div>
 </nav>
+
+        <h2>{% block html_head %}{% endblock %}</h2>
 
     <!-- create page content format for all child templates-->
         {% block page_content %}{% endblock %}
@@ -73,11 +108,9 @@
 
 </body>
 
-<!-- create footer for all child templates-->
 <footer>
 <div class="websiteFooter">
-    <div class="row">
-        <!-- establish 1/3 of footer for links-->
+    <div class="row" style="padding-top: 25px">
         <div class="col-4">
             <p class="footerItems" style="color: black">Helpful Links</p>
             <div class="row">
@@ -93,17 +126,9 @@
                 <a href="/ContactUs" class="footerItems">Contact us</a>
             </div>
         </div>
-        <!--establish 1/3 of footer for Contact Us-->
         <div class="col-4">
-            <p class="footerItems">Contact Us</p>
-            <div class="row" style="display: inline-block">
-                <form>
-                    <input placeholder="Email" type="text" class="inputFields" style="width: 225px">
-                    <input type="submit" value="Submit" class="checkoutButtons" style="height: 30px; font-size: 13px; ">
-                </form>
-            </div>
+            <p class="footerItems"><img src="../static/images/Clear%20Background%20Logo.png" alt="Bootstrap" width="150" height="150"></p>
         </div>
-        <!-- establish 1/3 of footer for Social Media-->
         <div class="col-4">
             <p class="footerItems">Social Media</p>
             <div class="row">
