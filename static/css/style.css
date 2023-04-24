@@ -267,6 +267,11 @@ h2.left {
     text-align:left;
 }
 
+/* needed for inputing inventory pages while using jinja */
+h2 {
+    text-align: center;
+}
+
 p {
     text-align: left;
 }
@@ -287,6 +292,17 @@ text.left {
             margin-left: auto;
             margin-right: auto;
         }
+
+a.btn.btn-secondary {
+    background-color: #69a695;
+    color: white;
+    font-size: 17px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    text-decoration: none;
+}
+
 
 /*Filter shop button styling*/
 /* Dropdown Button */

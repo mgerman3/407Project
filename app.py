@@ -4,7 +4,6 @@ from flask_login import LoginManager, login_user, login_required, logout_user, c
 from werkzeug.security import check_password_hash
 from authorize import role_required
 from models import *
-from datetime import date as dt
 
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -128,12 +127,81 @@ def CheckOut():
 def GenProduct():
     return render_template('GenericProductPage.html')
 
-@app.route('/InventoryInput')
+@app.route('/InventoryLog')
 @login_required
 @role_required(['ADMIN', 'MANAGER'])
-# def Inventory():
-#     return render_template('Inventory Management.html')
+def items_view_all():
+   items = InventoryInfo.query.order_by(InventoryInfo.item_name) \
+       .all()
+   return render_template('Inventory Log.html', items=items)
 
+@app.route('/InventoryLog/update/<int:product_id>', methods=['GET', 'POST'])
+@login_required
+@role_required(['ADMIN', 'MANAGER'])
+def item_edit(product_id):
+   if request.method == 'GET':
+       item = InventoryInfo.query.filter_by(product_id=product_id).first()
+
+       if item:
+           return render_template('Input_Inventory.html', item=item, action='update')
+
+
+       else:
+           flash(f'Item attempting to be edited could not be found!', 'error')
+
+
+   elif request.method == 'POST':
+       item = InventoryInfo.query.filter_by(product_id=product_id).first()
+
+
+       if item:
+           item.item_name = request.form['item_name']
+           item.xsmall = request.form['xsmall']
+           item.small = request.form['small']
+           item.medium = request.form['medium']
+           item.large = request.form['large']
+           item.xlarge = request.form['xlarge']
+           item.xxlarge = request.form['xxlarge']
+           item.color = request.form['color']
+           item.price = request.form['price']
+           item.desc = request.form['desc']
+
+           db.session.commit()
+           flash(f'{item.item_name} was successfully updated!', 'success')
+       else:
+           flash(f'Item attempting to be edited could not be found!', 'error')
+
+
+       return redirect(url_for('items_view_all'))
+
+
+   # Address issue where unsupported HTTP request method is attempted
+   flash(f'Invalid request. Please contact support if this problem persists.', 'error')
+   return redirect(url_for('items_view_all'))
+
+
+
+
+@app.route('/InventoryLog/delete/<int:product_id>')
+@login_required
+@role_required(['ADMIN'])
+def item_delete(product_id):
+   item = InventoryInfo.query.filter_by(product_id=product_id).first()
+   print(product_id)
+   if item:
+       db.session.delete(item)
+       db.session.commit()
+       flash(f'{item} was successfully deleted!', 'success')
+   else:
+       flash(f'Delete failed! Item could not be found.', 'error')
+
+
+   return redirect(url_for('items_view_all'))
+
+
+@app.route('/InventoryInput', methods=['GET', 'POST'])
+@login_required
+@role_required(['ADMIN', 'MANAGER'])
 def inventory_entry():
    if request.method == 'GET':
        return render_template('Input_Inventory.html', action='create')
@@ -147,14 +215,15 @@ def inventory_entry():
        xxlarge = request.form['xxlarge']
        color = request.form['color']
        price = request.form['price']
-       description = request.form['description']
+       desc = request.form['desc']
 
-       items = Inventory(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge, xxlarge=xxlarge , color=color, price=price, description=description)
+       items = InventoryInfo(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge,
+                         xxlarge=xxlarge, color=color, price=price, desc=desc)
 
        db.session.add(items)
        db.session.commit()
-       flash(f'{items} was successfully added!', 'success')
-       return redirect(url_for('homePage'))
+       flash(f'{item_name} was successfully added!', 'success')
+       return redirect(url_for('items_view_all'))
 
 
    # Address issue where unsupported HTTP request method is attempted
@@ -207,10 +276,6 @@ def Banner():
 @app.route('/cart')
 def Cart():
     return render_template('cart.html')
-
-@app.route('/InventoryLog')
-def InventoryLog():
-    return render_template('Inventory Log.html')
 
 if __name__ == '__main__':
     app.run()

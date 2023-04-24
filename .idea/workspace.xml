@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="Created new database ATB2.db">
+    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="allows for inventory data input to be displayed when updating or reading the inventory iteam">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Input_Inventory.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Input_Inventory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATB2.db" beforeDir="false" afterPath="$PROJECT_DIR$/ATB2.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,7 +315,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682093087423</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="allows for inventory data input to be displayed when updating or reading the inventory iteam">
+      <created>1682302175887</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1682302175888</updated>
+    </task>
+    <task id="LOCAL-00026" summary="allows for inventory data input to be displayed when updating or reading the inventory iteam">
+      <created>1682302438979</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1682302438979</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,11 +368,12 @@
     <MESSAGE value="updated footer" />
     <MESSAGE value="adjust sizes on the input screen so admin can add multiple sizes when inputing inventory" />
     <MESSAGE value="Created new database ATB2.db" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created new database ATB2.db" />
+    <MESSAGE value="allows for inventory data input to be displayed when updating or reading the inventory iteam" />
+    <option name="LAST_COMMIT_MESSAGE" value="allows for inventory data input to be displayed when updating or reading the inventory iteam" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1681146471589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/11Pull$11Pull.coverage" NAME="11Pull Coverage Results" MODIFIED="1681322004954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1682093346941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1682302308213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1681146471589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
