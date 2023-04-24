@@ -1,81 +1,27 @@
 {% extends "base.html" %}
 
-{% block title %}Inventory Input{% endblock %}
+{% block title %}
+   {% if action and action == 'create' %}
+       Input New Inventory
+   {% elif action and action == 'update'  %}
+       Update Inventory Item
+   {% else %}
+       View Inventory
+   {% endif %}
+{% endblock %}
+
+{% block html_head %}
+   {% if action and action == 'create' %}
+       Input New Inventory
+   {% elif action and action == 'update'  %}
+       Update Inventory Item
+   {% else %}
+       View Inventory
+   {% endif %}
+{% endblock %}
 
 {% block page_content %}
 
-
-        {% if form_submitted %}
-            <div class="row">
-                <div class="checkoutHeader" style="padding: 20px">
-                    <h2>Inventory Updated!</h2><br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="postFormLabels">
-                    <p>Item ID:</p>
-                </div>
-                <div class="postFormLabels">
-                    <p>{{ request.form.get('item_ID')}}</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="postFormLabels">
-                    <p>Item Name:</p>
-                </div>
-                <div class="postFormLabels">
-                    <p>{{ request.form.get('item_name')}}</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="postFormLabels">
-                    <p>Size:</p>
-                </div>
-                <div class="postFormLabels">
-                    <p>{{ request.form.get('size')}}</p>
-                </div>
-            </div>
-            <div class="row">
-               <div class="postFormLabels">
-                    <p>Color:</p>
-                </div>
-                <div class="postFormLabels">
-                    <p>{{ request.form.get('color')}}</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="postFormLabels">
-                    <p>Item Price:</p>
-                </div>
-                <div class="postFormLabels">
-                    <p>{{ request.form.get('price')}}</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="postFormLabels">
-                    <p>Quantity:</p>
-                </div>
-                <div class="postFormLabels">
-                    <p>{{ request.form.get('quantity')}}</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="postFormLabels">
-                    <p>Description:</p>
-                </div>
-                <div class="postFormLabels">
-                    <p>{{ request.form.get('desc')}}</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="postFormLabels">
-                    <p>Uploaded Image:</p>
-                </div>
-                <div class="postFormLabels">
-                    <p>{{ request.form.get('image')}}</p>
-                </div>
-            </div>
-            {% else %}
         <form action="{{ url_for('inventory_entry') }}" method="POST">
     <!-- Background Photo -->
         <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
@@ -84,9 +30,6 @@
             <div class="row">
                 <div class = "d-flex justify-content-center">
                     <div class = "border-box col">
-                        <div class = row>
-                            <h2 class="checkoutHeader"><strong>Inventory Input</strong></h2><br><br>
-                        </div>
                         <div class = row>
                             <div class="formInputFields" style="width: 650px">
                                 <div class = "border-box-col">
@@ -129,5 +72,4 @@
             </div>
         </div>
         </form>
-        {% endif %}
 {% endblock %}
