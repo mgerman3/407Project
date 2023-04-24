@@ -21,10 +21,9 @@
 {% endblock %}
 
 {% block page_content %}
-
-        <form action="{{ url_for('inventory_entry') }}" method="POST">
     <!-- Background Photo -->
-        <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
+ <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
+        <form action="{{ url_for('inventory_entry') }}" method="POST">
         <!-- Inventory Input -->
         <div class="inventoryBoxTotal">
             <div class="row">
@@ -34,33 +33,149 @@
                             <div class="formInputFields" style="width: 650px">
                                 <div class = "border-box-col">
                                     <div class="row">
-                                        <p class="formFieldsLabels">Item Name<br></p>
-                                        <input type="text" class="inputFields" name="item_name" required><br><br></div>
-                                        <p class="formFieldsLabels">Size Quantity</p>
-                                        <div class=”cart-counter”>
-                                            X-Small <input class="item-info" type=number name=xsmall min=0 max=15 value="0">
-                                            Small <input class="item-info" type=number name=small min=0 max=15 value="0">
-                                            Medium <input class="item-info" type=number name=medium min=0 max=15 value="0">
-                                            Large <input class="item-info" type=number name=large min=0 max=15 value="0">
-                                            X-Large <input class="item-info" type=number name=xlarge min=0 max=15 value="0">
-                                            2X-Large <input class="item-info" type=number name=xxlarge min=0 max=15 value="0">
-                                        </div>
-                                    <div class="row">
-                                        <p class="formFieldsLabels">Color</p>
-                                        <input type="text" class="inputFields" name="color" required><br><br>
-                                    </div>
-                                    <div class="row">
-                                        <p class="formFieldsLabels">Item Price</p>
-                                        <input type="text" class="inputFields" name="price" required><br><br>
-                                    </div>
-                                    <div class="row">
-                                        <p class="formFieldsLabels">Description</p>
-                                        <input type="text" class="inputFields" name="desc" required><br><br>
-                                    </div>
-                                    <div class="row">
-                                        <p class="formFieldsLabels">Upload Image</p>
-                                        <input class="form-control" type="file" id="image">
-                                    </div>
+                                        <div class="row">
+                                        <!-- Inventory Name Input -->
+                                            {% if action and action in ['create'] %}
+                                            <label for="item_name" class="form-label"><strong>Item Name</strong></label>
+                                            <input type="text" class="inputFields" id="item_name" name="item_name" value="{{ item['item_name'] if item else '' }}" required>
+                                            {% endif %}
+                                          </div>
+
+                                    <!-- Inventory Size Quantity Input -->
+                                        {% if action and action in ['create'] %}
+                                            <label for="size" class="formFieldsLabels"><strong>Size Quantity</strong></label>
+                                            <div class=”cart-counter”>
+                                            X-Small <input type="number" class="item-info" id="xsmall" name="xsmall" min="0" max="15" value="{{ item['xsmall'] if item else 0 }}" required>
+                                            Small <input type="number" class="item-info" id="small" name="small" min="0" max="15" value="{{ item['small'] if item else 0 }}" required>
+                                            Medium <input type="number" class="item-info" id="medium" name="medium" min="0" max="15" value="{{ item['medium'] if item else 0 }}" required>
+                                            Large <input type="number" class="item-info" id="large" name="large" min="0" max="15" value="{{ item['large'] if item else 0 }}" required>
+                                            X-Large <input type="number" class="item-info" id="xlarge" name="xlarge" min="0" max="15" value="{{ item['xlarge'] if item else 0 }}" required>
+                                            XX-Large <input type="number" class="item-info" id="xxlarge" name="xxlarge" min="0" max="15" value="{{ item['xxlarge'] if item else 0 }}" required>
+                                            </div>
+                                        {% endif %}
+
+                                        <!-- Inventory Color Input -->
+                                        {% if action and action in ['create'] %}
+                                            <label for="color" class="form-label"><strong>Color</strong></label>
+                                            <input type="text" class="inputFields" id="color" name="color" value="{{ item['color'] if item else '' }}" required>
+                                            {% endif %}
+                                          </div>
+
+                                <!-- Inventory Price Input -->
+                                        {% if action and action in ['create'] %}
+                                            <label for="price" class="form-label"><strong>Price</strong></label>
+                                            <input type="number" class="inputFields" id="price" name="price" value="{{ item['price'] if item else '' }}" required>
+                                            {% endif %}
+                                          </div>
+
+                            <!-- Inventory Description Input -->
+                                        {% if action and action in ['create'] %}
+                                            <label for="color" class="form-label"><strong>Description</strong></label>
+                                            <input type="text" class="inputFields" id="desc" name="desc" value="{{ item['desc'] if item else '' }}" required>
+                                            {% endif %}
+                                          </div>
+
+                            <!-- Inventory Image Input -->
+                                        {% if action and action in ['create'] %}
+                                            <label for="image" class="form-label"><strong>Image</strong></label>
+                                            <input type="file" class="form-control" id="image" name="image" value="{{ item['image'] if item else '' }}">
+                                            {% endif %}
+                                          </div>
+
+
+                                <!-- Inventory Name Read/Update -->
+                                        {% if action and action in ['read', 'update'] %}
+                                        <div class="row">
+                                        {% if action and action == 'update' %}
+                                        <label for="item_name" class="form-label"><strong>Item Name</strong></label>
+                                        <input type="text" class="inputFields" id="item_name" name="item_name"
+                                               value="{{ item['item_name'] if item else '' }}" required>
+                                        {% else %}
+                                            <strong>Item Name</strong>
+                                            <br> {{ item['item_mame'] }}
+                                        {% endif %}
+                                        {% endif %}
+                                      </div>
+
+                                <!-- Inventory Size Read/Update -->
+                                        {% if action and action in ['read', 'update'] %}
+                                        <div class="row">
+                                        {% if action and action == 'update' %}
+                                        <label for="size" class="formFieldsLabels"><strong>Size Quantity</strong></label>
+                                            <div class=”cart-counter”>
+                                            X-Small <input type="number" class="item-info" id="xsmall" name="xsmall" min="0" max="15" value="{{ item['xsmall'] if item else 0 }}" required>
+                                            Small <input type="number" class="item-info" id="small" name="small" min="0" max="15" value="{{ item['small'] if item else 0 }}" required>
+                                            Medium <input type="number" class="item-info" id="medium" name="medium" min="0" max="15" value="{{ item['medium'] if item else 0 }}" required>
+                                            Large <input type="number" class="item-info" id="large" name="large" min="0" max="15" value="{{ item['large'] if item else 0 }}" required>
+                                            X-Large <input type="number" class="item-info" id="xlarge" name="xlarge" min="0" max="15" value="{{ item['xlarge'] if item else 0 }}" required>
+                                            XX-Large <input type="number" class="item-info" id="xxlarge" name="xxlarge" min="0" max="15" value="{{ item['xxlarge'] if item else 0 }}" required>
+                                            </div>
+                                        {% else %}
+                                            <strong>Size Quantity</strong>
+                                            <br> {{ item['xsmall'] }}
+                                            <br> {{ item['small'] }}
+                                            <br> {{ item['medium'] }}
+                                            <br> {{ item['large'] }}
+                                            <br> {{ item['xlarge'] }}
+                                            <br> {{ item['xxlarge'] }}
+                                        {% endif %}
+                                        {% endif %}
+                                      </div>
+
+                                    <!-- Inventory Color Read/Update -->
+                                    {% if action and action in ['read', 'update'] %}
+                                        <div class="row">
+                                        {% if action and action == 'update' %}
+                                        <label for="color" class="form-label"><strong>Color</strong></label>
+                                        <input type="text" class="inputFields" id="color" name="color"
+                                               value="{{ item['color'] if item else '' }}" required>
+                                        {% else %}
+                                            <strong>Color</strong>
+                                            <br> {{ item['color'] }}
+                                        {% endif %}
+                                        {% endif %}
+                                      </div>
+
+                                    <!-- Inventory Price Read/Update -->
+                                    {% if action and action in ['read', 'update'] %}
+                                        <div class="row">
+                                        {% if action and action == 'update' %}
+                                        <label for="price" class="form-label"><strong>Item Price</strong></label>
+                                        <input type="number" class="inputFields" id="price" name="price"
+                                               value="{{ item['price'] if item else '' }}" required>
+                                        {% else %}
+                                            <strong>Price</strong>
+                                            <br> {{ item['price'] }}
+                                        {% endif %}
+                                        {% endif %}
+                                      </div>
+
+                                    <!-- Inventory Description Read/Update -->
+                                    {% if action and action in ['read', 'update'] %}
+                                        <div class="row">
+                                        {% if action and action == 'update' %}
+                                        <label for="desc" class="form-label"><strong>Description</strong></label>
+                                        <input type="text" class="inputFields" id="desc" name="desc"
+                                               value="{{ item['desc'] if item else '' }}" required>
+                                        {% else %}
+                                            <strong>Description</strong>
+                                            <br> {{ item['desc'] }}
+                                        {% endif %}
+                                        {% endif %}
+                                      </div>
+
+                                    <!-- Inventory Image Read/Update -->
+                                    {% if action and action in ['read', 'update'] %}
+                                        <div class="row">
+                                        {% if action and action == 'update' %}
+                                        <label for="image" class="form-label"><strong>Image</strong></label>
+                                        <input type="file" class="form-control" id="image" name="image"
+                                               value="{{ item['image'] if item else '' }}">
+                                        {% else %}
+                                            <strong>Upload Image</strong>
+                                            <br> {{ item['image'] }}
+                                        {% endif %}
+                                        {% endif %}
                                     <div class="row">
                                       <input type="submit" value="Submit Inventory" class="inventoryButtons" method="POST">
                                     </div>
