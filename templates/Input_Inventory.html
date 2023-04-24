@@ -41,6 +41,37 @@
                                             {% endif %}
                                           </div>
 
+                                        <!-- Collection Name Input -->
+{#                                            {% if action and action in ['create'] %}#}
+{#                                            <label for="collection_name" class="form-label"><strong>Collection Name</strong></label>#}
+{#                                            <div class="dropdown">#}
+{#                                                <button class="input"></button>#}
+{#                                                    <div class="dropdown-content">#}
+{#                                                        <a href="#">Game Day Map</a>#}
+{#                                                        <a href="#">CP Blues Map</a>#}
+{#                                                        <a href="#">Spring Pinks Map</a>#}
+{#                                                    </div>#}
+{#                                            </div>#}
+{#                                            {% endif %}#}
+{#                                    #}
+                                            <div class="col-md-4">
+                                             {% if action and action in ['create', 'update'] %}
+                                             <label for="collection_id" class="form-label"><strong>Collection Name</strong></label>
+                                             <select name="collection_id" id="collection_id" class="form-select form-select-md" aria-label=".form-select-md example">
+                                                 <option value="0">---Select A Collection---</option>
+                                                 {% for each_collection in collections %}
+                                                 <option value="{{ each_collection['collection_id'] }}"
+                                                         {{ 'selected' if item and each_collection['collection_id'] == item['collection_id'] else ''}}>{{ each_collection['collection_name'] }}</option>
+                                                 {% endfor %}
+                                             </select>
+                                             {% else %}
+                                                  <strong>Collection Name</strong><br>
+                                                 {% for each_collection in collections %}
+                                                     {{ each_collection['collection_name'] if item and each_collection['collection_id'] == item['collection_id'] else ''}}
+                                                 {% endfor %}
+                                             {% endif %}
+                                            </div>
+
                                     <!-- Inventory Size Quantity Input -->
                                         {% if action and action in ['create'] %}
                                             <label for="size" class="formFieldsLabels"><strong>Size Quantity</strong></label>
