@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+
+{% block page_title %}
+   Collections Log
+{% endblock %}
+
+
+{% block html_head %}
+   Collections Log
+{% endblock %}
+
+
+{% block page_content %}
+
+   <!-- Creation of Collections table -->
+    <div class="row">
+    <div class="col">
+
+   <table class="table table-striped">
+       <tr>
+            <th scope="col">Collection ID</th>
+            <th scope="col">Collection Name</th>
+           {% if current_user.role in ['ADMIN', 'MANAGER'] %}
+           <th>Actions</th>
+           {% endif %}
+       </tr>
+
+       {% for each_collection in collection %}
+       <tr>
+           <td>{{ each_collection['collection_id'] }}</td>
+           <td>{{ each_collection['collection_name'] }}</td>
+           {% if current_user.role in ['ADMIN', 'MANAGER'] %}
+           <td>
+               <a href="{{ url_for('collection_edit', collection_id=each_collection['collection_id']) }}" class="btn btn-secondary" type = "submit" role="button">Edit</a>
+               {% if current_user.role in ['ADMIN'] %}
+               <a href="{{ url_for('collection_delete', collection_id=each_collection['collection_id']) }}" class="btn btn-secondary" type = "submit" role="button">Delete</a>
+               {% endif %}
+           </td>
+           {% endif %}
+       </tr>
+       {% endfor %}
+   </table>
+   </div>
+   </div>
+
+   {% if current_user.role in ['ADMIN', 'MANAGER'] %}
+   <div class="row">
+       <div class="col">
+               Total Number of Collections: {{ collection|length }}
+       </div>
+   </div>
+
+
+   <div class="row">
+       <div class="col text-center">
+           <a href="{{ url_for('collections_entry') }}" class="btn btn-primary" role="button">Add New Collection</a>
+       </div>
+   </div>
+   {% endif %}
+
+{% endblock %}

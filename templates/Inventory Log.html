@@ -1,56 +1,3 @@
-{#{% extends "base.html" %}#}
-{##}
-{#{% block title %}Inventory Log{% endblock %}#}
-{##}
-{#{% block page_content %}#}
-{##}
-{#        <div class="inventoryBoxTotal" style="height: 100vh>#}
-{#            <div class="row">#}
-{#                <div class = "d-flex justify-content-center">#}
-{#                    <div class = border-box col>#}
-{#                        <div class = row>#}
-{#                            <h2 class="tableHeader"><strong>Inventory</strong></h2><br><br>#}
-{#                        </div>#}
-{#                        <div class = row>#}
-{#                            <table class="table">#}
-{#                              <thead>#}
-{#                                <tr>#}
-{#                                    <th scope="col">Item ID</th>#}
-{#                                    <th scope="col">Item Name </th>#}
-{#                                    <th scope="col">XSmall</th>#}
-{#                                    <th scope="col">Small</th>#}
-{#                                    <th scope="col">Medium</th>#}
-{#                                    <th scope="col">Large</th>#}
-{#                                    <th scope="col">XLarge</th>#}
-{#                                    <th scope="col">XXLarge</th>#}
-{#                                    <th scope="col">Color</th>#}
-{#                                    <th scope="col">Item Price</th>#}
-{#                                    <th scope="col">Description</th>#}
-{#                                    <th scope="col">Image</th>#}
-{#                                </tr>#}
-{#                              </thead>#}
-{#                              <tbody>#}
-{#                                <tr>#}
-{#                                  <th scope="row">1</th>#}
-{#                                  <td>Long Sleeve</td>#}
-{#                                  <td>S</td>#}
-{#                                  <td>Blue</td>#}
-{#                                  <td>$39.99</td>#}
-{#                                  <td>2</td>#}
-{#                                  <td>Description etc.</td>#}
-{#                                  <td>Insert Image</td>#}
-{#                                </tr>#}
-{#                              </tbody>#}
-{#                            </table>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{##}
-{#{% endblock %}#}
-
 {% extends "base.html" %}
 
 
@@ -59,7 +6,7 @@
 {% endblock %}
 
 
-{% block page_head %}
+{% block html_head %}
    Inventory Log
 {% endblock %}
 
@@ -74,6 +21,7 @@
    <table class="table table-striped">
        <tr>
             <th scope="col">Item Name </th>
+            <th scope="col">Collection Name</th>
             <th scope="col">XSmall</th>
             <th scope="col">Small</th>
             <th scope="col">Medium</th>
@@ -93,6 +41,7 @@
        {% for each_item in items %}
        <tr>
            <td>{{ each_item['item_name'] }}</td>
+                <td>{{ each_item['collection_id'] }}</td>
                 <td>{{ each_item['xsmall'] }}</td>
                 <td>{{ each_item['small'] }}</td>
                 <td>{{ each_item['medium'] }}</td>
@@ -132,6 +81,5 @@
        </div>
    </div>
    {% endif %}
-
 
 {% endblock %}

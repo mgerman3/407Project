@@ -51,10 +51,31 @@ def Profile():
 
 @app.route('/RequestForm', methods=['GET', 'POST'])
 def RequestForm():
-    if request.method == 'POST':
-        return render_template('RequestForm.html', form_submitted=True)
-    else:
-        return render_template('RequestForm.html')
+#     if request.method == 'POST':
+#         return render_template('RequestForm.html', form_submitted=True)
+#     else:
+#         return render_template('RequestForm.html')
+    if request.method == 'GET':
+        return render_template('RequestForm.html', action='create')
+    elif request.method == 'POST':
+        first_name = request.form['first_name']
+        last_name = request.form['last_name']
+        email = request.form['email']
+        phoneNumber = request.form['phoneNumber']
+        message = request.form['message']
+
+        users = User(first_name=first_name, last_name=last_name, email=email, phoneNumber=phoneNumber)
+        requests = Requests(message=message)
+
+        db.session.add(users)
+        db.session.add(requests)
+        db.session.commit()
+        flash(f'Your request was received!', 'success')
+        return redirect(url_for('RequestForm'))
+
+    # Address issue where unsupported HTTP request method is attempted
+    flash(f'Invalid request. Please contact support if this problem persists.', 'error')
+    return redirect(url_for('homePage'))
 
 @app.route('/Reviews', methods=['GET', 'POST'])
 def Reviews():
@@ -187,7 +208,6 @@ def item_edit(product_id):
 @role_required(['ADMIN'])
 def item_delete(product_id):
    item = InventoryInfo.query.filter_by(product_id=product_id).first()
-   print(product_id)
    if item:
        db.session.delete(item)
        db.session.commit()
@@ -277,5 +297,85 @@ def Banner():
 def Cart():
     return render_template('cart.html')
 
+@app.route('/CollectionsLog')
+@login_required
+@role_required(['ADMIN', 'MANAGER'])
+def collections_view_all():
+   collection = Collections.query.order_by(Collections.collection_id) \
+       .all()
+   return render_template('Collections Log.html', collection=collection)
+
+@app.route('/CollectionsInput', methods=['GET', 'POST'])
+@login_required
+@role_required(['ADMIN', 'MANAGER'])
+def collections_entry():
+   if request.method == 'GET':
+       return render_template('Input_Collections.html', action='create')
+   elif request.method == 'POST':
+       collection_name = request.form['collection_name']
+
+       collection = Collections(collection_name=collection_name)
+
+       db.session.add(collection)
+       db.session.commit()
+       flash(f'{collection_name} was successfully added!', 'success')
+       return redirect(url_for('collections_view_all'))
+
+   # Address issue where unsupported HTTP request method is attempted
+   flash(f'Invalid request. Please contact support if this problem persists.', 'error')
+   return redirect(url_for('homePage'))
+
+@app.route('/CollectionsLog/Update/<int:collection_id>', methods=['GET', 'POST'])
+@login_required
+@role_required(['ADMIN', 'MANAGER'])
+def collection_edit(collection_id):
+   if request.method == 'GET':
+       collection = Collections.query.filter_by(collection_id=collection_id).first()
+
+       if collection:
+           return render_template('Input_Collections.html', collection=collection, action='update')
+
+
+       else:
+           flash(f'Collection attempting to be edited could not be found!', 'error')
+
+
+   elif request.method == 'POST':
+       collection = Collections.query.filter_by(collection_id=collection_id).first()
+
+
+       if collection:
+           collection.collection_id = request.form['collection_id']
+
+           db.session.commit()
+           flash(f'{collection.collection_id} was successfully updated!', 'success')
+       else:
+           flash(f'Collection attempting to be edited could not be found!', 'error')
+
+
+       return redirect(url_for('collections_view_all'))
+
+
+   # Address issue where unsupported HTTP request method is attempted
+   flash(f'Invalid request. Please contact support if this problem persists.', 'error')
+   return redirect(url_for('collections_view_all'))
+
+
+@app.route('/CollectionsLog/Delete/<int:collection_id>')
+@login_required
+@role_required(['ADMIN'])
+def collection_delete(collection_id):
+   collection = Collections.query.filter_by(collection_id=collection_id).first()
+   if collection:
+       db.session.delete(collection)
+       db.session.commit()
+       flash(f'{collection_id} was successfully deleted!', 'success')
+   else:
+       flash(f'Delete failed! Collection could not be found.', 'error')
+
+   return redirect(url_for('collections_view_all'))
+
 if __name__ == '__main__':
     app.run()
+
+
