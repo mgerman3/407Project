@@ -3,6 +3,17 @@
 {% block title %}Order Details{% endblock %}
 
 {% block page_content %}
-
+    <h1>Order Details</h1>
+    <p>Order ID: </p>
+    <p>Order Date: </p>
+    <p>Order Status: </p>
+    <p>Order Total: </p>
+    <p>Order Items:</p>
+    <ul>
+{#        {% for item in order.items %}#}
+{#            <li>{{ item.product.name }} - {{ item.quantity }} x {{ item.product.price }}</li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+{#    <p><a href="{{ url_for('OrderDetails') }}">Return to order list</a></p>#}
 
 {% endblock %}
