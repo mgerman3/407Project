@@ -18,20 +18,24 @@
 <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
 
 <div class="text-center" style="height: 100vh">
-    <h1>Log-in Below</h1>
-    <form action="/LogIn" method="POST">
+    <br><h1>Log-In Below</h1>
+    <form action="signup" method="post">
         <div class="border-box col">
-            <div class="row" style="padding-right: 1px">
-                <input type = "text" class="loginInput" placeholder="Username" name="username" required>
-            </div> <br>
-            <div class="row" style="padding-right: 1px">
-                <input type="password" class="loginInput" placeholder="Password" name="password" required>
-            </div>
+        <!-- allow user to enter username -->
+        <div class="row" >
+            <input type="text" class = "signupInput" name="username" placeholder="Username" required>
+        </div> <br>
+        <!-- allow user to enter password -->
+        <div class="row" >
+            <input type="password" class = "signupInput" name="password" placeholder="Password" required>
+        </div> <br>
+        <!-- allow user to submit form -->
+        <div class="row">
+            <input type="submit" value="Log-In" class="inventoryButtons">
         </div>
-        <br><input type="submit" value="Log In">
+        </div>
     </form>
-    <br>
-    <br>
 </div>
+
 
 {% endblock %}
