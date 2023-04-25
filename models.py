@@ -11,16 +11,30 @@ class User(db.Model):
    first_name = db.Column(db.String(30), nullable=False)
    last_name = db.Column(db.String(50), nullable=False)
    email = db.Column(db.String(60), nullable=False)
-   address = db.Column(db.String(100), nullable=True)
-   state = db.Column(db.String(2), nullable=True)
-   zipcode = db.Column(db.Integer, nullable=True)
-   phoneNumber = db.Column(db.Integer, nullable=True)
 
 
-   def __init__(self, first_name, last_name, email, address, state, zipcode, phoneNumber):
+   def __init__(self, first_name, last_name, email):
        self.first_name = first_name
        self.last_name = last_name
        self.email = email
+
+
+   def __repr__(self):
+       return f"{self.first_name} {self.last_name} {self.email} {self.address} {self.state}"
+
+
+class ShippingInfo(db.Model):
+   __tablename__ = "ShippingInfo"
+
+   ship_id = db.Column(db.Integer, primary_key=True)
+   user_id = db.Column(db.Integer, db.ForeignKey('User.user_id'), primary_key=True)
+   address = db.Column(db.String(100), nullable=False)
+   state = db.Column(db.String(2), nullable=False)
+   zipcode = db.Column(db.Integer, nullable=False)
+   phoneNumber = db.Column(db.Integer, nullable=False)
+
+
+   def __init__(self, address, state, zipcode, phoneNumber):
        self.address = address
        self.state = state
        self.zipcode = zipcode
@@ -28,8 +42,7 @@ class User(db.Model):
 
 
    def __repr__(self):
-       return f"{self.first_name} {self.last_name} {self.email} {self.address} {self.state}"
-
+       return f" {self.address} {self.state}"
 
 class Requests(db.Model):
    __tablename__ = "Requests"
