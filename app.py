@@ -1,9 +1,10 @@
 import os
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
-from werkzeug.security import check_password_hash
+from werkzeug.security import check_password_hash, generate_password_hash
 from authorize import role_required
 from models import *
+import hashlib
 
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -92,16 +93,16 @@ def Reviews():
 #         return render_template('Log-In-Screen.html')
 def LogIn():
    default_route_function = 'Shop'
-   default_student_route_function = 'homePage'
+   default_user_route_function = 'homePage'
 
 
    if request.method == 'GET':
        # Determine where to redirect user if they are already logged in
        if current_user and current_user.is_authenticated:
-           if current_user.role in ['MANAGER', 'ADMIN']:
+           if current_user.role in ['EMPLOYEE', 'ADMIN']:
                return redirect(url_for(default_route_function))
            elif current_user.role == 'STUDENT':
-               return redirect(url_for(default_student_route_function, user_id=0))
+               return redirect(url_for(default_user_route_function, user_id=0))
        else:
            redirect_route = request.args.get('next')
            return render_template('Log-In-Screen.html', redirect_route=redirect_route)
@@ -117,10 +118,10 @@ def LogIn():
        if user and check_password_hash(user.password, password):
            login_user(user)
 
-           if current_user.role in ['MANAGER', 'ADMIN']:
+           if current_user.role in ['EMPLOYEE', 'ADMIN']:
                return redirect(redirect_route if redirect_route else url_for(default_route_function))
            elif current_user.role == 'STUDENT':
-               return redirect(redirect_route if redirect_route else url_for(default_student_route_function, user_id=0))
+               return redirect(redirect_route if redirect_route else url_for(default_user_route_function, user_id=0))
        else:
            flash(f'Your login information was not correct. Please try again.', 'error')
 
@@ -128,6 +129,34 @@ def LogIn():
 
    return redirect(url_for('LogIn'))
 
+@app.route('/signup', methods=['GET', 'POST'])
+def SignUp():
+
+    if request.method == 'GET':
+        return render_template('sign-up-page.html', action='create')
+
+    elif request.method == 'POST':
+       username = request.form['username']
+       password = request.form['password']
+       first_name = request.form['first_name']
+       last_name = request.form['last_name']
+       email = request.form['email']
+
+       sha_password = generate_password_hash(password, method='sha256', salt_length=8)
+
+       user = Credentials(username=username, password=sha_password, first_name=first_name, last_name=last_name,
+                           email=email)
+
+       db.session.add(user)
+       db.session.commit()
+       login_user(user)
+       flash(f'{username} was successfully added!', 'success')
+       return redirect(url_for('homePage'))
+
+
+   # Address issue where unsupported HTTP request method is attempted
+# flash(f'Invalid request. Please contact support if this problem persists.', 'error')
+# return redirect(url_for('SignUp'))
 
 @app.route('/logout')
 @login_required
@@ -263,31 +292,7 @@ def OrderDetails():
 def SalesTracker():
     return render_template('Sales Tracker.html')
 
-@app.route('/signup')
-def SignUp():
-    if request.method == 'GET':
-        return render_template('sign-up-page.html')
 
-    elif request.method == 'POST':
-       username = request.form['username']
-       password = request.form['password']
-       first_name = request.form['first_name']
-       last_name = request.form['last_name']
-       email = request.form['email']
-
-       users = User(first_name=first_name, last_name=last_name, email=email)
-       user_credentials = Credentials(username=username, password=password)
-
-       db.session.add(users)
-       db.session.add(user_credentials)
-       db.session.commit()
-       flash(f'{username} was successfully added!', 'success')
-       return redirect(url_for('homePage'))
-
-
-   # Address issue where unsupported HTTP request method is attempted
-# flash(f'Invalid request. Please contact support if this problem persists.', 'error')
-# return redirect(url_for('SignUp'))
 
 @app.route('/banner')
 def Banner():

@@ -134,11 +134,17 @@ class Credentials(UserMixin, db.Model):
     account_id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(40), unique=True)
     password = db.Column(db.String(40), nullable=False)
+    first_name = db.Column(db.String(30))
+    last_name = db.Column(db.String(50))
+    email = db.Column(db.String(100), unique=True)
     role = db.Column(db.String(10), nullable=False)
 
-    def __init__(self, username, password, role='PUBLIC'):
+    def __init__(self, username, password, first_name, last_name, email, role='STUDENT'):
         self.username = username
         self.password = password
+        self.first_name = first_name
+        self.last_name = last_name
+        self.email = email
         self.role = role
 
     def get_id(self):
