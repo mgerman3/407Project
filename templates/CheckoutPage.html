@@ -140,7 +140,7 @@
             <div class="row">
                 <div class="border-box col">
                     <!--  Heading for the entire form -->
-                    <h2 class="checkoutHeader"><strong>Shipping Address</strong></h2><br><br>
+                    <h2 class="checkoutHeader"><strong>Shipping Information</strong></h2><br><br>
                     <div class="formInputFields">
                         <div class = "row">
                             <div class="border-box col">
@@ -157,6 +157,11 @@
                                     <input type="text" class="inputFields" name="last_name" required><br><br>
                                 </div>
                             </div>
+                        </div>
+                        <div class = "row">
+                            <!--Field to collect users email -->
+                            <p class="formFieldsLabels">Email (*)</p>
+                            <input type="email" class="inputFields" name="email" required><br><br>
                         </div>
                         <div class = "row">
                             <!--Field to collect users address 1 -->
@@ -197,7 +202,7 @@
                             </div>
                             <div class="row">
                                 <div class="border-box col" style="padding: 0px">
-                                    <p class="cartTotalsLabels">Shipping - {{  }}</p>
+                                    <p class="cartTotalsLabels">Shipping - </p>
                                 </div>
                                 <div class="border-box col" style="padding: 0px 0px 10px 0px">
                                     <!-- Creates three buttons for user to choose between different shipping method-->
@@ -218,8 +223,8 @@
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             Rapid Delivery
                                         </label>
-                                </div><hr>
-                            </div>
+                                </div>
+                            </div><hr>
                             <!-- Creates additional fields within form to display total amount -->
                             <div class="row">
                                 <p class="cartTotalsLabels"><strong>Total -</strong></p>

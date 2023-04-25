@@ -7,43 +7,42 @@ class User(db.Model):
    __tablename__ = "User"
 
    user_id = db.Column(db.Integer, primary_key=True)
+   account_id = db.Column(db.Integer, db.ForeignKey('Credentials.account_id'))
    first_name = db.Column(db.String(30), nullable=False)
    last_name = db.Column(db.String(50), nullable=False)
    email = db.Column(db.String(60), nullable=False)
-   address = db.Column(db.String(100), nullable=False)
-   state = db.Column(db.String(2), nullable=False)
-   zipcode = db.Column(db.Integer, nullable=False)
+   address = db.Column(db.String(100), nullable=True)
+   state = db.Column(db.String(2), nullable=True)
+   zipcode = db.Column(db.Integer, nullable=True)
+   phoneNumber = db.Column(db.Integer, nullable=True)
 
 
-   def __init__(self, first_name, last_name, email, address, state, zipcode):
+   def __init__(self, first_name, last_name, email, address, state, zipcode, phoneNumber):
        self.first_name = first_name
        self.last_name = last_name
        self.email = email
        self.address = address
        self.state = state
        self.zipcode = zipcode
+       self.phoneNumber = phoneNumber
 
 
    def __repr__(self):
-       return f"{self.first_name} {self.last_name}"
+       return f"{self.first_name} {self.last_name} {self.email} {self.address} {self.state}"
 
 
 class Requests(db.Model):
    __tablename__ = "Requests"
 
-
    request_id = db.Column(db.Integer, primary_key=True)
-   customer_id = db.Column(db.Integer, db.ForeignKey('User.user_id'))
-   request_info = db.Column(db.String(200), nullable=False)
+   user_id = db.Column(db.Integer, db.ForeignKey('User.user_id'))
+   message = db.Column(db.String(200), nullable=False)
 
-
-   def __init__(self, customer_id, request_info):
-       self.customer_id = customer_id
-       self.request_info = request_info
-
+   def __init__(self, message):
+       self.message = message
 
    def __repr__(self):
-       return f"{self.request_info}"
+       return f"{self.message}"
 
 
 class OrderInfo(db.Model):

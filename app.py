@@ -51,10 +51,31 @@ def Profile():
 
 @app.route('/RequestForm', methods=['GET', 'POST'])
 def RequestForm():
-    if request.method == 'POST':
-        return render_template('RequestForm.html', form_submitted=True)
-    else:
-        return render_template('RequestForm.html')
+#     if request.method == 'POST':
+#         return render_template('RequestForm.html', form_submitted=True)
+#     else:
+#         return render_template('RequestForm.html')
+    if request.method == 'GET':
+        return render_template('RequestForm.html', action='create')
+    elif request.method == 'POST':
+        first_name = request.form['first_name']
+        last_name = request.form['last_name']
+        email = request.form['email']
+        phoneNumber = request.form['phoneNumber']
+        message = request.form['message']
+
+        users = User(first_name=first_name, last_name=last_name, email=email, phoneNumber=phoneNumber)
+        requests = Requests(message=message)
+
+        db.session.add(users)
+        db.session.add(requests)
+        db.session.commit()
+        flash(f'Your request was received!', 'success')
+        return redirect(url_for('RequestForm'))
+
+    # Address issue where unsupported HTTP request method is attempted
+    flash(f'Invalid request. Please contact support if this problem persists.', 'error')
+    return redirect(url_for('homePage'))
 
 @app.route('/Reviews', methods=['GET', 'POST'])
 def Reviews():
