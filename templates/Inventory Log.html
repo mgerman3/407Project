@@ -41,6 +41,7 @@
        {% for each_item in items %}
        <tr>
            <td>{{ each_item['item_name'] }}</td>
+                <td>{{ each_item['collection_id'] }}</td>
                 <td>{{ each_item['xsmall'] }}</td>
                 <td>{{ each_item['small'] }}</td>
                 <td>{{ each_item['medium'] }}</td>
@@ -80,6 +81,5 @@
        </div>
    </div>
    {% endif %}
-
 
 {% endblock %}
