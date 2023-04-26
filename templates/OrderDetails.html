@@ -2,18 +2,70 @@
 
 {% block title %}Order Details{% endblock %}
 
+{% block html_head %}Pending Orders{% endblock %}
+
+{% block html_style %}
+    tr {
+        font-size: 17px;
+    }
+{% endblock %}
+
 {% block page_content %}
-    <h1>Order Details</h1>
-    <p>Order ID: </p>
-    <p>Order Date: </p>
-    <p>Order Status: </p>
-    <p>Order Total: </p>
-    <p>Order Items:</p>
-    <ul>
+
+<div class="text-center" style="height: 100vh">
+<!-- Order Management Table -->
+    <table class="table table-striped">
+  <thead>
+    <tr>
+        <th scope="col">Order ID</th>
+        <th scope="col">Item Name</th>
+        <th scope="col">Item Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Size</th>
+        <th scope="col">Color</th>
+        <th scope="col">Total Price</th>
+        <th scope="col">Actions</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Original Tee</td>
+      <td>$28</td>
+      <td>5</td>
+      <td>Medium</td>
+      <td>Black</td>
+      <td>$140</td>
+      <td><a href="" class="btn btn-secondary" type = "submit" role="button">Shipped</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>T-Shirt</td>
+      <td>$28</td>
+      <td>8</td>
+      <td>Large</td>
+      <td>Red</td>
+      <td>$224</td>
+      <td><a href="" class="btn btn-secondary" type = "submit" role="button">Shipped</a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Long Sleeve</td>
+      <td>$36</td>
+      <td>4</td>
+      <td>Small</td>
+      <td>Blue</td>
+      <td>$144</td>
+      <td><a href="" class="btn btn-secondary" type = "submit" role="button">Shipped</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+{% endblock %}
 {#        {% for item in order.items %}#}
 {#            <li>{{ item.product.name }} - {{ item.quantity }} x {{ item.product.price }}</li>#}
 {#        {% endfor %}#}
 {#    </ul>#}
 {#    <p><a href="{{ url_for('OrderDetails') }}">Return to order list</a></p>#}
-
-{% endblock %}

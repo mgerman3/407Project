@@ -66,10 +66,11 @@ a.footerItems, p.footerItems {
         <li class="nav-item dropdown">
           <a class="dropbtn" aria-expanded="false">Admin</a>
           <ul class="dropdown-menu">
+
+            <li><a class="dropdown-item" {% if request.endpoint=='items_view_all' %}active{% endif %} href="{{ url_for('OrderDetails') }}">View Orders</a></li>
             <li><a class="dropdown-item" {% if request.endpoint=='items_view_all' %}active{% endif %} href="{{ url_for('items_view_all') }}">Inventory Log</a></li>
             <li><a class="dropdown-item" {% if request.endpoint=='items_view_all' %}active{% endif %} href="{{ url_for('collections_view_all') }}">Collections Log</a></li>
             <li><a class="dropdown-item" {% if request.endpoint=='items_view_all' %}active{% endif %} href="{{ url_for('SalesTracker') }}">Sales Tracker</a></li>
-            <li><a class="dropdown-item" {% if request.endpoint=='items_view_all' %}active{% endif %} href="{{ url_for('OrderDetails') }}">View Orders</a></li>
           </ul>
         </li>
       {% endif %}
@@ -80,7 +81,7 @@ a.footerItems, p.footerItems {
                    <ul class="navbar-nav ms-auto">
                        <li class="nav-item navbar-text">
                            <a class="dropbtn" href="{{ url_for('logout') }}">Log Out</a>
-                           <a class="dropbtn" aria-expanded="false" style="background-color: #69a695"> Welcome, {{ current_user.username }}!</a>
+                           <a class="dropbtn" aria-expanded="false" style="background-color: #69a695"> Welcome, {{ current_user.first_name }}!</a>
                            <a class="dropbtn" aria-expanded="false" href="/profile"><img src="../static/images/profile.png" alt="Bootstrap" width="30" height="24"></a>
                        </li>
                    </ul>

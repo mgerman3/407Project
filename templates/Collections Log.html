@@ -13,6 +13,7 @@
 
 {% block page_content %}
 
+<div class="text-center" style="height: 100vh">
    <!-- Creation of Collections table -->
     <div class="row">
     <div class="col">
@@ -51,12 +52,13 @@
        </div>
    </div>
 
-
+    <p><br></p>
    <div class="row">
        <div class="col text-center">
            <a href="{{ url_for('collections_entry') }}" class="btn btn-primary" role="button">Add New Collection</a>
        </div>
    </div>
+       </div>
    {% endif %}
 
 {% endblock %}
