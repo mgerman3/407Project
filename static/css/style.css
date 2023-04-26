@@ -821,12 +821,17 @@ input.btpos {
 
 /* Styling for Inventory */
 
-.row {
+.flex {
   display: flex;
+    max-width: 100%;
 }
 
 .icon-image  {
   width: 150px;
   height: 150px;
     border: none;
+}
+
+table {
+    max-width: 100%;
 }
