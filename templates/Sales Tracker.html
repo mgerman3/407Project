@@ -2,6 +2,8 @@
 
 {% block title %}Sales Tracker{% endblock %}
 
+{% block html_head %}Sales Tracker{% endblock %}
+
 {% block html_style %}
     tr {
         font-size: 15px;
@@ -10,46 +12,46 @@
 
 {% block page_content %}
 <!-- Sales Input -->
-<form class="row g-3 needs-validation" novalidate></form>
-  <div class="col-md-4">
-    <label for="validationItemID" class="form-label">Item ID</label>
-    <input type="text" class="form-control" id="validationItemID" required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationItemName" class="form-label">Item Name</label>
-    <input type="text" class="form-control" id="validationItemName" required>
-    <div class="invalid-feedback">
-      Please enter a valid Item Name.
-    </div>
-  </div>
-  <div class="col-md-3">
-    <label for="validationPrice" class="form-label">Item Price</label>
-    <input type="text" class="form-control" id="validationPrice" required>
-    <div class="invalid-feedback">
-      Please provide a valid price.
-    </div>
-  </div>
-  <div class="col-md-3">
-    <label for="validationQuantitySold" class="form-label">Quantity Sold</label>
-    <input type="text" class="form-control" id="validationQuantitySold" required>
-    <div class="invalid-feedback">
-      Please provide a valid quantity.
-    </div>
-  </div>
+{#<form class="row g-3 needs-validation" novalidate></form>#}
+{#  <div class="col-md-4">#}
+{#    <label for="validationItemID" class="form-label">Item ID</label>#}
+{#    <input type="text" class="form-control" id="validationItemID" required>#}
+{#    <div class="valid-feedback">#}
+{#      Looks good!#}
+{#    </div>#}
+{#  </div>#}
+{#  <div class="col-md-4">#}
+{#    <label for="validationItemName" class="form-label">Item Name</label>#}
+{#    <input type="text" class="form-control" id="validationItemName" required>#}
+{#    <div class="invalid-feedback">#}
+{#      Please enter a valid Item Name.#}
+{#    </div>#}
+{#  </div>#}
+{#  <div class="col-md-3">#}
+{#    <label for="validationPrice" class="form-label">Item Price</label>#}
+{#    <input type="text" class="form-control" id="validationPrice" required>#}
+{#    <div class="invalid-feedback">#}
+{#      Please provide a valid price.#}
+{#    </div>#}
+{#  </div>#}
+{#  <div class="col-md-3">#}
+{#    <label for="validationQuantitySold" class="form-label">Quantity Sold</label>#}
+{#    <input type="text" class="form-control" id="validationQuantitySold" required>#}
+{#    <div class="invalid-feedback">#}
+{#      Please provide a valid quantity.#}
+{#    </div>#}
+{#  </div>#}
 
-
+<div class="text-center" style="height: 100vh">
 <!-- Sales Management Table -->
     <table class="table table-striped">
   <thead>
     <tr>
-        <th scope="col">Item ID</th>
+        <th scope="col">Order ID</th>
         <th scope="col">Item Name</th>
         <th scope="col">Item Price</th>
         <th scope="col">Quantity Sold</th>
-        <th scope="col">Total Profit</th>
+        <th scope="col">Total Revenue</th>
 
     </tr>
   </thead>
@@ -82,8 +84,8 @@
   <table class="table table-striped">
     <thead>
         <tr>
-            <th scope="col">Total Sales</th>
-            <th scope="col">Total Profit</th>
+            <th scope="col">Total Items Sold</th>
+            <th scope="col">Total Revenue</th>
         </tr>
     </thead>
     <tbody>
@@ -93,5 +95,5 @@
         </tr>
     </tbody>
   </table>
-
+</div>
 {% endblock %}

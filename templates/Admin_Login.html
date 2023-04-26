@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
 <!-- create title block -->
-{% block title %}Sign-Up{% endblock %}
+{% block title %}Add New Log-In{% endblock %}
 
-{% block html_head %}Sign-Up{% endblock %}
+{% block html_head %}Add New Employee{% endblock %}
 
 {% block page_content %}
 
@@ -11,7 +11,7 @@
     <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
 
 
-<form action="{{ url_for('SignUp') }}" method="POST">
+<form action="{{ url_for('Admin_Login') }}" method="POST">
         <!-- Inventory Input -->
 <div class="row" style="height: 100vh">
         <div class="inventoryBoxTotal">
@@ -51,8 +51,18 @@
                                             <input type="text" class = "signupInput" id="email" name="email" placeholder="Email" value="{{ users['email'] if users else '' }}"required>
                                             {% endif %}
                                           </div>
-                                        <br>
                                     <div class="row" style="padding-bottom: 20px">
+                                        <!-- Role Input -->
+                                            {% if action and action in ['create'] %}
+                                                <select name="role" id="role" class="form-select" aria-label=".form-select-md example">
+                                                    <option value="0">---Select A Role---</option>
+                                                    <option name="EMPLOYEE" id="EMPLOYEE" value="EMPLOYEE"
+                                                            >EMPLOYEE</option>
+                                                    <option name="ADMIN" id="ADMIN" value="ADMIN"
+                                                            >ADMIN</option>
+                                            {% endif %}
+                                          </div>
+                                    <div class="row" style="padding-top: 20px">
                                       <input type="submit" value="Register" class="inventoryButtons" method="POST">
                                     </div>
                                 </div>

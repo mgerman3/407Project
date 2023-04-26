@@ -1,9 +1,10 @@
 import os
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
-from werkzeug.security import check_password_hash
+from werkzeug.security import check_password_hash, generate_password_hash
 from authorize import role_required
 from models import *
+import hashlib
 
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -51,10 +52,31 @@ def Profile():
 
 @app.route('/RequestForm', methods=['GET', 'POST'])
 def RequestForm():
-    if request.method == 'POST':
-        return render_template('RequestForm.html', form_submitted=True)
-    else:
-        return render_template('RequestForm.html')
+#     if request.method == 'POST':
+#         return render_template('RequestForm.html', form_submitted=True)
+#     else:
+#         return render_template('RequestForm.html')
+    if request.method == 'GET':
+        return render_template('RequestForm.html', action='create')
+    elif request.method == 'POST':
+        first_name = request.form['first_name']
+        last_name = request.form['last_name']
+        email = request.form['email']
+        phoneNumber = request.form['phoneNumber']
+        message = request.form['message']
+
+        users = User(first_name=first_name, last_name=last_name, email=email, phoneNumber=phoneNumber)
+        requests = Requests(message=message)
+
+        db.session.add(users)
+        db.session.add(requests)
+        db.session.commit()
+        flash(f'Your request was received!', 'success')
+        return redirect(url_for('RequestForm'))
+
+    # Address issue where unsupported HTTP request method is attempted
+    flash(f'Invalid request. Please contact support if this problem persists.', 'error')
+    return redirect(url_for('homePage'))
 
 @app.route('/Reviews', methods=['GET', 'POST'])
 def Reviews():
@@ -71,16 +93,16 @@ def Reviews():
 #         return render_template('Log-In-Screen.html')
 def LogIn():
    default_route_function = 'Shop'
-   default_student_route_function = 'homePage'
+   default_user_route_function = 'homePage'
 
 
    if request.method == 'GET':
        # Determine where to redirect user if they are already logged in
        if current_user and current_user.is_authenticated:
-           if current_user.role in ['MANAGER', 'ADMIN']:
+           if current_user.role in ['EMPLOYEE', 'ADMIN']:
                return redirect(url_for(default_route_function))
            elif current_user.role == 'STUDENT':
-               return redirect(url_for(default_student_route_function, user_id=0))
+               return redirect(url_for(default_user_route_function, user_id=0))
        else:
            redirect_route = request.args.get('next')
            return render_template('Log-In-Screen.html', redirect_route=redirect_route)
@@ -96,10 +118,10 @@ def LogIn():
        if user and check_password_hash(user.password, password):
            login_user(user)
 
-           if current_user.role in ['MANAGER', 'ADMIN']:
+           if current_user.role in ['EMPLOYEE', 'ADMIN']:
                return redirect(redirect_route if redirect_route else url_for(default_route_function))
            elif current_user.role == 'STUDENT':
-               return redirect(redirect_route if redirect_route else url_for(default_student_route_function, user_id=0))
+               return redirect(redirect_route if redirect_route else url_for(default_user_route_function, user_id=0))
        else:
            flash(f'Your login information was not correct. Please try again.', 'error')
 
@@ -107,6 +129,34 @@ def LogIn():
 
    return redirect(url_for('LogIn'))
 
+@app.route('/signup', methods=['GET', 'POST'])
+def SignUp():
+
+    if request.method == 'GET':
+        return render_template('sign-up-page.html', action='create')
+
+    elif request.method == 'POST':
+       username = request.form['username']
+       password = request.form['password']
+       first_name = request.form['first_name']
+       last_name = request.form['last_name']
+       email = request.form['email']
+
+       sha_password = generate_password_hash(password, method='sha256', salt_length=8)
+
+       user = Credentials(username=username, password=sha_password, first_name=first_name, last_name=last_name,
+                           email=email)
+
+       db.session.add(user)
+       db.session.commit()
+       login_user(user)
+       flash(f'{username} was successfully added!', 'success')
+       return redirect(url_for('homePage'))
+
+
+   # Address issue where unsupported HTTP request method is attempted
+# flash(f'Invalid request. Please contact support if this problem persists.', 'error')
+# return redirect(url_for('SignUp'))
 
 @app.route('/logout')
 @login_required
@@ -129,7 +179,7 @@ def GenProduct():
 
 @app.route('/InventoryLog')
 @login_required
-@role_required(['ADMIN', 'MANAGER'])
+@role_required(['ADMIN', 'EMPLOYEE'])
 def items_view_all():
    items = InventoryInfo.query.order_by(InventoryInfo.item_name) \
        .all()
@@ -137,7 +187,7 @@ def items_view_all():
 
 @app.route('/InventoryLog/update/<int:product_id>', methods=['GET', 'POST'])
 @login_required
-@role_required(['ADMIN', 'MANAGER'])
+@role_required(['ADMIN', 'EMPLOYEE'])
 def item_edit(product_id):
    if request.method == 'GET':
        item = InventoryInfo.query.filter_by(product_id=product_id).first()
@@ -200,7 +250,7 @@ def item_delete(product_id):
 
 @app.route('/InventoryInput', methods=['GET', 'POST'])
 @login_required
-@role_required(['ADMIN', 'MANAGER'])
+@role_required(['ADMIN', 'EMPLOYEE'])
 def inventory_entry():
    if request.method == 'GET':
        return render_template('Input_Inventory.html', action='create')
@@ -242,10 +292,17 @@ def OrderDetails():
 def SalesTracker():
     return render_template('Sales Tracker.html')
 
-@app.route('/signup')
-def SignUp():
+
+
+@app.route('/banner')
+def Banner():
+    return render_template('Banner.html')
+
+@app.route('/Admin/Create/LogIn', methods=['GET', 'POST'])
+def Admin_Login():
+
     if request.method == 'GET':
-        return render_template('sign-up-page.html')
+        return render_template('Admin_Login.html', action='create')
 
     elif request.method == 'POST':
        username = request.form['username']
@@ -253,24 +310,17 @@ def SignUp():
        first_name = request.form['first_name']
        last_name = request.form['last_name']
        email = request.form['email']
+       role = request.form['role']
 
-       users = User(first_name=first_name, last_name=last_name, email=email)
-       user_credentials = Credentials(username=username, password=password)
+       sha_password = generate_password_hash(password, method='sha256', salt_length=8)
 
-       db.session.add(users)
-       db.session.add(user_credentials)
+       user = Credentials(username=username, password=sha_password, first_name=first_name, last_name=last_name,
+                           email=email, role=role)
+
+       db.session.add(user)
        db.session.commit()
        flash(f'{username} was successfully added!', 'success')
        return redirect(url_for('homePage'))
-
-
-   # Address issue where unsupported HTTP request method is attempted
-# flash(f'Invalid request. Please contact support if this problem persists.', 'error')
-# return redirect(url_for('SignUp'))
-
-@app.route('/banner')
-def Banner():
-    return render_template('Banner.html')
 
 @app.route('/cart')
 def Cart():
@@ -278,7 +328,7 @@ def Cart():
 
 @app.route('/CollectionsLog')
 @login_required
-@role_required(['ADMIN', 'MANAGER'])
+@role_required(['ADMIN', 'EMPLOYEE'])
 def collections_view_all():
    collection = Collections.query.order_by(Collections.collection_id) \
        .all()
@@ -286,7 +336,7 @@ def collections_view_all():
 
 @app.route('/CollectionsInput', methods=['GET', 'POST'])
 @login_required
-@role_required(['ADMIN', 'MANAGER'])
+@role_required(['ADMIN', 'EMPLOYEE'])
 def collections_entry():
    if request.method == 'GET':
        return render_template('Input_Collections.html', action='create')
@@ -306,7 +356,7 @@ def collections_entry():
 
 @app.route('/CollectionsLog/Update/<int:collection_id>', methods=['GET', 'POST'])
 @login_required
-@role_required(['ADMIN', 'MANAGER'])
+@role_required(['ADMIN', 'EMPLOYEE'])
 def collection_edit(collection_id):
    if request.method == 'GET':
        collection = Collections.query.filter_by(collection_id=collection_id).first()
@@ -314,14 +364,11 @@ def collection_edit(collection_id):
        if collection:
            return render_template('Input_Collections.html', collection=collection, action='update')
 
-
        else:
            flash(f'Collection attempting to be edited could not be found!', 'error')
 
-
    elif request.method == 'POST':
        collection = Collections.query.filter_by(collection_id=collection_id).first()
-
 
        if collection:
            collection.collection_id = request.form['collection_id']

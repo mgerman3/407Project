@@ -13,7 +13,7 @@
 
 {% block page_content %}
 
-
+<div class="text-center" style="height: 100vh">
    <div class="row">
    <div class="col">
 
@@ -32,7 +32,7 @@
             <th scope="col">Item Price</th>
             <th scope="col">Description</th>
             <th scope="col">Image</th>
-           {% if current_user.role in ['ADMIN', 'MANAGER'] %}
+           {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
            <th>Actions</th>
            {% endif %}
        </tr>
@@ -52,7 +52,7 @@
                 <td>{{ each_item['price'] }}</td>
                 <td>{{ each_item['desc'] }}</td>
                 <td>{{ each_item['image'] }}</td>
-           {% if current_user.role in ['ADMIN', 'MANAGER'] %}
+           {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
            <td>
                <a href="{{ url_for('item_edit', product_id=each_item['product_id']) }}" class="btn btn-secondary" type = "submit" role="button">Edit</a>
                {% if current_user.role in ['ADMIN'] %}
@@ -67,19 +67,21 @@
    </div>
 
 
-   {% if current_user.role in ['ADMIN', 'MANAGER'] %}
+   {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
    <div class="row">
        <div class="col">
                Total Number of Items: {{ items|length }}
        </div>
    </div>
 
-
+    <p><br></p>
    <div class="row">
        <div class="col text-center">
            <a href="{{ url_for('inventory_entry') }}" class="btn btn-primary" role="button">Add New Item</a>
        </div>
    </div>
+
+       </div>
    {% endif %}
 
 {% endblock %}

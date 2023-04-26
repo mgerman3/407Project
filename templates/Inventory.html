@@ -4,50 +4,155 @@
 
 {% block page_content %}
 
-        <div class="inventoryBoxTotal">
-            <div class="row">
-                <div class = "d-flex justify-content-center">
-                    <div class = border-box-col>
-                        <div class = row>
-                            <h2 class="tableHeader"><strong>Inventory</strong></h2><br><br>
-                        </div>
-                        <div class = row>
-                            <table class="table">
-                              <thead>
-                                <tr>
-                                  <th scope="col">Item ID</th>
-                                  <th scope="col">Item Name</th>
-                                  <th scope="col">Size</th>
-                                  <th scope="col">Color</th>
-                                  <th scope="col">Item Price</th>
-                                  <th scope="col">Quantity</th>
-                                  <th scope="col">Description</th>
-                                  <th scope="col">Image</th>
-                                <th scope="col">Edit/Delete</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">1</th>
-                                  <td>Long Sleeve</td>
-                                  <td>S</td>
-                                  <td>Blue</td>
-                                  <td>$39.99</td>
-                                  <td>2</td>
-                                  <td>Description etc. </td>
-                                  <td>Insert Image</td>
-                                  <td>
-                                    <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
-                                    <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="inventoryBoxTotal">
+  <div class="row">
+    <h2 class="tableHeader"><strong>Inventory</strong></h2>
+    <br>
+    <br>
+  </div>
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Item ID</th>
+          <th scope="col">Item Name</th>
+          <th scope="col">Size</th>
+          <th scope="col">Color</th>
+          <th scope="col">Item Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Description</th>
+          <th scope="col">Image</th>
+          <th scope="col">Edit/Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+      <!--  table rows here -->
+            <tr>
+              <td>001</td>
+              <td>Original Tee</td>
+              <td>Small</td>
+              <td>Spring Pinks Map</td>
+              <td>$28.00</td>
+              <td>14</td>
+              <td>Soft and comfortable t-shirt made with 100% cotton.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+             <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+
+            <!--  table row 2 -->
+            <tr>
+              <td>003</td>
+              <td>Long Sleeve</td>
+              <td>Small</td>
+              <td>Spring Pinks Map</td>
+              <td>$36</td>
+              <td>18</td>
+              <td>This classic long sleeve tee features our exclusive Spring Pinks Map design. Made with high-quality cotton for maximum comfort and durability.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+            <!--  table row 3 -->
+            <tr>
+              <td>004</td>
+              <td>Quarter Zip</td>
+              <td>Large</td>
+              <td>Spring Pinks Map</td>
+              <td>$45</td>
+              <td>10</td>
+              <td>This comfortable quarter zip is perfect for chilly spring days. Made with our exclusive Spring Pinks Map design and high-quality materials for both style and durability.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+            <!--  table row 4 -->
+            <tr>
+              <td>002</td>
+              <td>T-Shirt</td>
+              <td>X-Large</td>
+              <td>Spring Pinks Map</td>
+              <td>$28</td>
+              <td>18</td>
+              <td>This classic T-shirt features our exclusive Spring Pinks Map design. Made with high-quality cotton for maximum comfort and durability.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+            <!--  table row 5 -->
+            <tr>
+              <td>003</td>
+              <td>Long Sleeve</td>
+              <td>Medium</td>
+              <td>CP Blues Map</td>
+              <td>$36</td>
+              <td>9</td>
+              <td>This classic long sleeve tee features our exclusive CP Blues Map design. Made with high-quality cotton for maximum comfort and durability.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+            <!--  table row 6 -->
+            <tr>
+              <td>004</td>
+              <td>T-Shirt</td>
+              <td>Large</td>
+              <td>Spring Pinks Map</td>
+              <td>$28</td>
+              <td>15</td>
+              <td>This soft and comfortable t-shirt features our exclusive Spring Pinks Map design. Perfect for casual wear or a day out.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="#" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="#" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+            <!--  table row 7 -->
+            <tr>
+              <td>004</td>
+              <td>T-Shirt</td>
+              <td>Small</td>
+              <td>Spring Pinks Map</td>
+              <td>$28</td>
+              <td>13</td>
+              <td>This classic T-Shirt features our exclusive Spring Pinks Map design. Made with high-quality cotton for maximum comfort and durability.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+            <!--  table row 8 -->
+            <tr>
+              <td>005</td>
+              <td>Crewneck</td>
+              <td>XXL</td>
+              <td>Game Day Map</td>
+              <td>$42</td>
+              <td>4</td>
+              <td>This classic Crewneck features our exclusive Game Day Map design. Made with high-quality cotton for maximum comfort and durability.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 {% endblock %}
