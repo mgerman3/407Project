@@ -818,3 +818,15 @@ input.btpos {
 .vertical-center {
   align-items: center;
 }
+
+/* Styling for Inventory */
+
+.row {
+  display: flex;
+}
+
+.icon-image  {
+  width: 150px;
+  height: 150px;
+    border: none;
+}
