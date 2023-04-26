@@ -32,7 +32,7 @@
             <th scope="col">Item Price</th>
             <th scope="col">Description</th>
             <th scope="col">Image</th>
-           {% if current_user.role in ['ADMIN', 'MANAGER'] %}
+           {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
            <th>Actions</th>
            {% endif %}
        </tr>
@@ -52,7 +52,7 @@
                 <td>{{ each_item['price'] }}</td>
                 <td>{{ each_item['desc'] }}</td>
                 <td>{{ each_item['image'] }}</td>
-           {% if current_user.role in ['ADMIN', 'MANAGER'] %}
+           {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
            <td>
                <a href="{{ url_for('item_edit', product_id=each_item['product_id']) }}" class="btn btn-secondary" type = "submit" role="button">Edit</a>
                {% if current_user.role in ['ADMIN'] %}
@@ -67,7 +67,7 @@
    </div>
 
 
-   {% if current_user.role in ['ADMIN', 'MANAGER'] %}
+   {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
    <div class="row">
        <div class="col">
                Total Number of Items: {{ items|length }}

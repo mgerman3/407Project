@@ -22,7 +22,7 @@
        <tr>
             <th scope="col">Collection ID</th>
             <th scope="col">Collection Name</th>
-           {% if current_user.role in ['ADMIN', 'MANAGER'] %}
+           {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
            <th>Actions</th>
            {% endif %}
        </tr>
@@ -31,7 +31,7 @@
        <tr>
            <td>{{ each_collection['collection_id'] }}</td>
            <td>{{ each_collection['collection_name'] }}</td>
-           {% if current_user.role in ['ADMIN', 'MANAGER'] %}
+           {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
            <td>
                <a href="{{ url_for('collection_edit', collection_id=each_collection['collection_id']) }}" class="btn btn-secondary" type = "submit" role="button">Edit</a>
                {% if current_user.role in ['ADMIN'] %}
@@ -45,7 +45,7 @@
    </div>
    </div>
 
-   {% if current_user.role in ['ADMIN', 'MANAGER'] %}
+   {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
    <div class="row">
        <div class="col">
                Total Number of Collections: {{ collection|length }}

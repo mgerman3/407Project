@@ -62,11 +62,10 @@ a.footerItems, p.footerItems {
             <li><a class="dropdown-item" href="/Reviews">Reviews</a></li>
           </ul>
         </li>
-      {% if current_user.role in ['ADMIN', 'MANAGER'] %}
+      {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
         <li class="nav-item dropdown">
           <a class="dropbtn" aria-expanded="false">Admin</a>
           <ul class="dropdown-menu">
-
             <li><a class="dropdown-item" {% if request.endpoint=='items_view_all' %}active{% endif %} href="{{ url_for('OrderDetails') }}">View Orders</a></li>
             <li><a class="dropdown-item" {% if request.endpoint=='items_view_all' %}active{% endif %} href="{{ url_for('items_view_all') }}">Inventory Log</a></li>
             <li><a class="dropdown-item" {% if request.endpoint=='items_view_all' %}active{% endif %} href="{{ url_for('collections_view_all') }}">Collections Log</a></li>
