@@ -4,1000 +4,155 @@
 
 {% block page_content %}
 
-        <div class="inventoryBoxTotal">
-            <div class="row">
-                <div class = "d-flex justify-content-center">
-                    <div class = border-box-col>
-                        <div class = row>
-                            <h2 class="tableHeader"><strong>Inventory</strong></h2><br><br>
-                        </div>
-                        <div class = row>
-                            <table class="table">
-                              <thead>
-                                <tr>
-                                  <th scope="col">Item ID</th>
-                                  <th scope="col">Item Name</th>
-                                  <th scope="col">Size</th>
-                                  <th scope="col">Color</th>
-                                  <th scope="col">Item Price</th>
-                                  <th scope="col">Quantity</th>
-                                  <th scope="col">Description</th>
-                                  <th scope="col">Image</th>
-                                <th scope="col">Edit/Delete</th>
-                                </tr>
-                              </thead>
-                                <tbody>
- <tbody>
-  <tr>
-    <td>12345</td>
-    <td>Product Name</td>
-    <td>M</td>
-    <td>Red</td>
-    <td>$19.99</td>
-    <td>10</td>
-    <td>Description of the product</td>
-    <td><img src="product-image.jpg" alt="Product Image"></td>
-    <td>
-      <a href="#">Edit</a>
-      <a href="#">Delete</a>
-    </td>
-  </tr>
-</tbody>
+<div class="inventoryBoxTotal">
+  <div class="row">
+    <h2 class="tableHeader"><strong>Inventory</strong></h2>
+    <br>
+    <br>
+  </div>
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Item ID</th>
+          <th scope="col">Item Name</th>
+          <th scope="col">Size</th>
+          <th scope="col">Color</th>
+          <th scope="col">Item Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Description</th>
+          <th scope="col">Image</th>
+          <th scope="col">Edit/Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+      <!--  table rows here -->
+            <tr>
+              <td>001</td>
+              <td>Original Tee</td>
+              <td>Small</td>
+              <td>Spring Pinks Map</td>
+              <td>$28.00</td>
+              <td>14</td>
+              <td>Soft and comfortable t-shirt made with 100% cotton.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+             <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
 
-<tbody>
-  <tr>
-    <td>12346</td>
-    <td>Product Name 2</td>
-    <td>L</td>
-    <td>Blue</td>
-    <td>$29.99</td>
-    <td>5</td>
-    <td>Description of the second product</td>
-    <td><img src="product-image-2.jpg" alt="Product Image 2"></td>
-    <td>
-      <a href="#">Edit</a>
-      <a href="#">Delete</a>
-    </td>
-  </tr>
-</tbody>
-<tbody>
-  <tr>
-    <td>12347</td>
-    <td>Product Name 3</td>
-    <td>S</td>
-    <td>Green</td>
-    <td>$24.99</td>
-    <td>8</td>
-    <td>Description of the third product</td>
-    <td><img src="product-image-3.jpg" alt="Product Image 3"></td>
-    <td>
-      <a href="#">Edit</a>
-      <a href="#">Delete</a>
-    </td>
-  </tr>
-  <tr>
-    <td>12348</td>
-    <td>Product Name 4</td>
-    <td>XL</td>
-    <td>Yellow</td>
-    <td>$34.99</td>
-    <td>3</td>
-    <td>Description of the fourth product</td>
-    <td><img src="product-image-4.jpg" alt="Product Image 4"></td>
-    <td>
-      <a href="#">Edit</a>
-      <a href="#">Delete</a>
-    </td>
-  </tr>
-  <tr>
-    <td>12349</td>
-    <td>Product Name 5</td>
-    <td>S</td>
-    <td>Pink</td>
-    <td>$21.99</td>
-    <td>12</td>
-    <td>Description of the fifth product</td>
-    <td><img src="product-image-5.jpg" alt="Product Image 5"></td>
-    <td>
-      <a href="#">Edit</a>
-      <a href="#">Delete</a>
-    </td>
-  </tr>
-  <tr>
-    <td>12350</td>
-    <td>Product Name 6</td>
-    <td>M</td>
-    <td>Black</td>
-    <td>$27.99</td>
-    <td>6</td>
-    <td>Description of the sixth product</td>
-    <td><img src="product-image-6.jpg" alt="Product Image 6"></td>
-    <td>
-      <a href="#">Edit</a>
-      <a href="#">Delete</a>
-    </td>
-  </tr>
-  <tr>
-    <td>12351</td>
-    <td>Product Name 7</td>
-    <td>L</td>
-    <td>Orange</td>
-    <td>$19.99</td>
-    <td>9</td>
-    <td>Description of the seventh product</td>
-    <td><img src="product-image-7.jpg" alt="Product Image 7"></td>
-    <td>
-      <a href="#">Edit</a>
-      <a href="#">Delete</a>
-    </td>
-  </tr>
-  <tr>
-    <td>12352</td>
-    <td>Product Name 8</td>
-    <td>XL</td>
-    <td>Red</td>
-    <td>$32.99</td>
-    <td>4</td>
-    <td>Description of the eighth product</td>
-    <td><img src="product-image-8.jpg" alt="Product Image 8"></td>
-    <td>
-      <a href="#">Edit</a>
-      <a href="#">Delete</a>
-    </td>
-  </tr>
-<tbody>
-    <tr>
-        <td>9</td>
-        <td>Product Name 9</td>
-        <td>L</td>
-        <td>Green</td>
-        <td>$29.99</td>
-        <td>3</td>
-        <td>Description of Product 9</td>
-        <td><img src="product9.jpg" alt="Product 9"></td>
-        <td><button>Edit</button><button>Delete</button></td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>Product Name 10</td>
-        <td>M</td>
-        <td>Red</td>
-        <td>$24.99</td>
-        <td>5</td>
-        <td>Description of Product 10</td>
-        <td><img src="product10.jpg" alt="Product 10"></td>
-        <td><button>Edit</button><button>Delete</button></td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>Product Name 11</td>
-        <td>XL</td>
-        <td>Black</td>
-        <td>$49.99</td>
-        <td>2</td>
-        <td>Description of Product 11</td>
-        <td><img src="product11.jpg" alt="Product 11"></td>
-        <td><button>Edit</button><button>Delete</button></td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Product Name 12</td>
-        <td>S</td>
-        <td>Blue</td>
-        <td>$19.99</td>
-        <td>7</td>
-        <td>Description of Product 12</td>
-        <td><img src="product12.jpg" alt="Product 12"></td>
-        <td><button>Edit</button><button>Delete</button></td>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td>Product Name 13</td>
-        <td>XS</td>
-        <td>Pink</td>
-        <td>$34.99</td>
-        <td>4</td>
-        <td>Description of Product 13</td>
-        <td><img src="product13.jpg" alt="Product 13"></td>
-        <td><button>Edit</button><button>Delete</button></td>
-    </tr>
-    <tr>
-        <td>14</td>
-        <td>Product Name 14</td>
-        <td>L</td>
-        <td>Yellow</td>
-        <td>$39.99</td>
-        <td>1</td>
-        <td>Description of Product 14</td>
-        <td><img src="product14.jpg" alt="Product 14"></td>
-        <td><button>Edit</button><button>Delete</button></td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td>Product Name 15</td>
-        <td>M</td>
-        <td>Gray</td>
-        <td>$24.99</td>
-        <td>6</td>
-        <td>Description of Product 15</td>
-        <td><img src="product15.jpg" alt="Product 15"></td>
-        <td><button>Edit</button><button>Delete</button></td>
-  <th scope="row">16</th>
-  <td>Product Name 16</td>
-  <td>M</td>
-  <td>Gray</td>
-  <td>$29.99</td>
-  <td>5</td>
-  <td>Description of Product 16</td>
-  <td>Image of Product 16</td>
-</tr>
+            <!--  table row 2 -->
+            <tr>
+              <td>003</td>
+              <td>Long Sleeve</td>
+              <td>Small</td>
+              <td>Spring Pinks Map</td>
+              <td>$36</td>
+              <td>18</td>
+              <td>This classic long sleeve tee features our exclusive Spring Pinks Map design. Made with high-quality cotton for maximum comfort and durability.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+            <!--  table row 3 -->
+            <tr>
+              <td>004</td>
+              <td>Quarter Zip</td>
+              <td>Large</td>
+              <td>Spring Pinks Map</td>
+              <td>$45</td>
+              <td>10</td>
+              <td>This comfortable quarter zip is perfect for chilly spring days. Made with our exclusive Spring Pinks Map design and high-quality materials for both style and durability.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+            <!--  table row 4 -->
+            <tr>
+              <td>002</td>
+              <td>T-Shirt</td>
+              <td>X-Large</td>
+              <td>Spring Pinks Map</td>
+              <td>$28</td>
+              <td>18</td>
+              <td>This classic T-shirt features our exclusive Spring Pinks Map design. Made with high-quality cotton for maximum comfort and durability.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+            <!--  table row 5 -->
+            <tr>
+              <td>003</td>
+              <td>Long Sleeve</td>
+              <td>Medium</td>
+              <td>CP Blues Map</td>
+              <td>$36</td>
+              <td>9</td>
+              <td>This classic long sleeve tee features our exclusive CP Blues Map design. Made with high-quality cotton for maximum comfort and durability.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+            <!--  table row 6 -->
+            <tr>
+              <td>004</td>
+              <td>T-Shirt</td>
+              <td>Large</td>
+              <td>Spring Pinks Map</td>
+              <td>$28</td>
+              <td>15</td>
+              <td>This soft and comfortable t-shirt features our exclusive Spring Pinks Map design. Perfect for casual wear or a day out.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="#" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="#" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+            <!--  table row 7 -->
+            <tr>
+              <td>004</td>
+              <td>T-Shirt</td>
+              <td>Small</td>
+              <td>Spring Pinks Map</td>
+              <td>$28</td>
+              <td>13</td>
+              <td>This classic T-Shirt features our exclusive Spring Pinks Map design. Made with high-quality cotton for maximum comfort and durability.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+            <!--  table row 8 -->
+            <tr>
+              <td>005</td>
+              <td>Crewneck</td>
+              <td>XXL</td>
+              <td>Game Day Map</td>
+              <td>$42</td>
+              <td>4</td>
+              <td>This classic Crewneck features our exclusive Game Day Map design. Made with high-quality cotton for maximum comfort and durability.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
 
-<tr>
-  <th scope="row">17</th>
-  <td>Product Name 17</td>
-  <td>L</td>
-  <td>White</td>
-  <td>$24.99</td>
-  <td>9</td>
-  <td>Description of Product 17</td>
-  <td>Image of Product 17</td>
-</tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-<tr>
-  <th scope="row">18</th>
-  <td>Product Name 18</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>12</td>
-  <td>Description of Product 18</td>
-  <td>Image of Product 18</td>
-</tr>
-
-<tr>
-  <th scope="row">19</th>
-  <td>Product Name 19</td>
-  <td>M</td>
-  <td>Blue</td>
-  <td>$34.99</td>
-  <td>8</td>
-  <td>Description of Product 19</td>
-  <td>Image of Product 19</td>
-</tr>
-
-<tr>
-  <th scope="row">20</th>
-  <td>Product Name 20</td>
-  <td>L</td>
-  <td>Green</td>
-  <td>$39.99</td>
-  <td>3</td>
-  <td>Description of Product 20</td>
-  <td>Image of Product 20</td>
-</tr>
-
-<tr>
-  <th scope="row">21</th>
-  <td>Product Name 21</td>
-  <td>S</td>
-  <td>Black</td>
-  <td>$29.99</td>
-  <td>6</td>
-  <td>Description of Product 21</td>
-  <td>Image of Product 21</td>
-</tr>
-
-<tr>
-  <th scope="row">22</th>
-  <td>Product Name 22</td>
-  <td>L</td>
-  <td>Gray</td>
-  <td>$24.99</td>
-  <td>4</td>
-  <td>Description of Product 22</td>
-  <td>Image of Product 22</td>
-</tr>
-
-<tr>
-  <th scope="row">23</th>
-  <td>Product Name 23</td>
-  <td>M</td>
-  <td>White</td>
-  <td>$19.99</td>
-  <td>10</td>
-  <td>Description of Product 23</td>
-  <td>Image of Product 23</td>
-</tr>
-
-<tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-    <tr>
-  <th scope="row">24</th>
-  <td>Product Name 24</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$34.99</td>
-  <td>7</td>
-  <td>Description of Product 24</td>
-  <td>Image of Product 24</td>
-</tr>
-<tr>
-  <th scope="row">25</th>
-  <td>Product 25</td>
-  <td>S</td>
-  <td>Red</td>
-  <td>$19.99</td>
-  <td>5</td>
-  <td>Description of Product 25</td>
-  <td><img src="product25.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-<tr>
-  <th scope="row">26</th>
-  <td>Product 26</td>
-  <td>M</td>
-  <td>Green</td>
-  <td>$24.99</td>
-  <td>10</td>
-  <td>Description of Product 26</td>
-  <td><img src="product26.jpg"></td>
-  <td><a href="#">Edit</a> / <a href="#">Delete</a></td>
-</tr>
-
-
-
-
-    <td>
-                                    <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
-                                    <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
-                                  </td>
-                                </>
-                              </tbody>
-                            </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 {% endblock %}
