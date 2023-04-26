@@ -52,6 +52,17 @@ opacity: 0.5;
 
 }
 
+/*use this to style create role dropdown on admin new login page*/
+select#role.form-select{
+    width: 800px;
+    height: 40px;
+    border-radius: 5px;
+    border-color: black;
+    background-color: #f6f6f6;
+    color: black;
+}
+
+
 /* button styling */
 .input{
     background-color: #69a695;

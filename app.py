@@ -298,6 +298,30 @@ def SalesTracker():
 def Banner():
     return render_template('Banner.html')
 
+@app.route('/Admin/Create/LogIn', methods=['GET', 'POST'])
+def Admin_Login():
+
+    if request.method == 'GET':
+        return render_template('Admin_Login.html', action='create')
+
+    elif request.method == 'POST':
+       username = request.form['username']
+       password = request.form['password']
+       first_name = request.form['first_name']
+       last_name = request.form['last_name']
+       email = request.form['email']
+       role = request.form['role']
+
+       sha_password = generate_password_hash(password, method='sha256', salt_length=8)
+
+       user = Credentials(username=username, password=sha_password, first_name=first_name, last_name=last_name,
+                           email=email, role=role)
+
+       db.session.add(user)
+       db.session.commit()
+       flash(f'{username} was successfully added!', 'success')
+       return redirect(url_for('homePage'))
+
 @app.route('/cart')
 def Cart():
     return render_template('cart.html')
@@ -340,14 +364,11 @@ def collection_edit(collection_id):
        if collection:
            return render_template('Input_Collections.html', collection=collection, action='update')
 
-
        else:
            flash(f'Collection attempting to be edited could not be found!', 'error')
 
-
    elif request.method == 'POST':
        collection = Collections.query.filter_by(collection_id=collection_id).first()
-
 
        if collection:
            collection.collection_id = request.form['collection_id']
