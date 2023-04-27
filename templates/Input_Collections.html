@@ -21,41 +21,42 @@
 {% endblock %}
 
 {% block page_content %}
+ <div class="wrapper">
     <!-- Background Photo -->
- <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
-        <form action="{{ url_for('collections_entry') }}" method="POST">
-        <!-- Inventory Input -->
-        <div class="inventoryBoxTotal">
-            <div class="row">
-                <div class = "d-flex justify-content-center">
-                    <div class = "border-box col">
-                        <div class = row>
-                            <div class="formInputFields" style="width: 700px">
-                                <div class = "border-box-col">
-                                    <div class="row">
-                                        <div class="row">
-                                        <!-- Collection Name Input -->
-                                            {% if action and action in ['create'] %}
-                                            <label for="collection_name" class="form-label"><strong>Collection Name</strong></label>
-                                            <input type="text" class="inputFields" id="collection_name" name="collection_name" value="{{ collection['collection_name'] if collection else '' }}" required>
+    <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
+    <form action="{{ url_for('collections_entry') }}" method="POST">
+         <!-- Inventory Input -->
+         <div class="inventoryBoxTotal">
+             <div class="row">
+                 <div class = "d-flex justify-content-center">
+                     <div class = "border-box col">
+                         <div class = row>
+                             <div class="formInputFields" style="width: 700px">
+                                 <div class = "border-box-col">
+                                     <div class="row">
+                                         <div class="row">
+                                            <!-- Collection Name Input -->
+                                             {% if action and action in ['create'] %}
+                                             <label for="collection_name" class="form-label"><strong>Collection Name</strong></label>
+                                             <input type="text" class="inputFields" id="collection_name" name="collection_name" value="{{ collection['collection_name'] if collection else '' }}" required>
+                                             {% endif %}
+                                         </div>
+                                         <!-- Inventory Name Read/Update -->
+                                         {% if action and action in ['read', 'update'] %}
+                                            <div class="row d-flex justify-content-center">
+                                                {% if action and action == 'update' %}
+                                                <label for="collection_name" class="form-label"><strong>Collection Name</strong></label>
+                                                <input type="text" class="inputFields" id="collection_name" name="collection_name"  value="{{ collection['collection_name'] if collection else '' }}" required>
+                                                {% else %}
+                                                <strong>Collection Name</strong>
+                                                <br> {{ collection['collection_name'] }}
                                             {% endif %}
-                                          </div>
+                                         </div>
+                                         {% endif %}
 
-                                <!-- Inventory Name Read/Update -->
-                                        {% if action and action in ['read', 'update'] %}
-                                        <div class="row">
-                                        {% if action and action == 'update' %}
-                                        <label for="collection_name" class="form-label"><strong>Collection Name</strong></label>
-                                        <input type="text" class="inputFields" id="collection_name" name="collection_name"
-                                               value="{{ collection['collection_name'] if collection else '' }}" required>
-                                        {% else %}
-                                            <strong>Collection Name</strong>
-                                            <br> {{ collection['collection_name'] }}
-                                        {% endif %}
-                                        {% endif %}
-                                        </div>
-                                    <div class="row">
-                                      <input type="submit" value="Submit Collection" class="inventoryButtons" method="POST">
+                                         <div class="row d-flex justify-content-center mt-3">
+                                             <input type="submit" value="Submit Collection" class="inventoryButtons" method="POST">
+                                         </div>
                                     </div>
                                 </div>
                             </div>
@@ -64,6 +65,6 @@
                 </div>
             </div>
         </div>
-    </div>
-        </form>
+    </form>
+ </div>
 {% endblock %}

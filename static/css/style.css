@@ -260,7 +260,6 @@ border: 0px;
     width: auto;
     color: black;
 }
-
 .formFieldsLabels {
     font-size: 20px;
     margin: 0px;
@@ -457,6 +456,7 @@ input.inventoryButtons {
     height: 50px;
     margin: auto;
   display: block;
+    /*margin-top: 32px;*/
 }
 
 .paddingbetweenelements {
@@ -841,3 +841,8 @@ input.btpos {
     border: none;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
