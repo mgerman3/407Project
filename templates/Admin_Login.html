@@ -11,68 +11,68 @@
     <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
 
 
-<form action="{{ url_for('Admin_Login') }}" method="POST">
-        <!-- Inventory Input -->
-<div class="row" style="height: 100vh">
-        <div class="inventoryBoxTotal">
-            <div class="row">
-                <div class = "d-flex justify-content-center">
-                    <div class = "border-box col">
-                        <div class = row>
-                                <div class = "border-box-col">
-                                    <div class="row">
-                                        <div class="row" style="padding-bottom: 20px">
-                                        <!-- Username Input -->
-                                            {% if action and action in ['create'] %}
-                                            <input type="text" class = "signupInput" id="username" name="username" placeholder="Username" value="{{ users['username'] if users else '' }}"required><br>
-                                            {% endif %}
-                                          </div>
-                                        <div class="row" style="padding-bottom: 20px">
-                                        <!-- Password Input -->
-                                            {% if action and action in ['create'] %}
-                                            <input type="password" class = "signupInput" id="password" method='sha256' name="password" placeholder="Password" value="{{ users['password'] if users else '' }}"required>
-                                            {% endif %}
-                                          </div>
-                                        <div class="row" style="padding-bottom: 20px">
-                                        <!-- First Name Input -->
-                                            {% if action and action in ['create'] %}
-                                            <input type="text" class = "signupInput" id="first_name" name="first_name" placeholder="First Name" value="{{ users['first_name'] if users else '' }}"required>
-                                            {% endif %}
-                                          </div>
-                                        <div class="row" style="padding-bottom: 20px">
-                                        <!-- Last Name Input -->
-                                            {% if action and action in ['create'] %}
-                                            <input type="text" class = "signupInput" id="last_name" name="last_name" placeholder="Last Name" value="{{ users['last_name'] if users else '' }}"required>
-                                            {% endif %}
-                                          </div>
-                                        <div class="row" style="padding-bottom: 20px">
-                                        <!-- Email Input -->
-                                            {% if action and action in ['create'] %}
-                                            <input type="text" class = "signupInput" id="email" name="email" placeholder="Email" value="{{ users['email'] if users else '' }}"required>
-                                            {% endif %}
-                                          </div>
-                                    <div class="row" style="padding-bottom: 20px">
-                                        <!-- Role Input -->
-                                            {% if action and action in ['create'] %}
-                                                <select name="role" id="role" class="form-select" aria-label=".form-select-md example">
-                                                    <option value="0">---Select A Role---</option>
-                                                    <option name="EMPLOYEE" id="EMPLOYEE" value="EMPLOYEE"
-                                                            >EMPLOYEE</option>
-                                                    <option name="ADMIN" id="ADMIN" value="ADMIN"
-                                                            >ADMIN</option>
-                                            {% endif %}
-                                          </div>
-                                    <div class="row" style="padding-top: 20px">
-                                      <input type="submit" value="Register" class="inventoryButtons" method="POST">
+    <form action="{{ url_for('Admin_Login') }}" method="POST">
+            <!-- Inventory Input -->
+    <div class="row" style="height: 100vh">
+            <div class="inventoryBoxTotal">
+                <div class="row">
+                    <div class = "d-flex justify-content-center">
+                        <div class = "border-box col">
+                            <div class = row>
+                                    <div class = "border-box-col">
+                                        <div class="row">
+                                            <div class="row" style="padding-bottom: 20px">
+                                            <!-- Username Input -->
+                                                {% if action and action in ['create'] %}
+                                                <input type="text" class = "signupInput" id="username" name="username" placeholder="Username" value="{{ users['username'] if users else '' }}"required><br>
+                                                {% endif %}
+                                              </div>
+                                              <div class="row" style="padding-bottom: 20px">
+                                            <!-- Password Input -->
+                                                {% if action and action in ['create'] %}
+                                                <input type="password" class = "signupInput" id="password" method='sha256' name="password" placeholder="Password" value="{{ users['password'] if users else '' }}"required>
+                                                {% endif %}
+                                              </div>
+                                              <div class="row" style="padding-bottom: 20px">
+                                            <!-- First Name Input -->
+                                                {% if action and action in ['create'] %}
+                                                <input type="text" class = "signupInput" id="first_name" name="first_name" placeholder="First Name" value="{{ users['first_name'] if users else '' }}"required>
+                                                {% endif %}
+                                              </div>
+                                              <div class="row" style="padding-bottom: 20px">
+                                            <!-- Last Name Input -->
+                                                {% if action and action in ['create'] %}
+                                                <input type="text" class = "signupInput" id="last_name" name="last_name" placeholder="Last Name" value="{{ users['last_name'] if users else '' }}"required>
+                                                {% endif %}
+                                              </div>
+                                                <div class="row" style="padding-bottom: 20px">
+                                            <!-- Email Input -->
+                                                    {% if action and action in ['create'] %}
+                                                    <input type="text" class = "signupInput" id="email" name="email" placeholder="Email" value="{{ users['email'] if users else '' }}"required>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="row" style="padding-bottom: 20px">
+                                                    <!-- Role Input -->
+                                                    {% if action and action in ['create'] %}
+                                                    <div class="form-select-container">
+                                                        <select name="role" id="role" class="form-select" aria-label=".form-select-md example">
+                                                            <option value="0">---Select A Role---</option>
+                                                            <option name="EMPLOYEE" id="EMPLOYEE" value="EMPLOYEE">EMPLOYEE</option>
+                                                            <option name="ADMIN" id="ADMIN" value="ADMIN">ADMIN</option>
+                                                        </select>
+                                                    </div>
+                                                        {% endif %}
+                                                    <div class="row" style="padding-top: 20px">
+                                                        <input type="submit" value="Register" class="inventoryButtons" method="POST">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-        </form>
+{#            </form>#}
 
-{% endblock %}
+    {% endblock %}
