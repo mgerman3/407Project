@@ -688,6 +688,7 @@ input.btpos {
 }
   form input[class="home"] {
     position: absolute;
+    margin-top: 50px;
    /* left: 100px;
     top: 350px;*/
     }
@@ -695,12 +696,14 @@ input.btpos {
 .homeTitle {
     font-family: 'Open Sans';
     font-size: 150px;
-    margin-top: 100px;
+    width: 50%;
+    /*margin-top: 100px;*/
 }
 .slogan {
     font-family: 'Open Sans';
     font-size: 60px;
-    margin-top: 50px;
+    margin-top: 75px;
+    /*margin-bottom: 50px;*/
 }
 .submit-button {
   margin-top: 50px;
@@ -710,51 +713,37 @@ input.btpos {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /*justify-content: center;*/
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom:10px;
+  justify-content: center;
   margin-top: 10px;
 }
 .image-container img {
   width: 250px;
   height: 250px;
-  object-fit: cover;
+  /*object-fit: cover;*/
   margin: 10px;
   border: 5px solid #69a695;
 }
-/*.slogan {*/
-/*    float: left;*/
-/*    width: 40%;*/
-/*    font-size: 150px;*/
-/*    font-family: 'Open Sans';*/
-/*    display: inline-block;*/
-/*    position:absolute;*/
-/*    left: 100px;*/
-/*    top: 200px;*/
-/*}*/
-/*.right-column {*/
-/*    width: calc(100% - 600px);*/
-/*    margin-left: 50px;*/
-/*}*/
+
 .map {
     text-align: center;
-    width: 70%;
+    width: 50%;
+    align-self: flex-end;
     /*padding: 20px;*/
-    float: right;
+    /*float: right;*/
     margin-bottom: 75px;
-    /*position: absolute;*/
-    /*right: 0;*/
-    top: 100px;
-    right: 50px;
-    /*margin-right: 10px;*/
-  /*text-align: center;*/
-  /*!*width: 60%;*!*/
-  /*height: 50px;*/
-  /*padding: 20px;*/
-  /*float: right;*/
-  /*margin-bottom: 50px;*/
-}
+    top: 200px;
+    margin-right: 10px;
+    /*margin-left: -50px;*/
 
+}
+.right-column {
+  margin-top: 20px;
+}
 .small-image {
-    width: 200px;
+    width: 100%;
     height: auto;
     border: 5px solid #69a695;
     }
@@ -763,16 +752,7 @@ input.btpos {
     width: calc(100% - 600px);
     margin-left: 50px;
 }
-/*.image-container {*/
-/*  display: flex;*/
-/*  flex-wrap: wrap;*/
-/*  flex-direction: row;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*  position: relative;*/
-/*  top: 100px;*/
-/*  left: 100px;*/
-/*}*/
+
 .bg-image {
     position: fixed;
     top: 0;
@@ -782,17 +762,6 @@ input.btpos {
     z-index: -1;
     opacity: 0.5;
 }
-
-/*.slogan {*/
-/*    width: 40%;*/
-
-/*    font-size: 150px;*/
-/*    font-family: 'Open Sans';*/
-/*    position:relative;*/
-/*    left: 50px;*/
-/*    top: 100px;*/
-/*}*/
-
 
 /* About Us Page Containers*/
 
