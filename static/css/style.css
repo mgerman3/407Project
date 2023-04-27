@@ -853,7 +853,7 @@ input.btpos {
 
 .flex {
   display: flex;
-    max-width: 100%;
+    max-width: 200%;
 }
 
 .icon-image  {
@@ -862,6 +862,3 @@ input.btpos {
     border: none;
 }
 
-table {
-    max-width: 100%;
-}

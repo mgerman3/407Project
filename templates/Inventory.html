@@ -4,20 +4,22 @@
 
 {% block page_content %}
 
-<div class="inventoryBoxTotal">
-  <div class="row">
-    <h2 class="tableHeader"><strong>Inventory</strong></h2>
-    <br>
-    <br>
-  </div>
-  <div class="row">
+<!--  table header -->
+    <div class="row">
+        <h2 class="tableHeader"><strong>Inventory</strong></h2>
+        <br>
+        <br>
+    </div>
+
+
+  <div class= "flex">
     <table class="table">
       <thead>
         <tr>
           <th scope="col">Item ID</th>
           <th scope="col">Item Name</th>
           <th scope="col">Size</th>
-          <th scope="col">Color</th>
+          <th scope="col">Style</th>
           <th scope="col">Item Price</th>
           <th scope="col">Quantity</th>
           <th scope="col">Description</th>
@@ -26,7 +28,7 @@
         </tr>
       </thead>
       <tbody>
-      <!--  table rows here -->
+            <!--  table rows 1 -->
             <tr>
               <td>001</td>
               <td>Original Tee</td>
@@ -41,7 +43,6 @@
                   <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
               </td>
             </tr>
-
             <!--  table row 2 -->
             <tr>
               <td>003</td>
@@ -147,7 +148,51 @@
                   <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
               </td>
             </tr>
-
+            <!--  table row 8 -->
+            <tr>
+              <td>005</td>
+              <td>Crewneck</td>
+              <td>XXL</td>
+              <td>Game Day Map</td>
+              <td>$42</td>
+              <td>4</td>
+              <td>This classic Crewneck features our exclusive Game Day Map design. Made with high-quality cotton for maximum comfort and durability.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+            <!--  table row 9 -->
+            <tr>
+              <td>004</td>
+              <td>T-Shirt</td>
+              <td>XL</td>
+              <td>Game Day Map</td>
+              <td>$28</td>
+              <td>8</td>
+              <td>This soft and comfortable t-shirt features our exclusive Spring Pinks Map design. Perfect for casual wear or a day out.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+              <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
+            <!--  table rows 10 -->
+            <tr>
+              <td>001</td>
+              <td>Original Tee</td>
+              <td>Medium</td>
+              <td>Spring Pinks Map</td>
+              <td>$28.00</td>
+              <td>11</td>
+              <td>Soft and comfortable t-shirt made with 100% cotton.</td>
+              <td><img src="static/images/Shop_ClothingItem1.png" class="icon-image" alt="Product Image"></td>
+             <td>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Edit</a>
+                  <a href="/Inventory" class="btn btn-secondary" role="button">Delete</a>
+              </td>
+            </tr>
       </tbody>
     </table>
   </div>
