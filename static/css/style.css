@@ -676,13 +676,11 @@ input.btpos {
     width:960px;
 }
 
-/*!*.left-column {*!*/
-/*  width: 70%;*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  justify-content: center;*/
-/*  align-items: center;*/
-/*  padding: 20px;*/
+.left-column {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
 }
   form input[class="home"] {
     position: absolute;
@@ -708,12 +706,12 @@ input.btpos {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  margin-top: 50px;
+  /*justify-content: center;*/
+  margin-top: 10px;
 }
 .image-container img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   margin: 10px;
   border: 5px solid #69a695;
@@ -728,23 +726,34 @@ input.btpos {
 /*    left: 100px;*/
 /*    top: 200px;*/
 /*}*/
-.right-column {
-    width: calc(100% - 600px);
-    margin-left: 50px;
-}
+/*.right-column {*/
+/*    width: calc(100% - 600px);*/
+/*    margin-left: 50px;*/
+/*}*/
 .map {
-  text-align: center;
-  width: 50%;
-  padding: 20px;
-  height: auto;
-  float: right;
-  margin-bottom: 75px;
+    text-align: center;
+    width: 70%;
+    /*padding: 20px;*/
+    float: right;
+    margin-bottom: 75px;
+    /*position: absolute;*/
+    /*right: 0;*/
+    top: 100px;
+    right: 50px;
+    /*margin-right: 10px;*/
+  /*text-align: center;*/
+  /*!*width: 60%;*!*/
+  /*height: 50px;*/
+  /*padding: 20px;*/
+  /*float: right;*/
+  /*margin-bottom: 50px;*/
 }
 
 .small-image {
-    width: 50%;
+    width: 200px;
+    height: auto;
     border: 5px solid #69a695;
-}
+    }
 
 .right-column {
     width: calc(100% - 600px);
