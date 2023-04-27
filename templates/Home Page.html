@@ -5,42 +5,42 @@
 {% block page_content %}
 <!--testing more-->
 <!-- Background Photo -->
+      <div id="wrapper">
         <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
-
-<!-- Title for Around the Block -->
-    <div class = homeTitle style="padding-top: 25px;">
-        <h1> AROUND THE BLOCK.CO </h1>
-    </div>
-    <!-- Text for Left Side of Screen -->
-    <div class = "row">
-        <div class = "left-column">
-            <div class = slogan>
-                <div class = "row">
-                    <h2>Join the<br>Block Party</h2>
-                    <h6>Shop apparel inspired by the distinct and <br> recognizable houses within Old Town, College Park <br> Maryland</h6>
+                    <!-- Title for Around the Block -->
+            <div class = row>
+                <div class = "homeTitle">
+                    <h1> AROUND THE BLOCK</h1>
                 </div>
+            </div>
+            <div class = "row">
+                <div class = "left-column">
+                    <div class = slogan>
+                        <div class = row >
+                            <h1>Join the<br>Block Party</h1>
+                            <h5>Shop college apparel that brings together <br> communities built on shared memories</h5>
+                            <h6>Inspired by Old Town, College Park Maryland</h6>
                 <!-- Start shopping button directing user to shop page-->
-                <div class = "row">
-                    <form action="/Shop" method="get" >
-                        <input class="home" type="submit" value="START SHOPPING">
-                    </form>
+                        <div class = "row">
+                            <form action="/Shop" method="get" >
+                                <input class="home" type="submit" value="START SHOPPING">
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                <!-- Old Town map on right side of screen -->
+                    <div class = "map">
+                        <img src="../static/images/Misc_OldTownMap-Logo.png" alt="Old Town Map" class="small-image" >
+                    </div>
                 </div>
             </div>
             <!-- 3 images below shop button -->
-           <div class="image-container">
-                    <img src="../static/images/AboutPage_OurMission_GroupPic.JPG" alt="Group on Steps">
-                    <img src="../static/images/AboutPage_JoellePersonalPic.png" alt="Joelle">
-                    <img src="../static/images/Misc_ModelPic.png" alt="Group">
+            <div class="image-container">
+                <img src="../static/images/AboutPage_OurMission_GroupPic.JPG" alt="Group on Steps">
+                <img src="../static/images/AboutPage_JoellePersonalPic.png" alt="Joelle">
+                <img src="../static/images/Misc_ModelPic.png" alt="Group">
                    <!--<img src="../static/images/AboutPage_OurMission_GroupPic.JPG" alt="Group on Steps">-->
-           </div>
-        </div>
-        <!-- Old Town map on right side of screen -->
-        <div class = "right-column">
-            <div class = "map">
-                <img src="../static/images/Misc_OldTownMap-Logo.png" alt="Old Town Map" class="small-image" >
             </div>
-        </div>
-    </div>
-
+      </div>
 
 {% endblock %}
