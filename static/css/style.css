@@ -105,6 +105,7 @@ p {
     padding-top: 7px;
     padding-bottom: 7px;
     display: block;
+    text-align: center;
 }
 
 a.footerItems{

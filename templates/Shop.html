@@ -2,113 +2,113 @@
 
 {% block title %}Shop{% endblock %}
 
-{% block html_style %}
+{#{% block html_style %}#}
 {#    button[class="input"] {#}
 {#        text-size: 10px;#}
 {#    }#}
-{% endblock %}
+{#{% endblock %}#}
 
 {% block page_content %}
 
-<!--Shop page-->
-<div class="row" style="align-content: center">
-<!--Image for top of shop page-->
-    <img src="static/images/Spring Pink Map.jpg" width="200" height="250" alt="Around the Block Spring Pink Map" class="cover">
-</div>
-
-<!--header-->
-<div class="GenProduct_HeadingSpacer"></div>
-<div class="row" style="padding-left: 5px">
-    <h1 class="Clothes for you!"><strong>Clothes for you!</strong></h1>
-</div>
-
-<!--filter buttons for shop page - price, availability, and review customers
-will be able to filer the products by-->
-<div class="row">
-<div class="inline" style="10px">
-<div class="dropdown">
-    <button class="input">Price</button>
-    <div class="dropdown-content">
-        <a href="#">under $30</a>
-        <a href="#">under $50</a>
-        <a href="#">under $100</a>
-    </div>
-</div>
-
-<div class="dropdown">
-    <button class="input">Availability</button>
-    <div class="dropdown-content">
-        <a href="#">In Stock</a>
-        <a href="#">Out of Stock</a>
-    </div>
-</div>
-
-<div class="dropdown">
-    <button class="input">Review</button>
-    <div class="dropdown-content">
-        <a href="#">High to Low</a>
-    </div>
-</div>
-
-</div>
-</div>
-
-<br>
-
-<!--products pages -->
-<div class="row">
-<!-- products put into columns so aligned with page-->
-<!-- product image, product name, product price put into containers for columns-->
-    <div class="col-3">
-        <div class="card" style="width: 18rem;">
-            <img src="/static/images/Shop_Crewneck.png" class="card-img-top" alt="ATB Crewneck">
-                <div class="card-body">
-                    <p class="card-text">Crewneck - $42.00</p>
-                    <a href="/GenericProduct" class="btn btn-primary">View</a>
-                </div>
+        <!--Shop page-->
+        <div class="row" style="align-content: center">
+        <!--Image for top of shop page-->
+            <img src="static/images/Spring Pink Map.jpg" width="200" height="250" alt="Around the Block Spring Pink Map" class="cover">
         </div>
-    </div>
 
-    <div class="col-3">
-        <div class="card" style="width: 18rem;">
-            <img src="/static/images/Shop_QuarterZip.png" class="card-img-top" alt="ATB Quarter Zip">
-                <div class="card-body">
-                    <p class="card-text">Quarter Zip - $45.00</p>
-                    <a href="/GenericProduct" class="btn btn-primary">View</a>
-                </div>
+        <!--header-->
+        <div class="GenProduct_HeadingSpacer"></div>
+        <div class="row" style="padding-left: 5px">
+            <h1 class="Clothes for you!"><strong>Clothes for you!</strong></h1>
         </div>
-    </div>
 
-    <div class="col-3">
-        <div class="card" style="width: 18rem;">
-            <img src="/static/images/Shop_LongSleeve.png" class="card-img-top" alt="ATB Long Sleeve">
-                <div class="card-body">
-                    <p class="card-text">Long Sleeve - $36.00</p>
-                    <a href="/GenericProduct" class="btn btn-primary">View</a>
-                </div>
+        <!--filter buttons for shop page - price, availability, and review customers
+        will be able to filer the products by-->
+        <div class="row">
+        <div class="inline" style="10px">
+        <div class="dropdown">
+            <button class="input">Price</button>
+            <div class="dropdown-content">
+                <a href="#">under $30</a>
+                <a href="#">under $50</a>
+                <a href="#">under $100</a>
+            </div>
         </div>
-    </div>
 
-    <div class="col-3">
-        <div class="card" style="width: 18rem;">
-            <img src="/static/images/Shop_OriginalTee.png" class="card-img-top" alt="ATB Original Tee">
-                <div class="card-body">
-                    <p class="card-text">Original Tee - $28.00</p>
-                    <a href="/GenericProduct" class="btn btn-primary">View</a>
-                </div>
+        <div class="dropdown">
+            <button class="input">Availability</button>
+            <div class="dropdown-content">
+                <a href="#">In Stock</a>
+                <a href="#">Out of Stock</a>
+            </div>
         </div>
-    </div>
 
-    <div class="col-3">
-        <div class="card" style="width: 18rem;">
-            <img src="/static/images/Shop_tshirt.png" class="card-img-top" alt="ATB T-Shirt">
-                <div class="card-body">
-                    <p class="card-text">T-Shirt - $28.00</p>
-                    <a href="/GenericProduct" class="btn btn-primary">View</a>
-                </div>
+        <div class="dropdown">
+            <button class="input">Review</button>
+            <div class="dropdown-content">
+                <a href="#">High to Low</a>
+            </div>
         </div>
-    </div>
-</div>
+
+        </div>
+        </div>
+
+        <br>
+
+        <!--products pages -->
+        <div class="row">
+        <!-- products put into columns so aligned with page-->
+        <!-- product image, product name, product price put into containers for columns-->
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="/static/images/Shop_Crewneck.png" class="card-img-top" alt="ATB Crewneck">
+                        <div class="card-body">
+                            <p class="card-text">Crewneck - $42.00</p>
+                            <a href="/GenericProduct" class="btn btn-primary">View</a>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="/static/images/Shop_QuarterZip.png" class="card-img-top" alt="ATB Quarter Zip">
+                        <div class="card-body">
+                            <p class="card-text">Quarter Zip - $45.00</p>
+                            <a href="/GenericProduct" class="btn btn-primary">View</a>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="/static/images/Shop_LongSleeve.png" class="card-img-top" alt="ATB Long Sleeve">
+                        <div class="card-body">
+                            <p class="card-text">Long Sleeve - $36.00</p>
+                            <a href="/GenericProduct" class="btn btn-primary">View</a>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="/static/images/Shop_OriginalTee.png" class="card-img-top" alt="ATB Original Tee">
+                        <div class="card-body">
+                            <p class="card-text">Original Tee - $28.00</p>
+                            <a href="/GenericProduct" class="btn btn-primary">View</a>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="/static/images/Shop_tshirt.png" class="card-img-top" alt="ATB T-Shirt">
+                        <div class="card-body">
+                            <p class="card-text">T-Shirt - $28.00</p>
+                            <a href="/GenericProduct" class="btn btn-primary">View</a>
+                        </div>
+                </div>
+            </div>
+        </div>
 
 {% endblock %}
 
