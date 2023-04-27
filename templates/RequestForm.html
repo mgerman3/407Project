@@ -3,6 +3,8 @@
 
 {% block title %}Request Form{% endblock %}
 
+{% block html_head %}Leave a Request{% endblock %}
+
 {% block page_content %}
 
     <!-- Add padding between top of the page and contents within the table -->
@@ -10,7 +12,6 @@
     <!-- Centers and bolds heading text for the page -->
     <div class = "h1-Center">
         <!-- Heading text for entire webpage  -->
-        <h1><strong>Leave a Request</strong></h1>
         <h4>If you have any questions, concerns or ideas for us please complete the form below!</h4>
     </div>
     <div class="GenProduct_HeadingSpacer"></div>
@@ -47,6 +48,13 @@
                 <!--Styling for each of the boxes, background color of form and buttons used within form -->
                 <div class="border-box col">
                     <div class="formInputFields">
+                        {% if current_user.is_authenticated %}
+                            <div class = "row">
+                            <!--Field to collect users message -->
+                            <p class="formFieldsLabels">Message(*)</p>
+                            <input type="text" class="inputFields" name="message" required><br><br>
+                        </div>
+                        {% else %}
                         <div class = "row">
                             <div class="border-box col">
                                 <div class="row" style="padding-right: 15px">
@@ -68,11 +76,13 @@
                             <p class="formFieldsLabels">Email(*)</p>
                             <input type="email" class="inputFields" name="email" required><br><br>
                         </div>
+
                         <div class = "row">
                             <!--Field to collect users message -->
                             <p class="formFieldsLabels">Message(*)</p>
                             <input type="text" class="inputFields" name="message" required><br><br>
                         </div>
+                     {% endif %}
                     </div>
                 </div>
                 <div class="row">

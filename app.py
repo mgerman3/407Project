@@ -52,23 +52,30 @@ def Profile():
 
 @app.route('/RequestForm', methods=['GET', 'POST'])
 def RequestForm():
-#     if request.method == 'POST':
-#         return render_template('RequestForm.html', form_submitted=True)
-#     else:
-#         return render_template('RequestForm.html')
     if request.method == 'GET':
         return render_template('RequestForm.html', action='create')
     elif request.method == 'POST':
-        first_name = request.form['first_name']
-        last_name = request.form['last_name']
-        email = request.form['email']
-        phoneNumber = request.form['phoneNumber']
-        message = request.form['message']
 
-        users = User(first_name=first_name, last_name=last_name, email=email, phoneNumber=phoneNumber)
-        requests = Requests(message=message)
+        if current_user.is_authenticated:
 
-        db.session.add(users)
+
+            account_id = current_user.account_id
+            first_name = None
+            last_name = None
+            email = None
+            message = request.form['message']
+
+            requests = Requests(account_id=account_id, first_name=first_name, last_name=last_name, email=email, message=message)
+
+        else:
+            account_id = None
+            first_name = request.form['first_name']
+            last_name = request.form['last_name']
+            email = request.form['email']
+            message = request.form['message']
+
+            requests = Requests(account_id=account_id, first_name=first_name, last_name=last_name, email=email, message=message)
+
         db.session.add(requests)
         db.session.commit()
         flash(f'Your request was received!', 'success')
@@ -77,6 +84,20 @@ def RequestForm():
     # Address issue where unsupported HTTP request method is attempted
     flash(f'Invalid request. Please contact support if this problem persists.', 'error')
     return redirect(url_for('homePage'))
+
+@app.route('/RequestsLog/Delete/<int:request_id>')
+@login_required
+@role_required(['ADMIN'])
+def requests_fulfilled(request_id):
+   request = Requests.query.filter_by(request_id=request_id).first()
+   if request:
+       db.session.delete(request)
+       db.session.commit()
+       flash(f'{request_id} was successfully deleted!', 'success')
+   else:
+       flash(f'Delete failed! Collection could not be found.', 'error')
+
+   return redirect(url_for('requests_view_all'))
 
 @app.route('/Reviews', methods=['GET', 'POST'])
 def Reviews():
@@ -177,6 +198,16 @@ def CheckOut():
 def GenProduct():
     return render_template('GenericProductPage.html')
 
+@app.route('/RequestsLog')
+@login_required
+@role_required(['ADMIN', 'EMPLOYEE'])
+def requests_view_all():
+   requests = Requests.query.order_by(Requests.request_id) \
+       .all()
+   return render_template('Request Log.html', requests=requests)
+
+
+
 @app.route('/InventoryLog')
 @login_required
 @role_required(['ADMIN', 'EMPLOYEE'])
@@ -256,6 +287,7 @@ def inventory_entry():
        return render_template('Input_Inventory.html', action='create')
    elif request.method == 'POST':
        item_name = request.form['item_name']
+       collection_name = request.form['collection_name']
        xsmall = request.form['xsmall']
        small = request.form['small']
        medium = request.form['medium']
@@ -269,7 +301,10 @@ def inventory_entry():
        items = InventoryInfo(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge,
                          xxlarge=xxlarge, color=color, price=price, desc=desc)
 
+       collection = Collections(collection_name=collection_name)
+
        db.session.add(items)
+       db.session.add(collection)
        db.session.commit()
        flash(f'{item_name} was successfully added!', 'success')
        return redirect(url_for('items_view_all'))

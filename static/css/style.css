@@ -62,6 +62,10 @@ select#role.form-select{
     color: black;
 }
 
+td.wrap{
+    inline-size: 150px;
+    overflow-wrap: break-word;
+}
 
 /* button styling */
 .input{

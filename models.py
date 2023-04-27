@@ -48,14 +48,21 @@ class Requests(db.Model):
    __tablename__ = "Requests"
 
    request_id = db.Column(db.Integer, primary_key=True)
-   user_id = db.Column(db.Integer, db.ForeignKey('User.user_id'))
+   account_id = db.Column(db.Integer, db.ForeignKey('Credentials.account_id'), nullable=True)
+   first_name = db.Column(db.String(30), nullable=True)
+   last_name = db.Column(db.String(50), nullable=True)
+   email = db.Column(db.String(60), nullable=True)
    message = db.Column(db.String(200), nullable=False)
 
-   def __init__(self, message):
+   def __init__(self, account_id, first_name, last_name, email, message):
+       self.account_id = account_id
+       self.first_name = first_name
+       self.last_name = last_name
+       self.email = email
        self.message = message
 
    def __repr__(self):
-       return f"{self.message}"
+       return f"{self.first_name}{self.last_name}{self.message}"
 
 
 class OrderInfo(db.Model):
@@ -132,11 +139,11 @@ class Credentials(UserMixin, db.Model):
     __tablename__ = "Credentials"
 
     account_id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(40), unique=True)
+    username = db.Column(db.String(40), unique=True, nullable=False)
     password = db.Column(db.String(40), nullable=False)
-    first_name = db.Column(db.String(30))
-    last_name = db.Column(db.String(50))
-    email = db.Column(db.String(100), unique=True)
+    first_name = db.Column(db.String(30), nullable=False)
+    last_name = db.Column(db.String(50), nullable=False)
+    email = db.Column(db.String(100), unique=True, nullable=False)
     role = db.Column(db.String(10), nullable=False)
 
     def __init__(self, username, password, first_name, last_name, email, role='STUDENT'):

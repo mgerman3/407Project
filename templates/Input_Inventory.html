@@ -47,9 +47,10 @@
                                              <label for="collection_id" class="form-label"><strong>Collection Name</strong></label>
                                              <select name="collection_id" id="collection_id" class="form-select form-select-md" aria-label=".form-select-md example">
                                                  <option value="0">---Select A Collection---</option>
+
                                                  {% for each_collection in collection %}
-                                                 <option value="{{ each_collection['collection_name'] }}" {{ 'selected' if items and each_collection['collection_id'] == items['collection_id'] else ''}}
-                                                                                    >{{ each_collection['collection_name'] }}</option>
+                                                 <option value="{{ 'collection_name'}}"
+                                                                                    >{{'collection_name'}}</option>
 
 {#                                                         {{ 'selected' if collection and each_collection['collection_id'] == collection['collection_id'] else ''}}>{{ each_collection['collection_name'] }}</option>#}
                                                  {% endfor %}
