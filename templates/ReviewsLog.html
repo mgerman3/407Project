@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+
+{% block page_title %}
+   Review Log
+{% endblock %}
+
+
+{% block html_head %}
+   Review Log
+{% endblock %}
+
+
+{% block page_content %}
+
+<div class="text-center" style="height: 100vh">
+   <!-- Creation of Collections table -->
+    <div class="row">
+    <div class="col">
+
+   <table class="table table-striped">
+       <tr>
+            <th scope="col">Review ID</th>
+            <th scope="col">Account ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Review</th>
+           {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
+           <th>Actions</th>
+           {% endif %}
+       </tr>
+
+
+         {% for each_review in reviews %}
+             {% if account_id != None %}
+           <td>{{ each_review['review_id'] }}</td>
+           <td>{{ each_review['account_id'] }}</td>
+           <td>{{ each_review['first_name'] }}</td>
+           <td>{{ each_review['last_name'] }}</td>
+           <td>{{ each_review['email'] }}</td>
+            <td class="wrap">{{ each_review['review'] }}</td>
+           <td>
+               {% if current_user.role in ['ADMIN'] %}
+               <a href="{{ url_for('review_delete', review_id=each_review['review_id']) }}" class="btn btn-secondary" type = "submit" role="button">Delete</a>
+               {% endif %}
+           </td>
+       </tr>
+           {% else %}
+       <tr>
+        <tr>
+           <td>{{ each_review['review_id'] }}</td>
+           <td>{{ each_review['account_id'] }}</td>
+           <td>{{ each_review['first_name'] }}</td>
+           <td>{{ each_review['last_name'] }}</td>
+           <td>{{ each_review['email'] }}</td>
+
+            <td class="wrap">{{ each_review['review'] }}</td>
+           <td>
+               {% if current_user.role in ['ADMIN'] %}
+               <a href="{{ url_for('review_delete', review_id=each_review['review_id']) }}" class="btn btn-secondary" type = "submit" role="button">Delete</a>
+               {% endif %}
+           </td>
+       </tr>
+
+             {% endif %}
+           {% endfor %}
+
+   </table>
+   </div>
+   </div>
+
+   {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
+   <div class="row">
+       <div class="col">
+               Total Number of Reviews: {{ review|length }}
+       </div>
+   </div>
+
+    <p><br></p>
+       </div>
+   {% endif %}
+
+{% endblock %}

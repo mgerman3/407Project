@@ -64,7 +64,6 @@ class Requests(db.Model):
    def __repr__(self):
        return f"{self.first_name}{self.last_name}{self.message}"
 
-
 class OrderInfo(db.Model):
    __tablename__ = "OrderInfo"
 
@@ -162,3 +161,23 @@ class Credentials(UserMixin, db.Model):
 
    # Only execute once! Initial load of sizes
    #db.engine.execute("INSERT INTO sizes(size) VALUES ('XS');")
+
+class Reviews(db.Model):
+    __tablename__ = "Reviews"
+
+    review_id = db.Column(db.Integer, primary_key=True)
+    account_id = db.Column(db.Integer, db.ForeignKey('Credentials.account_id'), nullable=True)
+    first_name = db.Column(db.String(30), nullable=True)
+    last_name = db.Column(db.String(50), nullable=True)
+    email = db.Column(db.String(60), nullable=True)
+    review = db.Column(db.String(200), nullable=False)
+
+    def __init__(self, account_id, first_name, last_name, email, review):
+        self.account_id = account_id
+        self.first_name = first_name
+        self.last_name = last_name
+        self.email = email
+        self.review = review
+
+    def __repr__(self):
+        return f"{self.first_name}{self.last_name}{self.review}"

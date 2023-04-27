@@ -1,98 +1,104 @@
+<!-- Extending base code to use Jinja principles -->
 {% extends "base.html" %}
 
-{% block title %}Reviews{% endblock %}
+{% block title %}Review Form{% endblock %}
+
+{% block html_head %}Leave a Review{% endblock %}
 
 {% block page_content %}
-<!-- Add padding between top of the page and contents within the table -->
+
+    <!-- Add padding between top of the page and contents within the table -->
     <div class="GenProduct_HeadingSpacer"></div>
     <!-- Centers and bolds heading text for the page -->
     <div class = "h1-Center">
         <!-- Heading text for entire webpage  -->
-        <h1><strong>Leave a Review</strong></h1>
-        <h4>Are you enjoying our products? Let us know how we're doing!</h4>
+        <h4>Enjoying our products? Let us know by leaving a review below!</h4>
     </div>
     <div class="GenProduct_HeadingSpacer"></div>
     <!-- Create two column layout to house form and photo side by side-->
     <div class = "GenProduct_rowLayout">
         <div class="GenProduct_columnLayout">
              <!--Placing image on left hand column-->
-            <img src="../static/images/Reviews_FormPhoto.png" width = "450" height = "470" alt="ATB models doing leg stand" style = "padding-left: 20px">
+            <img src="../static/images/Reviews_FormPhoto.png" width = "450" height = "470" alt="ATB Model on a Keg" style = "padding-left: 20px">
         </div>
         <!-- create new, right-handed side column-->
         <div class="GenProduct_columnLayout">
         <!-- adds passing between both columns to evenly space information -->
-            <div class = "GenProduct_VerticalSpacer">
+        <div class = "GenProduct_VerticalSpacer">
         <!-- conditional formatting to show confirmation message to users after completing the form -->
-                <div class = "GenProduct_VerticalRightSpacer">
-                    {% if form_submitted %}
-                        <div class="row">
-                             <div class="formInputFields">
-                                 <!-- Centers text on confirmation output -->
-                                 <div class = "h1-Center">
-                                     <!-- Message outputted to user after form completed -->
-                                     <h3>Thank you {{ request.form.get('first_name')}} for submitting a review, we look forward to reading your feedback!</h3>
-                                 </div>
-                                  <!--Placing icon under confirmation message-->
-                                  <img src="../static/images/RequestForm_FormConfirmation.png" width = "100" height = "100" alt="Form Sent Confirmation Icon" class = "center-image">
+            <div class = "GenProduct_VerticalRightSpacer">
+            {% if form_submitted %}
+                <div class="row">
+                     <div class="formInputFields">
+                             <!-- Centers text on confirmation output -->
+                             <div class = "h1-Center">
+                                <!-- Message outputted to user after form completed -->
+                                <h3>Thank you {{ request.form.get('first_name')}} for submitting a review, we look forward to hearing your feedback!</h3>
                              </div>
-                        </div>
+                          <!--Placing icon under confirmation message-->
+                          <img src="../static/images/RequestForm_FormConfirmation.png" width = "100" height = "100" alt="Form Sent Confirmation Icon" class = "center-image">
+                     </div>
+                </div>
             <!--If form is not completed, this is the information that users will see-->
-                    {% else %}
+            {% else %}
         <!--Creates form to collection customer's requests-->
-                        <form action="{{ url_for('Reviews') }}" method="post">
-                            <div class="inputBoxTotal" style="padding-left: 24px">
-                                <div class="row">
+        <form action="{{ url_for('Reviews') }}" method="POST">
+        <div class="inputBoxTotal" style="padding-left: 24px">
+            <div class="row">
                 <!--Styling for each of the boxes, background color of form and buttons used within form -->
-                                    <div class="border-box col">
-                                        <div class="formInputFields">
-                                            <div class = "row">
-                                                <div class="border-box col">
-                                                    <div class="row" style="padding-right: 15px">
-                                                        <!--Field to collect users first name -->
-                                                        <p class="formFieldsLabels">First Name(*)<br></p>
-                                                        <input type="text" class="inputFields" name="first_name" required>
-                                                    </div>
-                                                </div>
-                                                <div class="border-box col">
-                                                    <div class="row" style="padding-left: 15px">
-                                                        <!--Field to collect users last name -->
-                                                        <p class="formFieldsLabels">Last Name(*)<br></p>
-                                                        <input type="text" class="inputFields" name="last_name" required><br><br>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class = "row">
-                                                <!--Field to collect users email -->
-                                                <p class="formFieldsLabels">Email(*)</p>
-                                                <input type="email" class="inputFields" name="email" required><br><br>
-                                            </div>
-                                            <div class = "row">
-                                                <!--Field to collect type of customer -->
-                                                <p class="formFieldsLabels">Customer Type</p>
-                                                <input type="text" class="inputFields" name="customer_Type"><br><br>
-                                            </div>
-                                            <div class = "row">
-                                                <!--Field to collect users message -->
-                                                <p class="formFieldsLabels">Message(*)</p>
-                                                <input type="text" class="inputFields" name="message" required><br><br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class ="vertical-center">
-                                            <!--Field to submit the users answers inputted into the form -->
-                                            <input type="submit" value="Submit Review" class="checkoutButtons" style="float: right; margin: 20px; padding: 7px 75px 7px 75px;">
-                                        </div>
-                                    </div>
+                <div class="border-box col">
+                    <div class="formInputFields">
+                        {% if current_user.is_authenticated %}
+                            <div class = "row">
+                            <!--Field to collect users message -->
+                            <p class="formFieldsLabels">Review(*)</p>
+                            <input type="text" class="inputFields" name="review" required rows="5"><br><br>
+                        </div>
+                        {% else %}
+                        <div class = "row">
+                            <div class="border-box col">
+                                <div class="row" style="padding-right: 15px">
+                                    <!--Field to collect users first name -->
+                                    <p class="formFieldsLabels">First Name(*)<br></p>
+                                    <input type="text" class="inputFields" name="first_name" required>
                                 </div>
                             </div>
-                        </form>
-                        <!-- Creation of review section below -->
-                            <!-- adds spacing between bottom of all text content and footer -->
-                        <div class="GenProduct_HeadingSpacer"></div>
-                    {% endif %}
+                            <div class="border-box col">
+                                <div class="row" style="padding-left: 15px">
+                                    <!--Field to collect users last name -->
+                                    <p class="formFieldsLabels">Last Name(*)<br></p>
+                                    <input type="text" class="inputFields" name="last_name" required><br><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <!--Field to collect users email -->
+                            <p class="formFieldsLabels">Email(*)</p>
+                            <input type="email" class="inputFields" name="email" required><br><br>
+                        </div>
+
+                        <div class = "row">
+                            <!--Field to collect users message -->
+                            <p class="formFieldsLabels">Review(*)</p>
+                            <input type="text" class="inputFields" name="review" required><br><br>
+                        </div>
+                     {% endif %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class = "vertical-center">
+                        <!--Field to submit the users answers inputted into the form -->
+                        <input type="submit" value="Submit Review" class="checkoutButtons" style="float: right; margin: 20px; padding: 7px 75px 7px 75px;">
+                    </div>
                 </div>
             </div>
         </div>
+                </form>
+                </div>
+                </div>
+                </div>
     </div>
+    <!-- adds spacing between bottom of all text content and footer -->
+    <div class="GenProduct_HeadingSpacer"></div>
+        {% endif %}
 {% endblock %}
