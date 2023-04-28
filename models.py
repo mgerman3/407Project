@@ -91,11 +91,11 @@ class InventoryInfo(db.Model):
     large = db.Column(db.Integer, nullable=False)
     xlarge = db.Column(db.Integer, nullable=False)
     xxlarge = db.Column(db.Integer, nullable=False)
-    color = db.Column(db.String(12), nullable=False)
     price = db.Column(db.Integer, nullable=False)
     desc = db.Column(db.String(50), nullable=False)
+    image = db.Column(db.String(100))
 
-    def __init__(self, item_name, xsmall, small, medium, large, xlarge, xxlarge, color, price, desc):
+    def __init__(self, item_name, xsmall, small, medium, large, xlarge, xxlarge, price, desc, image):
         self.item_name = item_name
         self.xsmall = xsmall
         self.small = small
@@ -103,9 +103,9 @@ class InventoryInfo(db.Model):
         self.large = large
         self.xlarge = xlarge
         self.xxlarge = xxlarge
-        self.color = color
         self.price = price
         self.desc = desc
+        self.image = image
 
     def __repr__(self):
         return f"{self.item_name} {self.color} {self.desc}"

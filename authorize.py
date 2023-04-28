@@ -2,6 +2,7 @@ from flask_login import current_user
 from flask import render_template, flash, current_app
 from functools import wraps
 
+
 def role_required(roles):
     def decorator(func):
         @wraps(func)

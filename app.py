@@ -9,7 +9,6 @@ import hashlib
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'ATB2.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -35,9 +34,15 @@ def load_user(account_id):
 def homePage():
     return render_template('Home Page.html')
 
+@app.route('/404')
+def errorPage():
+    return render_template('Inventory.html'), 404
+
 @app.route('/Shop')
 def Shop():
-    return render_template('Shop.html')
+    products = InventoryInfo.query.order_by(InventoryInfo.item_name).all()
+    return render_template('Shop.html', products=products)
+
 
 @app.route('/Inventory')
 def Inventory():
@@ -50,6 +55,7 @@ def Inventory():
 @app.route('/About')
 def About():
     return render_template('About Page.html')
+
 
 @app.route('/profile')
 def Profile():
@@ -348,9 +354,10 @@ def inventory_entry():
        color = request.form['color']
        price = request.form['price']
        desc = request.form['desc']
+       image = request.form['image']
 
        items = InventoryInfo(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge,
-                         xxlarge=xxlarge, color=color, price=price, desc=desc)
+                         xxlarge=xxlarge, color=color, price=price, desc=desc, image=image)
 
        collection = Collections(collection_name=collection_name)
 
@@ -489,5 +496,21 @@ def collection_delete(collection_id):
 
 if __name__ == '__main__':
     app.run()
+
+
+# @errors.app_errorhandler(404)
+# def error_404(error):
+#     return render_template('errors/404.html'), 404
+#
+# @errors.app_errorhandler(403)
+# def error_403(error):
+#     return render_template('errors/403.html'), 403
+#
+# @errors.app_errorhandler(500)
+# def error_500(error):
+#     return render_template('errors/500.html'), 500
+
+
+
 
 
