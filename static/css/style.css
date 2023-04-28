@@ -783,6 +783,13 @@ input.btpos {
   border: 1px solid #ccc;
 }
 
+.containerd2 {
+  max-width: 100%;
+  padding: 50px;
+  /*background-color: #f1f1f1;*!*/
+  /*border: 1px solid #ccc;*/
+}
+
 .containere {
   max-width: 100%; /* Set the maximum width of the container */
   padding: 50px; /* Add some padding to the container */
