@@ -2,7 +2,12 @@
 
 {% block title %}Sales Tracker{% endblock %}
 
-{% block html_head %}Sales Tracker{% endblock %}
+{% block html_head %}
+    <!-- Add space between header and title -->
+    <div class="GenProduct_HeadingSpacer"></div>
+
+    Sales Tracker
+{% endblock %}
 
 {#{% block html_style %}#}
 {#    tr {#}
@@ -11,6 +16,7 @@
 {#{% endblock %}#}
 
 {% block page_content %}
+
 <!-- Sales Input -->
 {#<form class="row g-3 needs-validation" novalidate></form>#}
 {#  <div class="col-md-4">#}
