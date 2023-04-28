@@ -4,31 +4,14 @@
 
 {% block title %}About{% endblock %}
 
-{#{% block html_style %}#}
-{#    p {#}
-{#        text-align: left;#}
-{#        padding: 0px 0px 0px 20px;#}
-{#        width: auto;#}
-{#    }#}
-{##}
-{#    img [class="left"] {#}
-{#        text-align: left;#}
-{#      }#}
-{##}
-{#    h1, h2 {#}
-{#        padding: 0px 0px 0px 20px;#}
-{#    }#}
-{##}
-{#{% endblock %}#}
-
 {% block page_content %}
 
     <!-- About Section -->
     <main>
 
-        <div class = "containerd">
-            <img src="../static/images/AboutPage_TopPhoto.png" width="300" height="300" alt="Co Founders Hugging" style="float: right; padding: 0px 10px 0px 10px">
-            <h1><strong>Around the Block</strong></h1>
+        <div class = "containerd2">
+            <img src="../static/images/AboutPage_TopPhoto.png" width="300" height="300" alt="Co Founders Hugging" style="float: right; padding: 0px 0px 0px 10px">
+                <h1><strong>Around the Block</strong></h1>
                     <p>"Around the Block" is a unique apparel company co-founded
                     by Gabi McLaughlin and Joelle Anselmo, two seniors at the University of Maryland.
                     The concept for the company was sparked by our observation of
@@ -38,14 +21,14 @@
                     <p>Have an idea? Want to see something new?</p>
 
                     <!-- Contact Us Button -->
-                    <form action="/RequestForm" style="padding: 0px 0px 0px 20px" method="get">
-                        <input type="submit" value="Contact Us">
-                    </form>
+                        <form action="/RequestForm" style="padding: 0px 0px 0px 0px" method="get">
+                            <input type="submit" value="Contact Us">
+                        </form>
         </div>
 
          <!-- Mission Section -->
         <div class = "containere">
-            <img src="../static/images/AboutPage_OurMission_GroupPic.JPG" width="350" height="350" alt="Around the Block Group Shot" style="float: left">
+            <img src="../static/images/AboutPage_OurMission_GroupPic.JPG" width="450" height="450" alt="Around the Block Group Shot" style="float: left">
 
                 <div class="border-box col">
                     <div class="row" style="padding-right: 20px; margin-right: 20px">
@@ -68,54 +51,82 @@
         </div>
 
   <!-- Heading for entire page & supporting image-->
-
+ <div class = "containerd2">
     <!-- Meet The Team Section -->
-        <div class="containerd" style="width: auto">
             <!-- Gabi's subsection -->
-            <img class="left" src="static/images/Gabi Headshot.jpg" width = "300" height = "300" alt="Gabi Solo Pic" style="float: left; margin-left: 20px;">
+            <div class = "row">
+                <div class = "text-center">
+                    <h1><strong>Meet Our Team</strong></h1>
+                <div>
+            </div>
+            <div class="GenProduct_HeadingSpacer"></div>
                 <div class="border-box col">
-                    <div class="row" style="padding-right: 20px; margin-right: 20px">
-                        <h1 style="text-align: center"><strong>Meet Our Team</strong></h1><br><br>
-                        <h2>Gabi</h2>
-                            <div class = "GenProduct_VerticalSpacer">
+                    <div class="GenProduct_rowLayout">
+                       <div class = "GenProduct_columnLayout">
+                            <div class = "h2.left">
+                                <h2>Gabi McLaughlin</h2>
+                            </div>
+                            <div>
                                 <p> Gabi is a senior at the University of Maryland double majoring in finance and business management.
                                     She's passionate about bringing teams together to innovate. She continues to explore finance,
                                     entrepreneurship, and business management in and outside the classroom. <br>
                                 </p>
-                             </div>
+                            </div>
+                       </div>
+                        <div class = "GenProduct_columnLayout">
+                             <div class = "GenProduct_VerticalSpacer">
+                            <img class="left" src="static/images/Gabi Headshot.jpg" width = "300" height = "300" alt="Gabi Solo Pic" style="float: left; margin-left: 20px;">
+                        </div>
+                        </div>
                     </div>
                 </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
 
-            <!-- Joelle's subsection -->
-             <img src="static/images/Joelle Headshot.jpg" width = "300" height = "300" alt="Joelle Solo Pic" style="float: right; padding: 10px 10px 30px 10px">
-                <h2>Joelle</h2>
-                    <p>
-                        Joelle is a senior at the University of Maryland double majoring in journalism and business management.
-                    She's fascinated by human centered and big authority stories and is devoted to
-                    learning about making sustainable choices, especially in retail.
-                    </p>
+        <!-- Space between subsections -->
+        <div class="GenProduct_HeadingSpacer"></div>
 
-                    <p>
-                        When she's not writing articles in the middle of the night or conducting interview, she loves
-                        reading books, journaling, daydreaming about traveling and living abroad, running and hanging
-                        out with friends and family.
-                    </p>
-    </div>
+         <!-- Space between subsections -->
+        <div class="GenProduct_HeadingSpacer"></div>
+
+        <!-- Joelle's subsection -->
+         <div class="GenProduct_HeadingSpacer"></div>
+                <div class="border-box col">
+                    <div class="GenProduct_rowLayout">
+                       <div class = "GenProduct_columnLayout">
+                          <img src="static/images/Joelle Headshot.jpg" width = "300" height = "300" alt="Joelle Solo Pic" style="float: right; padding: 10px 10px 30px 10px">
+                       </div>
+                        <div class = "GenProduct_columnLayout">
+                             <div class = "GenProduct_VerticalSpacer">
+                             <div class = "h2.left">
+                                <h2>Joelle Anselmo</h2>
+                            </div>
+                            <div>
+                                <p> Joelle is a senior at the University of Maryland double majoring in journalism
+                                    and business management. She's fascinated by human centered and big authority
+                                    stories and is devoted to learning about making sustainable choices, especially in
+                                    retail. When she's not writing articles in the middle of the night or conducting
+                                    interview, she loves reading books, journaling, daydreaming about traveling and
+                                    living abroad, running and hanging out with friends and family.
+                                </p>
+                            </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+ </div>
+            </div>
+ </div>
+
      <!-- Why ATB -->
         <div class = "containere">
-            <img src="../static/images/AboutPage_OurMission_GroupPic.JPG" width="350" height="350" alt="Around the Block Group Shot" style="float: left">
-
+           <div class="border-box col">
                 <div class="border-box col">
-                    <div class="row" style="padding-right: 20px; margin-right: 20px">
-                        <div class = "GenProduct_VerticalSpacer">
-                        <h1 style="padding-left: 5px; width: auto;"><strong>Why ATB </strong></h1>
-                            <p> Instead of using new clothing items, we source our materials exclusively from local thrift stores,
+                    <div class="GenProduct_rowLayout">
+                       <div class = "GenProduct_columnLayout">
+                            <div class = "h2.left">
+                                <h1><strong>Why ATB</strong></h1>
+                            </div>
+                            <div>
+                               <p> Instead of using new clothing items, we source our materials exclusively from local thrift stores,
                                 making each piece of clothing sold truly one-of-a-kind. Our commitment to sustainability and reducing waste
                                 is evident in the decision to use repurposed garments, ensuring that each item carries its own story and character.
                             </p>
@@ -125,10 +136,16 @@
                             </p>
                             <p>With each purchase from "Around the Block", customers can not only show their love for College Park,
                                 but also support cancer research efforts and contribute to a noble cause.
-                            </p>
+                            </div>
+                       </div>
+                        <div class = "GenProduct_columnLayout">
+                           <div class = "GenProduct_VerticalSpacer">
+                           <img src="../static/images/Misc_ModelPic.png" width="450" height="450" alt="Around the Block Group Shot" style="float: right">
+                        </div>
                         </div>
                     </div>
-            </div>
+                </div>
+           </div>
         </div>
 </main>
 {% endblock %}
