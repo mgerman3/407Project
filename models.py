@@ -80,35 +80,38 @@ class OrderInfo(db.Model):
        return f"{self.shipping_mode}"
 
 class InventoryInfo(db.Model):
-    __tablename__ = "InventoryInfo"
+   __tablename__ = "InventoryInfo"
 
-    product_id = db.Column(db.Integer, primary_key=True)
-    collection_id = db.Column(db.Integer, db.ForeignKey('Collections.collection_id'))
-    item_name = db.Column(db.String(20), nullable=False)
-    xsmall = db.Column(db.Integer, nullable=False)
-    small = db.Column(db.Integer, nullable=False)
-    medium = db.Column(db.Integer, nullable=False)
-    large = db.Column(db.Integer, nullable=False)
-    xlarge = db.Column(db.Integer, nullable=False)
-    xxlarge = db.Column(db.Integer, nullable=False)
-    price = db.Column(db.Integer, nullable=False)
-    desc = db.Column(db.String(50), nullable=False)
-    image = db.Column(db.String(100))
 
-    def __init__(self, item_name, xsmall, small, medium, large, xlarge, xxlarge, price, desc, image):
-        self.item_name = item_name
-        self.xsmall = xsmall
-        self.small = small
-        self.medium = medium
-        self.large = large
-        self.xlarge = xlarge
-        self.xxlarge = xxlarge
-        self.price = price
-        self.desc = desc
-        self.image = image
+   product_id = db.Column(db.Integer, primary_key=True)
+   collection_id = db.Column(db.Integer, db.ForeignKey('Collections.collection_id'))
+   item_name = db.Column(db.String(20), nullable=False)
+   xsmall = db.Column(db.Integer, nullable=False)
+   small = db.Column(db.Integer, nullable=False)
+   medium = db.Column(db.Integer, nullable=False)
+   large = db.Column(db.Integer, nullable=False)
+   xlarge = db.Column(db.Integer, nullable=False)
+   xxlarge = db.Column(db.Integer, nullable=False)
+   price = db.Column(db.Integer, nullable=False)
+   desc = db.Column(db.String(50), nullable=False)
+   image = db.Column(db.String(100))
 
-    def __repr__(self):
-        return f"{self.item_name} {self.color} {self.desc}"
+
+   def __init__(self, item_name, xsmall, small, medium, large, xlarge, xxlarge, price, desc, image):
+       self.item_name = item_name
+       self.xsmall = xsmall
+       self.small = small
+       self.medium = medium
+       self.large = large
+       self.xlarge = xlarge
+       self.xxlarge = xxlarge
+       self.price = price
+       self.desc = desc
+       self.image = image
+
+
+   def __repr__(self):
+       return f"{self.item_name}  {self.desc}"
 
 
 class Cart(db.Model):
@@ -126,7 +129,7 @@ class Collections(db.Model):
     __tablename__ = "Collections"
 
     collection_id = db.Column(db.Integer, primary_key=True)
-    collection_name = db.Column(db.String(20), nullable=False)
+    collection_name = db.Column(db.String(20), nullable=True)
 
     def __init__(self, collection_name) :
         self.collection_name = collection_name
