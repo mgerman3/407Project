@@ -21,6 +21,11 @@ login_manager = LoginManager()
 login_manager.login_view = 'LogIn' # default login route
 login_manager.init_app(app)
 
+# Product image parameters
+app.config['PRODUCT_UPLOAD_PATH'] = 'static/products'
+
+# Product order restrictions
+app.config['MAX_QUANTITY_PER_ITEM'] = 99
 
 @login_manager.user_loader
 def load_user(account_id):

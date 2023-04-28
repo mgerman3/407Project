@@ -400,7 +400,10 @@ title {
   font-size: 24px;
   padding: 5px 10px 5px 10px;
 }
-.btn.btn-primary a:hover {background-colorcolor: #ddd;}
+.btn.btn-primary:hover {
+        background-color: #ddd;
+    }
+
 
 form input[type="submit"] {
   background-color: #69a695;
@@ -718,7 +721,7 @@ input.btpos {
 .image-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /*align-items: left;*/
   justify-content: space-between;
   margin-bottom: 20px;
   padding-bottom:10px;
@@ -726,13 +729,15 @@ input.btpos {
   margin-top: 10px;
 }
 .image-container img {
-  width: 250px;
-  height: 250px;
-  /*object-fit: cover;*/
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   margin: 10px;
   border: 5px solid #69a695;
 }
-
+.float-left {
+  float: left;
+}
 .map {
     text-align: center;
     width: 50%;
