@@ -33,6 +33,7 @@
            <td>{{ each_collection['collection_name'] }}</td>
            {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
            <td>
+
                <a href="{{ url_for('collection_edit', collection_id=each_collection['collection_id']) }}" class="btn btn-secondary" type = "submit" role="button">Edit</a>
                {% if current_user.role in ['ADMIN'] %}
                <a href="{{ url_for('collection_delete', collection_id=each_collection['collection_id']) }}" class="btn btn-secondary" type = "submit" role="button">Delete</a>

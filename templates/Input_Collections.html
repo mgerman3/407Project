@@ -40,6 +40,7 @@
                                              <label for="collection_name" class="form-label"><strong>Collection Name</strong></label>
                                              <input type="text" class="inputFields" id="collection_name" name="collection_name" value="{{ collection['collection_name'] if collection else '' }}" required>
                                              {% endif %}
+
                                          </div>
                                          <!-- Inventory Name Read/Update -->
                                          {% if action and action in ['read', 'update'] %}
@@ -54,9 +55,42 @@
                                          </div>
                                          {% endif %}
 
-                                         <div class="row d-flex justify-content-center mt-3">
-                                             <input type="submit" value="Submit Collection" class="inventoryButtons" method="POST">
-                                         </div>
+                                          <div class="col-12 text-center">
+                                            {% if action and action in ['create', 'update'] %}
+                                            <button class="btn btn-primary" type="submit">{{ 'Add' if action=='create' else 'Update' }} Collection</button>
+                                            {% endif %}
+
+                                            {% if current_user.role in ['EMPLOYEE', 'ADMIN'] %}
+                                            <a href="{{ url_for('collections_view_all') }}" class="btn btn-secondary" role="button">
+                                                {% if action and action in ['create', 'update'] %}
+                                                Cancel
+                                                {% else %}
+                                                Return
+                                                {% endif %}
+                                            </a>
+                                            {% endif %}
+                                          </div>
+
+                                        {% if action and action in ['create', 'update'] %}
+                                        </form>
+                                        {% else %}
+                                            </div>
+                                        {% endif %}
+
+
+
+{#                                        {% if action and action in ['create', 'update'] %}#}
+{#                                            <form class="row g-4"#}
+{#                                                  action="{{ url_for('collection_edit', collection_name=collection['collection_name']) if product else url_for('collections_entry') }}"#}
+{#                                                  enctype="multipart/form-data" method="POST">#}
+{#                                                  <input type="submit" value="Submit Collection" class="inventoryButtons" method="POST">#}
+{#                                            {% else %}#}
+{#                                                <div class="row g-4">#}
+{#                                            {% endif %}#}
+{#                                            </form>#}
+{#                                         <div class="row d-flex justify-content-center mt-3">#}
+{#                                             <input type="submit" value="Submit Collection" class="inventoryButtons" method="POST">#}
+{#                                         </div>#}
                                     </div>
                                 </div>
                             </div>

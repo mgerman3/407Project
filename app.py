@@ -42,11 +42,6 @@ def Shop():
     items = InventoryInfo.query.order_by(InventoryInfo.item_name).all()
     return render_template('Shop.html', items=items)
 
-
-@app.route('/Inventory')
-def Inventory():
-    return render_template('Inventory.html')
-
 # @app.route('/EnterItems')
 # def EnterItems():
 #     return render_template('Input_Inventory.html')
@@ -69,9 +64,9 @@ def RequestForm():
         if current_user.is_authenticated:
 
             account_id = current_user.account_id
-            first_name = None
-            last_name = None
-            email = None
+            first_name = current_user.first_name
+            last_name = current_user.last_name
+            email = current_user.email
             message = request.form['message']
 
             requests = Requests(account_id=account_id, first_name=first_name, last_name=last_name, email=email, message=message)
@@ -87,6 +82,7 @@ def RequestForm():
 
         db.session.add(requests)
         db.session.commit()
+
         flash(f'Your request was received!', 'success')
         return redirect(url_for('RequestForm'))
 
@@ -239,9 +235,9 @@ def SignUp():
 @app.route('/logout')
 @login_required
 def logout():
-   logout_user()
-   flash(f'You have been logged out.', 'success')
-   return redirect(url_for('homePage'))
+    logout_user()
+    flash(f'You have been logged out.', category='success')
+    return redirect(url_for('homePage'))
 
 @app.route('/CheckOut', methods=['GET', 'POST'])
 def CheckOut():
@@ -399,6 +395,7 @@ def OrderDetails():
 
 
 @app.route('/SalesTracker')
+@login_required
 def SalesTracker():
     return render_template('Sales Tracker.html')
 
@@ -408,7 +405,10 @@ def SalesTracker():
 def Banner():
     return render_template('Banner.html')
 
+# if employee is logged in, this needs to not say only admins have access
 @app.route('/Admin/Create/LogIn', methods=['GET', 'POST'])
+@login_required
+@role_required(['ADMIN'])
 def Admin_Login():
 
     if request.method == 'GET':
@@ -472,7 +472,8 @@ def collection_edit(collection_id):
        collection = Collections.query.filter_by(collection_id=collection_id).first()
 
        if collection:
-           return render_template('Input_Collections.html', collection=collection, action='update')
+           # collection_id = collection_id -= 1 OR SOMETHING LIKE THIS????????
+           return render_template('Input_Collections.html', collection_id=collection_id, collection=collection, action='update')
 
        else:
            flash(f'Collection attempting to be edited could not be found!', 'error')
@@ -481,10 +482,10 @@ def collection_edit(collection_id):
        collection = Collections.query.filter_by(collection_id=collection_id).first()
 
        if collection:
-           collection.collection_id = request.form['collection_id']
+           collection.collection_name = request.form['collection_name']
 
            db.session.commit()
-           flash(f'{collection.collection_id} was successfully updated!', 'success')
+           flash(f'{collection.collection_name} was successfully updated!', 'success')
        else:
            flash(f'Collection attempting to be edited could not be found!', 'error')
 
