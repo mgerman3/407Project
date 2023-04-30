@@ -28,10 +28,8 @@
             <th scope="col">Large</th>
             <th scope="col">XLarge</th>
             <th scope="col">XXLarge</th>
-            <th scope="col">Color</th>
             <th scope="col">Item Price</th>
             <th scope="col">Description</th>
-            <th scope="col">Image</th>
            {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
            <th>Actions</th>
            {% endif %}
@@ -48,10 +46,8 @@
                 <td>{{ each_item['large'] }}</td>
                 <td>{{ each_item['xlarge'] }}</td>
                 <td>{{ each_item['xxlarge'] }}</td>
-                <td>{{ each_item['color'] }}</td>
                 <td>{{ each_item['price'] }}</td>
                 <td>{{ each_item['desc'] }}</td>
-                <td>{{ each_item['image'] }}</td>
            {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
            <td>
                <a href="{{ url_for('item_edit', product_id=each_item['product_id']) }}" class="btn btn-secondary" type = "submit" role="button">Edit</a>

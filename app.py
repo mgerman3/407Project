@@ -2,10 +2,9 @@ import os
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from werkzeug.security import check_password_hash, generate_password_hash
+from werkzeug.utils import secure_filename
 from authorize import role_required
 from models import *
-import hashlib
-
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -40,13 +39,8 @@ def errorPage():
 
 @app.route('/Shop')
 def Shop():
-    products = InventoryInfo.query.order_by(InventoryInfo.item_name).all()
-    return render_template('Shop.html', products=products)
-
-
-@app.route('/Inventory')
-def Inventory():
-    return render_template('Inventory.html')
+    items = InventoryInfo.query.order_by(InventoryInfo.item_name).all()
+    return render_template('Shop.html', items=items)
 
 # @app.route('/EnterItems')
 # def EnterItems():
@@ -70,9 +64,9 @@ def RequestForm():
         if current_user.is_authenticated:
 
             account_id = current_user.account_id
-            first_name = None
-            last_name = None
-            email = None
+            first_name = current_user.first_name
+            last_name = current_user.last_name
+            email = current_user.email
             message = request.form['message']
 
             requests = Requests(account_id=account_id, first_name=first_name, last_name=last_name, email=email, message=message)
@@ -88,6 +82,7 @@ def RequestForm():
 
         db.session.add(requests)
         db.session.commit()
+
         flash(f'Your request was received!', 'success')
         return redirect(url_for('RequestForm'))
 
@@ -123,7 +118,7 @@ def Reviews():
             email = None
             review = request.form['review']
 
-            review = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email, review=review)
+            reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email, review=review)
 
         else:
             account_id = None
@@ -132,9 +127,9 @@ def Reviews():
             email = request.form['email']
             review = request.form['review']
 
-            review = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email, review=review)
+            reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email, review=review)
 
-        db.session.add(review)
+        db.session.add(reviews)
         db.session.commit()
         flash(f'Your review was received!', 'success')
         return redirect(url_for('Reviews'))
@@ -240,9 +235,9 @@ def SignUp():
 @app.route('/logout')
 @login_required
 def logout():
-   logout_user()
-   flash(f'You have been logged out.', 'success')
-   return redirect(url_for('homePage'))
+    logout_user()
+    flash(f'You have been logged out.', category='success')
+    return redirect(url_for('homePage'))
 
 @app.route('/CheckOut', methods=['GET', 'POST'])
 def CheckOut():
@@ -267,110 +262,128 @@ def requests_view_all():
 
 @app.route('/InventoryLog')
 @login_required
-@role_required(['ADMIN', 'EMPLOYEE'])
+@role_required(['ADMIN', 'MANAGER'])
 def items_view_all():
-   items = InventoryInfo.query.order_by(InventoryInfo.item_name) \
-       .all()
-   return render_template('Inventory Log.html', items=items)
+  items = InventoryInfo.query.order_by(InventoryInfo.item_name) \
+      .all()
+  return render_template('Inventory Log.html', items=items)
+
 
 @app.route('/InventoryLog/update/<int:product_id>', methods=['GET', 'POST'])
 @login_required
-@role_required(['ADMIN', 'EMPLOYEE'])
+@role_required(['ADMIN', 'MANAGER'])
 def item_edit(product_id):
-   if request.method == 'GET':
-       item = InventoryInfo.query.filter_by(product_id=product_id).first()
-
-       if item:
-           return render_template('Input_Inventory.html', item=item, action='update')
+  if request.method == 'GET':
+      item = InventoryInfo.query.filter_by(product_id=product_id).first()
 
 
-       else:
-           flash(f'Item attempting to be edited could not be found!', 'error')
+      if item:
+          return render_template('Input_Inventory.html', item=item, action='update')
+
+      else:
+          flash(f'Item attempting to be edited could not be found!', 'error')
+
+  elif request.method == 'POST':
+      item = InventoryInfo.query.filter_by(product_id=product_id).first()
+
+      if item:
+          item.item_name = request.form['item_name']
+          item.xsmall = request.form['xsmall']
+          item.small = request.form['small']
+          item.medium = request.form['medium']
+          item.large = request.form['large']
+          item.xlarge = request.form['xlarge']
+          item.xxlarge = request.form['xxlarge']
+          item.price = request.form['price']
+          item.desc = request.form['desc']
+          image = request.files['image']
+
+          if('delete_product_image' in request.form or image != '') and 'current_product_image' != '' :
+              try:
+                os.remove(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], item.image))
+                item.image = ''
+              except:
+                pass
+
+              filename = secure_filename(item.item_name + '-' + image.filename)
+
+              if image.filename != '':
+                  image.save(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], filename))
+                  item.image = filename if image else ''
+
+          db.session.commit()
+          flash(f'{item.item_name} was successfully updated!', 'success')
+      else:
+          flash(f'Item attempting to be edited could not be found!', 'error')
+
+      return redirect(url_for('items_view_all'))
 
 
-   elif request.method == 'POST':
-       item = InventoryInfo.query.filter_by(product_id=product_id).first()
-
-
-       if item:
-           item.item_name = request.form['item_name']
-           item.xsmall = request.form['xsmall']
-           item.small = request.form['small']
-           item.medium = request.form['medium']
-           item.large = request.form['large']
-           item.xlarge = request.form['xlarge']
-           item.xxlarge = request.form['xxlarge']
-           item.color = request.form['color']
-           item.price = request.form['price']
-           item.desc = request.form['desc']
-
-           db.session.commit()
-           flash(f'{item.item_name} was successfully updated!', 'success')
-       else:
-           flash(f'Item attempting to be edited could not be found!', 'error')
-
-
-       return redirect(url_for('items_view_all'))
-
-
-   # Address issue where unsupported HTTP request method is attempted
-   flash(f'Invalid request. Please contact support if this problem persists.', 'error')
-   return redirect(url_for('items_view_all'))
-
-
+  # Address issue where unsupported HTTP request method is attempted
+  flash(f'Invalid request. Please contact support if this problem persists.', 'error')
+  return redirect(url_for('items_view_all'))
 
 
 @app.route('/InventoryLog/delete/<int:product_id>')
 @login_required
 @role_required(['ADMIN'])
 def item_delete(product_id):
-   item = InventoryInfo.query.filter_by(product_id=product_id).first()
-   if item:
-       db.session.delete(item)
-       db.session.commit()
-       flash(f'{item} was successfully deleted!', 'success')
-   else:
-       flash(f'Delete failed! Item could not be found.', 'error')
+  item = InventoryInfo.query.filter_by(product_id=product_id).first()
+  if item:
+        try:
+            os.remove(os.path.join(app.config['PRODUCT_UPLOAD_PATH'], item.image))
+        except FileNotFoundError:
+            pass
+        db.session.delete(item)
+        db.session.commit()
+        flash(f'{item} was successfully deleted!', 'success')
+  else:
+        flash(f'Delete failed! Item could not be found.', 'error')
 
-
-   return redirect(url_for('items_view_all'))
-
+  return redirect(url_for('items_view_all'))
 
 @app.route('/InventoryInput', methods=['GET', 'POST'])
 @login_required
-@role_required(['ADMIN', 'EMPLOYEE'])
+@role_required(['ADMIN', 'MANAGER'])
 def inventory_entry():
-   if request.method == 'GET':
-       return render_template('Input_Inventory.html', action='create')
-   elif request.method == 'POST':
-       item_name = request.form['item_name']
-       collection_name = request.form['collection_name']
-       xsmall = request.form['xsmall']
-       small = request.form['small']
-       medium = request.form['medium']
-       large = request.form['large']
-       xlarge = request.form['xlarge']
-       xxlarge = request.form['xxlarge']
-       color = request.form['color']
-       price = request.form['price']
-       desc = request.form['desc']
-       image = request.form['image']
 
-       items = InventoryInfo(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge,
-                         xxlarge=xxlarge, color=color, price=price, desc=desc, image=image)
+  collections = Collections.query.order_by(Collections.collection_id) \
+        .all()
 
-       collection = Collections(collection_name=collection_name)
+  if request.method == 'GET':
+      return render_template('Input_Inventory.html', action='create', collections=collections)
+  elif request.method == 'POST':
+      item_name = request.form['item_name']
+      xsmall = request.form['xsmall']
+      small = request.form['small']
+      medium = request.form['medium']
+      large = request.form['large']
+      xlarge = request.form['xlarge']
+      xxlarge = request.form['xxlarge']
+      price = request.form['price']
+      desc = request.form['desc']
+      image = request.files['image']
+      filename = secure_filename(item_name + '-' + image.filename)
 
-       db.session.add(items)
-       db.session.add(collection)
-       db.session.commit()
-       flash(f'{item_name} was successfully added!', 'success')
-       return redirect(url_for('items_view_all'))
+      if image.filename != '':
+          image.save(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], filename))
+
+      items = InventoryInfo(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge,
+                        xxlarge=xxlarge, price=price, desc=desc, image=filename if image else '')
+
+      db.session.add(items)
+      db.session.commit()
+      flash(f'{item_name} was successfully added!', 'success')
+      return redirect(url_for('items_view_all'))
 
 
-   # Address issue where unsupported HTTP request method is attempted
-   flash(f'Invalid request. Please contact support if this problem persists.', 'error')
-   return redirect(url_for('homePage'))
+
+
+  # Address issue where unsupported HTTP request method is attempted
+  flash(f'Invalid request. Please contact support if this problem persists.', 'error')
+  return redirect(url_for('homePage'))
+
+
 
 @app.route('/OrderConfirm')
 def OrderConfirm():
@@ -382,6 +395,7 @@ def OrderDetails():
 
 
 @app.route('/SalesTracker')
+@login_required
 def SalesTracker():
     return render_template('Sales Tracker.html')
 
@@ -391,7 +405,10 @@ def SalesTracker():
 def Banner():
     return render_template('Banner.html')
 
+# if employee is logged in, this needs to not say only admins have access
 @app.route('/Admin/Create/LogIn', methods=['GET', 'POST'])
+@login_required
+@role_required(['ADMIN'])
 def Admin_Login():
 
     if request.method == 'GET':
@@ -455,7 +472,8 @@ def collection_edit(collection_id):
        collection = Collections.query.filter_by(collection_id=collection_id).first()
 
        if collection:
-           return render_template('Input_Collections.html', collection=collection, action='update')
+           # collection_id = collection_id -= 1 OR SOMETHING LIKE THIS????????
+           return render_template('Input_Collections.html', collection_id=collection_id, collection=collection, action='update')
 
        else:
            flash(f'Collection attempting to be edited could not be found!', 'error')
@@ -464,10 +482,10 @@ def collection_edit(collection_id):
        collection = Collections.query.filter_by(collection_id=collection_id).first()
 
        if collection:
-           collection.collection_id = request.form['collection_id']
+           collection.collection_name = request.form['collection_name']
 
            db.session.commit()
-           flash(f'{collection.collection_id} was successfully updated!', 'success')
+           flash(f'{collection.collection_name} was successfully updated!', 'success')
        else:
            flash(f'Collection attempting to be edited could not be found!', 'error')
 
