@@ -3,7 +3,7 @@
 {% block page_title %} Shop {% endblock %}
 
 <!--{% block page_head %}-->
-<!--    Welcome to the TerpStore!-->
+<!--Welcome to ATB Shop!-->
 <!--{% endblock %}-->
 {% block page_content %}
 
@@ -13,6 +13,7 @@
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div class="thumbnail">
                 {% if product['product_image'] %}
+<!-- inserting picture for product -->
 				<a href="{{ url_for('GenProduct', product_id=item.product_id) }}">
 					<img class="img-fluid" src="{{ url_for('static', filename='/products/' + product['image']) }}" alt="Picture of {{ item['item_name'] }}">
 				</a>

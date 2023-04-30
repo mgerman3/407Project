@@ -1,74 +1,71 @@
 <!-- Extending base code to use Jinja principles -->
 {% extends "base.html" %}
 
-{% block title %}Generic Product{% endblock %}
+{% block page_title %}
+    {{ product['item_name']}}
+{% endblock %}
 
-{#{% block html_style %}#}
-{#.ButtonState{display:none}#}
-{#.Button{cursor:pointer;}#}
-{#{% endblock %}#}
-
+{% block page_head %}
+    View Product
+{% endblock %}
 
 {% block page_content %}
-
-<!-- Create two column layout to house form and photo side by side-->
-<div class="row">
-<!-- Add padding between top of the page and contents within the table -->
-<div class="GenProduct_HeadingSpacer"></div>
- <div class="GenProduct_rowLayout">
-  <div class="GenProduct_columnLayout">
-      <!--Placing image on left hand column-->
-      <img src= static/images/Shop_ClothingItem1.png width = "600" height = "600" alt="ATB Model Skateboarding">
-  </div>
-  <!-- create new, right-handed side column-->
-  <div class="GenProduct_columnLayout">
-  <!-- adds passing between both columns to evenly space information -->
-  <div class = "GenProduct_VerticalSpacer">
-      <h1>Crewneck</h1>
-      <h3>$43 USD</h3>
-      <!-- adds horizontal spacing between different blocks of text -->
-      <div class="GenProduct_spacer">
-        <!-- creates different buttons for customers to select sizing options -->
-        <h4>Select a Size</h4>
-          <input type="radio" name="Button" class="ButtonState" checked id="XS" value="1">
-          <button class="input">X-Small</button>
-          <button class="input">Small</button>
-          <button class="input">Medium</button>
-          <button class="input">Large</button>
-          <button class="input">XL</button>
-          <button class="input">XXL</button>
-          <button class="input">XXXL</button>
-      </div>
-      <!-- adds horizontal spacing between different blocks of text -->
-      <div class="GenProduct_spacer">
-        <!-- creates different buttons for customers to select coloring options -->
-        <h4>Select a Style</h4>
-          <button class="input">Game Day Map</button>
-          <button class="input">CP Blues Map</button>
-          <button class="input">Spring Pinks Map</button>
-      </div>
-      <!-- adds horizontal spacing between different blocks of text -->
-      <div class="GenProduct_spacer">
-        <!-- creates buttons for customers to select quantity of items needed, can decrease and increase -->
-        <h4>Quantity</h4>
-          <input type="button" class="btneg " value="-">
-          <input type="text" name="noq1" id="noq1" value="1" style="text-align: center">
-          <input type="button" class="btpos " value="+">
-      </div>
-      <!-- adds horizontal spacing between different blocks of text -->
-      <div class="GenProduct_spacer">
-          <!-- Links submit button to the cart page. When user clicks on the submit button it will take them to the cart and show them the new item added -->
-          <form action="/cart" method="get">
-            <div>
-                <input type = "submit" value="Add to Cart">
+    <div class="row">
+    {% for item  in items %}
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="{{ url_for('Shop') }}">Shop</a>  &gt;
+                </li>
+                <li class="active">View Product</li>
+            </ol>
+        </div>
+    </div>
+<!-- inserting picture for product -->
+    <div class="row pad">
+	<div class="col-lg-5">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="thumbnail">
+            {% if product['product_image'] %}
+				<img src="{{ url_for('static', filename='/products/' + product['image']) }}" alt="Picture of {{ item['item_name'] }}">
+			{% endif %}
             </div>
-        </form>
-      </div>
-    </div>
-    </div>
-  </div>
+		</div>
+	</div>
+<!-- details about product displayed -->
+	<div class="col-lg-7">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Product Details</h3>
+			</div>
+			<div class="panel-body">
+				<h3>{{ item['item_name'] }}</h3>
+				<h4>{{ "$%.2f"|format(product['price']) }}</h4>
+				<hr />
+				{{ item['desc'] }}
+				<hr />
+<!-- add_to_cart -->
+				<form action="{{ url_for('cart_add', product_id=product['product_id']) }}" method="POST">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="row g-2">
+							<div class="col-lg-12">
+								<label for="product_quantity" class="form-label"><strong>Quantity</strong></label>
+							</div>
+							<div class="col-lg-12">
+                                <input class="col-xs-2" type="number" step="1" min="1" max="99" class="form-control" id="product_quantity"
+                                       name="product_quantity" value="1" required>
+    						</div>
+							<div class="col-lg-12">
+                                <button type="submit" class="btn btn-primary">Add To Cart</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>
+    {% endfor %}
 </div>
- <!-- adds spacing between bottom of all text content and footer -->
- <div class="GenProduct_HeadingSpacer"></div>
-
 {% endblock %}
