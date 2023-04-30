@@ -30,22 +30,22 @@
         <div class = "GenProduct_VerticalSpacer">
         <!-- conditional formatting to show confirmation message to users after completing the form -->
             <div class = "GenProduct_VerticalRightSpacer">
-            {% if form_submitted %}
-                <div class="row">
-                     <div class="formInputFields">
-                             <!-- Centers text on confirmation output -->
-                             <div class = "h1-Center">
-                                <!-- Message outputted to user after form completed -->
-                                <h3>Thank you {{ request.form.get('first_name')}} for submitting a review, we look forward to hearing your feedback!</h3>
-                             </div>
-                          <!--Placing icon under confirmation message-->
-                          <img src="../static/images/RequestForm_FormConfirmation.png" width = "100" height = "100" alt="Form Sent Confirmation Icon" class = "center-image">
-                     </div>
-                </div>
-            <!--If form is not completed, this is the information that users will see-->
-            {% else %}
+{#            {% if form_submitted %}#}
+{#                <div class="row">#}
+{#                     <div class="formInputFields">#}
+{#                             <!-- Centers text on confirmation output -->#}
+{#                             <div class = "h1-Center">#}
+{#                                <!-- Message outputted to user after form completed -->#}
+{#                                <h3>Thank you {{ request.form.get('first_name')}} for submitting a review, we look forward to hearing your feedback!</h3>#}
+{#                             </div>#}
+{#                          <!--Placing icon under confirmation message-->#}
+{#                          <img src="../static/images/RequestForm_FormConfirmation.png" width = "100" height = "100" alt="Form Sent Confirmation Icon" class = "center-image">#}
+{#                     </div>#}
+{#                </div>#}
+{#            <!--If form is not completed, this is the information that users will see-->#}
+{#            {% else %}#}
         <!--Creates form to collection customer's requests-->
-        <form action="{{ url_for('Reviews') }}" method="POST">
+        <form action="{{ url_for('ReviewForm') }}" method="post">
         <div class="inputBoxTotal" style="padding-left: 24px">
             <div class="row">
                 <!--Styling for each of the boxes, background color of form and buttons used within form -->
@@ -55,7 +55,7 @@
                             <div class = "row">
                             <!--Field to collect users message -->
                             <p class="formFieldsLabels">Review(*)</p>
-                            <input type="text" class="inputFields" name="review" required rows="5"><br><br>
+                            <input type="text" class="inputFields" name="message" required rows="5"><br><br>
                         </div>
                         {% else %}
                         <div class = "row">
@@ -83,7 +83,7 @@
                         <div class = "row">
                             <!--Field to collect users message -->
                             <p class="formFieldsLabels">Review(*)</p>
-                            <input type="text" class="inputFields" name="review" required><br><br>
+                            <input type="text" class="inputFields" name="message" required><br><br>
                         </div>
                      {% endif %}
                     </div>
@@ -103,5 +103,4 @@
     </div>
     <!-- adds spacing between bottom of all text content and footer -->
     <div class="GenProduct_HeadingSpacer"></div>
-        {% endif %}
 {% endblock %}
