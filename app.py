@@ -104,59 +104,77 @@ def requests_fulfilled(request_id):
 
    return redirect(url_for('requests_view_all'))
 
-@app.route('/Reviews', methods=['GET', 'POST'])
-def Reviews():
+@app.route('/ReviewForm', methods=['GET', 'POST'])
+def ReviewForm():
     if request.method == 'GET':
-        return render_template('Reviews.html', action='create')
+        return render_template('ReviewForm.html', action='create')
     elif request.method == 'POST':
 
         if current_user.is_authenticated:
 
             account_id = current_user.account_id
-            first_name = None
-            last_name = None
-            email = None
-            review = request.form['review']
+            first_name = current_user.first_name
+            last_name = current_user.last_name
+            email = current_user.email
+            message = request.form['message']
 
-            reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email, review=review)
+            reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
+                                message=message)
 
         else:
             account_id = None
             first_name = request.form['first_name']
             last_name = request.form['last_name']
             email = request.form['email']
-            review = request.form['review']
+            message = request.form['message']
 
-            reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email, review=review)
+            reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
+                                message=message)
 
         db.session.add(reviews)
         db.session.commit()
-        flash(f'Your review was received!', 'success')
-        return redirect(url_for('Reviews'))
 
-    # Address issue where unsupported HTTP request method is attempted
+        flash(f'Your review was received! ATB will post it shortly.', 'success')
+        return redirect(url_for('ReviewForm'))
+
+        # Address issue where unsupported HTTP request method is attempted
     flash(f'Invalid request. Please contact support if this problem persists.', 'error')
     return redirect(url_for('homePage'))
+
 
 @app.route('/ReviewsLog')
 @login_required
 @role_required(['ADMIN', 'EMPLOYEE'])
 def reviews_view_all():
-   # review = Reviews.query.order_by(Reviews.review_id) \
-   #     .all()
-   return render_template('ReviewsLog.html')
+   reviews = Reviews.query.order_by(Reviews.review_id) \
+       .all()
+   return render_template('ReviewsLog.html', reviews=reviews)
 
 @app.route('/ReviewsLog/Delete/<int:review_id>')
 @login_required
 @role_required(['ADMIN'])
 def review_delete(review_id):
-   review = Reviews.query.filter_by(review_id=review_id).first()
-   if review:
-       db.session.delete(review)
+   reviews = Reviews.query.filter_by(review_id=review_id).first()
+   if reviews:
+       db.session.delete(reviews)
        db.session.commit()
        flash(f'{review_id} was successfully deleted!', 'success')
    else:
        flash(f'Delete failed! Review could not be found.', 'error')
+
+   return redirect(url_for('reviews_view_all'))
+
+@app.route('/ReviewsLog/Post/<int:review_id>')
+@login_required
+@role_required(['ADMIN'])
+def review_post(review_id):
+   reviews = Reviews.query.filter_by(review_id=review_id).first()
+   if reviews:
+       db.session.delete(reviews)
+       db.session.commit()
+       flash(f'{review_id} was successfully posted!', 'success')
+   else:
+       flash(f'Post failed! Review could not be found.', 'error')
 
    return redirect(url_for('reviews_view_all'))
 

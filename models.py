@@ -173,14 +173,14 @@ class Reviews(db.Model):
     first_name = db.Column(db.String(30), nullable=True)
     last_name = db.Column(db.String(50), nullable=True)
     email = db.Column(db.String(60), nullable=True)
-    review = db.Column(db.String(200), nullable=False)
+    message = db.Column(db.String(200), nullable=False)
 
-    def __init__(self, account_id, first_name, last_name, email, review):
+    def __init__(self, account_id, first_name, last_name, email, message):
         self.account_id = account_id
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
-        self.review = review
+        self.message = message
 
     def __repr__(self):
-        return f"{self.first_name}{self.last_name}{self.review}"
+        return f"{self.first_name}{self.last_name}{self.message}"
