@@ -118,7 +118,7 @@ def ReviewForm():
             email = current_user.email
             message = request.form['message']
 
-            review = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
+            reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
                                 message=message)
 
         else:
@@ -128,13 +128,13 @@ def ReviewForm():
             email = request.form['email']
             message = request.form['message']
 
-            review = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
+            reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
                                 message=message)
 
-        db.session.add(review)
+        db.session.add(reviews)
         db.session.commit()
 
-        flash(f'Your review was received!', 'success')
+        flash(f'Your review was received! ATB will post it shortly.', 'success')
         return redirect(url_for('ReviewForm'))
 
         # Address issue where unsupported HTTP request method is attempted
@@ -146,21 +146,35 @@ def ReviewForm():
 @login_required
 @role_required(['ADMIN', 'EMPLOYEE'])
 def reviews_view_all():
-   # review = Reviews.query.order_by(Reviews.review_id) \
-   #     .all()
-   return render_template('ReviewsLog.html')
+   reviews = Reviews.query.order_by(Reviews.review_id) \
+       .all()
+   return render_template('ReviewsLog.html', reviews=reviews)
 
 @app.route('/ReviewsLog/Delete/<int:review_id>')
 @login_required
 @role_required(['ADMIN'])
 def review_delete(review_id):
-   review = Reviews.query.filter_by(review_id=review_id).first()
-   if review:
-       db.session.delete(review)
+   reviews = Reviews.query.filter_by(review_id=review_id).first()
+   if reviews:
+       db.session.delete(reviews)
        db.session.commit()
        flash(f'{review_id} was successfully deleted!', 'success')
    else:
        flash(f'Delete failed! Review could not be found.', 'error')
+
+   return redirect(url_for('reviews_view_all'))
+
+@app.route('/ReviewsLog/Post/<int:review_id>')
+@login_required
+@role_required(['ADMIN'])
+def review_post(review_id):
+   reviews = Reviews.query.filter_by(review_id=review_id).first()
+   if reviews:
+       db.session.delete(reviews)
+       db.session.commit()
+       flash(f'{review_id} was successfully posted!', 'success')
+   else:
+       flash(f'Post failed! Review could not be found.', 'error')
 
    return redirect(url_for('reviews_view_all'))
 

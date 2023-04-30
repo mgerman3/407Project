@@ -35,7 +35,7 @@
 
 
          {% for each_review in reviews %}
-             {% if account_id != None %}
+{#             {% if account_id != None %}#}
            <td>{{ each_review['review_id'] }}</td>
            <td>{{ each_review['account_id'] }}</td>
            <td>{{ each_review['first_name'] }}</td>
@@ -45,27 +45,26 @@
            <td>
                {% if current_user.role in ['ADMIN'] %}
                <a href="{{ url_for('review_delete', review_id=each_review['review_id']) }}" class="btn btn-secondary" type = "submit" role="button">Delete</a>
+               <a href="{{ url_for('review_post', review_id=each_review['review_id']) }}" class="btn btn-secondary" type = "submit" role="button">Post</a>
                {% endif %}
            </td>
        </tr>
            {% else %}
        <tr>
-        <tr>
-           <td>{{ each_review['request_id'] }}</td>
-           <td>{{ each_review['account_id'] }}</td>
-           <td>{{ each_user['first_name'] }}</td>
-           <td>{{ each_review['last_name'] }}</td>
-           <td>{{ each_review['email'] }}</td>
-
-            <td class="wrap">{{ each_reviews['message'] }}</td>
-           <td>
-               {% if current_user.role in ['ADMIN'] %}
-               <a href="{{ url_for('review_delete', review_id=each_review['review_id']) }}" class="btn btn-secondary" type = "submit" role="button">Delete</a>
-               {% endif %}
-           </td>
-       </tr>
-
-             {% endif %}
+{#        <tr>#}
+{#           <td>{{ each_review['request_id'] }}</td>#}
+{#           <td>{{ each_review['account_id'] }}</td>#}
+{#           <td>{{ each_review['first_name'] }}</td>#}
+{#           <td>{{ each_review['last_name'] }}</td>#}
+{#           <td>{{ each_review['email'] }}</td>#}
+{##}
+{#            <td class="wrap">{{ each_reviews['message'] }}</td>#}
+{#           <td>#}
+{#               {% if current_user.role in ['ADMIN'] %}#}
+{#               <a href="{{ url_for('review_delete', review_id=each_review['review_id']) }}" class="btn btn-secondary" type = "submit" role="button">Delete</a>#}
+{#               {% endif %}#}
+{#           </td>#}
+{#       </tr>#}
            {% endfor %}
 
    </table>
@@ -75,7 +74,7 @@
    {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
    <div class="row">
        <div class="col">
-               Total Number of Reviwes: {{ reviews|length }}
+               Total Number of Reviews: {{ reviews|length }}
        </div>
    </div>
 
