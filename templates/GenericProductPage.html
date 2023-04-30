@@ -46,7 +46,20 @@
 				<hr />
 <!-- add_to_cart -->
 				<form action="{{ url_for('cart_add', product_id=product['product_id']) }}" method="POST">
-				<div class="row">
+				<div class="GenProduct_spacer">
+<!-- sixe and quantity -->
+                    <h4>Select a Size</h4>
+                    <input type="radio" name="Button" class="ButtonState" checked id="XS" value="1">
+                    <button class="input">X-Small</button>
+                    <button class="input">Small</button>
+                    <button class="input">Medium</button>
+                    <button class="input">Large</button>
+                    <button class="input">XL</button>
+                    <button class="input">XXL</button>
+                    <button class="input">XXXL</button>
+                </div>
+
+                <div class="row">
 					<div class="col-lg-4">
 						<div class="row g-2">
 							<div class="col-lg-12">
