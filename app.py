@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from werkzeug.security import check_password_hash, generate_password_hash
 from werkzeug.utils import secure_filename
@@ -298,7 +298,7 @@ def item_edit(product_id):
 
 
       if item:
-          return render_template('Input_Inventory.html', item=item, action='update')
+          return render_template('Input_Inventory2.html', item=item, action='update')
 
       else:
           flash(f'Item attempting to be edited could not be found!', 'error')
@@ -403,7 +403,55 @@ def inventory_entry():
   flash(f'Invalid request. Please contact support if this problem persists.', 'error')
   return redirect(url_for('homePage'))
 
-
+# might need for input inventory2
+# @app.route('/product/update/<int:product_id>', methods=['GET', 'POST'])
+# @login_required
+# @role_required(['ADMIN', 'MANAGER'])
+# def product_edit(product_id):
+#     if request.method == 'GET':
+#         product = items_view_all.query.filter_by(product_id=product_id).first()
+#
+#         if product:
+#             return render_template('Input_Inventory2.html', product=product, action='update')
+#
+#         else:
+#             flash(f'Product attempting to be edited could not be found!', 'error')
+#
+#     elif request.method == 'POST':
+#         product = items_view_all.query.filter_by(product_id=product_id).first()
+#
+#         if product:
+#             product.product_name = request.form['product_name']
+#             product.product_code = request.form['product_code']
+#             product.product_description = request.form['product_description']
+#             product.product_price = request.form['product_price']
+#             product_image = request.files['product_image']
+#
+#             # When a new image is provided, or there is a desire to delete the current image, attempt to delete it
+#             if ('delete_product_image' in request.form or product_image != '') and 'current_product_image' != '' :
+#                 try:
+#                     os.remove(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], product.product_image))
+#                     product.product_image = ''
+#                 except:
+#                     pass # Nothing to do as file is no longer being stored
+#
+#
+#                 product_filename = secure_filename(product.product_code + '-' + product_image.filename)  # prepend unique product code to avoid filename collisions
+#
+#                 if product_image.filename != '':
+#                     product_image.save(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], product_filename))
+#                     product.product_image = product_filename if product_image else ''
+#
+#             db.session.commit()
+#             flash(f'{product.product_name} was successfully updated!', 'success')
+#         else:
+#             flash(f'Product attempting to be edited could not be found!', 'error')
+#
+#         return redirect(url_for('Inventory Log'))
+#
+#     # Address issue where unsupported HTTP request method is attempted
+#     flash(f'Invalid request. Please contact support if this problem persists.', 'error')
+#     return redirect(url_for('Inventory Log'))
 
 @app.route('/OrderConfirm')
 def OrderConfirm():
@@ -452,9 +500,79 @@ def Admin_Login():
        flash(f'{username} was successfully added!', 'success')
        return redirect(url_for('homePage'))
 
-@app.route('/cart')
-def Cart():
-    return render_template('cart.html')
+# @app.route('/cart')
+# def Cart():
+#     return render_template('cart.html')
+
+@app.route('/cart/clear')
+
+@login_required
+def clear_cart():
+    if 'cart' in session:
+        del(session['cart'])
+        flash(f"Cart Cleared", 'success')
+    else:
+        flash(f"Cart already empty", 'error')
+    return redirect(url_for('Shop'))
+
+@app.route('/cart/add/<int:product_id>', methods=['GET','POST'])
+@login_required
+def cart_add(product_id):
+    product = InventoryInfo.query.filter_by(product_id=product_id).first()
+    if 'product_quantity' in request.form:
+        product_quantity = int(request.form['product_quantity'])
+    elif request.method == 'GET':
+        product_quantity = 1
+
+    if product:
+        if 'cart' not in session:
+            session['cart'] = []
+
+        size = request.form['size']
+
+        found_item = next((item for item in session['cart'] if item['product_id'] == product_id), None)
+        if found_item:
+            found_item['product_quantity'] += product_quantity
+
+            if found_item['product_quantity'] > app.config['MAX_QUANTITY_PER_ITEM']:
+                found_item['product_quantity'] = app.config['MAX_QUANTITY_PER_ITEM']
+                flash(f"You cannot exceed more than {app.config['MAX_QUANTITY_PER_ITEM']} of the same item.")
+
+        else:
+            session['cart'].append(
+                {'product_id': product.product_id, 'item_name': product.item_name, 'size':size, 'price': product.price}
+            )
+
+        session['cart_total'] = sum(item['product_price']*item['product_quantity'] for item in session['cart'])
+
+        flash(f"{product.product_name} has been successfully added to your cart.", 'success')
+        return redirect(url_for('cart_view'))
+    else:
+        flash(f'Product could not be found. Please contact support if this problem persists.', 'error')
+
+@app.route('/cart/remove/<int:index>', methods=['GET'])
+@login_required
+def cart_remove(index):
+    if 'cart' in session:
+        if index < len(session['cart']):
+            product_name = session['cart'][index]['product_name']
+            session['cart'].pop(index)
+            flash(f"{product_name} has been successfully removed from your cart.", 'success')
+
+        else:
+            flash(f'Product is not in the cart and could not be removed.', 'error')
+
+    session['cart_total'] = sum(item['product_price'] * item['product_quantity'] for item in session['cart'])
+
+    return redirect(url_for('cart2'))
+
+@app.route('/cart', methods=['GET', 'POST'])
+@login_required
+def cart_view():
+    if 'cart' in session:
+        return render_template('cart2.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
+    else:
+        return render_template('cart2.html', cart_count=0)
 
 @app.route('/CollectionsLog')
 @login_required
