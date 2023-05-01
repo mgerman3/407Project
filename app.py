@@ -117,9 +117,10 @@ def ReviewForm():
             last_name = current_user.last_name
             email = current_user.email
             message = request.form['message']
+            rating = request.form['rating']
 
             reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
-                                message=message)
+                                message=message, rating=rating)
 
         else:
             account_id = None
@@ -127,9 +128,10 @@ def ReviewForm():
             last_name = request.form['last_name']
             email = request.form['email']
             message = request.form['message']
+            rating = request.form['rating']
 
             reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
-                                message=message)
+                                message=message, rating=rating)
 
         db.session.add(reviews)
         db.session.commit()
@@ -172,9 +174,9 @@ def review_post(review_id):
    if reviews:
        db.session.delete(reviews)
        db.session.commit()
-       flash(f'{review_id} was successfully posted!', 'success')
+       flash(f'{review_id} was successfully updated!', 'success')
    else:
-       flash(f'Post failed! Review could not be found.', 'error')
+       flash(f'Update failed! Review could not be found.', 'error')
 
    return redirect(url_for('reviews_view_all'))
 

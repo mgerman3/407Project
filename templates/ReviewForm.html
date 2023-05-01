@@ -53,10 +53,24 @@
                     <div class="formInputFields">
                         {% if current_user.is_authenticated %}
                             <div class = "row">
-                            <!--Field to collect users message -->
-                            <p class="formFieldsLabels">Review(*)</p>
-                            <input type="text" class="inputFields" name="message" required rows="5"><br><br>
-                        </div>
+                                <!--Field to collect users message -->
+                                <p class="formFieldsLabels">Review(*)</p>
+                                <input type="text" class="inputFields" name="message" required rows="5"><br><br>
+                            </div>
+                            <div class = "row">
+                                <p class="formFieldsLabels">Rating(*)</p>
+                                <div class="form-select-container">
+                                    <select name="rating" id="role" class="form-select" aria-label=".form-select-md example">
+                                        <option value="0">---Select A Rating---</option>
+                                        <option name="one" id="one" value="1">1</option>
+                                        <option name="two" id="two" value="2">2</option>
+                                        <option name="three" id="three" value="3">3</option>
+                                        <option name="four" id="four" value="4">4</option>
+                                        <option name="five" id="five" value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+
                         {% else %}
                         <div class = "row">
                             <div class="border-box col">
@@ -85,6 +99,19 @@
                             <p class="formFieldsLabels">Review(*)</p>
                             <input type="text" class="inputFields" name="message" required><br><br>
                         </div>
+                        <div class = "row">
+                            <p class="formFieldsLabels">Rating(*)</p>
+                            <div class="form-select-container">
+                                <select name="rating" id="role" class="form-select" aria-label=".form-select-md example">
+                                    <option value="0">---Select A Rating---</option>
+                                    <option name="one" id="one" value="1">1</option>
+                                    <option name="two" id="two" value="2">2</option>
+                                    <option name="three" id="three" value="3">3</option>
+                                    <option name="four" id="four" value="4">4</option>
+                                    <option name="five" id="five" value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
                      {% endif %}
                     </div>
                 </div>
@@ -101,6 +128,47 @@
                 </div>
                 </div>
     </div>
+
     <!-- adds spacing between bottom of all text content and footer -->
     <div class="GenProduct_HeadingSpacer"></div>
+
+      <div class = "h1-Center">
+        <!-- Heading text for entire webpage  -->
+        <h1>Read Reviews</h1>
+        <h4>Interested to see what others think? Read some of our reviews below!</h4>
+    </div>
+    <div class="GenProduct_HeadingSpacer"></div>
+
+    <!-- Creation of table to show all posted reviews -->
+    <div class="cartPlaceholder" style="position: relative; height: auto; min-height: 100%; padding-bottom: 7px;">
+                <div class=”cartHeader”>
+                    {% for each_review in reviews %}
+                        <div class="cart-item">
+                            <!-- display reviewers name -->
+                            <div class="cart-item-details">
+                                <div class="cart-item-title">
+                                    <td>{{ each_review['first_name'] }}</td>
+                                    <td>{{ each_review['last_name'] }}</td>
+                                    <td>{{ each_review['email'] }}</td>
+                                </div>
+                            </div>
+                             <!-- display reviewers written review -->
+                            <div class="cart-item-details">
+                                <div class="cart-item-title">
+                                    <td>{{ each_review['message'] }}</td>
+                                </div>
+                            </div>
+                            <!-- display reviewers numeric score -->
+                            <div class="cart-item-details">
+                                <div class="cart-item-title">
+                                    <td>{{ each_review['rating'] }}</td>
+                                </div>
+                            </div>
+                            </div>
+                     {% endfor %}
+                </div>
+            </div>
+    <!-- adds spacing between bottom of all text content and footer -->
+    <div class="GenProduct_HeadingSpacer"></div>
+
 {% endblock %}

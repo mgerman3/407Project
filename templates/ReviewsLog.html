@@ -28,6 +28,7 @@
             <th scope="col">Last Name</th>
             <th scope="col">Email</th>
             <th scope="col">Message</th>
+            <th scope="col">Rating</th>
            {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
            <th>Actions</th>
            {% endif %}
@@ -41,7 +42,8 @@
            <td>{{ each_review['first_name'] }}</td>
            <td>{{ each_review['last_name'] }}</td>
            <td>{{ each_review['email'] }}</td>
-            <td class="wrap">{{ each_review['message'] }}</td>
+           <td class="wrap">{{ each_review['message'] }}</td>
+           <td>{{ each_review['rating'] }}</td>
            <td>
                {% if current_user.role in ['ADMIN'] %}
                <a href="{{ url_for('review_delete', review_id=each_review['review_id']) }}" class="btn btn-secondary" type = "submit" role="button">Delete</a>
