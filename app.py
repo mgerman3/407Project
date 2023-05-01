@@ -147,14 +147,13 @@ def ReviewForm():
     flash(f'Invalid request. Please contact support if this problem persists.', 'error')
     return redirect(url_for('homePage'))
 
-
 @app.route('/ReviewsLog')
 @login_required
 @role_required(['ADMIN', 'EMPLOYEE'])
 def reviews_view_all():
-   reviews = Reviews.query.order_by(Reviews.review_id) \
+    reviews = Reviews.query.order_by(Reviews.review_id) \
        .all()
-   return render_template('ReviewsLog.html', reviews=reviews)
+    return render_template('ReviewsLog.html', reviews=reviews)
 
 @app.route('/ReviewsLog/Delete/<int:review_id>')
 @login_required
@@ -174,20 +173,20 @@ def review_delete(review_id):
 @login_required
 @role_required(['ADMIN'])
 def review_post(review_id):
-   reviews = Reviews.query.filter_by(review_id=review_id).first()
-   if reviews:
-       if reviews.posted == False:
-           reviews.posted = True
-           db.session.commit()
-           flash(f'{review_id} was successfully posted!', 'success')
-       else:
-           reviews.posted = False
-           db.session.commit()
-           flash(f'{review_id} was successfully un-posted!', 'success')
-   else:
+    reviews = Reviews.query.filter_by(review_id=review_id).first()
+    if reviews:
+        if reviews.posted == False:
+            reviews.posted = True
+            db.session.commit()
+            flash(f'{review_id} was successfully posted!', 'success')
+        else:
+            reviews.posted = False
+            db.session.commit()
+            flash(f'{review_id} was successfully un-posted!', 'success')
+    else:
        flash(f'Post failed! Review could not be found.', 'error')
 
-   return redirect(url_for('reviews_view_all'))
+    return redirect(url_for('reviews_view_all'))
 
 @app.route('/LogIn', methods = ['GET', 'POST'])
 # def LogInScreen():

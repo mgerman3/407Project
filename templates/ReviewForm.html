@@ -38,13 +38,15 @@
                 <!--Styling for each of the boxes, background color of form and buttons used within form -->
                 <div class="border-box col">
                     <div class="formInputFields">
+                        <!--If user is logged in, they will see an abbreviated form as we can already gather certain information  -->
                         {% if current_user.is_authenticated %}
                             <div class = "row">
                                 <!--Field to collect users message -->
                                 <p class="formFieldsLabels">Review(*)</p>
-                                <input type="text" class="inputFields" name="message" required rows="5"><br><br>
+                                <textarea rows="5" cols="20" placeholder="Enter your review here!" name="message" require></textarea>
                             </div>
                             <div class = "row">
+                                <!--Field to collect users ratings out of 5 on products purchased -->
                                 <p class="formFieldsLabels">Rating(*)</p>
                                 <div class="form-select-container">
                                     <select name="rating" id="role" class="form-select" aria-label=".form-select-md example">
@@ -57,6 +59,7 @@
                                     </select>
                                 </div>
                             </div>
+                         <!--If user is NOT logged in, they will see more fields on the form  -->
                         {% else %}
                         <div class = "row">
                             <div class="border-box col">
@@ -83,9 +86,10 @@
                         <div class = "row">
                             <!--Field to collect users message -->
                             <p class="formFieldsLabels">Review(*)</p>
-                            <input type="text" class="inputFields" name="message" required><br><br>
+                            <textarea rows="5" cols="20" placeholder="Enter your review here!" name="message" require></textarea>
                         </div>
                         <div class = "row">
+                            <!--Field to collect users numeric rating-->
                             <p class="formFieldsLabels">Rating(*)</p>
                             <div class="form-select-container">
                                 <select name="rating" id="role" class="form-select" aria-label=".form-select-md example">
@@ -115,57 +119,56 @@
                 </div>
     </div>
 
-    <!-- adds spacing between bottom of all text content and footer -->
+    <!-- adds spacing between form section and posted reviews section -->
     <div class="GenProduct_HeadingSpacer"></div>
 
       <div class = "h1-Center">
-        <!-- Heading text for entire webpage  -->
-        <h1>Read Reviews</h1>
+        <!-- Heading text for second half of the webpage  -->
+        <h2><strong>Read Reviews</strong></h2>
         <h4>Interested to see what others think? Read some of our reviews below!</h4>
     </div>
-    <div class="GenProduct_HeadingSpacer"></div>
 
-    <!-- Creation of table to show all posted reviews -->
-{#    <div class="cartPlaceholder" style="position: relative; height: auto; min-height: 100%; padding-bottom: 7px;">#}
-{#                <div class=”cartHeader”>#}
-{#                    {% for each_review in reviews %}#}
-{#                        <div class="cart-item">#}
-{#                            <!-- display reviewers name -->#}
-{#                            <div class="cart-item-details">#}
-{#                                <div class="cart-item-title">#}
-{#                                    <td>{{ each_review['first_name'] }}</td>#}
-{#                                    <td>{{ each_review['last_name'] }}</td>#}
-{#                                    <td>{{ each_review['email'] }}</td>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                             <!-- display reviewers written review -->#}
-{#                            <div class="cart-item-details">#}
-{#                                <div class="cart-item-title">#}
-{#                                    <td>{{ each_review['message'] }}</td>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <!-- display reviewers numeric score -->#}
-{#                            <div class="cart-item-details">#}
-{#                                <div class="cart-item-title">#}
-{#                                    <td>{{ each_review['rating'] }}</td>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            </div>#}
-{#                     {% endfor %}#}
-{#                </div>#}
-{#            </div>#}
     <!-- adds spacing between bottom of all text content and footer -->
     <div class="GenProduct_HeadingSpacer"></div>
 
-     {% for each_review in review %}
-       {% if each_review['posted'] == 1 %}
-           <td>{{ each_review['first_name'] }}</td>
-           <td>{{ each_review['last_name'] }}</td>
-           <td class="wrap"><pre>Review: {{ each_review['message'] }}</pre></td>
-           <td><pre>Stars: {{ each_review['rating'] }}/5</pre></td>
-           <br>
-        {% endif %}
-       </tr>
-    {% endfor %}
+    <!-- Creation of table to show all posted reviews -->
+    <div class="cartPlaceholder" style="position: relative; height: auto; min-height: 100%; padding-bottom: 7px;">
+        <table class="table table-striped">
+            <div class="row">
+            <div class="col">
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Message</th>
+                <th scope="col">Rating</th>
+            </tr>
+
+            {% for each_review in review %}
+                {% if each_review['posted'] == 1 %}
+                    <tr>
+                        <td> {{ each_review['first_name'] }}</td>
+                        <td> {{ each_review['last_name'] }}</td>
+                        <td class = "wrap"> {{ each_review['message'] }}</td>
+                        <td> {{ each_review['rating'] }}</td>
+                    </tr>
+                {% endif %}
+             {% endfor %}
+        </table>
+       </div>
+    </div>
+
+    <!-- adds spacing between bottom of all text content and footer -->
+    <div class="GenProduct_HeadingSpacer"></div>
+
+{#     {% for each_review in review %}#}
+{#       {% if each_review['posted'] == 1 %}#}
+{#           <td>{{ each_review['first_name'] }}</td>#}
+{#           <td>{{ each_review['last_name'] }}</td>#}
+{#           <td class="wrap"><pre>Review: {{ each_review['message'] }}</pre></td>#}
+{#           <td><pre>Stars: {{ each_review['rating'] }}/5</pre></td>#}
+{#           <br>#}
+{#        {% endif %}#}
+{#       </tr>#}
+{#    {% endfor %}#}
 
 {% endblock %}
