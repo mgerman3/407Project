@@ -26,7 +26,7 @@
 {% block page_content %}
    <!-- Background Photo -->
 <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
-       <form action="{{ url_for('inventory_entry') }}" method="POST">
+{#       <form action="{{ url_for('inventory_entry') }}" method="POST">#}
        <!-- Inventory Input -->
        <div class="inventoryBoxTotal">
            <div class="row">
@@ -36,6 +36,16 @@
                            <div class="formInputFields" style="width: 700px">
                                <div class = "border-box-col">
                                    <div class="row">
+
+                                   <!-- set up the action for the form -->
+                                   {% if action and action in ['create', 'update'] %}
+                                    <form class="row g-4"
+                                          action="{{ url_for('item_edit', product_id=item['product_id']) if item else url_for('inventory_entry') }}"
+                                          enctype="multipart/form-data" method="post">
+                                    {% else %}
+                                        <div class="row g-4">
+                                    {% endif %}
+
                                        <div class="row">
                                        <!-- Inventory Name Input -->
                                            {% if action and action in ['create'] %}
@@ -46,22 +56,10 @@
 
 
                                        <!-- Collection Name Input -->
-{#                                            {% if action and action in ['create'] %}#}
-{#                                            <label for="collection_name" class="form-label"><strong>Collection Name</strong></label>#}
-{#                                            <div class="dropdown">#}
-{#                                                <button class="input"></button>#}
-{#                                                    <div class="dropdown-content">#}
-{#                                                        <a href="#">Game Day Map</a>#}
-{#                                                        <a href="#">CP Blues Map</a>#}
-{#                                                        <a href="#">Spring Pinks Map</a>#}
-{#                                                    </div>#}
-{#                                            </div>#}
-{#                                            {% endif %}#}
-{#                                    #}
                                            <div class="col-md-4">
                                             {% if action and action in ['create', 'update'] %}
                                             <label for="collection_id" class="form-label"><strong>Collection Name</strong></label>
-                                            <select name="role" id="role" class="form-select" aria-label=".form-select-md example">
+                                            <select name="collection_id" id="role" class="form-select" aria-label=".form-select-md example">
                                                 <option value="0">---Select A Collection---</option>
                                                 {% for each_collection in collections %}
                                                 <option value="{{ each_collection['collection_id'] }}"
@@ -98,8 +96,6 @@
                                            {% endif %}
 
 
-
-
                            <!-- Inventory Description Input -->
                                        {% if action and action in ['create'] %}
                                            <label for="desc" class="form-label"><strong>Description</strong></label>
@@ -108,21 +104,21 @@
 
                            <!-- Inventory Image Input -->
                                        <div class="col-md-2">
-                                           {% if action and action in ['create', 'update'] %}<label for="image" class="form-label">{% endif %}
+                                           {% if action and action in ['create', 'update'] %}<label for="product_image" class="form-label">{% endif %}
                                                <strong>Image</strong>
                                            {% if action and action in ['create', 'update'] %}</label>{% endif %}
                                          </div>
                                          <div class="col-md-10">
                                            {% if (not action) or action not in ['create', 'update']  %}
-                                               <img class="mb-3" src="{{ url_for('static', filename='/products/' + item['image']) }}" alt="Picture of {{ item['item_name'] }}">
+                                               <img class="mb-3" src="{{ url_for('static', filename='/products/' + item['product_image']) }}" alt="Picture of {{ item['item_name'] }}">
                                            {% else %}
-                                               {% if action in ['update'] and item['image'] != '' %}
-                                                   <img class="mb-3" src="{{ url_for('static', filename='/products/' + item['image']) }}" alt="Picture of {{ item['item_name'] }}">
+                                               {% if action in ['update'] and item['product_image'] != '' %}
+                                                   <img class="mb-3" src="{{ url_for('static', filename='/products/' + item['product_image']) }}" alt="Picture of {{ item['item_name'] }}">
                                                {% endif %}
                                                {% if action in ['create','update'] %}
-                                                   <input type="file" class="form-control" id="image" name="image">
+                                                   <input type="file" class="form-control" id="product_image" name="product_image">
                                                {% endif %}
-                                               {% if action in ['update'] and item['image'] != '' %}
+                                               {% if action in ['update'] and item['product_image'] != '' %}
                                                    <input class="form-check-input" type="checkbox" value="" id="delete_product_image" name="delete_product_image">
                                                    <label class="form-check-label" for="delete_product_image"></label> <strong>Delete product image without providing a replacement</strong>
                                                {% endif %}
@@ -199,7 +195,6 @@
                                        {% endif %}
                                      </div>
 
-
                                    <div class="row">
                                      <input type="submit" value="Submit Inventory" class="inventoryButtons" method="POST">
                                    </div>
@@ -211,6 +206,11 @@
            </div>
        </div>
    </div>
-       </form>
+
+{% if action and action in ['create', 'update'] %}
+</form>
+{% else %}
+    </div>
+{% endif %}
 {% endblock %}
 

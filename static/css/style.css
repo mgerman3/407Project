@@ -729,8 +729,8 @@ input.btpos {
   margin-top: 10px;
 }
 .image-container img {
-  width: 200px;
-  height: 200px;
+  width: 225px;
+  height: 225px;
   object-fit: cover;
   margin: 10px;
   border: 5px solid #69a695;
