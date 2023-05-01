@@ -30,20 +30,7 @@
         <div class = "GenProduct_VerticalSpacer">
         <!-- conditional formatting to show confirmation message to users after completing the form -->
             <div class = "GenProduct_VerticalRightSpacer">
-{#            {% if form_submitted %}#}
-{#                <div class="row">#}
-{#                     <div class="formInputFields">#}
-{#                             <!-- Centers text on confirmation output -->#}
-{#                             <div class = "h1-Center">#}
-{#                                <!-- Message outputted to user after form completed -->#}
-{#                                <h3>Thank you {{ request.form.get('first_name')}} for submitting a review, we look forward to hearing your feedback!</h3>#}
-{#                             </div>#}
-{#                          <!--Placing icon under confirmation message-->#}
-{#                          <img src="../static/images/RequestForm_FormConfirmation.png" width = "100" height = "100" alt="Form Sent Confirmation Icon" class = "center-image">#}
-{#                     </div>#}
-{#                </div>#}
-{#            <!--If form is not completed, this is the information that users will see-->#}
-{#            {% else %}#}
+
         <!--Creates form to collection customer's requests-->
         <form action="{{ url_for('ReviewForm') }}" method="post">
         <div class="inputBoxTotal" style="padding-left: 24px">
@@ -70,7 +57,6 @@
                                     </select>
                                 </div>
                             </div>
-
                         {% else %}
                         <div class = "row">
                             <div class="border-box col">
@@ -140,35 +126,46 @@
     <div class="GenProduct_HeadingSpacer"></div>
 
     <!-- Creation of table to show all posted reviews -->
-    <div class="cartPlaceholder" style="position: relative; height: auto; min-height: 100%; padding-bottom: 7px;">
-                <div class=”cartHeader”>
-                    {% for each_review in reviews %}
-                        <div class="cart-item">
-                            <!-- display reviewers name -->
-                            <div class="cart-item-details">
-                                <div class="cart-item-title">
-                                    <td>{{ each_review['first_name'] }}</td>
-                                    <td>{{ each_review['last_name'] }}</td>
-                                    <td>{{ each_review['email'] }}</td>
-                                </div>
-                            </div>
-                             <!-- display reviewers written review -->
-                            <div class="cart-item-details">
-                                <div class="cart-item-title">
-                                    <td>{{ each_review['message'] }}</td>
-                                </div>
-                            </div>
-                            <!-- display reviewers numeric score -->
-                            <div class="cart-item-details">
-                                <div class="cart-item-title">
-                                    <td>{{ each_review['rating'] }}</td>
-                                </div>
-                            </div>
-                            </div>
-                     {% endfor %}
-                </div>
-            </div>
+{#    <div class="cartPlaceholder" style="position: relative; height: auto; min-height: 100%; padding-bottom: 7px;">#}
+{#                <div class=”cartHeader”>#}
+{#                    {% for each_review in reviews %}#}
+{#                        <div class="cart-item">#}
+{#                            <!-- display reviewers name -->#}
+{#                            <div class="cart-item-details">#}
+{#                                <div class="cart-item-title">#}
+{#                                    <td>{{ each_review['first_name'] }}</td>#}
+{#                                    <td>{{ each_review['last_name'] }}</td>#}
+{#                                    <td>{{ each_review['email'] }}</td>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                             <!-- display reviewers written review -->#}
+{#                            <div class="cart-item-details">#}
+{#                                <div class="cart-item-title">#}
+{#                                    <td>{{ each_review['message'] }}</td>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <!-- display reviewers numeric score -->#}
+{#                            <div class="cart-item-details">#}
+{#                                <div class="cart-item-title">#}
+{#                                    <td>{{ each_review['rating'] }}</td>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            </div>#}
+{#                     {% endfor %}#}
+{#                </div>#}
+{#            </div>#}
     <!-- adds spacing between bottom of all text content and footer -->
     <div class="GenProduct_HeadingSpacer"></div>
+
+     {% for each_review in review %}
+       {% if each_review['posted'] == 1 %}
+           <td>{{ each_review['first_name'] }}</td>
+           <td>{{ each_review['last_name'] }}</td>
+           <td class="wrap"><pre>Review: {{ each_review['message'] }}</pre></td>
+           <td><pre>Stars: {{ each_review['rating'] }}/5</pre></td>
+           <br>
+        {% endif %}
+       </tr>
+    {% endfor %}
 
 {% endblock %}

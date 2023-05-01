@@ -29,6 +29,7 @@
             <th scope="col">Email</th>
             <th scope="col">Message</th>
             <th scope="col">Rating</th>
+            <th scope="col">Posted</th>
            {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
            <th>Actions</th>
            {% endif %}
@@ -44,29 +45,20 @@
            <td>{{ each_review['email'] }}</td>
            <td class="wrap">{{ each_review['message'] }}</td>
            <td>{{ each_review['rating'] }}</td>
+           <td>{{ each_review['posted'] }}</td>
            <td>
                {% if current_user.role in ['ADMIN'] %}
                <a href="{{ url_for('review_delete', review_id=each_review['review_id']) }}" class="btn btn-secondary" type = "submit" role="button">Delete</a>
-               <a href="{{ url_for('review_post', review_id=each_review['review_id']) }}" class="btn btn-secondary" type = "submit" role="button">Post</a>
+                   {% if each_review['posted'] == 1 %}
+                    <a href="{{ url_for('review_post', review_id=each_review['review_id']) }}" class="btn btn-secondary" type = "submit" role="button">Un-Post</a>
+                     {% else %}
+                    <a href="{{ url_for('review_post', review_id=each_review['review_id']) }}" class="btn btn-secondary" type = "submit" role="button">Post</a>
                {% endif %}
+                {% endif %}
            </td>
        </tr>
            {% else %}
        <tr>
-{#        <tr>#}
-{#           <td>{{ each_review['request_id'] }}</td>#}
-{#           <td>{{ each_review['account_id'] }}</td>#}
-{#           <td>{{ each_review['first_name'] }}</td>#}
-{#           <td>{{ each_review['last_name'] }}</td>#}
-{#           <td>{{ each_review['email'] }}</td>#}
-{##}
-{#            <td class="wrap">{{ each_reviews['message'] }}</td>#}
-{#           <td>#}
-{#               {% if current_user.role in ['ADMIN'] %}#}
-{#               <a href="{{ url_for('review_delete', review_id=each_review['review_id']) }}" class="btn btn-secondary" type = "submit" role="button">Delete</a>#}
-{#               {% endif %}#}
-{#           </td>#}
-{#       </tr>#}
            {% endfor %}
 
    </table>

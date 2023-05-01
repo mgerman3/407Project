@@ -106,8 +106,10 @@ def requests_fulfilled(request_id):
 
 @app.route('/ReviewForm', methods=['GET', 'POST'])
 def ReviewForm():
+    review = Reviews.query.order_by(Reviews.review_id) \
+        .all()
     if request.method == 'GET':
-        return render_template('ReviewForm.html', action='create')
+        return render_template('ReviewForm.html', action='create', review=review)
     elif request.method == 'POST':
 
         if current_user.is_authenticated:
@@ -118,9 +120,10 @@ def ReviewForm():
             email = current_user.email
             message = request.form['message']
             rating = request.form['rating']
+            posted = False
 
             reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
-                                message=message, rating=rating)
+                                message=message, rating=rating, posted=posted)
 
         else:
             account_id = None
@@ -129,9 +132,10 @@ def ReviewForm():
             email = request.form['email']
             message = request.form['message']
             rating = request.form['rating']
+            posted = False
 
             reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
-                                message=message, rating=rating)
+                                message=message, rating=rating, posted=posted)
 
         db.session.add(reviews)
         db.session.commit()
@@ -172,11 +176,16 @@ def review_delete(review_id):
 def review_post(review_id):
    reviews = Reviews.query.filter_by(review_id=review_id).first()
    if reviews:
-       db.session.delete(reviews)
-       db.session.commit()
-       flash(f'{review_id} was successfully updated!', 'success')
+       if reviews.posted == False:
+           reviews.posted = True
+           db.session.commit()
+           flash(f'{review_id} was successfully posted!', 'success')
+       else:
+           reviews.posted = False
+           db.session.commit()
+           flash(f'{review_id} was successfully un-posted!', 'success')
    else:
-       flash(f'Update failed! Review could not be found.', 'error')
+       flash(f'Post failed! Review could not be found.', 'error')
 
    return redirect(url_for('reviews_view_all'))
 
