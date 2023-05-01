@@ -296,7 +296,11 @@ def requests_view_all():
 def items_view_all():
   items = InventoryInfo.query.order_by(InventoryInfo.item_name) \
       .all()
-  return render_template('Inventory Log.html', items=items)
+  dict = {}
+  for collection in Collections.query.all():
+        dict[collection.collection_id] = collection.collection_name
+
+  return render_template('Inventory Log.html', items=items, dict=dict)
 
 
 @app.route('/InventoryLog/update/<int:product_id>', methods=['GET', 'POST'])
@@ -383,6 +387,7 @@ def inventory_entry():
       return render_template('Input_Inventory.html', action='create', collections=collections)
   elif request.method == 'POST':
       item_name = request.form['item_name']
+      collection_id = request.form['collection_id']
       xsmall = request.form['xsmall']
       small = request.form['small']
       medium = request.form['medium']
@@ -397,16 +402,13 @@ def inventory_entry():
       if product_image.filename != '':
           product_image.save(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], product_filename))
 
-      items = InventoryInfo(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge,
+      items = InventoryInfo(item_name=item_name, collection_id=collection_id, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge,
                         xxlarge=xxlarge, price=price, desc=desc, product_image=product_filename if product_image else '')
 
       db.session.add(items)
       db.session.commit()
       flash(f'{item_name} was successfully added!', 'success')
       return redirect(url_for('items_view_all'))
-
-
-
 
   # Address issue where unsupported HTTP request method is attempted
   flash(f'Invalid request. Please contact support if this problem persists.', 'error')
