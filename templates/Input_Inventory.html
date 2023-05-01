@@ -54,6 +54,19 @@
                                            {% endif %}
                                          </div>
 
+                                   <!-- Inventory Name Read/Update -->
+                                       {% if action and action in ['read', 'update'] %}
+                                       <div class="row">
+                                       {% if action and action == 'update' %}
+                                       <label for="item_name" class="form-label"><strong>Item Name</strong></label>
+                                       <input type="text" class="inputFields" id="item_name" name="item_name"
+                                              value="{{ item['item_name'] if item else '' }}" required>
+                                       {% else %}
+                                           <strong>Item Name</strong>
+                                           <br> {{ item['item_mame'] }}
+                                       {% endif %}
+                                       {% endif %}
+                                       </div>
 
                                        <!-- Collection Name Input -->
                                            <div class="col-md-4">
@@ -100,19 +113,7 @@
                                            <input type="text" class="inputFields" id="desc" name="desc" value="{{ item['desc'] if item else '' }}" required>
                                            {% endif %}
 
-                               <!-- Inventory Name Read/Update -->
-                                       {% if action and action in ['read', 'update'] %}
-                                       <div class="row">
-                                       {% if action and action == 'update' %}
-                                       <label for="item_name" class="form-label"><strong>Item Name</strong></label>
-                                       <input type="text" class="inputFields" id="item_name" name="item_name"
-                                              value="{{ item['item_name'] if item else '' }}" required>
-                                       {% else %}
-                                           <strong>Item Name</strong>
-                                           <br> {{ item['item_mame'] }}
-                                       {% endif %}
-                                       {% endif %}
-                                       </div>
+
 
 
                                <!-- Inventory Size Read/Update -->

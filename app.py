@@ -363,10 +363,10 @@ def item_edit(product_id):
 def item_delete(product_id):
   item = InventoryInfo.query.filter_by(product_id=product_id).first()
   if item:
-        # try:
-        #     os.remove(os.path.join(app.config['PRODUCT_UPLOAD_PATH'], item.image))
-        # except FileNotFoundError:
-        #     pass
+        try:
+            os.remove(os.path.join(app.config['PRODUCT_UPLOAD_PATH'], item.product_image))
+        except FileNotFoundError:
+            pass
         db.session.delete(item)
         db.session.commit()
         flash(f'{item} was successfully deleted!', 'success')
