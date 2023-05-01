@@ -30,8 +30,8 @@
             <th scope="col">Message</th>
             <th scope="col">Rating</th>
             <th scope="col">Posted</th>
-           {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
-           <th>Actions</th>
+           {% if current_user.role in ['ADMIN'] %}
+                <th>Actions</th>
            {% endif %}
        </tr>
 

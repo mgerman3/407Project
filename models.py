@@ -94,10 +94,10 @@ class InventoryInfo(db.Model):
    xxlarge = db.Column(db.Integer, nullable=False)
    price = db.Column(db.Integer, nullable=False)
    desc = db.Column(db.String(50), nullable=False)
-   image = db.Column(db.String(100))
+   product_image = db.Column(db.String(100))
 
 
-   def __init__(self, item_name, xsmall, small, medium, large, xlarge, xxlarge, price, desc, image):
+   def __init__(self, item_name, xsmall, small, medium, large, xlarge, xxlarge, price, desc, product_image):
        self.item_name = item_name
        self.xsmall = xsmall
        self.small = small
@@ -107,7 +107,7 @@ class InventoryInfo(db.Model):
        self.xxlarge = xxlarge
        self.price = price
        self.desc = desc
-       self.image = image
+       self.product_image = product_image
 
 
    def __repr__(self):

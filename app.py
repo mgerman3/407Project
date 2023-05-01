@@ -278,7 +278,8 @@ def CheckOut():
 
 @app.route('/GenericProduct')
 def GenProduct():
-    return render_template('GenericProductPage.html')
+    items = InventoryInfo.query.order_by(InventoryInfo.item_name).all()
+    return render_template('GenericProductPage.html', items=items)
 
 @app.route('/RequestsLog')
 @login_required
@@ -305,9 +306,8 @@ def item_edit(product_id):
   if request.method == 'GET':
       item = InventoryInfo.query.filter_by(product_id=product_id).first()
 
-
       if item:
-          return render_template('Input_Inventory2.html', item=item, action='update')
+          return render_template('Input_Inventory.html', item=item, action='update')
 
       else:
           flash(f'Item attempting to be edited could not be found!', 'error')
@@ -325,20 +325,20 @@ def item_edit(product_id):
           item.xxlarge = request.form['xxlarge']
           item.price = request.form['price']
           item.desc = request.form['desc']
-          image = request.files['image']
+          # image = request.files['image']
 
-          if('delete_product_image' in request.form or image != '') and 'current_product_image' != '' :
-              try:
-                os.remove(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], item.image))
-                item.image = ''
-              except:
-                pass
+          # if('delete_product_image' in request.form or image != '') and 'current_product_image' != '' :
+          #     try:
+          #       os.remove(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], item.image))
+          #       item.image = ''
+          #     except:
+          #       pass
 
-              filename = secure_filename(item.item_name + '-' + image.filename)
-
-              if image.filename != '':
-                  image.save(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], filename))
-                  item.image = filename if image else ''
+              # filename = secure_filename(item.item_name + '-' + image.filename)
+              #
+              # if image.filename != '':
+              #     image.save(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], filename))
+              #     item.image = filename if image else ''
 
           db.session.commit()
           flash(f'{item.item_name} was successfully updated!', 'success')
@@ -359,10 +359,10 @@ def item_edit(product_id):
 def item_delete(product_id):
   item = InventoryInfo.query.filter_by(product_id=product_id).first()
   if item:
-        try:
-            os.remove(os.path.join(app.config['PRODUCT_UPLOAD_PATH'], item.image))
-        except FileNotFoundError:
-            pass
+        # try:
+        #     os.remove(os.path.join(app.config['PRODUCT_UPLOAD_PATH'], item.image))
+        # except FileNotFoundError:
+        #     pass
         db.session.delete(item)
         db.session.commit()
         flash(f'{item} was successfully deleted!', 'success')
@@ -391,14 +391,14 @@ def inventory_entry():
       xxlarge = request.form['xxlarge']
       price = request.form['price']
       desc = request.form['desc']
-      image = request.files['image']
-      filename = secure_filename(item_name + '-' + image.filename)
+      product_image = request.files['product_image']
+      product_filename = secure_filename(item_name + '-' + product_image.filename)
 
-      if image.filename != '':
-          image.save(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], filename))
+      if product_image.filename != '':
+          product_image.save(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], product_filename))
 
       items = InventoryInfo(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge,
-                        xxlarge=xxlarge, price=price, desc=desc, image=filename if image else '')
+                        xxlarge=xxlarge, price=price, desc=desc, product_image=product_filename if product_image else '')
 
       db.session.add(items)
       db.session.commit()
@@ -412,7 +412,7 @@ def inventory_entry():
   flash(f'Invalid request. Please contact support if this problem persists.', 'error')
   return redirect(url_for('homePage'))
 
-# might need for input inventory2
+# # might need for input inventory2
 # @app.route('/product/update/<int:product_id>', methods=['GET', 'POST'])
 # @login_required
 # @role_required(['ADMIN', 'MANAGER'])
