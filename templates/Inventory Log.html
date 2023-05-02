@@ -39,15 +39,19 @@
        {% for each_item in items %}
        <tr>
            <td>{{ each_item['item_name'] }}</td>
-                <td>{{ each_item['collection_id'] }}</td>
-                <td>{{ each_item['xsmall'] }}</td>
-                <td>{{ each_item['small'] }}</td>
-                <td>{{ each_item['medium'] }}</td>
-                <td>{{ each_item['large'] }}</td>
-                <td>{{ each_item['xlarge'] }}</td>
-                <td>{{ each_item['xxlarge'] }}</td>
-                <td>{{ each_item['price'] }}</td>
-                <td>{{ each_item['desc'] }}</td>
+            {% if dict[each_item['collection_id']] %}
+                <td>{{ dict[each_item["collection_id"]] }}</td>
+            {% else %}
+                <td>None</td>
+            {% endif %}
+           <td>{{ each_item['xsmall'] }}</td>
+           <td>{{ each_item['small'] }}</td>
+           <td>{{ each_item['medium'] }}</td>
+           <td>{{ each_item['large'] }}</td>
+           <td>{{ each_item['xlarge'] }}</td>
+           <td>{{ each_item['xxlarge'] }}</td>
+           <td>{{ each_item['price'] }}</td>
+           <td>{{ each_item['desc'] }}</td>
            {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
            <td>
                <a href="{{ url_for('item_edit', product_id=each_item['product_id']) }}" class="btn btn-secondary" type = "submit" role="button">Edit</a>

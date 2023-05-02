@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from werkzeug.security import check_password_hash, generate_password_hash
 from werkzeug.utils import secure_filename
@@ -106,8 +106,10 @@ def requests_fulfilled(request_id):
 
 @app.route('/ReviewForm', methods=['GET', 'POST'])
 def ReviewForm():
+    review = Reviews.query.order_by(Reviews.review_id) \
+        .all()
     if request.method == 'GET':
-        return render_template('ReviewForm.html', action='create')
+        return render_template('ReviewForm.html', action='create', review=review)
     elif request.method == 'POST':
 
         if current_user.is_authenticated:
@@ -117,9 +119,11 @@ def ReviewForm():
             last_name = current_user.last_name
             email = current_user.email
             message = request.form['message']
+            rating = request.form['rating']
+            posted = False
 
             reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
-                                message=message)
+                                message=message, rating=rating, posted=posted)
 
         else:
             account_id = None
@@ -127,9 +131,11 @@ def ReviewForm():
             last_name = request.form['last_name']
             email = request.form['email']
             message = request.form['message']
+            rating = request.form['rating']
+            posted = False
 
             reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
-                                message=message)
+                                message=message, rating=rating, posted=posted)
 
         db.session.add(reviews)
         db.session.commit()
@@ -141,14 +147,13 @@ def ReviewForm():
     flash(f'Invalid request. Please contact support if this problem persists.', 'error')
     return redirect(url_for('homePage'))
 
-
 @app.route('/ReviewsLog')
 @login_required
 @role_required(['ADMIN', 'EMPLOYEE'])
 def reviews_view_all():
-   reviews = Reviews.query.order_by(Reviews.review_id) \
+    reviews = Reviews.query.order_by(Reviews.review_id) \
        .all()
-   return render_template('ReviewsLog.html', reviews=reviews)
+    return render_template('ReviewsLog.html', reviews=reviews)
 
 @app.route('/ReviewsLog/Delete/<int:review_id>')
 @login_required
@@ -168,15 +173,20 @@ def review_delete(review_id):
 @login_required
 @role_required(['ADMIN'])
 def review_post(review_id):
-   reviews = Reviews.query.filter_by(review_id=review_id).first()
-   if reviews:
-       db.session.delete(reviews)
-       db.session.commit()
-       flash(f'{review_id} was successfully posted!', 'success')
-   else:
+    reviews = Reviews.query.filter_by(review_id=review_id).first()
+    if reviews:
+        if reviews.posted == False:
+            reviews.posted = True
+            db.session.commit()
+            flash(f'{review_id} was successfully posted!', 'success')
+        else:
+            reviews.posted = False
+            db.session.commit()
+            flash(f'{review_id} was successfully un-posted!', 'success')
+    else:
        flash(f'Post failed! Review could not be found.', 'error')
 
-   return redirect(url_for('reviews_view_all'))
+    return redirect(url_for('reviews_view_all'))
 
 @app.route('/LogIn', methods = ['GET', 'POST'])
 # def LogInScreen():
@@ -267,7 +277,8 @@ def CheckOut():
 
 @app.route('/GenericProduct')
 def GenProduct():
-    return render_template('GenericProductPage.html')
+    items = InventoryInfo.query.order_by(InventoryInfo.item_name).all()
+    return render_template('GenericProductPage.html', items=items)
 
 @app.route('/RequestsLog')
 @login_required
@@ -284,7 +295,11 @@ def requests_view_all():
 def items_view_all():
   items = InventoryInfo.query.order_by(InventoryInfo.item_name) \
       .all()
-  return render_template('Inventory Log.html', items=items)
+  dict = {}
+  for collection in Collections.query.all():
+        dict[collection.collection_id] = collection.collection_name
+
+  return render_template('Inventory Log.html', items=items, dict=dict)
 
 
 @app.route('/InventoryLog/update/<int:product_id>', methods=['GET', 'POST'])
@@ -293,7 +308,6 @@ def items_view_all():
 def item_edit(product_id):
   if request.method == 'GET':
       item = InventoryInfo.query.filter_by(product_id=product_id).first()
-
 
       if item:
           return render_template('Input_Inventory.html', item=item, action='update')
@@ -314,20 +328,20 @@ def item_edit(product_id):
           item.xxlarge = request.form['xxlarge']
           item.price = request.form['price']
           item.desc = request.form['desc']
-          image = request.files['image']
+          product_image = request.files['product_image']
 
-          if('delete_product_image' in request.form or image != '') and 'current_product_image' != '' :
+          if('delete_product_image' in request.form or product_image != '') and 'current_product_image' != '' :
               try:
-                os.remove(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], item.image))
-                item.image = ''
+                os.remove(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], item.product_image))
+                item.product_image = ''
               except:
                 pass
 
-              filename = secure_filename(item.item_name + '-' + image.filename)
+              product_filename = secure_filename(item.item_name + '-' + product_image.filename)
 
-              if image.filename != '':
-                  image.save(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], filename))
-                  item.image = filename if image else ''
+              if product_image.filename != '':
+                  product_image.save(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], product_filename))
+                  item.product_image = product_filename if product_image else ''
 
           db.session.commit()
           flash(f'{item.item_name} was successfully updated!', 'success')
@@ -349,7 +363,7 @@ def item_delete(product_id):
   item = InventoryInfo.query.filter_by(product_id=product_id).first()
   if item:
         try:
-            os.remove(os.path.join(app.config['PRODUCT_UPLOAD_PATH'], item.image))
+            os.remove(os.path.join(app.config['PRODUCT_UPLOAD_PATH'], item.product_image))
         except FileNotFoundError:
             pass
         db.session.delete(item)
@@ -372,6 +386,7 @@ def inventory_entry():
       return render_template('Input_Inventory.html', action='create', collections=collections)
   elif request.method == 'POST':
       item_name = request.form['item_name']
+      collection_id = request.form['collection_id']
       xsmall = request.form['xsmall']
       small = request.form['small']
       medium = request.form['medium']
@@ -380,28 +395,23 @@ def inventory_entry():
       xxlarge = request.form['xxlarge']
       price = request.form['price']
       desc = request.form['desc']
-      image = request.files['image']
-      filename = secure_filename(item_name + '-' + image.filename)
+      product_image = request.files['product_image']
+      product_filename = secure_filename(item_name + '-' + product_image.filename)
 
-      if image.filename != '':
-          image.save(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], filename))
+      if product_image.filename != '':
+          product_image.save(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], product_filename))
 
-      items = InventoryInfo(item_name=item_name, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge,
-                        xxlarge=xxlarge, price=price, desc=desc, image=filename if image else '')
+      items = InventoryInfo(item_name=item_name, collection_id=collection_id, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge,
+                        xxlarge=xxlarge, price=price, desc=desc, product_image=product_filename if product_image else '')
 
       db.session.add(items)
       db.session.commit()
       flash(f'{item_name} was successfully added!', 'success')
       return redirect(url_for('items_view_all'))
 
-
-
-
   # Address issue where unsupported HTTP request method is attempted
   flash(f'Invalid request. Please contact support if this problem persists.', 'error')
   return redirect(url_for('homePage'))
-
-
 
 @app.route('/OrderConfirm')
 def OrderConfirm():
@@ -450,9 +460,79 @@ def Admin_Login():
        flash(f'{username} was successfully added!', 'success')
        return redirect(url_for('homePage'))
 
-@app.route('/cart')
-def Cart():
-    return render_template('cart.html')
+# @app.route('/cart')
+# def Cart():
+#     return render_template('cart.html')
+
+@app.route('/cart/clear')
+
+@login_required
+def clear_cart():
+    if 'cart' in session:
+        del(session['cart'])
+        flash(f"Cart Cleared", 'success')
+    else:
+        flash(f"Cart already empty", 'error')
+    return redirect(url_for('Shop'))
+
+@app.route('/cart/add/<int:product_id>', methods=['GET','POST'])
+@login_required
+def cart_add(product_id):
+    product = InventoryInfo.query.filter_by(product_id=product_id).first()
+    if 'product_quantity' in request.form:
+        product_quantity = int(request.form['product_quantity'])
+    elif request.method == 'GET':
+        product_quantity = 1
+
+    if product:
+        if 'cart' not in session:
+            session['cart'] = []
+
+        size = request.form['size']
+
+        found_item = next((item for item in session['cart'] if item['product_id'] == product_id), None)
+        if found_item:
+            found_item['product_quantity'] += product_quantity
+
+            if found_item['product_quantity'] > app.config['MAX_QUANTITY_PER_ITEM']:
+                found_item['product_quantity'] = app.config['MAX_QUANTITY_PER_ITEM']
+                flash(f"You cannot exceed more than {app.config['MAX_QUANTITY_PER_ITEM']} of the same item.")
+
+        else:
+            session['cart'].append(
+                {'product_id': product.product_id, 'item_name': product.item_name, 'size':size, 'price': product.price}
+            )
+
+        session['cart_total'] = sum(item['product_price']*item['product_quantity'] for item in session['cart'])
+
+        flash(f"{product.product_name} has been successfully added to your cart.", 'success')
+        return redirect(url_for('cart_view'))
+    else:
+        flash(f'Product could not be found. Please contact support if this problem persists.', 'error')
+
+@app.route('/cart/remove/<int:index>', methods=['GET'])
+@login_required
+def cart_remove(index):
+    if 'cart' in session:
+        if index < len(session['cart']):
+            product_name = session['cart'][index]['product_name']
+            session['cart'].pop(index)
+            flash(f"{product_name} has been successfully removed from your cart.", 'success')
+
+        else:
+            flash(f'Product is not in the cart and could not be removed.', 'error')
+
+    session['cart_total'] = sum(item['product_price'] * item['product_quantity'] for item in session['cart'])
+
+    return redirect(url_for('cart2'))
+
+@app.route('/cart', methods=['GET', 'POST'])
+@login_required
+def cart_view():
+    if 'cart' in session:
+        return render_template('cart2.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
+    else:
+        return render_template('cart2.html', cart_count=0)
 
 @app.route('/CollectionsLog')
 @login_required
