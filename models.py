@@ -91,7 +91,7 @@ class InventoryInfo(db.Model):
    large = db.Column(db.Integer, nullable=False)
    xlarge = db.Column(db.Integer, nullable=False)
    xxlarge = db.Column(db.Integer, nullable=False)
-   price = db.Column(db.Integer, nullable=False)
+   price = db.Column(db.Float, nullable=False)
    desc = db.Column(db.String(50), nullable=False)
    product_image = db.Column(db.String(100), nullable=True)
 
