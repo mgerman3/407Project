@@ -593,13 +593,19 @@ image.img-fluid{
     margin: 0 auto 80px;
 }
 
-p.carttotalsdata{
+/*div.carttotalsdata{*/
+/*    text-align: right;*/
+/*    margin: 0px;*/
+/*    font-size: 25px;*/
+/*}*/
+
+.carttotalsdata{
     text-align: right;
     margin: 0px;
     font-size: 25px;
-
 }
 
+input#flexRadioDefault1
 
 .page-btn span{
     display:inline-block;

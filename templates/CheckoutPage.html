@@ -122,46 +122,37 @@
                         <div class="billingTotals">
                             <!-- Creates fields within form to display total amount -->
                             <div class="row">
-
                                     <div class="border-box col" style="padding: 0px">
                                         <p class="cartTotalsLabels">Subtotal - </p>
                                     </div>
-
                                     <div class="border-box col" style="padding: 0px">
                                     <p class="carttotalsdata"> {{ "${:,.2f}".format(cart_total) }}</p>
                                     </div>
-
                             </div><hr>
                             <div class="row">
-                                <div class="border-box col" style="padding: 0px">
+                                <div class="border-box col-3" style="padding: 0px">
                                     <p class="cartTotalsLabels">Shipping - </p>
                                 </div>
-                                <div class="border-box col" style="padding: 0px 0px 10px 0px">
-                                    <!-- Creates three buttons for user to choose between different shipping method-->
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Local Pick Up:
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            Home Delivery
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
-                                        <label class="form-check-label" for="flexRadioDefault3">
-                                            Rapid Delivery
-                                        </label>
+                                <div class="border-box col-9" style="padding: 0px">
+                                <div class="form-select-container">
+                                <select name="role" id="role" class="form-select" aria-label=".form-select-md example">
+                                    <option value="0">---Select Shipping---</option>
+                                    <option name="local" id="local" value="0">Local Pick Up - FREE</option>
+                                    <option name="home" id="home" value="10">Home Delivery - $10.00</option>
+                                    <option name="rapid" id="rapid" value="20">Rapid Delivery - $20.00</option>
+                                </select>
+                            </div>
                                 </div>
+
                             </div><hr>
                             <!-- Creates additional fields within form to display total amount -->
                             <div class="row">
-                                <p class="cartTotalsLabels"><strong>Total -</strong></p>
-                                <div class="row">
-                                </div>
+                                    <div class="border-box col" style="padding: 0px">
+                                        <p class="cartTotalsLabels">Total - </p>
+                                    </div>
+                                    <div class="border-box col" style="padding: 0px">
+                                    <p class="carttotalsdata"> {{ "${:,.2f}".format(cart_total) }}</p>
+                                    </div>
                             </div>
                             <div class="row" style="justify-content: center">
                                 <!--Field to submit the users answers inputted into the form -->

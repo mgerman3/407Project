@@ -318,6 +318,8 @@ def CheckOut():
    # else:
    #     return render_template('CheckoutPage.html')
    if 'cart' in session:
+       session['cart_total'] = sum(item['price'] * item['product_quantity'] for item in session['cart'])
+
        return render_template('CheckoutPage.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
    else:
        return render_template('CheckoutPage.html', cart_count=0)
