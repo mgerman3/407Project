@@ -42,14 +42,14 @@
                         {% if current_user.is_authenticated %}
                             <div class = "row">
                                 <!--Field to collect users message -->
-                                <p class="formFieldsLabels">Review(*)</p>
+                                <p class="formFieldsLabels">Review*</p>
                                 <textarea rows="5" cols="20" placeholder="Enter your review here!" name="message" require></textarea>
                             </div>
                             <div class = "row">
                                 <!--Field to collect users ratings out of 5 on products purchased -->
-                                <p class="formFieldsLabels">Rating(*)</p>
-                                    <select name="rating" id="role" class="form-select" aria-label=".form-select-md example">
-                                        <option value="0">---Select A Rating---</option>
+                                <p class="formFieldsLabels">Rating*</p>
+                                    <select name="rating" id="role" class="form-select" placeholder="---Select A Rating---"aria-label=".form-select-md example" required>
+                                        <option value="" disabled selected>---Select A Rating---</option>
                                         <option name="one" id="one" value="1/5">1/5</option>
                                         <option name="two" id="two" value="2/5">2/5</option>
                                         <option name="three" id="three" value="3/5">3/5</option>
@@ -63,34 +63,34 @@
                             <div class="border-box col">
                                 <div class="row" style="padding-right: 15px">
                                     <!--Field to collect users first name -->
-                                    <p class="formFieldsLabels">First Name(*)<br></p>
+                                    <p class="formFieldsLabels">First Name*<br></p>
                                     <input type="text" class="inputFields" name="first_name" required>
                                 </div>
                             </div>
                             <div class="border-box col">
                                 <div class="row" style="padding-left: 15px">
                                     <!--Field to collect users last name -->
-                                    <p class="formFieldsLabels">Last Name(*)<br></p>
+                                    <p class="formFieldsLabels">Last Name*<br></p>
                                     <input type="text" class="inputFields" name="last_name" required><br><br>
                                 </div>
                             </div>
                         </div>
                         <div class = "row">
                             <!--Field to collect users email -->
-                            <p class="formFieldsLabels">Email(*)</p>
+                            <p class="formFieldsLabels">Email*</p>
                             <input type="email" class="inputFields" name="email" required><br><br>
                         </div>
 
                         <div class = "row">
                             <!--Field to collect users message -->
-                            <p class="formFieldsLabels">Review(*)</p>
+                            <p class="formFieldsLabels">Review*</p>
                             <textarea rows="5" cols="20" placeholder="Enter your review here!" name="message" require></textarea>
                         </div>
                         <div class = "row">
                             <!--Field to collect users numeric rating-->
-                            <p class="formFieldsLabels">Rating(*)</p>
-                                <select name="rating" id="role" class="form-select" aria-label=".form-select-md example">
-                                    <option value="0">---Select A Rating---</option>
+                            <p class="formFieldsLabels">Rating*</p>
+                                <select name="rating" id="role" class="form-select" aria-label=".form-select-md example" required>
+                                    <option value="" disabled selected>---Select A Rating---</option>
                                     <option name="one" id="one" value="1/5">1/5</option>
                                     <option name="two" id="two" value="2/5">2/5</option>
                                     <option name="three" id="three" value="3/5">3/5</option>
