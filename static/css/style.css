@@ -283,7 +283,7 @@ hr {
     text-align: center;
 }
 
-h2.left {
+.h2.left {
     text-align:left;
 }
 
@@ -422,6 +422,7 @@ dropdown button {
     padding: 10px 15px 10px 15px;
   font-size: 24px;
 }
+
 
 br {
    display: block;
@@ -797,6 +798,12 @@ input.btpos {
   border: 1px solid #ccc; /* Add a border around the container */
 }
 
+.my-div {
+  text-align: left;
+    font-weight: bold;
+      font-size: 28px;
+
+}
 
 /* Styling for Inventory Management */
 .invHeader {
@@ -858,3 +865,4 @@ input.btpos {
     flex-direction: column;
     min-height: 100%;
 }
+
