@@ -97,22 +97,17 @@ def RequestForm():
            email = request.form['email']
            message = request.form['message']
 
-
            requests = Requests(account_id=account_id, first_name=first_name, last_name=last_name, email=email, message=message)
-
 
        db.session.add(requests)
        db.session.commit()
 
-
        flash(f'Your request was received!', 'success')
        return redirect(url_for('RequestForm'))
-
 
    # Address issue where unsupported HTTP request method is attempted
    flash(f'Invalid request. Please contact support if this problem persists.', 'error')
    return redirect(url_for('homePage'))
-
 
 @app.route('/RequestsLog/Delete/<int:request_id>')
 @login_required
@@ -126,9 +121,7 @@ def requests_fulfilled(request_id):
   else:
       flash(f'Delete failed! Collection could not be found.', 'error')
 
-
   return redirect(url_for('requests_view_all'))
-
 
 @app.route('/ReviewForm', methods=['GET', 'POST'])
 def ReviewForm():
@@ -138,9 +131,7 @@ def ReviewForm():
        return render_template('ReviewForm.html', action='create', review=review)
    elif request.method == 'POST':
 
-
        if current_user.is_authenticated:
-
 
            account_id = current_user.account_id
            first_name = current_user.first_name
@@ -150,10 +141,8 @@ def ReviewForm():
            rating = request.form['rating']
            posted = False
 
-
            reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
                                message=message, rating=rating, posted=posted)
-
 
        else:
            account_id = None
@@ -164,24 +153,18 @@ def ReviewForm():
            rating = request.form['rating']
            posted = False
 
-
            reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
                                message=message, rating=rating, posted=posted)
-
 
        db.session.add(reviews)
        db.session.commit()
 
-
        flash(f'Your review was received! ATB will post it shortly.', 'success')
        return redirect(url_for('ReviewForm'))
-
 
        # Address issue where unsupported HTTP request method is attempted
    flash(f'Invalid request. Please contact support if this problem persists.', 'error')
    return redirect(url_for('homePage'))
-
-
 
 
 @app.route('/ReviewsLog')
@@ -548,10 +531,8 @@ def Banner():
 @role_required(['ADMIN'])
 def Admin_Login():
 
-
    if request.method == 'GET':
        return render_template('Admin_Login.html', action='create')
-
 
    elif request.method == 'POST':
       username = request.form['username']
@@ -561,24 +542,19 @@ def Admin_Login():
       email = request.form['email']
       role = request.form['role']
 
-
       sha_password = generate_password_hash(password, method='sha256', salt_length=8)
-
 
       user = Credentials(username=username, password=sha_password, first_name=first_name, last_name=last_name,
                           email=email, role=role)
-
 
       db.session.add(user)
       db.session.commit()
       flash(f'{username} was successfully added!', 'success')
       return redirect(url_for('homePage'))
 
-
-# @app.route('/cart')
-# def Cart():
-#     return render_template('cart.html')
-
+@app.route('/cart')
+def Cart():
+    return render_template('cart.html')
 
 @app.route('/cart/clear')
 @login_required
@@ -590,7 +566,6 @@ def clear_cart():
        flash(f"Cart already empty", 'error')
    return redirect(url_for('Shop'))
 
-
 @app.route('/cart/add/<int:product_id>', methods=['GET','POST'])
 @login_required
 def cart_add(product_id):
@@ -600,22 +575,18 @@ def cart_add(product_id):
    elif request.method == 'GET':
        product_quantity = 1
 
-
    if product:
        if 'cart' not in session:
            session['cart'] = []
-
 
        # size = request.form['size']
        found_item = next((item for item in session['cart'] if item['product_id'] == product_id), None)
        if found_item:
            found_item['product_quantity'] += product_quantity
 
-
            if found_item['product_quantity'] > app.config['MAX_QUANTITY_PER_ITEM']:
                found_item['product_quantity'] = app.config['MAX_QUANTITY_PER_ITEM']
                flash(f"You cannot exceed more than {app.config['MAX_QUANTITY_PER_ITEM']} of the same item.")
-
 
        else:
            session['cart'].append(
@@ -623,47 +594,35 @@ def cart_add(product_id):
                 'product_quantity': product_quantity, 'price': product.price}
            )
 
-
-       session['cart_total'] = 20
-           # sum(item['price']*item['product_quantity'] for item in session['cart'])
-
+       session['cart_total'] = sum(item['price']*item['product_quantity'] for item in session['cart'])
 
        flash(f"{product.item_name} has been successfully added to your cart.", 'success')
        return redirect(url_for('cart_view'))
    else:
        flash(f'Product could not be found. Please contact support if this problem persists.', 'error')
 
-
 @app.route('/cart/remove/<int:index>', methods=['GET'])
 @login_required
 def cart_remove(index):
    if 'cart' in session:
        if index < len(session['cart']):
-           item_name = session['cart'][index]['item_name']
+           product_name = session['cart'][index]['item_name']
            session['cart'].pop(index)
-           flash(f"{item_name} has been successfully removed from your cart.", 'success')
-
-
+           flash(f"{product_name} has been successfully removed from your cart.", 'success')
        else:
            flash(f'Product is not in the cart and could not be removed.', 'error')
 
-
    session['cart_total'] = sum(item['product_price'] * item['product_quantity'] for item in session['cart'])
 
-
-   return redirect(url_for('cart2'))
-
+   return redirect(url_for('cart_view'))
 
 @app.route('/cart/view', methods=['GET', 'POST'])
 @login_required
 def cart_view():
-   item = InventoryInfo.query.order_by(InventoryInfo.item_name) \
-       .all()
    if 'cart' in session:
        return render_template('cart2.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
    else:
        return render_template('cart2.html', cart_count=0)
-
 
 @app.route('/CollectionsLog')
 @login_required
@@ -672,7 +631,6 @@ def collections_view_all():
   collection = Collections.query.order_by(Collections.collection_id) \
       .all()
   return render_template('Collections Log.html', collection=collection)
-
 
 @app.route('/CollectionsInput', methods=['GET', 'POST'])
 @login_required
@@ -683,20 +641,16 @@ def collections_entry():
   elif request.method == 'POST':
       collection_name = request.form['collection_name']
 
-
       collection = Collections(collection_name=collection_name)
-
 
       db.session.add(collection)
       db.session.commit()
       flash(f'{collection_name} was successfully added!', 'success')
       return redirect(url_for('collections_view_all'))
 
-
   # Address issue where unsupported HTTP request method is attempted
   flash(f'Invalid request. Please contact support if this problem persists.', 'error')
   return redirect(url_for('homePage'))
-
 
 @app.route('/CollectionsLog/Update/<int:collection_id>', methods=['GET', 'POST'])
 @login_required
@@ -710,38 +664,26 @@ def collection_edit(collection_id):
           # collection_id = collection_id -= 1 OR SOMETHING LIKE THIS????????
           return render_template('Input_Collections.html', collection_id=collection_id, collection=collection, action='update')
 
-
       else:
           flash(f'Collection attempting to be edited could not be found!', 'error')
-
 
   elif request.method == 'POST':
       collection = Collections.query.filter_by(collection_id=collection_id).first()
 
-
       if collection:
           collection.collection_name = request.form['collection_name']
-
 
           db.session.commit()
           flash(f'{collection.collection_name} was successfully updated!', 'success')
       else:
           flash(f'Collection attempting to be edited could not be found!', 'error')
 
-
-
-
       return redirect(url_for('collections_view_all'))
-
-
 
 
   # Address issue where unsupported HTTP request method is attempted
   flash(f'Invalid request. Please contact support if this problem persists.', 'error')
   return redirect(url_for('collections_view_all'))
-
-
-
 
 @app.route('/CollectionsLog/Delete/<int:collection_id>')
 @login_required

@@ -16,7 +16,7 @@
 					<div class="col-lg-3">
                         &nbsp;
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-2">
 						<h3 class="bold">Item</h3>
 					</div>
 					<div class="col-lg-2">
@@ -24,6 +24,9 @@
 					</div>
 					<div class="col-lg-2">
 						<h3>Price</h3>
+					</div>
+                    <div class="col-lg-1">
+						<h3>Size</h3>
 					</div>
 					<div class="col-lg-2">
 						<h3>Total</h3>
@@ -39,25 +42,22 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-2">
 						<strong>{{ product['item_name'] }}</strong>
 						<br>
-						<p>
-                            <a href="{{ url_for('cart_remove', index=ns.item) }}" class="btn btn-danger btn-sm">Remove from Cart</a>
-						</p>
+                            <a href="{{ url_for('cart_remove', index=ns.item) }}" class="btn btn-danger btn-sm">Remove</a>
 					</div>
 					<div class="col-lg-2">
-						<p>
-							{{ product['product_quantity'] }}
-						</p>
+                        <strong>{{ product['product_quantity'] }}</strong>
 					</div>
 					<div class="col-lg-2">
-						<p>{{ product['price'] }}</p> <!-- format for price "${:,.2f}".format-->
+                        <strong>{{ "${:,.2f}".format(product['price']) }}</strong>
+					</div>
+                    <div class="col-lg-1">
+						<strong> M </strong>
 					</div>
 					<div class="col-lg-2">
-						<p>
-							<strong>{{ product['price'] }}</strong> <!-- multiply by quantity-->
-						</p>
+						<strong>{{ "${:,.2f}".format(product['price']*product['product_quantity'])}}</strong> <!-- multiply by quantity-->
 					</div>
 				</div>
                 {% set ns.item = ns.item + 1 %}
@@ -73,7 +73,7 @@
 
         <ul class="list-group">
             <li class="list-group-item">
-                <p>{{ cart_count }} Item{{ 's' if cart_count != 1 else '' }} | FREE Shipping!</p>
+                <p>{{ cart_count }} Item{{ 's' if cart_count != 1 else '' }} | Shipping Selected at Checkout!</p>
 
             </li>
             <li class="list-group-item">
