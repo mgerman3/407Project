@@ -586,27 +586,62 @@ def cart_add(product_id):
                 if found_item['product_quantity'] > product.xsmall:
                     found_item['product_quantity'] = product.xsmall
                     flash(f"Sorry, we only have {product.xsmall} X-Small in stock.")
+                if found_item['size'] not in session:
+                    session['cart'].append(
+                        {'product_id': product.product_id, 'item_name': product.item_name, 'size': size,
+                         'product_image': product.product_image,
+                         'product_quantity': product_quantity, 'price': product.price}
+                    )
            if found_item['size'] == 'Small':
                 if found_item['product_quantity'] > product.small:
                     found_item['product_quantity'] = product.small
                     flash(f"Sorry, we only have {product.small} Small in stock.")
+                if found_item['size'] not in session:
+                    session['cart'].append(
+                        {'product_id': product.product_id, 'item_name': product.item_name, 'size': size,
+                         'product_image': product.product_image,
+                         'product_quantity': product_quantity, 'price': product.price}
+                    )
            if found_item['size'] == 'Medium':
                 if found_item['product_quantity'] > product.medium:
                     found_item['product_quantity'] = product.medium
                     flash(f"Sorry, we only have {product.medium} Medium in stock.")
+                if found_item['size'] not in session:
+                    session['cart'].append(
+                        {'product_id': product.product_id, 'item_name': product.item_name, 'size': size,
+                         'product_image': product.product_image,
+                         'product_quantity': product_quantity, 'price': product.price}
+                    )
            if found_item['size'] == 'Large':
                 if found_item['product_quantity'] > product.large:
                     found_item['product_quantity'] = product.large
                     flash(f"Sorry, we only have {product.large} Large in stock.")
+                if found_item['size'] not in session:
+                    session['cart'].append(
+                        {'product_id': product.product_id, 'item_name': product.item_name, 'size': size,
+                         'product_image': product.product_image,
+                         'product_quantity': product_quantity, 'price': product.price}
+                    )
            if found_item['size'] == 'X-Large':
                 if found_item['product_quantity'] > product.xlarge:
                     found_item['product_quantity'] = product.xlarge
                     flash(f"Sorry, we only have {product.xlarge} X-Large in stock.")
+                if found_item['size'] not in session:
+                    session['cart'].append(
+                        {'product_id': product.product_id, 'item_name': product.item_name, 'size': size,
+                         'product_image': product.product_image,
+                         'product_quantity': product_quantity, 'price': product.price}
+                    )
            if found_item['size'] == 'XX-Large':
                 if found_item['product_quantity'] > product.xxlarge:
                     found_item['product_quantity'] = product.xxlarge
                     flash(f"Sorry, we only have {product.xxlarge} XX-Large in stock.")
-
+                if found_item['size'] not in session:
+                    session['cart'].append(
+                        {'product_id': product.product_id, 'item_name': product.item_name, 'size': size,
+                         'product_image': product.product_image,
+                         'product_quantity': product_quantity, 'price': product.price}
+                    )
        else:
             size = request.form['size']
             if size == 'X-Small':
