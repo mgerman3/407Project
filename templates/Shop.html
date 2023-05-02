@@ -2,43 +2,76 @@
 
 {% block page_title %} Shop {% endblock %}
 
-<!--{% block page_head %}-->
-<!--Welcome to ATB Shop!-->
-<!--{% endblock %}-->
 {% block page_content %}
 
-<div class="row">
-	{% for item  in items %}
-	<div class="col-lg-3">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div class="thumbnail">
-                {% if item['product_image'] %}
-<!-- inserting picture for product -->
-				<a href="{{ url_for('GenProduct', product_id=item.product_id) }}">
-					<img class="img-fluid" src="{{ url_for('static', filename='/products/' +item['product_image']) }}" alt="Picture of {{ item['item_name'] }}">
-				</a>
-                {% endif %}
-				<div class="caption text-center">
-					<h4 class="bold">{{ item.item_name }}</h4>
-					<p>
-						{{ item.desc }}
-					</p>
-					<hr>
-					<p>
-                        <div>
-                            <a href="{{ url_for('GenProduct', product_id=item.product_id) }}" class="btn btn-primary btn-sm">View</a>
-                        </div>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-    <div class="col-lg-1">
-        &nbsp;
+    <div class="row" style="align-content: center">
+        <!--Image for top of shop page-->
+        <img src="static/images/Spring Pink Map.jpg" width="200" height="250" alt="Around the Block Spring Pink Map" class="cover">
     </div>
-	{% endfor %}
-</div>
 
+    <!--Header greeting text-->
+    <div class="GenProduct_HeadingSpacer"></div>
+    <div class="row" style="padding-left: 5px">
+        <h1 class="Clothes for you!"><strong>Clothes for you!</strong></h1>
+    </div>
+
+     <!--filter buttons for shop page - price, availability, and review customers will be able to filer the products by-->
+    <div class="row">
+    <div class="inline" style="10px">
+    <div class="dropdown">
+        <button class="input">Price</button>
+        <div class="dropdown-content">
+            <a href="#">under $30</a>
+            <a href="#">under $50</a>
+            <a href="#">under $100</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="input">Availability</button>
+        <div class="dropdown-content">
+            <a href="#">In Stock</a>
+            <a href="#">Out of Stock</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="input">Collection</button>
+        <div class="dropdown-content">
+            <a href="#">High to Low</a>
+        </div>
+    </div>
+    </div>
+    </div>
+    <br>
+
+    <div class="row">
+        {% for item  in items %}
+        <div class="col-lg-3">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="thumbnail">
+                    {% if item['product_image'] %}
+                    <!-- inserting picture for product -->
+                    <a href="{{ url_for('GenProduct', product_id=item.product_id) }}">
+                        <img class="img-fluid" src="{{ url_for('static', filename='/products/' +item['product_image']) }}" alt="Picture of {{ item['item_name'] }}" style="width: 300px; height: 300px;">
+                    </a>
+                    {% endif %}
+                    <div class="caption text-center">
+                        <h4 class="bold">{{ item.item_name }}</h4>
+                        <p>
+                            {{ item.desc }}
+                        </p>
+                        <hr>
+                        <p>
+                            <div>
+                                <a href="{{ url_for('GenProduct', product_id=item.product_id) }}" class="btn btn-primary btn-sm">View</a>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+        {% endfor %}
+    </div>
 
 {% endblock %}
 
