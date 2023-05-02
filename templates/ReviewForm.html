@@ -51,11 +51,11 @@
                                 <div class="form-select-container">
                                     <select name="rating" id="role" class="form-select" aria-label=".form-select-md example">
                                         <option value="0">---Select A Rating---</option>
-                                        <option name="one" id="one" value="1">1</option>
-                                        <option name="two" id="two" value="2">2</option>
-                                        <option name="three" id="three" value="3">3</option>
-                                        <option name="four" id="four" value="4">4</option>
-                                        <option name="five" id="five" value="5">5</option>
+                                        <option name="one" id="one" value="1/5">1/5</option>
+                                        <option name="two" id="two" value="2/5">2/5</option>
+                                        <option name="three" id="three" value="3/5">3/5</option>
+                                        <option name="four" id="four" value="4/5">4/5</option>
+                                        <option name="five" id="five" value="5/5">5/5</option>
                                     </select>
                                 </div>
                             </div>
@@ -94,11 +94,11 @@
                             <div class="form-select-container">
                                 <select name="rating" id="role" class="form-select" aria-label=".form-select-md example">
                                     <option value="0">---Select A Rating---</option>
-                                    <option name="one" id="one" value="1">1</option>
-                                    <option name="two" id="two" value="2">2</option>
-                                    <option name="three" id="three" value="3">3</option>
-                                    <option name="four" id="four" value="4">4</option>
-                                    <option name="five" id="five" value="5">5</option>
+                                    <option name="one" id="one" value="1/5">1/5</option>
+                                    <option name="two" id="two" value="2/5">2/5</option>
+                                    <option name="three" id="three" value="3/5">3/5</option>
+                                    <option name="four" id="four" value="4/5">4/5</option>
+                                    <option name="five" id="five" value="5/5">5/5</option>
                                 </select>
                             </div>
                         </div>
@@ -133,23 +133,25 @@
 
     <!-- Creation of table to show all posted reviews -->
     <div class="cartPlaceholder" style="position: relative; height: auto; min-height: 100%; padding-bottom: 7px;">
+        <!-- Adds alternate coloring to the reviews table -->
         <table class="table table-striped">
-            <div class="row">
-            <div class="col">
-            <tr>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Message</th>
-                <th scope="col">Rating</th>
-            </tr>
-
+            <!-- Sets column widths to the table to evenly space out each of the elements -->
+            <colgroup>
+                <col width="33.3%">
+                <col width="33.3%">
+                <col width="33.3%">
+            </colgroup>
+            <!-- Loops through all reviews -->
             {% for each_review in review %}
+                <!-- Selects reviews which have been approved to be posted -->
                 {% if each_review['posted'] == 1 %}
                     <tr>
-                        <td> {{ each_review['first_name'] }}</td>
-                        <td> {{ each_review['last_name'] }}</td>
-                        <td class = "wrap"> {{ each_review['message'] }}</td>
-                        <td> {{ each_review['rating'] }}</td>
+                        <!-- Combines first and last name to make one name record and print it out -->
+                        <td> {{ each_review['first_name'] }} {{ each_review['last_name'] }} </td>
+                        <!-- prints out customer review -->
+                        <td class = "wrap" class="cartItemLabels"> {{ each_review['message'] }}</td>
+                        <!-- prints out numerical review given -->
+                        <td class = "cartItemLabels"> {{ each_review['rating'] }}</td>
                     </tr>
                 {% endif %}
              {% endfor %}
@@ -159,16 +161,5 @@
 
     <!-- adds spacing between bottom of all text content and footer -->
     <div class="GenProduct_HeadingSpacer"></div>
-
-{#     {% for each_review in review %}#}
-{#       {% if each_review['posted'] == 1 %}#}
-{#           <td>{{ each_review['first_name'] }}</td>#}
-{#           <td>{{ each_review['last_name'] }}</td>#}
-{#           <td class="wrap"><pre>Review: {{ each_review['message'] }}</pre></td>#}
-{#           <td><pre>Stars: {{ each_review['rating'] }}/5</pre></td>#}
-{#           <br>#}
-{#        {% endif %}#}
-{#       </tr>#}
-{#    {% endfor %}#}
 
 {% endblock %}

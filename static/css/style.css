@@ -300,6 +300,10 @@ text.left {
     text-align:left;
 }
 
+.textRight {
+    text-align: right;
+}
+
 .center {
   margin: auto;
   width: 50%;
