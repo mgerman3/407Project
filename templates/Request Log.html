@@ -48,6 +48,22 @@
                {% endif %}
            </td>
        </tr>
+{#           {% else %}#}
+{#       <tr>#}
+{#        <tr>#}
+{#           <td>{{ each_request['request_id'] }}</td>#}
+{#           <td>{{ each_request['account_id'] }}</td>#}
+{#           <td>{{ each_user['first_name'] }}</td>#}
+{#           <td>{{ each_request['last_name'] }}</td>#}
+{#           <td>{{ each_request['email'] }}</td>#}
+{##}
+{#            <td class="wrap">{{ each_request['message'] }}</td>#}
+{#           <td>#}
+{#               {% if current_user.role in ['ADMIN'] %}#}
+{#               <a href="{{ url_for('requests_fulfilled', request_id=each_request['request_id']) }}" class="btn btn-secondary" type = "submit" role="button">Fulfilled</a>#}
+{#               {% endif %}#}
+{#           </td>#}
+{#       </tr>#}
            {% endfor %}
 
    </table>
