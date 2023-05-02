@@ -51,19 +51,17 @@
           <div class="GenProduct_spacer">
 <!-- size and quantity buttons and dropdowns-->
                   <h4>Select a Size</h4>
-                  <input type="radio" name="Button" class="ButtonState" checked id="XS" value="X-Small">
-                  <label for="X-Small">X-Small</label>
-                  <input type="radio" name="Button" class="ButtonState" checked id="S" value="Small">
-                  <label for="Small">Small</label>
-                  <input type="radio" name="Button" class="ButtonState" checked id="M" value="Medium">
-                  <label for="Medium">Medium</label>
-                  <input type="radio" name="Button" class="ButtonState" checked id="L" value="Large">
-                  <label for="Large">Large</label>
-                  <input type="radio" name="Button" class="ButtonState" checked id="XL" value="XLarge">
-                  <label for="Medium">XL</label>
-                  <input type="radio" name="Button" class="ButtonState" checked id="XXL" value="XXLarge">
-                  <label for="XXLarge">XXL</label>
-              </div>
+                    <div class="form-select-container">
+                        <select name="role" id="role" class="form-select" aria-label=".form-select-md example">
+                            <option value="0">---Select A Size---</option>
+                            <option name="X-Small" id="size" value="X-Small">X-Small</option>
+                            <option name="Small" id="size" value="Small">Small</option>
+                            <option name="Medium" id="size" value="Medium">Medium</option>
+                            <option name="Large" id="size" value="Large">Large</option>
+                            <option name="XLarge" id="size" value="XLarge">XLarge</option>
+                            <option name="XXLarge" id="size" value="XXLarge">XXLarge</option>
+                        </select>
+                    </div>
        </div>
         <form action="{{ url_for('cart_add', product_id=item['product_id']) }}" method="POST"> <!-- add_to_cart -->
             <div class="row">
