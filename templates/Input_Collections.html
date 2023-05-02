@@ -36,6 +36,16 @@
                                          <div class = "border-box-col">
                                              <div class="row">
                                                  <div class="row">
+
+                                                 <!-- set up the action for the form -->
+                                                   {% if action and action in ['create', 'update'] %}
+                                                    <form class="row g-4"
+                                                          action="{{ url_for('collection_edit', collection_id=collection['collection_id']) if item else url_for('collections_entry') }}"
+                                                          enctype="multipart/form-data" method="post">
+                                                    {% else %}
+                                                        <div class="row g-4">
+                                                    {% endif %}
+
                                                     <!-- Collection Name Input -->
                                                      {% if action and action in ['create'] %}
                                                      <label for="collection_name" class="form-label"><strong>Collection Name</strong></label>
