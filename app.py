@@ -312,11 +312,15 @@ def logout():
 
 @app.route('/CheckOut', methods=['GET', 'POST'])
 def CheckOut():
-   if request.method == 'POST':
-       # return render_template('CheckoutPage.html', form_submitted=True)
-       return render_template('Order Confirmation.html')
+   # if request.method == 'POST':
+   #     # return render_template('CheckoutPage.html', form_submitted=True)
+   #     return render_template('Order Confirmation.html')
+   # else:
+   #     return render_template('CheckoutPage.html')
+   if 'cart' in session:
+       return render_template('CheckoutPage.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
    else:
-       return render_template('CheckoutPage.html')
+       return render_template('CheckoutPage.html', cart_count=0)
 
 
 @app.route('/GenericProduct/<int:product_id>')
@@ -583,12 +587,11 @@ def cart_add(product_id):
            )
 
 
-       session['cart_total'] = 20
-           # sum(item['price']*item['product_quantity'] for item in session['cart'])
+       session['cart_total'] = sum(item['price']*item['product_quantity'] for item in session['cart'])
 
 
        flash(f"{product.item_name} has been successfully added to your cart.", 'success')
-       return redirect(url_for('cart_view'))
+       return redirect(url_for('CheckOut'))
    else:
        flash(f'Product could not be found. Please contact support if this problem persists.', 'error')
 
@@ -606,20 +609,20 @@ def cart_remove(index):
            flash(f'Product is not in the cart and could not be removed.', 'error')
 
 
-   session['cart_total'] = sum(item['product_price'] * item['product_quantity'] for item in session['cart'])
+   session['cart_total'] = sum(item['price'] * item['product_quantity'] for item in session['cart'])
 
 
-   return redirect(url_for('cart2'))
+   return redirect(url_for('CheckOut'))
 
-@app.route('/cart/view', methods=['GET', 'POST'])
-@login_required
-def cart_view():
-   item = InventoryInfo.query.order_by(InventoryInfo.item_name) \
-       .all()
-   if 'cart' in session:
-       return render_template('cart2.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
-   else:
-       return render_template('cart2.html', cart_count=0)
+# @app.route('/cart/view', methods=['GET', 'POST'])
+# @login_required
+# def cart_view():
+#    # item = InventoryInfo.query.order_by(InventoryInfo.item_name) \
+#    #     .all()
+#    if 'cart' in session:
+#        return render_template('CheckoutPage.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
+#    else:
+#        return render_template('CheckoutPage.html', cart_count=0)
 
 @app.route('/CollectionsLog')
 @login_required

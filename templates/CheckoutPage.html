@@ -4,141 +4,65 @@
 {% block title %}Check Out{% endblock %}
 
 {% block page_content %}
-        <!-- conditional formatting to show confirmation message to users after completing the form -->
-        {% if form_submitted %}
-            <div class="row">
-                <div class="checkoutHeader" style="padding: 20px">
-                    <!-- Message outputted to user after form completed -->
-                    <h2>Thank you for your order!</h2><br>
-                </div>
-            </div>
-            <!-- Outputting information regarding products ordered entered by the user -->
-            <div class="row">
-                <div class="postFormLabels">
-                    <p>Products Ordered:</p>
-                </div>
-            <div class="postFormLabels">
-                    <p>{{ request.form.get(products)}}</p>
-            </div>
-            </div>
-             <!-- Outputting information regarding first name entered by the user -->
-            <div class="row">
-                <div class="postFormLabels">
-                    <p>First Name:</p>
-                </div>
-                <div class="postFormLabels">
-                    <p>{{ request.form.get('first_name')}}</p>
-                </div>
-            </div>
-            <!-- Outputting information regarding last name entered by the user -->
-            <div class="row">
-                <div class="postFormLabels">
-                    <p>Last Name:</p>
-                </div>
-                <div class="postFormLabels">
-                    <p>{{ request.form.get('last_name')}}</p>
-                </div>
-            </div>
-            <!-- Outputting information regarding address 1 entered by the user -->
-            <div class="row">
-               <div class="postFormLabels">
-                    <p>Address 1:</p>
-                </div>
-                <div class="postFormLabels">
-                    <p>{{ request.form.get('address1')}}</p>
-                </div>
-            </div>
-            <!-- Outputting information regarding address 2 entered by the user -->
-            <div class="row">
-                <div class="postFormLabels">
-                    <p>Address 2:</p>
-                </div>
-                <div class="postFormLabels">
-                    <p>{{ request.form.get('address2')}}</p>
-                </div>
-            </div>
-            <!-- Outputting information regarding city entered by the user -->
-            <div class="row">
-                <div class="postFormLabels">
-                    <p>City:</p>
-                </div>
-                <div class="postFormLabels">
-                    <p>{{ request.form.get('city')}}</p>
-                </div>
-            </div>
-            <!-- Outputting information regarding state entered by the user -->
-            <div class="row">
-                <div class="postFormLabels">
-                    <p>State:</p>
-                </div>
-                <div class="postFormLabels">
-                    <p>{{ request.form.get('state')}}</p>
-                </div>
-            </div>
-            <!-- Outputting information regarding zip code entered by the user -->
-            <div class="row">
-                <div class="postFormLabels">
-                    <p>Zip code:</p>
-                </div>
-                <div class="postFormLabels">
-                    <p>{{ request.form.get('zipcode')}}</p>
-                </div>
-            </div>
-            <!--Creates form to collection customer's requests-->
-            {% else %}
-        <!--  Creates form to collection customer's cart information -->
-        <form action="{{ url_for('CheckOut') }}" method="post">
-        <div class="checkoutItemCoupon" style="padding-left: 24px">
-            <div class="row" style="padding-top: 25px;">
-                 <!--  Creates heading for the entire form -->
-                <h1 class="checkoutHeader"><strong>Checkout</strong></h1>
-            </div>
-            <div class="cartPlaceholder" style="position: relative; height: auto; min-height: 100%; padding-bottom: 7px;">
-                <div class=”cartHeader”>
-                    <h3 class=”Head” style="padding: 5px 5px 0px 5px; margin: 0px;" >Items</h3>
-                    <div class="cart-item">
-                         <!--  Heading information in tabular format about products added to cart -->
-                        <h5 class="item-info">Type</h5>
-                        <h5 class="item-info">Quantity</h5>
-                        <h5 class="item-info">Size</h5>
-                        <h5 class="item-info">Price</h5>
-                    </div>
-                        <div class="cart-item">
-                            <div class="cart-item-image">
-                                 <!--  Displays thumbnail of item placed in cart -->
-                                <img src="static/images/Shop_ClothingItem1.png" alt="item" width="100" height="100" style="margin-bottom: 7px" >
-                            </div>
-                            <div class="cart-item-details">
-                                <div class="cart-item-title">
-                                     <!--  Displays the type of item added to the cart -->
-                                    <p class="cartItemLabels">Crewneck</p> <!--{ item.title }}-->
-                                </div>
-                            </div>
-                                <!--  Displays the quantity an item added to the cart -->
-                                <div class=”cart-counter”>
-                                    <input class="item-info" type=number min=1 max=5 value="1"> <!--{ item.quantity }}-->
-                                </div>
-                                <!--  Displays the size of item added to the cart -->
-                                <div class="cart-item-size">
-                                    <p class="cartItemLabels">M</p> <!--{ item.size }}-->
-                                </div>
-                                <!--  Displays the price of item added to the cart -->
-                                <div class="cart-item-price">
-                                    <p class="cartItemLabels">$42.00 USD</p> <!--{ item.price }}-->
-                                    <!--  Ability to delete already added items to the cart -->
-                                    <div class="remove">Remove</div>
-                                </div>
-                            </div>
+{% if cart_count > 0 %}
+           <div class="row">
+              <div class="col-lg-3">
 
-                    <!-- % endfor %} -->
-                </div>
-            </div>
-        </div>
+              </div>
+              <div class="col-lg-2">
+                 <h3 class="bold">Item</h3>
+              </div>
+              <div class="col-lg-2">
+                 <h3>Quantity</h3>
+              </div>
+              <div class="col-lg-2">
+                 <h3>Price</h3>
+              </div>
+                   <div class="col-lg-1">
+                 <h3>Size</h3>
+              </div>
+              <div class="col-lg-2">
+                 <h3>Total</h3>
+              </div>
+           </div>
+               {% set ns = namespace(item = 0) %}
+           {% for product in products %}
+           <div class="row mb-3">
+              <div class="col-lg-3">
+                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="thumbnail thumbnail-q">
+                       <img class="img-fluid" src="{{ url_for('static', filename='/products/' + product['product_image']) }}" alt="Picture of {{ product['item_name'] }}">
+                    </div>
+                 </div>
+              </div>
+              <div class="col-lg-2">
+                 <strong>{{ product['item_name'] }}</strong>
+                 <br>
+                           <a href="{{ url_for('cart_remove', index=ns.item) }}" class="btn btn-danger btn-sm">Remove</a>
+              </div>
+              <div class="col-lg-2">
+                       <strong>{{ product['product_quantity'] }}</strong>
+              </div>
+              <div class="col-lg-2">
+                       <strong>{{ "${:,.2f}".format(product['price']) }}</strong>
+              </div>
+                   <div class="col-lg-1">
+                 <strong> M </strong>
+              </div>
+              <div class="col-lg-2">
+                 <strong>{{ "${:,.2f}".format(product['price']*product['product_quantity'])}}</strong> <!-- multiply by quantity-->
+              </div>
+           </div>
+               {% set ns.item = ns.item + 1 %}
+           {% endfor %}
+       {% else %}
+           <a>Your cart is currently empty. <a href="{{ url_for('homePage') }}">Continue shopping</a> to add items to your cart.</p>
+       {% endif %}
 
        <!-- Creates Shipping Information form -->
         <div class="inputBoxTotal" style="padding-left: 24px">
             <div class="row">
-                <div class="border-box col">
+                <div class="border-box col-7">
                     <!--  Heading for the entire form -->
                     <h2 class="checkoutHeader"><strong>Shipping Information</strong></h2><br><br>
                     <div class="formInputFields">
@@ -192,14 +116,22 @@
                 </div>
 
                 <!-- Creates cart pricing information form -->
-                <div class="border-box col">
+                <div class="border-box col-5">
                     <!-- Heading for entire form -->
                     <h2 class="checkoutHeader"><strong>Cart Totals</strong></h2><br><br>
                         <div class="billingTotals">
                             <!-- Creates fields within form to display total amount -->
                             <div class="row">
-                                <p class="cartTotalsLabels">Subtotal -</p><hr>
-                            </div>
+
+                                    <div class="border-box col" style="padding: 0px">
+                                        <p class="cartTotalsLabels">Subtotal - </p>
+                                    </div>
+
+                                    <div class="border-box col" style="padding: 0px">
+                                    <p class="carttotalsdata"> {{ "${:,.2f}".format(cart_total) }}</p>
+                                    </div>
+
+                            </div><hr>
                             <div class="row">
                                 <div class="border-box col" style="padding: 0px">
                                     <p class="cartTotalsLabels">Shipping - </p>
@@ -241,5 +173,4 @@
         </div>
 
         </form>
-        {% endif %}
 {% endblock %}
