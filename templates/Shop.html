@@ -2,8 +2,9 @@
 
 {% block page_title %} Shop {% endblock %}
 
-{% block page_head %} Welcome to ATB Shop! {% endblock %}
-
+<!--{% block page_head %}-->
+<!--Welcome to ATB Shop!-->
+<!--{% endblock %}-->
 {% block page_content %}
 
 <div class="row">
@@ -14,7 +15,7 @@
                 {% if item['product_image'] %}
 <!-- inserting picture for product -->
 				<a href="{{ url_for('GenProduct', product_id=item.product_id) }}">
-					<img class="img-fluid" src="{{ url_for('static', filename='/products/' + item['product_image']) }}" alt="Picture of {{ item['item_name'] }}">
+					<img class="img-fluid" src="{{ url_for('static', filename='/products/' +item['product_image']) }}" alt="Picture of {{ item['item_name'] }}">
 				</a>
                 {% endif %}
 				<div class="caption text-center">

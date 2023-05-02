@@ -76,7 +76,7 @@ a.footerItems, p.footerItems {
           </ul>
         </li>
       {% endif %}
-          <li><a class="dropbtn" href="/cart"><img src="../static/images/cart.png" alt="Bootstrap" width="30" height="24"></a></li>
+          <li><a class="dropbtn" href="{{ url_for('cart_view') }}"><img src="../static/images/cart.png" alt="Bootstrap" width="30" height="24"></a></li>
       </ul>
             {% if current_user.is_authenticated %}
                <div class="navbar-collapse collapse w-50 order-3 dual-collapse2">

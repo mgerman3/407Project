@@ -92,7 +92,7 @@ class InventoryInfo(db.Model):
    large = db.Column(db.Integer, nullable=False)
    xlarge = db.Column(db.Integer, nullable=False)
    xxlarge = db.Column(db.Integer, nullable=False)
-   price = db.Column(db.Integer, nullable=False)
+   price = db.Column(db.Float, nullable=False)
    desc = db.Column(db.String(50), nullable=False)
    product_image = db.Column(db.String(100))
 
@@ -188,26 +188,4 @@ class Reviews(db.Model):
 
     def __repr__(self):
         return f"{self.first_name}{self.last_name}{self.message}"
-
-# class approvedReviews(db.Model):
-#     __tablename__ = "approvedReviews"
 #
-#     review_id = db.Column(db.Integer, primary_key=True)
-#     account_id = db.Column(db.Integer, db.ForeignKey('Credentials.account_id'), nullable=True)
-#     first_name = db.Column(db.String(30), nullable=True)
-#     last_name = db.Column(db.String(50), nullable=True)
-#     email = db.Column(db.String(60), nullable=True)
-#     message = db.Column(db.String(200), nullable=False)
-#     rating = db.Column(db.String(20), nullable=False)
-#
-#     def __init__(self, account_id, first_name, last_name, email, message, rating):
-#         self.account_id = account_id
-#         self.first_name = first_name
-#         self.last_name = last_name
-#         self.email = email
-#         self.message = message
-#         self.rating = rating
-
-    #
-    # def __repr__(self):
-    #     return f"{self.first_name}{self.last_name}{self.message}"
