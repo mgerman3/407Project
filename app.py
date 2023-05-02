@@ -317,6 +317,7 @@ def CheckOut():
    #     return render_template('Order Confirmation.html')
    # else:
    #     return render_template('CheckoutPage.html')
+   # size = 3
    if 'cart' in session:
        session['cart_total'] = sum(item['price'] * item['product_quantity'] for item in session['cart'])
 
@@ -560,37 +561,105 @@ def clear_cart():
 @login_required
 def cart_add(product_id):
    product = InventoryInfo.query.filter_by(product_id=product_id).first()
+
    if 'product_quantity' in request.form:
        product_quantity = int(request.form['product_quantity'])
    elif request.method == 'GET':
        product_quantity = 1
 
-
    if product:
        if 'cart' not in session:
            session['cart'] = []
 
-
-       # size = request.form['size']
        found_item = next((item for item in session['cart'] if item['product_id'] == product_id), None)
+
        if found_item:
            found_item['product_quantity'] += product_quantity
+           size = request.form['size']
+           found_item['size'] = size
+           found_item = next((item for item in session['cart'] if item['size'] == size), None)
 
-
-           if found_item['product_quantity'] > app.config['MAX_QUANTITY_PER_ITEM']:
-               found_item['product_quantity'] = app.config['MAX_QUANTITY_PER_ITEM']
-               flash(f"You cannot exceed more than {app.config['MAX_QUANTITY_PER_ITEM']} of the same item.")
-
+           # if found_item['product_quantity'] > app.config['MAX_QUANTITY_PER_ITEM']:
+           #     found_item['product_quantity'] = app.config['MAX_QUANTITY_PER_ITEM']
+           #     flash(f"You cannot exceed more than {app.config['MAX_QUANTITY_PER_ITEM']} of the same item.")
+           if found_item['size'] == 'X-Small':
+                if found_item['product_quantity'] > product.xsmall:
+                    found_item['product_quantity'] = product.xsmall
+                    flash(f"Sorry, we only have {product.xsmall} X-Small in stock.")
+           if found_item['size'] == 'Small':
+                if found_item['product_quantity'] > product.small:
+                    found_item['product_quantity'] = product.small
+                    flash(f"Sorry, we only have {product.small} Small in stock.")
+           if found_item['size'] == 'Medium':
+                if found_item['product_quantity'] > product.medium:
+                    found_item['product_quantity'] = product.medium
+                    flash(f"Sorry, we only have {product.medium} Medium in stock.")
+           if found_item['size'] == 'Large':
+                if found_item['product_quantity'] > product.large:
+                    found_item['product_quantity'] = product.large
+                    flash(f"Sorry, we only have {product.large} Large in stock.")
+           if found_item['size'] == 'X-Large':
+                if found_item['product_quantity'] > product.xlarge:
+                    found_item['product_quantity'] = product.xlarge
+                    flash(f"Sorry, we only have {product.xlarge} X-Large in stock.")
+           if found_item['size'] == 'XX-Large':
+                if found_item['product_quantity'] > product.xxlarge:
+                    found_item['product_quantity'] = product.xxlarge
+                    flash(f"Sorry, we only have {product.xxlarge} XX-Large in stock.")
 
        else:
-           session['cart'].append(
-               {'product_id': product.product_id, 'item_name': product.item_name, 'product_image':product.product_image,
-                'product_quantity': product_quantity, 'price': product.price}
-           )
+            size = request.form['size']
+            if size == 'X-Small':
+                if product_quantity > product.xsmall:
+                    if product.xsmall == 0:
+                        flash(f"Sorry, we are out of stock for this size.")
+                        return redirect(url_for('GenProduct', product_id=product_id))
+                    product_quantity = product.xsmall
+                    flash(f"You cannot exceed more than {product.xsmall} of the same item.")
+            if size == 'Small':
+                 if product_quantity > product.small:
+                     if product.small == 0:
+                            flash(f"Sorry, we are out of stock for this size.")
+                            return redirect(url_for('GenProduct', product_id=product_id))
+                     product_quantity = product.small
+                     flash(f"You cannot exceed more than {product.small} of the same item.")
+            if size == 'Medium':
+                    if product_quantity > product.medium:
+                        if product.medium == 0:
+                            flash(f"Sorry, we are out of stock for this size.")
+                            return redirect(url_for('GenProduct', product_id=product_id))
+                        product_quantity = product.medium
+                        flash(f"You cannot exceed more than {product.medium} of the same item.")
+            if size == 'Large':
+                    if product_quantity > product.large:
+                        if product.large == 0:
+                            flash(f"Sorry, we are out of stock for this size.")
+                            return redirect(url_for('GenProduct', product_id=product_id))
+                        product_quantity = product.large
+                        flash(f"You cannot exceed more than {product.large} of the same item.")
+            if size == 'X-Large':
+                    if product_quantity > product.xlarge:
+                        if product.xlarge == 0:
+                            flash(f"Sorry, we are out of stock for this size.")
+                            return redirect(url_for('GenProduct', product_id=product_id))
+                        product_quantity = product.xlarge
+                        flash(f"You cannot exceed more than {product.xlarge} of the same item.")
+            if size == 'XX-Large':
+                    if product_quantity > product.xxlarge:
+                        if product.xxlarge == 0:
+                            flash(f"Sorry, we are out of stock for this size.")
+                            return redirect(url_for('GenProduct', product_id=product_id))
+                        product_quantity = product.xxlarge
+                        flash(f"You cannot exceed more than {product.xxlarge} of the same item.")
 
+            size = request.form['size']
+
+            session['cart'].append(
+               {'product_id': product.product_id, 'item_name': product.item_name, 'size':size, 'product_image':product.product_image,
+                'product_quantity': product_quantity, 'price': product.price}
+            )
 
        session['cart_total'] = sum(item['price']*item['product_quantity'] for item in session['cart'])
-
 
        flash(f"{product.item_name} has been successfully added to your cart.", 'success')
        return redirect(url_for('CheckOut'))

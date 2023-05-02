@@ -48,22 +48,23 @@
           {{ item['desc'] }}
           <hr />
 <!-- add_to_cart -->
-          <div class="GenProduct_spacer">
+
+        <form action="{{ url_for('cart_add', product_id=item['product_id']) }}" method="POST"> <!-- add_to_cart -->
+            <div class="GenProduct_spacer">
 <!-- size and quantity buttons and dropdowns-->
                   <h4>Select a Size</h4>
                     <div class="form-select-container">
-                        <select name="role" id="role" class="form-select" aria-label=".form-select-md example">
+                        <select name="size" id="role" class="form-select" aria-label=".form-select-md example">
                             <option value="0">---Select A Size---</option>
                             <option name="X-Small" id="size" value="X-Small">X-Small</option>
                             <option name="Small" id="size" value="Small">Small</option>
                             <option name="Medium" id="size" value="Medium">Medium</option>
                             <option name="Large" id="size" value="Large">Large</option>
-                            <option name="XLarge" id="size" value="XLarge">XLarge</option>
-                            <option name="XXLarge" id="size" value="XXLarge">XXLarge</option>
+                            <option name="XLarge" id="size" value="X-Large">X-Large</option>
+                            <option name="XXLarge" id="size" value="XX-Large">XX-Large</option>
                         </select>
                     </div>
        </div>
-        <form action="{{ url_for('cart_add', product_id=item['product_id']) }}" method="POST"> <!-- add_to_cart -->
             <div class="row">
                 <div class="col-lg-4">
                     <div class="row g-2">

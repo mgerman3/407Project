@@ -47,7 +47,7 @@
                        <strong>{{ "${:,.2f}".format(product['price']) }}</strong>
               </div>
                    <div class="col-lg-1">
-                 <strong> M </strong>
+                 <strong> {{ product['size'] }} </strong>
               </div>
               <div class="col-lg-2">
                  <strong>{{ "${:,.2f}".format(product['price']*product['product_quantity'])}}</strong> <!-- multiply by quantity-->
