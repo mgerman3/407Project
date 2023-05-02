@@ -48,7 +48,6 @@
                             <div class = "row">
                                 <!--Field to collect users ratings out of 5 on products purchased -->
                                 <p class="formFieldsLabels">Rating(*)</p>
-                                <div class="form-select-container">
                                     <select name="rating" id="role" class="form-select" aria-label=".form-select-md example">
                                         <option value="0">---Select A Rating---</option>
                                         <option name="one" id="one" value="1/5">1/5</option>
@@ -57,7 +56,6 @@
                                         <option name="four" id="four" value="4/5">4/5</option>
                                         <option name="five" id="five" value="5/5">5/5</option>
                                     </select>
-                                </div>
                             </div>
                          <!--If user is NOT logged in, they will see more fields on the form  -->
                         {% else %}
@@ -91,7 +89,6 @@
                         <div class = "row">
                             <!--Field to collect users numeric rating-->
                             <p class="formFieldsLabels">Rating(*)</p>
-                            <div class="form-select-container">
                                 <select name="rating" id="role" class="form-select" aria-label=".form-select-md example">
                                     <option value="0">---Select A Rating---</option>
                                     <option name="one" id="one" value="1/5">1/5</option>
@@ -100,7 +97,6 @@
                                     <option name="four" id="four" value="4/5">4/5</option>
                                     <option name="five" id="five" value="5/5">5/5</option>
                                 </select>
-                            </div>
                         </div>
                      {% endif %}
                     </div>

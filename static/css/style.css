@@ -210,7 +210,7 @@ div.col-lg-1{
 
 .formInputFields {
     background-color: #f6f6f6;
-    padding: 30px 25px 30px 25px;
+    /*padding: 30px 25px 30px 25px;*/
 }
 
 shippingEntry {
@@ -469,11 +469,10 @@ input.signupInput {
 }
 
 input.inventoryButtons {
-    width: 800px;
+    width: 700px;
     height: 50px;
-    margin: auto;
-  display: block;
-    /*margin-top: 32px;*/
+    display: block;
+    margin-top: 10px;
 }
 
 .paddingbetweenelements {
@@ -832,6 +831,8 @@ input.btpos {
 .inventoryBoxTotal {
   max-width: 600px;
   margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
 
 .formInvInputFields {
