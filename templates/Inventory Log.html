@@ -13,13 +13,17 @@
 
 {% block page_content %}
 
+<!-- Centered Div -->
 <div class="text-center" style="height: 100vh">
+    <!-- Start of row -->
    <div class="row">
+   <!-- Start of column -->
    <div class="col">
 
-
+    <!-- Creation of table with striped rows -->
    <table class="table table-striped">
        <tr>
+            <!-- Table Headers of Item's Properties-->
             <th scope="col">Item Name </th>
             <th scope="col">Collection Name</th>
             <th scope="col">XSmall</th>
@@ -30,6 +34,7 @@
             <th scope="col">XXLarge</th>
             <th scope="col">Item Price</th>
             <th scope="col">Description</th>
+            <!-- check if the current user is either an admin or employee -->
            {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
            <th>Actions</th>
            {% endif %}
@@ -38,12 +43,17 @@
 
        {% for each_item in items %}
        <tr>
+            <!-- display the name of the item in the table cell -->
            <td>{{ each_item['item_name'] }}</td>
+            <!-- check if the collection_id exists in the dictionary -->
             {% if dict[each_item['collection_id']] %}
+                <!-- display the collection name for the item in the table cell -->
                 <td>{{ dict[each_item["collection_id"]] }}</td>
             {% else %}
+                <!-- if collection_id doesn't exist in the dictionary, display "None" in the table cell -->
                 <td>None</td>
             {% endif %}
+            <!-- Displays the quantity/price/description of Item's Property-->
            <td>{{ each_item['xsmall'] }}</td>
            <td>{{ each_item['small'] }}</td>
            <td>{{ each_item['medium'] }}</td>
@@ -52,10 +62,13 @@
            <td>{{ each_item['xxlarge'] }}</td>
            <td>{{ each_item['price'] }}</td>
            <td>{{ each_item['desc'] }}</td>
+            <!-- check if the current user is either an admin or employee -->
            {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
            <td>
+                <!-- display a button for editing the item -->
                <a href="{{ url_for('item_edit', product_id=each_item['product_id']) }}" class="btn btn-secondary" type = "submit" role="button">Edit</a>
                {% if current_user.role in ['ADMIN'] %}
+                   <!-- display a button for deleting the item -->
                <a href="{{ url_for('item_delete', product_id=each_item['product_id']) }}" class="btn btn-secondary" type = "submit" role="button">Delete</a>
                {% endif %}
            </td>
@@ -67,16 +80,23 @@
    </div>
 
 
+     <!-- check if the user role is either 'ADMIN' or 'EMPLOYEE' -->
    {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
+   <!-- Create a row div -->
    <div class="row">
+        <!-- Create a column div -->
        <div class="col">
+                <!-- Displays the total number of items from the 'items' variable -->
                Total Number of Items: {{ items|length }}
        </div>
    </div>
 
     <p><br></p>
+    <!-- Create a row div -->
    <div class="row">
+        <!-- Create a column div with text center alignment -->
        <div class="col text-center">
+           <!-- Create a button to add new item -->
            <a href="{{ url_for('inventory_entry') }}" class="btn btn-primary" role="button">Add New Item</a>
        </div>
    </div>
