@@ -6,18 +6,13 @@ from werkzeug.utils import secure_filename
 from authorize import role_required
 from models import *
 
-
 basedir = os.path.abspath(os.path.dirname(__file__))
-
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'ATB2.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'beyond_course_scope'
 db.init_app(app)
-
-
-
 
 login_manager = LoginManager()
 login_manager.login_view = 'LogIn' # default login route
@@ -36,39 +31,30 @@ app.config['MAX_QUANTITY_PER_ITEM'] = 10
 def load_user(account_id):
   return Credentials.query.get(account_id)
 
-
 @app.route('/')
 def homePage():
    return render_template('Home Page.html')
 
-
 @app.route('/404')
 def errorPage():
    return render_template('Inventory.html'), 404
-
 
 @app.route('/Shop')
 def Shop():
    items = InventoryInfo.query.order_by(InventoryInfo.item_name).all()
    return render_template('Shop.html', items=items)
 
-
 # @app.route('/EnterItems')
 # def EnterItems():
 #     return render_template('Input_Inventory.html')
-
 
 @app.route('/About')
 def About():
    return render_template('About Page.html')
 
-
-
-
 @app.route('/profile')
 def Profile():
    return render_template('profile.html')
-
 
 @app.route('/RequestForm', methods=['GET', 'POST'])
 def RequestForm():
@@ -182,8 +168,6 @@ def ReviewForm():
    return redirect(url_for('homePage'))
 
 
-
-
 @app.route('/ReviewsLog')
 @login_required
 @role_required(['ADMIN', 'EMPLOYEE'])
@@ -280,7 +264,6 @@ def LogIn():
 
   return redirect(url_for('LogIn'))
 
-
 @app.route('/signup', methods=['GET', 'POST'])
 def SignUp():
 
@@ -309,9 +292,6 @@ def SignUp():
       login_user(user)
       flash(f'{username} was successfully added!', 'success')
       return redirect(url_for('homePage'))
-
-
-
 
   # Address issue where unsupported HTTP request method is attempted
 # flash(f'Invalid request. Please contact support if this problem persists.', 'error')
@@ -343,16 +323,12 @@ def CheckOut():
 def GenProduct(product_id):
    item = InventoryInfo.query.filter_by(product_id=product_id).first()
 
-
    if item:
        return render_template('GenericProductPage.html', item=item)
-
 
    else:
        flash(f'Product attempting to be viewed could not be found! Please contact support for assistance', 'error')
        return redirect(url_for('Shop'))
-
-
 
 
 @app.route('/RequestsLog')
@@ -362,8 +338,6 @@ def requests_view_all():
   requests = Requests.query.order_by(Requests.request_id) \
       .all()
   return render_template('Request Log.html', requests=requests)
-
-
 
 
 @app.route('/InventoryLog')
@@ -376,10 +350,7 @@ def items_view_all():
  for collection in Collections.query.all():
        dict[collection.collection_id] = collection.collection_name
 
-
  return render_template('Inventory Log.html', items=items, dict=dict)
-
-
 
 
 @app.route('/InventoryLog/update/<int:product_id>', methods=['GET', 'POST'])
@@ -440,13 +411,9 @@ def item_edit(product_id):
      return redirect(url_for('items_view_all'))
 
 
-
-
  # Address issue where unsupported HTTP request method is attempted
  flash(f'Invalid request. Please contact support if this problem persists.', 'error')
  return redirect(url_for('items_view_all'))
-
-
 
 
 @app.route('/InventoryLog/delete/<int:product_id>')
@@ -525,16 +492,10 @@ def OrderDetails():
    return render_template('OrderDetails.html')
 
 
-
-
 @app.route('/SalesTracker')
 @login_required
 def SalesTracker():
    return render_template('Sales Tracker.html')
-
-
-
-
 
 
 @app.route('/banner')
@@ -579,7 +540,6 @@ def Admin_Login():
 # def Cart():
 #     return render_template('cart.html')
 
-
 @app.route('/cart/clear')
 @login_required
 def clear_cart():
@@ -589,7 +549,6 @@ def clear_cart():
    else:
        flash(f"Cart already empty", 'error')
    return redirect(url_for('Shop'))
-
 
 @app.route('/cart/add/<int:product_id>', methods=['GET','POST'])
 @login_required
@@ -633,7 +592,6 @@ def cart_add(product_id):
    else:
        flash(f'Product could not be found. Please contact support if this problem persists.', 'error')
 
-
 @app.route('/cart/remove/<int:index>', methods=['GET'])
 @login_required
 def cart_remove(index):
@@ -653,7 +611,6 @@ def cart_remove(index):
 
    return redirect(url_for('cart2'))
 
-
 @app.route('/cart/view', methods=['GET', 'POST'])
 @login_required
 def cart_view():
@@ -664,7 +621,6 @@ def cart_view():
    else:
        return render_template('cart2.html', cart_count=0)
 
-
 @app.route('/CollectionsLog')
 @login_required
 @role_required(['ADMIN', 'EMPLOYEE'])
@@ -672,7 +628,6 @@ def collections_view_all():
   collection = Collections.query.order_by(Collections.collection_id) \
       .all()
   return render_template('Collections Log.html', collection=collection)
-
 
 @app.route('/CollectionsInput', methods=['GET', 'POST'])
 @login_required
@@ -741,8 +696,6 @@ def collection_edit(collection_id):
   return redirect(url_for('collections_view_all'))
 
 
-
-
 @app.route('/CollectionsLog/Delete/<int:collection_id>')
 @login_required
 @role_required(['ADMIN'])
@@ -761,7 +714,6 @@ def collection_delete(collection_id):
 
 if __name__ == '__main__':
    app.run()
-
 
 
 
