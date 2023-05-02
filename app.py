@@ -325,6 +325,13 @@ def CheckOut():
    else:
        return render_template('CheckoutPage.html', cart_count=0)
 
+@app.route('/payment', methods=['GET', 'POST'])
+def payment():
+    # if request.method == 'GET':
+    #     return render_template('ReviewForm.html', action='create')
+    # elif request.method == 'POST':
+        return render_template('payment.html')
+
 
 @app.route('/GenericProduct/<int:product_id>')
 def GenProduct(product_id):
