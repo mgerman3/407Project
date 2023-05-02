@@ -97,7 +97,8 @@ class InventoryInfo(db.Model):
    product_image = db.Column(db.String(100))
 
 
-   def __init__(self, item_name, xsmall, small, medium, large, xlarge, xxlarge, price, desc, product_image):
+   def __init__(self, collection_id, item_name, xsmall, small, medium, large, xlarge, xxlarge, price, desc, product_image):
+       self.collection_id = collection_id
        self.item_name = item_name
        self.xsmall = xsmall
        self.small = small
