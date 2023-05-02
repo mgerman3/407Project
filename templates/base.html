@@ -36,25 +36,35 @@ a.footerItems, p.footerItems {
 </head>
 
 <body>
+<!-- A navigation bar with a light green background. -->
 <nav class="navbar navbar-expand-lg" style="background-color: #69a695;">
+  <!-- A container that holds the content of the navbar. -->
   <div class="container-fluid">
+    <!-- A link to the homepage with a small logo. -->
     <a class="navbar-brand" href="#"><img src="../static/images/Clear%20Background%20Logo.png" alt="Bootstrap" width="30" height="24"></a>
+    <!-- A button that toggles the responsive navigation menu. -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+      <!-- A div that contains the navigation menu. -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- An unordered list of links that are aligned to the left. -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- A list item that contains a link to the homepage. -->
         <li class="nav-item">
           <a class="dropbtn" aria-current="page" href="/">Home</a>
         </li>
+          <!-- A list item that contains a dropdown menu with a link to the shop page. -->
         <li class="nav-item dropdown">
           <a class="dropbtn" href="/Shop" aria-expanded="false">
             Shop
           </a>
         </li>
+        <!-- Navigation item: About -->
         <li class="nav-item">
             <a class="dropbtn" aria-current="page" href="/About">About</a>
         </li>
+      <!-- Navigation item: Contact Us -->
         <li class="nav-item dropdown">
           <a class="dropbtn" aria-expanded="false">Contact Us</a>
           <ul class="dropdown-menu">
@@ -128,30 +138,44 @@ a.footerItems, p.footerItems {
 </body>
 
 <footer>
+<!-- Create a footer section for the website -->
 <div class="websiteFooter">
+    <!-- Create a row for the content -->
     <div class="row" style="padding-top: 25px">
+        <!-- Create a column for helpful links section -->
         <div class="col-4">
+            <!-- Text for the section -->
             <p class="footerItems" style="color: black">Helpful Links</p>
+            <!-- Row for Home Page link -->
             <div class="row">
                 <a href="/" class="footerItems">Home Page</a>
             </div>
+            <!-- Row for Shop Page link -->
             <div class="row">
                 <a href="/Shop" class="footerItems">Shop</a>
             </div>
+            <!-- Row for About Page link -->
             <div class="row">
                 <a href="/About" class="footerItems">About</a>
             </div>
             <div class="row">
+                <!-- Row for Contact Page link -->
                 <a href="/ContactUs" class="footerItems">Contact us</a>
             </div>
         </div>
+        <!-- Column for logo section -->
         <div class="col-4">
             <p class="footerItems"><img src="../static/images/Clear%20Background%20Logo.png" alt="Bootstrap" width="150" height="150"></p>
         </div>
+        <!-- Column for logo section -->
         <div class="col-4">
+            <!-- Text for the section -->
             <p class="footerItems">Social Media</p>
+            <!-- Column for Social Media Section -->
             <div class="row">
+                <!-- Instagram Link -->
                  <a class="footerItems" style="padding-left: 26px" aria-expanded="false" href="https://www.instagram.com/aroundtheblock.co/" target="_blank">
+                     <!-- Instagram logo image -->
                      <img src="../static/images/instagram.png" alt="Bootstrap" width="30" height="30">
                  </a>
             </div>
