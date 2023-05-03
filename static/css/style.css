@@ -920,3 +920,9 @@ webpage_margin{
     margin-right: 20px;
     margin-left: 20px;
 }
+
+.FormatShopPhotos {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+}
