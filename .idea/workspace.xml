@@ -4,28 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="">
+    <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="Created new order tables for when checkout is completed. Need to implement orders log for admins with this data now.">
+      <change afterPath="$PROJECT_DIR$/.idea/3Pull.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ATB2.db" beforeDir="false" afterPath="$PROJECT_DIR$/ATB2.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/About Page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/About Page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Admin_Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Admin_Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Banner.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/CheckoutPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CheckoutPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Collections Log.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Collections Log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Home Page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home Page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Input_Collections.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Input_Collections.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Inventory Management.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Inventory.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Log-In-Screen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Log-In-Screen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/RequestForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/RequestForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ReviewsLog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ReviewsLog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Testing-NavBar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/access_denied.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/access_denied.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cart2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/payment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sign-up-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sign-up-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/products/Pants-pants.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/products/Tan_Hat-hat.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/GenericProductPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/GenericProductPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +34,9 @@
         <entry key="FLASK_APP" value="app" />
       </map>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Rebase.Settings">
     <option name="NEW_BASE" value="origin/main" />
@@ -106,7 +94,7 @@
       <recent name="$PROJECT_DIR$/static/images" />
     </key>
   </component>
-  <component name="RunManager" selected="Flask server.team08spring2023bmgt407">
+  <component name="RunManager" selected="Python.3Pull">
     <configuration name="11Pull" type="PythonConfigurationType" factoryName="Python">
       <module name="11Pull" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,6 +127,28 @@
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="3Pull" type="PythonConfigurationType" factoryName="Python">
+      <module name="3Pull" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -244,7 +254,8 @@
       <workItem from="1683121975535" duration="2975000" />
       <workItem from="1683124975907" duration="38000" />
       <workItem from="1683125025845" duration="29000" />
-      <workItem from="1683125138236" duration="7895000" />
+      <workItem from="1683125138236" duration="12234000" />
+      <workItem from="1683154309737" duration="1981000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling">
       <created>1678819151825</created>
@@ -414,7 +425,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682999308633</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Created new order tables for when checkout is completed. Need to implement orders log for admins with this data now.">
+      <created>1683139076370</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1683139076370</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Created new order tables for when checkout is completed. Need to implement orders log for admins with this data now.">
+      <created>1683139090104</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1683139090104</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,19 +480,21 @@
     <MESSAGE value="Fixed issue with review form not submitting" />
     <MESSAGE value="combine cart into checkout page" />
     <MESSAGE value="finish checkout page edits" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish checkout page edits" />
+    <MESSAGE value="Created new order tables for when checkout is completed. Need to implement orders log for admins with this data now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new order tables for when checkout is completed. Need to implement orders log for admins with this data now." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$30Pull.coverage" NAME="30Pull Coverage Results" MODIFIED="1683056206475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/11Pull$11Pull.coverage" NAME="11Pull Coverage Results" MODIFIED="1682376974116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/April24Pull$April24Pull.coverage" NAME="April24Pull Coverage Results" MODIFIED="1682433140671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/May1Pull$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1683061010717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$April24Pull.coverage" NAME="April24Pull Coverage Results" MODIFIED="1682549133223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/May1Pull$May1Pull.coverage" NAME="May1Pull Coverage Results" MODIFIED="1682999747169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/30Pull$30Pull.coverage" NAME="30Pull Coverage Results" MODIFIED="1682879600654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$11Pull.coverage" NAME="11Pull Coverage Results" MODIFIED="1682377134447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1681146471589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/11Pull$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681503784238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1683149861389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/May1Pull$May1Pull.coverage" NAME="May1Pull Coverage Results" MODIFIED="1682999747169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/April24Pull$April24Pull.coverage" NAME="April24Pull Coverage Results" MODIFIED="1682433140671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/11Pull$11Pull.coverage" NAME="11Pull Coverage Results" MODIFIED="1681322004954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$30Pull.coverage" NAME="30Pull Coverage Results" MODIFIED="1682996895159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1681146471589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/30Pull$30Pull.coverage" NAME="30Pull Coverage Results" MODIFIED="1682879600654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/May1Pull$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1683061010717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$11Pull.coverage" NAME="11Pull Coverage Results" MODIFIED="1682377134447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1682990913990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$April24Pull.coverage" NAME="April24Pull Coverage Results" MODIFIED="1682907751707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/3Pull$3Pull.coverage" NAME="3Pull Coverage Results" MODIFIED="1683157308922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
