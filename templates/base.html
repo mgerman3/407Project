@@ -71,7 +71,6 @@ a.footerItems, p.footerItems {
             <li><a class="dropdown-item" {% if request.endpoint=='items_view_all' %}active{% endif %} href="{{ url_for('collections_view_all') }}">Collections Log</a></li>
             <li><a class="dropdown-item" {% if request.endpoint=='items_view_all' %}active{% endif %} href="{{ url_for('requests_view_all') }}">Request Log</a></li>
             <li><a class="dropdown-item" {% if request.endpoint=='items_view_all' %}active{% endif %} href="{{ url_for('reviews_view_all') }}">Review Log</a></li>
-            <li><a class="dropdown-item" {% if request.endpoint=='items_view_all' %}active{% endif %} href="{{ url_for('SalesTracker') }}">Sales Tracker</a></li>
             <li><a class="dropdown-item" {% if request.endpoint=='items_view_all' %}active{% endif %} href="{{ url_for('Admin_Login') }}">Create New Employee</a></li>
           </ul>
         </li>

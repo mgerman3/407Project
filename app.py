@@ -370,7 +370,7 @@ def process_order():
         order_id = store_order.order_id
 
         for each_item in session['cart']:
-            item_ordered = OrderItem(order_id, each_item['product_id'], each_item['product_quantity'])
+            item_ordered = OrderItem(order_id, each_item['product_id'], each_item['product_quantity'], each_item['size'], each_item['item_name'])
             db.session.add(item_ordered)
 
         db.session.commit()
@@ -540,9 +540,12 @@ def OrderConfirm():
 
 
 @app.route('/OrderDetails')
+# def OrderDetails():
+#    return render_template('OrderDetails.html')
 def OrderDetails():
-   return render_template('OrderDetails.html')
-
+  orders = OrderItem.query.order_by(OrderItem.order_id) \
+      .all()
+  return render_template('OrderDetails.html', orders=orders)
 
 @app.route('/SalesTracker')
 @login_required

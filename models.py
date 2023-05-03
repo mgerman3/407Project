@@ -101,7 +101,7 @@ class InventoryInfo(db.Model):
        return f"{self.item_name}  {self.desc}"
 
 class StoreOrder(db.Model):
-    __tablename__ = 'store_order'
+    __tablename__ = 'StoreOrder'
 
     order_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     user_id = db.Column(db.Integer, db.ForeignKey('User.user_id'))
@@ -130,21 +130,27 @@ class StoreOrder(db.Model):
 
 
 class OrderItem(db.Model):
-    __tablename__ = 'order_item'
+    __tablename__ = 'OrderItem'
 
     order_item_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    order_id = db.Column(db.Integer, db.ForeignKey('store_order.order_id'), nullable=False)
+    order_id = db.Column(db.Integer, db.ForeignKey('StoreOrder.order_id'), nullable=False)
     product_id = db.Column(db.Integer, db.ForeignKey('InventoryInfo.product_id'), nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
     price_charged = db.Column(db.Float, nullable=False)
+    price = db.Column(db.Float, nullable=False)
+    size = db.Column(db.String(20), nullable=False)
+    item_name = db.Column(db.String(20), nullable=False)
 
-    def __init__(self, order_id, product_id, quantity):
+    def __init__(self, order_id, product_id, quantity, size, item_name):
         product = InventoryInfo.query.filter_by(product_id=product_id).first()
 
         self.order_id = order_id
         self.product_id = product_id
         self.quantity = quantity
         self.price_charged = product.price * quantity
+        self.price = product.price
+        self.size = size
+        self.item_name = item_name
 
 
 class Collections(db.Model):
