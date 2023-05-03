@@ -3,45 +3,45 @@
 {% block title %}Home Page{% endblock %}
 
 {% block page_content %}
-<!--testing more-->
-<!-- Background Photo -->
-      <div id="wrapper">
+
+    <!-- Background Photo -->
+    <div id="wrapper">
         <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
-                    <!-- Title for Around the Block -->
-            <div class = row>
-                <div class = "homeTitle">
-                    <div class="GenProduct_HeadingSpacer"></div>
-                    <h1><strong> AROUND THE BLOCK </strong></h1>
-                </div>
-            </div>
-            <div class = "row">
-                <div class = "left-column">
-                    <div class = slogan>
-                        <div class = row >
-                            <h1>Join the<br>Block Party</h1>
-                            <h5>Shop college apparel that brings together <br> communities built on shared memories</h5>
-                            <h6>Inspired by Old Town, College Park Maryland</h6>
-                <!-- Start shopping button directing user to shop page-->
-                            <div class = "row">
-                                <form action="/Shop" method="get" >
-                                    <input class="home" type="submit" value="START SHOPPING">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class = "map">
-                        <img src="../static/images/Misc_OldTownMap-Logo.png" alt="Old Town Map" class="small-image" >
-                    </div>
-                </div>
-           <!-- 3 images below shop button -->
-{#                <div class="right-column float-left">#}
-                    <div class="image-container">
-                        <img src="../static/images/AboutPage_OurMission_GroupPic.JPG" alt="Group on Steps">
-                        <img src="../static/images/AboutPage_JoellePersonalPic.png" alt="Joelle">
-                        <img src="../static/images/Misc_ModelPic.png" alt="Group">
-                        <img src="../static/images/HomePage_FourthSmallPic.jpg" alt="Models on Roof">
-                    </div>
-{#                </div>#}
+        <!-- Title for Around the Block -->
+        <div class = row>
+            <div class = "homeTitle">
+                <div class="GenProduct_HeadingSpacer"></div>
+                <h1><strong> AROUND THE BLOCK </strong></h1>
             </div>
         </div>
+        <div class = "row">
+            <div class = "left-column">
+                <div class = slogan>
+                    <div class = row >
+                        <h1>Join the<br>Block Party</h1>
+                        <h5>Shop college apparel that brings together <br> communities built on shared memories</h5>
+                        <h6>Inspired by Old Town, College Park Maryland</h6>
+                        <!-- Start shopping button directing user to shop page-->
+                        <div class = "row">
+                            <form action="/Shop" method="get" >
+                                <input class="home" type="submit" value="START SHOPPING">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class = "map">
+                    <img src="../static/images/Misc_OldTownMap-Logo.png" alt="Old Town Map" class="small-image" >
+                </div>
+            </div>
+            <!-- 3 images below shop button -->
+{#                <div class="right-column float-left">#}
+            <div class="image-container">
+                <img src="../static/images/AboutPage_OurMission_GroupPic.JPG" alt="Group on Steps">
+                <img src="../static/images/AboutPage_JoellePersonalPic.png" alt="Joelle">
+                <img src="../static/images/Misc_ModelPic.png" alt="Group">
+                <img src="../static/images/HomePage_FourthSmallPic.jpg" alt="Models on Roof">
+            </div>
+{#                </div>#}
+        </div>
+    </div>
 {% endblock %}

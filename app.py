@@ -331,6 +331,54 @@ def payment():
     #     return render_template('ReviewForm.html', action='create')
     # elif request.method == 'POST':
         return render_template('payment.html')
+@app.route('/process-order', methods=['GET', 'POST'])
+@login_required
+def process_order():
+    if request.method == 'GET':
+        return redirect(url_for('home'))
+    elif request.method == 'POST':
+        if current_user.is_authenticated:
+            user = Credentials.query.filter_by(account_id=current_user.account_id).first()
+
+            user_id = user.account_id
+            first_name = user.first_name
+            last_name = user.last_name
+            phoneNumber = request.form['phoneNumber']
+            email = user.email
+            address = request.form['address']
+            city = request.form['city']
+            state = request.form['state']
+            zipcode = request.form['zipcode']
+
+            store_order = StoreOrder(user_id=user_id, first_name=first_name, last_name=last_name, phoneNumber=phoneNumber,
+                                     email=email, address=address, city=city, state=state, zipcode=zipcode)
+        else:
+            first_name = request.form['first_name']
+            last_name = request.form['last_name']
+            phoneNumber = request.form['phoneNumber']
+            email = request.form['email']
+            address = request.form['address']
+            city = request.form['city']
+            state = request.form['state']
+            zipcode = request.form['zipcode']
+
+            store_order = StoreOrder(first_name=first_name, last_name=last_name, phoneNumber=phoneNumber,
+                                    email=email, address=address, city=city, state=state, zipcode=zipcode)
+        db.session.add(store_order)
+        db.session.flush()
+        db.session.refresh(store_order)
+        order_id = store_order.order_id
+
+        for each_item in session['cart']:
+            item_ordered = OrderItem(order_id, each_item['product_id'], each_item['product_quantity'], each_item['size'], each_item['item_name'])
+            db.session.add(item_ordered)
+
+        db.session.commit()
+
+    if 'cart' in session:
+        del(session['cart'])
+
+    return render_template('Home Page.html')
 
 
 @app.route('/GenericProduct/<int:product_id>')
@@ -492,9 +540,12 @@ def OrderConfirm():
 
 
 @app.route('/OrderDetails')
+# def OrderDetails():
+#    return render_template('OrderDetails.html')
 def OrderDetails():
-   return render_template('OrderDetails.html')
-
+  orders = OrderItem.query.order_by(OrderItem.order_id) \
+      .all()
+  return render_template('OrderDetails.html', orders=orders)
 
 @app.route('/SalesTracker')
 @login_required
