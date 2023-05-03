@@ -1,0 +1,458 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b07f119a-e867-4f5e-9a38-dc4f2ee5ec30\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/ATB2.db\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/ATB2.db\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/About Page.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/About Page.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/Admin_Login.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/Admin_Login.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/Banner.html\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/CheckoutPage.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/CheckoutPage.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/Collections Log.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/Collections Log.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/Home Page.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/Home Page.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/Input_Collections.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/Input_Collections.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/Inventory Management.html\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/Inventory.html\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/Log-In-Screen.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/Log-In-Screen.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/RequestForm.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/RequestForm.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/ReviewsLog.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/ReviewsLog.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/Testing-NavBar.html\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/access_denied.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/access_denied.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/base.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/base.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/cart2.html\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/payment.html\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/profile.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/profile.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/sign-up-page.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/sign-up-page.html\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"HTML File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"FlaskConsoleOptions\" custom-start-script=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\">\n    <envs>\n      <env key=\"FLASK_APP\" value=\"app\" />\n    </envs>\n    <option name=\"myCustomStartScript\" value=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\" />\n    <option name=\"myEnvs\">\n      <map>\n        <entry key=\"FLASK_APP\" value=\"app\" />\n      </map>\n    </option>\n  </component>\n  <component name=\"Git.Rebase.Settings\">\n    <option name=\"NEW_BASE\" value=\"origin/main\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">\n    <option name=\"selectedUrlAndAccountId\">\n      <UrlAndAccount>\n        <option name=\"accountId\" value=\"682f582c-9e77-4729-baf9-a93006c533f3\" />\n        <option name=\"url\" value=\"https://github.com/jbonoUMD/team08spring2023bmgt407.git\" />\n      </UrlAndAccount>\n    </option>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2N3dhsCNzjT1uwD9MOMTkEk9dnu\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  },\n  &quot;keyToStringList&quot;: {\n    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [\n      &quot;directory&quot;,\n      &quot;module&quot;,\n      &quot;repository&quot;\n    ]\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/static/images\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Flask server.team08spring2023bmgt407\">\n    <configuration name=\"11Pull\" type=\"PythonConfigurationType\" factoryName=\"Python\">\n      <module name=\"11Pull\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/app.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"30Pull\" type=\"PythonConfigurationType\" factoryName=\"Python\">\n      <module name=\"team08spring2023bmgt407\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/app.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"April24Pull\" type=\"PythonConfigurationType\" factoryName=\"Python\">\n      <module name=\"team08spring2023bmgt407\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/app.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"team08spring2023bmgt407\" type=\"PythonConfigurationType\" factoryName=\"Python\">\n      <module name=\"team08spring2023bmgt407\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/app.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"team08spring2023bmgt407\" type=\"Python.FlaskServer\">\n      <module name=\"team08spring2023bmgt407\" />\n      <option name=\"target\" value=\"$PROJECT_DIR$/app.py\" />\n      <option name=\"targetType\" value=\"PATH\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"launchJavascriptDebuger\" value=\"false\" />\n      <method v=\"2\" />\n    </configuration>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"b07f119a-e867-4f5e-9a38-dc4f2ee5ec30\" name=\"Changes\" comment=\"\" />\n      <created>1678811835939</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1678811835939</updated>\n      <workItem from=\"1678811839462\" duration=\"8376000\" />\n      <workItem from=\"1678896822647\" duration=\"4435000\" />\n      <workItem from=\"1678914086423\" duration=\"6235000\" />\n      <workItem from=\"1678995726298\" duration=\"5579000\" />\n      <workItem from=\"1679017763874\" duration=\"4939000\" />\n      <workItem from=\"1680884137222\" duration=\"25000\" />\n      <workItem from=\"1680884410797\" duration=\"650000\" />\n      <workItem from=\"1680891442123\" duration=\"1194000\" />\n      <workItem from=\"1680893390201\" duration=\"11734000\" />\n      <workItem from=\"1681136390140\" duration=\"5724000\" />\n      <workItem from=\"1681319491711\" duration=\"882000\" />\n      <workItem from=\"1681479362300\" duration=\"468000\" />\n      <workItem from=\"1682375273103\" duration=\"9982000\" />\n      <workItem from=\"1682432491159\" duration=\"670000\" />\n      <workItem from=\"1682551869141\" duration=\"2087000\" />\n      <workItem from=\"1682706802134\" duration=\"8531000\" />\n      <workItem from=\"1682721279912\" duration=\"5651000\" />\n      <workItem from=\"1682783124446\" duration=\"4559000\" />\n      <workItem from=\"1682874951257\" duration=\"4094000\" />\n      <workItem from=\"1682890134762\" duration=\"8000\" />\n      <workItem from=\"1682890160073\" duration=\"11646000\" />\n      <workItem from=\"1683000683033\" duration=\"1251000\" />\n      <workItem from=\"1683121975535\" duration=\"2975000\" />\n      <workItem from=\"1683124975907\" duration=\"38000\" />\n      <workItem from=\"1683125025845\" duration=\"29000\" />\n      <workItem from=\"1683125138236\" duration=\"7895000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling\">\n      <created>1678819151825</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678819151825</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Added an inventory input table &#10;need to fill in values and add styling for table&#10;need to fix formatting of the buttons\">\n      <created>1678827389300</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678827389300</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Updated the form to input inventory.\">\n      <created>1678897417944</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678897417944</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Added header, put input form and table into containers\">\n      <created>1678898593881</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678898593881</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Updated navbar per Joe's changes.\">\n      <created>1678899543333</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678899543333</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Updated navbar per Joe's changes.\">\n      <created>1678899551737</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678899551737</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Changed the homepage to replicate a different screen. working on getting button to correct position, making fonts the ideal sizes, and will put in a slider of images below start shopping button\">\n      <created>1678918957733</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678918957733</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"added carousel templated\">\n      <created>1678995356846</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1678995356846</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"continued working on formatting\">\n      <created>1679003779224</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1679003779224</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"updated on formatting\">\n      <created>1679020804790</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1679020804790</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"When we updated our flask the image formatting got messed up. Fixed routes to images.\">\n      <created>1679255727033</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1679255727033</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"shop page edits and alignment\">\n      <created>1681141671420</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681141671420</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"Made the inventory form in the middle of the screen and added new child template features to Inventory Management.html.\">\n      <created>1681315863225</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681315863225</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"order confirmation page fixing image\">\n      <created>1681318152232</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681318152232</updated>\n    </task>\n    <task id=\"LOCAL-00015\" summary=\"order confirmation page edits to button and bottom image\">\n      <created>1681318828826</created>\n      <option name=\"number\" value=\"00015\" />\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681318828826</updated>\n    </task>\n    <task id=\"LOCAL-00016\" summary=\"adjusted formatting for footer\">\n      <created>1681401264957</created>\n      <option name=\"number\" value=\"00016\" />\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681401264957</updated>\n    </task>\n    <task id=\"LOCAL-00017\" summary=\"Fixing home page format\">\n      <created>1681479314582</created>\n      <option name=\"number\" value=\"00017\" />\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681479314582</updated>\n    </task>\n    <task id=\"LOCAL-00018\" summary=\"Created new dropdown button to account for different collections.\">\n      <created>1682377087407</created>\n      <option name=\"number\" value=\"00018\" />\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682377087407</updated>\n    </task>\n    <task id=\"LOCAL-00019\" summary=\"Adjusting postioning so does not move when screen resized. Still need to fix map on right side and image container under button\">\n      <created>1682549189886</created>\n      <option name=\"number\" value=\"00019\" />\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682549189886</updated>\n    </task>\n    <task id=\"LOCAL-00020\" summary=\"edits to generic product page and shop so it will post the product the customer selected\">\n      <created>1682879120052</created>\n      <option name=\"number\" value=\"00020\" />\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682879120052</updated>\n    </task>\n    <task id=\"LOCAL-00021\" summary=\"adding size radio for product page\">\n      <created>1682879462628</created>\n      <option name=\"number\" value=\"00021\" />\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682879462628</updated>\n    </task>\n    <task id=\"LOCAL-00022\" summary=\"Fixed issue with review form not submitting\">\n      <created>1682885970212</created>\n      <option name=\"number\" value=\"00022\" />\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682885970212</updated>\n    </task>\n    <task id=\"LOCAL-00023\" summary=\"combine cart into checkout page\">\n      <created>1682997076132</created>\n      <option name=\"number\" value=\"00023\" />\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682997076132</updated>\n    </task>\n    <task id=\"LOCAL-00024\" summary=\"finish checkout page edits\">\n      <created>1682999308633</created>\n      <option name=\"number\" value=\"00024\" />\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682999308633</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"25\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling\" />\n    <MESSAGE value=\"Added an inventory input table &#10;need to fill in values and add styling for table&#10;need to fix formatting of the buttons\" />\n    <MESSAGE value=\"Updated the form to input inventory.\" />\n    <MESSAGE value=\"Added header, put input form and table into containers\" />\n    <MESSAGE value=\"Updated navbar per Joe's changes.\" />\n    <MESSAGE value=\"Changed the homepage to replicate a different screen. working on getting button to correct position, making fonts the ideal sizes, and will put in a slider of images below start shopping button\" />\n    <MESSAGE value=\"added carousel templated\" />\n    <MESSAGE value=\"continued working on formatting\" />\n    <MESSAGE value=\"updated on formatting\" />\n    <MESSAGE value=\"When we updated our flask the image formatting got messed up. Fixed routes to images.\" />\n    <MESSAGE value=\"shop page edits and alignment\" />\n    <MESSAGE value=\"Made the inventory form in the middle of the screen and added new child template features to Inventory Management.html.\" />\n    <MESSAGE value=\"order confirmation page fixing image\" />\n    <MESSAGE value=\"order confirmation page edits to button and bottom image\" />\n    <MESSAGE value=\"adjusted formatting for footer\" />\n    <MESSAGE value=\"Fixing home page format\" />\n    <MESSAGE value=\"Created new dropdown button to account for different collections.\" />\n    <MESSAGE value=\"Adjusting postioning so does not move when screen resized. Still need to fix map on right side and image container under button\" />\n    <MESSAGE value=\"edits to generic product page and shop so it will post the product the customer selected\" />\n    <MESSAGE value=\"adding size radio for product page\" />\n    <MESSAGE value=\"Fixed issue with review form not submitting\" />\n    <MESSAGE value=\"combine cart into checkout page\" />\n    <MESSAGE value=\"finish checkout page edits\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"finish checkout page edits\" />\n  </component>\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\n    <SUITE FILE_PATH=\"coverage/11Pull$team08spring2023bmgt407.coverage\" NAME=\"team08spring2023bmgt407 Coverage Results\" MODIFIED=\"1681503784238\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\n    <SUITE FILE_PATH=\"coverage/May1Pull$team08spring2023bmgt407.coverage\" NAME=\"team08spring2023bmgt407 Coverage Results\" MODIFIED=\"1683061010717\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\n    <SUITE FILE_PATH=\"coverage/30Pull$30Pull.coverage\" NAME=\"30Pull Coverage Results\" MODIFIED=\"1682879600654\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\n    <SUITE FILE_PATH=\"coverage/team08spring2023bmgt407$30Pull.coverage\" NAME=\"30Pull Coverage Results\" MODIFIED=\"1682999079363\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\n    <SUITE FILE_PATH=\"coverage/May1Pull$May1Pull.coverage\" NAME=\"May1Pull Coverage Results\" MODIFIED=\"1682999747169\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\n    <SUITE FILE_PATH=\"coverage/11Pull$11Pull.coverage\" NAME=\"11Pull Coverage Results\" MODIFIED=\"1681322004954\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\n    <SUITE FILE_PATH=\"coverage/April24Pull$April24Pull.coverage\" NAME=\"April24Pull Coverage Results\" MODIFIED=\"1682433140671\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\n    <SUITE FILE_PATH=\"coverage/team08spring2023bmgt407$11Pull.coverage\" NAME=\"11Pull Coverage Results\" MODIFIED=\"1682377134447\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\n    <SUITE FILE_PATH=\"coverage/team08spring2023bmgt407$April24Pull.coverage\" NAME=\"April24Pull Coverage Results\" MODIFIED=\"1682907751707\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\n    <SUITE FILE_PATH=\"coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage\" NAME=\"team08spring2023bmgt407 Coverage Results\" MODIFIED=\"1683142474758\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\n    <SUITE FILE_PATH=\"coverage/team08spring2023bmgt407$Flask__app_py_.coverage\" NAME=\"Flask (app.py) Coverage Results\" MODIFIED=\"1681146471589\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 2a5dc6c502df13b9cc2200cc37378d523407b784)
++++ b/.idea/workspace.xml	(date 1683149835385)
+@@ -6,26 +6,8 @@
+   <component name="ChangeListManager">
+     <list default="true" id="b07f119a-e867-4f5e-9a38-dc4f2ee5ec30" name="Changes" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/ATB2.db" beforeDir="false" afterPath="$PROJECT_DIR$/ATB2.db" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/About Page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/About Page.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/Admin_Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Admin_Login.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/Banner.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/CheckoutPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CheckoutPage.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/Collections Log.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Collections Log.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/Home Page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home Page.html" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/templates/Input_Collections.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Input_Collections.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/Inventory Management.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/Inventory.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/Log-In-Screen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Log-In-Screen.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/RequestForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/RequestForm.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/ReviewsLog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ReviewsLog.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/Testing-NavBar.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/access_denied.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/access_denied.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/cart2.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/payment.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/sign-up-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sign-up-page.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/templates/Inventory Log.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Inventory Log.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -106,7 +88,7 @@
+       <recent name="$PROJECT_DIR$/static/images" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Flask server.team08spring2023bmgt407">
++  <component name="RunManager" selected="Python.team08spring2023bmgt407">
+     <configuration name="11Pull" type="PythonConfigurationType" factoryName="Python">
+       <module name="11Pull" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -202,7 +184,7 @@
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+       <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+       <option name="IS_MODULE_SDK" value="false" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+@@ -241,10 +223,7 @@
+       <workItem from="1682890134762" duration="8000" />
+       <workItem from="1682890160073" duration="11646000" />
+       <workItem from="1683000683033" duration="1251000" />
+-      <workItem from="1683121975535" duration="2975000" />
+-      <workItem from="1683124975907" duration="38000" />
+-      <workItem from="1683125025845" duration="29000" />
+-      <workItem from="1683125138236" duration="7895000" />
++      <workItem from="1683149108836" duration="726000" />
+     </task>
+     <task id="LOCAL-00001" summary="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling">
+       <created>1678819151825</created>
+@@ -458,16 +437,16 @@
+     <option name="LAST_COMMIT_MESSAGE" value="finish checkout page edits" />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+-    <SUITE FILE_PATH="coverage/11Pull$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681503784238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
++    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$30Pull.coverage" NAME="30Pull Coverage Results" MODIFIED="1683056206475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
++    <SUITE FILE_PATH="coverage/11Pull$11Pull.coverage" NAME="11Pull Coverage Results" MODIFIED="1682376974116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
++    <SUITE FILE_PATH="coverage/April24Pull$April24Pull.coverage" NAME="April24Pull Coverage Results" MODIFIED="1682433140671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+     <SUITE FILE_PATH="coverage/May1Pull$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1683061010717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
++    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$April24Pull.coverage" NAME="April24Pull Coverage Results" MODIFIED="1682549133223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
++    <SUITE FILE_PATH="coverage/May1Pull$May1Pull.coverage" NAME="May1Pull Coverage Results" MODIFIED="1682999747169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+     <SUITE FILE_PATH="coverage/30Pull$30Pull.coverage" NAME="30Pull Coverage Results" MODIFIED="1682879600654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$30Pull.coverage" NAME="30Pull Coverage Results" MODIFIED="1682999079363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+-    <SUITE FILE_PATH="coverage/May1Pull$May1Pull.coverage" NAME="May1Pull Coverage Results" MODIFIED="1682999747169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+-    <SUITE FILE_PATH="coverage/11Pull$11Pull.coverage" NAME="11Pull Coverage Results" MODIFIED="1681322004954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+-    <SUITE FILE_PATH="coverage/April24Pull$April24Pull.coverage" NAME="April24Pull Coverage Results" MODIFIED="1682433140671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+     <SUITE FILE_PATH="coverage/team08spring2023bmgt407$11Pull.coverage" NAME="11Pull Coverage Results" MODIFIED="1682377134447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$April24Pull.coverage" NAME="April24Pull Coverage Results" MODIFIED="1682907751707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1683142474758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+     <SUITE FILE_PATH="coverage/team08spring2023bmgt407$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1681146471589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
++    <SUITE FILE_PATH="coverage/11Pull$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681503784238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
++    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1683149677644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: templates/CheckoutPage.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!-- Extending base code to use Jinja principles -->\n{% extends \"base.html\" %}\n\n{% block title %}Check Out{% endblock %}\n\n{% block page_content %}\n\n    {% if cart_count > 0 %}\n        <div class=\"row\">\n            <div class=\"col-lg-3\">\n\n            </div>\n            <div class=\"col-lg-2\">\n                <h3 class=\"bold\">Item</h3>\n            </div>\n            <div class=\"col-lg-2\">\n                <h3>Quantity</h3>\n            </div>\n            <div class=\"col-lg-2\">\n                <h3>Price</h3>\n            </div>\n            <div class=\"col-lg-1\">\n                <h3>Size</h3>\n            </div>\n            <div class=\"col-lg-2\">\n                <h3>Total</h3>\n            </div>\n        </div>\n\n        {% set ns = namespace(item = 0) %}\n\n        {% for product in products %}\n            {% if product['product_quantity'] > 0 %}\n                <div class=\"row mb-3\">\n                    <div class=\"col-lg-3\">\n                        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n                            <div class=\"thumbnail thumbnail-q\">\n                                <img class=\"img-fluid\" src=\"{{ url_for('static', filename='/products/' + product['product_image']) }}\" alt=\"Picture of {{ product['item_name'] }}\">\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-lg-2\">\n                        <strong>{{ product['item_name'] }}</strong>\n                        <br>\n                        <a href=\"{{ url_for('cart_remove', index=ns.item) }}\" class=\"btn btn-danger btn-sm\">Remove</a>\n                    </div>\n                    <div class=\"col-lg-2\">\n                        <strong>{{ product['product_quantity'] }}</strong>\n                    </div>\n                    <div class=\"col-lg-2\">\n                        <strong>{{ \"${:,.2f}\".format(product['price']) }}</strong>\n                    </div>\n                    <div class=\"col-lg-1\">\n                        <strong> {{ product['size'] }} </strong>\n                    </div>\n                    <div class=\"col-lg-2\">\n                        <strong>{{ \"${:,.2f}\".format(product['price']*product['product_quantity'])}}</strong> <!-- multiply by quantity-->\n                    </div>\n                </div>\n                {% set ns.item = ns.item + 1 %}\n            {% endif %}\n        {% endfor %}\n    {% else %}\n        <a>Your cart is currently empty. <a href=\"{{ url_for('Shop') }}\">Continue shopping</a> to add items to your cart.</p>\n    {% endif %}\n\n<form action=\"{{ url_for('process_order') }}\" method=\"POST\">\n    <!-- Creates Shipping Information form -->\n    <div class=\"inputBoxTotal\" style=\"padding-left: 24px\">\n        <div class=\"row\">\n            <div class=\"border-box col-7\">\n                <!--  Heading for the entire form -->\n                <h2 class=\"checkoutHeader\"><strong>Shipping Information</strong></h2><br><br>\n                <div class=\"formInputFields\">\n                    <div class = \"row\">\n                        <div class=\"border-box col\">\n                            <div class=\"row\" style=\"padding-right: 15px\">\n                                <!--Field to collect users first name -->\n                                <p class=\"formFieldsLabels\">First Name (*) <br></p>\n                                <input type=\"text\" class=\"inputFields\" name=\"first_name\" required>\n                            </div>\n                        </div>\n                        <div class=\"border-box col\">\n                            <div class=\"row\" style=\"padding-left: 15px\">\n                                <!--Field to collect users last name -->\n                                <p class=\"formFieldsLabels\">Last Name (*) <br></p>\n                                <input type=\"text\" class=\"inputFields\" name=\"last_name\" required><br><br>\n                            </div>\n                        </div>\n                    </div>\n                    <div class = \"row\">\n                        <!--Field to collect users email -->\n                        <p class=\"formFieldsLabels\">Email (*)</p>\n                        <input type=\"email\" class=\"inputFields\" name=\"email\" required><br><br>\n                    </div>\n                    <div class = \"row\">\n                        <!--Field to collect users address 2 -->\n                        <p class=\"formFieldsLabels\">Phone Number (*)</p>\n                        <input type=\"integer\" class=\"inputFields\" name=\"phoneNumber\"><br><br>\n                    </div>\n                    <div class = \"row\">\n                        <!--Field to collect users address 1 -->\n                        <p class=\"formFieldsLabels\">Address (*)</p>\n                        <input type=\"text\" class=\"inputFields\" name=\"address\" required><br><br>\n                    </div>\n                    <div class = \"row\">\n                        <!--Field to collect users city -->\n                        <p class=\"formFieldsLabels\">City (*)</p>\n                        <input type=\"text\" class=\"inputFields\" name=\"city\" required><br><br>\n                    </div>\n                    <div class = \"row\">\n                        <!--Field to collect users state -->\n                        <p class=\"formFieldsLabels\">State (*)</p>\n                        <input type=\"text\" class=\"inputFields\" name=\"state\" required><br><br>\n                    </div>\n                    <div class = \"row\">\n                        <!--Field to collect users zip code -->\n                        <p class=\"formFieldsLabels\">Zip Code (*)</p>\n                        <input type=\"text\" class=\"inputFields\" name=\"zipcode\" required><br><br>\n                    </div>\n                </div>\n            </div>\n\n            <!-- Creates cart pricing information form -->\n            <div class=\"border-box col-5\">\n                <!-- Heading for entire form -->\n                <h2 class=\"checkoutHeader\"><strong>Cart Totals</strong></h2><br><br>\n                <div class=\"billingTotals\">\n                    <!-- Creates fields within form to display total amount -->\n                    <div class=\"row\">\n                        <div class=\"border-box col\" style=\"padding: 0px\">\n                            <p class=\"cartTotalsLabels\">Subtotal - </p>\n                        </div>\n                        <div class=\"border-box col\" style=\"padding: 0px\">\n                            <p class=\"carttotalsdata\"> {{ cart_total }}</p>\n                        </div>\n                    </div><hr>\n                    <div class=\"row\">\n                        <div class=\"border-box col-3\" style=\"padding: 0px\">\n                            <p class=\"cartTotalsLabels\">Shipping - </p>\n                        </div>\n                        <div class=\"border-box col-9\" style=\"padding: 0px\">\n                            <div class=\"form-select-container\">\n                                <select name=\"role\" id=\"role\" class=\"form-select\" aria-label=\".form-select-md example\">\n                                    <option value=\"0\">---Select Shipping---</option>\n                                    <option name=\"local\" id=\"local\" value=\"0\">Local Pick Up - FREE</option>\n                                    <option name=\"home\" id=\"home\" value=\"10\">Home Delivery - $10.00</option>\n                                    <option name=\"rapid\" id=\"rapid\" value=\"20\">Rapid Delivery - $20.00</option>\n                                </select>\n                            </div>\n                        </div>\n                    </div><hr>\n                    <!-- Creates additional fields within form to display total amount -->\n                    <div class=\"row\">\n                        <div class=\"border-box col\" style=\"padding: 0px\">\n                            <p class=\"cartTotalsLabels\">Total - </p>\n                        </div>\n                        <div class=\"border-box col\" style=\"padding: 0px\">\n                            <p class=\"carttotalsdata\"> {{ cart_total }}</p>\n                        </div>\n                    </div>\n                    <div class=\"row\" style=\"justify-content: center\">\n                        <!--Field to submit the users answers inputted into the form -->\n                        <input type=\"submit\" value=\"Place Order\" class=\"checkoutButtons\" style=\"float: right; margin: 20px; padding: 7px 75px 7px 75px;\">\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</form>\n{% endblock %}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/CheckoutPage.html b/templates/CheckoutPage.html
+--- a/templates/CheckoutPage.html	(revision 2a5dc6c502df13b9cc2200cc37378d523407b784)
++++ b/templates/CheckoutPage.html	(date 1683148146975)
+@@ -4,143 +4,172 @@
+ {% block title %}Check Out{% endblock %}
+ 
+ {% block page_content %}
+-
+-    {% if cart_count > 0 %}
+-        <div class="row">
+-            <div class="col-lg-3">
++{% if cart_count > 0 %}
++           <div class="row">
++              <div class="col-lg-3">
+ 
+-            </div>
+-            <div class="col-lg-2">
+-                <h3 class="bold">Item</h3>
+-            </div>
+-            <div class="col-lg-2">
+-                <h3>Quantity</h3>
+-            </div>
+-            <div class="col-lg-2">
+-                <h3>Price</h3>
+-            </div>
+-            <div class="col-lg-1">
+-                <h3>Size</h3>
+-            </div>
+-            <div class="col-lg-2">
+-                <h3>Total</h3>
+-            </div>
+-        </div>
+-
+-        {% set ns = namespace(item = 0) %}
+-
+-        {% for product in products %}
+-            {% if product['product_quantity'] > 0 %}
+-                <div class="row mb-3">
+-                    <div class="col-lg-3">
+-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+-                            <div class="thumbnail thumbnail-q">
+-                                <img class="img-fluid" src="{{ url_for('static', filename='/products/' + product['product_image']) }}" alt="Picture of {{ product['item_name'] }}">
+-                            </div>
+-                        </div>
+-                    </div>
+-                    <div class="col-lg-2">
+-                        <strong>{{ product['item_name'] }}</strong>
+-                        <br>
+-                        <a href="{{ url_for('cart_remove', index=ns.item) }}" class="btn btn-danger btn-sm">Remove</a>
+-                    </div>
+-                    <div class="col-lg-2">
+-                        <strong>{{ product['product_quantity'] }}</strong>
+-                    </div>
+-                    <div class="col-lg-2">
+-                        <strong>{{ "${:,.2f}".format(product['price']) }}</strong>
+-                    </div>
+-                    <div class="col-lg-1">
+-                        <strong> {{ product['size'] }} </strong>
+-                    </div>
+-                    <div class="col-lg-2">
+-                        <strong>{{ "${:,.2f}".format(product['price']*product['product_quantity'])}}</strong> <!-- multiply by quantity-->
+-                    </div>
+-                </div>
+-                {% set ns.item = ns.item + 1 %}
+-            {% endif %}
+-        {% endfor %}
+-    {% else %}
+-        <a>Your cart is currently empty. <a href="{{ url_for('Shop') }}">Continue shopping</a> to add items to your cart.</p>
+-    {% endif %}
++              </div>
++              <div class="col-lg-2">
++                 <h3 class="bold">Item</h3>
++              </div>
++              <div class="col-lg-2">
++                 <h3>Quantity</h3>
++              </div>
++              <div class="col-lg-2">
++                 <h3>Price</h3>
++              </div>
++                   <div class="col-lg-1">
++                 <h3>Size</h3>
++              </div>
++              <div class="col-lg-2">
++                 <h3>Total</h3>
++              </div>
++           </div>
++               {% set ns = namespace(item = 0) %}
++           {% for product in products %}
++                  {% if product in products and product['size'] != size and ns.item != 0 and product['product_id'] == request.form['product_id']%}
++                        <div class="row mb-3">
++              <div class="col-lg-3">
++                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
++                    <div class="thumbnail thumbnail-q">
++                       <img class="img-fluid" src="{{ url_for('static', filename='/products/' + product['product_image']) }}" alt="Picture of {{ product['item_name'] }}">
++                    </div>
++                 </div>
++              </div>
++              <div class="col-lg-2">
++                 <strong>{{ product['item_name'] }}</strong>
++                 <br>
++                           <a href="{{ url_for('cart_remove', index=ns.item) }}" class="btn btn-danger btn-sm">Remove</a>
++              </div>
++              <div class="col-lg-2">
++                       <strong>{{ product['product_quantity'] }}</strong>
++              </div>
++              <div class="col-lg-2">
++                       <strong>{{ "${:,.2f}".format(product['price']) }}</strong>
++              </div>
++                   <div class="col-lg-1">
++                 <strong> {{ size }} </strong>
++              </div>
++              <div class="col-lg-2">
++                 <strong>{{ "${:,.2f}".format(product['price']*product['product_quantity'])}}</strong> <!-- multiply by quantity-->
++              </div>
++           </div>
++               {% set ns.item = ns.item + 1 %}
++
++
++            {% elif product['product_quantity'] > 0 %}
++           <div class="row mb-3">
++              <div class="col-lg-3">
++                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
++                    <div class="thumbnail thumbnail-q">
++                       <img class="img-fluid" src="{{ url_for('static', filename='/products/' + product['product_image']) }}" alt="Picture of {{ product['item_name'] }}">
++                    </div>
++                 </div>
++              </div>
++              <div class="col-lg-2">
++                 <strong>{{ product['item_name'] }}</strong>
++                 <br>
++                           <a href="{{ url_for('cart_remove', index=ns.item) }}" class="btn btn-danger btn-sm">Remove</a>
++              </div>
++              <div class="col-lg-2">
++                       <strong>{{ product['product_quantity'] }}</strong>
++              </div>
++              <div class="col-lg-2">
++                       <strong>{{ "${:,.2f}".format(product['price']) }}</strong>
++              </div>
++                   <div class="col-lg-1">
++                 <strong> {{ product['size'] }} </strong>
++              </div>
++              <div class="col-lg-2">
++                 <strong>{{ "${:,.2f}".format(product['price']*product['product_quantity'])}}</strong> <!-- multiply by quantity-->
++              </div>
++           </div>
++               {% set ns.item = ns.item + 1 %}
++
++
++              {% endif %}
++           {% endfor %}
++       {% else %}
++           <a>Your cart is currently empty. <a href="{{ url_for('Shop') }}">Continue shopping</a> to add items to your cart.</p>
++       {% endif %}
+ 
+-<form action="{{ url_for('process_order') }}" method="POST">
+-    <!-- Creates Shipping Information form -->
+-    <div class="inputBoxTotal" style="padding-left: 24px">
+-        <div class="row">
+-            <div class="border-box col-7">
+-                <!--  Heading for the entire form -->
+-                <h2 class="checkoutHeader"><strong>Shipping Information</strong></h2><br><br>
+-                <div class="formInputFields">
+-                    <div class = "row">
+-                        <div class="border-box col">
+-                            <div class="row" style="padding-right: 15px">
+-                                <!--Field to collect users first name -->
+-                                <p class="formFieldsLabels">First Name (*) <br></p>
+-                                <input type="text" class="inputFields" name="first_name" required>
+-                            </div>
+-                        </div>
+-                        <div class="border-box col">
+-                            <div class="row" style="padding-left: 15px">
+-                                <!--Field to collect users last name -->
+-                                <p class="formFieldsLabels">Last Name (*) <br></p>
+-                                <input type="text" class="inputFields" name="last_name" required><br><br>
+-                            </div>
+-                        </div>
+-                    </div>
+-                    <div class = "row">
+-                        <!--Field to collect users email -->
+-                        <p class="formFieldsLabels">Email (*)</p>
+-                        <input type="email" class="inputFields" name="email" required><br><br>
+-                    </div>
+-                    <div class = "row">
+-                        <!--Field to collect users address 2 -->
+-                        <p class="formFieldsLabels">Phone Number (*)</p>
+-                        <input type="integer" class="inputFields" name="phoneNumber"><br><br>
+-                    </div>
+-                    <div class = "row">
+-                        <!--Field to collect users address 1 -->
+-                        <p class="formFieldsLabels">Address (*)</p>
+-                        <input type="text" class="inputFields" name="address" required><br><br>
+-                    </div>
+-                    <div class = "row">
+-                        <!--Field to collect users city -->
+-                        <p class="formFieldsLabels">City (*)</p>
+-                        <input type="text" class="inputFields" name="city" required><br><br>
+-                    </div>
+-                    <div class = "row">
+-                        <!--Field to collect users state -->
+-                        <p class="formFieldsLabels">State (*)</p>
+-                        <input type="text" class="inputFields" name="state" required><br><br>
+-                    </div>
+-                    <div class = "row">
+-                        <!--Field to collect users zip code -->
+-                        <p class="formFieldsLabels">Zip Code (*)</p>
+-                        <input type="text" class="inputFields" name="zipcode" required><br><br>
+-                    </div>
+-                </div>
+-            </div>
++<form action="/payment" method="get">
++       <!-- Creates Shipping Information form -->
++        <div class="inputBoxTotal" style="padding-left: 24px">
++            <div class="row">
++                <div class="border-box col-7">
++                    <!--  Heading for the entire form -->
++                    <h2 class="checkoutHeader"><strong>Shipping Information</strong></h2><br><br>
++                    <div class="formInputFields">
++                        <div class = "row">
++                            <div class="border-box col">
++                                <div class="row" style="padding-right: 15px">
++                                    <!--Field to collect users first name -->
++                                    <p class="formFieldsLabels">First Name (*) <br></p>
++                                    <input type="text" class="inputFields" name="first_name" required>
++                                </div>
++                            </div>
++                            <div class="border-box col">
++                                <div class="row" style="padding-left: 15px">
++                                    <!--Field to collect users last name -->
++                                    <p class="formFieldsLabels">Last Name (*) <br></p>
++                                    <input type="text" class="inputFields" name="last_name" required><br><br>
++                                </div>
++                            </div>
++                        </div>
++                        <div class = "row">
++                            <!--Field to collect users email -->
++                            <p class="formFieldsLabels">Email (*)</p>
++                            <input type="email" class="inputFields" name="email" required><br><br>
++                        </div>
++                        <div class = "row">
++                            <!--Field to collect users address 2 -->
++                            <p class="formFieldsLabels">Phone Number (*)</p>
++                            <input type="integer" class="inputFields" name="phoneNumber"><br><br>
++                        </div>
++                        <div class = "row">
++                            <!--Field to collect users address 1 -->
++                            <p class="formFieldsLabels">Address (*)</p>
++                            <input type="text" class="inputFields" name="address" required><br><br>
++                        </div>
++                        <div class = "row">
++                            <!--Field to collect users city -->
++                            <p class="formFieldsLabels">City (*)</p>
++                            <input type="text" class="inputFields" name="city" required><br><br>
++                        </div>
++                        <div class = "row">
++                            <!--Field to collect users state -->
++                            <p class="formFieldsLabels">State (*)</p>
++                            <input type="text" class="inputFields" name="state" required><br><br>
++                        </div>
++                        <div class = "row">
++                            <!--Field to collect users zip code -->
++                            <p class="formFieldsLabels">Zip Code (*)</p>
++                            <input type="text" class="inputFields" name="zipcode" required><br><br>
++                        </div>
++                    </div>
++                </div>
+ 
+-            <!-- Creates cart pricing information form -->
+-            <div class="border-box col-5">
+-                <!-- Heading for entire form -->
+-                <h2 class="checkoutHeader"><strong>Cart Totals</strong></h2><br><br>
+-                <div class="billingTotals">
+-                    <!-- Creates fields within form to display total amount -->
+-                    <div class="row">
+-                        <div class="border-box col" style="padding: 0px">
+-                            <p class="cartTotalsLabels">Subtotal - </p>
+-                        </div>
+-                        <div class="border-box col" style="padding: 0px">
+-                            <p class="carttotalsdata"> {{ cart_total }}</p>
+-                        </div>
+-                    </div><hr>
+-                    <div class="row">
+-                        <div class="border-box col-3" style="padding: 0px">
+-                            <p class="cartTotalsLabels">Shipping - </p>
+-                        </div>
+-                        <div class="border-box col-9" style="padding: 0px">
+-                            <div class="form-select-container">
++                <!-- Creates cart pricing information form -->
++                <div class="border-box col-5">
++                    <!-- Heading for entire form -->
++                    <h2 class="checkoutHeader"><strong>Cart Totals</strong></h2><br><br>
++                        <div class="billingTotals">
++                            <!-- Creates fields within form to display total amount -->
++                            <div class="row">
++                                    <div class="border-box col" style="padding: 0px">
++                                        <p class="cartTotalsLabels">Subtotal - </p>
++                                    </div>
++                                    <div class="border-box col" style="padding: 0px">
++                                    <p class="carttotalsdata"> {{ "${:,.2f}".format(cart_total) }}</p>
++                                    </div>
++                            </div><hr>
++                            <div class="row">
++                                <div class="border-box col-3" style="padding: 0px">
++                                    <p class="cartTotalsLabels">Shipping - </p>
++                                </div>
++                                <div class="border-box col-9" style="padding: 0px">
++                                <div class="form-select-container">
+                                 <select name="role" id="role" class="form-select" aria-label=".form-select-md example">
+                                     <option value="0">---Select Shipping---</option>
+                                     <option name="local" id="local" value="0">Local Pick Up - FREE</option>
+@@ -148,24 +177,26 @@
+                                     <option name="rapid" id="rapid" value="20">Rapid Delivery - $20.00</option>
+                                 </select>
+                             </div>
+-                        </div>
+-                    </div><hr>
+-                    <!-- Creates additional fields within form to display total amount -->
+-                    <div class="row">
+-                        <div class="border-box col" style="padding: 0px">
+-                            <p class="cartTotalsLabels">Total - </p>
+-                        </div>
+-                        <div class="border-box col" style="padding: 0px">
+-                            <p class="carttotalsdata"> {{ cart_total }}</p>
+-                        </div>
+-                    </div>
+-                    <div class="row" style="justify-content: center">
+-                        <!--Field to submit the users answers inputted into the form -->
+-                        <input type="submit" value="Place Order" class="checkoutButtons" style="float: right; margin: 20px; padding: 7px 75px 7px 75px;">
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-    </div>
+-</form>
++                                </div>
++
++                            </div><hr>
++                            <!-- Creates additional fields within form to display total amount -->
++                            <div class="row">
++                                    <div class="border-box col" style="padding: 0px">
++                                        <p class="cartTotalsLabels">Total - </p>
++                                    </div>
++                                    <div class="border-box col" style="padding: 0px">
++                                    <p class="carttotalsdata"> {{ "${:,.2f}".format(cart_total) }}</p>
++                                    </div>
++                            </div>
++                            <div class="row" style="justify-content: center">
++  <!--Field to submit the users answers inputted into the form -->
++                                <input type="submit" value="Place Order" class="checkoutButtons" style="float: right; margin: 20px; padding: 7px 75px 7px 75px;" formaction="/payment">
++                            </div>
++                        </div>
++                </div>
++            </div>
++        </div>
++
++        </form>
+ {% endblock %}
+\ No newline at end of file
