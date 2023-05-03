@@ -9,7 +9,6 @@
 {% endblock %}
 
 {% block page_content %}
-
     <!-- Add padding between top of the page and contents within the table -->
     <div class="GenProduct_HeadingSpacer"></div>
     <!-- Centers and bolds heading text for the page -->
@@ -38,40 +37,39 @@
                 <div class="border-box col">
                     <div class="formInputFields">
                         {% if current_user.is_authenticated %}
-                         <div class = "row">
+                            <div class = "row">
                                 <!--Field to collect users message -->
                                 <p class="formFieldsLabels">Message*</p>
                                 <textarea rows="5" cols="20" placeholder="Enter your message here!" name="message" require></textarea>
                             </div>
                         {% else %}
-                        <div class = "row">
-                            <div class="border-box col">
-                                <div class="row" style="padding-right: 15px">
-                                    <!--Field to collect users first name -->
-                                    <p class="formFieldsLabels">First Name*<br></p>
-                                    <input type="text" class="inputFields" name="first_name" required>
+                            <div class = "row">
+                                <div class="border-box col">
+                                    <div class="row" style="padding-right: 15px">
+                                        <!--Field to collect users first name -->
+                                        <p class="formFieldsLabels">First Name*<br></p>
+                                        <input type="text" class="inputFields" name="first_name" required>
+                                    </div>
+                                </div>
+                                <div class="border-box col">
+                                    <div class="row" style="padding-left: 15px">
+                                        <!--Field to collect users last name -->
+                                        <p class="formFieldsLabels">Last Name*<br></p>
+                                        <input type="text" class="inputFields" name="last_name" required><br><br>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="border-box col">
-                                <div class="row" style="padding-left: 15px">
-                                    <!--Field to collect users last name -->
-                                    <p class="formFieldsLabels">Last Name*<br></p>
-                                    <input type="text" class="inputFields" name="last_name" required><br><br>
-                                </div>
+                            <div class = "row">
+                                <!--Field to collect users email -->
+                                <p class="formFieldsLabels">Email*</p>
+                                <input type="email" class="inputFields" name="email" required><br><br>
                             </div>
-                        </div>
-                        <div class = "row">
-                            <!--Field to collect users email -->
-                            <p class="formFieldsLabels">Email*</p>
-                            <input type="email" class="inputFields" name="email" required><br><br>
-                        </div>
-
-                        <div class = "row">
-                            <!--Field to collect users message -->
-                            <p class="formFieldsLabels">Message*</p>
-                            <textarea rows="5" cols="20" placeholder="Enter your message here!" name="message" require></textarea>
-                        </div>
-                     {% endif %}
+                            <div class = "row">
+                                <!--Field to collect users message -->
+                                <p class="formFieldsLabels">Message*</p>
+                                <textarea rows="5" cols="20" placeholder="Enter your message here!" name="message" require></textarea>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="row">
@@ -82,10 +80,10 @@
                 </div>
             </div>
         </div>
-                </form>
-                </div>
-                </div>
-                </div>
+        </form>
+            </div>
+        </div>
+        </div>
     </div>
     <!-- adds spacing between bottom of all text content and footer -->
     <div class="GenProduct_HeadingSpacer"></div>
