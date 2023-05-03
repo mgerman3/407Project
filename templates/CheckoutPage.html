@@ -93,7 +93,7 @@
            <a>Your cart is currently empty. <a href="{{ url_for('Shop') }}">Continue shopping</a> to add items to your cart.</p>
        {% endif %}
 
-<form action="/payment" method="get">
+<form action="{{ url_for('process_order') }}" method="POST">
        <!-- Creates Shipping Information form -->
         <div class="inputBoxTotal" style="padding-left: 24px">
             <div class="row">
@@ -191,7 +191,7 @@
                             </div>
                             <div class="row" style="justify-content: center">
   <!--Field to submit the users answers inputted into the form -->
-                                <input type="submit" value="Place Order" class="checkoutButtons" style="float: right; margin: 20px; padding: 7px 75px 7px 75px;" formaction="/payment">
+                                <input type="submit" value="Place Order" class="checkoutButtons" style="float: right; margin: 20px; padding: 7px 75px 7px 75px;">
                             </div>
                         </div>
                 </div>
