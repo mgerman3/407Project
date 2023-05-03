@@ -1,5 +1,3 @@
-<!-- Luke Bennett -->
-
 {% extends "base.html" %}
 
 {% block title %}About{% endblock %}
@@ -11,48 +9,47 @@
 
         <div class = "containerd2">
             <img src="../static/images/AboutPage_TopPhoto.png" width="350" height="350" alt="Co Founders Hugging" style="float: right; padding: 0px 0px 0px 10px">
-                <h1><strong> Around the Block</strong></h1>
-                    <p>"Around the Block" is a unique apparel company co-founded
-                    by Gabi McLaughlin and Joelle Anselmo, two seniors at the University of Maryland.
-                    The concept for the company was sparked by our observation of
-                    the distinct and recognizable house names in College Park's Old Town neighborhood.
-                    We saw an opportunity to showcase the character and charm of the area through fashion and decided to bring their vision to life in October of 2022.</p>
+            <h1><strong> Around the Block</strong></h1>
+            <p>"Around the Block" is a unique apparel company co-founded
+                by Gabi McLaughlin and Joelle Anselmo, two seniors at the University of Maryland.
+                The concept for the company was sparked by our observation of
+                the distinct and recognizable house names in College Park's Old Town neighborhood.
+                We saw an opportunity to showcase the character and charm of the area through fashion and decided to bring their vision to life in October 2022.</p>
+            <p>Have an idea? Want to see something new?</p>
 
-                    <p>Have an idea? Want to see something new?</p>
-
-                    <!-- Contact Us Button -->
-                        <form action="/RequestForm" style="padding: 0px 0px 0px 0px" method="get">
-                            <input type="submit" value="Contact Us">
-                        </form>
+            <!-- Contact Us Button -->
+            <form action="{{ url_for('RequestForm') }}" style="padding: 0px 0px 0px 0px" method="get">
+                <input type="submit" value="Contact Us">
+            </form>
         </div>
 
          <!-- Mission Section -->
         <div class = "containere">
             <img src="../static/images/AboutPage_OurMission_GroupPic.JPG" width="500" height="500" alt="Around the Block Group Shot" style="float: left">
-
-                <div class="border-box col">
-                    <div class="row" style="padding-right: 20px; margin-right: 20px">
-                        <div class = "GenProduct_VerticalSpacer">
+            <div class="border-box col">
+                <div class="row" style="padding-right: 20px; margin-right: 20px">
+                    <div class = "GenProduct_VerticalSpacer">
                         <h1 style="padding-left: 5px; width: auto;"><strong>Our Mission </strong></h1>
-                            <p> Instead of using new clothing items, we source our materials exclusively from local thrift stores,
-                                making each piece of clothing sold truly one-of-a-kind. Our commitment to sustainability and reducing waste
-                                is evident in the decision to use repurposed garments, ensuring that each item carries its own story and character.
-                            </p>
-                            <p>In addition to our environmentally conscious practices, we are dedicated to giving back to the community.
-                                Around the Block donates 10% of our profits to Sloan Kettering Cancer Research Foundation in New York City,
-                                making a positive impact in the fight against cancer.
-                            </p>
-                            <p>With each purchase from "Around the Block", customers can not only show their love for College Park,
-                                but also support cancer research efforts and contribute to a noble cause.
-                            </p>
-                        </div>
+                        <p> Instead of using new clothing items, we source our materials exclusively from local thrift stores,
+                            making each piece of clothing sold truly one-of-a-kind. Our commitment to sustainability and reducing waste
+                            is evident in the decision to use repurposed garments, ensuring that each item carries its own story and character.
+                        </p>
+                        <p>In addition to our environmentally conscious practices, we are dedicated to giving back to the community.
+                            Around the Block donates 10% of our profits to Sloan Kettering Cancer Research Foundation in New York City,
+                            making a positive impact in the fight against cancer.
+                        </p>
+                        <p>With each purchase from "Around the Block", customers can not only show their love for College Park,
+                            but also support cancer research efforts and contribute to a noble cause.
+                        </p>
                     </div>
+                </div>
             </div>
         </div>
 
-  <!-- Heading for entire page & supporting image-->
- <div class = "containerd2">
-    <!-- Meet The Team Section -->
+        <!-- Heading for entire page & supporting image-->
+        <div class = "containerd2">
+
+        <!-- Meet The Team Section -->
             <!-- Gabi's subsection -->
             <div class = "row">
                 <div class = "text-center">
@@ -62,8 +59,8 @@
             <div class="GenProduct_HeadingSpacer"></div>
                 <div class="border-box col">
                     <div class="GenProduct_rowLayout">
-                       <div class = "GenProduct_columnLayout">
-                           <div class= "my-div"> Gabi McLaughlin </div>
+                        <div class = "GenProduct_columnLayout">
+                            <div class= "my-div"> Gabi McLaughlin </div>
                             <div>
                                 <p> Gabi is a senior at the University of Maryland double majoring in finance and business management.
                                     She's passionate about bringing teams together to innovate. She continues to explore finance,
@@ -77,85 +74,85 @@
                                     where she helped plan a leadership conference for Smith, as well as a virtual trip to New York companies for undergraduate students.
                                 </p>
                             </div>
-                       </div>
-                        <div class = "GenProduct_columnLayout">
-                             <div class = "GenProduct_VerticalSpacer">
-                            <img class="left" src="static/images/Gabi Headshot.jpg" width = "500" height = "500" alt="Gabi Solo Pic" style="float: left; margin-left: 20px;">
                         </div>
-                        </div>
-                    </div>
-                </div>
-
-        <!-- Space between subsections -->
-        <div class="GenProduct_HeadingSpacer"></div>
-
-         <!-- Space between subsections -->
-        <div class="GenProduct_HeadingSpacer"></div>
-
-        <!-- Joelle's subsection -->
-         <div class="GenProduct_HeadingSpacer"></div>
-                <div class="border-box col">
-                    <div class="GenProduct_rowLayout">
-                       <div class = "GenProduct_columnLayout">
-                          <img src="static/images/Joelle Headshot.jpg" width = "500" height = "500" alt="Joelle Solo Pic" style="float: right; margin-right:20px;" >
-                       </div>
                         <div class = "GenProduct_columnLayout">
-                             <div class = "GenProduct_VerticalSpacer">
-                                 <div class= "my-div"> Joelle Anselmo </div>
-                            <div>
-                                <p> Joelle is a senior at the University of Maryland double majoring in journalism
-                                    and business management. She's fascinated by human centered and big authority
-                                    stories and is devoted to learning about making sustainable choices, especially in
-                                    retail. When she's not writing articles in the middle of the night or conducting
-                                    interview, she loves reading books, journaling, daydreaming about traveling and
-                                    living abroad, running and hanging out with friends and family.
-                                </p>
-
-                                <p>
-                                    During the school year, Joelle took thought-provoking, multimedia journalism
-                                    classes that fine-tune her technology skills with software such as Premiere Pro, InDesign, Adobe Photoshop, and more.
-                                    Her interest in journalism has encouraged her to become more involved with the surrounding community,
-                                    where she has served as the President of the UMD Chapter of the Society of Professional Journal lists in her last year of college.
-                                </p>
+                            <div class = "GenProduct_VerticalSpacer">
+                                <img class="left" src="static/images/Gabi Headshot.jpg" width = "500" height = "500" alt="Gabi Solo Pic" style="float: left; margin-left: 20px;">
                             </div>
-                             </div>
                         </div>
                     </div>
                 </div>
- </div>
-            </div>
- </div>
 
-     <!-- Why ATB -->
+                    <!-- Space between subsections -->
+                    <div class="GenProduct_HeadingSpacer"></div>
+
+                    <!-- Space between subsections -->
+                    <div class="GenProduct_HeadingSpacer"></div>
+
+                    <!-- Joelle's subsection -->
+                    <div class="GenProduct_HeadingSpacer"></div>
+                    <div class="border-box col">
+                        <div class="GenProduct_rowLayout">
+                            <div class = "GenProduct_columnLayout">
+                                <img src="static/images/Joelle Headshot.jpg" width = "500" height = "500" alt="Joelle Solo Pic" style="float: right; margin-right:20px;" >
+                            </div>
+                            <div class = "GenProduct_columnLayout">
+                                <div class = "GenProduct_VerticalSpacer">
+                                    <div class= "my-div"> Joelle Anselmo </div>
+                                    <div>
+                                        <p> Joelle is a senior at the University of Maryland double majoring in journalism
+                                        and business management. She's fascinated by human centered and big authority
+                                        stories and is devoted to learning about making sustainable choices, especially in
+                                        retail. When she's not writing articles in the middle of the night or conducting
+                                        interview, she loves reading books, journaling, daydreaming about traveling and
+                                        living abroad, running and hanging out with friends and family.
+                                        </p>
+                                        <p>
+                                        During the school year, Joelle took thought-provoking, multimedia journalism
+                                        classes that fine-tune her technology skills with software such as Premiere Pro, InDesign, Adobe Photoshop, and more.
+                                        Her interest in journalism has encouraged her to become more involved with the surrounding community,
+                                        where she has served as the President of the UMD Chapter of the Society of Professional Journal lists in her last year of college.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why ATB -->
         <div class = "containere">
-           <div class="border-box col">
+            <div class="border-box col">
                 <div class="border-box col">
                     <div class="GenProduct_rowLayout">
-                       <div class = "GenProduct_columnLayout">
+                        <div class = "GenProduct_columnLayout">
                             <div class = "h2.left">
                                 <h1><strong>Why ATB</strong></h1>
                             </div>
                             <div>
-                               <p> Instead of using new clothing items, we source our materials exclusively from local thrift stores,
+                                <p> Instead of using new clothing items, we source our materials exclusively from local thrift stores,
                                 making each piece of clothing sold truly one-of-a-kind. Our commitment to sustainability and reducing waste
                                 is evident in the decision to use repurposed garments, ensuring that each item carries its own story and character.
-                            </p>
-                            <p>In addition to our environmentally conscious practices, we are dedicated to giving back to the community.
+                                </p>
+                                <p>In addition to our environmentally conscious practices, we are dedicated to giving back to the community.
                                 Around the Block donates 10% of our profits to Sloan Kettering Cancer Research Foundation in New York City,
                                 making a positive impact in the fight against cancer.
-                            </p>
-                            <p>With each purchase from "Around the Block", customers can not only show their love for College Park,
+                                </p>
+                                <p>With each purchase from "Around the Block", customers can not only show their love for College Park,
                                 but also support cancer research efforts and contribute to a noble cause.
+                                </p>
                             </div>
-                       </div>
-                        <div class = "GenProduct_columnLayout">
-                           <div class = "GenProduct_VerticalSpacer">
-                           <img src="../static/images/HomePage_FourthSmallPic.jpg" width="500" height="500" alt="Around the Block Models on the Roof" style="float: right">
                         </div>
+                        <div class = "GenProduct_columnLayout">
+                            <div class = "GenProduct_VerticalSpacer">
+                                <img src="../static/images/HomePage_FourthSmallPic.jpg" width="500" height="500" alt="Around the Block Models on the Roof" style="float: right">
+                            </div>
                         </div>
                     </div>
                 </div>
-           </div>
+            </div>
         </div>
-</main>
+    </main>
 {% endblock %}

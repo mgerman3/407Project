@@ -1,84 +1,80 @@
 {% extends "base.html" %}
 
 {% block title %}
-   {% if action and action == 'create' %}
-       Input New Collection
-   {% elif action and action == 'update'  %}
-       Update Collection Name
-   {% else %}
-       View Collections
-   {% endif %}
+    {% if action and action == 'create' %}
+        Input New Collection
+    {% elif action and action == 'update'  %}
+        Update Collection Name
+    {% else %}
+        View Collections
+    {% endif %}
 {% endblock %}
 
 {% block html_head %}
-   {% if action and action == 'create' %}
-       Input New Collection
-   {% elif action and action == 'update'  %}
-       Update Collection Name
-   {% else %}
-       View Collections
-   {% endif %}
+    {% if action and action == 'create' %}
+        Input New Collection
+    {% elif action and action == 'update'  %}
+        Update Collection Name
+    {% else %}
+        View Collections
+    {% endif %}
 {% endblock %}
 
 {% block page_content %}
     <div id="wrapper">
     <!-- Background Photo -->
         <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
-           <div class="row">
-               <form action="{{ url_for('collections_entry') }}" method="POST">
-                 <!-- Inventory Input -->
-                 <div class="inventoryBoxTotal">
-                     <div class="row">
-                         <div class = "d-flex justify-content-center">
-                             <div class = "border-box col">
-                                 <div class = row>
-                                     <div class="formInputFields" style="width: 700px">
-                                         <div class = "border-box-col">
-                                             <div class="row">
-                                                 <div class="row">
-
-                                                 <!-- set up the action for the form -->
-                                                   {% if action and action in ['create', 'update'] %}
-                                                    <form class="row g-4"
-                                                          action="{{ url_for('collection_edit', collection_id=collection['collection_id']) if item else url_for('collections_entry') }}"
-                                                          enctype="multipart/form-data" method="post">
+        <div class="row">
+            <form action="{{ url_for('collections_entry') }}" method="POST">
+                <!-- Inventory Input -->
+                <div class="inventoryBoxTotal">
+                    <div class="row">
+                        <div class = "d-flex justify-content-center">
+                            <div class = "border-box col">
+                                <div class = row>
+                                    <div class="formInputFields" style="width: 700px">
+                                        <div class = "border-box-col">
+                                            <div class="row">
+                                                <div class="row">
+                                                    <!-- set up the action for the form -->
+                                                    {% if action and action in ['create', 'update'] %}
+                                                        <form class="row g-4"
+                                                              action="{{ url_for('collection_edit', collection_id=collection['collection_id']) if item else url_for('collections_entry') }}"
+                                                              enctype="multipart/form-data" method="post">
                                                     {% else %}
                                                         <div class="row g-4">
                                                     {% endif %}
 
                                                     <!-- Collection Name Input -->
-                                                     {% if action and action in ['create'] %}
-                                                     <label for="collection_name" class="form-label"><strong>Collection Name</strong></label>
-                                                     <input type="text" class="inputFields" id="collection_name" name="collection_name" value="{{ collection['collection_name'] if collection else '' }}" required>
-                                                     {% endif %}
-
-                                                 </div>
-                                                 <!-- Inventory Name Read/Update -->
-                                                 {% if action and action in ['read', 'update'] %}
-                                                    <div class="row d-flex justify-content-center">
-                                                        {% if action and action == 'update' %}
+                                                    {% if action and action in ['create'] %}
                                                         <label for="collection_name" class="form-label"><strong>Collection Name</strong></label>
-                                                        <input type="text" class="inputFields" id="collection_name" name="collection_name"  value="{{ collection['collection_name'] if collection else '' }}" required>
-                                                        {% else %}
-                                                        <strong>Collection Name</strong>
-                                                        <br> {{ collection['collection_name'] }}
+                                                        <input type="text" class="inputFields" id="collection_name" name="collection_name" value="{{ collection['collection_name'] if collection else '' }}" required>
                                                     {% endif %}
-                                                 </div>
-                                                 {% endif %}
-
-                                                  <div class="col-12 text-center">
-                                                    {% if action and action in ['create', 'update'] %}
-                                                    <button class="btn btn-primary" type="submit">{{ 'Add' if action=='create' else 'Update' }} Collection</button>
-                                                    {% endif %}
-                                                  </div>
-
-                                                {% if action and action in ['create', 'update'] %}
-                                                </form>
-                                                {% else %}
                                                     </div>
-                                                {% endif %}
+                                                    <!-- Inventory Name Read/Update -->
+                                                    {% if action and action in ['read', 'update'] %}
+                                                        <div class="row d-flex justify-content-center">
+                                                            {% if action and action == 'update' %}
+                                                                <label for="collection_name" class="form-label"><strong>Collection Name</strong></label>
+                                                                <input type="text" class="inputFields" id="collection_name" name="collection_name"  value="{{ collection['collection_name'] if collection else '' }}" required>
+                                                            {% else %}
+                                                                <strong>Collection Name</strong>
+                                                                <br> {{ collection['collection_name'] }}
+                                                            {% endif %}
+                                                        </div>
+                                                    {% endif %}
 
+                                                    <div class="col-12 text-center">
+                                                        {% if action and action in ['create', 'update'] %}
+                                                            <button class="btn btn-primary" type="submit">{{ 'Add' if action=='create' else 'Update' }} Collection</button>
+                                                        {% endif %}
+                                                    </div>
 
+                                                    {% if action and action in ['create', 'update'] %}
+                                                        </form>
+                                                    {% else %}
+                                                        </div>
+                                                    {% endif %}
 
         {#                                        {% if action and action in ['create', 'update'] %}#}
         {#                                            <form class="row g-4"#}
@@ -101,6 +97,6 @@
                     </div>
                 </div>
             </form>
-           </div>
+        </div>
     </div>
 {% endblock %}
