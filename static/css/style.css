@@ -211,6 +211,7 @@ div.col-lg-1{
 .formInputFields {
     background-color: #f6f6f6;
     padding: 30px 25px 30px 25px;
+    border-radius: 25px;
 }
 
 shippingEntry {
@@ -473,6 +474,12 @@ input.inventoryButtons {
     height: 50px;
     display: block;
     margin-top: 10px;
+    background-color: #69a695;
+    color: white;
+    border-radius: 5px;
+    border-color: black;
+    font-size: 24px;
+    padding: 5px 10px 5px 10px;
 }
 
 .paddingbetweenelements {

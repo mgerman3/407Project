@@ -374,18 +374,14 @@ def item_edit(product_id):
  if request.method == 'GET':
      item = InventoryInfo.query.filter_by(product_id=product_id).first()
 
-
      if item:
          return render_template('Input_Inventory.html', item=item, action='update')
-
 
      else:
          flash(f'Item attempting to be edited could not be found!', 'error')
 
-
  elif request.method == 'POST':
      item = InventoryInfo.query.filter_by(product_id=product_id).first()
-
 
      if item:
          item.item_name = request.form['item_name']
@@ -399,31 +395,25 @@ def item_edit(product_id):
          item.desc = request.form['desc']
          product_image = request.files['product_image']
 
-
          if('delete_product_image' in request.form or product_image != '') and 'current_product_image' != '' :
              try:
-               os.remove(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], item.product_image))
-               item.product_image = ''
+                 os.remove(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], item.product_image))
+                 item.product_image = ''
              except:
-               pass
-
+                 pass
 
              product_filename = secure_filename(item.item_name + '-' + product_image.filename)
-
 
              if product_image.filename != '':
                  product_image.save(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], product_filename))
                  item.product_image = product_filename if product_image else ''
-
 
          db.session.commit()
          flash(f'{item.item_name} was successfully updated!', 'success')
      else:
          flash(f'Item attempting to be edited could not be found!', 'error')
 
-
      return redirect(url_for('items_view_all'))
-
 
  # Address issue where unsupported HTTP request method is attempted
  flash(f'Invalid request. Please contact support if this problem persists.', 'error')

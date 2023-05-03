@@ -70,16 +70,6 @@
                                                     {% if action and action in ['create', 'update'] %}
                                                     <button class="btn btn-primary" type="submit">{{ 'Add' if action=='create' else 'Update' }} Collection</button>
                                                     {% endif %}
-
-                                                    {% if current_user.role in ['EMPLOYEE', 'ADMIN'] %}
-                                                    <a href="{{ url_for('collections_view_all') }}" class="btn btn-secondary" role="button">
-                                                        {% if action and action in ['create', 'update'] %}
-                                                        Cancel
-                                                        {% else %}
-                                                        Return
-                                                        {% endif %}
-                                                    </a>
-                                                    {% endif %}
                                                   </div>
 
                                                 {% if action and action in ['create', 'update'] %}
