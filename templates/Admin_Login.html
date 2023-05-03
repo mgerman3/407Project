@@ -55,8 +55,8 @@
                                                     <!-- Role Input -->
                                                     {% if action and action in ['create'] %}
                                                     <div class="form-select-container">
-                                                        <select name="role" id="role" class="form-select" aria-label=".form-select-md example">
-                                                            <option value="0">---Select A Role---</option>
+                                                        <select name="role" id="role" class="form-select" aria-label=".form-select-md example" required>
+                                                            <option value="" disabled selected>---Select A Role---</option>
                                                             <option name="EMPLOYEE" id="EMPLOYEE" value="EMPLOYEE">EMPLOYEE</option>
                                                             <option name="ADMIN" id="ADMIN" value="ADMIN">ADMIN</option>
                                                         </select>

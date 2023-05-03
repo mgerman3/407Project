@@ -82,8 +82,9 @@ class OrderInfo(db.Model):
 class InventoryInfo(db.Model):
    __tablename__ = "InventoryInfo"
 
+
    product_id = db.Column(db.Integer, primary_key=True)
-   collection_id = db.Column(db.Integer, db.ForeignKey('Collections.collection_id'), nullable=True)
+   collection_id = db.Column(db.Integer, db.ForeignKey('Collections.collection_id'))
    item_name = db.Column(db.String(20), nullable=False)
    xsmall = db.Column(db.Integer, nullable=False)
    small = db.Column(db.Integer, nullable=False)
@@ -91,13 +92,14 @@ class InventoryInfo(db.Model):
    large = db.Column(db.Integer, nullable=False)
    xlarge = db.Column(db.Integer, nullable=False)
    xxlarge = db.Column(db.Integer, nullable=False)
-   price = db.Column(db.Integer, nullable=False)
+   price = db.Column(db.Float, nullable=False)
    desc = db.Column(db.String(50), nullable=False)
-   product_image = db.Column(db.String(100), nullable=True)
+   product_image = db.Column(db.String(100))
 
-   def __init__(self, item_name, collection_id, xsmall, small, medium, large, xlarge, xxlarge, price, desc, product_image):
-       self.item_name = item_name
+
+   def __init__(self, collection_id, item_name, xsmall, small, medium, large, xlarge, xxlarge, price, desc, product_image):
        self.collection_id = collection_id
+       self.item_name = item_name
        self.xsmall = xsmall
        self.small = small
        self.medium = medium
@@ -107,6 +109,7 @@ class InventoryInfo(db.Model):
        self.price = price
        self.desc = desc
        self.product_image = product_image
+
 
    def __repr__(self):
        return f"{self.item_name}  {self.desc}"

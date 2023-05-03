@@ -37,27 +37,25 @@
             <div class="row">
                 <!--Styling for each of the boxes, background color of form and buttons used within form -->
                 <div class="border-box col">
-                    <div class="formInputFields">
+                    <div class="formInputFields" >
                         <!--If user is logged in, they will see an abbreviated form as we can already gather certain information  -->
                         {% if current_user.is_authenticated %}
                             <div class = "row">
                                 <!--Field to collect users message -->
-                                <p class="formFieldsLabels">Review(*)</p>
+                                <p class="formFieldsLabels">Review*</p>
                                 <textarea rows="5" cols="20" placeholder="Enter your review here!" name="message" require></textarea>
                             </div>
                             <div class = "row">
                                 <!--Field to collect users ratings out of 5 on products purchased -->
-                                <p class="formFieldsLabels">Rating(*)</p>
-                                <div class="form-select-container">
-                                    <select name="rating" id="role" class="form-select" aria-label=".form-select-md example">
-                                        <option value="0">---Select A Rating---</option>
-                                        <option name="one" id="one" value="1">1</option>
-                                        <option name="two" id="two" value="2">2</option>
-                                        <option name="three" id="three" value="3">3</option>
-                                        <option name="four" id="four" value="4">4</option>
-                                        <option name="five" id="five" value="5">5</option>
+                                <p class="formFieldsLabels">Rating*</p>
+                                    <select name="rating" id="role" class="form-select" placeholder="---Select A Rating---"aria-label=".form-select-md example" required>
+                                        <option value="" disabled selected>---Select A Rating---</option>
+                                        <option name="one" id="one" value="1/5">1/5</option>
+                                        <option name="two" id="two" value="2/5">2/5</option>
+                                        <option name="three" id="three" value="3/5">3/5</option>
+                                        <option name="four" id="four" value="4/5">4/5</option>
+                                        <option name="five" id="five" value="5/5">5/5</option>
                                     </select>
-                                </div>
                             </div>
                          <!--If user is NOT logged in, they will see more fields on the form  -->
                         {% else %}
@@ -65,42 +63,40 @@
                             <div class="border-box col">
                                 <div class="row" style="padding-right: 15px">
                                     <!--Field to collect users first name -->
-                                    <p class="formFieldsLabels">First Name(*)<br></p>
+                                    <p class="formFieldsLabels">First Name*<br></p>
                                     <input type="text" class="inputFields" name="first_name" required>
                                 </div>
                             </div>
                             <div class="border-box col">
                                 <div class="row" style="padding-left: 15px">
                                     <!--Field to collect users last name -->
-                                    <p class="formFieldsLabels">Last Name(*)<br></p>
+                                    <p class="formFieldsLabels">Last Name*<br></p>
                                     <input type="text" class="inputFields" name="last_name" required><br><br>
                                 </div>
                             </div>
                         </div>
                         <div class = "row">
                             <!--Field to collect users email -->
-                            <p class="formFieldsLabels">Email(*)</p>
+                            <p class="formFieldsLabels">Email*</p>
                             <input type="email" class="inputFields" name="email" required><br><br>
                         </div>
 
                         <div class = "row">
                             <!--Field to collect users message -->
-                            <p class="formFieldsLabels">Review(*)</p>
+                            <p class="formFieldsLabels">Review*</p>
                             <textarea rows="5" cols="20" placeholder="Enter your review here!" name="message" require></textarea>
                         </div>
                         <div class = "row">
                             <!--Field to collect users numeric rating-->
-                            <p class="formFieldsLabels">Rating(*)</p>
-                            <div class="form-select-container">
-                                <select name="rating" id="role" class="form-select" aria-label=".form-select-md example">
-                                    <option value="0">---Select A Rating---</option>
-                                    <option name="one" id="one" value="1">1</option>
-                                    <option name="two" id="two" value="2">2</option>
-                                    <option name="three" id="three" value="3">3</option>
-                                    <option name="four" id="four" value="4">4</option>
-                                    <option name="five" id="five" value="5">5</option>
+                            <p class="formFieldsLabels">Rating*</p>
+                                <select name="rating" id="role" class="form-select" aria-label=".form-select-md example" required>
+                                    <option value="" disabled selected>---Select A Rating---</option>
+                                    <option name="one" id="one" value="1/5">1/5</option>
+                                    <option name="two" id="two" value="2/5">2/5</option>
+                                    <option name="three" id="three" value="3/5">3/5</option>
+                                    <option name="four" id="four" value="4/5">4/5</option>
+                                    <option name="five" id="five" value="5/5">5/5</option>
                                 </select>
-                            </div>
                         </div>
                      {% endif %}
                     </div>
@@ -133,23 +129,25 @@
 
     <!-- Creation of table to show all posted reviews -->
     <div class="cartPlaceholder" style="position: relative; height: auto; min-height: 100%; padding-bottom: 7px;">
+        <!-- Adds alternate coloring to the reviews table -->
         <table class="table table-striped">
-            <div class="row">
-            <div class="col">
-            <tr>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Message</th>
-                <th scope="col">Rating</th>
-            </tr>
-
+            <!-- Sets column widths to the table to evenly space out each of the elements -->
+            <colgroup>
+                <col width="33.3%">
+                <col width="33.3%">
+                <col width="33.3%">
+            </colgroup>
+            <!-- Loops through all reviews -->
             {% for each_review in review %}
+                <!-- Selects reviews which have been approved to be posted -->
                 {% if each_review['posted'] == 1 %}
                     <tr>
-                        <td> {{ each_review['first_name'] }}</td>
-                        <td> {{ each_review['last_name'] }}</td>
-                        <td class = "wrap"> {{ each_review['message'] }}</td>
-                        <td> {{ each_review['rating'] }}</td>
+                        <!-- Combines first and last name to make one name record and print it out -->
+                        <td> {{ each_review['first_name'] }} {{ each_review['last_name'] }} </td>
+                        <!-- prints out customer review -->
+                        <td class = "wrap" class="cartItemLabels"> {{ each_review['message'] }}</td>
+                        <!-- prints out numerical review given -->
+                        <td class = "cartItemLabels"> {{ each_review['rating'] }}</td>
                     </tr>
                 {% endif %}
              {% endfor %}
@@ -159,16 +157,5 @@
 
     <!-- adds spacing between bottom of all text content and footer -->
     <div class="GenProduct_HeadingSpacer"></div>
-
-{#     {% for each_review in review %}#}
-{#       {% if each_review['posted'] == 1 %}#}
-{#           <td>{{ each_review['first_name'] }}</td>#}
-{#           <td>{{ each_review['last_name'] }}</td>#}
-{#           <td class="wrap"><pre>Review: {{ each_review['message'] }}</pre></td>#}
-{#           <td><pre>Stars: {{ each_review['rating'] }}/5</pre></td>#}
-{#           <br>#}
-{#        {% endif %}#}
-{#       </tr>#}
-{#    {% endfor %}#}
 
 {% endblock %}

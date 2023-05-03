@@ -73,7 +73,7 @@
                                             {% if action and action in ['create', 'update'] %}
                                             <label for="collection_id" class="form-label"><strong>Collection Name</strong></label>
                                             <select name="collection_id" id="role" class="form-select" aria-label=".form-select-md example">
-                                                <option value="0">---Select A Collection---</option>
+                                                <option value="">---Select A Collection---</option>
                                                 {% for each_collection in collections %}
                                                 <option value="{{ each_collection['collection_id'] }}"
                                                         {{ 'selected' if item and each_collection['collection_id'] == item['collection_id'] else ''}}>{{ each_collection['collection_name'] }}</option>
@@ -103,18 +103,19 @@
 
                                <!-- Inventory Price Input -->
                                        {% if action and action in ['create'] %}
+                                           <div class="row">
                                            <label for="price" class="form-label"><strong>Price</strong></label>
                                            <input type="number" class="inputFields" id="price" name="price" value="{{ item['price'] if item else '' }}" required>
-                                           {% endif %}
+                                           </div>
+                                       {% endif %}
 
                                 <!-- Inventory Description Input -->
                                        {% if action and action in ['create'] %}
+                                           <div class="row">
                                            <label for="desc" class="form-label"><strong>Description</strong></label>
                                            <input type="text" class="inputFields" id="desc" name="desc" value="{{ item['desc'] if item else '' }}" required>
-                                           {% endif %}
-
-
-
+                                           </div>
+                                       {% endif %}
 
                                <!-- Inventory Size Read/Update -->
                                        {% if action and action in ['read', 'update'] %}
@@ -172,6 +173,7 @@
                                      </div>
 
                                    <!-- Inventory Image Input -->
+                                       <div class="row">
                                        <div class="col-md-2">
                                            {% if action and action in ['create', 'update'] %}<label for="product_image" class="form-label">{% endif %}
                                                <strong>Image</strong>
@@ -193,7 +195,7 @@
                                                {% endif %}
                                          {% endif %}
                                          </div>
-
+                                         </div>
                                    <div class="row">
                                      <input type="submit" value="Submit Inventory" class="inventoryButtons" method="POST">
                                    </div>
@@ -212,4 +214,3 @@
     </div>
 {% endif %}
 {% endblock %}
-
