@@ -21,24 +21,24 @@
     <div class="dropdown">
         <button class="input">Price</button>
         <div class="dropdown-content">
-            <a href="#">under $30</a>
-            <a href="#">under $50</a>
-            <a href="#">under $100</a>
+            <a href="{{ url_for('Shop', price='under_30') }}">under $30</a>
+            <a href="{{ url_for('Shop', price='under_50') }}">under $50</a>
+            <a href="{{ url_for('Shop', price='under_80') }}">under $80</a>
         </div>
     </div>
     <div class="dropdown">
         <button class="input">Availability</button>
         <div class="dropdown-content">
-            <a href="#">In Stock</a>
-            <a href="#">Out of Stock</a>
+            <a href="{{ url_for('Shop', price='in_stock') }}">In Stock</a>
+            <a href="{{ url_for('Shop', price='out_of_stock') }}">Out of Stock</a>
         </div>
     </div>
-    <div class="dropdown">
-        <button class="input">Collection</button>
-        <div class="dropdown-content">
-            <a href="#">High to Low</a>
-        </div>
-    </div>
+{#    <div class="dropdown">#}
+{#        <button class="input">Collection</button>#}
+{#        <div class="dropdown-content">#}
+{#            <a href="{{ url_for('Shop', price='under_80') }}">{{ Collections. }}</a>#}
+{#        </div>#}
+{#    </div>#}
     </div>
     </div>
     <br>
@@ -51,7 +51,7 @@
                     {% if item['product_image'] %}
                     <!-- inserting picture for product -->
                     <a href="{{ url_for('GenProduct', product_id=item.product_id) }}">
-                        <img class="img-fluid" src="{{ url_for('static', filename='/products/' +item['product_image']) }}" alt="Picture of {{ item['item_name'] }}" style="width: 300px; height: 300px;">
+                        <img class="FormatShopPhotos" src="{{ url_for('static', filename='/products/' +item['product_image']) }}" alt="Picture of {{ item['item_name'] }}" style="width: 300px; height: 300px;">
                     </a>
                     {% endif %}
                     <div class="caption text-center">
