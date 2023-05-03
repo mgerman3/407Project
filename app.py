@@ -568,7 +568,8 @@ def cart_add(product_id):
        if 'cart' not in session:
            session['cart'] = []
 
-       found_item = next((item for item in session['cart'] if item['product_id'] == product_id), None)
+       found_item = next((item for item in session['cart'] if
+                          item['product_id'] == product_id and request.form['size'] == item['size']), None)
 
        if found_item:
            found_item['product_quantity'] += product_quantity
