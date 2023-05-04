@@ -31,30 +31,32 @@ with app.app_context():
         db.session.add(a_user)
         db.session.commit()
 
-    #     # Initial loading of products
-    # products = [
-    #     {'product_name': 'Hat', 'product_code': 'PROD-0555',
-    #      'product_description': 'Show your Terp spirit by wearing this stylish hat.',
-    #      'product_image': 'PROD-0555-hat.png', 'product_price': 14.95},
-    #     {'product_name': 'Men\'s Pullover Jacket', 'product_code': 'PROD-0123',
-    #      'product_description': 'This jacket will keep you warm and snuggly on those cold nights.',
-    #      'product_image': 'PROD-0123-pullover-jacket.png', 'product_price': 39.99},
-    #     {'product_name': 'Prep School Ringspun T-Shirt', 'product_code': 'PROD-0987',
-    #      'product_description': 'Maryland Terrapins Prep School Ringspun S/S Tee red',
-    #      'product_image': 'PROD-0987-t-shirt.png', 'product_price': 31.48},
-    #     {'product_name': 'Framing Success 13 x 17 Greystone Gold Medallion Bachelors, Masters Diploma Frame',
-    #      'product_code': 'PROD-0407',
-    #      'product_description': 'FSC certified hardwood from well-managed forests features an anthracite veneer with an inner accent trim. Our Grey Suede/Gold mat features a gold-minted medallion of the official University seal and embossed University name. Made in the USA.',
-    #      'product_image': 'PROD-0407-diploma.png', 'product_price': 235.00}
-    # ]
-    #
-    # for each_product in products:
-    #     print(f'{each_product["product_name"]} inserted into product')
-    #     a_product = InventoryInfo(item_name=each_product['item_name'], product_id=each_product['product_id'],
-    #                         desc=each_product['product_description'],
-    #                         image=each_product['product_image'],
-    #                         price=each_product['product_price'])
-    #     db.session.add(a_product)
-    #     db.session.commit()
+# Initial loading of products
+#     products = [
+#         {'item_name': 'Quarter-Zip', 'product_id': '1',
+#          'desc': 'ATB warm and comfy quarter-zip',
+#          'product_image': 'Shop_QuarterZip.png', 'product_price': 45.00},
+#         {'item_name': 'Crewneck', 'product_id': '2',
+#          'desc': 'ATB warm and comfy crewneck',
+#          'product_image': 'Shop_Crewneck.png', 'product_price': 40.00},
+#         {'item_name': 'Long Sleeve', 'product_id': '3',
+#          'desc': 'ATB comfy long sleeve',
+#          'product_image': 'Shop_LongSleeve', 'product_price': 36.00},
+#         {'item_name': 'Original Tee', 'product_id': '4',
+#          'desc': 'ATB comfy original tee',
+#          'product_image': 'Shop_OriginalTee', 'product_price': 28.00},
+#         {'item_name': 'T-Shirt', 'product_id': '5',
+#          'desc': 'ATB comfy t-shirt',
+#          'product_image': 'Shop_tshirt', 'product_price': 28.00}
+#     ]
+#
+#     for each_product in products:
+#         print(f'{each_product["item_name"]} inserted into product')
+#         a_product = InventoryInfo(item_name=each_product['item_name'], product_id=each_product['product_id'],
+#                             desc=each_product['product_description'],
+#                             image=each_product['product_image'],
+#                             price=each_product['product_price'])
+#         db.session.add(a_product)
+#         db.session.commit()
 
 
