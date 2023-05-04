@@ -982,7 +982,7 @@ webpage_margin{
 /*    top: 25%;*/
 /*}*/
 
-#container {
+[id^="container-"] {
   width: 30%;
   height: 45%;
   position: fixed;
@@ -997,7 +997,7 @@ webpage_margin{
 
 }
 
-#container:target {
+[id^="container-"]:target {
   visibility: visible;
   display: block;
 
