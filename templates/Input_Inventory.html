@@ -113,7 +113,7 @@
                                        {% if action and action in ['create'] %}
                                            <div class="row">
                                            <label for="desc" class="form-label"><strong>Description</strong></label>
-                                           <input type="text" class="inputFields" id="desc" name="desc" value="{{ item['desc'] if item else '' }}" required>
+                                           <input type="text" class="inputFields" id="desc" maxlength="200" name="desc" value="{{ item['desc'] if item else '' }}" required>
                                            </div>
                                        {% endif %}
 
@@ -184,13 +184,13 @@
                                                <img class="mb-3" src="{{ url_for('static', filename='/products/' + item['product_image']) }}" alt="Picture of {{ item['item_name'] }}">
                                            {% else %}
                                                {% if action in ['update'] and item['product_image'] != '' %}
-                                                   <img class="mb-3" src="{{ url_for('static', filename='/products/' + item['product_image']) }}" alt="Picture of {{ item['item_name'] }}">
+                                                   <br><img class="mb-3" style="width: 200px; height: 200px;" src="{{ url_for('static', filename='/products/' + item['product_image']) }}" alt="Picture of {{ item['item_name'] }}">
                                                {% endif %}
                                                {% if action in ['create','update'] %}
                                                    <input type="file" class="form-control" id="product_image" name="product_image">
                                                {% endif %}
                                                {% if action in ['update'] and item['product_image'] != '' %}
-                                                   <input class="form-check-input" type="checkbox" value="" id="delete_product_image" name="delete_product_image">
+                                                   <br><input class="form-check-input" type="checkbox" value="" id="delete_product_image" name="delete_product_image">
                                                    <label class="form-check-label" for="delete_product_image"></label> <strong>Delete product image without providing a replacement</strong>
                                                {% endif %}
                                          {% endif %}
