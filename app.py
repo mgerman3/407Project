@@ -33,7 +33,7 @@ def load_user(account_id):
 
 @app.route('/')
 def homePage():
-   return render_template('Home Page.html')
+   return render_template('homePage.html')
 
 @app.route('/404')
 def errorPage():
@@ -42,11 +42,11 @@ def errorPage():
 @app.route('/Shop')
 def Shop():
    items = InventoryInfo.query.order_by(InventoryInfo.item_name).all()
-   return render_template('Shop.html', items=items)
+   return render_template('shop.html', items=items)
 
 @app.route('/About')
 def About():
-   return render_template('About Page.html')
+   return render_template('aboutPage.html')
 
 @app.route('/profile')
 def Profile():
@@ -55,7 +55,7 @@ def Profile():
 @app.route('/RequestForm', methods=['GET', 'POST'])
 def RequestForm():
    if request.method == 'GET':
-       return render_template('RequestForm.html', action='create')
+       return render_template('requestForm.html', action='create')
    elif request.method == 'POST':
 
 
@@ -117,7 +117,7 @@ def ReviewForm():
    review = Reviews.query.order_by(Reviews.review_id) \
        .all()
    if request.method == 'GET':
-       return render_template('ReviewForm.html', action='create', review=review)
+       return render_template('reviewForm.html', action='create', review=review)
    elif request.method == 'POST':
 
 
@@ -170,7 +170,7 @@ def ReviewForm():
 def reviews_view_all():
   reviews = Reviews.query.order_by(Reviews.review_id) \
       .all()
-  return render_template('ReviewsLog.html', reviews=reviews)
+  return render_template('reviewsLog.html', reviews=reviews)
 
 
 @app.route('/ReviewsLog/Delete/<int:review_id>')
@@ -213,9 +213,9 @@ def review_post(review_id):
 @app.route('/LogIn', methods = ['GET', 'POST'])
 # def LogInScreen():
 #     if request.method == 'POST':
-#         return render_template('Log-In-Screen.html', form_submitted=True)
+#         return render_template('logInScreen.html', form_submitted=True)
 #     else:
-#         return render_template('Log-In-Screen.html')
+#         return render_template('logInScreen.html')
 def LogIn():
   default_route_function = 'Shop'
   default_user_route_function = 'homePage'
@@ -230,7 +230,7 @@ def LogIn():
               return redirect(url_for(default_user_route_function, user_id=0))
       else:
           redirect_route = request.args.get('next')
-          return render_template('Log-In-Screen.html', redirect_route=redirect_route)
+          return render_template('logInScreen.html', redirect_route=redirect_route)
 
 
   elif request.method == 'POST':
@@ -265,7 +265,7 @@ def SignUp():
 
 
    if request.method == 'GET':
-       return render_template('sign-up-page.html', action='create')
+       return render_template('signUpPage.html', action='create')
 
 
    elif request.method == 'POST':
@@ -309,22 +309,22 @@ def logout():
 @app.route('/CheckOut', methods=['GET', 'POST'])
 def CheckOut():
    # if request.method == 'POST':
-   #     # return render_template('CheckoutPage.html', form_submitted=True)
-   #     return render_template('Order Confirmation.html')
+   #     # return render_template('checkoutPage.html', form_submitted=True)
+   #     return render_template('orderConfirmation.html')
    # else:
-   #     return render_template('CheckoutPage.html')
+   #     return render_template('checkoutPage.html')
    # size = 3
    if 'cart' in session:
        session['cart_total'] = sum(item['price'] * item['product_quantity'] for item in session['cart'])
 
-       return render_template('CheckoutPage.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
+       return render_template('checkoutPage.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
    else:
-       return render_template('CheckoutPage.html', cart_count=0)
+       return render_template('checkoutPage.html', cart_count=0)
 
 @app.route('/payment', methods=['GET', 'POST'])
 def payment():
     # if request.method == 'GET':
-    #     return render_template('ReviewForm.html', action='create')
+    #     return render_template('reviewForm.html', action='create')
     # elif request.method == 'POST':
         return render_template('payment.html')
 @app.route('/process-order', methods=['GET', 'POST'])
@@ -374,7 +374,7 @@ def process_order():
     if 'cart' in session:
         del(session['cart'])
 
-    return render_template('Home Page.html')
+    return render_template('homePage.html')
 
 
 @app.route('/GenericProduct/<int:product_id>')
@@ -382,7 +382,7 @@ def GenProduct(product_id):
    item = InventoryInfo.query.filter_by(product_id=product_id).first()
 
    if item:
-       return render_template('GenericProductPage.html', item=item)
+       return render_template('genericProductPage.html', item=item)
 
    else:
        flash(f'Product attempting to be viewed could not be found! Please contact support for assistance', 'error')
@@ -395,7 +395,7 @@ def GenProduct(product_id):
 def requests_view_all():
   requests = Requests.query.order_by(Requests.request_id) \
       .all()
-  return render_template('Request Log.html', requests=requests)
+  return render_template('requestLog.html', requests=requests)
 
 
 @app.route('/InventoryLog')
@@ -408,7 +408,7 @@ def items_view_all():
  for collection in Collections.query.all():
        dict[collection.collection_id] = collection.collection_name
 
- return render_template('Inventory Log.html', items=items, dict=dict)
+ return render_template('inventoryLog.html', items=items, dict=dict)
 
 
 @app.route('/InventoryLog/update/<int:product_id>', methods=['GET', 'POST'])
@@ -419,7 +419,7 @@ def item_edit(product_id):
      item = InventoryInfo.query.filter_by(product_id=product_id).first()
 
      if item:
-         return render_template('Input_Inventory.html', item=item, action='update')
+         return render_template('inputInventory.html', item=item, action='update')
 
      else:
          flash(f'Item attempting to be edited could not be found!', 'error')
@@ -495,7 +495,7 @@ def inventory_entry():
 
 
  if request.method == 'GET':
-     return render_template('Input_Inventory.html', action='create', collections=collections)
+     return render_template('inputInventory.html', action='create', collections=collections)
  elif request.method == 'POST':
      item_name = request.form['item_name']
      collection_id = request.form['collection_id']
@@ -532,18 +532,18 @@ def inventory_entry():
 
 @app.route('/OrderConfirm')
 def OrderConfirm():
-   return render_template('Order Confirmation.html')
+   return render_template('orderConfirmation.html')
 
 
 @app.route('/OrderDetails')
 def OrderDetails():
-   return render_template('OrderDetails.html')
+   return render_template('orderDetails.html')
 
 
 @app.route('/SalesTracker')
 @login_required
 def SalesTracker():
-   return render_template('Sales Tracker.html')
+   return render_template('salesTracker.html')
 
 
 @app.route('/banner')
@@ -559,7 +559,7 @@ def Admin_Login():
 
 
    if request.method == 'GET':
-       return render_template('Admin_Login.html', action='create')
+       return render_template('adminLogin.html', action='create')
 
 
    elif request.method == 'POST':
@@ -810,9 +810,9 @@ def cart_remove(index):
 #    # item = InventoryInfo.query.order_by(InventoryInfo.item_name) \
 #    #     .all()
 #    if 'cart' in session:
-#        return render_template('CheckoutPage.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
+#        return render_template('checkoutPage.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
 #    else:
-#        return render_template('CheckoutPage.html', cart_count=0)
+#        return render_template('checkoutPage.html', cart_count=0)
 
 @app.route('/CollectionsLog')
 @login_required
@@ -820,14 +820,14 @@ def cart_remove(index):
 def collections_view_all():
   collection = Collections.query.order_by(Collections.collection_id) \
       .all()
-  return render_template('Collections Log.html', collection=collection)
+  return render_template('collectionsLog.html', collection=collection)
 
 @app.route('/CollectionsInput', methods=['GET', 'POST'])
 @login_required
 @role_required(['ADMIN', 'EMPLOYEE'])
 def collections_entry():
   if request.method == 'GET':
-      return render_template('Input_Collections.html', action='create')
+      return render_template('inputCollections.html', action='create')
   elif request.method == 'POST':
       collection_name = request.form['collection_name']
 
@@ -856,7 +856,7 @@ def collection_edit(collection_id):
 
       if collection:
           # collection_id = collection_id -= 1 OR SOMETHING LIKE THIS????????
-          return render_template('Input_Collections.html', collection_id=collection_id, collection=collection, action='update')
+          return render_template('inputCollections.html', collection_id=collection_id, collection=collection, action='update')
 
 
       else:
