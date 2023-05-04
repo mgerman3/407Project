@@ -76,47 +76,47 @@
                         <div class="border-box col">
                             <div class="row" style="padding-right: 15px">
                                 <!--Field to collect users first name -->
-                                <p class="formFieldsLabels">First Name (*) <br></p>
-                                <input type="text" class="inputFields" name="first_name" required>
+                                <p class="formFieldsLabels">First Name* <br></p>
+                                <input type="text" class="inputFields" name="first_name" maxlength="30" required>
                             </div>
                         </div>
                         <div class="border-box col">
                             <div class="row" style="padding-left: 15px">
                                 <!--Field to collect users last name -->
-                                <p class="formFieldsLabels">Last Name (*) <br></p>
-                                <input type="text" class="inputFields" name="last_name" required><br><br>
+                                <p class="formFieldsLabels">Last Name* <br></p>
+                                <input type="text" class="inputFields" name="last_name" maxlength="30" required><br><br>
                             </div>
                         </div>
                     </div>
                     <div class = "row">
                         <!--Field to collect users email -->
-                        <p class="formFieldsLabels">Email (*)</p>
-                        <input type="email" class="inputFields" name="email" required><br><br>
+                        <p class="formFieldsLabels">Email*</p>
+                        <input type="email" class="inputFields" name="email" maxlength="100" required><br><br>
                     </div>
                     <div class = "row">
                         <!--Field to collect users address 2 -->
-                        <p class="formFieldsLabels">Phone Number (*)</p>
-                        <input type="integer" class="inputFields" name="phoneNumber"><br><br>
+                        <p class="formFieldsLabels">Phone Number*</p>
+                        <input type="integer" maxlength="10" class="inputFields" name="phoneNumber" required><br><br>
                     </div>
                     <div class = "row">
                         <!--Field to collect users address 1 -->
-                        <p class="formFieldsLabels">Address (*)</p>
-                        <input type="text" class="inputFields" name="address" required><br><br>
+                        <p class="formFieldsLabels">Address*</p>
+                        <input type="text" class="inputFields" name="address" maxlength="100" required><br><br>
                     </div>
                     <div class = "row">
                         <!--Field to collect users city -->
-                        <p class="formFieldsLabels">City (*)</p>
-                        <input type="text" class="inputFields" name="city" required><br><br>
+                        <p class="formFieldsLabels">City*</p>
+                        <input type="text" class="inputFields" name="city" maxlength="80" required><br><br>
                     </div>
                     <div class = "row">
                         <!--Field to collect users state -->
-                        <p class="formFieldsLabels">State (*)</p>
-                        <input type="text" class="inputFields" name="state" required><br><br>
+                        <p class="formFieldsLabels">State*</p>
+                        <input type="text" class="inputFields" name="state" maxlength="2" required><br><br>
                     </div>
                     <div class = "row">
                         <!--Field to collect users zip code -->
-                        <p class="formFieldsLabels">Zip Code (*)</p>
-                        <input type="text" class="inputFields" name="zipcode" required><br><br>
+                        <p class="formFieldsLabels">Zip Code*</p>
+                        <input type="integer" class="inputFields" name="zipcode" maxlength="9" required><br><br>
                     </div>
                 </div>
             </div>
@@ -141,11 +141,11 @@
                         </div>
                         <div class="border-box col-9" style="padding: 0px">
                             <div class="form-select-container">
-                                <select name="role" id="role" class="form-select" aria-label=".form-select-md example">
-                                    <option value="0">---Select Shipping---</option>
-                                    <option name="local" id="local" value="0">Local Pick Up - FREE</option>
-                                    <option name="home" id="home" value="10">Home Delivery - $10.00</option>
-                                    <option name="rapid" id="rapid" value="20">Rapid Delivery - $20.00</option>
+                                <select name="shipping" id="role" class="form-select" aria-label=".form-select-md example" required>
+                                    <option value="" selected disabled>---Select Shipping---</option>
+                                    <option name="local" id="shipping" value="local">Local Pick Up - FREE</option>
+                                    <option name="home" id="shipping" value="home">Home Delivery - $10.00</option>
+                                    <option name="rapid" id="shipping" value="rapid">Rapid Delivery - $20.00</option>
                                 </select>
                             </div>
                         </div>

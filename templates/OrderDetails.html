@@ -134,12 +134,21 @@
            <td>{{ each_order['size'] }}</td>
            <td>{{ each_order['price_charged'] }}</td>
            <td>
-               <a href="#container" class="btn btn-secondary" type="submit" role="button">View</a>
-               <div id="container">
+               <a href="#container-{{ each_order['order_id'] }}" class="btn btn-secondary" type="submit" role="button">View</a>
+               <div id="container-{{ each_order['order_id'] }}">
                    <div id="exampleModal" class="show">
                        <a href="#" class="btn btn-secondary" style="margin-top: 10px" type="submit" role="button">Close</a><br>
-                        {% for info in info %}
-                           {% if info['order_id'] == each_order['order_id'] %}
+{#                              {% if each_order['order_id'] in info %}#}
+                            {% set count = [0] %}
+                            {% for info in info if count == [0] %}
+
+{#                                {{ loop.index }}#}
+{#                                    {{ count }}#}
+{#                       {% for info in info %}#}
+{#                                {% if count == 0 %}#}
+{#                                {% set count = count + 1 %}#}
+{#                           {{  count }}#}
+{#                           {% if info['order_id'] == each_order['order_id'] %}#}
                            <div class="text-center" style="align-content: center"></div>
                            <div class="row">
                             <div class="col-lg-6">
@@ -231,7 +240,15 @@
                             </div>
                            </div>
                             </div>
-                            {% endif %}
+                                 {% if count.append(count.pop() + 1) %}
+                                {% endif %}
+{#                                {% set count = [1] %}#}
+{#                            {% endif %}#}
+{#                                {% set count = 5 %}#}
+{#                                    {{ count }}#}
+{##}
+{#                                    {{ count }}#}
+{#                                {% endfor %}#}
                           {% endfor %}
                    </div>
                </div>

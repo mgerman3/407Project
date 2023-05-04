@@ -332,10 +332,10 @@ def process_order():
             user = Credentials.query.filter_by(account_id=current_user.account_id).first()
 
             user_id = user.account_id
-            first_name = user.first_name
-            last_name = user.last_name
+            first_name = request.form['first_name']
+            last_name = request.form['last_name']
             phoneNumber = request.form['phoneNumber']
-            email = user.email
+            email = request.form['email']
             address = request.form['address']
             city = request.form['city']
             state = request.form['state']
@@ -553,6 +553,7 @@ def OrderDetails():
   info = StoreOrder.query.order_by(StoreOrder.order_id) \
         .all()
 
+  # count = 0
   # info = StoreOrder.query.order_by(order_id=order_id).first()
 
   return render_template('OrderDetails.html', orders=orders, info=info)
