@@ -37,7 +37,7 @@ def homePage():
 
 @app.route('/404')
 def errorPage():
-   return render_template('Inventory.html'), 404
+   return render_template('404.html'), 404
 
 @app.route('/Shop')
 def Shop():
@@ -312,30 +312,39 @@ def logout():
 
 @app.route('/CheckOut', methods=['GET', 'POST'])
 def CheckOut():
-    if 'cart' in session:
-        session['cart_total'] = sum((item['price'] * item['product_quantity']) for item in session['cart'])
+   # if request.method == 'POST':
+   #     # return render_template('CheckoutPage.html', form_submitted=True)
+   #     return render_template('Order Confirmation.html')
+   # else:
+   #     return render_template('CheckoutPage.html')
+   # size = 3
+   if 'cart' in session:
+       session['cart_total'] = sum(item['price'] * item['product_quantity'] for item in session['cart'])
 
-        return render_template('CheckoutPage.html', products=session['cart'], cart_count=len(session['cart']),
-                               cart_total=session['cart_total'])
-    else:
-        return render_template('CheckoutPage.html', cart_count=0)
+       return render_template('CheckoutPage.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
+   else:
+       return render_template('CheckoutPage.html', cart_count=0)
 
-
+@app.route('/payment', methods=['GET', 'POST'])
+def payment():
+    # if request.method == 'GET':
+    #     return render_template('ReviewForm.html', action='create')
+    # elif request.method == 'POST':
+        return render_template('payment.html')
 @app.route('/process-order', methods=['GET', 'POST'])
 @login_required
 def process_order():
     if request.method == 'GET':
-
-        return redirect(url_for('homePage'))
+        return redirect(url_for('home'))
     elif request.method == 'POST':
         if current_user.is_authenticated:
             user = Credentials.query.filter_by(account_id=current_user.account_id).first()
 
             user_id = user.account_id
-            first_name = request.form['first_name']
-            last_name = request.form['last_name']
+            first_name = user.first_name
+            last_name = user.last_name
             phoneNumber = request.form['phoneNumber']
-            email = request.form['email']
+            email = user.email
             address = request.form['address']
             city = request.form['city']
             state = request.form['state']
@@ -361,45 +370,23 @@ def process_order():
         order_id = store_order.order_id
 
         for each_item in session['cart']:
-            # reduce inventory by the number of items purchased
-            product = InventoryInfo.query.filter_by(product_id=each_item['product_id']).first()
-            if each_item['size'] == 'X-Small':
-                product.xsmall -= each_item['product_quantity']
-            if each_item['size'] == 'Small':
-                product.small -= each_item['product_quantity']
-            if each_item['size'] == 'Medium':
-                product.medium -= each_item['product_quantity']
-            if each_item['size'] == 'Large':
-                product.large -= each_item['product_quantity']
-            if each_item['size'] == 'X-Large':
-                product.xlarge -= each_item['product_quantity']
-            if each_item['size'] == 'XX-Large':
-                product.xxlarge -= each_item['product_quantity']
-            # add order to order table
-            item_ordered = OrderItem(order_id, each_item['product_id'], each_item['product_quantity'], each_item['size'], each_item['item_name'])
+            item_ordered = OrderItem(order_id, each_item['product_id'], each_item['product_quantity'])
             db.session.add(item_ordered)
-            db.session.commit()
 
         db.session.commit()
 
     if 'cart' in session:
         del(session['cart'])
 
-    flash(f'Your order has been place! ATB will contact you shortly. Your order number is {order_id}.', 'success')
-    db.session.delete(store_order)
     return render_template('Home Page.html')
 
 
 @app.route('/GenericProduct/<int:product_id>')
 def GenProduct(product_id):
    item = InventoryInfo.query.filter_by(product_id=product_id).first()
-   dict = {}
-   for collection in Collections.query.all():
-       dict[collection.collection_id] = collection.collection_name
 
    if item:
-
-       return render_template('GenericProductPage.html', item=item, dict=dict)
+       return render_template('GenericProductPage.html', item=item)
 
    else:
        flash(f'Product attempting to be viewed could not be found! Please contact support for assistance', 'error')
@@ -419,13 +406,13 @@ def requests_view_all():
 @login_required
 @role_required(['ADMIN', 'MANAGER'])
 def items_view_all():
-    items = InventoryInfo.query.order_by(InventoryInfo.item_name) \
-        .all()
-    dict = {}
-    for collection in Collections.query.all():
-        dict[collection.collection_id] = collection.collection_name
+ items = InventoryInfo.query.order_by(InventoryInfo.item_name) \
+     .all()
+ dict = {}
+ for collection in Collections.query.all():
+       dict[collection.collection_id] = collection.collection_name
 
-    return render_template('Inventory Log.html', items=items, dict=dict)
+ return render_template('Inventory Log.html', items=items, dict=dict)
 
 
 @app.route('/InventoryLog/update/<int:product_id>', methods=['GET', 'POST'])
@@ -497,6 +484,7 @@ def item_delete(product_id):
  else:
        flash(f'Delete failed! Item could not be found.', 'error')
 
+
  return redirect(url_for('items_view_all'))
 
 
@@ -504,8 +492,11 @@ def item_delete(product_id):
 @login_required
 @role_required(['ADMIN', 'MANAGER'])
 def inventory_entry():
+
+
  collections = Collections.query.order_by(Collections.collection_id) \
        .all()
+
 
  if request.method == 'GET':
      return render_template('Input_Inventory.html', action='create', collections=collections)
@@ -523,16 +514,20 @@ def inventory_entry():
      product_image = request.files['product_image']
      product_filename = secure_filename(item_name + '-' + product_image.filename)
 
+
      if product_image.filename != '':
          product_image.save(os.path.join(basedir, app.config['PRODUCT_UPLOAD_PATH'], product_filename))
 
+
      items = InventoryInfo(item_name=item_name, collection_id=collection_id, xsmall=xsmall, small=small, medium=medium, large=large, xlarge=xlarge,
                        xxlarge=xxlarge, price=price, desc=desc, product_image=product_filename if product_image else '')
+
 
      db.session.add(items)
      db.session.commit()
      flash(f'{item_name} was successfully added!', 'success')
      return redirect(url_for('items_view_all'))
+
 
  # Address issue where unsupported HTTP request method is attempted
  flash(f'Invalid request. Please contact support if this problem persists.', 'error')
@@ -545,18 +540,9 @@ def OrderConfirm():
 
 
 @app.route('/OrderDetails')
-# def OrderDetails():
-#    return render_template('OrderDetails.html')
 def OrderDetails():
-  orders = OrderItem.query.order_by(OrderItem.order_id) \
-      .all()
-  info = StoreOrder.query.order_by(StoreOrder.order_id) \
-        .all()
+   return render_template('OrderDetails.html')
 
-  # count = 0
-  # info = StoreOrder.query.order_by(order_id=order_id).first()
-
-  return render_template('OrderDetails.html', orders=orders, info=info)
 
 @app.route('/SalesTracker')
 @login_required
