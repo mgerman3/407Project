@@ -37,7 +37,11 @@
        {% for each_item in items %}
        <tr>
            <td>{{ each_item['item_name'] }}</td>
-                <td>{{ each_item['collection_id'] }}</td>
+           {% if dict[each_item['collection_id']] == '' %}
+                <td>None</td>
+            {% else %}
+                <td>{{ dict[each_item["collection_id"]] }}</td>
+            {% endif %}
                 <td>{{ each_item['xsmall'] }}</td>
                 <td>{{ each_item['small'] }}</td>
                 <td>{{ each_item['medium'] }}</td>

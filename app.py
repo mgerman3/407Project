@@ -392,9 +392,13 @@ def process_order():
 @app.route('/GenericProduct/<int:product_id>')
 def GenProduct(product_id):
    item = InventoryInfo.query.filter_by(product_id=product_id).first()
+   dict = {}
+   for collection in Collections.query.all():
+       dict[collection.collection_id] = collection.collection_name
 
    if item:
-       return render_template('GenericProductPage.html', item=item)
+
+       return render_template('GenericProductPage.html', item=item, dict=dict)
 
    else:
        flash(f'Product attempting to be viewed could not be found! Please contact support for assistance', 'error')
@@ -414,13 +418,13 @@ def requests_view_all():
 @login_required
 @role_required(['ADMIN', 'MANAGER'])
 def items_view_all():
- items = InventoryInfo.query.order_by(InventoryInfo.item_name) \
-     .all()
- dict = {}
- for collection in Collections.query.all():
-       dict[collection.collection_id] = collection.collection_name
+    items = InventoryInfo.query.order_by(InventoryInfo.item_name) \
+        .all()
+    dict = {}
+    for collection in Collections.query.all():
+        dict[collection.collection_id] = collection.collection_name
 
- return render_template('Inventory Log.html', items=items, dict=dict)
+    return render_template('Inventory Log.html', items=items, dict=dict)
 
 
 @app.route('/InventoryLog/update/<int:product_id>', methods=['GET', 'POST'])

@@ -21,12 +21,15 @@
     </div>
     <div class="col-lg-5">
       <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Product Details</h3>
-        </div>
+{#        <div class="panel-heading">#}
+{#          <h3 class="panel-title">Product Details</h3>#}
+{#        </div>#}
         <div class="panel-body">
-          <h3>{{ item['item_name'] }}</h3>
+          <h1>{{ item['item_name'] }}</h1>
           <h4>{{ "$%.2f"|format(item['price']) }}</h4>
+            {% if dict[item['collection_id']] != '' %}
+                <h5>Collection: {{ dict[item["collection_id"]] }}</h5>
+            {% endif %}
           <hr />
           {{ item['desc'] }}
           <hr />
@@ -37,8 +40,8 @@
                   <div class="col-lg-12">
                     <h4>Select a Size</h4>
                     <div class="form-select-container col-12">
-                        <select name="size" id="role" class="form-select" aria-label=".form-select-md example">
-                            <option value="0">---Select A Size---</option>
+                        <select name="size" id="role" class="form-select" aria-label=".form-select-md example" required>
+                            <option value="" selected disabled>---Select A Size---</option>
                             <option name="X-Small" id="size" value="X-Small">X-Small</option>
                             <option name="Small" id="size" value="Small">Small</option>
                             <option name="Medium" id="size" value="Medium">Medium</option>
