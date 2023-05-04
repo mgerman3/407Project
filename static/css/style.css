@@ -242,9 +242,9 @@ shippingEntry {
 }
 
 img {
-margin: 0px;
-padding: 0px;
-border: 0px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
 }
 
 .reviewHeader {
@@ -341,38 +341,38 @@ a.btn.btn-secondary {
 
 /*Filter shop button styling*/
 /* Dropdown Button */
-.dropbtn {
-  background-color: #04AA6D;
-  color: black;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
+/*.dropbtn {*/
+/*  background-color: #04AA6D;*/
+/*  color: black;*/
+/*  padding: 16px;*/
+/*  font-size: 16px;*/
+/*  border: none;*/
+/*}*/
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
     font-size: 20px;
 }
 
 /* Dropdown Content (Hidden by Default) */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background-color: #69a695;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+/*.dropdown-menu {*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    background-color: #69a695;*/
+/*    min-width: 160px;*/
+/*    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+/*    z-index: 1;*/
+/*}*/
 
 /* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+/*.dropdown-content a {*/
+/*    color: black;*/
+/*    padding: 12px 16px;*/
+/*    text-decoration: none;*/
+/*    display: block;*/
+/*}*/
 
 
 /* allows for hovering over navbar to show the dropdown menu */
@@ -400,42 +400,43 @@ title {
     font-size: 30px;
 }
 /* Styling for inventory management page */
-  .max-width-form {
+.max-width-form {
     max-width: 800px;
     margin: 0 auto;
-      padding-top: 40px; ;
+    padding-top: 40px; ;
   }
 
 
 .btn.btn-primary{
-  background-color: #69a695;
-  color: white;
-  border-radius: 5px;
-  border-color: black;
-  font-size: 24px;
-  padding: 5px 10px 5px 10px;
+    background-color: #69a695;
+    color: white;
+    border-radius: 5px;
+    border-color: black;
+    font-size: 24px;
+    padding: 5px 10px 5px 10px;
 }
+
 .btn.btn-primary:hover {
-        background-color: #ddd;
+    background-color: #ddd;
     }
 
 
 form input[type="submit"] {
-  background-color: #69a695;
-  color: white;
-  border-radius: 5px;
-  border-color: black;
-  font-size: 24px;
-  padding: 5px 10px 5px 10px;
+    background-color: #69a695;
+    color: white;
+    border-radius: 5px;
+    border-color: black;
+    font-size: 24px;
+    padding: 5px 10px 5px 10px;
 }
 
 
 dropdown button {
-  background-color: #69a695;
-  color: white;
-  border-radius: 0px;
+    background-color: #69a695;
+    color: white;
+    border-radius: 0px;
     padding: 10px 15px 10px 15px;
-  font-size: 24px;
+    font-size: 24px;
 }
 
 
@@ -446,28 +447,28 @@ br {
 
 /* styling for login input boxes */
 form input[class="loginInput"] {
-  background-color: white;
-  color: black;
-  border-radius: 0px;
-  border-color: black;
-  font-size: 40px;
+    background-color: white;
+    color: black;
+    border-radius: 0px;
+    border-color: black;
+    font-size: 40px;
     width: 800px;
     height: 100px;
     margin: auto;
-  display: block;
+    display: block;
 }
 
 /* styling for signup input boxes */
 input.signupInput {
-  background-color: white;
-  color: black;
-  border-radius: 0px;
-  border-color: black;
-  font-size: 30px;
+    background-color: white;
+    color: black;
+    border-radius: 0px;
+    border-color: black;
+    font-size: 30px;
     width: 800px;
     height: 80px;
     margin: auto;
-  display: block;
+    display: block;
 }
 
 input.inventoryButtons {
@@ -484,7 +485,7 @@ input.inventoryButtons {
 }
 
 .paddingbetweenelements {
-     padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 
@@ -498,42 +499,42 @@ input.inventoryButtons {
 }
 
 /*Shop page styling*/
-    .margin-left {
-        margin-left: 1%;
-    }
+.margin-left {
+    margin-left: 1%;
+}
     /* Dropdown Button */
 .dropbtn {
-  background-color: #69a695;
-  color: black;
-  padding: 12px;
-  font-size: 16px;
-  border-color: #545454;
-  border-radius: 5px;
-  text-decoration: none;
+    background-color: #69a695;
+    color: black;
+    padding: 12px;
+    font-size: 16px;
+    border-color: #545454;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-menu {
-  display: none;
-  position: absolute;
-  background-color: #69a695;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #69a695;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-menu a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
 /<a class="dropbtn" aria-expanded="false" href="/LogIn"><img src="../static/images/profile.png" alt="Bootstrap" width="30" height="24"></a>* Change color of dropdown links on hover */
