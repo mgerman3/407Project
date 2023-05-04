@@ -325,7 +325,8 @@ def CheckOut():
 @login_required
 def process_order():
     if request.method == 'GET':
-        return redirect(url_for('home'))
+
+        return redirect(url_for('homePage'))
     elif request.method == 'POST':
         if current_user.is_authenticated:
             user = Credentials.query.filter_by(account_id=current_user.account_id).first()
@@ -549,7 +550,12 @@ def OrderConfirm():
 def OrderDetails():
   orders = OrderItem.query.order_by(OrderItem.order_id) \
       .all()
-  return render_template('OrderDetails.html', orders=orders)
+  info = StoreOrder.query.order_by(StoreOrder.order_id) \
+        .all()
+
+  # info = StoreOrder.query.order_by(order_id=order_id).first()
+
+  return render_template('OrderDetails.html', orders=orders, info=info)
 
 @app.route('/SalesTracker')
 @login_required
