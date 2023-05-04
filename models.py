@@ -64,6 +64,20 @@ class Requests(db.Model):
    def __repr__(self):
        return f"{self.first_name}{self.last_name}{self.message}"
 
+class OrderInfo(db.Model):
+   __tablename__ = "OrderInfo"
+
+   order_id = db.Column(db.Integer, primary_key=True)
+   customer_id = db.Column(db.Integer, db.ForeignKey('User.user_id'))
+   shipping_mode = db.Column(db.String(30), nullable=False)
+   order_total = db.Column(db.Float, nullable=False)
+   def __init__(self, customer_id, shipping_mode, order_total, date) :
+       self.customer_id = customer_id
+       self.shipping_mode = shipping_mode
+       self.order_total = order_total
+       self.date = date
+   def __repr__(self):
+       return f"{self.shipping_mode}"
 
 class InventoryInfo(db.Model):
    __tablename__ = "InventoryInfo"

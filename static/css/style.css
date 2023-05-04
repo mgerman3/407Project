@@ -986,7 +986,7 @@ webpage_margin{
 /*}*/
 
 [id^="container-"] {
-  width: 30%;
+  width: 35%;
   height: 45%;
   position: fixed;
   top: 50%;
@@ -1080,6 +1080,7 @@ webpage_margin{
 
 .cart-details-remove {
     margin-top: 0.5rem;
+    text-decoration: red;
 }
 
 .empty-cart {

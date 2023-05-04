@@ -321,26 +321,27 @@ def CheckOut():
    else:
        return render_template('checkoutPage.html', cart_count=0)
 
-@app.route('/payment', methods=['GET', 'POST'])
-def payment():
-    # if request.method == 'GET':
-    #     return render_template('reviewForm.html', action='create')
-    # elif request.method == 'POST':
-        return render_template('payment.html')
+# @app.route('/payment', methods=['GET', 'POST'])
+# def payment():
+#     if request.method == 'GET':
+#         # flash(f'Payment failed! Please try again.', 'error')
+#         return render_template('homePage.html', action='create')
+#     elif request.method == 'POST':
+#         return render_template('payment.html')
 @app.route('/process-order', methods=['GET', 'POST'])
 @login_required
 def process_order():
     if request.method == 'GET':
-        return redirect(url_for('home'))
+        return redirect(url_for('homePage'))
     elif request.method == 'POST':
         if current_user.is_authenticated:
             user = Credentials.query.filter_by(account_id=current_user.account_id).first()
 
             user_id = user.account_id
-            first_name = user.first_name
-            last_name = user.last_name
+            first_name = request.form['first_name']
+            last_name = request.form['last_name']
             phoneNumber = request.form['phoneNumber']
-            email = user.email
+            email = request.form['email']
             address = request.form['address']
             city = request.form['city']
             state = request.form['state']
@@ -366,14 +367,33 @@ def process_order():
         order_id = store_order.order_id
 
         for each_item in session['cart']:
-            item_ordered = OrderItem(order_id, each_item['product_id'], each_item['product_quantity'])
+            # reduce inventory by the number of items purchased
+            product = InventoryInfo.query.filter_by(product_id=each_item['product_id']).first()
+            if each_item['size'] == 'X-Small':
+                product.xsmall -= each_item['product_quantity']
+            if each_item['size'] == 'Small':
+                product.small -= each_item['product_quantity']
+            if each_item['size'] == 'Medium':
+                product.medium -= each_item['product_quantity']
+            if each_item['size'] == 'Large':
+                product.large -= each_item['product_quantity']
+            if each_item['size'] == 'X-Large':
+                product.xlarge -= each_item['product_quantity']
+            if each_item['size'] == 'XX-Large':
+                product.xxlarge -= each_item['product_quantity']
+            # add order to order table
+            item_ordered = OrderItem(order_id, each_item['product_id'], each_item['product_quantity'],
+                                     each_item['size'], each_item['item_name'])
             db.session.add(item_ordered)
+            db.session.commit()
 
         db.session.commit()
 
     if 'cart' in session:
         del(session['cart'])
 
+    flash(f'Your order has been place! ATB will contact you shortly. Your order number is {order_id}.', 'success')
+    db.session.delete(store_order)
     return render_template('homePage.html')
 
 
@@ -537,7 +557,12 @@ def OrderConfirm():
 
 @app.route('/OrderDetails')
 def OrderDetails():
-   return render_template('orderDetails.html')
+    orders = OrderItem.query.order_by(OrderItem.order_id) \
+        .all()
+    info = StoreOrder.query.order_by(StoreOrder.order_id) \
+        .all()
+
+    return render_template('orderDetails.html', orders=orders, info=info)
 
 
 @app.route('/SalesTracker')

@@ -129,10 +129,10 @@
 {#             {% if account_id != None %}#}
            <td>{{ each_order['order_id'] }}</td>
            <td>{{ each_order['item_name'] }}</td>
-           <td>{{ each_order['price'] }}</td>
+           <td>{{ "${:.2f}".format(each_order['price']) }}</td>
            <td>{{ each_order['quantity'] }}</td>
            <td>{{ each_order['size'] }}</td>
-           <td>{{ each_order['price_charged'] }}</td>
+           <td>{{ "${:.2f}".format(each_order['price_charged']) }}</td>
            <td>
                <a href="#container-{{ each_order['order_id'] }}" class="btn btn-secondary" type="submit" role="button">View</a>
                <div id="container-{{ each_order['order_id'] }}">
@@ -142,13 +142,6 @@
                             {% set count = [0] %}
                             {% for info in info if count == [0] %}
 
-{#                                {{ loop.index }}#}
-{#                                    {{ count }}#}
-{#                       {% for info in info %}#}
-{#                                {% if count == 0 %}#}
-{#                                {% set count = count + 1 %}#}
-{#                           {{  count }}#}
-{#                           {% if info['order_id'] == each_order['order_id'] %}#}
                            <div class="text-center" style="align-content: center"></div>
                            <div class="row">
                             <div class="col-lg-6">
