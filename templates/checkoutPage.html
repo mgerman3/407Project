@@ -22,7 +22,7 @@
                         <div class="cart-details-size">Size: {{ product['size'] }}</div>
                         <div class="cart-details-price">Price: ${{ "{:,.2f}".format(product['price']) }}</div>
                         <div class="cart-details-total">Total: ${{ "{:,.2f}".format(product['price']*product['product_quantity']) }}</div>
-                        <div class="cart-details-remove"><a href="{{ url_for('cart_remove', index=ns.item) }}">Remove</a></div>
+                        <div class="cart-details-remove" ><a href="{{ url_for('cart_remove', index=ns.item) }}" style="color:red">Remove</a></div>
                     </div>
                 </div>
                 {% set ns.item = ns.item + 1 %}
