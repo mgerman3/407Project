@@ -834,6 +834,7 @@ input.btpos {
   padding: 50px; /* Add some padding to the container */
   background-color: #DCDCDC; /* Set the background color of the container */
   border: 1px solid #ccc; /* Add a border around the container */
+  margin-bottom: -10px;
 }
 
 .my-div {
