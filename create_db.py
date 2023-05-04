@@ -1,5 +1,5 @@
 from app import app, db
-from models import Credentials
+from models import Credentials, InventoryInfo
 from werkzeug.security import generate_password_hash
 
 with app.app_context():
@@ -31,32 +31,42 @@ with app.app_context():
         db.session.add(a_user)
         db.session.commit()
 
-# Initial loading of products
-#     products = [
-#         {'item_name': 'Quarter-Zip', 'product_id': '1',
-#          'desc': 'ATB warm and comfy quarter-zip',
-#          'product_image': 'Shop_QuarterZip.png', 'product_price': 45.00},
-#         {'item_name': 'Crewneck', 'product_id': '2',
-#          'desc': 'ATB warm and comfy crewneck',
-#          'product_image': 'Shop_Crewneck.png', 'product_price': 40.00},
-#         {'item_name': 'Long Sleeve', 'product_id': '3',
-#          'desc': 'ATB comfy long sleeve',
-#          'product_image': 'Shop_LongSleeve', 'product_price': 36.00},
-#         {'item_name': 'Original Tee', 'product_id': '4',
-#          'desc': 'ATB comfy original tee',
-#          'product_image': 'Shop_OriginalTee', 'product_price': 28.00},
-#         {'item_name': 'T-Shirt', 'product_id': '5',
-#          'desc': 'ATB comfy t-shirt',
-#          'product_image': 'Shop_tshirt', 'product_price': 28.00}
-#     ]
-#
-#     for each_product in products:
-#         print(f'{each_product["item_name"]} inserted into product')
-#         a_product = InventoryInfo(item_name=each_product['item_name'], product_id=each_product['product_id'],
-#                             desc=each_product['product_description'],
-#                             image=each_product['product_image'],
-#                             price=each_product['product_price'])
-#         db.session.add(a_product)
-#         db.session.commit()
+    # Initial loading of inventory
+    products = [
+        {'collection_id': None, 'item_name': 'Quarter-Zip', 'xsmall': 10, 'small': 10, 'medium': 10, 'large': 10,
+         'xlarge': 10, 'xxlarge': 10, 'price': 45.00, 'desc': 'ATB warm and comfy Quarter-Zip',
+         'product_image': 'Shop_QuarterZip.png'},
+        {'collection_id': None, 'item_name': 'Crewneck', 'xsmall': 10, 'small': 10, 'medium': 10, 'large': 10,
+         'xlarge': 10, 'xxlarge': 10, 'price': 40.00, 'desc': 'ATB warm and comfy crewneck',
+         'product_image': 'Shop_Crewneck.png'},
+        {'collection_id': None, 'item_name': 'Long Sleeve', 'xsmall': 10, 'small': 10, 'medium': 10, 'large': 10,
+         'xlarge': 10, 'xxlarge': 10, 'price': 36.00, 'desc': 'ATB comfy long sleeve',
+         'product_image': 'Shop_LongSleeve.png'},
+        {'collection_id': None, 'item_name': 'Original Tee', 'xsmall': 10, 'small': 10, 'medium': 10, 'large': 10,
+         'xlarge': 10, 'xxlarge': 10, 'price': 28.00, 'desc': 'ATB comfy original tee',
+         'product_image': 'Shop_OriginalTee.png'},
+        {'collection_id': None, 'item_name': 'T-Shirt', 'xsmall': 10, 'small': 10, 'medium': 10, 'large': 10,
+         'xlarge': 10, 'xxlarge': 10, 'price': 28.00, 'desc': 'ATB comfy t-shirt',
+         'product_image': 'Shop_tshirt.png'},
+    ]
 
+    # for each_product in products:
+    #     print(f'{each_product["item_name"]} inserted into product')
+    # a_product = InventoryInfo(collection_id=each_product['collection_id'], item_name=each_product['item_name'], xsmall=each_product['xsmall'], small=each_product['small'],
+    #                           medium=each_product['medium'], large=each_product['large'], xlarge=each_product['xlarge'],
+    #                           xxlarge=each_product['xxlarge'], price=each_product['price'], desc=each_product['desc'],
+    #                           product_image=each_product['product_image'])
+    # db.session.add(a_product)
+    # db.session.commit()
 
+    for each_product in products:
+        print(f'{each_product["item_name"]} inserted into product')
+        a_product = InventoryInfo(collection_id=each_product['collection_id'], item_name=each_product['item_name'],
+                                  xsmall=each_product['xsmall'], small=each_product['small'],
+                                  medium=each_product['medium'], large=each_product['large'],
+                                  xlarge=each_product['xlarge'],
+                                  xxlarge=each_product['xxlarge'], price=each_product['price'],
+                                  desc=each_product['desc'],
+                                  product_image=each_product['product_image'])
+        db.session.add(a_product)
+        db.session.commit()
