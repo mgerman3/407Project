@@ -35,8 +35,8 @@ def load_user(account_id):
 def homePage():
    return render_template('Home Page.html')
 
-@app.route('/404')
-def errorPage():
+@app.errorhandler(404)
+def errorPage(error):
    return render_template('404.html'), 404
 
 @app.route('/Shop')
