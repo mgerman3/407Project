@@ -97,13 +97,11 @@
    Order Log
 {% endblock %}
 
-
 {% block html_head %}
     <!-- Add space between header and title -->
     <div class="GenProduct_HeadingSpacer"></div>
    Order Log
 {% endblock %}
-
 
 {% block page_content %}
 
@@ -120,6 +118,7 @@
             <th scope="col">Quantity</th>
             <th scope="col">Size</th>
             <th scope="col">Total Price</th>
+            <th scope="col">View Details</th>
            {% if current_user.role in ['ADMIN'] %}
                 <th>Status</th>
            {% endif %}
@@ -135,9 +134,107 @@
            <td>{{ each_order['size'] }}</td>
            <td>{{ each_order['price_charged'] }}</td>
            <td>
-{#               {% if current_user.role in ['ADMIN'] %}#}
-{#               <a href="{{ url_for('order_delete', order_id=each_order['order_id']) }}" class="btn btn-secondary" type = "submit" role="button">Delete</a>#}
-{#               {% endif %}#}
+               <a href="#container" class="btn btn-secondary" type="submit" role="button">View</a>
+               <div id="container">
+                   <div id="exampleModal" class="show">
+                       <a href="#" class="btn btn-secondary" style="margin-top: 10px" type="submit" role="button">Close</a><br>
+                        {% for info in info %}
+                           {% if info['order_id'] == each_order['order_id'] %}
+                           <div class="text-center" style="align-content: center"></div>
+                           <div class="row">
+                            <div class="col-lg-6">
+                                 <strong>Order ID:</strong>
+                            </div>
+                            <div class="col-lg-6">
+                                 {{ each_order['order_id'] }}
+                            </div>
+                           </div><br>
+
+                           <div class="row">
+                           <div class="col-lg-6">
+                               <strong>First Name:</strong>
+                           </div>
+                           <div class="col-lg-6">
+                               {{ info['first_name'] }}
+                           </div>
+                           </div>
+
+                            <div class="row">
+                            <div class="col-lg-6">
+                                 <strong>Last Name:</strong>
+                            </div>
+                            <div class="col-lg-6">
+                                 {{ info['last_name'] }}
+                            </div>
+                           </div>
+
+                            <div class="row">
+                            <div class="col-lg-6">
+                                 <strong>Address:</strong>
+                            </div>
+                            <div class="col-lg-6">
+                                 {{ info['address'] }}
+                            </div>
+                           </div>
+
+                            <div class="row">
+                            <div class="col-lg-6">
+                                 <strong>City:</strong>
+                            </div>
+                            <div class="col-lg-6">
+                                 {{ info['city'] }}
+                            </div>
+                           </div>
+
+                            <div class="row">
+                            <div class="col-lg-6">
+                                 <strong>State:</strong>
+                            </div>
+                            <div class="col-lg-6">
+                                 {{ info['state'] }}
+                            </div>
+                           </div>
+
+                            <div class="row">
+                            <div class="col-lg-6">
+                                 <strong>Zip Code:</strong>
+                            </div>
+                            <div class="col-lg-6">
+                                 {{ info['zipcode'] }}
+                            </div>
+                           </div>
+
+                            <div class="row">
+                            <div class="col-lg-6">
+                                 <strong>Email:</strong>
+                            </div>
+                            <div class="col-lg-6">
+                                 {{ info['email'] }}
+                            </div>
+                           </div>
+
+                            <div class="row">
+                            <div class="col-lg-6">
+                                 <strong>Phone Number:</strong>
+                            </div>
+                            <div class="col-lg-6">
+                                 {{ info['phoneNumber'] }}
+                            </div>
+                           </div>
+
+                           <div class="row">
+                            <div class="col-lg-6">
+                                 <strong>Shipping Method:</strong>
+                            </div>
+                            <div class="col-lg-6">
+                                 {{ info['shipping'] }}
+                            </div>
+                           </div>
+                            </div>
+                            {% endif %}
+                          {% endfor %}
+                   </div>
+               </div>
            </td>
        </tr>
            {% endfor %}
