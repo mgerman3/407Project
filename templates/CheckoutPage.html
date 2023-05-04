@@ -46,47 +46,47 @@
                             <div class="border-box col">
                                 <div class="row" style="padding-right: 15px">
                                     <!--Field to collect users first name -->
-                                    <p class="formFieldsLabels">First Name (*) <br></p>
-                                    <input type="text" class="inputFields" name="first_name" required>
+                                    <p class="formFieldsLabels">First Name* <br></p>
+                                    <input type="text" class="inputFields" name="first_name" maxlength="30" required>
                                 </div>
                             </div>
                             <div class="border-box col">
                                 <div class="row" style="padding-left: 15px">
                                     <!--Field to collect users last name -->
-                                    <p class="formFieldsLabels">Last Name (*) <br></p>
-                                    <input type="text" class="inputFields" name="last_name" required><br><br>
+                                    <p class="formFieldsLabels">Last Name* <br></p>
+                                    <input type="text" class="inputFields" name="last_name" maxlength="30" required><br><br>
                                 </div>
                             </div>
                         </div>
                         <div class = "row">
                             <!--Field to collect users email -->
-                            <p class="formFieldsLabels">Email (*)</p>
-                            <input type="email" class="inputFields" name="email" required><br><br>
+                            <p class="formFieldsLabels">Email*</p>
+                            <input type="email" class="inputFields" name="email" maxlength="100" required><br><br>
                         </div>
                         <div class = "row">
                             <!--Field to collect users address 2 -->
-                            <p class="formFieldsLabels">Phone Number (*)</p>
-                            <input type="integer" class="inputFields" name="phoneNumber"><br><br>
+                            <p class="formFieldsLabels">Phone Number*</p>
+                            <input type="tel"  class="inputFields" name="phoneNumber" maxlength="10" required><br><br>
                         </div>
                         <div class = "row">
                             <!--Field to collect users address 1 -->
-                            <p class="formFieldsLabels">Address (*)</p>
-                            <input type="text" class="inputFields" name="address" required><br><br>
+                            <p class="formFieldsLabels">Address*</p>
+                            <input type="text" class="inputFields" name="address" maxlength="100" required><br><br>
                         </div>
                         <div class = "row">
                             <!--Field to collect users city -->
-                            <p class="formFieldsLabels">City (*)</p>
-                            <input type="text" class="inputFields" name="city" required><br><br>
+                            <p class="formFieldsLabels">City*</p>
+                            <input type="text" class="inputFields" name="city" maxlength="80" required><br><br>
                         </div>
                         <div class = "row">
                             <!--Field to collect users state -->
-                            <p class="formFieldsLabels">State (*)</p>
-                            <input type="text" class="inputFields" name="state" required><br><br>
+                            <p class="formFieldsLabels">State*</p>
+                            <input type="text" class="inputFields" name="state" maxlength="2" required><br><br>
                         </div>
                         <div class = "row">
                             <!--Field to collect users zip code -->
-                            <p class="formFieldsLabels">Zip Code (*)</p>
-                            <input type="text" class="inputFields" name="zipcode" required><br><br>
+                            <p class="formFieldsLabels">Zip Code*</p>
+                            <input type="text" class="inputFields" pattern="[0-9]{5}" name="zipcode" maxlength="9" required><br><br>
                         </div>
                     </div>
                 </div>
