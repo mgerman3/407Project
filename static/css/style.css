@@ -921,6 +921,7 @@ webpage_margin{
     margin-left: 20px;
 }
 
+
 .FormatShopPhotos {
   object-fit: cover;
   width: 300px;
@@ -1005,3 +1006,84 @@ webpage_margin{
 .show {
   margin: 0 auto;
 }
+
+
+/* Styling for Checkout Cart */
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.cart-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.cart-image {
+    max-height: 150px;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.cart-details-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cart-details-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.cart-details-quantity {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.cart-details-size {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.cart-details-price {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.cart-details-total {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.cart-details-remove {
+    margin-top: 0.5rem;
+}
+
+.empty-cart {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+
+
