@@ -319,7 +319,7 @@ def CheckOut():
 
        return render_template('checkoutPage.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
    else:
-       return render_template('checkoutPage.html', cart_count=0)
+       return render_template('checkoutPage.html', cart_count=0, cart_total=0)
 
 # @app.route('/payment', methods=['GET', 'POST'])
 # def payment():
