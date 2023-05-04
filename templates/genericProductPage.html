@@ -9,36 +9,51 @@
 {% endblock %}
 
 {% block page_content %}
+    <!-- Div containing Product Image -->
     <div class="container">
         <div class="row">
             <div class="col-lg-5">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <!-- Thumbnail wrapper for the image -->
                     <div class="thumbnail">
+                        <!-- Product image is loaded from the server -->
                         <img src="{{ url_for('static', filename='/products/' + item['product_image']) }}" alt="Picture of {{ item['item_name'] }}" class="img-responsive img-thumbnail">
                     </div>
                 </div>
             </div>
+        <!-- Div containing Product details -->
             <div class="col-lg-5">
+            <!-- Div contains panel wrapper for product details -->
                 <div class="panel panel-primary">
 {#        <div class="panel-heading">#}
 {#          <h3 class="panel-title">Product Details</h3>#}
 {#        </div>#}
+                <!-- Div contains body of the product details panel -->
                     <div class="panel-body">
+                    <!-- Displays the name of the item -->
                         <h1>{{ item['item_name'] }}</h1>
+                    <!-- Displays the price of the item -->
                         <h4>{{ "$%.2f"|format(item['price']) }}</h4>
+                    <!-- Conditional statement that displays the name of the collection that the item belongs to, if it exists -->
                         {% if dict[item['collection_id']] %}
                             <h5> Collection: {{ dict[item["collection_id"]] }}</h5>
                         {% endif %}
                         <hr />
+                    <!-- Section displaying description of the item -->
                         {{ item['desc'] }}
                         <hr />
+                    <!-- Form allows the user to add the item to their cart -->
                         <form action="{{ url_for('cart_add', product_id=item['product_id']) }}" method="POST"> <!-- add_to_cart -->
+                           <!-- Div containing row of elements for selecting size of item -->
                             <div class="row">
+                                <!-- Column for size selection dropdown -->
                                 <div class="col-lg-4">
                                     <div class="row g-2">
                                         <div class="col-lg-12">
                                             <h4>Select a Size</h4>
+                                            <!-- Container for the size selection dropdown -->
                                             <div class="form-select-container col-12">
+                                                <!-- Dropdown containing options for selecting size of item -->
                                                 <select name="size" id="role" class="form-select" aria-label=".form-select-md example" required>
                                                     <option value="" selected disabled>---Select A Size---</option>
                                                     <option name="X-Small" id="size" value="X-Small">X-Small</option>
@@ -51,15 +66,20 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Creates a row with grid spacing of 2 -->
                                     <div class="row g-2">
+                                        <!-- Creates a column with width 12 on large screens -->
                                         <div class="col-lg-12">
+                                            <!-- Creates a label for the quantity input field -->
                                             <label for="product_quantity" class="form-label"><strong>Quantity</strong></label>
                                         </div>
                                         <div class="col-lg-12">
+                                            <!-- Add a number input field for quantity -->
                                             <input class="col-xs-2" type="number" step="1" min="1" max="99" class="form-control" id="product_quantity"
                                                    name="product_quantity" value="1" required>
                                         </div>
                                         <div class="col-lg-12">
+                                            <!-- Button to submit the form to add the product to the cart -->
                                             <button type="submit" class="btn btn-primary">Add To Cart</button>
                                         </div>
                                     </div>
