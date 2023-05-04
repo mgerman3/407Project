@@ -473,7 +473,7 @@ input.inventoryButtons {
     width: 700px;
     height: 50px;
     display: block;
-    margin-top: 10px;
+    margin: 10px auto;
     background-color: #69a695;
     color: white;
     border-radius: 5px;
