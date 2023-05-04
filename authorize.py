@@ -11,7 +11,7 @@ def role_required(roles):
                 pass
             else:
                 flash('You do not have permission to access this function.', 'error')
-                return render_template('access_denied.html')
+                return render_template('accessDenied.html')
             if callable(getattr(current_app, "ensure_sync", None)):
                 return current_app.ensure_sync(func)(*args, **kwargs)
             return func(*args, **kwargs)

@@ -256,7 +256,7 @@
       <workItem from="1683125025845" duration="29000" />
       <workItem from="1683125138236" duration="12234000" />
       <workItem from="1683154309737" duration="1981000" />
-      <workItem from="1683158239292" duration="4450000" />
+      <workItem from="1683158239292" duration="6466000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling">
       <created>1678819151825</created>
@@ -447,7 +447,28 @@
       <option name="project" value="LOCAL" />
       <updated>1683210543007</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Added title">
+      <created>1683210959387</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1683210959387</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Removed the space that was between the footer and the bottom container on the about page">
+      <created>1683212315928</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1683212315928</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Recentered buttons on log in page, sign up page, create new employee">
+      <created>1683212715870</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1683212715870</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,9 +486,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Creation of inventory management page&#10;Used table template from bootstrap&#10;need to fill in values and add styling" />
-    <MESSAGE value="Added an inventory input table &#10;need to fill in values and add styling for table&#10;need to fix formatting of the buttons" />
-    <MESSAGE value="Updated the form to input inventory." />
     <MESSAGE value="Added header, put input form and table into containers" />
     <MESSAGE value="Updated navbar per Joe's changes." />
     <MESSAGE value="Changed the homepage to replicate a different screen. working on getting button to correct position, making fonts the ideal sizes, and will put in a slider of images below start shopping button" />
@@ -490,7 +508,10 @@
     <MESSAGE value="finish checkout page edits" />
     <MESSAGE value="Created new order tables for when checkout is completed. Need to implement orders log for admins with this data now." />
     <MESSAGE value="Last merge removed cart formatting. Redid css styling for items in cart on the checkout page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Last merge removed cart formatting. Redid css styling for items in cart on the checkout page" />
+    <MESSAGE value="Added title" />
+    <MESSAGE value="Removed the space that was between the footer and the bottom container on the about page" />
+    <MESSAGE value="Recentered buttons on log in page, sign up page, create new employee" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recentered buttons on log in page, sign up page, create new employee" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/11Pull$11Pull.coverage" NAME="11Pull Coverage Results" MODIFIED="1682376974116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -504,7 +525,7 @@
     <SUITE FILE_PATH="coverage/team08spring2023bmgt407$April24Pull.coverage" NAME="April24Pull Coverage Results" MODIFIED="1682549133223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/May1Pull$May1Pull.coverage" NAME="May1Pull Coverage Results" MODIFIED="1682999747169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/team08spring2023bmgt407$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1681146471589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$3Pull.coverage" NAME="3Pull Coverage Results" MODIFIED="1683210620403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/team08spring2023bmgt407$3Pull.coverage" NAME="3Pull Coverage Results" MODIFIED="1683212618254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/11Pull$team08spring2023bmgt407.coverage" NAME="team08spring2023bmgt407 Coverage Results" MODIFIED="1681503784238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
