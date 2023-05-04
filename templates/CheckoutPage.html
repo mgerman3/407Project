@@ -96,7 +96,7 @@
                     <div class = "row">
                         <!--Field to collect users address 2 -->
                         <p class="formFieldsLabels">Phone Number*</p>
-                        <input type="integer" maxlength="10" class="inputFields" name="phoneNumber" required><br><br>
+                        <input type="tel"  class="inputFields" name="phoneNumber" maxlength="10" required><br><br>
                     </div>
                     <div class = "row">
                         <!--Field to collect users address 1 -->
@@ -116,7 +116,7 @@
                     <div class = "row">
                         <!--Field to collect users zip code -->
                         <p class="formFieldsLabels">Zip Code*</p>
-                        <input type="integer" class="inputFields" name="zipcode" maxlength="9" required><br><br>
+                        <input type="text" class="inputFields" pattern="[0-9]{5}" name="zipcode" maxlength="9" required><br><br>
                     </div>
                 </div>
             </div>
