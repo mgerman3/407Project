@@ -44,10 +44,6 @@ def Shop():
    items = InventoryInfo.query.order_by(InventoryInfo.item_name).all()
    return render_template('Shop.html', items=items)
 
-# @app.route('/EnterItems')
-# def EnterItems():
-#     return render_template('Input_Inventory.html')
-
 @app.route('/About')
 def About():
    return render_template('About Page.html')
