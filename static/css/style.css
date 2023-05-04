@@ -54,7 +54,8 @@ opacity: 0.5;
 
 /*use this to style create role dropdown on admin new login page*/
 select#role.form-select{
-    width: 200%;
+    width: 100%;
+    max-width: 800px;
     height: 40px;
     display: flex;
     justify-content: center;
