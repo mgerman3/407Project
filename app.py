@@ -190,6 +190,7 @@ def review_delete(review_id):
   return redirect(url_for('reviews_view_all'))
 
 
+
 @app.route('/ReviewsLog/Post/<int:review_id>')
 @login_required
 @role_required(['ADMIN'])
@@ -318,6 +319,13 @@ def CheckOut():
    if 'cart' in session:
        session['cart_total'] = sum(item['price'] * item['product_quantity'] for item in session['cart'])
 
+       # if request.form['shipping'] == 'local':
+       #     session['cart_total'] = session['cart_total']
+       # elif request.form['shipping'] == 'home':
+       #     session['cart_total'] = session['cart_total'] + 10
+       # elif request.form['shipping'] == 'rapid':
+       #     session['cart_total'] = session['cart_total'] + 20
+
        return render_template('checkoutPage.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
    else:
        return render_template('checkoutPage.html', cart_count=0, cart_total=0)
@@ -346,9 +354,12 @@ def process_order():
             city = request.form['city']
             state = request.form['state']
             zipcode = request.form['zipcode']
+            shipping_method = request.form['shipping_method']
+            posted = False
 
             store_order = StoreOrder(account_id=account_id, first_name=first_name, last_name=last_name, phoneNumber=phoneNumber,
-                                     email=email, address=address, city=city, state=state, zipcode=zipcode)
+                                     email=email, address=address, city=city, state=state, zipcode=zipcode,
+                                     shipping_method=shipping_method, posted=posted)
         else:
             account_id = None
             first_name = request.form['first_name']
@@ -359,9 +370,13 @@ def process_order():
             city = request.form['city']
             state = request.form['state']
             zipcode = request.form['zipcode']
+            shipping_method = request.form['shipping_method']
+            posted = False
 
             store_order = StoreOrder(account_id=account_id,first_name=first_name, last_name=last_name, phoneNumber=phoneNumber,
-                                    email=email, address=address, city=city, state=state, zipcode=zipcode)
+                                    email=email, address=address, city=city, state=state, zipcode=zipcode,
+                                     shipping_method=shipping_method, posted=posted)
+
         db.session.add(store_order)
         db.session.flush()
         db.session.refresh(store_order)
@@ -396,6 +411,23 @@ def process_order():
     flash(f'Your order has been place! ATB will contact you shortly. Your order number is {order_id}.', 'success')
     db.session.delete(store_order)
     return render_template('homePage.html')
+
+@app.route('/OrderDetails/<int:order_id>')
+@login_required
+@role_required(['ADMIN'])
+def order_post(order_id):
+  orders = StoreOrder.query.filter_by(order_id=order_id).first()
+  if orders:
+      if orders.posted == False:
+          orders.posted = True
+          db.session.commit()
+      else:
+          orders.posted = False
+          db.session.commit()
+  else:
+      flash(f'Post failed! Review could not be found.', 'error')
+
+  return redirect(url_for('OrderDetails'))
 
 
 @app.route('/GenericProduct/<int:product_id>')

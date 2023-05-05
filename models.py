@@ -127,6 +127,7 @@ class OrderItem(db.Model):
     size = db.Column(db.String(20), nullable=False)
     item_name = db.Column(db.String(20), nullable=False)
 
+
     def __init__(self, order_id, product_id, quantity, size, item_name):
         product = InventoryInfo.query.filter_by(product_id=product_id).first()
 
@@ -193,10 +194,10 @@ class StoreOrder(db.Model):
     city = db.Column(db.String(100))
     state = db.Column(db.String(2))
     zipcode = db.Column(db.String(9))
-    status = db.Column(db.String(20), default='PENDING PAYMENT')
-    payment_type = db.Column(db.String(10))
+    shipping_method = db.Column(db.String(20))
+    posted = db.Column(db.Boolean, default=False)
 
-    def __init__(self, account_id, first_name, last_name, phoneNumber, email, address, city, state, zipcode):
+    def __init__(self, account_id, first_name, last_name, phoneNumber, email, address, city, state, zipcode, shipping_method, posted):
         self.account_id = account_id
         self.first_name = first_name
         self.last_name = last_name
@@ -206,6 +207,8 @@ class StoreOrder(db.Model):
         self.city = city
         self.state = state
         self.zipcode = zipcode
+        self.shipping_method = shipping_method
+        self.posted = posted
 
 class Reviews(db.Model):
     __tablename__ = "Reviews"

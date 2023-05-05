@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 
-
-
 {% block page_title %}
    Order Log
 {% endblock %}
@@ -30,9 +28,7 @@
             <th scope="col">Size</th>
             <th scope="col">Total Price</th>
             <th scope="col">View Details</th>
-           {% if current_user.role in ['ADMIN'] %}
-                <th>Status</th>
-           {% endif %}
+            <th scope="col">Order Status</th>
        </tr>
 
 
@@ -139,7 +135,7 @@
                                  <strong>Shipping Method:</strong>
                             </div>
                             <div class="col-lg-6">
-                                 {{ info['shipping'] }}
+                                 {{ info['shipping_method'] }}
                             </div>
                            </div>
                             </div>
@@ -156,6 +152,19 @@
                    </div>
                </div>
            </td>
+             {% endfor %}
+    {% for each_info in info %}
+
+
+           <td>
+             {% if current_user.role in ['ADMIN'] %}
+                {% if each_info['posted'] == 1 %}
+                <a href="{{ url_for('order_post', order_id=each_info['order_id']) }}" class="btn btn-secondary" type = "submit" role="button">Shipped</a>
+            {% else %}
+                <a href="{{ url_for('order_post', order_id=each_info['order_id']) }}" class="btn btn-secondary" type = "submit" role="button">Not Shipped</a>
+            {% endif %}
+        {% endif %}
+        </td>
        </tr>
            {% endfor %}
 
