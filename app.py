@@ -425,7 +425,7 @@ def requests_view_all():
 
 @app.route('/InventoryLog')
 @login_required
-@role_required(['ADMIN', 'MANAGER'])
+@role_required(['ADMIN', 'EMPLOYEE'])
 def items_view_all():
  items = InventoryInfo.query.order_by(InventoryInfo.item_name) \
      .all()
@@ -438,7 +438,7 @@ def items_view_all():
 
 @app.route('/InventoryLog/update/<int:product_id>', methods=['GET', 'POST'])
 @login_required
-@role_required(['ADMIN', 'MANAGER'])
+@role_required(['ADMIN', 'EMPLOYEE'])
 def item_edit(product_id):
  if request.method == 'GET':
      collections = Collections.query.order_by(Collections.collection_id) \
@@ -513,7 +513,7 @@ def item_delete(product_id):
 
 @app.route('/InventoryInput', methods=['GET', 'POST'])
 @login_required
-@role_required(['ADMIN', 'MANAGER'])
+@role_required(['ADMIN', 'EMPLOYEE'])
 def inventory_entry():
 
  collections = Collections.query.order_by(Collections.collection_id) \
