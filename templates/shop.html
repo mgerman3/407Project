@@ -13,48 +13,8 @@
     <div class="GenProduct_HeadingSpacer"></div>
     <div class="row" style="padding-left: 5px">
         <h1 class="Clothes for you!"><strong>Clothes for you!</strong></h1>
+        <div class="GenProduct_HeadingSpacer"></div>
     </div>
-
-{#     <!--filter buttons for shop page - price, availability, and review customers will be able to filer the products by-->#}
-{#    <div class="row">#}
-{#    <div class="inline" style="10px">#}
-{#    <div class="dropdown">#}
-{#        <button class="input">Price</button>#}
-{#        <div class="dropdown-content">#}
-{#            <a href="{{ url_for('Shop', price='under_30') }}">under $30</a>#}
-{#            <a href="{{ url_for('Shop', price='under_50') }}">under $50</a>#}
-{#            <a href="{{ url_for('Shop', price='under_80') }}">under $80</a>#}
-{#        </div>#}
-{#    </div>#}
-{#    <div class="dropdown">#}
-{#        <button class="input">Availability</button>#}
-{#        <div class="dropdown-content">#}
-{#            <a href="{{ url_for('Shop', price='in_stock') }}">In Stock</a>#}
-{#            <a href="{{ url_for('Shop', price='out_of_stock') }}">Out of Stock</a>#}
-{#        </div>#}
-{#    </div>#}
-{#    <div class="dropdown">#}
-{#        <button class="input">Collection</button>#}
-{#        <div class="dropdown-content">#}
-{#            <a href="{{ url_for('Shop', price='under_80') }}">{{ Collections. }}</a>#}
-{#        </div>#}
-{#    </div>#}
-{#    </div>#}
-{#    </div>#}
-{#    <br>#}
-{##}
-{#     <!-- Coding to try and implement drop down buttons-->#}
-{#    {%  if price %}#}
-{#        {%  if price == 'under_30' %}#}
-{#            {% set items = InventoryInfo.execute('SELECT * FROM items where price < 30') .fetchall() %}#}
-{#        {%  elif price == 'under_50' %}#}
-{#            {% set items = InventoryInfo.execute('SELECT * FROM items where price < 50') .fetchall() %}#}
-{#        {%  elif price == 'under_80' %}#}
-{#            {% set items = InventoryInfo.execute('SELECT * FROM items where price < 80') .fetchall() %}#}
-{#        {% endif %}#}
-{#    {% else %}#}
-{#        {% set items = InventoryInfo.execute('SELECT * FROM items').fetchall() %}#}
-{#    {% endif %}#}
 
 <div class="row">
     {% for item  in items %}
@@ -70,10 +30,7 @@
                 </a>
                 {% endif %}
                 <div class="caption text-center">
-                    <h4 class="bold">{{ item.item_name }} - {{ "$%.2f"|format(item['price']) }}</h4>
-                    <p class="caption text-center">
-                         {{ item.desc }}
-                    </p>
+                    <br> <h4 class="bold">{{ item.item_name }} - {{ "$%.2f"|format(item['price']) }}</h4>
                     <hr>
                     <p>
                         <div>
