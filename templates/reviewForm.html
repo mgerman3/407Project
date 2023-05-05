@@ -21,17 +21,17 @@
     </div>
     <div class="GenProduct_HeadingSpacer"></div>
     <!-- Create two column layout to house form and photo side by side-->
-    <div class = "GenProduct_rowLayout"></div>
-        <div class="GenProduct_columnLayout"></div>
+    <div class = "GenProduct_rowLayout">
+        <div class="GenProduct_columnLayout">
              <!--Placing image on left hand column-->
             <img src="../static/images/Reviews_FormPhoto.png" width = "450" height = "470" alt="ATB Model on a Keg" style = "padding-left: 20px">
         </div>
         <!-- create new, right-handed side column-->
-        <div class="GenProduct_columnLayout"></div>
+        <div class="GenProduct_columnLayout">
         <!-- adds passing between both columns to evenly space information -->
-        <div class = "GenProduct_VerticalSpacer"></div>
+        <div class = "GenProduct_VerticalSpacer">
         <!-- conditional formatting to show confirmation message to users after completing the form -->
-        <div class = "GenProduct_VerticalRightSpacer"></div>
+            <div class = "GenProduct_VerticalRightSpacer">
 
                 <!--Creates form to collection customer's requests-->
                 <form action="{{ url_for('ReviewForm') }}" method="post">
@@ -92,11 +92,11 @@
                                             <p class="formFieldsLabels">Rating*</p>
                                             <select name="rating" id="role" class="form-select" aria-label=".form-select-md example" required>
                                                 <option value="" disabled selected>---Select A Rating---</option>
-                                                <option id="one" value="1">1/5</option>
-                                                <option id="two" value="2">2/5</option>
-                                                <option id="three" value="3">3/5</option>
-                                                <option id="four" value="4">4/5</option>
-                                                <option id="five" value="5">5/5</option>
+                                                <option name="one" id="one" value="1">1/5</option>
+                                                <option name="two" id="two" value="2">2/5</option>
+                                                <option name="three" id="three" value="3">3/5</option>
+                                                <option name="four" id="four" value="4">4/5</option>
+                                                <option name="five" id="five" value="5">5/5</option>
                                             </select>
                                         </div>
                                     {% endif %}
@@ -150,7 +150,7 @@
                         <!-- Combines first and last name to make one name record and print it out -->
                         <td> {{ each_review['first_name'] }} {{ each_review['last_name'] }} </td>
                         <!-- prints out customer review -->
-                        <td class="wrap" class="cartItemLabels"> {{ each_review['message'] }}</td>
+                        <td class = "wrap" class="cartItemLabels"> {{ each_review['message'] }}</td>
                         <!-- prints out numerical review given -->
                         <td class = "cartItemLabels"> {{ each_review['rating'] }} </td>
                     </tr>

@@ -42,7 +42,7 @@
                     <td>
                         <a href="#container-{{ each_order['order_id'] }}" class="btn btn-secondary" role="button">View</a>
                         <div id="container-{{ each_order['order_id'] }}">
-                            <div id="exampleModal" class="show">
+                            <div class="show">
                                 <a href="#" class="btn btn-secondary" style="margin-top: 10px" role="button">Close</a><br>
                                 {% set count = [0] %}
                                 {% for info in info if count == [0] %}
@@ -135,7 +135,7 @@
                 </div>
                 </td>
                 </tr>
-                </tr>
+{#                </tr>#}
             {% endfor %}
         </table>
     </div>
