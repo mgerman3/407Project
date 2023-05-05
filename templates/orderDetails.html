@@ -254,12 +254,20 @@
    </div>
 
    {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
-   <div class="row">
-       <div class="col">
-               Total Number of Orders: {{ orders|length }}
-       </div>
-   </div>
-
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Total Number of Orders</th>
+            <th scope="col">Total Revenue</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">{{ orders|length }}</th>
+            <th scope="row">${{ "{:,.2f}".format(total_order_sum) }}</th>
+        </tr>
+    </tbody>
+  </table>
     <p><br></p>
        </div>
    {% endif %}

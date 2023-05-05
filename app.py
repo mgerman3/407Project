@@ -5,6 +5,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from werkzeug.utils import secure_filename
 from authorize import role_required
 from models import *
+from sqlalchemy import func
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -561,8 +562,15 @@ def OrderDetails():
         .all()
     info = StoreOrder.query.order_by(StoreOrder.order_id) \
         .all()
+    total_order_sum = 0
 
-    return render_template('orderDetails.html', orders=orders, info=info)
+    for each_order in orders:
+        item_price = each_order.price_charged
+        total_order_sum += item_price
+
+    print(total_order_sum)
+
+    return render_template('orderDetails.html', orders=orders, info=info, total_order_sum=total_order_sum)
 
 
 @app.route('/SalesTracker')
