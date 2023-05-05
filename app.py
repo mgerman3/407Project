@@ -330,7 +330,6 @@ def CheckOut():
 #     elif request.method == 'POST':
 #         return render_template('payment.html')
 @app.route('/process-order', methods=['GET', 'POST'])
-@login_required
 def process_order():
     if request.method == 'GET':
         return redirect(url_for('homePage'))
@@ -351,6 +350,7 @@ def process_order():
             store_order = StoreOrder(user_id=user_id, first_name=first_name, last_name=last_name, phoneNumber=phoneNumber,
                                      email=email, address=address, city=city, state=state, zipcode=zipcode)
         else:
+            user_id = None
             first_name = request.form['first_name']
             last_name = request.form['last_name']
             phoneNumber = request.form['phoneNumber']
@@ -360,7 +360,7 @@ def process_order():
             state = request.form['state']
             zipcode = request.form['zipcode']
 
-            store_order = StoreOrder(first_name=first_name, last_name=last_name, phoneNumber=phoneNumber,
+            store_order = StoreOrder(user_id=user_id,first_name=first_name, last_name=last_name, phoneNumber=phoneNumber,
                                     email=email, address=address, city=city, state=state, zipcode=zipcode)
         db.session.add(store_order)
         db.session.flush()
@@ -632,7 +632,6 @@ def clear_cart():
    return redirect(url_for('Shop'))
 
 @app.route('/cart/add/<int:product_id>', methods=['GET','POST'])
-@login_required
 def cart_add(product_id):
    product = InventoryInfo.query.filter_by(product_id=product_id).first()
 
