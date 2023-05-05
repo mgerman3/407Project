@@ -5,7 +5,7 @@
 {% block page_content %}
         <!--Image for top of shop page-->
     <div class="row" style="align-content: center">
-        <img src="static/images/Spring Pink Map.jpg" width="200" height="250" alt="Around the Block Spring Pink Map" class="cover">
+        <img src="static/images/Spring_Pink_Map.jpg" width="200" height="250" alt="Around the Block Spring Pink Map" class="cover">
     </div>
 
     <!--Header greeting text-->
@@ -31,11 +31,14 @@
                 <div class="caption text-center">
                     <br> <h4 class="bold">{{ item.item_name }} - {{ "$%.2f"|format(item['price']) }}</h4>
                     <hr>
-                    <p>
+                        <br>
+                    <br>
+                    <br>
+
                         <div>
                             <a href="{{ url_for('GenProduct', product_id=item.product_id) }}" class="btn btn-primary btn-sm">View</a>
                         </div>
-                    </p>
+
                 </div>
             </div>
         </div>
