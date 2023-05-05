@@ -114,34 +114,6 @@ class InventoryInfo(db.Model):
    def __repr__(self):
        return f"{self.item_name}  {self.desc}"
 
-class StoreOrder(db.Model):
-    __tablename__ = 'StoreOrder'
-
-    order_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    account_id = db.Column(db.Integer, db.ForeignKey('Credentials.account_id'), nullable=True)
-    first_name = db.Column(db.String(30), nullable=False)
-    last_name = db.Column(db.String(50), nullable=False)
-    phoneNumber = db.Column(db.String(10))
-    email = db.Column(db.String(100))
-    address = db.Column(db.String(100))
-    city = db.Column(db.String(100))
-    state = db.Column(db.String(2))
-    zipcode = db.Column(db.String(9))
-    status = db.Column(db.String(20), default='PENDING PAYMENT')
-    payment_type = db.Column(db.String(10))
-    users = db.relationship('User', backref='users')
-
-    def __init__(self, account_id, first_name, last_name, phoneNumber, email, address, city, state, zipcode):
-        self.account_id = account_id
-        self.first_name = first_name
-        self.last_name = last_name
-        self.phoneNumber = phoneNumber
-        self.email = email
-        self.address = address
-        self.city = city
-        self.state = state
-        self.zipcode = zipcode
-
 
 class OrderItem(db.Model):
     __tablename__ = 'OrderItem'
@@ -206,6 +178,34 @@ class Credentials(UserMixin, db.Model):
 
    # Only execute once! Initial load of sizes
    #db.engine.execute("INSERT INTO sizes(size) VALUES ('XS');")
+
+
+class StoreOrder(db.Model):
+    __tablename__ = 'StoreOrder'
+
+    order_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    account_id = db.Column(db.Integer, db.ForeignKey('Credentials.account_id'), nullable=True)
+    first_name = db.Column(db.String(30), nullable=False)
+    last_name = db.Column(db.String(50), nullable=False)
+    phoneNumber = db.Column(db.String(10))
+    email = db.Column(db.String(100))
+    address = db.Column(db.String(100))
+    city = db.Column(db.String(100))
+    state = db.Column(db.String(2))
+    zipcode = db.Column(db.String(9))
+    status = db.Column(db.String(20), default='PENDING PAYMENT')
+    payment_type = db.Column(db.String(10))
+
+    def __init__(self, account_id, first_name, last_name, phoneNumber, email, address, city, state, zipcode):
+        self.account_id = account_id
+        self.first_name = first_name
+        self.last_name = last_name
+        self.phoneNumber = phoneNumber
+        self.email = email
+        self.address = address
+        self.city = city
+        self.state = state
+        self.zipcode = zipcode
 
 class Reviews(db.Model):
     __tablename__ = "Reviews"
