@@ -28,40 +28,40 @@
                                         <div class="row" style="padding-bottom: 20px">
                                             <!-- Username Input -->
                                             {% if action and action in ['create'] %}
-                                                <input type="text" class = "signupInput" id="username" name="username" placeholder="Username" value="{{ users['username'] if users else '' }}"required><br>
+                                                <input type="text" class = "signupInput" id="username" name="username" placeholder="Username" value="{{ users['username'] if users else '' }}" required><br>
                                             {% endif %}
                                         </div>
 
                                         <div class="row" style="padding-bottom: 20px">
                                             <!-- Password Input -->
                                             {% if action and action in ['create'] %}
-                                                <input type="password" class = "signupInput" id="password" method='sha256' name="password" placeholder="Password" value="{{ users['password'] if users else '' }}"required>
+                                                <input type="password" class = "signupInput" id="password" name="password" placeholder="Password" value="{{ users['password'] if users else '' }}" required>
                                             {% endif %}
                                         </div>
 
                                         <div class="row" style="padding-bottom: 20px">
                                             <!-- First Name Input -->
                                             {% if action and action in ['create'] %}
-                                                <input type="text" class = "signupInput" id="first_name" name="first_name" placeholder="First Name" value="{{ users['first_name'] if users else '' }}"required>
+                                                <input type="text" class = "signupInput" id="first_name" name="first_name" placeholder="First Name" value="{{ users['first_name'] if users else '' }}" required>
                                             {% endif %}
                                         </div>
 
                                         <div class="row" style="padding-bottom: 20px">
                                             <!-- Last Name Input -->
                                             {% if action and action in ['create'] %}
-                                                <input type="text" class = "signupInput" id="last_name" name="last_name" placeholder="Last Name" value="{{ users['last_name'] if users else '' }}"required>
+                                                <input type="text" class = "signupInput" id="last_name" name="last_name" placeholder="Last Name" value="{{ users['last_name'] if users else '' }}" required>
                                             {% endif %}
                                         </div>
 
                                         <div class="row" style="padding-bottom: 20px">
                                             <!-- Email Input -->
                                             {% if action and action in ['create'] %}
-                                                <input type="text" class = "signupInput" id="email" name="email" placeholder="Email" value="{{ users['email'] if users else '' }}"required>
+                                                <input type="text" class = "signupInput" id="email" name="email" placeholder="Email" value="{{ users['email'] if users else '' }}" required>
                                             {% endif %}
                                         </div>
                                         <br>
                                         <div class="row" style="padding-bottom: 20px">
-                                            <input type="submit" value="Register" class="inventoryButtons" method="POST">
+                                            <input type="submit" value="Register" class="inventoryButtons">
                                         </div>
                                     </div>
                                 </div>
@@ -72,5 +72,4 @@
             </div>
         </div>
     </form>
-
 {% endblock %}
