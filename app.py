@@ -590,14 +590,14 @@ def clear_cart():
 @app.route('/cart/add/<int:product_id>', methods=['GET','POST'])
 def cart_add(product_id):
    product = InventoryInfo.query.filter_by(product_id=product_id).first()
-    # if product has a quantity add it to the variable
-    if 'product_quantity' in request.form:
+   # if product has a quantity add it to the variable
+   if 'product_quantity' in request.form:
         product_quantity = int(request.form['product_quantity'])
-    elif request.method == 'GET':
+   elif request.method == 'GET':
         product_quantity = 1
 
 
-    if product:
+   if product:
         # if product exists and cart not in session, create cart
         if 'cart' not in session:
             session['cart'] = []
@@ -797,8 +797,8 @@ def cart_add(product_id):
 
         flash(f"{product.item_name} has been successfully added to your cart.", 'success')
         return redirect(url_for('CheckOut'))
-    else:
-        flash(f'Product could not be found. Please contact support if this problem persists.', 'error')
+   else:
+       flash(f'Product could not be found. Please contact support if this problem persists.', 'error')
 
 # establish route to remove item from cart
 @app.route('/cart/remove/<int:index>', methods=['GET'])

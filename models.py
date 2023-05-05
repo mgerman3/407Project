@@ -61,7 +61,7 @@ class InventoryInfo(db.Model):
     product_image = db.Column(db.String(100))
 
 # initialize inventory table
-   def __init__(self, collection_id, item_name, xsmall, small, medium, large, xlarge, xxlarge, price, desc, product_image):
+    def __init__(self, collection_id, item_name, xsmall, small, medium, large, xlarge, xxlarge, price, desc, product_image):
        self.collection_id = collection_id
        self.item_name = item_name
        self.xsmall = xsmall
@@ -74,7 +74,7 @@ class InventoryInfo(db.Model):
        self.desc = desc
        self.product_image = product_image
 
-   def __repr__(self):
+    def __repr__(self):
        return f"{self.item_name}  {self.desc}"
 
 # create order table
