@@ -219,7 +219,7 @@ def LogIn():
         if current_user and current_user.is_authenticated:
             if current_user.role in ['EMPLOYEE', 'ADMIN']:
                 return redirect(url_for(default_route_function))
-            elif current_user.role == 'STUDENT':
+            elif current_user.role == 'PUBLIC':
                 return redirect(url_for(default_user_route_function, user_id=0))
         else:
             redirect_route = request.args.get('next')
@@ -239,7 +239,7 @@ def LogIn():
 
             if current_user.role in ['EMPLOYEE', 'ADMIN']:
                 return redirect(redirect_route if redirect_route else url_for(default_route_function))
-            elif current_user.role == 'STUDENT':
+            elif current_user.role == 'PUBLIC':
                 return redirect(redirect_route if redirect_route else url_for(default_user_route_function, user_id=0))
         else:
             flash(f'Your login information was not correct. Please try again.', 'error')
