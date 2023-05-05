@@ -28,7 +28,7 @@
             <th scope="col">Size</th>
             <th scope="col">Total Price</th>
             <th scope="col">View Details</th>
-            <th scope="col">Order Status</th>
+{#            <th scope="col">Order Status</th>#}
        </tr>
 
 
@@ -152,21 +152,17 @@
                    </div>
                </div>
            </td>
-             {% endfor %}
-    {% for each_info in info %}
-
-
-           <td>
-             {% if current_user.role in ['ADMIN'] %}
-                {% if each_info['posted'] == 1 %}
-                <a href="{{ url_for('order_post', order_id=each_info['order_id']) }}" class="btn btn-secondary" type = "submit" role="button">Shipped</a>
-            {% else %}
-                <a href="{{ url_for('order_post', order_id=each_info['order_id']) }}" class="btn btn-secondary" type = "submit" role="button">Not Shipped</a>
-            {% endif %}
-        {% endif %}
-        </td>
+{#           <td>#}
+{#             {% if current_user.role in ['ADMIN'] %}#}
+{#                {% if each_order['posted'] == 1 %}#}
+{#                <a href="{{ url_for('order_post', order_id=each_order['order_id']) }}" class="btn btn-secondary" type = "submit" role="button">Shipped</a>#}
+{#            {% else %}#}
+{#                <a href="{{ url_for('order_post', order_id=each_order['order_id']) }}" class="btn btn-secondary" type = "submit" role="button">Not Shipped</a>#}
+{#            {% endif %}#}
+{#        {% endif %}#}
+{#        </td>#}
        </tr>
-           {% endfor %}
+    {% endfor %}
 
    </table>
    </div>

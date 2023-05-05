@@ -16,8 +16,8 @@ with app.app_context():
 
     # Initial loading of users
     users = [
-        {'username': 'student', 'password': generate_password_hash('studentpw', method='sha256'),
-         'first_name':'Student', 'last_name':'Student', 'email': 'student@umd.edu', 'role':'STUDENT'},
+        {'username': 'public', 'password': generate_password_hash('publicpw', method='sha256'),
+         'first_name':'Public', 'last_name':'Test', 'email': 'public@umd.edu', 'role':'PUBLIC'},
         {'username': 'employee', 'password': generate_password_hash('employeepw', method='sha256'),
          'first_name': 'Employee', 'last_name': 'Employee', 'email': 'employee@umd.edu', 'role': 'EMPLOYEE'},
         {'username': 'admin', 'password': generate_password_hash('adminpw', method='sha256'),

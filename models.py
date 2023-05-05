@@ -126,7 +126,7 @@ class OrderItem(db.Model):
     price = db.Column(db.Float, nullable=False)
     size = db.Column(db.String(20), nullable=False)
     item_name = db.Column(db.String(20), nullable=False)
-
+    # posted = db.Column(db.Boolean, default=False)
 
     def __init__(self, order_id, product_id, quantity, size, item_name):
         product = InventoryInfo.query.filter_by(product_id=product_id).first()
@@ -138,6 +138,7 @@ class OrderItem(db.Model):
         self.price = product.price
         self.size = size
         self.item_name = item_name
+        # self.posted = posted
 
 
 class Collections(db.Model):
@@ -163,7 +164,7 @@ class Credentials(UserMixin, db.Model):
     email = db.Column(db.String(100), unique=True, nullable=False)
     role = db.Column(db.String(10), nullable=False)
 
-    def __init__(self, username, password, first_name, last_name, email, role='STUDENT'):
+    def __init__(self, username, password, first_name, last_name, email, role='PUBLIC'):
         self.username = username
         self.password = password
         self.first_name = first_name
@@ -195,9 +196,8 @@ class StoreOrder(db.Model):
     state = db.Column(db.String(2))
     zipcode = db.Column(db.String(9))
     shipping_method = db.Column(db.String(20))
-    posted = db.Column(db.Boolean, default=False)
 
-    def __init__(self, account_id, first_name, last_name, phoneNumber, email, address, city, state, zipcode, shipping_method, posted):
+    def __init__(self, account_id, first_name, last_name, phoneNumber, email, address, city, state, zipcode, shipping_method):
         self.account_id = account_id
         self.first_name = first_name
         self.last_name = last_name
@@ -208,7 +208,6 @@ class StoreOrder(db.Model):
         self.state = state
         self.zipcode = zipcode
         self.shipping_method = shipping_method
-        self.posted = posted
 
 class Reviews(db.Model):
     __tablename__ = "Reviews"

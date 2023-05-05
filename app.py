@@ -355,11 +355,11 @@ def process_order():
             state = request.form['state']
             zipcode = request.form['zipcode']
             shipping_method = request.form['shipping_method']
-            posted = False
+
 
             store_order = StoreOrder(account_id=account_id, first_name=first_name, last_name=last_name, phoneNumber=phoneNumber,
                                      email=email, address=address, city=city, state=state, zipcode=zipcode,
-                                     shipping_method=shipping_method, posted=posted)
+                                     shipping_method=shipping_method)
         else:
             account_id = None
             first_name = request.form['first_name']
@@ -371,11 +371,11 @@ def process_order():
             state = request.form['state']
             zipcode = request.form['zipcode']
             shipping_method = request.form['shipping_method']
-            posted = False
+            # posted = False
 
             store_order = StoreOrder(account_id=account_id,first_name=first_name, last_name=last_name, phoneNumber=phoneNumber,
                                     email=email, address=address, city=city, state=state, zipcode=zipcode,
-                                     shipping_method=shipping_method, posted=posted)
+                                     shipping_method=shipping_method)
 
         db.session.add(store_order)
         db.session.flush()
@@ -398,6 +398,7 @@ def process_order():
             if each_item['size'] == 'XX-Large':
                 product.xxlarge -= each_item['product_quantity']
             # add order to order table
+            # posted = False
             item_ordered = OrderItem(order_id, each_item['product_id'], each_item['product_quantity'],
                                      each_item['size'], each_item['item_name'])
             db.session.add(item_ordered)
@@ -412,22 +413,22 @@ def process_order():
     db.session.delete(store_order)
     return render_template('homePage.html')
 
-@app.route('/OrderDetails/<int:order_id>')
-@login_required
-@role_required(['ADMIN'])
-def order_post(order_id):
-  orders = StoreOrder.query.filter_by(order_id=order_id).first()
-  if orders:
-      if orders.posted == False:
-          orders.posted = True
-          db.session.commit()
-      else:
-          orders.posted = False
-          db.session.commit()
-  else:
-      flash(f'Post failed! Review could not be found.', 'error')
-
-  return redirect(url_for('OrderDetails'))
+# @app.route('/OrderDetails/<int:order_id>')
+# @login_required
+# @role_required(['ADMIN'])
+# def order_post(order_id):
+#   orders = StoreOrder.query.filter_by(order_id=order_id).first()
+#   if orders:
+#       if orders.posted == False:
+#           orders.posted = True
+#           db.session.commit()
+#       else:
+#           orders.posted = False
+#           db.session.commit()
+#   else:
+#       flash(f'Post failed! Review could not be found.', 'error')
+#
+#   return redirect(url_for('OrderDetails'))
 
 
 @app.route('/GenericProduct/<int:product_id>')
