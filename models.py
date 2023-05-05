@@ -23,26 +23,26 @@ class User(db.Model):
        return f"{self.first_name} {self.last_name} {self.email} {self.address} {self.state}"
 
 
-class ShippingInfo(db.Model):
-   __tablename__ = "ShippingInfo"
-
-   ship_id = db.Column(db.Integer, primary_key=True)
-   user_id = db.Column(db.Integer, db.ForeignKey('User.user_id'), primary_key=True)
-   address = db.Column(db.String(100), nullable=False)
-   state = db.Column(db.String(2), nullable=False)
-   zipcode = db.Column(db.Integer, nullable=False)
-   phoneNumber = db.Column(db.Integer, nullable=False)
-
-
-   def __init__(self, address, state, zipcode, phoneNumber):
-       self.address = address
-       self.state = state
-       self.zipcode = zipcode
-       self.phoneNumber = phoneNumber
-
-
-   def __repr__(self):
-       return f" {self.address} {self.state}"
+# class ShippingInfo(db.Model):
+#    __tablename__ = "ShippingInfo"
+#
+#    ship_id = db.Column(db.Integer, primary_key=True)
+#    user_id = db.Column(db.Integer, db.ForeignKey('User.user_id'), primary_key=True)
+#    address = db.Column(db.String(100), nullable=False)
+#    state = db.Column(db.String(2), nullable=False)
+#    zipcode = db.Column(db.Integer, nullable=False)
+#    phoneNumber = db.Column(db.Integer, nullable=False)
+#
+#
+#    def __init__(self, address, state, zipcode, phoneNumber):
+#        self.address = address
+#        self.state = state
+#        self.zipcode = zipcode
+#        self.phoneNumber = phoneNumber
+#
+#
+#    def __repr__(self):
+#        return f" {self.address} {self.state}"
 
 class Requests(db.Model):
    __tablename__ = "Requests"
@@ -64,20 +64,20 @@ class Requests(db.Model):
    def __repr__(self):
        return f"{self.first_name}{self.last_name}{self.message}"
 
-class OrderInfo(db.Model):
-   __tablename__ = "OrderInfo"
-
-   order_id = db.Column(db.Integer, primary_key=True)
-   customer_id = db.Column(db.Integer, db.ForeignKey('User.user_id'))
-   shipping_mode = db.Column(db.String(30), nullable=False)
-   order_total = db.Column(db.Float, nullable=False)
-   def __init__(self, customer_id, shipping_mode, order_total, date) :
-       self.customer_id = customer_id
-       self.shipping_mode = shipping_mode
-       self.order_total = order_total
-       self.date = date
-   def __repr__(self):
-       return f"{self.shipping_mode}"
+# class OrderInfo(db.Model):
+#    __tablename__ = "OrderInfo"
+#
+#    order_id = db.Column(db.Integer, primary_key=True)
+#    customer_id = db.Column(db.Integer, db.ForeignKey('User.user_id'))
+#    shipping_mode = db.Column(db.String(30), nullable=False)
+#    order_total = db.Column(db.Float, nullable=False)
+#    def __init__(self, customer_id, shipping_mode, order_total, date) :
+#        self.customer_id = customer_id
+#        self.shipping_mode = shipping_mode
+#        self.order_total = order_total
+#        self.date = date
+#    def __repr__(self):
+#        return f"{self.shipping_mode}"
 
 class InventoryInfo(db.Model):
    __tablename__ = "InventoryInfo"
@@ -230,4 +230,3 @@ class Reviews(db.Model):
 
     def __repr__(self):
         return f"{self.first_name}{self.last_name}{self.message}"
-#
