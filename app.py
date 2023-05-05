@@ -41,6 +41,10 @@ def load_user(account_id):
 def homePage():
     return render_template('homePage.html')
 
+@app.route('/base')
+def base():
+    return render_template('base.html')
+
 # route for error page
 @app.errorhandler(404)
 def errorPage(error):
