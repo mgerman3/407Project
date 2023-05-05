@@ -19,158 +19,145 @@
     <div class="row">
     <div class="col">
 {#order table details#}
-   <table class="table table-striped">
-       <tr>
-            <th scope="col">Order ID</th>
-            <th scope="col">Item Name</th>
-            <th scope="col">Item Price</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Size</th>
-            <th scope="col">Total Price</th>
-            <th scope="col">View Details</th>
-       </tr>
+        <table class="table table-striped">
+            <tr>
+                <th scope="col">Order ID</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Item Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Size</th>
+                <th scope="col">Total Price</th>
+                <th scope="col">View Details</th>
+           </tr>
 
 {#for loop to retreive information from table#}
-         {% for each_order in orders %}
-           <td>{{ each_order['order_id'] }}</td>
-           <td>{{ each_order['item_name'] }}</td>
-           <td>{{ "${:.2f}".format(each_order['price']) }}</td>
-           <td>{{ each_order['quantity'] }}</td>
-           <td>{{ each_order['size'] }}</td>
-           <td>{{ "${:.2f}".format(each_order['price_charged']) }}</td>
-           <td>
-               <a href="#container-{{ each_order['order_id'] }}" class="btn btn-secondary" type="submit" role="button">View</a>
-               <div id="container-{{ each_order['order_id'] }}">
-                   <div id="exampleModal" class="show">
-                       <a href="#" class="btn btn-secondary" style="margin-top: 10px" type="submit" role="button">Close</a><br>
-{#                              {% if each_order['order_id'] in info %}#}
-                            {% set count = [0] %}
-                            {% for info in info if count == [0] %}
+            {% for each_order in orders %}
+                <tr>
+                    <td>{{ each_order['order_id'] }}</td>
+                    <td>{{ each_order['item_name'] }}</td>
+                    <td>{{ "${:.2f}".format(each_order['price']) }}</td>
+                    <td>{{ each_order['quantity'] }}</td>
+                    <td>{{ each_order['size'] }}</td>
+                    <td>{{ "${:.2f}".format(each_order['price_charged']) }}</td>
+                    <td>
+                        <a href="#container-{{ each_order['order_id'] }}" class="btn btn-secondary" role="button">View</a>
+                        <div id="container-{{ each_order['order_id'] }}">
+                            <div id="exampleModal" class="show">
+                                <a href="#" class="btn btn-secondary" style="margin-top: 10px" role="button">Close</a><br>
+                                {% set count = [0] %}
+                                {% for info in info if count == [0] %}
+                                    <div class="text-center" style="align-content: center"></div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <strong>Order ID:</strong>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            {{ each_order['order_id'] }}
+                                        </div>
+                                    </div><br>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <strong>First Name:</strong>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            {{ info['first_name'] }}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <strong>Last Name:</strong>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            {{ info['last_name'] }}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <strong>Address:</strong>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            {{ info['address'] }}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <strong>City:</strong>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            {{ info['city'] }}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <strong>State:</strong>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            {{ info['state'] }}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <strong>Zip Code:</strong>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            {{ info['zipcode'] }}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <strong>Email:</strong>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            {{ info['email'] }}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <strong>Phone Number:</strong>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            {{ info['phoneNumber'] }}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <strong>Shipping Method:</strong>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            {{ info['shipping_method'] }}
+                                        </div>
+                                    </div>
+                                    </div>
+                                    {% if count.append(count.pop() + 1) %}
+                                    {% endif %}
+                                {% endfor %}
+                        </div>
+                </div>
+                </td>
+                </tr>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
 
-                           <div class="text-center" style="align-content: center"></div>
-                           <div class="row">
-                            <div class="col-lg-6">
-                                 <strong>Order ID:</strong>
-                            </div>
-                            <div class="col-lg-6">
-                                 {{ each_order['order_id'] }}
-                            </div>
-                           </div><br>
-
-                           <div class="row">
-                           <div class="col-lg-6">
-                               <strong>First Name:</strong>
-                           </div>
-                           <div class="col-lg-6">
-                               {{ info['first_name'] }}
-                           </div>
-                           </div>
-
-                            <div class="row">
-                            <div class="col-lg-6">
-                                 <strong>Last Name:</strong>
-                            </div>
-                            <div class="col-lg-6">
-                                 {{ info['last_name'] }}
-                            </div>
-                           </div>
-
-                            <div class="row">
-                            <div class="col-lg-6">
-                                 <strong>Address:</strong>
-                            </div>
-                            <div class="col-lg-6">
-                                 {{ info['address'] }}
-                            </div>
-                           </div>
-
-                            <div class="row">
-                            <div class="col-lg-6">
-                                 <strong>City:</strong>
-                            </div>
-                            <div class="col-lg-6">
-                                 {{ info['city'] }}
-                            </div>
-                           </div>
-
-                            <div class="row">
-                            <div class="col-lg-6">
-                                 <strong>State:</strong>
-                            </div>
-                            <div class="col-lg-6">
-                                 {{ info['state'] }}
-                            </div>
-                           </div>
-
-                            <div class="row">
-                            <div class="col-lg-6">
-                                 <strong>Zip Code:</strong>
-                            </div>
-                            <div class="col-lg-6">
-                                 {{ info['zipcode'] }}
-                            </div>
-                           </div>
-
-                            <div class="row">
-                            <div class="col-lg-6">
-                                 <strong>Email:</strong>
-                            </div>
-                            <div class="col-lg-6">
-                                 {{ info['email'] }}
-                            </div>
-                           </div>
-
-                            <div class="row">
-                            <div class="col-lg-6">
-                                 <strong>Phone Number:</strong>
-                            </div>
-                            <div class="col-lg-6">
-                                 {{ info['phoneNumber'] }}
-                            </div>
-                           </div>
-
-                           <div class="row">
-                            <div class="col-lg-6">
-                                 <strong>Shipping Method:</strong>
-                            </div>
-                            <div class="col-lg-6">
-                                 {{ info['shipping_method'] }}
-                            </div>
-                           </div>
-                            </div>
-                                 {% if count.append(count.pop() + 1) %}
-                                {% endif %}
-
-                          {% endfor %}
-                   </div>
-               </div>
-           </td>
-
-       </tr>
-    {% endfor %}
-
-   </table>
-   </div>
-   </div>
-
-   {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
-    <table class="table table-striped">
-    <thead>
-        <tr>
-            <th scope="col">Total Number of Orders</th>
-            <th scope="col">Total Revenue</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">{{ orders|length }}</th>
-            <th scope="row">${{ "{:,.2f}".format(total_order_sum) }}</th>
-        </tr>
-    </tbody>
-    </table>
-    <p><br></p>
-   {% endif %}
-
+    {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Total Number of Orders</th>
+                <th scope="col">Total Revenue</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">{{ orders|length }}</th>
+                <th scope="row">${{ "{:,.2f}".format(total_order_sum) }}</th>
+            </tr>
+            </tbody>
+        </table>
+        <p><br></p>
+    {% endif %}
     <br>
     <br>
 
