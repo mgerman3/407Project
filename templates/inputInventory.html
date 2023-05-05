@@ -140,7 +140,7 @@
                                            <br> {{ item['xxlarge'] }}
                                        {% endif %}
                                        {% endif %}
-                                     </div>
+                                       </div>
 
 
                                    <!-- Inventory Price Read/Update -->
@@ -155,7 +155,7 @@
                                            <br> {{ item['price'] }}
                                        {% endif %}
                                        {% endif %}
-                                     </div>
+                                        </div>
 
 
                                    <!-- Inventory Description Read/Update -->
@@ -199,18 +199,18 @@
                                    <div class="row">
                                      <input type="submit" value="Submit Inventory" class="inventoryButtons" method="POST">
                                    </div>
+                                       </div>
+                                   </div>
                                </div>
                            </div>
                        </div>
                    </div>
                </div>
            </div>
-       </div>
-   </div>
+           {% if action and action in ['create', 'update'] %}
+               </form>
+           {% else %}
+               </div>
+           {% endif %}
 
-{% if action and action in ['create', 'update'] %}
-</form>
-{% else %}
-    </div>
-{% endif %}
 {% endblock %}

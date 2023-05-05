@@ -21,60 +21,59 @@
     <div class="row">
     <div class="col">
 <!-- Creation of a table with striped rows-->
-   <table class="table table-striped">
+        <table class="table table-striped">
        <!-- Table Header -->
-       <tr>
-            <th scope="col">Collection ID</th>
-            <th scope="col">Collection Name</th>
+            <tr>
+                <th scope="col">Collection ID</th>
+                <th scope="col">Collection Name</th>
             <!-- Adds Actions Column if user is admin or employee -->
-           {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
-           <th>Actions</th>
-           {% endif %}
-       </tr>
+                {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
+                    <th>Actions</th>
+                {% endif %}
+            </tr>
         <!-- start of a for loop that iterates over a list of collections -->
-       {% for each_collection in collection %}
-       <tr>
+            {% for each_collection in collection %}
+                <tr>
             <!-- display the collection ID in a table cell -->
-           <td>{{ each_collection['collection_id'] }}</td>
+                    <td>{{ each_collection['collection_id'] }}</td>
             <!-- display the collection name in a table cell -->
-           <td>{{ each_collection['collection_name'] }}</td>
+                    <td>{{ each_collection['collection_name'] }}</td>
             <!-- if the current user has the role of admin or employee -->
-           {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
-           <td>
-
-               <a href="{{ url_for('collection_edit', collection_id=each_collection['collection_id']) }}" class="btn btn-secondary" type = "submit" role="button">Edit</a>
+                    {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
+                    <td>
+                        <a href="{{ url_for('collection_edit', collection_id=each_collection['collection_id']) }}" class="btn btn-secondary" type = "submit" role="button">Edit</a>
                 <!-- if the current user has the role of admin -->
-               {% if current_user.role in ['ADMIN'] %}
-               <a href="{{ url_for('collection_delete', collection_id=each_collection['collection_id']) }}" class="btn btn-secondary" type = "submit" role="button">Delete</a>
-               {% endif %}
-           </td>
-           {% endif %}
-       </tr>
-       {% endfor %}
-   </table>
-   </div>
-   </div>
+                        {% if current_user.role in ['ADMIN'] %}
+                            <a href="{{ url_for('collection_delete', collection_id=each_collection['collection_id']) }}" class="btn btn-secondary" type = "submit" role="button">Delete</a>
+                        {% endif %}
+                    </td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    </div>
     <!-- if the current user has the role of admin or employee -->
-   {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
+    {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
     <!-- start of a row -->
-   <div class="row">
+        <div class="row">
        <!-- start of a column -->
-       <div class="col">
+            <div class="col">
                 <!-- display the total number of collections -->
                Total Number of Collections: {{ collection|length }}
-       </div>
-   </div>
+            </div>
+        </div>
 
-    <p><br></p>
+        <p><br></p>
    <!-- start of a row -->
-   <div class="row">
+        <div class="row">
         <!-- start of a column with centered text -->
-       <div class="col text-center">
+            <div class="col text-center">
            <!-- displays a button to add a new collection -->
-           <a href="{{ url_for('collections_entry') }}" class="btn btn-primary" role="button">Add New Collection</a>
-       </div>
-   </div>
-       </div>
-   {% endif %}
+                <a href="{{ url_for('collections_entry') }}" class="btn btn-primary" role="button">Add New Collection</a>
+            </div>
+        </div>
+        </div>
+    {% endif %}
 
 {% endblock %}

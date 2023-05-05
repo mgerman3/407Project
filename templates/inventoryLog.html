@@ -16,10 +16,11 @@
 
 {% block page_content %}
 
+
 <div class="text-center" style="height: 100vh">
    <div class="row">
    <div class="col">
-
+{#making the table for inventory and necessary details#}
    <table class="table table-striped">
        <tr>
             <th scope="col">Item Name </th>
@@ -36,7 +37,7 @@
            <th>Actions</th>
            {% endif %}
        </tr>
-
+{#getting the collection id #}
        {% for each_item in items %}
        <tr>
            <td>{{ each_item['item_name'] }}</td>
@@ -66,22 +67,22 @@
    </table>
    </div>
    </div>
-
+{#admin and employee can see this data#}
    {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
    <div class="row">
        <div class="col">
-               Total Number of Items: {{ items|length }}
+           Total Number of Items: {{ items|length }}
        </div>
    </div>
+       <p><br></p>
 
-    <p><br></p>
    <div class="row">
        <div class="col text-center">
            <a href="{{ url_for('inventory_entry') }}" class="btn btn-primary" role="button">Add New Item</a>
        </div>
    </div>
 
-       </div>
+</div>
    {% endif %}
 
 {% endblock %}

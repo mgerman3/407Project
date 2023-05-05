@@ -33,6 +33,7 @@
                        <th>Actions</th>
                    {% endif %}
                 </tr>
+{#for loop to retreiving collections data#}
                 {% for each_request in requests %}
                     <td>{{ each_request['request_id'] }}</td>
                     <td>{{ each_request['account_id'] }}</td>
