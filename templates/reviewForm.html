@@ -92,11 +92,11 @@
                                             <p class="formFieldsLabels">Rating*</p>
                                             <select name="rating" id="role" class="form-select" aria-label=".form-select-md example" required>
                                                 <option value="" disabled selected>---Select A Rating---</option>
-                                                <option name="one" id="one" value="1">1/5</option>
-                                                <option name="two" id="two" value="2">2/5</option>
-                                                <option name="three" id="three" value="3">3/5</option>
-                                                <option name="four" id="four" value="4">4/5</option>
-                                                <option name="five" id="five" value="5">5/5</option>
+                                                <option id="one" value="1">1/5</option>
+                                                <option id="two" value="2">2/5</option>
+                                                <option id="three" value="3">3/5</option>
+                                                <option id="four" value="4">4/5</option>
+                                                <option id="five" value="5">5/5</option>
                                             </select>
                                         </div>
                                     {% endif %}
@@ -150,9 +150,9 @@
                         <!-- Combines first and last name to make one name record and print it out -->
                         <td> {{ each_review['first_name'] }} {{ each_review['last_name'] }} </td>
                         <!-- prints out customer review -->
-                        <td class = "wrap" class="cartItemLabels"> {{ each_review['message'] }}</td>
+                        <td class="wrap" class="cartItemLabels"> {{ each_review['message'] }}</td>
                         <!-- prints out numerical review given -->
-                        <td class = "cartItemLabels"> {{ each_review['rating'] }} </td>
+                        <td class="cartItemLabels"> {{ each_review['rating'] }} </td>
                     </tr>
                 {% endif %}
              {% endfor %}

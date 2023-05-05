@@ -35,10 +35,10 @@
                         {% if dict[item['collection_id']] %}
                             <h5> Collection: {{ collection }}</h5>
                         {% endif %}
-                        <hr />
+                        <hr/>
                     <!-- Section displaying description of the item -->
                         {{ item['desc'] }}
-                        <hr />
+                        <hr/>
                     <!-- Form allows the user to add the item to their cart -->
                         <form action="{{ url_for('cart_add', product_id=item['product_id']) }}" method="POST"> <!-- add_to_cart -->
                            <!-- Div containing row of elements for selecting size of item -->
@@ -53,12 +53,12 @@
                                                 <!-- Dropdown containing options for selecting size of item -->
                                                 <select name="size" id="role" class="form-select" aria-label=".form-select-md example" required>
                                                     <option value="" selected disabled>---Select A Size---</option>
-                                                    <option name="X-Small" id="size" value="X-Small">X-Small</option>
-                                                    <option name="Small" id="size" value="Small">Small</option>
-                                                    <option name="Medium" id="size" value="Medium">Medium</option>
-                                                    <option name="Large" id="size" value="Large">Large</option>
-                                                    <option name="XLarge" id="size" value="X-Large">X-Large</option>
-                                                    <option name="XXLarge" id="size" value="XX-Large">XX-Large</option>
+                                                    <option id="size" value="X-Small">X-Small</option>
+                                                    <option id="size" value="Small">Small</option>
+                                                    <option id="size" value="Medium">Medium</option>
+                                                    <option id="size" value="Large">Large</option>
+                                                    <option id="size" value="X-Large">X-Large</option>
+                                                    <option id="size" value="XX-Large">XX-Large</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -72,7 +72,7 @@
                                         </div>
                                         <div class="col-lg-12">
                                             <!-- Add a number input field for quantity -->
-                                            <input class="col-xs-2" type="number" step="1" min="1" max="99" class="form-control" id="product_quantity"
+                                            <input class="col-xs-2" type="number" step="1" min="1" max="99" id="product_quantity"
                                                    name="product_quantity" value="1" required>
                                         </div>
                                         <div class="col-lg-12">

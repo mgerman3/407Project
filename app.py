@@ -50,6 +50,7 @@ def base():
 def errorPage(error):
     return render_template('404.html'), 404
 
+
 # route for shop page
 @app.route('/Shop')
 def Shop():
