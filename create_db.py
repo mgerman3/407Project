@@ -1,5 +1,5 @@
 from app import app, db
-from models import Credentials, InventoryInfo, Reviews
+from models import Credentials, InventoryInfo, Reviews, Collections
 from werkzeug.security import generate_password_hash
 
 with app.app_context():
@@ -79,6 +79,19 @@ with app.app_context():
         a_review = Reviews(account_id=each_review['account_id'], first_name=each_review['first_name'], email=each_review['email'], last_name=each_review['last_name'],
                             rating=each_review['rating'], message=each_review['message'],
                             posted=each_review['posted'])
+
+        db.session.add(a_review)
+        db.session.commit()
+
+    collections = [
+        {'collection_name': 'Game Day'},
+        {'collection_name': 'Blues'},
+        {'collection_name': 'Spring Time'},
+    ]
+
+    for each_collection in collections:
+        print(f'{each_collection["collection_name"]} inserted into table.')
+        a_review = Collections(collection_name=each_collection['collection_name'])
 
         db.session.add(a_review)
         db.session.commit()

@@ -36,7 +36,7 @@
                         <h4>{{ "$%.2f"|format(item['price']) }}</h4>
                     <!-- Conditional statement that displays the name of the collection that the item belongs to, if it exists -->
                         {% if dict[item['collection_id']] %}
-                            <h5> Collection: {{ dict[item["collection_id"]] }}</h5>
+                            <h5> Collection: {{ collection }}</h5>
                         {% endif %}
                         <hr />
                     <!-- Section displaying description of the item -->

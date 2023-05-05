@@ -73,7 +73,7 @@
                                             {% if action and action in ['create', 'update'] %}
                                             <label for="collection_id" class="form-label"><strong>Collection Name</strong></label>
                                             <select name="collection_id" id="role" class="form-select" aria-label=".form-select-md example">
-                                                <option value="">---Select A Collection---</option>
+                                                <option value="" selected disabled>---Select A Collection---</option>
                                                 {% for each_collection in collections %}
                                                 <option value="{{ each_collection['collection_id'] }}"
                                                         {{ 'selected' if item and each_collection['collection_id'] == item['collection_id'] else ''}}>{{ each_collection['collection_name'] }}</option>

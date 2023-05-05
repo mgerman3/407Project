@@ -401,9 +401,13 @@ def process_order():
 @app.route('/GenericProduct/<int:product_id>')
 def GenProduct(product_id):
    item = InventoryInfo.query.filter_by(product_id=product_id).first()
+   collection_id = item.collection_id
+   style = Collections.query.filter_by(collection_id=collection_id).first()
+
+   collection = style.collection_name
 
    if item:
-       return render_template('genericProductPage.html', item=item)
+       return render_template('genericProductPage.html', item=item, collection=collection)
 
    else:
        flash(f'Product attempting to be viewed could not be found! Please contact support for assistance', 'error')
@@ -437,10 +441,12 @@ def items_view_all():
 @role_required(['ADMIN', 'MANAGER'])
 def item_edit(product_id):
  if request.method == 'GET':
+     collections = Collections.query.order_by(Collections.collection_id) \
+         .all()
      item = InventoryInfo.query.filter_by(product_id=product_id).first()
 
      if item:
-         return render_template('inputInventory.html', item=item, action='update')
+         return render_template('inputInventory.html', item=item, action='update', collections=collections)
 
      else:
          flash(f'Item attempting to be edited could not be found!', 'error')
@@ -510,10 +516,8 @@ def item_delete(product_id):
 @role_required(['ADMIN', 'MANAGER'])
 def inventory_entry():
 
-
  collections = Collections.query.order_by(Collections.collection_id) \
        .all()
-
 
  if request.method == 'GET':
      return render_template('inputInventory.html', action='create', collections=collections)
