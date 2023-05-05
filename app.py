@@ -7,14 +7,17 @@ from authorize import role_required
 from models import *
 from sqlalchemy import func
 
+# Path: app.py
 basedir = os.path.abspath(os.path.dirname(__file__))
 
+# Path: app.py
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'ATB2.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'beyond_course_scope'
 db.init_app(app)
 
+# Manage log in sessions
 login_manager = LoginManager()
 login_manager.login_view = 'LogIn' # default login route
 login_manager.init_app(app)
@@ -28,320 +31,277 @@ app.config['PRODUCT_UPLOAD_PATH'] = 'static/products'
 app.config['MAX_QUANTITY_PER_ITEM'] = 10
 
 
+# user loader for flask_login
 @login_manager.user_loader
 def load_user(account_id):
-  return Credentials.query.get(account_id)
+    return Credentials.query.get(account_id)
 
+# home page route
 @app.route('/')
 def homePage():
-   return render_template('homePage.html')
+    return render_template('homePage.html')
 
+# route for error page
 @app.errorhandler(404)
 def errorPage(error):
-   return render_template('404.html'), 404
+    return render_template('404.html'), 404
 
+# route for shop page
 @app.route('/Shop')
 def Shop():
-   items = InventoryInfo.query.order_by(InventoryInfo.item_name).all()
-   return render_template('shop.html', items=items)
+    items = InventoryInfo.query.order_by(InventoryInfo.item_name).all()
+    return render_template('shop.html', items=items)
 
+# route for about page
 @app.route('/About')
 def About():
-   return render_template('aboutPage.html')
+    return render_template('aboutPage.html')
 
+# route for profile page
 @app.route('/profile')
 def Profile():
-   return render_template('profile.html')
+    return render_template('profile.html')
 
+# route for requests page
 @app.route('/RequestForm', methods=['GET', 'POST'])
 def RequestForm():
-   if request.method == 'GET':
-       return render_template('requestForm.html', action='create')
-   elif request.method == 'POST':
+    if request.method == 'GET':
+        return render_template('requestForm.html', action='create')
+    elif request.method == 'POST':
+        # if user is authenticated, use their account_id, first_name, last_name, and email from the credentials table
+        if current_user.is_authenticated:
+            account_id = current_user.account_id
+            first_name = current_user.first_name
+            last_name = current_user.last_name
+            email = current_user.email
+            message = request.form['message']
+
+            requests = Requests(account_id=account_id, first_name=first_name, last_name=last_name, email=email, message=message)
+
+        # if user is not authenticated, use the info from the request form
+        else:
+            account_id = None
+            first_name = request.form['first_name']
+            last_name = request.form['last_name']
+            email = request.form['email']
+            message = request.form['message']
+
+            requests = Requests(account_id=account_id, first_name=first_name, last_name=last_name, email=email, message=message)
+
+        db.session.add(requests)
+        db.session.commit()
+
+        flash(f'Your request was received!', 'success')
+        return redirect(url_for('RequestForm'))
+
+    flash(f'Invalid request. Please contact support if this problem persists.', 'error')
+    return redirect(url_for('homePage'))
 
 
-       if current_user.is_authenticated:
-
-
-           account_id = current_user.account_id
-           first_name = current_user.first_name
-           last_name = current_user.last_name
-           email = current_user.email
-           message = request.form['message']
-
-
-           requests = Requests(account_id=account_id, first_name=first_name, last_name=last_name, email=email, message=message)
-
-
-       else:
-           account_id = None
-           first_name = request.form['first_name']
-           last_name = request.form['last_name']
-           email = request.form['email']
-           message = request.form['message']
-
-
-           requests = Requests(account_id=account_id, first_name=first_name, last_name=last_name, email=email, message=message)
-
-
-       db.session.add(requests)
-       db.session.commit()
-
-
-       flash(f'Your request was received!', 'success')
-       return redirect(url_for('RequestForm'))
-
-
-   # Address issue where unsupported HTTP request method is attempted
-   flash(f'Invalid request. Please contact support if this problem persists.', 'error')
-   return redirect(url_for('homePage'))
-
-
+# route for confirming requests by deleting them
 @app.route('/RequestsLog/Delete/<int:request_id>')
 @login_required
 @role_required(['ADMIN'])
 def requests_fulfilled(request_id):
-  request = Requests.query.filter_by(request_id=request_id).first()
-  if request:
-      db.session.delete(request)
-      db.session.commit()
-      flash(f'{request_id} was successfully deleted!', 'success')
-  else:
-      flash(f'Delete failed! Collection could not be found.', 'error')
+    request = Requests.query.filter_by(request_id=request_id).first()
+    # if theres a request and an admin deletes it, delete it from the database
+    if request:
+        db.session.delete(request)
+        db.session.commit()
+        flash(f'{request_id} was successfully deleted!', 'success')
+    # if no request is found, flash an error
+    else:
+        flash(f'Delete failed! Collection could not be found.', 'error')
+
+    return redirect(url_for('requests_view_all'))
 
 
-  return redirect(url_for('requests_view_all'))
-
-
+# route for the request form
 @app.route('/ReviewForm', methods=['GET', 'POST'])
 def ReviewForm():
-   review = Reviews.query.order_by(Reviews.review_id) \
-       .all()
-   if request.method == 'GET':
-       return render_template('reviewForm.html', action='create', review=review)
-   elif request.method == 'POST':
+    review = Reviews.query.order_by(Reviews.review_id) \
+        .all()
+    if request.method == 'GET':
+        return render_template('reviewForm.html', action='create', review=review)
+    elif request.method == 'POST':
 
+        # if user is logged in, use all the info from their account and take the rest from the form
+        if current_user.is_authenticated:
+            account_id = current_user.account_id
+            first_name = current_user.first_name
+            last_name = current_user.last_name
+            email = current_user.email
+            message = request.form['message']
+            rating = request.form['rating']
+            posted = False
 
-       if current_user.is_authenticated:
-
-
-           account_id = current_user.account_id
-           first_name = current_user.first_name
-           last_name = current_user.last_name
-           email = current_user.email
-           message = request.form['message']
-           rating = request.form['rating']
-           posted = False
-
-
-           reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
+            reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
                                message=message, rating=rating, posted=posted)
+        # if user is not logged in, use the info from the form
+        else:
+            account_id = None
+            first_name = request.form['first_name']
+            last_name = request.form['last_name']
+            email = request.form['email']
+            message = request.form['message']
+            rating = request.form['rating']
+            posted = False
 
-
-       else:
-           account_id = None
-           first_name = request.form['first_name']
-           last_name = request.form['last_name']
-           email = request.form['email']
-           message = request.form['message']
-           rating = request.form['rating']
-           posted = False
-
-
-           reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
+            reviews = Reviews(account_id=account_id, first_name=first_name, last_name=last_name, email=email,
                                message=message, rating=rating, posted=posted)
+        # add info to database
+        db.session.add(reviews)
+        db.session.commit()
+
+        flash(f'Your review was received! ATB will post it shortly.', 'success')
+        return redirect(url_for('ReviewForm'))
+
+    flash(f'Invalid request. Please contact support if this problem persists.', 'error')
+    return redirect(url_for('homePage'))
 
 
-       db.session.add(reviews)
-       db.session.commit()
-
-
-       flash(f'Your review was received! ATB will post it shortly.', 'success')
-       return redirect(url_for('ReviewForm'))
-
-
-       # Address issue where unsupported HTTP request method is attempted
-   flash(f'Invalid request. Please contact support if this problem persists.', 'error')
-   return redirect(url_for('homePage'))
-
-
+# route for the reviews log
 @app.route('/ReviewsLog')
 @login_required
 @role_required(['ADMIN', 'EMPLOYEE'])
 def reviews_view_all():
-  reviews = Reviews.query.order_by(Reviews.review_id) \
-      .all()
-  return render_template('reviewsLog.html', reviews=reviews)
+    reviews = Reviews.query.order_by(Reviews.review_id) \
+        .all()
+    return render_template('reviewsLog.html', reviews=reviews)
 
-
+# route for deleting reviews
 @app.route('/ReviewsLog/Delete/<int:review_id>')
 @login_required
 @role_required(['ADMIN'])
 def review_delete(review_id):
-  reviews = Reviews.query.filter_by(review_id=review_id).first()
-  if reviews:
-      db.session.delete(reviews)
-      db.session.commit()
-      flash(f'{review_id} was successfully deleted!', 'success')
-  else:
-      flash(f'Delete failed! Review could not be found.', 'error')
+    reviews = Reviews.query.filter_by(review_id=review_id).first()
+    # delete the review if the delete button is clicked
+    if reviews:
+        db.session.delete(reviews)
+        db.session.commit()
+        flash(f'{review_id} was successfully deleted!', 'success')
+    else:
+        flash(f'Delete failed! Review could not be found.', 'error')
 
 
-  return redirect(url_for('reviews_view_all'))
+    return redirect(url_for('reviews_view_all'))
 
-
-
+# ability to post reviews that have been submitted to the reviews page
 @app.route('/ReviewsLog/Post/<int:review_id>')
 @login_required
 @role_required(['ADMIN'])
 def review_post(review_id):
-  reviews = Reviews.query.filter_by(review_id=review_id).first()
-  if reviews:
-      if reviews.posted == False:
-          reviews.posted = True
-          db.session.commit()
-          flash(f'{review_id} was successfully posted!', 'success')
-      else:
-          reviews.posted = False
-          db.session.commit()
-          flash(f'{review_id} was successfully un-posted!', 'success')
-  else:
-      flash(f'Post failed! Review could not be found.', 'error')
+    reviews = Reviews.query.filter_by(review_id=review_id).first()
+    if reviews:
+        # if the review is posted then turn it true so that it can appear on the page
+        if reviews.posted == False:
+            reviews.posted = True
+            db.session.commit()
+            flash(f'{review_id} was successfully posted!', 'success')
+        # if not posted, keep the review false
+        else:
+            reviews.posted = False
+            db.session.commit()
+            flash(f'{review_id} was successfully un-posted!', 'success')
+    else:
+        flash(f'Post failed! Review could not be found.', 'error')
 
+    return redirect(url_for('reviews_view_all'))
 
-  return redirect(url_for('reviews_view_all'))
-
-
+# route for the login page
 @app.route('/LogIn', methods = ['GET', 'POST'])
-# def LogInScreen():
-#     if request.method == 'POST':
-#         return render_template('logInScreen.html', form_submitted=True)
-#     else:
-#         return render_template('logInScreen.html')
 def LogIn():
-  default_route_function = 'Shop'
-  default_user_route_function = 'homePage'
+    default_route_function = 'Shop'
+    default_user_route_function = 'homePage'
 
+    if request.method == 'GET':
+        # Determine where to redirect user if they are already logged in
+        if current_user and current_user.is_authenticated:
+            if current_user.role in ['EMPLOYEE', 'ADMIN']:
+                return redirect(url_for(default_route_function))
+            elif current_user.role == 'STUDENT':
+                return redirect(url_for(default_user_route_function, user_id=0))
+        else:
+            redirect_route = request.args.get('next')
+            return render_template('logInScreen.html', redirect_route=redirect_route)
 
-  if request.method == 'GET':
-      # Determine where to redirect user if they are already logged in
-      if current_user and current_user.is_authenticated:
-          if current_user.role in ['EMPLOYEE', 'ADMIN']:
-              return redirect(url_for(default_route_function))
-          elif current_user.role == 'STUDENT':
-              return redirect(url_for(default_user_route_function, user_id=0))
-      else:
-          redirect_route = request.args.get('next')
-          return render_template('logInScreen.html', redirect_route=redirect_route)
+    # pull info from the form to match the database
+    elif request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        redirect_route = request.form.get('redirect_route')
 
+        user = Credentials.query.filter_by(username=username).first()
 
-  elif request.method == 'POST':
-      username = request.form.get('username')
-      password = request.form.get('password')
-      redirect_route = request.form.get('redirect_route')
+        # Validate user credentials and redirect them to initial destination
+        if user and check_password_hash(user.password, password):
+            login_user(user)
 
+            if current_user.role in ['EMPLOYEE', 'ADMIN']:
+                return redirect(redirect_route if redirect_route else url_for(default_route_function))
+            elif current_user.role == 'STUDENT':
+                return redirect(redirect_route if redirect_route else url_for(default_user_route_function, user_id=0))
+        else:
+            flash(f'Your login information was not correct. Please try again.', 'error')
 
-      user = Credentials.query.filter_by(username=username).first()
+        return redirect(url_for('LogIn'))
 
+    return redirect(url_for('LogIn'))
 
-      # Validate user credentials and redirect them to initial destination
-      if user and check_password_hash(user.password, password):
-          login_user(user)
-
-
-          if current_user.role in ['EMPLOYEE', 'ADMIN']:
-              return redirect(redirect_route if redirect_route else url_for(default_route_function))
-          elif current_user.role == 'STUDENT':
-              return redirect(redirect_route if redirect_route else url_for(default_user_route_function, user_id=0))
-      else:
-          flash(f'Your login information was not correct. Please try again.', 'error')
-
-
-      return redirect(url_for('LogIn'))
-
-
-  return redirect(url_for('LogIn'))
-
+# route for sign up page
 @app.route('/signup', methods=['GET', 'POST'])
 def SignUp():
+    if request.method == 'GET':
+        return render_template('signUpPage.html', action='create')
 
+    elif request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        first_name = request.form['first_name']
+        last_name = request.form['last_name']
+        email = request.form['email']
 
-   if request.method == 'GET':
-       return render_template('signUpPage.html', action='create')
+        # set variable for the password
+        sha_password = generate_password_hash(password, method='sha256', salt_length=8)
 
-
-   elif request.method == 'POST':
-      username = request.form['username']
-      password = request.form['password']
-      first_name = request.form['first_name']
-      last_name = request.form['last_name']
-      email = request.form['email']
-
-
-      sha_password = generate_password_hash(password, method='sha256', salt_length=8)
-
-
-      user = Credentials(username=username, password=sha_password, first_name=first_name, last_name=last_name,
+        user = Credentials(username=username, password=sha_password, first_name=first_name, last_name=last_name,
                           email=email)
+        # add to database and log the user in
+        db.session.add(user)
+        db.session.commit()
+        login_user(user)
+        flash(f'{username} was successfully added!', 'success')
+        return redirect(url_for('homePage'))
 
-
-      db.session.add(user)
-      db.session.commit()
-      login_user(user)
-      flash(f'{username} was successfully added!', 'success')
-      return redirect(url_for('homePage'))
-
-  # Address issue where unsupported HTTP request method is attempted
-# flash(f'Invalid request. Please contact support if this problem persists.', 'error')
-# return redirect(url_for('SignUp'))
-
-
+# log out route
 @app.route('/logout')
 @login_required
 def logout():
-   if 'cart' in session:
-       del (session['cart'])
+    # if cart exists delete it upon log out
+    if 'cart' in session:
+        del (session['cart'])
+    # sign the user out
+    logout_user()
+    flash(f'You have been logged out.', category='success')
+    return redirect(url_for('homePage'))
 
-
-   logout_user()
-   flash(f'You have been logged out.', category='success')
-   return redirect(url_for('homePage'))
-
-
+# route for checkout page
 @app.route('/CheckOut', methods=['GET', 'POST'])
 def CheckOut():
-   # if request.method == 'POST':
-   #     # return render_template('checkoutPage.html', form_submitted=True)
-   #     return render_template('orderConfirmation.html')
-   # else:
-   #     return render_template('checkoutPage.html')
-   # size = 3
-   if 'cart' in session:
-       session['cart_total'] = sum(item['price'] * item['product_quantity'] for item in session['cart'])
+    if 'cart' in session:
+        # if the cart exists, establish a total value for the products in the cart
+        session['cart_total'] = sum(item['price'] * item['product_quantity'] for item in session['cart'])
+        return render_template('checkoutPage.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
+    else:
+        return render_template('checkoutPage.html', cart_count=0, cart_total=0)
 
-       # if request.form['shipping'] == 'local':
-       #     session['cart_total'] = session['cart_total']
-       # elif request.form['shipping'] == 'home':
-       #     session['cart_total'] = session['cart_total'] + 10
-       # elif request.form['shipping'] == 'rapid':
-       #     session['cart_total'] = session['cart_total'] + 20
-
-       return render_template('checkoutPage.html', products=session['cart'], cart_count=len(session['cart']), cart_total=session['cart_total'])
-   else:
-       return render_template('checkoutPage.html', cart_count=0, cart_total=0)
-
-# @app.route('/payment', methods=['GET', 'POST'])
-# def payment():
-#     if request.method == 'GET':
-#         # flash(f'Payment failed! Please try again.', 'error')
-#         return render_template('homePage.html', action='create')
-#     elif request.method == 'POST':
-#         return render_template('payment.html')
+# route for processing the order once it is placed
 @app.route('/process-order', methods=['GET', 'POST'])
 def process_order():
     if request.method == 'GET':
         return redirect(url_for('homePage'))
     elif request.method == 'POST':
+        # if user is logged in use their account id and get all other info from the form
         if current_user.is_authenticated:
             user = Credentials.query.filter_by(account_id=current_user.account_id).first()
 
@@ -360,6 +320,7 @@ def process_order():
             store_order = StoreOrder(account_id=account_id, first_name=first_name, last_name=last_name, phoneNumber=phoneNumber,
                                      email=email, address=address, city=city, state=state, zipcode=zipcode,
                                      shipping_method=shipping_method)
+        # get all info from form is user not logged in
         else:
             account_id = None
             first_name = request.form['first_name']
@@ -371,12 +332,11 @@ def process_order():
             state = request.form['state']
             zipcode = request.form['zipcode']
             shipping_method = request.form['shipping_method']
-            # posted = False
 
             store_order = StoreOrder(account_id=account_id,first_name=first_name, last_name=last_name, phoneNumber=phoneNumber,
                                     email=email, address=address, city=city, state=state, zipcode=zipcode,
                                      shipping_method=shipping_method)
-
+        # add to database
         db.session.add(store_order)
         db.session.flush()
         db.session.refresh(store_order)
@@ -397,8 +357,7 @@ def process_order():
                 product.xlarge -= each_item['product_quantity']
             if each_item['size'] == 'XX-Large':
                 product.xxlarge -= each_item['product_quantity']
-            # add order to order table
-            # posted = False
+
             item_ordered = OrderItem(order_id, each_item['product_id'], each_item['product_quantity'],
                                      each_item['size'], each_item['item_name'])
             db.session.add(item_ordered)
@@ -413,60 +372,42 @@ def process_order():
     db.session.delete(store_order)
     return render_template('homePage.html')
 
-# @app.route('/OrderDetails/<int:order_id>')
-# @login_required
-# @role_required(['ADMIN'])
-# def order_post(order_id):
-#   orders = StoreOrder.query.filter_by(order_id=order_id).first()
-#   if orders:
-#       if orders.posted == False:
-#           orders.posted = True
-#           db.session.commit()
-#       else:
-#           orders.posted = False
-#           db.session.commit()
-#   else:
-#       flash(f'Post failed! Review could not be found.', 'error')
-#
-#   return redirect(url_for('OrderDetails'))
-
-
+# page for products once user clicks view on the shop page
 @app.route('/GenericProduct/<int:product_id>')
 def GenProduct(product_id):
-   item = InventoryInfo.query.filter_by(product_id=product_id).first()
-   collection_id = item.collection_id
-   style = Collections.query.filter_by(collection_id=collection_id).first()
+    item = InventoryInfo.query.filter_by(product_id=product_id).first()
+    collection_id = item.collection_id
+    style = Collections.query.filter_by(collection_id=collection_id).first()
+    collection = style.collection_name
 
-   collection = style.collection_name
+    if item:
+        return render_template('genericProductPage.html', item=item, collection=collection)
 
-   if item:
-       return render_template('genericProductPage.html', item=item, collection=collection)
+    else:
+        flash(f'Product attempting to be viewed could not be found! Please contact support for assistance', 'error')
+        return redirect(url_for('Shop'))
 
-   else:
-       flash(f'Product attempting to be viewed could not be found! Please contact support for assistance', 'error')
-       return redirect(url_for('Shop'))
-
-
+# route to view the all the request sent by customers
 @app.route('/RequestsLog')
 @login_required
 @role_required(['ADMIN', 'EMPLOYEE'])
 def requests_view_all():
-  requests = Requests.query.order_by(Requests.request_id) \
-      .all()
-  return render_template('requestLog.html', requests=requests)
+    requests = Requests.query.order_by(Requests.request_id) \
+        .all()
+    return render_template('requestLog.html', requests=requests)
 
-
+# route to view the inventory
 @app.route('/InventoryLog')
 @login_required
 @role_required(['ADMIN', 'EMPLOYEE'])
 def items_view_all():
- items = InventoryInfo.query.order_by(InventoryInfo.item_name) \
-     .all()
- dict = {}
- for collection in Collections.query.all():
-       dict[collection.collection_id] = collection.collection_name
+    items = InventoryInfo.query.order_by(InventoryInfo.item_name) \
+        .all()
+    dict = {}
+    for collection in Collections.query.all():
+          dict[collection.collection_id] = collection.collection_name
 
- return render_template('inventoryLog.html', items=items, dict=dict)
+    return render_template('inventoryLog.html', items=items, dict=dict)
 
 
 @app.route('/InventoryLog/update/<int:product_id>', methods=['GET', 'POST'])
