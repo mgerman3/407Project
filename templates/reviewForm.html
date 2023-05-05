@@ -21,17 +21,17 @@
     </div>
     <div class="GenProduct_HeadingSpacer"></div>
     <!-- Create two column layout to house form and photo side by side-->
-    <div class = "GenProduct_rowLayout">
-        <div class="GenProduct_columnLayout">
+    <div class = "GenProduct_rowLayout"></div>
+        <div class="GenProduct_columnLayout"></div>
              <!--Placing image on left hand column-->
             <img src="../static/images/Reviews_FormPhoto.png" width = "450" height = "470" alt="ATB Model on a Keg" style = "padding-left: 20px">
         </div>
         <!-- create new, right-handed side column-->
-        <div class="GenProduct_columnLayout">
+        <div class="GenProduct_columnLayout"></div>
         <!-- adds passing between both columns to evenly space information -->
-        <div class = "GenProduct_VerticalSpacer">
+        <div class = "GenProduct_VerticalSpacer"></div>
         <!-- conditional formatting to show confirmation message to users after completing the form -->
-            <div class = "GenProduct_VerticalRightSpacer">
+        <div class = "GenProduct_VerticalRightSpacer"></div>
 
                 <!--Creates form to collection customer's requests-->
                 <form action="{{ url_for('ReviewForm') }}" method="post">
@@ -45,7 +45,7 @@
                                         <div class = "row">
                                             <!--Field to collect users message -->
                                             <p class="formFieldsLabels">Review*</p>
-                                            <textarea rows="5" cols="20" placeholder="Enter your review here!" name="message" require></textarea>
+                                            <textarea rows="5" cols="20" placeholder="Enter your review here!" name="message" required></textarea>
                                         </div>
                                         <div class = "row">
                                             <!--Field to collect users ratings out of 5 on products purchased -->
