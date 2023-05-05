@@ -27,8 +27,8 @@
     <div id="wrapper">
     <!-- Background Photo -->
         <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
-        <div class="row">
-{#            <form action="{{ url_for('collections_entry') }}" method="POST">#}
+        <div class="row justify-content-center">
+            <div class="border-box col">
                 <!-- Inventory Input -->
                 <div class="inventoryBoxTotal">
                     <div class="row">
@@ -71,12 +71,16 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
             {% if action and action in ['create', 'update'] %}
                 </form>
             {% else %}
-        </div>
+                </div>
             {% endif %}
-
+<div class="GenProduct_HeadingSpacer"></div>
+    <br>
 {% endblock %}
 
 
