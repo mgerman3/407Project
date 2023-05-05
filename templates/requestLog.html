@@ -17,7 +17,7 @@
 
 {% block page_content %}
 
-<div class="text-center" style="height: 100vh">
+<div class="text-center">
    <!-- Creation of Collections table -->
     <div class="row">
         <div class="col">
@@ -33,6 +33,7 @@
                        <th>Actions</th>
                    {% endif %}
                 </tr>
+{#for loop to retreiving collections data#}
                 {% for each_request in requests %}
                     <td>{{ each_request['request_id'] }}</td>
                     <td>{{ each_request['account_id'] }}</td>
@@ -60,4 +61,10 @@
         <p><br></p>
         </div>
     {% endif %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 {% endblock %}

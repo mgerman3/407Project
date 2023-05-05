@@ -14,11 +14,11 @@
 
 {% block page_content %}
 
-<div class="text-center" style="height: 100vh">
+<div class="text-center">
    <!-- Creation of Collections table -->
     <div class="row">
     <div class="col">
-
+{#order table details#}
    <table class="table table-striped">
        <tr>
             <th scope="col">Order ID</th>
@@ -28,10 +28,9 @@
             <th scope="col">Size</th>
             <th scope="col">Total Price</th>
             <th scope="col">View Details</th>
-{#            <th scope="col">Order Status</th>#}
        </tr>
 
-
+{#for loop to retreive information from table#}
          {% for each_order in orders %}
            <td>{{ each_order['order_id'] }}</td>
            <td>{{ each_order['item_name'] }}</td>
@@ -141,26 +140,12 @@
                             </div>
                                  {% if count.append(count.pop() + 1) %}
                                 {% endif %}
-{#                                {% set count = [1] %}#}
-{#                            {% endif %}#}
-{#                                {% set count = 5 %}#}
-{#                                    {{ count }}#}
-{##}
-{#                                    {{ count }}#}
-{#                                {% endfor %}#}
+
                           {% endfor %}
                    </div>
                </div>
            </td>
-{#           <td>#}
-{#             {% if current_user.role in ['ADMIN'] %}#}
-{#                {% if each_order['posted'] == 1 %}#}
-{#                <a href="{{ url_for('order_post', order_id=each_order['order_id']) }}" class="btn btn-secondary" type = "submit" role="button">Shipped</a>#}
-{#            {% else %}#}
-{#                <a href="{{ url_for('order_post', order_id=each_order['order_id']) }}" class="btn btn-secondary" type = "submit" role="button">Not Shipped</a>#}
-{#            {% endif %}#}
-{#        {% endif %}#}
-{#        </td>#}
+
        </tr>
     {% endfor %}
 
@@ -182,9 +167,11 @@
             <th scope="row">${{ "{:,.2f}".format(total_order_sum) }}</th>
         </tr>
     </tbody>
-  </table>
+    </table>
     <p><br></p>
-       </div>
    {% endif %}
+
+    <br>
+    <br>
 
 {% endblock %}
