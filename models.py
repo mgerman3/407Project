@@ -2,7 +2,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 db = SQLAlchemy()
 
-
+# create user table
 class User(db.Model):
    __tablename__ = "User"
 
@@ -12,38 +12,16 @@ class User(db.Model):
    last_name = db.Column(db.String(50), nullable=False)
    email = db.Column(db.String(60), nullable=False)
 
-
+# initialize user table
    def __init__(self, first_name, last_name, email):
        self.first_name = first_name
        self.last_name = last_name
        self.email = email
 
-
    def __repr__(self):
        return f"{self.first_name} {self.last_name} {self.email} {self.address} {self.state}"
 
-
-# class ShippingInfo(db.Model):
-#    __tablename__ = "ShippingInfo"
-#
-#    ship_id = db.Column(db.Integer, primary_key=True)
-#    user_id = db.Column(db.Integer, db.ForeignKey('User.user_id'), primary_key=True)
-#    address = db.Column(db.String(100), nullable=False)
-#    state = db.Column(db.String(2), nullable=False)
-#    zipcode = db.Column(db.Integer, nullable=False)
-#    phoneNumber = db.Column(db.Integer, nullable=False)
-#
-#
-#    def __init__(self, address, state, zipcode, phoneNumber):
-#        self.address = address
-#        self.state = state
-#        self.zipcode = zipcode
-#        self.phoneNumber = phoneNumber
-#
-#
-#    def __repr__(self):
-#        return f" {self.address} {self.state}"
-
+# create requests table
 class Requests(db.Model):
    __tablename__ = "Requests"
 
@@ -54,6 +32,7 @@ class Requests(db.Model):
    email = db.Column(db.String(60), nullable=True)
    message = db.Column(db.String(200), nullable=False)
 
+# initialize requests table
    def __init__(self, account_id, first_name, last_name, email, message):
        self.account_id = account_id
        self.first_name = first_name
@@ -64,40 +43,25 @@ class Requests(db.Model):
    def __repr__(self):
        return f"{self.first_name}{self.last_name}{self.message}"
 
-# class OrderInfo(db.Model):
-#    __tablename__ = "OrderInfo"
-#
-#    order_id = db.Column(db.Integer, primary_key=True)
-#    customer_id = db.Column(db.Integer, db.ForeignKey('User.user_id'))
-#    shipping_mode = db.Column(db.String(30), nullable=False)
-#    order_total = db.Column(db.Float, nullable=False)
-#    def __init__(self, customer_id, shipping_mode, order_total, date) :
-#        self.customer_id = customer_id
-#        self.shipping_mode = shipping_mode
-#        self.order_total = order_total
-#        self.date = date
-#    def __repr__(self):
-#        return f"{self.shipping_mode}"
-
+# create inventory table
 class InventoryInfo(db.Model):
-   __tablename__ = "InventoryInfo"
+    __tablename__ = "InventoryInfo"
 
+    product_id = db.Column(db.Integer, primary_key=True)
+    collection_id = db.Column(db.Integer, db.ForeignKey('Collections.collection_id'))
+    item_name = db.Column(db.String(20), nullable=False)
+    xsmall = db.Column(db.Integer, nullable=False)
+    small = db.Column(db.Integer, nullable=False)
+    medium = db.Column(db.Integer, nullable=False)
+    large = db.Column(db.Integer, nullable=False)
+    xlarge = db.Column(db.Integer, nullable=False)
+    xxlarge = db.Column(db.Integer, nullable=False)
+    price = db.Column(db.Float, nullable=False)
+    desc = db.Column(db.String(50), nullable=False)
+    product_image = db.Column(db.String(100))
 
-   product_id = db.Column(db.Integer, primary_key=True)
-   collection_id = db.Column(db.Integer, db.ForeignKey('Collections.collection_id'))
-   item_name = db.Column(db.String(20), nullable=False)
-   xsmall = db.Column(db.Integer, nullable=False)
-   small = db.Column(db.Integer, nullable=False)
-   medium = db.Column(db.Integer, nullable=False)
-   large = db.Column(db.Integer, nullable=False)
-   xlarge = db.Column(db.Integer, nullable=False)
-   xxlarge = db.Column(db.Integer, nullable=False)
-   price = db.Column(db.Float, nullable=False)
-   desc = db.Column(db.String(50), nullable=False)
-   product_image = db.Column(db.String(100))
-
-
-   def __init__(self, collection_id, item_name, xsmall, small, medium, large, xlarge, xxlarge, price, desc, product_image):
+# initialize inventory table
+    def __init__(self, collection_id, item_name, xsmall, small, medium, large, xlarge, xxlarge, price, desc, product_image):
        self.collection_id = collection_id
        self.item_name = item_name
        self.xsmall = xsmall
@@ -110,11 +74,10 @@ class InventoryInfo(db.Model):
        self.desc = desc
        self.product_image = product_image
 
-
-   def __repr__(self):
+    def __repr__(self):
        return f"{self.item_name}  {self.desc}"
 
-
+# create order table
 class OrderItem(db.Model):
     __tablename__ = 'OrderItem'
 
@@ -126,8 +89,8 @@ class OrderItem(db.Model):
     price = db.Column(db.Float, nullable=False)
     size = db.Column(db.String(20), nullable=False)
     item_name = db.Column(db.String(20), nullable=False)
-    # posted = db.Column(db.Boolean, default=False)
 
+# initialize order table
     def __init__(self, order_id, product_id, quantity, size, item_name):
         product = InventoryInfo.query.filter_by(product_id=product_id).first()
 
@@ -138,21 +101,21 @@ class OrderItem(db.Model):
         self.price = product.price
         self.size = size
         self.item_name = item_name
-        # self.posted = posted
 
-
+# create collection table
 class Collections(db.Model):
     __tablename__ = "Collections"
 
     collection_id = db.Column(db.Integer, primary_key=True)
     collection_name = db.Column(db.String(20), nullable=True)
 
+# initialize collection table
     def __init__(self, collection_name) :
         self.collection_name = collection_name
     def __repr__(self):
        return f"{self.collection_name}"
 
-
+# create credentials table
 class Credentials(UserMixin, db.Model):
     __tablename__ = "Credentials"
 
@@ -164,6 +127,7 @@ class Credentials(UserMixin, db.Model):
     email = db.Column(db.String(100), unique=True, nullable=False)
     role = db.Column(db.String(10), nullable=False)
 
+# initialize credentials table
     def __init__(self, username, password, first_name, last_name, email, role='PUBLIC'):
         self.username = username
         self.password = password
@@ -172,16 +136,14 @@ class Credentials(UserMixin, db.Model):
         self.email = email
         self.role = role
 
+# get id
     def get_id(self):
         return (self.account_id)
 
     def __repr__(self):
        return f"({self.username}){self.password}{self.role}"
 
-   # Only execute once! Initial load of sizes
-   #db.engine.execute("INSERT INTO sizes(size) VALUES ('XS');")
-
-
+# create order table with user shipping info
 class StoreOrder(db.Model):
     __tablename__ = 'StoreOrder'
 
@@ -197,6 +159,7 @@ class StoreOrder(db.Model):
     zipcode = db.Column(db.String(9))
     shipping_method = db.Column(db.String(20))
 
+# initialize order table
     def __init__(self, account_id, first_name, last_name, phoneNumber, email, address, city, state, zipcode, shipping_method):
         self.account_id = account_id
         self.first_name = first_name
@@ -209,6 +172,7 @@ class StoreOrder(db.Model):
         self.zipcode = zipcode
         self.shipping_method = shipping_method
 
+# create reviews table
 class Reviews(db.Model):
     __tablename__ = "Reviews"
 
@@ -221,6 +185,7 @@ class Reviews(db.Model):
     rating = db.Column(db.String(20), nullable=False)
     posted = db.Column(db.Boolean, default=False)
 
+# initialize reviews table
     def __init__(self, account_id, first_name, last_name, email, message, rating, posted):
         self.account_id = account_id
         self.first_name = first_name

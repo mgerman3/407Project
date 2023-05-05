@@ -6,14 +6,6 @@ with app.app_context():
     db.drop_all()
     db.create_all()
 
-    # Initial loading of sizes
-    # sizes = ['XS', 'S', 'M', 'L', 'XL']
-    # for each_size in sizes:
-    #     print(f'{each_size} inserted into size')
-    #     a_size = Size(size=each_size)
-    #     db.session.add(a_size)
-    #     db.session.commit()
-
     # Initial loading of users
     users = [
         {'username': 'public', 'password': generate_password_hash('publicpw', method='sha256'),
@@ -24,6 +16,7 @@ with app.app_context():
          'first_name': 'Admin', 'last_name': 'Admin', 'email': 'admin@umd.edu', 'role': 'ADMIN'},
     ]
 
+    # add users to databse
     for each_user in users:
         print(f'{each_user["username"]} inserted into user')
         a_user = Credentials(username=each_user["username"], password=each_user["password"], first_name=each_user["first_name"],
@@ -50,6 +43,7 @@ with app.app_context():
          'product_image': 'Shop_tshirt.png'},
     ]
 
+    # add products to database
     for each_product in products:
         print(f'{each_product["item_name"]} inserted into product')
         a_product = InventoryInfo(collection_id=each_product['collection_id'], item_name=each_product['item_name'],
@@ -62,6 +56,7 @@ with app.app_context():
         db.session.add(a_product)
         db.session.commit()
 
+    # Initial loading of reviews
     reviews = [
         {'account_id': None, 'first_name': 'John', 'last_name': 'Green', 'email': 'jgreen@gmail.com', 'rating': '5/5', 'message': 'Great product!', 'posted': True},
         {'account_id': None, 'first_name': 'Kate', 'last_name': 'Richards', 'email': 'krichards@gmail.com', 'rating': '4/5', 'message': 'I like my crewneck!',
@@ -74,6 +69,7 @@ with app.app_context():
          'posted': False},
     ]
 
+    # add reviews to database
     for each_review in reviews:
         print(f'{each_review["rating"]} inserted into table.')
         a_review = Reviews(account_id=each_review['account_id'], first_name=each_review['first_name'], email=each_review['email'], last_name=each_review['last_name'],
@@ -83,12 +79,14 @@ with app.app_context():
         db.session.add(a_review)
         db.session.commit()
 
+    # Initial loading of collections
     collections = [
         {'collection_name': 'Game Day'},
         {'collection_name': 'Blues'},
         {'collection_name': 'Spring Time'},
     ]
 
+    # add collections to database
     for each_collection in collections:
         print(f'{each_collection["collection_name"]} inserted into table.')
         a_review = Collections(collection_name=each_collection['collection_name'])
