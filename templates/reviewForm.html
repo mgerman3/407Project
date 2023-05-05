@@ -83,18 +83,18 @@
                                         <div class = "row">
                                             <!--Field to collect users message -->
                                             <p class="formFieldsLabels">Review*</p>
-                                            <textarea rows="5" cols="20" placeholder="Enter your review here!" name="message" require></textarea>
+                                            <textarea rows="5" cols="20" placeholder="Enter your review here!" name="message" required></textarea>
                                         </div>
                                         <div class = "row">
                                             <!--Field to collect users numeric rating-->
                                             <p class="formFieldsLabels">Rating*</p>
                                             <select name="rating" id="role" class="form-select" aria-label=".form-select-md example" required>
                                                 <option value="" disabled selected>---Select A Rating---</option>
-                                                <option name="one" id="one" value="1/5">1/5</option>
-                                                <option name="two" id="two" value="2/5">2/5</option>
-                                                <option name="three" id="three" value="3/5">3/5</option>
-                                                <option name="four" id="four" value="4/5">4/5</option>
-                                                <option name="five" id="five" value="5/5">5/5</option>
+                                                <option name="one" id="one" value="1">1/5</option>
+                                                <option name="two" id="two" value="2">2/5</option>
+                                                <option name="three" id="three" value="3">3/5</option>
+                                                <option name="four" id="four" value="4">4/5</option>
+                                                <option name="five" id="five" value="5">5/5</option>
                                             </select>
                                         </div>
                                     {% endif %}
@@ -135,6 +135,11 @@
                 <col width="33.3%">
                 <col width="33.3%">
             </colgroup>
+            <!-- Sets the headings for each column -->
+            <th scope="col"> Name </th>
+            <th scope="col" >Review</th>
+            <th scope="col" class="text-center">Rating</th>
+
             <!-- Loops through all reviews -->
             {% for each_review in review %}
                 <!-- Selects reviews which have been approved to be posted -->
@@ -145,7 +150,7 @@
                         <!-- prints out customer review -->
                         <td class = "wrap" class="cartItemLabels"> {{ each_review['message'] }}</td>
                         <!-- prints out numerical review given -->
-                        <td class = "cartItemLabels"> {{ each_review['rating'] }}</td>
+                        <td class = "cartItemLabels"> {{ each_review['rating'] }} </td>
                     </tr>
                 {% endif %}
              {% endfor %}

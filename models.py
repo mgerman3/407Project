@@ -118,7 +118,7 @@ class StoreOrder(db.Model):
     __tablename__ = 'StoreOrder'
 
     order_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('User.user_id'))
+    account_id = db.Column(db.Integer, db.ForeignKey('Credentials.account_id'), nullable=True)
     first_name = db.Column(db.String(30), nullable=False)
     last_name = db.Column(db.String(50), nullable=False)
     phoneNumber = db.Column(db.String(10))
@@ -131,8 +131,8 @@ class StoreOrder(db.Model):
     payment_type = db.Column(db.String(10))
     users = db.relationship('User', backref='users')
 
-    def __init__(self, user_id, first_name, last_name, phoneNumber, email, address, city, state, zipcode):
-        self.user_id = user_id
+    def __init__(self, account_id, first_name, last_name, phoneNumber, email, address, city, state, zipcode):
+        self.account_id = account_id
         self.first_name = first_name
         self.last_name = last_name
         self.phoneNumber = phoneNumber

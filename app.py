@@ -337,7 +337,7 @@ def process_order():
         if current_user.is_authenticated:
             user = Credentials.query.filter_by(account_id=current_user.account_id).first()
 
-            user_id = user.account_id
+            account_id = user.account_id
             first_name = request.form['first_name']
             last_name = request.form['last_name']
             phoneNumber = request.form['phoneNumber']
@@ -347,7 +347,7 @@ def process_order():
             state = request.form['state']
             zipcode = request.form['zipcode']
 
-            store_order = StoreOrder(user_id=user_id, first_name=first_name, last_name=last_name, phoneNumber=phoneNumber,
+            store_order = StoreOrder(account_id=account_id, first_name=first_name, last_name=last_name, phoneNumber=phoneNumber,
                                      email=email, address=address, city=city, state=state, zipcode=zipcode)
         else:
             first_name = request.form['first_name']
