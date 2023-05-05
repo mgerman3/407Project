@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 
-
 {% block title %}
   {% if action and action == 'create' %}
       Input New Inventory
@@ -11,10 +10,12 @@
   {% endif %}
 {% endblock %}
 
-
 {% block html_head %}
   {% if action and action == 'create' %}
-      Input New Inventory
+      <div class="GenProduct_HeadingSpacer text-center">
+          <br>
+          <h1>Input New Inventory</h1>
+      </div>
   {% elif action and action == 'update'  %}
       Update Inventory Item
   {% else %}
@@ -26,7 +27,6 @@
 {% block page_content %}
    <!-- Background Photo -->
 <img src = "../static/images/transparent-background.png" alt="Background Image" class="bg-image">
-{#       <form action="{{ url_for('inventory_entry') }}" method="POST">#}
        <!-- Inventory Input -->
        <div class="inventoryBoxTotal">
            <div class="row">
