@@ -20,67 +20,44 @@
 <div class="text-center" style="height: 100vh">
    <!-- Creation of Collections table -->
     <div class="row">
-    <div class="col">
-
-   <table class="table table-striped">
-       <tr>
-            <th scope="col">Request ID</th>
-            <th scope="col">Account ID</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Message</th>
-           {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
-           <th>Actions</th>
-           {% endif %}
-       </tr>
-
-
-         {% for each_request in requests %}
-{#             {% if account_id != None %}#}
-           <td>{{ each_request['request_id'] }}</td>
-           <td>{{ each_request['account_id'] }}</td>
-           <td>{{ each_request['first_name'] }}</td>
-           <td>{{ each_request['last_name'] }}</td>
-           <td>{{ each_request['email'] }}</td>
-            <td class="wrap">{{ each_request['message'] }}</td>
-           <td>
-               {% if current_user.role in ['ADMIN'] %}
-               <a href="{{ url_for('requests_fulfilled', request_id=each_request['request_id']) }}" class="btn btn-secondary" type = "submit" role="button">Fulfilled</a>
-               {% endif %}
-           </td>
-       </tr>
-{#           {% else %}#}
-{#       <tr>#}
-{#        <tr>#}
-{#           <td>{{ each_request['request_id'] }}</td>#}
-{#           <td>{{ each_request['account_id'] }}</td>#}
-{#           <td>{{ each_user['first_name'] }}</td>#}
-{#           <td>{{ each_request['last_name'] }}</td>#}
-{#           <td>{{ each_request['email'] }}</td>#}
-{##}
-{#            <td class="wrap">{{ each_request['message'] }}</td>#}
-{#           <td>#}
-{#               {% if current_user.role in ['ADMIN'] %}#}
-{#               <a href="{{ url_for('requests_fulfilled', request_id=each_request['request_id']) }}" class="btn btn-secondary" type = "submit" role="button">Fulfilled</a>#}
-{#               {% endif %}#}
-{#           </td>#}
-{#       </tr>#}
+        <div class="col">
+            <table class="table table-striped">
+                <tr>
+                    <th scope="col">Request ID</th>
+                    <th scope="col">Account ID</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Message</th>
+                   {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
+                       <th>Actions</th>
+                   {% endif %}
+                </tr>
+                {% for each_request in requests %}
+                    <td>{{ each_request['request_id'] }}</td>
+                    <td>{{ each_request['account_id'] }}</td>
+                    <td>{{ each_request['first_name'] }}</td>
+                    <td>{{ each_request['last_name'] }}</td>
+                    <td>{{ each_request['email'] }}</td>
+                    <td class="wrap">{{ each_request['message'] }}</td>
+                    <td>
+                    {% if current_user.role in ['ADMIN'] %}<a href="{{ url_for('requests_fulfilled', request_id=each_request['request_id']) }}" class="btn btn-secondary" type = "submit" role="button">Fulfilled</a>
+                    {% endif %}
+                    </td>
+                </tr>
            {% endfor %}
+            </table>
+        </div>
+    </div>
 
-   </table>
-   </div>
-   </div>
+    {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
+        <div class="row">
+            <div class="col">
+                Total Number of Requests: {{ requests|length }}
+            </div>
+        </div>
 
-   {% if current_user.role in ['ADMIN', 'EMPLOYEE'] %}
-   <div class="row">
-       <div class="col">
-               Total Number of Requests: {{ requests|length }}
-       </div>
-   </div>
-
-    <p><br></p>
-       </div>
-   {% endif %}
-
+        <p><br></p>
+        </div>
+    {% endif %}
 {% endblock %}
