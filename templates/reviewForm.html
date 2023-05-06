@@ -150,9 +150,9 @@
                         <!-- Combines first and last name to make one name record and print it out -->
                         <td> {{ each_review['first_name'] }} {{ each_review['last_name'] }} </td>
                         <!-- prints out customer review -->
-                        <td class="wrap" class="cartItemLabels"> {{ each_review['message'] }}</td>
+                        <td class="wrap"> {{ each_review['message'] }}</td>
                         <!-- prints out numerical review given -->
-                        <td class="cartItemLabels"> {{ each_review['rating'] }} </td>
+                        <td> {{ each_review['rating'] }} </td>
                     </tr>
                 {% endif %}
              {% endfor %}
