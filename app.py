@@ -381,12 +381,12 @@ def process_order():
 @app.route('/GenericProduct/<int:product_id>')
 def GenProduct(product_id):
     item = InventoryInfo.query.filter_by(product_id=product_id).first()
-    collection_id = item.collection_id
-    style = Collections.query.filter_by(collection_id=collection_id).first()
-    collection = style.collection_name
+    # collection_id = item.collection_id
+    # # style = Collections.query.filter_by(collection_id=collection_id).first()
+    # # collection = style.collection_name
 
     if item:
-        return render_template('genericProductPage.html', item=item, collection=collection)
+        return render_template('genericProductPage.html', item=item)
 
     else:
         flash(f'Product attempting to be viewed could not be found! Please contact support for assistance', 'error')
